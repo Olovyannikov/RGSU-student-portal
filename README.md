@@ -1,1 +1,1 @@
-# RGSU-student-potrtal
+init template

@@ -1,0 +1,21 @@
+$c-light: #ffffff;
+$c-blue: linear-gradient(90deg, #3464E0 0%, #2955C9 100%);
+$c-grey: #C4C4C4;
+
+$font: "Proxima Nova", "Arial", sans-serif;
+$font-alt: "Radical",  "Arial", sans-serif;
+
+$stop-scaling: 2000px;
+
+$wide-screen: "min-aspect-ratio: 1680/650";
+
+$wider: "min-aspect-ratio: 1441/760";
+$narrower: "max-aspect-ratio: 1439/760";
+
+$tablet: 1024px;
+$mobile: 768px;
+
+$retina-dpi: 144dpi;
+$retina-dppx: 1.5dppx;
+
+$index: 1.38871;

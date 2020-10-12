@@ -1,0 +1,8 @@
+mixin card(title, price, img)
+    .card
+        .card__img
+            img(src="img/" + img , alt= title)
+        .card__title
+            | #{title}
+        .card__price
+            | #{price}
