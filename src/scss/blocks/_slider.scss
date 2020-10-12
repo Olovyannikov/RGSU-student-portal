@@ -1,0 +1,43 @@
+.slider {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider__item {
+  position: absolute;
+  z-index: 1;
+  &--current {
+    position: relative;
+    z-index: 2;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+  }
+  &--left {
+    left: 18%;
+  }
+  &--right {
+    right: 18%;
+  }
+}
+
+.slider__slide {
+  &--current {
+    filter: none;
+  }
+}
+
+.slider__description {
+  position: absolute;
+  top: 108px;
+  margin: 0;
+  left: 45px;
+  width: 579px;
+  font-size: 34px;
+  line-height: 48px;
+  font-weight: normal;
+  border-radius: 3px;
+}

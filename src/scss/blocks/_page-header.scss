@@ -1,21 +1,34 @@
 .page-header {
-  position: fixed;
+  position: static;
   top: 0;
   left: 0;
   right: 0;
-  padding: 2.7rem 0;
   z-index: 10;
+  background: $c-blue;
 
   @media (min-width: $stop-scaling) {
     padding: 27px 0;
   }
 
   @media (max-width: $tablet) and (orientation: portrait) {
-    padding: 0.9rem 0;
+    padding: 10px 0;
   }
 
   @media (max-width: $mobile) and (orientation: landscape) {
     padding: 0.9rem 0;
+  }
+  &--menu-opened {
+    .page-header__toggler {
+      background-color: $c-light;
+      border-radius: 4px;
+      &::before,
+      &::after {
+        background-color: #3464e0;
+      }
+      &::before {
+        box-shadow: 0 16px 0 0 #3464e0;
+      }
+    }
   }
 }
 
@@ -24,17 +37,26 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 11px 40px;
+  @media (max-width: $tablet) {
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  @media (max-width: $mobile) {
+    flex-direction: row;
+  }
 }
 
 .page-header__logo {
   @include hover;
   position: relative;
   flex: none;
-  top: -0.5rem;
-  display: block;
-  padding: 1rem 0;
-  width: 10rem;
+  display: flex;
+  width: 356px;
   color: $c-light;
+  align-items: center;
+  justify-content: space-between;
 
   @media (min-width: $stop-scaling) {
     top: -5px;
@@ -44,8 +66,8 @@
 
   @media (max-width: $tablet) and (orientation: portrait) {
     top: 0;
-    padding: 0.5rem 0;
-    width: 6.8rem;
+    padding: 0;
+    width: 365px;
     z-index: 1;
 
     .page-header--menu-opened & {
@@ -53,10 +75,10 @@
     }
   }
 
-  @media (max-width: $mobile) and (orientation: landscape) {
+  @media (max-width: $mobile) {
     top: 0;
     padding: 0.5rem 0;
-    width: 6.8rem;
+    width: 245px;
     z-index: 1;
 
     .page-header--menu-opened & {
@@ -66,55 +88,74 @@
 
   svg {
     display: block;
-    width: 100%;
-    height: auto;
+    color: currentColor;
   }
 }
 
-.page-header__toggler {
+
+
+.page-header__logo-image {
+  color: #ffffff;
+  width: 48px;
+  height: 48px;
+}
+
+.page-header__logo-description {
+  font-family: $font;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 28px;
+  margin: 0;
+  @media (max-width: $mobile) {
+    font-size: 16px;
+  }
+}
+
+.page-header__sidebar-toggler {
   @include btn-reset;
   position: relative;
-  display: none;
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 44px;
+  height: 44px;
   font-size: 0;
-  background-color: $c-light;
-  border-radius: 50%;
-  z-index: 1;
-
-  @media (max-width: $tablet) and (orientation: portrait) {
+  z-index: 2;
+  display: none;
+  @media (max-width: 767px) {
     display: block;
   }
-
-  @media (max-width: $mobile) and (orientation: landscape) {
-    display: block;
-  }
-
   &::before,
   &::after {
     content: "";
     position: absolute;
-    right: 0.8rem;
-    height: 1px;
-    background-color: $c-blue;
+    left: 0;
+    height: 2px;
+    background-color: $c-light;
+    transition: 0.5s ease-in-out;
   }
 
   &::before {
-    top: 0.9rem;
-    width: 1rem;
-    box-shadow: 0 0.6rem 0 0 $c-blue;
+    top: 1.5rem;
+    width: 3rem;
+    box-shadow: 0 1.8rem 0 0 $c-light;
   }
 
   &::after {
-    top: 1.2rem;
-    width: 0.7rem;
+    top: 2.4rem;
+    width: 3rem;
   }
 
-  .page-header--menu-opened & {
+
+
+  .page-header--sibebar-opened & {
+    position: absolute;
+    right: 5%;
+    top: 2%;
+    transition: 2s;
     &::before,
     &::after {
       top: 50%;
       left: 50%;
+      transition: 0.5s ease-in-out;
       transform: translate(-50%) rotate(45deg);
       width: 2.6rem;
       height: 2px;
@@ -127,29 +168,87 @@
   }
 }
 
-.page-header__nav {
-  display: flex;
-  align-items: center;
+.page-header__toggler {
+  @include btn-reset;
+  position: relative;
+  width: 36px;
+  height: 36px;
+  font-size: 0;
+  z-index: 2;
+  display: none;
+  @media (max-width: 767px) {
+    display: block;
+  }
 
-  @media (max-width: $tablet) and (orientation: portrait) {
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: 16px;
+    height: 4px;
+    width: 4px;
+    background-color: $c-light;
+    transition: 0.5s ease-in-out;
+    border-radius: 50%;
+  }
+
+  &::before {
+    top: 8px;
+    box-shadow: 0 16px 0 0 $c-light;
+  }
+
+  &::after {
+    top: 16px;
+  }
+
+
+
+  &:focus{
+    background-color: $c-light;
+    border-radius: 4px;
+    &::before,
+    &::after {
+      background-color: #3464e0;
+    }
+    &::before {
+      box-shadow: 0 16px 0 0 #3464e0;
+    }
+
+  }
+}
+
+@keyframes upsideDown {
+  from {top: -1000px}
+  to {top: 0}
+}
+
+.page-header__nav {
+  align-items: center;
+  @media (max-width: $tablet){
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    transform: translateX(-100%);
     flex-direction: column;
     align-items: flex-start;
     padding: 4rem 3.5rem;
     color: $c-blue;
     background-color: $c-light;
-
+    @media (min-width: $mobile) {
+      display: flex;
+      padding: 0;
+      transform: none;
+      background-color: transparent;
+      position: static;
+    }
     .page-header--menu-opened & {
-      transform: translateX(0);
+      animation: upsideDown .5s ease-in-out;
+      display: block;
     }
   }
 
-  @media (max-width: $mobile) and (orientation: landscape) {
+  @media (max-width: $mobile){
     position: fixed;
     top: 0;
     left: 0;
@@ -166,15 +265,16 @@
 
     .page-header--menu-opened & {
       transform: translateX(0);
+      background-color: #fff;
+      color: #1740aa;
     }
   }
 }
 
 .page-header__menu {
   font-family: $font-alt;
-  text-transform: uppercase;
   font-weight: 400;
-  font-size: 1.2rem;
+  font-size: 16px;
   line-height: 1.0418;
   color: $c-light;
 
@@ -182,52 +282,56 @@
     font-size: 12px;
   }
 
-  @media (max-width: $tablet) and (orientation: portrait) {
+  @media (max-width: $tablet)  {
     margin: auto 0;
-    font-size: 2.4rem;
+    font-size: 16px;
+    padding-top: 10px;
     color: $c-blue;
   }
 
-  @media (max-width: $mobile) and (orientation: landscape) {
+  @media (max-width: $mobile) {
     margin: auto 0;
     font-size: 1.4rem;
     color: $c-blue;
+    padding: 0;
   }
 
   ul {
     @include list-reset;
     display: flex;
     align-items: center;
-
-    @media (max-width: $tablet) and (orientation: portrait) {
-      flex-direction: column;
+    min-width: 295px;
+    justify-content: space-between;
+    font-family: $font;
+    @media (max-width: $mobile) {
+      flex-direction: row;
       align-items: flex-start;
-      padding-top: 3.8rem;
+      width: 100%;
     }
 
-    @media (max-width: $mobile) and (orientation: landscape) {
+    @media (max-width: $mobile){
       flex-direction: column;
       align-items: flex-start;
       padding-top: 2rem;
+      font-size: 18px;
     }
   }
 
   li {
-    margin-left: 4rem;
-
     @media (min-width: $stop-scaling) {
       margin-left: 40px;
     }
 
-    @media (max-width: $tablet) and (orientation: portrait) {
-      margin: 0 0 2.5rem;
+    @media (max-width: $tablet) {
+      margin: 0.5rem 0 0.5rem;
+      padding: 10px;
 
       &:last-child {
         margin-bottom: 0;
       }
     }
 
-    @media (max-width: $mobile) and (orientation: landscape) {
+    @media (max-width: $mobile){
       margin: 0 0 1.5rem;
 
       &:last-child {
@@ -239,8 +343,8 @@
   a {
     position: relative;
     display: block;
-    color: inherit;
-    padding: 0 0.5em 0.5em;
+    color: $c-link;
+
 
     &::after {
       content: "";
@@ -278,7 +382,7 @@
 
     &:hover,
     &:focus {
-      color: $c-grey;
+      color: $c-light;
       outline: none;
 
       &::after {
@@ -304,5 +408,38 @@
   @media (max-width: $mobile) and (orientation: landscape) {
     margin-left: 0;
     width: 100%;
+  }
+}
+
+.page-header__login {
+  @media (max-width: $tablet) {
+    display: none;
+  }
+}
+
+.page-header__login-button {
+  @include btn-reset;
+  height: 42px;
+  padding-left: 56px;
+  padding-right: 23px;
+  font-size: 14px;
+  line-height: 16px;
+  background: #1740AA;
+  border-radius: 50px;
+  color: $c-light;
+  position: relative;
+  transition: .5s;
+  &::before {
+    content: '';
+    position: absolute;
+    display: block;
+    height: 20px;
+    width: 20px;
+    left: 23px;
+    top: 11px;
+    background: url("../img/icons/key.svg");
+  }
+  &:hover {
+    background-color: #123388;
   }
 }

@@ -48,8 +48,7 @@ let { src, dest } = require('gulp'),
 	ttf2woff2 = require('gulp-ttf2woff2'),
 	pug = require('gulp-pug'),
 	plumber = require('gulp-plumber'),
-	notify = require('gulp-notify'),
-	babel = require('gulp-babel');
+	notify = require('gulp-notify');
 
 function browserSync() {
 	browsersync.init({
@@ -127,9 +126,6 @@ function js() {
 
 function js_copy() {
 	return src(path.watch.js)
-		.pipe(babel({
-			presets: ['@babel/env']
-		}))
 		.pipe(dest(path.build.js))
 		.pipe(browsersync.stream())
 }

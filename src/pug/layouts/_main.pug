@@ -9,7 +9,7 @@ html(lang="en")
         link(rel="stylesheet", href="css/style.min.css")
         title #{title}
     body
-
+        include ./../layouts/_svg.pug
         include ./../sections/_header.pug
 
         block content
@@ -17,4 +17,4 @@ html(lang="en")
 
         include ./../sections/_footer.pug
 
-script(src="js/script.min.js")
+script(src="js/script.min.js" type="module")
