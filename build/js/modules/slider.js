@@ -1,43 +1,54 @@
 export default () => {
- /* Устанавливаем стартовый индекс слайда по умолчанию: */
-let slideIndex = 1;
-/* Вызываем функцию, которая реализована ниже: */
-showSlides(slideIndex);
+    let cards = document.querySelectorAll('.card'),
+        transforms = [
+            {
+                x: 0,
+                z: 0,
+                scale: 1,
+                opacity: 1,
+                filter: 'blur(0)'
+            },
+            {
+                x: '-12%',
+                z: '-50px',
+                scale: 0.8,
+                opacity: 0.8,
+                filter: 'blur(2px)'
+            },
+            {
+                x: '12%',
+                z: '-50px',
+                scale: 0.8,
+                opacity: 0.8,
+                filter: 'blur(2px)'
+            }
+        ];
 
-/* Увеличиваем индекс на 1 — показываем следующий слайд: */
-function nextSlide() {
-  showSlides(slideIndex += 1);
-}
+    let nextTransform = function (x) {
+        if (x >= cards.length - 1) {
+            x = 0;
+        } else {
+            x++;
+        }
+        return x;
+    };
 
-/* Уменьшаем индекс на 1 — показываем предыдущий слайд: */
-function previousSlide() {
-  showSlides(slideIndex -= 1);
-}
+    function next() {
+        for (let i = 0; i < cards.length; i++) {
+            cards[i].style.transform =
+                'translateX(' + transforms[nextTransform(i)].x + ')' +
+                'translateZ(' + transforms[nextTransform(i)].z + ')' +
+                'scale(' + transforms[nextTransform(i)].scale + ')';
+            cards[i].style.opacity = transforms[nextTransform(i)].opacity;
+            cards[i].style.filter = transforms[nextTransform(i)].filter;
+        }
+        transforms.push(transforms.shift());
+    }
 
-/* Устанавливаем текущий слайд: */
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
+    let carousel = document.querySelector('#carousel');
+    let hover;
+    carousel.addEventListener('mousemove', () => hover = 1);
+    carousel.addEventListener('mouseout', () => hover = 0);
 
-/* Функция перелистывания: */
-function showSlides(n) {
-  let i;
-  /* Обращаемся к элементам с названием класса "item", то есть к картинкам: */
-  let slides = document.getElementsByClassName("item");
-
-  /* Проверяем количество слайдов: */
-  if (n > slides.length) {
-    slideIndex = 1
-  }
-  if (n < 1) {
-    slideIndex = slides.length
-  }
-
-  /* Проходим по каждому слайду в цикле for: */
-  for (let slide of slides) {
-    slide.style.display = "none";
-  }
-  /* Делаем элемент блочным: */
-  slides[slideIndex - 1].style.display = "block";
-}
+    let timerId = setInterval(() => !hover && next(), 5000);
 }

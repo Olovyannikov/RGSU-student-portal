@@ -5,7 +5,7 @@
   right: 0;
   z-index: 10;
   background: $c-blue;
-
+  margin-bottom: 24px;
   @media (min-width: $stop-scaling) {
     padding: 27px 0;
   }
@@ -109,6 +109,12 @@
   margin: 0;
   @media (max-width: $mobile) {
     font-size: 16px;
+  }
+}
+
+.page-header__sidebar {
+  @media (min-width: $mobile) {
+    display: none;
   }
 }
 
