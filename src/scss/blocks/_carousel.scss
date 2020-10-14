@@ -1,0 +1,78 @@
+#carousel {
+  transform-style: preserve-3d;
+  max-width: 1155px;
+  min-height: 382px;
+  margin: 0 auto 111px;
+  position: relative;
+}
+
+.card {
+  position: absolute;
+  width: 1120px;
+  height: 382px;
+  transform-style: preserve-3d;
+  transition: 1.5s;
+}
+
+.card:nth-child(1) {
+  transform: translateX(0) translateZ(0);
+  background: #add8e6;
+}
+
+.card:nth-child(2) {
+  transform: translateX(12%) translateZ(-50px) scale(0.8);
+  background: #ff7f50;
+  filter: blur(2px);
+}
+
+.card:nth-child(3) {
+  transform: translateX(-12%) translateZ(-50px) scale(0.8);
+  background: #7fff00;
+  filter: blur(2px);
+}
+
+.card__description {
+  position: absolute;
+  top: 108px;
+  left: 45px;
+  margin: 0;
+  font-size: 34px;
+  line-height: 48px;
+  font-weight: normal;
+  span {
+    border-radius: 3px;
+    padding: 0 5px;
+    background:rgba(255, 255, 255, 0.2);
+  }
+}
+
+.card__controls-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  position: absolute;
+  top: 345px;
+  left: 50%;
+  width: 74px;
+  justify-content: space-between;
+  transform: translateX(-50%);
+}
+
+
+
+.card__control-button {
+  width: 14px;
+  height: 14px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  transition: 1s;
+  background-color: transparent;
+  cursor: pointer;
+  outline: none;
+  &--active {
+    width: 24px;
+    background-color: #fff;
+    border-radius: 14px;
+  }
+}

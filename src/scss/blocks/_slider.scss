@@ -1,46 +1,74 @@
-#carousel {
-  transform-style: preserve-3d;
-  max-width: 1155px;
-  margin: 0 auto;
-  position: relative;
+.slider__item {
+  border-radius: 4px;
+  display: flex;
+  padding-left: 29px;
+  padding-top: 29px;
+  padding-right: 26px;
+  &--online {
+    background-color: #3464E0;
+    width: 545px;
+  }
 }
 
-.card {
-  position: absolute;
-  width: 1120px;
-  height: 382px;
-  transform-style: preserve-3d;
-  transition: 1s;
+
+.slider__item-title {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 30px;
+  margin: 0 0 23px;
+  width: 353px;
 }
 
-.card:nth-child(1) {
-  transform: translateX(0) translateZ(0);
-  background: #add8e6;
-}
-
-.card:nth-child(2) {
-  transform: translateX(-12%) translateZ(-50px) scale(0.8);
-  background: #ff7f50;
-  filter: blur(2px);
-}
-
-.card:nth-child(3) {
-  transform: translateX(12%) translateZ(-50px) scale(0.8);
-  background: #7fff00;
-  filter: blur(2px);
-}
-
-.card__description {
-  position: absolute;
-  top: 108px;
-  left: 45px;
-  margin: 0;
-  font-size: 34px;
-  line-height: 48px;
+.slider__item-descr {
+  font-style: normal;
   font-weight: normal;
+  font-size: 16px;
+  line-height: 21px;
+  margin: 0 0 24px;
+}
+
+.slider__item-link {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  color: #ffffff;
+  padding: 13px 38px;
+  border: 1px solid #fff;
+  border-radius: 50px;
+  display: block;
+  width: 146px;
+  margin-bottom: 25px;
+}
+
+.slider__item-date {
+  margin: 0;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 26px;
   span {
-    border-radius: 3px;
-    padding: 0 5px;
-    background: linear-gradient(to left, rgba(255,255,255,.2));
+    display: block;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 26px;
+    padding-top: 12px;
+    padding-bottom: 11px;
+  }
+}
+
+.slider__item-state {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 26px;
+  padding: 2px 8px;
+  display: block;
+  width: 63px;
+  &--online {
+    background: #2BC584;
+    border-radius: 2px;
   }
 }

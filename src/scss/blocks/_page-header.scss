@@ -443,7 +443,8 @@
     width: 20px;
     left: 23px;
     top: 11px;
-    background: url("../img/icons/key.svg");
+    background: url("../img/icons/icons.svg#key") no-repeat center;
+    background-size: cover;
   }
   &:hover {
     background-color: #123388;

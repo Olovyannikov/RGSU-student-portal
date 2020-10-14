@@ -1,13 +1,22 @@
-#carousel
-    .card
+#carousel.carousel.main__carousel
+    h2.carousel__title.visually-hidden
+    .card.carousel__card
         img(src="img/city.png")
         p.card__description
             span Портал РГСУ  <br>  по поиску портфолио  <br>  выпускников, студентов и аспирантов
-    .card
+    .card.carousel__card
         img(src="img/chicks.png")
         p.card__description
             span Портал РГСУ  <br>  по поиску портфолио  <br>  выпускников, студентов и аспирантов
-    .card
+    .card.carousel__card
         img(src="img/students.png")
         p.card__description
             span Портал РГСУ  <br>  по поиску портфолио  <br>  выпускников, студентов и аспирантов
+    .card__controls
+        ul.card__controls-list
+            li.card__controls-item.card__controls-item
+                button.card__control-button.card__control-button--active
+            li.card__controls-item
+                button.card__control-button
+            li.card__controls-item
+                button.card__control-button

@@ -14,7 +14,7 @@ let path = {
 		pug: [source_folder + '/pug/pages/*.pug', "!" + source_folder + '/**/_*.pug'],
 		css: source_folder + '/scss/style.scss',
 		js: source_folder + '/js/script.js',
-		img: source_folder + '/img/**/*.{png,jpeg,jpg,svg,gif,ico,webp}',
+		img: source_folder + '/img/**/*.{png,jpeg,jpg,gif,ico,webp}',
 		fonts: source_folder + '/fonts/*.{woff,woff2,ttf,svg}',
 	},
 	watch: {
@@ -165,7 +165,7 @@ function svgsprite() {
 		.pipe(svgSprite({
 			mode: {
 				stack: {
-					sprite: "../img/icons/icons.svg",
+					sprite: "../icons/icons.svg",
 				}
 			},
 		}))

@@ -1,0 +1,14 @@
+.advertisement {
+  @include container;
+  padding: 0 45px;
+  margin-bottom: 82px;
+}
+
+.advertisement__titile {
+  color: #6E7781;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 26px;
+  line-height: 26px;
+  margin: 0 0 38px;
+}
