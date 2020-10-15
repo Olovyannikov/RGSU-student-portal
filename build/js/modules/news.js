@@ -1,11 +1,11 @@
 export default () => {
     (function() {
         const modifiers = {
-            controlActive: 'slider__control--active',
+            controlActive: 'news__control--active',
             indicatorActive: 'active',
         };
 
-        const elRoot = document.querySelector('.advertisement');
+        const elRoot = document.querySelector('.news');
         const elsItem = elRoot.querySelectorAll('.js-slider__item');
         const elItems = elRoot.querySelector('.js-slider__items');
         const elNext = elRoot.querySelector('.js-slider__next');
@@ -25,9 +25,9 @@ export default () => {
         const updateControls = () => {
             //Hide previous button if we are at the start
             elPrevious.classList.toggle(modifiers.controlActive, currentX !== 0);
-            firstIndicator.classList.toggle(modifiers.indicatorActive,currentX == 0);
+            firstIndicator.classList.toggle(modifiers.indicatorActive,currentX === 0);
             secondIndicator.classList.toggle(modifiers.indicatorActive, currentX !== 0 && currentX < maxScrollValue);
-            thirdIndicator.classList.toggle(modifiers.indicatorActive, currentX == maxScrollValue)
+            thirdIndicator.classList.toggle(modifiers.indicatorActive, currentX === maxScrollValue)
             //Hide next button if we are at the end
             elNext.classList.toggle(modifiers.controlActive, currentX < maxScrollValue);
         }
