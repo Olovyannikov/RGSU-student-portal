@@ -1896,6 +1896,7 @@ img {
   font-size: 14px;
   line-height: 26px;
   padding: 2px 11px;
+  z-index: 1;
 }
 
 .block__content {
@@ -1903,6 +1904,7 @@ img {
   color: inherit;
   display: block;
   width: 100%;
+  z-index: 10;
 }
 
 .block--wide {
@@ -1918,19 +1920,6 @@ img {
 .block--narrow {
   background: #fff;
   width: 420px;
-}
-
-.block__content-news {
-  background: transparent url("../img/studyear.png"), -webkit-gradient(linear, left top, left bottom, from(rgba(68, 68, 68, 0)), to(rgba(0, 0, 0, 0.8)));
-  background: transparent url("../img/studyear.png"), -o-linear-gradient(top, rgba(68, 68, 68, 0) 0%, rgba(0, 0, 0, 0.8) 100%);
-  background: transparent url("../img/studyear.png"), linear-gradient(180deg, rgba(68, 68, 68, 0) 0%, rgba(0, 0, 0, 0.8) 100%);
-  background-size: cover;
-}
-
-.block__content-news--even {
-  background: transparent url("../img/studyspring.png"), -webkit-gradient(linear, left top, left bottom, from(rgba(68, 68, 68, 0)), to(rgba(0, 0, 0, 0.8)));
-  background: transparent url("../img/studyspring.png"), -o-linear-gradient(top, rgba(68, 68, 68, 0) 0%, rgba(0, 0, 0, 0.8) 100%);
-  background: transparent url("../img/studyspring.png"), linear-gradient(180deg, rgba(68, 68, 68, 0) 0%, rgba(0, 0, 0, 0.8) 100%);
 }
 
 .slider__item-title {
@@ -2280,7 +2269,7 @@ img {
   padding: 0 4rem;
   width: 100%;
   max-width: 1440px;
-  margin-bottom: 82px;
+  margin-bottom: 52px;
 }
 
 .news .divider {
@@ -2323,6 +2312,7 @@ img {
 
 .news__item {
   padding-right: 30px;
+  position: relative;
 }
 
 .news__item:last-child {
@@ -2503,6 +2493,31 @@ img {
 
 .news__item-state--offline {
   background-color: #3464E0;
+}
+
+.news__picture {
+  position: absolute;
+  top: 0;
+}
+
+.news__picture::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(68, 68, 68, 0)), to(rgba(0, 0, 0, 0.8)));
+  background: -o-linear-gradient(top, rgba(68, 68, 68, 0) 0%, rgba(0, 0, 0, 0.8) 100%);
+  background: linear-gradient(180deg, rgba(68, 68, 68, 0) 0%, rgba(0, 0, 0, 0.8) 100%);
+}
+
+.banner {
+  margin-bottom: 62px;
+}
+
+.banner__image {
+  width: 100%;
 }
 
 .social-block {

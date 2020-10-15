@@ -116,6 +116,7 @@
       font-size: 14px;
       line-height: 26px;
       padding: 2px 11px;
+      z-index: 1;
     }
   }
 }
@@ -125,6 +126,7 @@
   color: inherit;
   display: block;
   width: 100%;
+  z-index: 10;
 }
 
 .block--wide {
@@ -140,15 +142,6 @@
 .block--narrow {
   background: #fff;
   width: 420px;
-}
-
-.block__content-news {
-  background: transparent url("../img/studyear.png"),linear-gradient(180deg, rgba(68, 68, 68, 0) 0%, rgba(0, 0, 0, 0.8) 100%);
-  background-size: cover;
-}
-
-.block__content-news--even {
-  background: transparent url("../img/studyspring.png"), linear-gradient(180deg, rgba(68, 68, 68, 0) 0%, rgba(0, 0, 0, 0.8) 100%);
 }
 
 .slider__item-title {
