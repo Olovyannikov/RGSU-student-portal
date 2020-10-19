@@ -1,6 +1,6 @@
 .slider {
   position: relative;
-  width: 1400px;
+  max-width: 1400px;
   margin: 0 auto;
   border-radius: 4px;
   min-height: 300px;
@@ -21,10 +21,6 @@
 
 .slider__item {
   padding-right: 30px;
-}
-
-.slider__item:last-child {
-  padding-right: 0;
 }
 
 .slider__control {
@@ -60,7 +56,7 @@
   display: flex;
   width: 36px;
   justify-content: space-between;
-  @include  list-reset;
+  @include list-reset;
   align-items: center;
 }
 
@@ -71,28 +67,34 @@
   height: 15px;
   text-indent: -999px;
   cursor: pointer;
-  background-color: #C3CAD6;
+  background-color: #c3cad6;
   background-clip: padding-box;
-  transition: .6s ease;
+  transition: 0.6s ease;
   border-radius: 2px;
 }
 
 .slider__indicators li.active {
   opacity: 1;
   height: 26px;
-  background-color: #3464E0;
+  background-color: #3464e0;
 }
 
 .block {
+  position: relative;
+  flex-wrap: wrap;
   border-radius: 4px;
   height: 300px;
-  padding: 29px;
+  padding: 15px;
   display: flex;
   justify-content: space-between;
+  @media (min-width: $mobile) {
+    padding: 29px;
+    flex-wrap: nowrap;
+  }
   &--hot {
     position: relative;
     &::after {
-      content: '';
+      content: "";
       display: block;
       position: absolute;
       left: 0;
@@ -107,12 +109,12 @@
   &--attention {
     position: relative;
     &::after {
-      content: 'важно';
+      content: "важно";
       display: block;
       position: absolute;
       right: 23px;
       top: 25px;
-      background-color: #2BC584;
+      background-color: #2bc584;
       font-size: 14px;
       line-height: 26px;
       padding: 2px 11px;
@@ -122,7 +124,6 @@
 }
 
 .block__content {
-  position: relative;
   color: inherit;
   display: block;
   width: 100%;
@@ -130,52 +131,80 @@
 }
 
 .block--wide {
-  background: #3464E0;
-  width: 545px;
+  background: #3464e0;
+  max-width: 545px;
+  width: 270px;
+  box-sizing: border-box;
+  @media (min-width: $mobile) {
+    width: 545px;
+  }
 }
 
 .block--medium {
   background: #fff;
-  width: 430px;
+  max-width: 430px;
+  width: 270px;
+  box-sizing: border-box;
+  @media (min-width: $mobile) {
+    width: 430px;
+  }
 }
 
 .block--narrow {
   background: #fff;
-  width: 420px;
+  max-width: 420px;
+  width: 270px;
+  box-sizing: border-box;
+  @media (min-width: $mobile) {
+    width: 420px;
+  }
 }
 
 .slider__item-title {
   font-style: normal;
   font-weight: 500;
-  font-size: 24px;
-  line-height: 30px;
-  margin: 0 0 23px;
-  width: 353px;
+  font-size: 16px;
+  margin: 0;
+  max-width: 353px;
+  min-width: 215px;
+  @media (min-width: $tablet) {
+    font-size: 24px;
+    line-height: 30px;
+    margin: 0 0 23px;
+  }
 }
 
 .slider__item-descr {
   font-style: normal;
   font-weight: normal;
-  font-size: 16px;
-  line-height: 21px;
-  margin: 0 0 24px;
+  font-size: 14px;
+  line-height: 18px;
+  margin-bottom: 0;
+  width: 262px;
+  max-width: 100%;
+  @media (min-width: $tablet) {
+    font-size: 16px;
+    width: 100%;
+    margin: 0 0 24px;
+    line-height: 21px;
+
+  }
   &--medium {
     width: 217px;
     font-size: 20px;
     line-height: 26px;
-    color: #C3CAD6;
+    color: #c3cad6;
   }
   &--narrow {
     width: 281px;
 
     font-size: 20px;
     line-height: 26px;
-    color: #C3CAD6;
+    color: #c3cad6;
   }
 }
 
 .slider__item-link {
-  font-style: normal;
   font-weight: normal;
   font-size: 14px;
   line-height: 16px;
@@ -184,19 +213,25 @@
   border: 1px solid #fff;
   border-radius: 50px;
   display: block;
-  width: 146px;
-  transition: .2s;
+  max-width: 146px;
   position: absolute;
-  bottom: 0;
+  bottom: 20px;
+  right: 30px;
+  transition: .5s;
+  @media (min-width: $mobile) {
+    left: 29px;
+    bottom: 25px;
+    right: auto;
+  }
   &:hover {
     background-color: #fff;
-    color: #2955C9;
+    color: #2955c9;
   }
   &--dark {
-    color: #C3CAD6;
+    color: #c3cad6;
     border-color: #c3cad6;
     &:hover {
-      background-color: #C3CAD6;
+      background-color: #c3cad6;
       color: #fff;
     }
   }
@@ -218,7 +253,7 @@
     padding-bottom: 11px;
   }
   &--dark {
-    color: #C3CAD6;
+    color: #c3cad6;
     span {
       color: #c3cad6;
     }
@@ -234,10 +269,12 @@
   display: block;
   width: 63px;
   border-radius: 2px;
+  margin: 0;
+  text-align: center;
   &--online {
-    background: #2BC584;
+    background: #2bc584;
   }
   &--offline {
-    background-color: #3464E0;
+    background-color: #3464e0;
   }
 }

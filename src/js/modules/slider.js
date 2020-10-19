@@ -34,7 +34,7 @@ export default () => {
 
         //Slide to card by its index
         const slideTo = (index) => {
-            //Check for minimal/maximal valid endexes
+            //Check for minimal/maximal valid indexes
             if(index < 0 || index > elItems.length - 1) return;
 
             //Get total width of all items. CSS is built the way that items don't have any offsets between them.

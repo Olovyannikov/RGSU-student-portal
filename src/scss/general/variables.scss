@@ -1,10 +1,10 @@
 $c-light: #ffffff;
-$c-blue: linear-gradient(90deg, #3464E0 0%, #2955C9 100%);
-$c-link: #9CBAF0;
+$c-blue: linear-gradient(90deg, #3464e0 0%, #2955c9 100%);
+$c-link: #9cbaf0;
 $c-grey: #f1f4f9;
 
 $font: "Russia", "Arial", sans-serif;
-$font-alt: "Radical",  "Arial", sans-serif;
+$font-alt: "Radical", "Arial", sans-serif;
 
 $stop-scaling: 2000px;
 
@@ -15,6 +15,7 @@ $narrower: "max-aspect-ratio: 1439/760";
 
 $tablet: 1024px;
 $mobile: 768px;
+$small: 320px;
 
 $retina-dpi: 144dpi;
 $retina-dppx: 1.5dppx;

@@ -48,7 +48,9 @@ let { src, dest } = require('gulp'),
 	ttf2woff2 = require('gulp-ttf2woff2'),
 	pug = require('gulp-pug'),
 	plumber = require('gulp-plumber'),
-	notify = require('gulp-notify');
+	notify = require('gulp-notify'),
+ 	webpack = require('webpack'),
+ 	webpackStream = require('webpack-stream');
 
 function browserSync() {
 	browsersync.init({
@@ -110,7 +112,25 @@ function css() {
 
 function js() {
 	return src(path.src.js)
-		.pipe(fileinclude({ prefix: '@@' }))
+		.pipe(webpackStream(
+			{
+				mode: 'development',
+				output: {
+					filename: 'script.js',
+				},
+				module: {
+					rules: [{
+						test: /\.m?js$/,
+						exclude: /(node_modules|bower_components)/,
+						use: {
+							loader: 'babel-loader',
+							options: {
+								presets: ['@babel/preset-env']
+							}
+						}
+					}]
+				},
+			}))
 		.pipe(dest(path.build.js))
 		.pipe(
 			uglify()
@@ -124,11 +144,11 @@ function js() {
 		.pipe(browsersync.stream())
 }
 
-function js_copy() {
-	return src(path.watch.js)
-		.pipe(dest(path.build.js))
-		.pipe(browsersync.stream())
-}
+// function js_copy() {
+// 	return src(path.watch.js)
+// 		.pipe(dest(path.build.js))
+// 		.pipe(browsersync.stream())
+// }
 
 function images() {
 	return src(path.src.img)
@@ -183,14 +203,14 @@ function clean(params) {
 	return del(path.clean);
 }
 
-let build = gulp.series(clean, gulp.parallel(svgsprite, images, js, js_copy, css, pug2html, fonts));
+let build = gulp.series(clean, gulp.parallel(svgsprite, images, js, css, pug2html, fonts));
 let watch = gulp.parallel(build, watchFiles, browserSync);
 
 exports.pug2html = pug2html;
 exports.fonts = fonts;
 exports.svgsprite = svgsprite;
 exports.images = images;
-exports.js_copy = js_copy;
+// exports.js_copy = js_copy;
 exports.js = js;
 exports.css = css;
 exports.build = build;

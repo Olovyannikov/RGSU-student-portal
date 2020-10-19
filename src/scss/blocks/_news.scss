@@ -16,7 +16,7 @@
 }
 
 .news__slider {
-  width: 1400px;
+  max-width: 1400px;
 }
 
 
@@ -36,6 +36,10 @@
 .news__item {
   padding-right: 30px;
   position: relative;
+  @media (max-width: $tablet) {
+    margin-right: 20px;
+    padding-right: 0;
+  }
 }
 
 .news__item:last-child {
@@ -104,7 +108,7 @@
   font-size: 18px;
   line-height: 26px;
   margin: 0 0 0;
-  width: 391px;
+  max-width: 391px;
   text-transform: uppercase;
   position: absolute;
   bottom: 0;
@@ -192,6 +196,11 @@
 .news__picture {
   position: absolute;
   top: 0;
+  img {
+    object-fit: cover;
+    min-width: 300px;
+    min-height: 300px;
+  }
   &::after {
     content: '';
     display: block;
