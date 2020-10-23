@@ -14,12 +14,12 @@
     padding: 0 40px;
   }
 
-  @media (max-width: $tablet) and (orientation: portrait) {
-    padding: 0 1rem;
+  @media (max-width: $tablet) {
+    padding: 0 20px;
   }
 
-  @media (max-width: $mobile) and (orientation: landscape) {
-    padding: 0 1rem;
+  @media (max-width: $mobile) {
+    padding: 0 12px;
   }
 }
 

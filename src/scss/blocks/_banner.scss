@@ -1,7 +1,53 @@
 .banner {
   margin-bottom: 62px;
+  position: relative;
+  overflow: hidden;
 }
 
 .banner__image {
   width: 100%;
+}
+
+.banner__info {
+  top: 56px;
+  right: 26%;
+  &--more {
+    position: absolute;
+  }
+}
+
+.banner__info-title {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 46px;
+  color: #ffffff;
+  display: block;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
+  margin-bottom: 13px;
+  padding: 6px 10px;
+  max-width: 185px;
+}
+
+.banner__info-description {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 28px;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
+  display: block;
+  padding: 7px;
+}
+
+.banner__wrapper {
+  display: flex;
+  transition: transform 0.6s ease;
+}
+
+.banner__item {
+  flex: 0 0 100%;
+  max-width: 100%;
 }

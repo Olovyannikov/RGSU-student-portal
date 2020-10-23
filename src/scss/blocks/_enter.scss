@@ -1,5 +1,9 @@
 .enter {
   margin-bottom: 32px;
+  display: none;
+  @media (min-width: $mobile) {
+    display: block;
+  }
 }
 
 .enter__wrapper {
