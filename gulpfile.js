@@ -41,8 +41,6 @@ let { src, dest } = require('gulp'),
 	uglify = require('gulp-uglify-es').default,
 	imagemin = require('gulp-imagemin'),
 	webp = require('gulp-webp'),
-	webphtml = require('gulp-webp-html'),
-	// webpcss = require('gulp-webp-css'),
 	svgSprite = require('gulp-svg-sprite'),
 	ttf2woff = require('gulp-ttf2woff'),
 	ttf2woff2 = require('gulp-ttf2woff2'),
@@ -76,7 +74,6 @@ function pug2html() {
 		.pipe(pug({
 			pretty: true
 		}))
-		.pipe(webphtml())
 		.pipe(dest(path.build.html))
 		.pipe(browsersync.stream())
 }
@@ -144,12 +141,6 @@ function js() {
 		.pipe(browsersync.stream())
 }
 
-// function js_copy() {
-// 	return src(path.watch.js)
-// 		.pipe(dest(path.build.js))
-// 		.pipe(browsersync.stream())
-// }
-
 function images() {
 	return src(path.src.img)
 		.pipe(
@@ -164,7 +155,7 @@ function images() {
 				progressive: true,
 				svgoPlugins: [{ removeViewBox: false }],
 				interlaced: true,
-				optimizationLevel: 3
+				optimizationLevel: 1
 			})
 		)
 		.pipe(dest(path.build.img))
@@ -210,7 +201,6 @@ exports.pug2html = pug2html;
 exports.fonts = fonts;
 exports.svgsprite = svgsprite;
 exports.images = images;
-// exports.js_copy = js_copy;
 exports.js = js;
 exports.css = css;
 exports.build = build;

@@ -44,8 +44,13 @@
   pointer-events: none;
 }
 
+.swiper-button-prev {
+  margin-right: 18px;
+}
+
 .swiper-button-next {
   transform: rotate(180deg);
+  margin-left: 18px;
 }
 
 .swiper-pagination {
@@ -131,7 +136,7 @@ button.swiper-pagination-bullet {
 
 .swiper-container {
   max-width: 1440px;
-  min-height: 300px;
+  overflow: hidden;
 }
 
 .swiper-slide {

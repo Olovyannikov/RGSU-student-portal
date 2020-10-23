@@ -1,8 +1,13 @@
 .portfolio {
-  margin-bottom: 82px;
-  position: relative;
   @include container;
   z-index: 1;
+  margin-bottom: 41px;
+}
+
+.portfolio__container {
+  background-color: #fff;
+  position: relative;
+  border-radius: 4px;
   &::before {
     content: "";
     position: absolute;
@@ -27,22 +32,17 @@
   }
 }
 
-.portfolio__container {
-  background-color: #fff;
-}
-
-.portfolio__wrapper {
-  display: flex;
-  margin: 0 auto;
-  justify-content: center;
-
+.portfolio__title {
+  @include title;
+  margin-bottom: 33px;
 }
 
 .gauge {
-  display: inline-block;
+  display: flex;
   position: relative;
-  padding: 15px;
-  animation: rotate 22s;
+  justify-content: center;
+  padding-bottom: 70px;
+  width: 100%;
 }
 
 .gauge__value {

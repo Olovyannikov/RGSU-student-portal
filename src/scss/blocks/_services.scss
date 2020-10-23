@@ -1,0 +1,63 @@
+.services {
+  @include container;
+}
+
+.services__header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  .divider {
+    width: 100%;
+  }
+}
+
+.services__title {
+  @include block-title;
+  margin: 0 14px 0 0;
+}
+
+.services__wrapper {
+  margin-top: 27px;
+  margin-bottom: 32px;
+}
+
+.service {
+  @include card;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 22px 0;
+  overflow: hidden;
+}
+.service__name {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 26px;
+  margin: 0;
+  padding-left: 88px;
+  position: relative;
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    background: url("../img/icons/icons.svg#methodist") no-repeat center;
+    width: 38px;
+    height: 48px;
+    background-size: cover;
+    left: 26px;
+  }
+}
+
+.service__deadline {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 26px;
+  color: #C3CAD6;
+  margin: 0;
+  padding-left: 88px;
+}
+
+.services__navigation {
+  @include swiperCenter;
+}

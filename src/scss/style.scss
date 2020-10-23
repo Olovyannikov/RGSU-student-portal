@@ -5,11 +5,15 @@
 @import "general/fonts.scss";
 @import "general/scaffolding.scss";
 @import "blocks/btn.scss";
+@import "general/rem-calc";
 
 @import "blocks/page-header";
 @import "blocks/enter";
 @import "blocks/info";
 @import "blocks/portfolio";
+@import "blocks/classmates";
+@import "blocks/announcement";
+@import "blocks/services";
 @import "blocks/ads";
 @import "blocks/slider";
 @import "blocks/news";

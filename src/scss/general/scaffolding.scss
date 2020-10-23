@@ -18,6 +18,7 @@
   }
 }
 
+
 html {
   box-sizing: border-box;
 }
@@ -35,10 +36,11 @@ body {
   min-width: 320px;
   min-height: 100vh;
   font-family: $font;
-  font-size: 1.8rem;
+  font-size: 16px;
   line-height: 1.1;
-  font-weight: 600;
-  color: $c-light;
+  font-style: normal;
+  font-weight: 300;
+  color: #444444;
   background: $c-grey;
 
   -webkit-font-smoothing: antialiased;
@@ -101,6 +103,6 @@ img {
 
 .divider {
   display: block;
-  width: 75.41%;
+  width: 100%;
   border-bottom: 1px solid #E4ECFA;
 }

@@ -1,0 +1,100 @@
+.classmates {
+  @include container;
+  margin-bottom: 31px;
+}
+
+.classmates__container {
+  @include card;
+  height: 271px;
+  &::before {
+    content: "";
+    position: absolute;
+    width: calc(100% - 40px);
+    height: 100%;
+    top: -20px;
+    left: 20px;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 4px;
+    z-index: -1;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    width: calc(100% - 20px);
+    height: 100%;
+    top: -10px;
+    left: 10px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 4px;
+    z-index: -1;
+  }
+}
+
+.classmates__title {
+  @include title;
+  margin-bottom: 13px;
+}
+
+.classmates__wrapper {
+  padding-left: 19px;
+  padding-right: 19px;
+  color: rgba(68, 68, 68, 1);
+  overflow-y: scroll;
+  max-height: 196px;
+  width: 96%;
+  &::before {
+    content:"";
+    position: absolute;
+    bottom: 0;
+    width: 94%;
+    height: 46px;
+    background: linear-gradient(to top, #fff, transparent);
+  }
+}
+
+.classmates__user {
+  display: flex;
+  flex-wrap: wrap;
+  width: 260px;
+  justify-content: space-between;
+  padding-bottom: 26px;
+}
+
+.classmates__name {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 26px;
+  margin: 0;
+}
+
+.classmates__birth {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  color: #C3CAD6;
+  margin: 0;
+}
+
+//custom scrollbar
+
+::-webkit-scrollbar-track
+{
+  background-color: rgba(241, 244, 249, 1);
+}
+
+::-webkit-scrollbar
+{
+  width: 2px;
+  background-color: rgba(241, 244, 249, 1);
+}
+
+::-webkit-scrollbar-thumb
+{
+  background-color: rgba(52, 100, 224, 1);
+}
+
+::-webkit-scrollbar-corner {
+  background-color: transparent;
+}

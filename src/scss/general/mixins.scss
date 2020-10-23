@@ -9,6 +9,7 @@
   padding: 0 45px;
   width: 100%;
   max-width: 1440px;
+  border-radius: 4px;
 
   @media (min-width: $stop-scaling) {
     padding: 0 40px;
@@ -20,6 +21,35 @@
 
   @media (max-width: $mobile) {
     padding: 0 12px;
+  }
+}
+
+@mixin card {
+  background: #fff;
+  border-radius: 4px;
+  position: relative;
+  width: 100%;
+  &::before {
+    content: "";
+    position: absolute;
+    width: calc(100% - 40px);
+    height: 100%;
+    top: -20px;
+    left: 20px;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 4px;
+    z-index: -1;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    width: calc(100% - 20px);
+    height: 100%;
+    top: -10px;
+    left: 10px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 4px;
+    z-index: -1;
   }
 }
 
@@ -58,4 +88,30 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+@mixin title {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 26px;
+  color: #C3CAD6;
+  margin: 0;
+  padding-top: 25px;
+  padding-left: 19px;
+}
+
+@mixin block-title {
+  font-size: 22px;
+  line-height: 26px;
+  color: #6E7781;
+  font-weight: 400;
+}
+
+@mixin swiperCenter {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 38px;
 }

@@ -1,0 +1,18 @@
+.announcement {
+  @include container;
+  margin-bottom: 47px;
+}
+
+.announcement__container {
+  @include card;
+}
+
+.announcement__text {
+  padding: 19px 14px 25px 15px;
+  font-size: 18px;
+  line-height: 26px;
+  margin: 0;
+  a {
+    color: $c-blue;
+  }
+}
