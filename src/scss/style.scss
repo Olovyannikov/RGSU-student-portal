@@ -6,6 +6,7 @@
 @import "general/scaffolding.scss";
 @import "blocks/btn.scss";
 @import "general/rem-calc";
+@import "blocks/block-content";
 
 @import "blocks/page-header";
 @import "blocks/enter";
@@ -16,8 +17,10 @@
 @import "blocks/services";
 @import "blocks/ads";
 @import "blocks/slider";
+@import "blocks/faq";
 @import "blocks/news";
 @import "blocks/banner";
 @import "blocks/portfolio-tabs";
-@import "blocks/social-block.scss";
+@import "blocks/footer";
+@import "blocks/social-block";
 

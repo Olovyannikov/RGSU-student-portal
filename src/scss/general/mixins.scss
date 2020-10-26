@@ -93,7 +93,7 @@
 @mixin title {
   font-style: normal;
   font-weight: normal;
-  font-size: 22px;
+  font-size: rem-calc(22);
   line-height: 26px;
   color: #C3CAD6;
   margin: 0;
@@ -102,10 +102,11 @@
 }
 
 @mixin block-title {
-  font-size: 22px;
+  font-size: rem-calc(22);
   line-height: 26px;
   color: #6E7781;
   font-weight: 400;
+  margin: 0 14px 0 0;
 }
 
 @mixin swiperCenter {
@@ -114,4 +115,13 @@
   justify-content: center;
   align-items: center;
   min-height: 38px;
+}
+
+@mixin headerBlock {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  .divider {
+    width: 100%;
+  }
 }

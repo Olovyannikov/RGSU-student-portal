@@ -5,6 +5,7 @@
 
 .announcement__container {
   @include card;
+  overflow: hidden;
 }
 
 .announcement__text {

@@ -1,0 +1,104 @@
+.footer {
+  background: #6E7781;
+  margin-top: rem-calc(41);
+}
+
+.footer__container {
+  @include container;
+  border-bottom: 1px solid #6F7D8B;
+  border-radius: 0;
+}
+
+.footer__section-title {
+  @include title;
+  padding-left: 0;
+  margin-bottom: rem-calc(21);
+}
+
+.footer__list {
+  @include list-reset;
+  font-size: rem-calc(16);
+  line-height: 28px;
+  color: #FFFFFF;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  position: relative;
+}
+
+.footer__contacts-link {
+  color: $c-light;
+}
+
+.footer__message-link {
+  color: $c-light;
+}
+
+.footer__schedule {
+  font-style: normal;
+  font-weight: normal;
+  font-size: rem-calc(16);
+  line-height: rem-calc(28);
+  color: #FFFFFF;
+}
+
+.footer__message-link {
+  &--mail {
+    text-align: center;
+    font-size: 16px;
+    padding: 12px 14px 12px 52px;
+    border: 1px solid #C3CAD6;
+    box-sizing: border-box;
+    border-radius: 4px;
+    color: #C3CAD6;
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      display: block;
+      background: url("../img/icons/icons.svg#email") no-repeat center;
+      background-size: cover;
+      width: 23px;
+      height: 17px;
+      left: 18px;
+      top: 15px;
+    }
+  }
+}
+
+.footer__message-list {
+  width: 310px;
+  justify-content: space-between;
+}
+
+//internet - services
+.footer__services-title {
+  margin-top: 20px;
+}
+.footer__services-link {
+  font-style: normal;
+  font-weight: normal;
+  font-size: rem-calc(16);
+  line-height: 28px;
+  color: #FFFFFF;
+}
+.footer__services-list {
+  margin-bottom: 14px;
+}
+
+.footer__policy {
+  margin-top: 17px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  font-style: normal;
+  font-weight: normal;
+  font-size: rem-calc(14);
+  line-height: rem-calc(26);
+  color: #FFFFFF;
+  padding-bottom: 17px;
+  a {
+    color: #fff;
+  }
+}

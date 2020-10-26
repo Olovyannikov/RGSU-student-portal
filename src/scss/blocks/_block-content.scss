@@ -1,0 +1,26 @@
+.block__title {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 26px;
+  color: #C3CAD6;
+
+  margin: 33px 0 23px 0;
+}
+
+.block__list {
+  @include list-reset;
+  max-width: 280px;
+}
+
+.block__item {
+  color: #6E7781;
+  padding-bottom: 21px;
+  padding-top: 21px;
+  &:not(:last-child) {
+  border-bottom: 1px solid #E4ECFA;
+  }
+  &:first-child {
+    padding-top: 0;
+  }
+}

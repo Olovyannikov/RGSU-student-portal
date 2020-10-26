@@ -1,0 +1,27 @@
+.social-block {
+  position: relative;
+}
+
+.social-block__list {
+  padding-bottom: 25px;
+}
+
+.social-block__link {
+  font-size: 0;
+  background: url('../img/icons/icons.svg#vk') no-repeat center;
+  width: 36px;
+  height: 36px;
+  background-size: 50%;
+  border: 1px solid #c3cad6;
+  border-radius: 50%;
+  margin-right: 10px;
+  display: block;
+  &--fb {
+    background: url("../img/icons/icons.svg#fb") no-repeat center;
+    background-size: 50%;
+  }
+  &--insta {
+    background: url("../img/icons/icons.svg#insta") no-repeat center;
+    background-size: 50%;
+  }
+}

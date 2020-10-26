@@ -1,7 +1,6 @@
 .advertisement {
   @include container;
-  padding: 0 45px;
-  margin-bottom: 82px;
+  margin-bottom: 52px;
 }
 
 .advertisement__header {
@@ -12,12 +11,8 @@
 }
 
 .advertisement__titile {
-  color: #6E7781;
-  font-style: normal;
-  font-weight: normal;
-  font-size: rem-calc(26);
-  line-height: 26px;
-  margin: 0 21px 0px 0;
+  @include block-title;
+  margin: 0 21px 0 0;
 }
 
 .advertisement__container {
@@ -27,14 +22,16 @@
   overflow: hidden;
   list-style: none;
   padding: 0;
-  /* Fix of Webkit flickering */
   z-index: 1;
 }
 
+.advertisement__wrapper {
+  margin-bottom: 30px;
+  .swiper-slide {
+    width: 100%;
+  }
+}
+
 .advertisement__buttons {
-  display: flex;
-  width: 142px;
-  justify-content: space-between;
-  align-items: center;
-  margin-left: 33px;
+  @include swiperCenter;
 }

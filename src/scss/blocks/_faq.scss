@@ -1,0 +1,36 @@
+.faq {
+  @include container;
+}
+
+.faq__container {
+}
+
+.faq__header {
+  @include headerBlock;
+  margin-bottom: 35px;
+}
+
+.faq__titile {
+  @include block-title;
+}
+
+.faq__buttons {
+  @include swiperCenter;
+}
+
+.faq__slide {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: #6E7781;
+  width: 100%;
+  background-color: #fff;
+  padding-left: 23px;
+  border-radius: 4px;
+  margin-bottom: 25px;
+}
+
+.faq__block {
+  min-height: 416px;
+}

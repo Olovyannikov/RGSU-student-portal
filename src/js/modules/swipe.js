@@ -50,4 +50,16 @@ export default () => {
             prevEl: '.swiper-button-prev',
         },
     });
+    let faq = new Swiper('.faq__container', {
+        slidesPerView: 'auto',
+        spaceBetween: 12,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
 }
