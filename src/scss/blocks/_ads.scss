@@ -30,6 +30,11 @@
   .swiper-slide {
     width: 100%;
   }
+  @media (min-width: $tablet) {
+    .swiper-slide {
+      width: auto;
+    }
+  }
 }
 
 .advertisement__buttons {

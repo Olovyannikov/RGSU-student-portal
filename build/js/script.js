@@ -1238,6 +1238,18 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var swip
 
 /***/ }),
 
+/***/ "./src/js/modules/tabs.js":
+/*!********************************!*\
+  !*** ./src/js/modules/tabs.js ***!
+  \********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (function () {\n  var tabs = document.querySelector(\".portfolio-tabs__container\");\n  var tabButton = document.querySelectorAll(\".portfolio-tabs__button\");\n  var contents = document.querySelectorAll(\".portfolio-tabs__article\");\n\n  tabs.onclick = function (e) {\n    var id = e.target.dataset.id;\n\n    if (id) {\n      tabButton.forEach(function (btn) {\n        btn.classList.remove(\"portfolio-tabs__button--active\");\n      });\n      e.target.classList.add(\"portfolio-tabs__button--active\");\n      contents.forEach(function (content) {\n        content.classList.remove(\"portfolio-tabs__article--active\");\n      });\n      var element = document.getElementById(id);\n      element.classList.add(\"portfolio-tabs__article--active\");\n    }\n  };\n});\n\n//# sourceURL=webpack:///./src/js/modules/tabs.js?");
+
+/***/ }),
+
 /***/ "./src/js/script.js":
 /*!**************************!*\
   !*** ./src/js/script.js ***!
@@ -1246,7 +1258,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var swip
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_menu_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/menu.js */ \"./src/js/modules/menu.js\");\n/* harmony import */ var _modules_datetime_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/datetime.js */ \"./src/js/modules/datetime.js\");\n/* harmony import */ var _modules_swipe_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/swipe.js */ \"./src/js/modules/swipe.js\");\n/* harmony import */ var _modules_slider_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/slider.js */ \"./src/js/modules/slider.js\");\n/* harmony import */ var _modules_gauge_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/gauge.js */ \"./src/js/modules/gauge.js\");\n// modules\n\n\n\n\n // init modules\n\nObject(_modules_menu_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\nObject(_modules_datetime_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\nObject(_modules_swipe_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])();\nObject(_modules_slider_js__WEBPACK_IMPORTED_MODULE_3__[\"default\"])();\nObject(_modules_gauge_js__WEBPACK_IMPORTED_MODULE_4__[\"default\"])();\n\n//# sourceURL=webpack:///./src/js/script.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_menu_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/menu.js */ \"./src/js/modules/menu.js\");\n/* harmony import */ var _modules_datetime_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/datetime.js */ \"./src/js/modules/datetime.js\");\n/* harmony import */ var _modules_swipe_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/swipe.js */ \"./src/js/modules/swipe.js\");\n/* harmony import */ var _modules_slider_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/slider.js */ \"./src/js/modules/slider.js\");\n/* harmony import */ var _modules_gauge_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/gauge.js */ \"./src/js/modules/gauge.js\");\n/* harmony import */ var _modules_tabs_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/tabs.js */ \"./src/js/modules/tabs.js\");\n// modules\n\n\n\n\n\n // init modules\n\nObject(_modules_menu_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\nObject(_modules_datetime_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\nObject(_modules_swipe_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])(); //slider();\n\nObject(_modules_gauge_js__WEBPACK_IMPORTED_MODULE_4__[\"default\"])();\nObject(_modules_tabs_js__WEBPACK_IMPORTED_MODULE_5__[\"default\"])();\n\n//# sourceURL=webpack:///./src/js/script.js?");
 
 /***/ })
 

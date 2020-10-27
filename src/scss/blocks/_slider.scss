@@ -140,6 +140,7 @@
 .block--wide {
   background: #3464e0;
   box-sizing: border-box;
+  overflow: hidden;
   @media (min-width: $mobile) {
     width: 545px;
   }
@@ -237,7 +238,7 @@
     color: #c3cad6;
     border-color: #c3cad6;
     &:hover {
-      background-color: #c3cad6;
+      background-color: #3464E0;
       color: #fff;
     }
   }

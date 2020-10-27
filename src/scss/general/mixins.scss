@@ -99,6 +99,10 @@
   margin: 0;
   padding-top: 25px;
   padding-left: 19px;
+  text-transform: uppercase;
+  @media (min-width: $tablet) {
+    font-size: rem-calc(18);
+  }
 }
 
 @mixin block-title {

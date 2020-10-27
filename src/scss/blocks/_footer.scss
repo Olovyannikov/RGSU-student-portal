@@ -7,12 +7,36 @@
   @include container;
   border-bottom: 1px solid #6F7D8B;
   border-radius: 0;
+  padding-top: 45px;
+  display: flex;
+  flex-direction: column;
+  @media (min-width: $tablet) {
+    flex-direction: row;
+  }
+  justify-content: space-between;
+}
+
+.footer__section {
+  @media (min-width: $tablet) {
+    width: 429px;
+  }
 }
 
 .footer__section-title {
   @include title;
   padding-left: 0;
   margin-bottom: rem-calc(21);
+  @media (min-width: $tablet) {
+    padding-top: 0;
+  }
+}
+
+
+.footer__contacts-item {
+  @media (min-width: $tablet) {
+    font-size: rem-calc(16);
+    line-height: rem-calc(28);
+  }
 }
 
 .footer__list {
@@ -24,6 +48,12 @@
   flex-wrap: wrap;
   align-items: center;
   position: relative;
+}
+
+
+.footer__contacts-list {
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .footer__contacts-link {
@@ -40,6 +70,9 @@
   font-size: rem-calc(16);
   line-height: rem-calc(28);
   color: #FFFFFF;
+  @media (min-width: $tablet) {
+    margin-bottom: 28px;
+  }
 }
 
 .footer__message-link {
@@ -74,6 +107,9 @@
 //internet - services
 .footer__services-title {
   margin-top: 20px;
+  @media (min-width: $tablet) {
+    margin-top: 0;
+  }
 }
 .footer__services-link {
   font-style: normal;
@@ -84,6 +120,12 @@
 }
 .footer__services-list {
   margin-bottom: 14px;
+  @media (min-width: $tablet) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 34px;
+  }
 }
 
 .footer__policy {
@@ -100,5 +142,12 @@
   padding-bottom: 17px;
   a {
     color: #fff;
+  }
+  @media (min-width: $tablet) {
+    flex-direction: row;
+    @include container;
+    justify-content: space-between;
+    padding-top: 18px;
+    padding-bottom: 18px;
   }
 }

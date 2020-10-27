@@ -217,24 +217,13 @@
 }
 
 .info__card-about {
-  font-style: normal;
-  font-weight: normal;
   font-size: 14px;
   line-height: 16px;
-  color: #C3CAD6;
-  text-align: center;
   display: block;
-  border: 1px solid #C3CAD6;
-  box-sizing: border-box;
-  border-radius: 50px;
   width: 146px;
   margin: 0 auto;
   padding: 13px 38px;
   transition: .2s;
-  &:hover {
-    background-color: #C3CAD6;
-    color: #FFFFFF;
-  }
 }
 
 //Стили для пагинации
