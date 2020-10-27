@@ -1,0 +1,50 @@
+.login {
+  visibility: hidden;
+  opacity: 0;
+  z-index: 10;
+  transition: opacity .2s;
+}
+.page-header__login {
+  position: relative;
+  &:focus-within {
+    .login {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}
+
+.login__navigation-list {
+  @include list-reset;
+  position: absolute;
+  background-color: #fff;
+  z-index: 10;
+  width: 258px;
+  height: 177px;
+  top: 65px;
+  &::after {
+    content: "";
+    position: absolute;
+    right: 120px;
+    top: -34px;
+    border: 17px solid transparent;
+    border-bottom: 17px solid white;
+  }
+}
+
+.login__navigation-item {
+  border-bottom: 1px solid #f1f4f9;
+  a {
+    display: block;
+    font-size: 18px;
+    line-height: 26px;
+    padding: 18px 0 15px 25px;
+  }
+}
+.login__navigation--exit {
+  border-bottom: none;
+  a {
+    color: #c3cad6;
+    padding-bottom: 20px;
+  }
+}

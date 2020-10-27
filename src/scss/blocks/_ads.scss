@@ -1,6 +1,9 @@
 .advertisement {
-  @include container;
   margin-bottom: 52px;
+  overflow: hidden;
+  .swiper-container {
+    overflow: unset;
+  }
 }
 
 .advertisement__header {
@@ -19,10 +22,9 @@
   margin-left: auto;
   margin-right: auto;
   position: relative;
-  overflow: hidden;
   list-style: none;
-  padding: 0;
   z-index: 1;
+  padding: 0 45px;
 }
 
 .advertisement__wrapper {
@@ -39,4 +41,17 @@
 
 .advertisement__buttons {
   @include swiperCenter;
+  display: flex;
+  @media (min-width: $tablet) {
+    display: none;
+  }
+}
+
+.advertisement__buttons--extra {
+  display: none;
+  @media (min-width: $tablet) {
+    display: flex;
+    width: 140px;
+    margin-left: 33px;
+  }
 }

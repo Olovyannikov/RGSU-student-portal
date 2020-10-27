@@ -1,0 +1,26 @@
+.cookieBtnCross {
+  display: block;
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 17px;
+    height: 1px;
+    transform: rotate(90deg);
+    background: #fff;
+  }
+}
+
+.cookieShell {
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    left: 17px;
+    width: 54px;
+    height: 54px;
+    display: block;
+    background: url("../img/icons/icons.svg#cookie");
+  }
+}

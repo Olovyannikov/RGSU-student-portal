@@ -15,7 +15,6 @@
     flex-wrap: wrap;
   }
   @media (min-width: $tablet) {
-
     overflow: unset;
   }
 }
@@ -40,9 +39,9 @@
 }
 
 .info__card-stack {
-  background: #FFFFFF;
+  background: #ffffff;
   border-radius: 4px;
-  width: 100% ;
+  width: 100%;
   height: 285px;
   position: relative;
   &::before {
@@ -91,23 +90,25 @@
   position: absolute;
   width: 128px;
   height: 28px;
-  background-color: #2BC584;
+  background-color: #2bc584;
   top: 28px;
   right: -6px;
   margin: 0;
-  color: #FFFFFF;
+  color: #ffffff;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
   line-height: 28px;
   padding-left: 11px;
   &::after {
-    content: '';
+    content: "";
     display: block;
     position: absolute;
     right: 0;
     bottom: -6px;
-    border: 3px solid transparent; border-left: 3px solid #229255; border-top: 3px solid #229255;
+    border: 3px solid transparent;
+    border-left: 3px solid #229255;
+    border-top: 3px solid #229255;
     //
   }
 }
@@ -116,7 +117,7 @@
   flex-direction: column;
   //display: none;
   justify-content: space-between;
-  color: #6E7781;
+  color: #6e7781;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
@@ -134,7 +135,7 @@
   transition: 0.5s;
   &::before {
     position: absolute;
-    content: '';
+    content: "";
     width: 48px;
     height: 48px;
     left: 32px;
@@ -143,6 +144,12 @@
     border-radius: 50%;
     border: 1px solid #c3cad6;
     transition: 0.5s;
+  }
+
+  &:hover {
+    &::before {
+      background: url("../img/icons/icons.svg#telegram-blue");
+    }
   }
 }
 
@@ -153,6 +160,11 @@
     border-radius: 0;
     border: none;
   }
+  &:hover {
+    &::before {
+      background: url("../img/icons/icons.svg#yt-red");
+    }
+  }
 }
 .info__card-media-name {
   margin: 0;
@@ -162,10 +174,9 @@
   color: #3464e0;
 }
 
-
 //Стили внутри карточки
 .info__card-title {
-  color: #C3CAD6;
+  color: #c3cad6;
   font-style: normal;
   font-weight: 500;
   font-size: 22px;
@@ -173,7 +184,9 @@
   margin: 0;
   padding-top: 27px;
   padding-left: 24px;
-  padding-bottom: 23px;
+  @media (min-width: $tablet) {
+    padding-bottom: 23px;
+  }
 }
 
 .info__card-main {
@@ -188,7 +201,7 @@
 }
 
 .info__card-sub {
-  color: #C3CAD6;
+  color: #c3cad6;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -223,7 +236,7 @@
   width: 146px;
   margin: 0 auto;
   padding: 13px 38px;
-  transition: .2s;
+  transition: 0.2s;
 }
 
 //Стили для пагинации
@@ -243,7 +256,7 @@
     height: 14px;
     border-radius: 50%;
     &-active {
-      background: #C3CAD6;
+      background: #c3cad6;
       border-radius: 14px;
       width: 24px;
     }

@@ -1,5 +1,6 @@
 .portfolio-tabs__container {
   @include container;
+  margin-bottom: 54px;
 }
 
 .portfolio-tabs__header {
@@ -43,8 +44,7 @@
   padding: 43px 43px 42px 33px;
   background-color: #fff;
   border-radius: 4px;
-  height: 261px;
-  flex-direction: column;
+  min-height: 261px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -57,6 +57,9 @@
   font-size: 16px;
   line-height: 26px;
   color: #444444;
+  &:hover {
+    color: rgba(52, 100, 224, 1);
+  }
 }
 
 .portfolio__counter {
@@ -73,7 +76,21 @@
 .portfolio__link {
   display: flex;
   align-items: center;
-  width: 398px;
+  max-width: 398px;
+  color: #444444;
+  transition: .2s;
+  &:hover {
+    .portfolio__description {
+      color: rgba(52, 100, 224, 1);
+    }
+    .divider {
+      background-color: rgba(52, 100, 224, 1);;
+    }
+    .portfolio__counter {
+      background: #3464E0;
+      color: #fff;
+    }
+  }
 }
 
 .portfolio__list-wrapper {

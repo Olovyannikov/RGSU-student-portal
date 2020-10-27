@@ -16,20 +16,10 @@
   @media (min-width: $stop-scaling) {
     padding: 15px 29px;
     font-size: 24px;
-    line-height: 30;
+    line-height: 30px;
   }
 
-  @media (max-width: $tablet) and (orientation: portrait) {
-    padding: 1rem;
-    font-size: 1.8rem;
-    line-height: 2rem;
-  }
 
-  @media (max-width: $mobile) and (orientation: landscape) {
-    padding: 1rem;
-    font-size: 1.8rem;
-    line-height: 2rem;
-  }
 
   &::before {
     @include center;

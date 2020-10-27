@@ -1,12 +1,12 @@
 section.news
     .news__container.swiper-container
         .news__header
-            h2.news__titile(style="margin-right: 10px") Студенческие новости
+            h2.news__titile(style="margin-right: 10px") Студенческие новости
             span.divider
-            div.news__buttons
-                .swiper-button-prev
-                .swiper-pagination
-                .swiper-button-next
+            .news__buttons.news__buttons--extra
+                .swiper-button-prev.news-button-prev
+                .swiper-pagination.news-pagination
+                .swiper-button-next.news-button-next
         .news__wrapper.swiper-wrapper
             .news__item.swiper-slide
                 .block.block--wide.block__content-news
@@ -48,3 +48,7 @@ section.news
                         picture.news__picture
                             source(srcset="img/studyear.webp" type="image/webp")
                             img(src="img/studyear.png")
+        .news__buttons
+            .swiper-button-prev.news-button-prev
+            .swiper-pagination.news-pagination
+            .swiper-button-next.news-button-next

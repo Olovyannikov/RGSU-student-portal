@@ -18,7 +18,7 @@
 }
 
 .page-header__sidebar {
-  height: 70px;
+  height: 69px;
   display: flex;
   align-items: center;
   border-right: 1px solid #2955c9;
@@ -135,7 +135,6 @@
   position: fixed;
   left: 0;
   top: -100vh;
-  padding-top: 40px;
   background-color: #fff;
   width: 100vw;
   min-height: 131px;
@@ -154,12 +153,32 @@
     font-weight: normal;
     list-style: none;
     margin: 0;
-    li {
-      padding-bottom: 10px;
-      a {
-        color: #3464e0;
-      }
+  }
+  li {
+    border-bottom: 1px solid #F1F4F9;
+    &:last-child {
+      border: none;
     }
+    &:last-child a{
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 26px;
+      padding-bottom: 20px;
+      color: #C3CAD6;
+    }
+  }
+  a {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 26px;
+    color: #444444;
+    display: block;
+
+    padding-bottom: 15px;
+    padding-left: 25px;
+    padding-top: 18px;
   }
   @media (min-width: $tablet) {
     display: flex;
@@ -181,6 +200,7 @@
       justify-content: space-between;
       li {
         padding: 0 43px 0 0;
+        border: none;
         @media (min-width: $tablet) {
           padding-right: 0;
         }
@@ -202,7 +222,7 @@
   @include btn-reset;
   font-size: 0;
   width: 54px;
-  height: 26px;
+  height: 27px;
   background: url("../img/icons/icons.svg#key") no-repeat center;
   background-size: cover;
   position: relative;
@@ -216,12 +236,12 @@
     height: 70px;
     top: 0;
     right: 0;
-    animation: slideRight .5s;
+    animation: slideRight 0.5s;
     position: absolute;
     &::before,
     &::after {
-      transition: .5s;
-      content: '';
+      transition: 0.5s;
+      content: "";
       position: absolute;
       width: 24px;
       display: block;
@@ -233,7 +253,6 @@
     &::after {
       transform: rotate(-45deg);
     }
-
   }
   @media (min-width: $tablet) {
     display: none;
@@ -309,4 +328,11 @@
   justify-content: space-between;
   font-size: 18px;
   line-height: 21px;
+  padding-left: 0;
+}
+
+.page-header__menu--exit {
+  @media (min-width: $tablet) {
+    display: none;
+  }
 }

@@ -1,8 +1,8 @@
 .news {
-  @include container;
+  overflow: hidden;
   margin-bottom: 52px;
-  .divider {
-    width: 67%;
+  .swiper-container {
+    overflow: unset;
   }
 }
 
@@ -13,6 +13,13 @@
   font-size: 26px;
   line-height: 26px;
   margin: 0 21px 0 0;
+}
+
+.news__wrapper {
+  margin-bottom: 30px;
+  @media (min-width: $tablet) {
+    margin-bottom: 0;
+  }
 }
 
 .news__item {
@@ -148,8 +155,6 @@
 }
 
 .news {
-  @include container;
-  padding: 0 45px;
   margin-bottom: 82px;
 }
 
@@ -173,22 +178,30 @@
 }
 
 .news__container {
+  padding: 0 45px;
   margin-left: auto;
   margin-right: auto;
   position: relative;
   overflow: hidden;
   list-style: none;
-  padding: 0;
-  /* Fix of Webkit flickering */
   z-index: 1;
 }
 
 .news__buttons {
+  @include swiperCenter;
   display: flex;
-  width: 142px;
-  justify-content: space-between;
-  align-items: center;
-  margin-left: 33px;
+  @media (min-width: $tablet) {
+    display: none;
+  }
+}
+
+.news__buttons--extra {
+  display: none;
+  @media (min-width: $tablet) {
+    display: flex;
+    width: 140px;
+    margin-left: 33px;
+  }
 }
 
 .block__content-news {
