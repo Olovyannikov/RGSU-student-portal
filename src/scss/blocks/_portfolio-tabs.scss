@@ -41,13 +41,18 @@
 
 .portfolio__list {
   @include list-reset;
-  padding: 43px 43px 42px 33px;
-  background-color: #fff;
+  padding: 23px 43px 42px 33px;
   border-radius: 4px;
-  min-height: 261px;
+  height: 261px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  background: #fff;
+  overflow: scroll;
+  @media (min-width: $tablet) {
+    padding-top: 43px;
+    overflow: hidden;
+  }
 }
 
 .portfolio__description {
@@ -93,6 +98,10 @@
   }
 }
 
+.portfolio__item {
+  background-color: #fff;
+}
+
 .portfolio__list-wrapper {
   @include list-reset;
   width: 398px;
@@ -106,5 +115,8 @@
   display: none;
   &--active {
     display: block;
+    @media (min-width: $tablet) {
+      white-space: nowrap;
+    }
   }
 }

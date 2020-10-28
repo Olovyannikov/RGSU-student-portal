@@ -34,6 +34,12 @@
   background-color: #fff;
   svg {
     width: 68%;
+    opacity: .6;
+  }
+  &:hover {
+    svg {
+      opacity: 1;
+    }
   }
 }
 

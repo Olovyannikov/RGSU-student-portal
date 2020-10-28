@@ -1,0 +1,113 @@
+#cookie * {
+  padding: 0;
+  margin: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+#cookie {
+  position: fixed;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  max-width: 558px;
+  max-height: 95px;
+  padding: 30px 0;
+  background: #fff;
+  font-family: "Russia", sans-serif;
+  text-align: left;
+}
+
+#cookie .cookieBtnCross {
+  position: absolute;
+  top: 15px;
+  right: 7px;
+  width: 17px;
+  height: 1px;
+  transform: rotate(45deg);
+  background: #fff;
+}
+
+#cookie .cookieBtn:after {
+  transition: all 0.5s ease-in-out;
+}
+#cookie .cookieShell {
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 87px;
+  padding-right: 28px;
+}
+#cookie p {
+  font-size: 15px;
+  line-height: 21px;
+  color: #6e7781;
+  font-weight: normal;
+  position: relative;
+}
+#cookie .cookieActions {
+  padding-top: 10px;
+}
+#cookie .cookieBtn {
+  position: absolute;
+  border-radius: 100%;
+  top: -27px;
+  right: 3px;
+  display: block;
+  width: 31px;
+  height: 31px;
+  background: #3464e0;
+  font-size: 18px;
+  line-height: 44px;
+  color: #fff;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  border: 0;
+  -webkit-appearance: none;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.cookieBtnCross {
+  display: block;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 17px;
+    height: 1px;
+    transform: rotate(90deg);
+    background: #fff;
+  }
+}
+
+.cookieShell {
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    left: 17px;
+    width: 54px;
+    height: 54px;
+    display: block;
+    background: url("../img/icons/icons.svg#cookie");
+  }
+}
+
+@media (max-width: $tablet) {
+  #cookie {
+    min-width: 300px;
+    min-height: 120px;
+  }
+  #cookie p {
+
+    font-size: rem-calc(12);
+  }
+}

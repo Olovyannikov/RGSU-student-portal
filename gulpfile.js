@@ -42,6 +42,7 @@ let { src, dest } = require('gulp'),
 	imagemin = require('gulp-imagemin'),
 	webp = require('gulp-webp'),
 	svgSprite = require('gulp-svg-sprite'),
+	svgmin = require('gulp-svgmin'),
 	ttf2woff = require('gulp-ttf2woff'),
 	ttf2woff2 = require('gulp-ttf2woff2'),
 	pug = require('gulp-pug'),
@@ -173,6 +174,11 @@ function fonts() {
 
 function svgsprite() {
 	return gulp.src([source_folder + '/img/icons/*.svg'])
+		.pipe(
+			svgmin({
+				cleanupListOfValues: true,
+			})
+		)
 		.pipe(svgSprite({
 			mode: {
 				stack: {

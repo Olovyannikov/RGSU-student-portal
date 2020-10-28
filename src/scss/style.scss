@@ -4,13 +4,14 @@
 @import "general/mixins.scss";
 @import "general/fonts.scss";
 @import "general/scaffolding.scss";
-@import "blocks/btn.scss";
 @import "general/rem-calc";
+@import "general/btn";
+@import "general/cookie";
 @import "blocks/block-content";
-@import "blocks/cookie";
 
 @import "blocks/page-header";
 @import "blocks/login";
+@import "blocks/modal";
 @import "blocks/enter";
 @import "blocks/info";
 @import "blocks/portfolio";

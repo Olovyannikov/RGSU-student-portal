@@ -1,0 +1,25 @@
+section.portfolio-cards
+    .portfolio-cards__container
+        .portfolio-cards__header
+            h2.portfolio-cards__title Цифровое портфолио обучающегося
+            span.portfolio-cards__counter 10456
+        .portfolio-cards__wrapper
+            article.portfolio-cards.card
+                picture.card__avatar
+                    source(srcset="img/card-avatar-1.webp" type="image/webp")
+                    img(src="img/card-avatar-1.jpg" alt="Нина")
+                p.card__name Мария Владимировна Н.
+                p.card__faculty
+                p.card__education
+                p.card__info
+                    span.card__info-age
+                    span.card__info-course
+                .card__achievements.achievements
+                    ul.achievements__list
+                        li.achievement.achievement--handshake
+                            | Достижение: Рукопожатие
+                        li.achievement.achievement--art
+                            | Достижение: Искусство
+                        li.achievement.achievement--cup
+                            | Достижение: Кубок
+                        //вынести в миксин

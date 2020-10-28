@@ -6,6 +6,7 @@
 .classmates__container {
   @include card;
   height: 271px;
+  flex-direction: column;
   &::before {
     content: "";
     position: absolute;
@@ -36,12 +37,13 @@
 }
 
 .classmates__wrapper {
-  padding-left: 19px;
-  padding-right: 19px;
   color: rgba(68, 68, 68, 1);
   overflow-y: scroll;
   max-height: 206px;
   width: 96%;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
   &::before {
     content:"";
     position: absolute;
@@ -49,6 +51,14 @@
     width: 94%;
     height: 46px;
     background: linear-gradient(to top, #fff, transparent);
+  }
+  @media (min-width: $tablet) {
+    display: flex;
+    width: 60%;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    overflow: hidden;
   }
 }
 

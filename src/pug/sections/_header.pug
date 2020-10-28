@@ -10,26 +10,38 @@ header.page-header.js-header
             h1.page-header__logo-description Smart портал РГСУ
 
         .page-header__menu
-            button.page-header__toggler.js-menu-toggler
-                span Меню
             nav.page-header__nav
                 div#nav
                     ul.page-header__menu-list
                         li.page-header__menu-item
-                            a.js-menu-link(href="#") Мой профиль
+                            a.js-menu-link(href="#") Вакансии
                         li.page-header__menu-item
-                            a.js-menu-link(href="#") Модерирование
+                            a.js-menu-link(href="#") Портфолио студентов
                         li.page-header__menu-item.page-header__menu--exit
                             a.js-menu-link.page-header__menu-link--exit(href="#") Завершить сеанс
 
         .page-header__login
-            button.page-header__login-button Войти на портал
+            button.page-header__login-button.js-menu-toggler.page-header__toggler Войти на портал
             .login
-                div.login__navigation
+                .login__navigation
                     ul.login__navigation-list
                         li.login__navigation-item
-                            a.js-menu-link(href="#") Мой профиль
+                            a.js-menu-link.js-menu-login(href="#") Мой профиль
                         li.login__navigation-item
                             a.js-menu-link(href="#") Модерирование
                         li.login__navigation-item.login__navigation--exit
                             a.js-menu-link.page-header__menu-link--exit(href="#") Завершить сеанс
+                .login__modal.modal
+                    button.modal__close.js-close-button Закрыть
+                    h3.modal__title Вход на сайт
+                    form.modal__form
+                        .modal__form-group.modal__form-group--mail
+                            label.form__label Ваш email
+                            input(type="email" required placeholder='Укажите адрес электронной почты').form__input
+                        .modal__form-group.modal__form-group--password
+                            label.form__label Введите пароль
+                            input(required placeholder='*****').form__input
+                        .modal__buttons
+                            button(type="submit").modal__enter Войти
+                            button(type="submit").modal__sber Войти с помощью Сбер ID
+                            a(href="#").modal__error Не можете войти?

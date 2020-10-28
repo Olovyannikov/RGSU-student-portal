@@ -1,0 +1,137 @@
+.modal {
+  @include card;
+  background: #fff;
+  z-index: 999;
+  position: fixed;
+  width: 401px;
+  height: 371px;
+  left: 50%;
+  top: 25%;
+  transform: translate(-50%);
+  display: none;
+}
+
+.modal--active {
+  display: block;
+}
+
+.modal__close {
+  font-size: 0;
+  position: absolute;
+  content: '';
+  display: block;
+  @include btn-reset;
+  border: 1px solid #C3CAD6;
+  box-sizing: border-box;
+  width: 32px;
+  height: 32px;
+  background-color: #fff;
+  top: 12px;
+  right: 12px;
+  border-radius: 50%;
+  &::after,&::before {
+    position: absolute;
+    width: 15px;
+    height: 1px;
+    content: '';
+    display: block;
+    transform: rotate(45deg);
+    background-color: #c3cad6;
+    right: 7px;
+  }
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
+.modal__title {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 26px;
+  line-height: 26px;
+  color: #3464e0;
+  text-align: center;
+  margin-top: 38px;
+  margin-bottom: 21px;
+}
+
+.modal__form {
+  display: flex;
+  flex-direction: column;
+  margin-left: 41px;
+  margin-right: 27px;
+}
+
+.form__label {
+  display: block;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 26px;
+  color: #444444;
+  margin-bottom: 6px;
+  &::after {
+    content: ' *';
+    color: #e06364;
+  }
+}
+
+.form__input {
+  border: 1px solid #f1f4f9;
+  box-sizing: border-box;
+  border-radius: 4px;
+  width: 100%;
+  padding: 9px 63px 9px 18px;
+  height: 46px;
+  &::placeholder,
+  &:placeholder-shown {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 26px;
+    color: #c3cad6;
+  }
+  &:placeholder-shown {
+    padding: 9px 63px 9px 18px;
+  }
+}
+
+.modal__form-group {
+  margin-bottom: 50px;
+  &--mail {
+    margin-bottom: 12px;
+  }
+}
+
+.modal__buttons {
+  display: flex;
+  align-items: center;
+}
+
+.modal__enter {
+  @include btn-reset;
+  @include button-blue;
+  margin-right: 21px;
+}
+
+.modal__sber {
+  @include btn-reset;
+  font-size: 0;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: #2BC584 url("../img/icons/icons.svg#sber") no-repeat center;
+  background-size: 50%;
+  border: 1px solid #2BC584;
+  box-sizing: border-box;
+  margin-right: 36px;
+}
+
+.modal__error {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 26px;
+  text-align: center;
+  color: #C3CAD6;
+}

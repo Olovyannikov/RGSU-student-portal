@@ -1,16 +1,19 @@
 .login {
-  visibility: hidden;
-  opacity: 0;
+  //visibility: hidden;
+  //opacity: 0;
   z-index: 10;
-  transition: opacity .2s;
+  transition: opacity 0.2s;
+  .page-header--menu-opened & {
+    visibility: visible;
+    opacity: 1;
+  }
 }
 .page-header__login {
-  position: relative;
-  &:focus-within {
-    .login {
-      visibility: visible;
-      opacity: 1;
-    }
+  padding-left: 15px;
+  border-left: 1px solid #2955c9;
+  @media (min-width: $mobile) {
+    border: none;
+    padding-left: 0;
   }
 }
 
@@ -19,16 +22,33 @@
   position: absolute;
   background-color: #fff;
   z-index: 10;
-  width: 258px;
+  left: 0;
+  width: 100%;
   height: 177px;
-  top: 65px;
-  &::after {
-    content: "";
-    position: absolute;
-    right: 120px;
-    top: -34px;
-    border: 17px solid transparent;
-    border-bottom: 17px solid white;
+  top: 70px;
+  box-shadow: 0 5px 24px rgba(110, 119, 129, 0.1);
+  display: none;
+  .page-header--menu-opened & {
+    display: block;
+    animation: slideLeft 0.5s;
+  }
+
+  @media (min-width: $tablet) {
+    .page-header--menu-opened & {
+      width: 258px;
+      left: 74%;
+      top: 1.84%;
+      transition: 0.2s;
+      animation: none;
+      &::after {
+        content: "";
+        position: absolute;
+        right: 120px;
+        top: -34px;
+        border: 17px solid transparent;
+        border-bottom: 17px solid white;
+      }
+    }
   }
 }
 
