@@ -105,12 +105,33 @@
   }
 }
 
+@mixin title-main {
+  @media (min-width: $tablet) {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 26px;
+    line-height: 30px;
+    color: #444444;
+    margin: 0 11px 0 0;
+  }
+}
+
 @mixin block-title {
   font-size: rem-calc(22);
   line-height: 26px;
   color: #6E7781;
   font-weight: 400;
   margin: 0 14px 0 0;
+}
+
+@mixin title-aside {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  color: #444444;
+  margin: 0 0 20px;
+  padding-top: 19px;
 }
 
 @mixin swiperCenter {
@@ -137,4 +158,20 @@
   box-sizing: border-box;
   border-radius: 4px;
   padding: 13px 28px;
+}
+
+@mixin aside-container {
+  @media (min-width: $tablet) {
+    width: 315px;
+    border-radius: 4px;
+    height: fit-content;
+  }
+}
+
+@mixin aside-divider {
+  @media (min-width: $tablet) {
+    margin-bottom: 2px;
+    background-color: #fff;
+    padding: 0 20px;
+  }
 }

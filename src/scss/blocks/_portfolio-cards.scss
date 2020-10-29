@@ -1,0 +1,43 @@
+
+.portfolio-cards__container {
+  @include container;
+
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.portfolio-cards__wrapper {
+  @media (min-width: $tablet) {
+    max-width: 1006px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-right: 29px;
+  }
+}
+
+.portfolio-cards__header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 25px;
+}
+
+.portfolio-cards__title {
+  @include title-main;
+}
+
+.portfolio-cards__counter {
+  background: #2BC584;
+  border-radius: 4px;
+  color: $c-light;
+  padding: 4px 10px;
+}
+
+.portfolio-cards__filter {
+  @media (min-width: $tablet) {
+    width: 315px;
+  }
+}
+
+

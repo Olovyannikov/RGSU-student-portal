@@ -9,9 +9,14 @@
 @import "general/cookie";
 @import "blocks/block-content";
 
+//global
 @import "blocks/page-header";
 @import "blocks/login";
 @import "blocks/modal";
+@import "blocks/footer";
+@import "blocks/social-block";
+
+//index
 @import "blocks/enter";
 @import "blocks/info";
 @import "blocks/portfolio";
@@ -25,6 +30,10 @@
 @import "blocks/banner";
 @import "blocks/portfolio-tabs";
 @import "blocks/partners";
-@import "blocks/footer";
-@import "blocks/social-block";
 
+//digital-portfolio
+
+@import "blocks/portfolio-cards";
+@import "blocks/card";
+@import "blocks/achievements";
+@import "blocks/filter";

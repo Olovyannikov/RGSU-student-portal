@@ -1,0 +1,16 @@
+mixin portfolio-card(imgWebp, img, username, faculty, education, age, course, progress)
+    article.portfolio-cards.card
+        .card__progress
+            .progress--circle(data-progress=progress)
+                picture.card__avatar
+                    source(srcset="img/" + imgWebp, type="image/webp")
+                    img(src="img/" + img, alt=username)
+        p.card__name #{username}
+        p.card__faculty #{faculty}
+        p.card__education #{education}
+        p.card__info
+            span.card__info-age Возраст: #{age}
+            span.card__info-course #{course} курс
+        .card__achievements.achievements
+            ul.achievements__list
+                block

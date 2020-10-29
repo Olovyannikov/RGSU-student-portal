@@ -4,22 +4,85 @@ section.portfolio-cards
             h2.portfolio-cards__title Цифровое портфолио обучающегося
             span.portfolio-cards__counter 10456
         .portfolio-cards__wrapper
-            article.portfolio-cards.card
-                picture.card__avatar
-                    source(srcset="img/card-avatar-1.webp" type="image/webp")
-                    img(src="img/card-avatar-1.jpg" alt="Нина")
-                p.card__name Мария Владимировна Н.
-                p.card__faculty
-                p.card__education
-                p.card__info
-                    span.card__info-age
-                    span.card__info-course
-                .card__achievements.achievements
-                    ul.achievements__list
-                        li.achievement.achievement--handshake
-                            | Достижение: Рукопожатие
-                        li.achievement.achievement--art
-                            | Достижение: Искусство
-                        li.achievement.achievement--cup
-                            | Достижение: Кубок
-                        //вынести в миксин
+            +portfolio-card('card-avatar-1.webp', 'card-avatar-1.png', 'Мария Владимировна Н.', 'Факультет искусств', 'Педагогическое образование', '20', '2', '75')
+                li.achievement.achievement--handshake Достижение: Рукопожатие
+                li.achievement.achievement--cup Достижение: Кубок
+            +portfolio-card('card-avatar-2.webp', 'card-avatar-2.png', 'Анастасия Олеговна Б.', 'Факультет искусств', 'Педагогическое образование', '21', '1', '15')
+                li.achievement.achievement--cup Достижение: Кубок
+            +portfolio-card('card-avatar-3.webp', 'card-avatar-3.png', 'Родион Нугзарович К.', 'Гуманитарный Факультет', 'Политология', '22', '2', '85')
+                li.achievement.achievement--art Достижение: Искусство
+                li.achievement.achievement--cup Достижение: Кубок
+            +portfolio-card('card-avatar-4.webp', 'card-avatar-4.png', 'Мария Владимировна Н.', 'Факультет искусств', 'Педагогическое образование', '23', '3', '100')
+                li.achievement.achievement--handshake Достижение: Рукопожатие
+                li.achievement.achievement--art Достижение: Искусство
+                li.achievement.achievement--notebook Достижение: Книжка
+
+            +portfolio-card('card-avatar-5.webp', 'card-avatar-5.png', 'Мария Владимировна Н.', 'Факультет искусств', 'Педагогическое образование', '24', '4', '75')
+                li.achievement.achievement--handshake Достижение: Рукопожатие
+                li.achievement.achievement--cup Достижение: Кубок
+            +portfolio-card('card-avatar-6.webp', 'card-avatar-6.png', 'Анастасия Олеговна Б.', 'Факультет искусств', 'Педагогическое образование', '25', '5', '15')
+                li.achievement.achievement--cup Достижение: Кубок
+            +portfolio-card('card-avatar-7.webp', 'card-avatar-7.png', 'Родион Нугзарович К.', 'Факультет искусств', 'Педагогическое образование', '26', '10', '85')
+                li.achievement.achievement--art Достижение: Искусство
+                li.achievement.achievement--cup Достижение: Кубок
+            +portfolio-card('card-avatar-8.webp', 'card-avatar-8.png', 'Мария Владимировна Н.', 'Факультет искусств', 'Педагогическое образование', '27', '2', '100')
+                li.achievement.achievement--art Достижение: Искусство
+
+            +portfolio-card('card-avatar-9.webp', 'card-avatar-9.png', 'Мария Владимировна Н.', 'Факультет искусств', 'Педагогическое образование', '28', '2', '75')
+                li.achievement.achievement--handshake Достижение: Рукопожатие
+                li.achievement.achievement--cup Достижение: Кубок
+            +portfolio-card('card-avatar-10.webp', 'card-avatar-10.png', 'Анастасия Олеговна Б.', 'Факультет искусств', 'Педагогическое образование', '29', '2', '15')
+                li.achievement.achievement--cup Достижение: Кубок
+            +portfolio-card('card-avatar-11.webp', 'card-avatar-11.png', 'Родион Нугзарович К.', 'Факультет искусств', 'Педагогическое образование', '30', '2', '85')
+                li.achievement.achievement--cup Достижение: Кубок
+                li.achievement.achievement--art Достижение: Искусство
+                li.achievement.achievement--notebook Достижение: Книжка
+            +portfolio-card('card-avatar-12.webp', 'card-avatar-12.png', 'Мария Владимировна Н.', 'Факультет искусств', 'Педагогическое образование', '111', '2', '100')
+                li.achievement.achievement--handshake Достижение: Рукопожатие
+                li.achievement.achievement--art Достижение: Искусство
+                li.achievement.achievement--cup Достижение: Кубок
+
+        .portfolio-cards__filter.filter
+            .filter__wrapper
+                .filter__age
+                    h4.filter__title Возраст 
+                        span (лет)
+                    .filter__range.two-range-slider.js-two-range-slider
+                        .two-range-slider__output
+                            output.two-range-slider__value.js-two-range-slider-min-value.two-range-slider__value--left
+                            output.two-range-slider__value.js-two-range-slider-max-value.two-range-slider__value--right
+                        input.two-range-slider__input.js-two-range-slider-input(type='range' min='0' max='50' value='45' step='1')
+                        input.two-range-slider__input.js-two-range-slider-input(type='range' min='0' max='50' value='9' step='1')
+                .filter__checkboxes
+                    .filter__checkboxes-container
+                        .filter__checkboxes-scroll
+                            .filter__checkboxes-wrapper
+                                label.filter__label( for="social-activity") Общественная деятельность
+                                    input.filter__checkbox(disabled type="checkbox" id="social-activity" name="social-activity")
+                                    span.filter__checkbox-visible
+                            .filter__checkboxes-wrapper
+                                label.filter__label(for="sport-activity") Спортивные достижения
+                                    input.filter__checkbox(checked type="checkbox" id="sport-activity" name="sport-activity")
+                                    span.filter__checkbox-visible
+                            .filter__checkboxes-wrapper
+                                label.filter__label(for="culture-activity") Культурно-творческая деятельность
+                                    input.filter__checkbox(type="checkbox" id="culture-activity" name="culture-activity")
+                                    span.filter__checkbox-visible
+                            .filter__checkboxes-wrapper
+                                label.filter__label(for="international-activity") Международная деятельность
+                                    input.filter__checkbox(type="checkbox" id="international-activity" name="international-activity")
+                                    span.filter__checkbox-visible
+                            .filter__checkboxes-wrapper
+                                label.filter__label(for="other-activity") Иная деятельность
+                                    input.filter__checkbox(type="checkbox" id="other-activity" name="other-activity")
+                                    span.filter__checkbox-visible
+                            .filter__checkboxes-wrapper
+                                label.filter__label(for="other1-activity") Иная деятельность
+                                    input.filter__checkbox(type="checkbox" id="other1-activity" name="other-activity")
+                                    span.filter__checkbox-visible
+                            .filter__checkboxes-wrapper
+                                label.filter__label(for="other2-activity") Иная деятельность
+                                    input.filter__checkbox(type="checkbox" id="other2-activity" name="other-activity")
+                                    span.filter__checkbox-visible
+
+
