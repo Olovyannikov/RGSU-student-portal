@@ -124,7 +124,7 @@ export default () => {
             if (e.preventDefault) {
               e.preventDefault();
             }
-            self.createCookie("cookie", "YES", 1);
+            self.createCookie("cookie", "YES", 5);
 
             document.getElementById("cookie").remove();
             return false;

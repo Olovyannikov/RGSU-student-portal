@@ -692,6 +692,26 @@ img {
   border-bottom: 1px solid #E4ECFA;
 }
 
+.overlay {
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 20;
+  -webkit-transition: .3s all;
+  -o-transition: .3s all;
+  transition: .3s all;
+}
+
+.overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
 .btn {
   padding: 0;
   margin: 0;
@@ -879,7 +899,7 @@ img {
   width: 54px;
   height: 54px;
   display: block;
-  background: url("../img/icons/icons.svg#cookie");
+  background: url("../img/icons/icons.svg#cookie-icon");
 }
 
 .block__title {
@@ -3828,6 +3848,7 @@ img {
       -ms-flex-align: center;
           align-items: center;
   position: relative;
+  cursor: pointer;
 }
 
 .filter__checkbox {
@@ -3848,7 +3869,36 @@ img {
   width: 20px;
   height: 20px;
   background-color: #fff;
-  border: 1px solid #C3CAD6;
+  border: 1px solid #c3cad6;
+}
+
+.filter__checkbox-visible::before {
+  -webkit-animation: fadeIn 0.2s ease-in-out;
+          animation: fadeIn 0.2s ease-in-out;
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
 }
 
 .filter__checkbox:checked + .filter__checkbox-visible {
@@ -3856,7 +3906,7 @@ img {
 }
 
 .filter__checkbox:checked + .filter__checkbox-visible::before {
-  content: '';
+  content: "";
   width: 10px;
   height: 10px;
   top: 4px;
@@ -3867,12 +3917,92 @@ img {
 }
 
 .filter__checkbox:disabled + .filter__checkbox-visible {
-  border: 1px solid #C3CAD6;
-  background: #C3CAD6;
+  border: 1px solid #c3cad6;
+  background: #c3cad6;
 }
 
 .filter__checkbox:disabled + .filter__checkbox-visible::before {
   display: none;
+}
+
+.filter__faculty {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  color: #444444;
+  margin: 0 0 20px;
+  padding-top: 19px;
+}
+
+.filter__select {
+  width: 266px;
+  padding: 9px;
+  border: 1px solid #F1F4F9;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 4px;
+  margin-bottom: 23px;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 26px;
+  color: #C3CAD6;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  position: relative;
+  background: url("../img/icons/icons.svg#vector") no-repeat 95% center;
+  background-size: 11px;
+}
+
+.filter__select > option {
+  color: #444;
+}
+
+.filter__education {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  color: #444444;
+  margin: 0 0 20px;
+  padding-top: 19px;
+  min-height: 176px;
+}
+
+.filter__education-options {
+  border: 1px solid #F1F4F9;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-bottom: 27px;
+}
+
+.filter__education-option {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 26px;
+  color: #FFFFFF;
+  display: block;
+  margin: 8px 8px 8px 6px;
+  padding: 2px 9px 2px 36px;
+  background: #C3CAD6;
+  border-radius: 3px;
+}
+
+.filter__salary {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  color: #444444;
+  margin: 0 0 20px;
+  padding-top: 19px;
 }
 
 .two-range-slider {
@@ -3936,8 +4066,8 @@ img {
   font-weight: normal;
   font-size: 11px;
   line-height: 13px;
-  color: #FFFFFF;
-  background: #3464E0;
+  color: #ffffff;
+  background: #3464e0;
   border-radius: 4px;
   padding: 3px 8px;
   top: 0;
@@ -4463,6 +4593,24 @@ img {
   }
 
   .filter__checkboxes {
+    margin-bottom: 2px;
+    background-color: #fff;
+    padding: 0 20px;
+  }
+
+  .filter__faculty {
+    margin-bottom: 2px;
+    background-color: #fff;
+    padding: 0 20px;
+  }
+
+  .filter__education {
+    margin-bottom: 2px;
+    background-color: #fff;
+    padding: 0 20px;
+  }
+
+  .filter__salary {
     margin-bottom: 2px;
     background-color: #fff;
     padding: 0 20px;

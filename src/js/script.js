@@ -62,10 +62,12 @@ const twoRangeSlider = (() => {
 
     item.addEventListener("input", () => {
       rangeCheck(rangeInputs, rangeMinOutput, rangeMaxOutput);
-      let left = rangeMinOutput.value * 2 * 2.5;
-      let right = rangeMaxOutput.value * 2 * 2.5
-      rangeMinOutput.style.left = left + 'px';
-      rangeMaxOutput.style.left = right + 'px';
+      let directions = {
+          left : rangeMinOutput.value * 2 * 2.5,
+          right : rangeMaxOutput.value * 2 * 2.5
+      }
+      rangeMinOutput.style.left = directions.left + 'px';
+      rangeMaxOutput.style.left = directions.right + 'px';
     });
 
     rangeCheck(rangeInputs, rangeMinOutput, rangeMaxOutput);

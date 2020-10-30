@@ -2,7 +2,7 @@ section.portfolio-cards
     .portfolio-cards__container
         .portfolio-cards__header
             h2.portfolio-cards__title Цифровое портфолио обучающегося
-            span.portfolio-cards__counter 10456
+            span.portfolio-cards__counter 10 456
         .portfolio-cards__wrapper
             +portfolio-card('card-avatar-1.webp', 'card-avatar-1.png', 'Мария Владимировна Н.', 'Факультет искусств', 'Педагогическое образование', '20', '2', '75')
                 li.achievement.achievement--handshake Достижение: Рукопожатие
@@ -84,5 +84,28 @@ section.portfolio-cards
                                 label.filter__label(for="other2-activity") Иная деятельность
                                     input.filter__checkbox(type="checkbox" id="other2-activity" name="other-activity")
                                     span.filter__checkbox-visible
-
-
+                .filter__faculty
+                    h4.filter__title Факультет
+                    select.filter__select
+                        option(selected disabled) -- выберите --
+                        option(value="#") Радиотехнический
+                        option(value="#") Физики и Химии
+                        option(value="#") Искусств
+                .filter__education
+                    h4.filter__title Уровень образования
+                    .filter__education-options
+                        span.filter__education-option Аспирантура
+                        span.filter__education-option Бакалавр
+                        span.filter__education-option Магистр
+                .filter__salary
+                    .filter__title Желаемая заработная плата
+                    .filter__range.two-range-slider.js-two-range-slider
+                        .two-range-slider__output
+                            output.two-range-slider__value.js-two-range-slider-min-value.two-range-slider__value--left
+                            output.two-range-slider__value.js-two-range-slider-max-value.two-range-slider__value--right
+                        input.two-range-slider__input.js-two-range-slider-input(type='range' min='0' max='50' value='45' step='1')
+                        input.two-range-slider__input.js-two-range-slider-input(type='range' min='0' max='50' value='9' step='1')
+        .portfolio-cards__pagination.pagination
+            .pagination__wrapper
+                span.pagination__button.pagination__button--back
+                    a(href="#").pagination__link-back Назад
