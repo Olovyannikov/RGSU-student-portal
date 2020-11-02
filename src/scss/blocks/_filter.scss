@@ -156,6 +156,34 @@
   padding: 2px 9px 2px 36px;
   background: #C3CAD6;
   border-radius: 3px;
+  position: relative;
+}
+
+.filter__education-option {
+  &--delete {
+    @include btn-reset;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 28px;
+    height: 30px;
+    background: #ABB3C1;
+    border-radius: 3px 0px 0px 3px;
+    &::before, &::after {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 15px;
+      height: 1px;
+      background-color: #fff;
+      transform: rotate(45deg);
+      top: 15px;
+      left: 7px;
+    }
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
 }
 
 .filter__salary {

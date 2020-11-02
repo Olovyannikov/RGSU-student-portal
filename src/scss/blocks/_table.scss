@@ -1,0 +1,30 @@
+table{
+  width: 96%;
+  border-collapse:collapse;
+  border-spacing:0;
+  height: auto;
+  margin: 0 auto;
+}
+table,table td, table .table__title {
+  border: 1px solid transparent;
+}
+table td,table .table__title {
+  padding: 17px 12px;
+  width: 30px;
+  height: 35px;
+}
+table .table__title {
+  background: #F1F4F9;
+  color: #444;
+  font-weight: 600;
+  text-align: left;
+}
+
+.table__separator {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  color: #3464E0;
+  text-align: center;
+}

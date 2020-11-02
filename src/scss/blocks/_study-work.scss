@@ -1,0 +1,67 @@
+.study-work {
+  @include container;
+}
+
+.study-work__container {
+  position: relative;
+  &--active  {
+    background-color: #fff;
+    margin-bottom: 44px;
+    border-radius: 4px;
+  }
+  &:first-of-type {
+    margin-top: 26px;
+  }
+  &:last-of-type {
+    margin-bottom: 75px;
+  }
+}
+
+.study-work__header {
+  @include headerBlock;
+}
+
+.study-work__title {
+  @include extra-title;
+}
+
+.study-work__progress {
+  display: flex;
+  align-items: center;
+}
+
+.study-work__section {
+  display: flex;
+  justify-content: space-between;
+  background: #fff;
+  border-radius: 4px;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  position: relative;
+
+}
+
+.study-work__section-title {
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 26px;
+  color: #6e7781;
+  margin: 0;
+  padding-left: 20px;
+  padding-top: 17px;
+  padding-bottom: 17px;
+  display: flex;
+}
+
+.study-work__section-count {
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 18px;
+  color: #6e7781;
+  background: #f1f4f9;
+  border-radius: 50%;
+  padding: 3px 8px;
+  position: relative;
+  display: block;
+  margin-left: 12px;
+}

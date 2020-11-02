@@ -1,7 +1,7 @@
 .portfolio {
-  @include container;
   z-index: 1;
   margin-bottom: 41px;
+  width: 315px;
 }
 
 .portfolio__container {
@@ -30,11 +30,17 @@
     border-radius: 4px;
     z-index: -1;
   }
+  @media (min-width: $tablet) {
+    height: 247px;
+  }
 }
 
 .portfolio__title {
   @include title;
   margin-bottom: 33px;
+  @media (min-width: $tablet) {
+    text-transform: unset;
+  }
 }
 
 .gauge {
@@ -56,5 +62,15 @@
   transform: translateX(-50%);
   &::after {
     content: "%";
+  }
+}
+
+.gauge {
+  &--score {
+    .gauge__value {
+      &::after {
+        content: '';
+      }
+    }
   }
 }

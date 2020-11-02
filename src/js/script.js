@@ -6,6 +6,8 @@ import { default as slider } from "./modules/slider.js";
 import { default as gauge } from "./modules/gauge.js";
 import { default as tabs } from "./modules/tabs.js";
 import { default as cookie } from "./modules/cookie.js";
+import {default as avatar} from "./modules/avatar.js";
+import {default as range} from "./modules/range.js";
 
 // init modules
 menuToggle();
@@ -19,68 +21,36 @@ if (document.querySelector(".portfolio-tabs__container") === true) {
   tabs();
 }
 cookie();
+avatar();
+range();
 
-//avatar
-let avatars = document.querySelectorAll(".progress--circle");
 
-for (let i = 0; i < avatars.length; i++) {
-  avatars[i].classList.add(
-    "progress--" + avatars[i].getAttribute("data-progress")
-  );
+//extra-info
+document.querySelector('.extra-info__button').onclick = function () {
+  document.querySelector('.extra-info__wrapper').classList.toggle('extra-info__wrapper--open');
+  document.querySelector('.extra-info__button').classList.toggle('extra-info__button--active');
 }
 
-//range-slider
-const twoRangeSlider = (() => {
-  const rangeCheck = (rangeInputs, rangeMinOutput, rangeMaxOutput) => {
-    const rangeMin = rangeInputs[0].min ? rangeInputs[0].min : 0;
-    const rangeMax = rangeInputs[0].max ? rangeInputs[0].max : 100;
-    let rangeMinValue = parseInt(rangeInputs[1].value);
-    let rangeMaxValue = parseInt(rangeInputs[0].value);
+//progress-bar
+let progresses = document.querySelectorAll('.progress-bar');
+let progressInfos = document.querySelectorAll('.progress-info');
 
-    rangeMinValue = Math.min(Math.max(rangeMinValue, rangeMin), rangeMaxValue);
+for(let i = 0; i < progressInfos.length; i++) {
+  progressInfos[i].innerHTML = progresses[i].getAttribute('data-progress');
+  if (progresses[i].getAttribute('data-progress') < 50) {
+    progresses[i].style.backgroundColor = '#F49617';
+    progressInfos[i].style.color = '#F49617';
+  }
+  if (progresses[i].getAttribute('data-progress') < 20) {
+    progresses[i].style.backgroundColor = '#E06364';
+    progressInfos[i].style.color = '#E06364';
+  }
+}
 
-    // Calculate the percentage of the background where the thumb is
-    const rangeMinPercentage = Number(
-        ((rangeMinValue - rangeMin) * 100) / (rangeMax - rangeMin));
-    const rangeMaxPercentage = Number(
-        ((rangeMaxValue - rangeMin) * 100) / (rangeMax - rangeMin));
-
-    // Update the background to reflect the change
-    rangeInputs[0].style.background = `linear-gradient(to right,#3464E0 ${rangeMaxPercentage}%, #c3cad6 ${rangeMaxPercentage}%)`;
-    rangeInputs[1].style.background = `linear-gradient(to right,#c3cad6 ${rangeMinPercentage}%, transparent ${rangeMinPercentage}%)`;
-
-    // Update value on screen
-    rangeMinOutput.innerHTML = `${rangeMinValue}`;
-    rangeMaxOutput.innerHTML = `${rangeMaxValue}`;
-  };
-
-  const bindComponent = (item) => {
-    const rangeInputs = item.querySelectorAll('.js-two-range-slider-input');
-    const rangeMinOutput = item.querySelector('.js-two-range-slider-min-value');
-    const rangeMaxOutput = item.querySelector('.js-two-range-slider-max-value');
-
-
-    item.addEventListener("input", () => {
-      rangeCheck(rangeInputs, rangeMinOutput, rangeMaxOutput);
-      let directions = {
-          left : rangeMinOutput.value * 2 * 2.5,
-          right : rangeMaxOutput.value * 2 * 2.5
-      }
-      rangeMinOutput.style.left = directions.left + 'px';
-      rangeMaxOutput.style.left = directions.right + 'px';
-    });
-
-    rangeCheck(rangeInputs, rangeMinOutput, rangeMaxOutput);
-  };
-
-  const init = () => {
-    const rootEl = document.getElementsByClassName("js-two-range-slider");
-    [...rootEl].forEach((item) => bindComponent(item));
-  };
-
-  return {
-    init
-  };
-})();
-
-twoRangeSlider.init();
+progresses.forEach(function (progress){
+  setTimeout(() => {
+    let progressVal = Number(progress.dataset.value);
+    progress.style.opacity = 1;
+    progress.style.width = progress.getAttribute('data-progress') + '%';
+  }, 500)
+})

@@ -1,0 +1,16 @@
+.international-work {
+  @include container;
+}
+
+.international-work__header {
+  @include headerBlock;
+}
+
+.international-work__title {
+  @include extra-title;
+}
+
+.international-work__progress {
+  display: flex;
+  align-items: center;
+}

@@ -50,6 +50,9 @@ export default () => {
     this.background = options.background || "rgba(241, 244, 249, 1)";
 
     this.range = [0, 100];
+    if (elem.classList.contains('gauge--score')) {
+      this.range = [0, 5];
+    }
 
     this.interpolate = linearInterpolate.bind(this, this.range, [
       Math.PI,
@@ -107,6 +110,8 @@ export default () => {
     }
   };
 
+
+
   let gauges = document.querySelectorAll(".gauge");
 
   gauges.forEach(function (gauge) {
@@ -115,5 +120,6 @@ export default () => {
     gaugeValueElement.textContent = gaugeVal;
     gaugeValueElement.style.color = gaugeVal > 50 ? "rgba(43, 197, 132, 1)" : "rgba(224, 99, 100, 1)";
     gauge = new Gauge(gauge, gauge.dataset);
+
   });
 };

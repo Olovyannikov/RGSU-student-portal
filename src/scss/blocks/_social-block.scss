@@ -4,6 +4,8 @@
 
 .social-block__list {
   padding-bottom: 25px;
+  @include list-reset;
+  display: flex;
 }
 
 .social-block__link {
@@ -23,5 +25,12 @@
   &--insta {
     background: url("../img/icons/icons.svg#insta") no-repeat center;
     background-size: 50%;
+  }
+
+}
+
+.social-block__item {
+  &:last-child a{
+    margin-right: 0;
   }
 }

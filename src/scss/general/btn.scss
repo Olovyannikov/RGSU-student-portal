@@ -60,3 +60,57 @@
     }
   }
 }
+
+.btn--regular {
+  font-family: inherit;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 18px;
+  color: #3464E0;
+  border-color: #3464e0;
+  padding: 11px 30px;
+}
+
+.accordeon-button {
+  @include btn-reset;
+  position: absolute;
+  right: 27px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 17px;
+  height: 1px;
+  background: #C3CAD6;
+  transition: .2s;
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 17px;
+    height: 1px;
+    background:  #C3CAD6;
+    transform:translateY(-50%) rotate(90deg) ;
+  }
+  &--active {
+    background-color: #3464E0;
+    width: 31px;
+    height: 31px;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    &::after {
+      transform: rotate(45deg);
+      right: 7px;
+      background-color: #fff;
+    }
+    &::before {
+      content: '';
+      transform: rotate(-45deg);
+      display: block;
+      position: absolute;
+      width: 17px;
+      height: 1px;
+      right: 7px;
+      background-color: #fff;
+    }
+  }
+}

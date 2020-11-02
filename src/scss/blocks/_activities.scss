@@ -1,0 +1,19 @@
+.activities__list {
+  @include list-reset;
+  display: flex;
+  margin-right: 21px;
+}
+
+.activities__link {
+  &--youtube {
+    font-size: 0;
+    width: 36px;
+    height: 36px;
+    border: 1px solid #E06364;
+    box-sizing: border-box;
+    border-radius: 50%;
+    background: url("../img/icons/icons.svg#yt-red") no-repeat center;
+    background-size: 50%;
+    padding: 17px;
+  }
+}

@@ -1,0 +1,44 @@
+.languages {
+  @include list-reset;
+  display: flex;
+  padding-left: 19px;
+  padding-right: 20px;
+  padding-bottom: 26px;
+}
+
+.languages__item {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  color: #6E7781;
+  position: relative;
+  margin-right: 28px;
+  &--detusch {
+    padding-left: 28px;
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      background: url("../img/icons/icons.svg#germany");
+    }
+  }
+  &--spanish {
+    padding-left: 28px;
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      background: url("../img/icons/icons.svg#spain");
+    }
+  }
+}

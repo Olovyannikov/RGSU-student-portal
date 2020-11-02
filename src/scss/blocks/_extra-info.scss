@@ -1,0 +1,60 @@
+.extra-info {
+  @include container;
+  margin-bottom: 52px;
+}
+.extra-info__header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 44px;
+}
+
+.extra-info__title {
+  @include extra-title;
+}
+
+.extra-info__button {
+  @include btn-reset;
+  min-width: 32px;
+  min-height: 32px;
+  border-radius: 50%;
+  border: 1px solid #E4ECFA;
+  position: relative;
+  transition: .5s;
+  &--active {
+    transform: rotate(180deg);
+  }
+}
+
+.extra-info__button-icon {
+  position: absolute;
+  content: '';
+  display: block;
+  width: 10px;
+  height: 10px;
+  transform: rotate(-135deg);
+  border-top: 1px solid #9cbaf0;
+  border-left: 1px solid #9cbaf0;
+  left: 11px;
+  top: 8px;
+  transition: .2s;
+}
+
+.extra-info__wrapper {
+  justify-content: space-between;
+  display: none;
+  &--open {
+    display: flex;
+  }
+}
+
+.extra-info__card {
+  @include card;
+  width: 430px;
+  max-height: 246px;
+  overflow-y: hidden;
+}
+
+.extra-info__card-title {
+  @include title;
+  margin-bottom: 21px;
+}

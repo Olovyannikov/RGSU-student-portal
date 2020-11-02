@@ -42,6 +42,29 @@ section.portfolio-cards
                 li.achievement.achievement--art Достижение: Искусство
                 li.achievement.achievement--cup Достижение: Кубок
 
+            .portfolio-cards__pagination.pagination
+                .pagination__wrapper
+                    span.pagination__button.pagination__button--back
+                        a(href="#").pagination__link.pagination__link--back Назад
+                    ul.pagination__list
+                        li.pagination__item.pagination__item--active
+                            a(href="#").pagination__link.pagination__link--active 1
+                        li.pagination__item
+                            a(href="#").pagination__link 2
+                        li.pagination__item
+                            a(href="#").pagination__link 3
+                        li.pagination__item
+                            a(href="#").pagination__link 4
+                        li.pagination__item
+                            a(href="#").pagination__link 5
+                        li.pagination__item
+                            a(href="#").pagination__link 6
+                        li.pagination__item
+                            a(href="#").pagination__link 7
+                        li.pagination__item
+                            a(href="#").pagination__link 8
+                    span.pagination__button.pagination__button--forward
+                        a(href="#").pagination__link.pagination__link--forward Вперед
         .portfolio-cards__filter.filter
             .filter__wrapper
                 .filter__age
@@ -95,8 +118,11 @@ section.portfolio-cards
                     h4.filter__title Уровень образования
                     .filter__education-options
                         span.filter__education-option Аспирантура
+                            button.filter__education-option--delete
                         span.filter__education-option Бакалавр
+                            button.filter__education-option--delete
                         span.filter__education-option Магистр
+                            button.filter__education-option--delete
                 .filter__salary
                     .filter__title Желаемая заработная плата
                     .filter__range.two-range-slider.js-two-range-slider
@@ -105,7 +131,3 @@ section.portfolio-cards
                             output.two-range-slider__value.js-two-range-slider-max-value.two-range-slider__value--right
                         input.two-range-slider__input.js-two-range-slider-input(type='range' min='0' max='50' value='45' step='1')
                         input.two-range-slider__input.js-two-range-slider-input(type='range' min='0' max='50' value='9' step='1')
-        .portfolio-cards__pagination.pagination
-            .pagination__wrapper
-                span.pagination__button.pagination__button--back
-                    a(href="#").pagination__link-back Назад
