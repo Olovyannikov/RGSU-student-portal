@@ -27,6 +27,7 @@
   line-height: 14px;
   color: #F1F4F9;
   position: relative;
+  padding: 9px 12px;
   &--back {
     color: #c3cad6;
     &::before {
@@ -68,7 +69,6 @@
   border: 1px solid #f1f4f9;
   box-sizing: border-box;
   border-radius: 2px;
-  padding: 9px 12px;
   margin-right: 19px;
   &--active {
     background: #3068d4;

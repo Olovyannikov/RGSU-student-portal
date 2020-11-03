@@ -1,13 +1,14 @@
-.study-work {
+.activity-work {
   @include container;
 }
 
-.study-work__container {
+.activity-work__container {
   position: relative;
   &--active  {
     background-color: #fff;
     margin-bottom: 44px;
     border-radius: 4px;
+    height: 490px;
   }
   &:first-of-type {
     margin-top: 26px;
@@ -17,31 +18,37 @@
   }
 }
 
-.study-work__header {
+.activity-work__table-container {
+  width: 100%;
+  height: 400px;
+}
+
+.activity-work__header {
   @include headerBlock;
 }
 
-.study-work__title {
+.activity-work__title {
   @include extra-title;
 }
 
-.study-work__progress {
+.activity-work__progress {
   display: flex;
   align-items: center;
 }
 
-.study-work__section {
+.activity-work__section {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   background: #fff;
   border-radius: 4px;
   margin-top: 32px;
   margin-bottom: 32px;
   position: relative;
-
+  cursor: pointer;
 }
 
-.study-work__section-title {
+.activity-work__section-title {
   font-weight: normal;
   font-size: 22px;
   line-height: 26px;
@@ -53,15 +60,21 @@
   display: flex;
 }
 
-.study-work__section-count {
+.activity-work__section-count {
   font-weight: normal;
   font-size: 15px;
   line-height: 18px;
   color: #6e7781;
   background: #f1f4f9;
   border-radius: 50%;
-  padding: 3px 8px;
+  padding: 4px 9px;
   position: relative;
   display: block;
   margin-left: 12px;
+}
+
+.activity-work__section-button {
+  position: relative;
+  top: 30px;
+  display: block;
 }

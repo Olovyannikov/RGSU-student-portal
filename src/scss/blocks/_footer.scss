@@ -61,7 +61,7 @@
 }
 
 .footer__message-link {
-  color: $c-light;
+  color: $c-light;ottom: 39px;
 }
 
 .footer__schedule {
@@ -102,6 +102,9 @@
 .footer__message-list {
   width: 310px;
   justify-content: space-between;
+  @media (min-width: $tablet) {
+    margin-bottom: 39px;
+  }
 }
 
 //internet - services

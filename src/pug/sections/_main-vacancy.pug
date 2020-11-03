@@ -1,0 +1,39 @@
+mixin vacancy
+    .vacancy__item
+        p.vacancy__item-title Требования
+        ul.vacancy__item-list
+            li.vacancy__item-item Активная жизненная позиция и позитивный настрой
+            li.vacancy__item-item Желание приобрести новый опыт работы и работать в команде профессионалов
+            li.vacancy__item-item Общительность и ориентация на клиента
+            li.vacancy__item-item Нацеленность на результат
+            li.vacancy__item-item Знания по работе в MS Office (Word, Excel, Power Point)
+            li.vacancy__item-item Готовность к разъездному характеру работы
+        p.vacancy__item-title Обязанности
+            ul.vacancy__item-list
+                li.vacancy__item-item Консультировать студентов и абитуриентов, партнеров РГСУ по продуктам Университета
+                li.vacancy__item-item Проводить презентации
+                li.vacancy__item-item Устанавливать долгосрочные отношения с компаниями-партнерами
+        p.vacancy__item-title Документы для устройства на работу
+            ul.vacancy__item-list
+                li.vacancy__item-item Паспорт (для иностранных студентов + нотариально заверенный перевод)
+                li.vacancy__item-item Миграционная карта (Для иностранных студентов)
+                li.vacancy__item-item Виза (для иностранных студентов)
+                li.vacancy__item-item Регистрация (для иностранных студентов)
+                li.vacancy__item-item СНИЛС
+                li.vacancy__item-item ИНН
+                li.vacancy__item-item Справка, подтверждающая обучение студента
+    .vacancy__salary
+        p.vacancy__item-title.vacancy__salary-title Заработная плата
+        span.vacancy__salary-item Оплата сдельная
+        button.vacancy__button.btn--green Откликнуться
+
+section.vacancy
+    .vacancy__container
+        .vacancy__header
+            h2.vacancy__title Открытые вакансии портала
+            a(href="#").vacancy__question Хотите разместить вакансию?
+        .vacancy__section.accordeon-section
+            p.vacancy__section-title Агент по корпоративным продажам
+            button.vacancy-button.accordeon-button
+            .vacancy-container.accordeon-container
+                +vacancy

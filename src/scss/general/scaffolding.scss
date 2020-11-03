@@ -89,7 +89,6 @@ img {
 .overlay {
   opacity: 0;
   visibility: hidden;
-
   position: fixed;
   top: 0;
   left: 0;
@@ -102,4 +101,26 @@ img {
     opacity: 1;
     visibility: visible;
   }
+}
+
+//custom scrollbar
+
+::-webkit-scrollbar-track
+{
+  background-color: transparent;
+}
+
+::-webkit-scrollbar
+{
+  width: 2px;
+  background-color: rgba(241, 244, 249, 1);
+}
+
+::-webkit-scrollbar-thumb
+{
+  background-color: rgba(52, 100, 224, 1);
+}
+
+::-webkit-scrollbar-corner {
+  background-color: transparent;
 }
