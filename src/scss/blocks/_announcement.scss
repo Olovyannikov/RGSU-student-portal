@@ -1,9 +1,8 @@
 .announcement {
-  @include container;
   margin-bottom: 47px;
 }
 
-.announcement__container {
+.announcement__wrapper {
   @include card;
   overflow: hidden;
 }

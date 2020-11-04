@@ -1,0 +1,83 @@
+.container {
+  margin: 0 auto;
+  padding: 0 45px;
+  width: 100%;
+  max-width: 1440px;
+  border-radius: 4px;
+
+  @media (min-width: $stop-scaling) {
+	padding: 0 40px;
+  }
+
+  @media (max-width: $tablet) {
+	padding: 0 20px;
+  }
+
+  @media (max-width: $mobile) {
+	padding: 0 12px;
+  }
+}
+
+.title {
+  font-size: rem-calc(22);
+  line-height: 26px;
+  color: $c-darkgrey;
+  padding-top: 25px;
+  padding-left: 19px;
+  font-style: normal;
+  font-weight: normal;
+  margin: 0;
+  text-transform: uppercase;
+  @media (min-width: $tablet) {
+	font-size: rem-calc(18);
+	text-transform: unset;
+  }
+  &--dark {
+	color: $c-black;
+  }
+  &--xs {
+	font-size: rem-calc(18);
+	line-height: 26px;
+	font-style: normal;
+	font-weight: 500;
+  }
+  &--large {
+	font-size: rem-calc(26);
+	line-height: 30px;
+	margin: 0 11px 0 0;
+	font-style: normal;
+	font-weight: normal;
+  }
+  &--s {
+	font-size: rem-calc(24);
+	line-height: 28px;
+	color: $c-black;
+	margin: 0 21px 0 0;
+	font-style: normal;
+	font-weight: normal;
+  }
+  &--main {
+	font-size: rem-calc(22);
+	line-height: 26px;
+	color: $c-title;
+	font-weight: 400;
+	margin: 0 14px 0 0;
+  }
+}
+
+.aside-content {
+  @media (min-width: $tablet) {
+	width: 315px;
+	border-radius: 4px;
+	height: fit-content;
+  }
+}
+
+.aside-divider {
+  @media (min-width: $tablet) {
+	margin-bottom: 2px;
+	background-color: #fff;
+	padding-left: 20px;
+	padding-right: 20px;
+  }
+}

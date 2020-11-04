@@ -1,5 +1,4 @@
 .vacancy__container {
-  @include container;
 }
 
 .vacancy__content {
@@ -11,10 +10,6 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: 31px;
-}
-
-.vacancy__title {
-  @include title-main;
 }
 
 
@@ -32,7 +27,6 @@
 }
 
 .vacancy__section-title {
-  @include block-title;
   padding: 17px 0 17px 20px;
   margin-right: 0;
   &--hot {
@@ -94,7 +88,7 @@
   justify-content: space-between;
   margin-bottom: 25px;
   padding-top: 27px;
-  padding-right: 28px;
+  margin-right: 28px;
   border-top: 1px solid #E4ECFA;
 }
 
@@ -111,5 +105,7 @@
 }
 
 .vacancy__wrapper {
-  width: 1006px;
+  @media (min-width: $tablet) {
+    width: 1006px;
+  }
 }

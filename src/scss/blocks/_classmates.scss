@@ -1,9 +1,8 @@
 .classmates {
-  @include container;
   margin-bottom: 31px;
 }
 
-.classmates__container {
+.classmates__wrapper {
   @include card;
   height: 271px;
   flex-direction: column;
@@ -32,11 +31,10 @@
 }
 
 .classmates__title {
-  @include title;
   margin-bottom: 13px;
 }
 
-.classmates__wrapper {
+.classmates__list {
   color: rgba(68, 68, 68, 1);
   overflow-y: scroll;
   max-height: 206px;

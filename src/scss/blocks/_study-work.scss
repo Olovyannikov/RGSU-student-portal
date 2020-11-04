@@ -1,8 +1,4 @@
-.activity-work {
-  @include container;
-}
-
-.activity-work__container {
+.activity-work__wrapper {
   position: relative;
   &--active  {
     background-color: #fff;

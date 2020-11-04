@@ -113,14 +113,13 @@
     font-size: rem-calc(26);
     line-height: 30px;
     color: #444444;
-    margin: 0 11px 0 0;
   }
 }
 
 @mixin block-title {
   font-size: rem-calc(22);
   line-height: 26px;
-  color: #6E7781;
+  color: $c-title;
   font-weight: 400;
   margin: 0 14px 0 0;
 }

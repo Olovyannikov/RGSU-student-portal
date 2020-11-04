@@ -1,6 +1,4 @@
-.filter {
-  @include aside-container;
-}
+
 
 .filter__title {
   @include title-aside;
@@ -14,7 +12,12 @@
 }
 
 .filter__checkboxes {
-  @include aside-divider;
+  @media (min-width: $tablet) {
+    margin-bottom: 2px;
+    background-color: #fff;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 
 .filter__checkboxes-container {
@@ -109,7 +112,6 @@
 }
 
 .filter__faculty {
-  @include aside-divider;
   @include title-aside;
 }
 .filter__select {
@@ -139,7 +141,7 @@
 
 
 .filter__education {
-  @include aside-divider;
+  @extend .filter__checkboxes;
   @include title-aside;
   padding-bottom: 34px;
 }

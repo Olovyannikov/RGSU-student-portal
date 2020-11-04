@@ -1,7 +1,5 @@
 
 .portfolio-cards__container {
-  @include container;
-
   display: flex;
   flex-wrap: wrap;
 }
@@ -23,9 +21,6 @@
   margin-bottom: 25px;
 }
 
-.portfolio-cards__title {
-  @include title-main;
-}
 
 .portfolio-cards__counter {
   background: #2BC584;

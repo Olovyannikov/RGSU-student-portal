@@ -1,16 +1,13 @@
 .extra-info {
-  @include container;
   margin-bottom: 52px;
 }
+
 .extra-info__header {
   display: flex;
   align-items: center;
   margin-bottom: 44px;
 }
 
-.extra-info__title {
-  @include extra-title;
-}
 
 .extra-info__button {
   @include btn-reset;
@@ -55,6 +52,5 @@
 }
 
 .extra-info__card-title {
-  @include title;
   margin-bottom: 21px;
 }

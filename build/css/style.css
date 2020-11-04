@@ -729,6 +729,62 @@ img {
   background-color: transparent;
 }
 
+.container {
+  margin: 0 auto;
+  padding: 0 45px;
+  width: 100%;
+  max-width: 1440px;
+  border-radius: 4px;
+}
+
+.title {
+  font-size: 1.375rem;
+  line-height: 26px;
+  color: #c3cad6;
+  padding-top: 25px;
+  padding-left: 19px;
+  font-style: normal;
+  font-weight: normal;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.title--dark {
+  color: #444444;
+}
+
+.title--xs {
+  font-size: 1.125rem;
+  line-height: 26px;
+  font-style: normal;
+  font-weight: 500;
+}
+
+.title--large {
+  font-size: 1.625rem;
+  line-height: 30px;
+  margin: 0 11px 0 0;
+  font-style: normal;
+  font-weight: normal;
+}
+
+.title--s {
+  font-size: 1.5rem;
+  line-height: 28px;
+  color: #444444;
+  margin: 0 21px 0 0;
+  font-style: normal;
+  font-weight: normal;
+}
+
+.title--main {
+  font-size: 1.375rem;
+  line-height: 26px;
+  color: #6E7781;
+  font-weight: 400;
+  margin: 0 14px 0 0;
+}
+
 .btn {
   padding: 0;
   margin: 0;
@@ -2057,11 +2113,6 @@ img {
 }
 
 .info-container {
-  margin: 0 auto;
-  padding: 0 45px;
-  width: 100%;
-  max-width: 1440px;
-  border-radius: 4px;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -2072,8 +2123,6 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-left: auto;
-  margin-right: auto;
   margin-bottom: 40px;
   position: relative;
   list-style: none;
@@ -2226,17 +2275,6 @@ img {
 .info__card-media-hash {
   margin: 0;
   color: #3464e0;
-}
-
-.info__card-title {
-  color: #c3cad6;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 22px;
-  line-height: 26px;
-  margin: 0;
-  padding-top: 27px;
-  padding-left: 24px;
 }
 
 .info__card-main {
@@ -2402,15 +2440,10 @@ img {
 }
 
 .classmates {
-  margin: 0 auto;
-  padding: 0 45px;
-  width: 100%;
-  max-width: 1440px;
-  border-radius: 4px;
   margin-bottom: 31px;
 }
 
-.classmates__container {
+.classmates__wrapper {
   background: #fff;
   border-radius: 4px;
   position: relative;
@@ -2422,7 +2455,7 @@ img {
           flex-direction: column;
 }
 
-.classmates__container::before {
+.classmates__wrapper::before {
   content: "";
   position: absolute;
   width: calc(100% - 40px);
@@ -2434,7 +2467,7 @@ img {
   z-index: -1;
 }
 
-.classmates__container::after {
+.classmates__wrapper::after {
   content: "";
   position: absolute;
   width: calc(100% - 20px);
@@ -2446,7 +2479,7 @@ img {
   z-index: -1;
 }
 
-.classmates__container::before {
+.classmates__wrapper::before {
   content: "";
   position: absolute;
   width: calc(100% - 40px);
@@ -2458,7 +2491,7 @@ img {
   z-index: -1;
 }
 
-.classmates__container::after {
+.classmates__wrapper::after {
   content: "";
   position: absolute;
   width: calc(100% - 20px);
@@ -2471,19 +2504,10 @@ img {
 }
 
 .classmates__title {
-  font-style: normal;
-  font-weight: normal;
-  font-size: 1.375rem;
-  line-height: 26px;
-  color: #C3CAD6;
-  margin: 0;
-  padding-top: 25px;
-  padding-left: 19px;
-  text-transform: uppercase;
   margin-bottom: 13px;
 }
 
-.classmates__wrapper {
+.classmates__list {
   color: #444444;
   overflow-y: scroll;
   max-height: 206px;
@@ -2500,7 +2524,7 @@ img {
           align-items: center;
 }
 
-.classmates__wrapper::before {
+.classmates__list::before {
   content: "";
   position: absolute;
   bottom: 0;
@@ -2542,15 +2566,10 @@ img {
 }
 
 .announcement {
-  margin: 0 auto;
-  padding: 0 45px;
-  width: 100%;
-  max-width: 1440px;
-  border-radius: 4px;
   margin-bottom: 47px;
 }
 
-.announcement__container {
+.announcement__wrapper {
   background: #fff;
   border-radius: 4px;
   position: relative;
@@ -2558,7 +2577,7 @@ img {
   overflow: hidden;
 }
 
-.announcement__container::before {
+.announcement__wrapper::before {
   content: "";
   position: absolute;
   width: calc(100% - 40px);
@@ -2570,7 +2589,7 @@ img {
   z-index: -1;
 }
 
-.announcement__container::after {
+.announcement__wrapper::after {
   content: "";
   position: absolute;
   width: calc(100% - 20px);
@@ -2617,11 +2636,6 @@ img {
 }
 
 .services__title {
-  font-size: 1.375rem;
-  line-height: 26px;
-  color: #6E7781;
-  font-weight: 400;
-  margin: 0 14px 0 0;
   margin: 0 14px 0 0;
 }
 
@@ -3656,11 +3670,6 @@ img {
 }
 
 .portfolio-cards__container {
-  margin: 0 auto;
-  padding: 0 45px;
-  width: 100%;
-  max-width: 1440px;
-  border-radius: 4px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4536,11 +4545,6 @@ img {
 }
 
 .extra-info {
-  margin: 0 auto;
-  padding: 0 45px;
-  width: 100%;
-  max-width: 1440px;
-  border-radius: 4px;
   margin-bottom: 52px;
 }
 
@@ -4552,15 +4556,6 @@ img {
       -ms-flex-align: center;
           align-items: center;
   margin-bottom: 44px;
-}
-
-.extra-info__title {
-  font-style: normal;
-  font-weight: normal;
-  font-size: 24px;
-  line-height: 28px;
-  color: #444444;
-  margin: 0 21px 0 0;
 }
 
 .extra-info__button {
@@ -4656,15 +4651,6 @@ img {
 }
 
 .extra-info__card-title {
-  font-style: normal;
-  font-weight: normal;
-  font-size: 1.375rem;
-  line-height: 26px;
-  color: #C3CAD6;
-  margin: 0;
-  padding-top: 25px;
-  padding-left: 19px;
-  text-transform: uppercase;
   margin-bottom: 21px;
 }
 
@@ -4818,30 +4804,22 @@ img {
   content: ', ';
 }
 
-.activity-work {
-  margin: 0 auto;
-  padding: 0 45px;
-  width: 100%;
-  max-width: 1440px;
-  border-radius: 4px;
-}
-
-.activity-work__container {
+.activity-work__wrapper {
   position: relative;
 }
 
-.activity-work__container--active {
+.activity-work__wrapper--active {
   background-color: #fff;
   margin-bottom: 44px;
   border-radius: 4px;
   height: 490px;
 }
 
-.activity-work__container:first-of-type {
+.activity-work__wrapper:first-of-type {
   margin-top: 26px;
 }
 
-.activity-work__container:last-of-type {
+.activity-work__wrapper:last-of-type {
   margin-bottom: 75px;
 }
 
@@ -5226,14 +5204,6 @@ td:first-child {
   width: 314px;
 }
 
-.vacancy__container {
-  margin: 0 auto;
-  padding: 0 45px;
-  width: 100%;
-  max-width: 1440px;
-  border-radius: 4px;
-}
-
 .vacancy__content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -5266,11 +5236,6 @@ td:first-child {
 }
 
 .vacancy__section-title {
-  font-size: 1.375rem;
-  line-height: 26px;
-  color: #6E7781;
-  font-weight: 400;
-  margin: 0 14px 0 0;
   padding: 17px 0 17px 20px;
   margin-right: 0;
 }
@@ -5341,7 +5306,7 @@ td:first-child {
           justify-content: space-between;
   margin-bottom: 25px;
   padding-top: 27px;
-  padding-right: 28px;
+  margin-right: 28px;
   border-top: 1px solid #E4ECFA;
 }
 
@@ -5354,18 +5319,6 @@ td:first-child {
 
 .vacancy__salary-title {
   margin-bottom: 2px;
-}
-
-.vacancy__wrapper {
-  width: 1006px;
-}
-
-.student-news {
-  margin: 0 auto;
-  padding: 0 45px;
-  width: 100%;
-  max-width: 1440px;
-  border-radius: 4px;
 }
 
 .student-news__content {
@@ -5530,6 +5483,26 @@ td:first-child {
 }
 
 @media (min-width: 1024px) {
+  .title {
+    font-size: 1.125rem;
+    text-transform: unset;
+  }
+
+  .aside-content {
+    width: 315px;
+    border-radius: 4px;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+
+  .aside-divider {
+    margin-bottom: 2px;
+    background-color: #fff;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
   .block__content--aside {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -5809,12 +5782,7 @@ td:first-child {
     text-transform: unset;
   }
 
-  .classmates__title {
-    font-size: 1.125rem;
-    text-transform: unset;
-  }
-
-  .classmates__wrapper {
+  .classmates__list {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -5916,25 +5884,8 @@ td:first-child {
     margin-right: 29px;
   }
 
-  .portfolio-cards__title {
-    font-style: normal;
-    font-weight: normal;
-    font-size: 1.625rem;
-    line-height: 30px;
-    color: #444444;
-    margin: 0 11px 0 0;
-  }
-
   .portfolio-cards__filter {
     width: 315px;
-  }
-
-  .filter {
-    width: 315px;
-    border-radius: 4px;
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
   }
 
   .filter__age {
@@ -5944,20 +5895,7 @@ td:first-child {
     padding-right: 20px;
   }
 
-  .filter__checkboxes {
-    margin-bottom: 2px;
-    background-color: #fff;
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-
-  .filter__faculty {
-    margin-bottom: 2px;
-    background-color: #fff;
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-
+  .filter__checkboxes,
   .filter__education {
     margin-bottom: 2px;
     background-color: #fff;
@@ -5985,21 +5923,10 @@ td:first-child {
     font-size: 1.625rem;
     line-height: 30px;
     color: #444444;
-    margin: 0 11px 0 0;
   }
 
-  .extra-info__card-title {
-    font-size: 1.125rem;
-    text-transform: unset;
-  }
-
-  .vacancy__title {
-    font-style: normal;
-    font-weight: normal;
-    font-size: 1.625rem;
-    line-height: 30px;
-    color: #444444;
-    margin: 0 11px 0 0;
+  .vacancy__wrapper {
+    width: 1006px;
   }
 
   .student-news__title {
@@ -6008,10 +5935,9 @@ td:first-child {
     font-size: 1.625rem;
     line-height: 30px;
     color: #444444;
-    margin: 0 11px 0 0;
   }
 
-  .student-news__container {
+  .student-news__wrapper {
     width: 1003px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -6047,6 +5973,10 @@ td:first-child {
     font-size: 18px;
   }
 
+  .container {
+    padding: 0 40px;
+  }
+
   .btn {
     padding: 15px 29px;
     font-size: 24px;
@@ -6058,18 +5988,6 @@ td:first-child {
   }
 
   .footer__container {
-    padding: 0 40px;
-  }
-
-  .info-container {
-    padding: 0 40px;
-  }
-
-  .classmates {
-    padding: 0 40px;
-  }
-
-  .announcement {
     padding: 0 40px;
   }
 
@@ -6089,19 +6007,7 @@ td:first-child {
     padding: 0 40px;
   }
 
-  .portfolio-cards__container {
-    padding: 0 40px;
-  }
-
   .profile__container {
-    padding: 0 40px;
-  }
-
-  .extra-info {
-    padding: 0 40px;
-  }
-
-  .activity-work {
     padding: 0 40px;
   }
 
@@ -6114,14 +6020,6 @@ td:first-child {
   }
 
   .international-work {
-    padding: 0 40px;
-  }
-
-  .vacancy__container {
-    padding: 0 40px;
-  }
-
-  .student-news {
     padding: 0 40px;
   }
 }
@@ -6137,6 +6035,10 @@ td:first-child {
 }
 
 @media (max-width: 1024px) {
+  .container {
+    padding: 0 20px;
+  }
+
   #cookie {
     min-width: 300px;
     min-height: 120px;
@@ -6154,18 +6056,6 @@ td:first-child {
     padding: 0 20px;
   }
 
-  .info-container {
-    padding: 0 20px;
-  }
-
-  .classmates {
-    padding: 0 20px;
-  }
-
-  .announcement {
-    padding: 0 20px;
-  }
-
   .services {
     padding: 0 20px;
   }
@@ -6182,19 +6072,7 @@ td:first-child {
     padding: 0 20px;
   }
 
-  .portfolio-cards__container {
-    padding: 0 20px;
-  }
-
   .profile__container {
-    padding: 0 20px;
-  }
-
-  .extra-info {
-    padding: 0 20px;
-  }
-
-  .activity-work {
     padding: 0 20px;
   }
 
@@ -6207,14 +6085,6 @@ td:first-child {
   }
 
   .international-work {
-    padding: 0 20px;
-  }
-
-  .vacancy__container {
-    padding: 0 20px;
-  }
-
-  .student-news {
     padding: 0 20px;
   }
 }
@@ -6226,23 +6096,15 @@ td:first-child {
 }
 
 @media (max-width: 768px) {
+  .container {
+    padding: 0 12px;
+  }
+
   .page-header__wrapper {
     padding: 0 12px;
   }
 
   .footer__container {
-    padding: 0 12px;
-  }
-
-  .info-container {
-    padding: 0 12px;
-  }
-
-  .classmates {
-    padding: 0 12px;
-  }
-
-  .announcement {
     padding: 0 12px;
   }
 
@@ -6262,19 +6124,7 @@ td:first-child {
     padding: 0 12px;
   }
 
-  .portfolio-cards__container {
-    padding: 0 12px;
-  }
-
   .profile__container {
-    padding: 0 12px;
-  }
-
-  .extra-info {
-    padding: 0 12px;
-  }
-
-  .activity-work {
     padding: 0 12px;
   }
 
@@ -6287,14 +6137,6 @@ td:first-child {
   }
 
   .international-work {
-    padding: 0 12px;
-  }
-
-  .vacancy__container {
-    padding: 0 12px;
-  }
-
-  .student-news {
     padding: 0 12px;
   }
 }
