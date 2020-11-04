@@ -96,9 +96,18 @@ function css() {
 				cascade: true
 			})
 		)
-		// .pipe(webpcss())
 		.pipe(dest(path.build.css))
-		.pipe(clean_css())
+		.pipe(clean_css({
+			level: {
+				1: {
+					all: true,
+					normalizeUrls: false
+				},
+				2: {
+					restructureRules: true
+				}
+			}
+		}))
 		.pipe(
 			rename({
 				extname: ".min.css"
