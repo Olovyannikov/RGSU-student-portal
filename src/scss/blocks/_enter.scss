@@ -4,6 +4,9 @@
   @media (min-width: $mobile) {
     display: block;
   }
+  @media (min-width: $tablet) {
+    margin-bottom: 66px;
+  }
 }
 
 .enter__wrapper {

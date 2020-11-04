@@ -11,8 +11,8 @@
 
 .pagination__button {
   display: block;
-  margin-top: 28px;
-  margin-bottom: 24px;
+  margin-top: 16px;
+  margin-bottom: 16px;
   &--back {
     margin-left: 49px;
   }
@@ -25,9 +25,10 @@
   display: block;
   font-size: 16px;
   line-height: 14px;
-  color: #F1F4F9;
+  color: #C3CAD6;
   position: relative;
   padding: 9px 12px;
+  border-radius: 2px;
   &--back {
     color: #c3cad6;
     &::before {
@@ -48,10 +49,10 @@
       display: block;
       width: 14px;
       height: 14px;
-      top: 0;
+      top: 50%;
       right: -26px;
       background: url("../img/icons/icons.svg#back") no-repeat center;
-      transform: rotate(180deg);
+      transform: rotate(180deg) translateY(50%);
     }
   }
   &--active {

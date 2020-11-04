@@ -191,7 +191,7 @@ function svgsprite() {
 
 function watchFiles(params) {
 	gulp.watch([path.watch.pug], pug2html);
-	gulp.watch([path.watch.css], css);
+	gulp.watch([path.watch.css],{usePolling: true}, css);
 	gulp.watch([path.watch.js], js);
 	gulp.watch([path.watch.img], images);
 }

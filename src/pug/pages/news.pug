@@ -1,0 +1,7 @@
+extends ../layouts/_main.pug
+include ./../mixins/_news-cards.pug
+block variables
+    - const title = 'Студенческий портал - Новости';
+
+block content
+    include ../sections/_main-news.pug

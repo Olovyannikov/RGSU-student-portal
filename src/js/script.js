@@ -13,13 +13,10 @@ import { default as accordeon } from "./modules/accordeon.js";
 
 // init modules
 menuToggle();
-if (document.querySelector(".info__card-date ") === true) {
-  datetime();
-}
 advertisement();
 //slider();
 gauge();
-if (document.querySelector(".portfolio-tabs__container") === true) {
+if (document.querySelector(".portfolio-tabs__container")) {
   tabs();
 }
 cookie();
@@ -38,4 +35,8 @@ if (document.querySelector(".extra-info") == true) {
       .querySelector(".extra-info__button")
       .classList.toggle("extra-info__button--active");
   };
+}
+
+if (document.querySelector(".info__card--schedule")) {
+  datetime();
 }

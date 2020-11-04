@@ -204,6 +204,20 @@
   }
 }
 
-.block__content-news {
-  min-width: 300px  ;
+.news__card-block {
+  @media (min-width: $tablet) {
+    width: 487px;
+    height: 277px;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 40px;
+    color: $c-light;
+    padding: 27px;
+    border-radius: 4px;
+    &:hover {
+      img {
+        transform: scale(1.1);
+      }
+    }
+  }
 }

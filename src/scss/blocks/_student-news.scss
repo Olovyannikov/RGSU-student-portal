@@ -1,0 +1,36 @@
+.student-news {
+  @include container;
+}
+
+.student-news__content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.student-news__header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.student-news__title {
+  @include title-main;
+}
+
+.student-news__counter {
+  font-size: 14px;
+  line-height: 16px;
+  color: $c-light;
+  background: $c-green;
+  border-radius: 4px;
+  padding: 4px 9px;
+}
+
+.student-news__container {
+  @media (min-width: $tablet) {
+	width: 1003px;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+  }
+}

@@ -24,8 +24,8 @@
           <nav class="page-header__nav">
             <div id="nav">
               <ul class="page-header__menu-list">
-                <li class="page-header__menu-item"><a class="js-menu-link" href="#">Вакансии</a></li>
-                <li class="page-header__menu-item"><a class="js-menu-link" href="#">Портфолио студентов</a></li>
+                <li class="page-header__menu-item"><a class="js-menu-link" href="vacancy.html">Вакансии</a></li>
+                <li class="page-header__menu-item"><a class="js-menu-link" href="digital-portfolio.html">Портфолио студентов</a></li>
                 <li class="page-header__menu-item page-header__menu--exit"><a class="js-menu-link page-header__menu-link--exit" href="#">Завершить сеанс</a></li>
               </ul>
             </div>
@@ -68,43 +68,247 @@
         <div class="vacancy__header">
           <h2 class="vacancy__title">Открытые вакансии портала</h2><a class="vacancy__question" href="#">Хотите разместить вакансию?</a>
         </div>
-        <div class="vacancy__section accordeon-section">
-          <p class="vacancy__section-title">Агент по корпоративным продажам</p>
-          <button class="vacancy-button accordeon-button"></button>
-          <div class="vacancy-container accordeon-container">
-                <div class="vacancy__item">
-                  <p class="vacancy__item-title">Требования</p>
-                  <ul class="vacancy__item-list">
-                    <li class="vacancy__item-item">Активная жизненная позиция и позитивный настрой</li>
-                    <li class="vacancy__item-item">Желание приобрести новый опыт работы и работать в команде профессионалов</li>
-                    <li class="vacancy__item-item">Общительность и ориентация на клиента</li>
-                    <li class="vacancy__item-item">Нацеленность на результат</li>
-                    <li class="vacancy__item-item">Знания по работе в MS Office (Word, Excel, Power Point)</li>
-                    <li class="vacancy__item-item">Готовность к разъездному характеру работы</li>
-                  </ul>
-                  <p class="vacancy__item-title">Обязанности
-                    <ul class="vacancy__item-list">
-                      <li class="vacancy__item-item">Консультировать студентов и абитуриентов, партнеров РГСУ по продуктам Университета</li>
-                      <li class="vacancy__item-item">Проводить презентации</li>
-                      <li class="vacancy__item-item">Устанавливать долгосрочные отношения с компаниями-партнерами</li>
-                    </ul>
-                  </p>
-                  <p class="vacancy__item-title">Документы для устройства на работу
-                    <ul class="vacancy__item-list">
-                      <li class="vacancy__item-item">Паспорт (для иностранных студентов + нотариально заверенный перевод)</li>
-                      <li class="vacancy__item-item">Миграционная карта (Для иностранных студентов)</li>
-                      <li class="vacancy__item-item">Виза (для иностранных студентов)</li>
-                      <li class="vacancy__item-item">Регистрация (для иностранных студентов)</li>
-                      <li class="vacancy__item-item">СНИЛС</li>
-                      <li class="vacancy__item-item">ИНН</li>
-                      <li class="vacancy__item-item">Справка, подтверждающая обучение студента</li>
-                    </ul>
-                  </p>
+        <div class="vacancy__content">
+          <div class="vacancy__wrapper">
+            <div class="vacancy__section accordeon-section">
+              <p class="vacancy__section-title accordeon-title">Агент по корпоративным продажам</p>
+              <button class="vacancy-button accordeon-button"></button>
+              <div class="vacancy-container accordeon-container">
+                    <div class="vacancy__item">
+                      <p class="vacancy__item-title">Требования:</p>
+                      <ul class="vacancy__item-list">
+                        <li class="vacancy__item-item">Активная жизненная позиция и позитивный настрой</li>
+                        <li class="vacancy__item-item">Желание приобрести новый опыт работы и работать в команде профессионалов</li>
+                        <li class="vacancy__item-item">Общительность и ориентация на клиента</li>
+                        <li class="vacancy__item-item">Нацеленность на результат</li>
+                        <li class="vacancy__item-item">Знания по работе в MS Office (Word, Excel, Power Point)</li>
+                        <li class="vacancy__item-item">Готовность к разъездному характеру работы</li>
+                      </ul>
+                      <p class="vacancy__item-title">Обязанности:
+                        <ul class="vacancy__item-list">
+                          <li class="vacancy__item-item">Консультировать студентов и абитуриентов, партнеров РГСУ по продуктам Университета</li>
+                          <li class="vacancy__item-item">Проводить презентации</li>
+                          <li class="vacancy__item-item">Устанавливать долгосрочные отношения с компаниями-партнерами</li>
+                        </ul>
+                      </p>
+                      <p class="vacancy__item-title">Документы для устройства на работу:
+                        <ul class="vacancy__item-list">
+                          <li class="vacancy__item-item">Паспорт (для иностранных студентов + нотариально заверенный перевод)</li>
+                          <li class="vacancy__item-item">Миграционная карта (Для иностранных студентов)</li>
+                          <li class="vacancy__item-item">Виза (для иностранных студентов)</li>
+                          <li class="vacancy__item-item">Регистрация (для иностранных студентов)</li>
+                          <li class="vacancy__item-item">СНИЛС</li>
+                          <li class="vacancy__item-item">ИНН</li>
+                          <li class="vacancy__item-item">Справка, подтверждающая обучение студента</li>
+                        </ul>
+                      </p>
+                    </div>
+                    <div class="vacancy__salary">
+                      <p class="vacancy__item-title vacancy__salary-title">Заработная плата:<span class="vacancy__salary-item">Оплата сдельная</span></p><a class="vacancy__button btn--green" href="#">Откликнуться</a>
+                    </div>
+              </div>
+            </div>
+            <div class="vacancy__section accordeon-section">
+              <p class="vacancy__section-title accordeon-title">Делопроизводитель в архиве</p>
+              <button class="vacancy-button accordeon-button"></button>
+              <div class="vacancy-container accordeon-container">
+                    <div class="vacancy__item">
+                      <p class="vacancy__item-title">Требования:</p>
+                      <ul class="vacancy__item-list">
+                        <li class="vacancy__item-item">Активная жизненная позиция и позитивный настрой</li>
+                        <li class="vacancy__item-item">Желание приобрести новый опыт работы и работать в команде профессионалов</li>
+                        <li class="vacancy__item-item">Общительность и ориентация на клиента</li>
+                        <li class="vacancy__item-item">Нацеленность на результат</li>
+                        <li class="vacancy__item-item">Знания по работе в MS Office (Word, Excel, Power Point)</li>
+                        <li class="vacancy__item-item">Готовность к разъездному характеру работы</li>
+                      </ul>
+                      <p class="vacancy__item-title">Обязанности:
+                        <ul class="vacancy__item-list">
+                          <li class="vacancy__item-item">Консультировать студентов и абитуриентов, партнеров РГСУ по продуктам Университета</li>
+                          <li class="vacancy__item-item">Проводить презентации</li>
+                          <li class="vacancy__item-item">Устанавливать долгосрочные отношения с компаниями-партнерами</li>
+                        </ul>
+                      </p>
+                      <p class="vacancy__item-title">Документы для устройства на работу:
+                        <ul class="vacancy__item-list">
+                          <li class="vacancy__item-item">Паспорт (для иностранных студентов + нотариально заверенный перевод)</li>
+                          <li class="vacancy__item-item">Миграционная карта (Для иностранных студентов)</li>
+                          <li class="vacancy__item-item">Виза (для иностранных студентов)</li>
+                          <li class="vacancy__item-item">Регистрация (для иностранных студентов)</li>
+                          <li class="vacancy__item-item">СНИЛС</li>
+                          <li class="vacancy__item-item">ИНН</li>
+                          <li class="vacancy__item-item">Справка, подтверждающая обучение студента</li>
+                        </ul>
+                      </p>
+                    </div>
+                    <div class="vacancy__salary">
+                      <p class="vacancy__item-title vacancy__salary-title">Заработная плата:<span class="vacancy__salary-item">Оплата сдельная</span></p><a class="vacancy__button btn--green" href="#">Откликнуться</a>
+                    </div>
+              </div>
+            </div>
+            <div class="vacancy__section accordeon-section">
+              <p class="vacancy__section-title accordeon-title">Сотрудник деканата</p>
+              <button class="vacancy-button accordeon-button"></button>
+              <div class="vacancy-container accordeon-container">
+                    <div class="vacancy__item">
+                      <p class="vacancy__item-title">Требования:</p>
+                      <ul class="vacancy__item-list">
+                        <li class="vacancy__item-item">Активная жизненная позиция и позитивный настрой</li>
+                        <li class="vacancy__item-item">Желание приобрести новый опыт работы и работать в команде профессионалов</li>
+                        <li class="vacancy__item-item">Общительность и ориентация на клиента</li>
+                        <li class="vacancy__item-item">Нацеленность на результат</li>
+                        <li class="vacancy__item-item">Знания по работе в MS Office (Word, Excel, Power Point)</li>
+                        <li class="vacancy__item-item">Готовность к разъездному характеру работы</li>
+                      </ul>
+                      <p class="vacancy__item-title">Обязанности:
+                        <ul class="vacancy__item-list">
+                          <li class="vacancy__item-item">Консультировать студентов и абитуриентов, партнеров РГСУ по продуктам Университета</li>
+                          <li class="vacancy__item-item">Проводить презентации</li>
+                          <li class="vacancy__item-item">Устанавливать долгосрочные отношения с компаниями-партнерами</li>
+                        </ul>
+                      </p>
+                      <p class="vacancy__item-title">Документы для устройства на работу:
+                        <ul class="vacancy__item-list">
+                          <li class="vacancy__item-item">Паспорт (для иностранных студентов + нотариально заверенный перевод)</li>
+                          <li class="vacancy__item-item">Миграционная карта (Для иностранных студентов)</li>
+                          <li class="vacancy__item-item">Виза (для иностранных студентов)</li>
+                          <li class="vacancy__item-item">Регистрация (для иностранных студентов)</li>
+                          <li class="vacancy__item-item">СНИЛС</li>
+                          <li class="vacancy__item-item">ИНН</li>
+                          <li class="vacancy__item-item">Справка, подтверждающая обучение студента</li>
+                        </ul>
+                      </p>
+                    </div>
+                    <div class="vacancy__salary">
+                      <p class="vacancy__item-title vacancy__salary-title">Заработная плата:<span class="vacancy__salary-item">Оплата сдельная</span></p><a class="vacancy__button btn--green" href="#">Откликнуться</a>
+                    </div>
+              </div>
+            </div>
+            <div class="vacancy__section accordeon-section">
+              <p class="vacancy__section-title vacancy__section-title--hot accordeon-title">Оператор контактного центра</p>
+              <button class="vacancy-button accordeon-button"></button>
+              <div class="vacancy-container accordeon-container">
+                    <div class="vacancy__item">
+                      <p class="vacancy__item-title">Требования:</p>
+                      <ul class="vacancy__item-list">
+                        <li class="vacancy__item-item">Активная жизненная позиция и позитивный настрой</li>
+                        <li class="vacancy__item-item">Желание приобрести новый опыт работы и работать в команде профессионалов</li>
+                        <li class="vacancy__item-item">Общительность и ориентация на клиента</li>
+                        <li class="vacancy__item-item">Нацеленность на результат</li>
+                        <li class="vacancy__item-item">Знания по работе в MS Office (Word, Excel, Power Point)</li>
+                        <li class="vacancy__item-item">Готовность к разъездному характеру работы</li>
+                      </ul>
+                      <p class="vacancy__item-title">Обязанности:
+                        <ul class="vacancy__item-list">
+                          <li class="vacancy__item-item">Консультировать студентов и абитуриентов, партнеров РГСУ по продуктам Университета</li>
+                          <li class="vacancy__item-item">Проводить презентации</li>
+                          <li class="vacancy__item-item">Устанавливать долгосрочные отношения с компаниями-партнерами</li>
+                        </ul>
+                      </p>
+                      <p class="vacancy__item-title">Документы для устройства на работу:
+                        <ul class="vacancy__item-list">
+                          <li class="vacancy__item-item">Паспорт (для иностранных студентов + нотариально заверенный перевод)</li>
+                          <li class="vacancy__item-item">Миграционная карта (Для иностранных студентов)</li>
+                          <li class="vacancy__item-item">Виза (для иностранных студентов)</li>
+                          <li class="vacancy__item-item">Регистрация (для иностранных студентов)</li>
+                          <li class="vacancy__item-item">СНИЛС</li>
+                          <li class="vacancy__item-item">ИНН</li>
+                          <li class="vacancy__item-item">Справка, подтверждающая обучение студента</li>
+                        </ul>
+                      </p>
+                    </div>
+                    <div class="vacancy__salary">
+                      <p class="vacancy__item-title vacancy__salary-title">Заработная плата:<span class="vacancy__salary-item">Оплата сдельная</span></p><a class="vacancy__button btn--green" href="#">Откликнуться</a>
+                    </div>
+              </div>
+            </div>
+            <div class="vacancy__section accordeon-section">
+              <p class="vacancy__section-title accordeon-title">Сотрудник службы приёма и размещения в общежитии</p>
+              <button class="vacancy-button accordeon-button"></button>
+              <div class="vacancy-container accordeon-container">
+                    <div class="vacancy__item">
+                      <p class="vacancy__item-title">Требования:</p>
+                      <ul class="vacancy__item-list">
+                        <li class="vacancy__item-item">Активная жизненная позиция и позитивный настрой</li>
+                        <li class="vacancy__item-item">Желание приобрести новый опыт работы и работать в команде профессионалов</li>
+                        <li class="vacancy__item-item">Общительность и ориентация на клиента</li>
+                        <li class="vacancy__item-item">Нацеленность на результат</li>
+                        <li class="vacancy__item-item">Знания по работе в MS Office (Word, Excel, Power Point)</li>
+                        <li class="vacancy__item-item">Готовность к разъездному характеру работы</li>
+                      </ul>
+                      <p class="vacancy__item-title">Обязанности:
+                        <ul class="vacancy__item-list">
+                          <li class="vacancy__item-item">Консультировать студентов и абитуриентов, партнеров РГСУ по продуктам Университета</li>
+                          <li class="vacancy__item-item">Проводить презентации</li>
+                          <li class="vacancy__item-item">Устанавливать долгосрочные отношения с компаниями-партнерами</li>
+                        </ul>
+                      </p>
+                      <p class="vacancy__item-title">Документы для устройства на работу:
+                        <ul class="vacancy__item-list">
+                          <li class="vacancy__item-item">Паспорт (для иностранных студентов + нотариально заверенный перевод)</li>
+                          <li class="vacancy__item-item">Миграционная карта (Для иностранных студентов)</li>
+                          <li class="vacancy__item-item">Виза (для иностранных студентов)</li>
+                          <li class="vacancy__item-item">Регистрация (для иностранных студентов)</li>
+                          <li class="vacancy__item-item">СНИЛС</li>
+                          <li class="vacancy__item-item">ИНН</li>
+                          <li class="vacancy__item-item">Справка, подтверждающая обучение студента</li>
+                        </ul>
+                      </p>
+                    </div>
+                    <div class="vacancy__salary">
+                      <p class="vacancy__item-title vacancy__salary-title">Заработная плата:<span class="vacancy__salary-item">Оплата сдельная</span></p><a class="vacancy__button btn--green" href="#">Откликнуться</a>
+                    </div>
+              </div>
+            </div>
+          </div>
+          <div class="vacancy__filter filter">
+            <div class="filter__wrapper">
+              <div class="filter__checkboxes">
+                <div class="filter__checkboxes-container">
+                  <div class="filter__checkboxes-wrapper">
+                    <label class="filter__label" for="hot">Срочная ⚡
+                      <input class="filter__checkbox" disabled="disabled" type="checkbox" id="hot" name="hot"/><span class="filter__checkbox-visible"></span>
+                    </label>
+                  </div>
+                  <div class="filter__checkboxes-wrapper">
+                    <label class="filter__label" for="study">Учебная
+                      <input class="filter__checkbox" checked="checked" type="checkbox" id="study" name="study"/><span class="filter__checkbox-visible"></span>
+                    </label>
+                  </div>
+                  <div class="filter__checkboxes-wrapper">
+                    <label class="filter__label" for="outstudy">Внеучебная
+                      <input class="filter__checkbox" type="checkbox" id="outstudy" name="outstudy"/><span class="filter__checkbox-visible"></span>
+                    </label>
+                  </div>
                 </div>
-                <div class="vacancy__salary">
-                  <p class="vacancy__item-title vacancy__salary-title">Заработная плата</p><span class="vacancy__salary-item">Оплата сдельная</span>
-                  <button class="vacancy__button btn--green"></button>
+              </div>
+              <div class="filter__faculty">
+                <h4 class="filter__title">Лаборатория</h4>
+                <select class="filter__select">
+                  <option selected="selected" disabled="disabled">-- выберите --</option>
+                  <option value="#">Радиотехнический</option>
+                  <option value="#">Физики и Химии</option>
+                  <option value="#">Искусств</option>
+                </select>
+              </div>
+              <div class="filter__education">
+                <h4 class="filter__title">Область</h4>
+                <div class="filter__education-options"><span class="filter__education-option">IT
+                    <button class="filter__education-option--delete"></button></span><span class="filter__education-option">Бухгалтерия
+                    <button class="filter__education-option--delete"></button></span></div>
+              </div>
+              <div class="filter__salary">
+                <div class="filter__title">Заработная плата</div>
+                <div class="filter__range two-range-slider js-two-range-slider">
+                  <div class="two-range-slider__output">
+                    <output class="two-range-slider__value js-two-range-slider-min-value two-range-slider__value--left"></output>
+                    <output class="two-range-slider__value js-two-range-slider-max-value two-range-slider__value--right"></output>
+                  </div>
+                  <input class="two-range-slider__input js-two-range-slider-input" type="range" min="0" max="50" value="45" step="1"/>
+                  <input class="two-range-slider__input js-two-range-slider-input" type="range" min="0" max="50" value="9" step="1"/>
                 </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

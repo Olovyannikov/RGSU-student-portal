@@ -1,6 +1,6 @@
 mixin vacancy
     .vacancy__item
-        p.vacancy__item-title Требования
+        p.vacancy__item-title Требования:
         ul.vacancy__item-list
             li.vacancy__item-item Активная жизненная позиция и позитивный настрой
             li.vacancy__item-item Желание приобрести новый опыт работы и работать в команде профессионалов
@@ -8,12 +8,12 @@ mixin vacancy
             li.vacancy__item-item Нацеленность на результат
             li.vacancy__item-item Знания по работе в MS Office (Word, Excel, Power Point)
             li.vacancy__item-item Готовность к разъездному характеру работы
-        p.vacancy__item-title Обязанности
+        p.vacancy__item-title Обязанности:
             ul.vacancy__item-list
                 li.vacancy__item-item Консультировать студентов и абитуриентов, партнеров РГСУ по продуктам Университета
                 li.vacancy__item-item Проводить презентации
                 li.vacancy__item-item Устанавливать долгосрочные отношения с компаниями-партнерами
-        p.vacancy__item-title Документы для устройства на работу
+        p.vacancy__item-title Документы для устройства на работу:
             ul.vacancy__item-list
                 li.vacancy__item-item Паспорт (для иностранных студентов + нотариально заверенный перевод)
                 li.vacancy__item-item Миграционная карта (Для иностранных студентов)
@@ -23,17 +23,77 @@ mixin vacancy
                 li.vacancy__item-item ИНН
                 li.vacancy__item-item Справка, подтверждающая обучение студента
     .vacancy__salary
-        p.vacancy__item-title.vacancy__salary-title Заработная плата
-        span.vacancy__salary-item Оплата сдельная
-        button.vacancy__button.btn--green Откликнуться
+        p.vacancy__item-title.vacancy__salary-title Заработная плата:
+            span.vacancy__salary-item Оплата сдельная
+        a(href="#").vacancy__button.btn--green Откликнуться
 
 section.vacancy
     .vacancy__container
         .vacancy__header
             h2.vacancy__title Открытые вакансии портала
             a(href="#").vacancy__question Хотите разместить вакансию?
-        .vacancy__section.accordeon-section
-            p.vacancy__section-title Агент по корпоративным продажам
-            button.vacancy-button.accordeon-button
-            .vacancy-container.accordeon-container
-                +vacancy
+        .vacancy__content
+            .vacancy__wrapper
+                .vacancy__section.accordeon-section
+                    p.vacancy__section-title.accordeon-title Агент по корпоративным продажам
+                    button.vacancy-button.accordeon-button
+                    .vacancy-container.accordeon-container
+                        +vacancy
+                .vacancy__section.accordeon-section
+                    p.vacancy__section-title.accordeon-title Делопроизводитель в архиве
+                    button.vacancy-button.accordeon-button
+                    .vacancy-container.accordeon-container
+                        +vacancy
+                .vacancy__section.accordeon-section
+                    p.vacancy__section-title.accordeon-title Сотрудник деканата
+                    button.vacancy-button.accordeon-button
+                    .vacancy-container.accordeon-container
+                        +vacancy
+                .vacancy__section.accordeon-section
+                    p.vacancy__section-title.vacancy__section-title--hot.accordeon-title Оператор контактного центра
+                    button.vacancy-button.accordeon-button
+                    .vacancy-container.accordeon-container
+                        +vacancy
+                .vacancy__section.accordeon-section
+                    p.vacancy__section-title.accordeon-title Сотрудник службы приёма и размещения в общежитии
+                    button.vacancy-button.accordeon-button
+                    .vacancy-container.accordeon-container
+                        +vacancy
+            .vacancy__filter.filter
+                .filter__wrapper
+                    .filter__checkboxes
+                        .filter__checkboxes-container
+                            .filter__checkboxes-wrapper
+                                label.filter__label( for="hot") Срочная ⚡
+                                    input.filter__checkbox(disabled type="checkbox" id="hot" name="hot")
+                                    span.filter__checkbox-visible
+                            .filter__checkboxes-wrapper
+                                label.filter__label(for="study") Учебная
+                                    input.filter__checkbox(checked type="checkbox" id="study" name="study")
+                                    span.filter__checkbox-visible
+                            .filter__checkboxes-wrapper
+                                label.filter__label(for="outstudy") Внеучебная
+                                    input.filter__checkbox(type="checkbox" id="outstudy" name="outstudy")
+                                    span.filter__checkbox-visible
+                    .filter__faculty
+                        h4.filter__title Лаборатория
+                        select.filter__select
+                            option(selected disabled) -- выберите --
+                            option(value="#") Радиотехнический
+                            option(value="#") Физики и Химии
+                            option(value="#") Искусств
+                    .filter__education
+                        h4.filter__title Область
+                        .filter__education-options
+                            span.filter__education-option IT
+                                button.filter__education-option--delete
+                            span.filter__education-option Бухгалтерия
+                                button.filter__education-option--delete
+                    .filter__salary
+                        .filter__title Заработная плата
+                        .filter__range.two-range-slider.js-two-range-slider
+                            .two-range-slider__output
+                                output.two-range-slider__value.js-two-range-slider-min-value.two-range-slider__value--left
+                                output.two-range-slider__value.js-two-range-slider-max-value.two-range-slider__value--right
+                            input.two-range-slider__input.js-two-range-slider-input(type='range' min='0' max='50' value='45' step='1')
+                            input.two-range-slider__input.js-two-range-slider-input(type='range' min='0' max='50' value='9' step='1')

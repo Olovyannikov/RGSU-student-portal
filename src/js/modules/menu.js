@@ -67,6 +67,8 @@ document.body.addEventListener(
 
     if (key == 27) {
       document.querySelector(".modal").classList.remove("modal--active");
+
+      document.querySelector(".overlay").classList.remove("active");
       document
         .querySelector(".js-header")
         .classList.remove("page-header--menu-opened");

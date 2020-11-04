@@ -72,6 +72,17 @@
   padding: 11px 30px;
 }
 
+.btn--green {
+  @include btn-reset;
+  background: $c-green;
+  box-sizing: border-box;
+  border-radius: 4px;
+  color: $c-light;
+  padding: 8px 30px;
+  display: flex;
+  align-items: center;
+}
+
 .accordeon-button {
   @include btn-reset;
   position: absolute;

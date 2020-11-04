@@ -1,0 +1,8 @@
+mixin news-card(date, title, img, isHot='')
+    .news__card-block
+        a(class="block__content " + isHot href="#")
+            p.news__item-date #{date}
+            h3.news__item-title #{title}
+            picture.news__picture
+                source(srcset="img/" + img + ".webp" type="image/webp")
+                img(src="img/" + img + ".png")

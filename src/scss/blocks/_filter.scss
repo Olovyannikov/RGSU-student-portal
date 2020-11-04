@@ -20,6 +20,8 @@
 .filter__checkboxes-container {
   width: 100%;
   overflow-y: hidden;
+  padding-top: 23px;
+  padding-bottom: 23px;
 }
 
 .filter__checkboxes-scroll {
@@ -120,21 +122,26 @@
   font-weight: normal;
   font-size: 16px;
   line-height: 26px;
-  color: #C3CAD6;
+  color: #444;
   appearance: none;
   position: relative;
   background: url("../img/icons/icons.svg#vector") no-repeat 95% center;
   background-size: 11px;
+
 }
 
-.filter__select > option {
-  color: #444;
+.filter__select > option[disabled] {
+  color: #C3CAD6;
+  &:first-of-type {
+    color: #C3CAD6;
+  }
 }
+
 
 .filter__education {
   @include aside-divider;
   @include title-aside;
-  min-height: 176px;
+  padding-bottom: 34px;
 }
 
 .filter__education-options {
@@ -187,6 +194,11 @@
 }
 
 .filter__salary {
+  @include aside-divider;
+  @include title-aside;
+}
+
+.filter__archive {
   @include aside-divider;
   @include title-aside;
 }

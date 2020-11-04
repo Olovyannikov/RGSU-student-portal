@@ -1,0 +1,75 @@
+main.main
+    .student-news
+        .student-news__header
+            h2.student-news__title Студенческие новости
+            span.student-news__counter 54
+        .student-news__content
+            .student-news__container
+                +news-card('1 сентября', 'Студенческая весна. приглашаем на еженедельные онлайн-встречи!' , 'studyear')
+                +news-card('1 сентября', 'Студенческая весна. приглашаем на еженедельные онлайн-встречи!' , 'studyspring', 'block__content--hot')
+                +news-card('1 сентября', 'Студенческая весна. приглашаем на еженедельные онлайн-встречи!' , 'studyear')
+                +news-card('1 сентября', 'Студенческая весна. приглашаем на еженедельные онлайн-встречи!' , 'studyspring')
+                +news-card('1 сентября', 'Студенческая весна. приглашаем на еженедельные онлайн-встречи!' , 'studyear')
+                +news-card('1 сентября', 'Студенческая весна. приглашаем на еженедельные онлайн-встречи!' , 'studyspring')
+                +news-card('1 сентября', 'Студенческая весна. приглашаем на еженедельные онлайн-встречи!' , 'studyear')
+                +news-card('1 сентября', 'Студенческая весна. приглашаем на еженедельные онлайн-встречи!' , 'studyspring')
+
+                .student-news__pagination.pagination
+                    .pagination__wrapper
+                        span.pagination__button.pagination__button--back
+                            a(href="#").pagination__link.pagination__link--back Назад
+                        ul.pagination__list
+                            li.pagination__item.pagination__item--active
+                                a(href="#").pagination__link.pagination__link--active 1
+                            li.pagination__item
+                                a(href="#").pagination__link 2
+                            li.pagination__item
+                                a(href="#").pagination__link 3
+                            li.pagination__item
+                                a(href="#").pagination__link 4
+                            li.pagination__item
+                                a(href="#").pagination__link 5
+                            li.pagination__item
+                                a(href="#").pagination__link 6
+                            li.pagination__item
+                                a(href="#").pagination__link 7
+                            li.pagination__item
+                                a(href="#").pagination__link 8
+                        span.pagination__button.pagination__button--forward
+                            a(href="#").pagination__link.pagination__link--forward Вперед
+
+            .student-news__filter.filter
+                .filter__wrapper
+                    .filter__checkboxes
+                        .filter__checkboxes-container
+                            .filter__checkboxes-wrapper
+                                label.filter__label( for="social-activity") Общественная деятельность
+                                    input.filter__checkbox(disabled type="checkbox" id="social-activity" name="social-activity")
+                                    span.filter__checkbox-visible
+                            .filter__checkboxes-wrapper
+                                label.filter__label(for="sport-actions") Спортивные мероприятия
+                                    input.filter__checkbox(checked type="checkbox" id="sport-actions" name="sport-actions")
+                                    span.filter__checkbox-visible
+                            .filter__checkboxes-wrapper
+                                label.filter__label(for="art-activity") Культурно-творческая деятельность
+                                    input.filter__checkbox(type="checkbox" id="art-activity" name="art-activity")
+                                    span.filter__checkbox-visible
+                    .filter__faculty
+                        h4.filter__title Факультет
+                        select.filter__select
+                            option(selected disabled) -- выберите --
+                            option(value="#") Радиотехнический
+                            option(value="#") Физики и Химии
+                            option(value="#") Искусств
+                    .filter__archive
+                        h4.filter__title Архив
+                        select.filter__select
+                            option(selected) 2020 год
+                            option(value="#") 2019 год
+                            option(value="#") 2018 год
+                            option(value="#") 2017 год
+                        select.filter__select
+                            option(selected) Сентябрь
+                            option(value="#") Октябрь
+                            option(value="#") Ноябрь
+                            option(value="#") Декабрь

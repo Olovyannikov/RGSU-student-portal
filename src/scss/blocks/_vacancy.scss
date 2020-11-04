@@ -2,6 +2,11 @@
   @include container;
 }
 
+.vacancy__content {
+  display: flex;
+  justify-content: space-between;
+}
+
 .vacancy__header {
   display: flex;
   justify-content: space-between;
@@ -11,6 +16,8 @@
 .vacancy__title {
   @include title-main;
 }
+
+
 
 .vacancy__question {
   font-size: rem-calc(14);
@@ -28,10 +35,19 @@
   @include block-title;
   padding: 17px 0 17px 20px;
   margin-right: 0;
+  &--hot {
+    color: $c-red;
+    &::before {
+      content: '⚡';
+      padding-right: 11px;
+    }
+  }
 }
 
 .vacancy-button {
-  top: 25px;
+  .accordeon-section--active &{
+    top: 30px;
+  }
 }
 
 .vacancy-container {
@@ -46,16 +62,13 @@
   font-size: rem-calc(18);
   line-height: 22px;
   color: #444;
-  &::after {
-    content: ':';
-  }
+  margin: 0 0 15px;
 }
 
 .vacancy__item-list {
   @include list-reset;
   margin-top: 15px;
   margin-bottom: 23px;
-
 }
 
 .vacancy__item-item {
@@ -79,6 +92,10 @@
 .vacancy__salary {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 25px;
+  padding-top: 27px;
+  padding-right: 28px;
+  border-top: 1px solid #E4ECFA;
 }
 
 
@@ -91,4 +108,8 @@
 
 .vacancy__salary-title {
   margin-bottom: 2px;
+}
+
+.vacancy__wrapper {
+  width: 1006px;
 }
