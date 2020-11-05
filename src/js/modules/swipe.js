@@ -38,7 +38,7 @@ export default () => {
         }
     });
 
-    let services = new Swiper('.services__container', {
+    let services = new Swiper('.services__slider', {
         slidesPerView: 'auto',
         spaceBetween: 12,
         pagination: {

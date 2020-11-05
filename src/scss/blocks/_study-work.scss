@@ -23,10 +23,6 @@
   @include headerBlock;
 }
 
-.activity-work__title {
-  @include extra-title;
-}
-
 .activity-work__progress {
   display: flex;
   align-items: center;
@@ -42,6 +38,8 @@
   margin-bottom: 32px;
   position: relative;
   cursor: pointer;
+  align-items: center;
+  width: 100%;
 }
 
 .activity-work__section-title {
@@ -69,8 +67,3 @@
   margin-left: 12px;
 }
 
-.activity-work__section-button {
-  position: relative;
-  top: 30px;
-  display: block;
-}

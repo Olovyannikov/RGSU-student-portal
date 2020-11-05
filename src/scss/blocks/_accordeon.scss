@@ -9,6 +9,12 @@
   }
 }
 
+.accordeon-title {
+  align-items: center;
+  display: flex;
+  width: 100%;
+}
+
 .accordeon-section {
   margin-bottom: 32px;
 }
@@ -19,5 +25,45 @@
   }
   to {
     height: 400px;
+  }
+}
+
+.accordeon-button {
+  @include btn-reset;
+  width: 31px;
+  height: 31px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 17px;
+  position: relative;
+  transition: 0.2s;
+  margin-left: auto;
+  &::after,
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 17px;
+    height: 1px;
+    background-color: $c-darkgrey;
+  }
+  &::before {
+    transform: rotate(90deg);
+  }
+  &--active {
+    background-color: $c-blue;
+    border-radius: 50%;
+    width: 31px;
+    height: 31px;
+    margin-right: 23px;
+    transform: rotate(45deg);
+    &::after,
+    &::before {
+      background-color: $c-light;
+      left: 7px;
+    }
+    &::before {
+    }
   }
 }

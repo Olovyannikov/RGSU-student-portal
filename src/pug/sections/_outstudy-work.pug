@@ -57,40 +57,36 @@ mixin table
                 td.table-scroll__cell: a(href="#") Открыть
 
 section.activity-work
-    .activity-work__header
-        h2.activity-work__title Внеучебная деятельность
-        span.divider
-        .activity-work__progress
-            .progress
-                .progress-bar(data-progress='74')
-            .progress-info
-    .activity-work__container
-        .activity-work__section.accordeon-section
-            p.activity-work__section-title.accordeon-title Членство в общественных организациях
-                span.activity-work__section-count 4
-            button.activity-work__section-button.accordeon-button
-            .activity-work__table-container.accordeon-container
-                +table
-
-    .activity-work__container
-        .activity-work__section
-            p.activity-work__section-title.accordeon-title Спортивные достижения
-                span.activity-work__section-count 2
-            button.activity-work__section-button.accordeon-button
-            .activity-work__table-container.accordeon-container
-                +table
-
-    .activity-work__container
-        .activity-work__section
-            p.activity-work__section-title.accordeon-title  Участие в творческих коллективах
-                span.activity-work__section-count 2
-            button.activity-work__section-button.accordeon-button
-            .activity-work__table-container.accordeon-container
-                +table
-    .activity-work__container
-        .activity-work__section
-            p.activity-work__section-title.accordeon-title Творческие достижения
-                span.activity-work__section-count 2
-            button.activity-work__section-button.accordeon-button
-            .activity-work__table-container.accordeon-container
-                +table
+    .activity-work__container.container
+        .activity-work__header
+            h2.activity-work__title.title--s Внеучебная деятельность
+            span.divider
+            .activity-work__progress
+                .progress
+                    .progress-bar(data-progress='74')
+                .progress-info
+        .activity-work__wrapper
+            .activity-work__section.accordeon-section
+                p.activity-work__section-title.accordeon-title Членство в общественных организациях
+                    span.activity-work__section-count 4
+                    button.activity-work__section-button.accordeon-button
+                .activity-work__table-container.accordeon-container
+                    +table
+            .activity-work__section
+                p.activity-work__section-title.accordeon-title Спортивные достижения
+                    span.activity-work__section-count 2
+                    button.activity-work__section-button.accordeon-button
+                .activity-work__table-container.accordeon-container
+                    +table
+            .activity-work__section
+                p.activity-work__section-title.accordeon-title  Участие в творческих коллективах
+                    span.activity-work__section-count 2
+                    button.activity-work__section-button.accordeon-button
+                .activity-work__table-container.accordeon-container
+                    +table
+            .activity-work__section
+                p.activity-work__section-title.accordeon-title Творческие достижения
+                    span.activity-work__section-count 2
+                    button.activity-work__section-button.accordeon-button
+                .activity-work__table-container.accordeon-container
+                    +table

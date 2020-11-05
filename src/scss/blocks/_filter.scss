@@ -112,7 +112,7 @@
 }
 
 .filter__faculty {
-  @include title-aside;
+  @extend .filter__checkboxes;
 }
 .filter__select {
   width: 266px;
@@ -138,7 +138,6 @@
     color: #C3CAD6;
   }
 }
-
 
 .filter__education {
   @extend .filter__checkboxes;

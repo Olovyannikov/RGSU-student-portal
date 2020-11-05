@@ -26,7 +26,7 @@ progressbar();
 accordeon();
 
 //extra-info
-if (document.querySelector(".extra-info") == true) {
+if (document.querySelector(".extra-info")) {
   document.querySelector(".extra-info__button").onclick = function () {
     document
       .querySelector(".extra-info__wrapper")
