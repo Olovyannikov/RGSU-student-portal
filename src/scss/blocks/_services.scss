@@ -21,11 +21,12 @@
 }
 
 .service {
-  @include card;
   display: flex;
   flex-wrap: wrap;
   padding: 22px 0;
   overflow: hidden;
+  width: 100%;
+  background-color: #fff;
 }
 .service__name {
   font-style: normal;

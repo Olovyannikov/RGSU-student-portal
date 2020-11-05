@@ -3,31 +3,8 @@
 }
 
 .classmates__wrapper {
-  @include card;
   height: 271px;
   flex-direction: column;
-  &::before {
-    content: "";
-    position: absolute;
-    width: calc(100% - 40px);
-    height: 100%;
-    top: -20px;
-    left: 20px;
-    background: rgba(255, 255, 255, 0.6);
-    border-radius: 4px;
-    z-index: -1;
-  }
-  &::after {
-    content: "";
-    position: absolute;
-    width: calc(100% - 20px);
-    height: 100%;
-    top: -10px;
-    left: 10px;
-    background: rgba(255, 255, 255, 0.8);
-    border-radius: 4px;
-    z-index: -1;
-  }
 }
 
 .classmates__title {
@@ -42,6 +19,7 @@
   flex-direction: column;
   display: flex;
   align-items: center;
+  position: relative;
   &::before {
     content:"";
     position: absolute;
@@ -52,11 +30,11 @@
   }
   @media (min-width: $tablet) {
     display: flex;
-    width: 60%;
     justify-content: space-around;
     flex-wrap: wrap;
     margin: 0 auto;
     overflow: hidden;
+    width: 100%;
   }
 }
 

@@ -229,7 +229,6 @@
   @include btn-reset;
   width: 27px;
   height: 69px;
-  background: url("../img/icons/icons.svg#key") no-repeat center;
   background-size: cover;
   position: relative;
   display: flex;
@@ -244,6 +243,9 @@
     right: 0;
     animation: slideRight 0.5s;
     position: absolute;
+    @media (min-width: $tablet) {
+      background: #1740aa;
+    }
     &::before,
     &::after {
       transition: 0.5s;
@@ -262,8 +264,7 @@
   }
   @media (min-width: $tablet) {
     .page-header--menu-opened & {
-      position: static;
-
+      position: relative;
       border-radius: 50px;
       font-size: 14px;
       line-height: 16px;
@@ -271,13 +272,20 @@
       width: 199px;
       height: 42px;
       animation: none;
-      background: #1740aa url("../img/icons/icons.svg#key") no-repeat 24px 12px;
       background-size: 20px;
       &::before, &::after {
         all: unset;
       }
     }
   }
+}
+
+.page-header__toggler--icon {
+  fill: $c-light;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: 24px;
 }
 
 @keyframes slideRight {
@@ -323,14 +331,20 @@
     position: absolute;
     width: 20px;
     height: 20px;
-    background: url("../img/icons/icons.svg#key") no-repeat center;
-    background-size: cover
+    background-size: cover;
   }
-  .page-header--menu-opened & {
-    &::before {
-      background-image: none;
+    .page-header--menu-opened & {
+      .page-header__toggler--icon {
+        display: none;
+        @media (min-width: $tablet) {
+          top: 50%;
+          transform: translateY(-45%);
+          display: block;
+        }
+      }
+
+      box-shadow: none;
     }
-  }
 
   @media (min-width: $tablet) {
     border-radius: 50px;
@@ -342,7 +356,6 @@
     height: 42px;
     &:hover,
     &:focus {
-      box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
     }
     &::before {
       left: 24px;;

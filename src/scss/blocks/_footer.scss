@@ -1,11 +1,13 @@
 .footer {
   background: #6E7781;
   margin-top: rem-calc(41);
+  hr {
+    border-bottom: 1px solid #6F7D8B;
+    margin: 0;
+  }
 }
 
 .footer__container {
-  @include container;
-  border-bottom: 1px solid #6F7D8B;
   border-radius: 0;
   padding-top: 45px;
   display: flex;
@@ -60,10 +62,6 @@
   color: $c-light;
 }
 
-.footer__message-link {
-  color: $c-light;ottom: 39px;
-}
-
 .footer__schedule {
   font-style: normal;
   font-weight: normal;
@@ -71,11 +69,12 @@
   line-height: rem-calc(28);
   color: #FFFFFF;
   @media (min-width: $tablet) {
-    margin-bottom: 28px;
+    margin-bottom: 34px;
   }
 }
 
 .footer__message-link {
+  color: $c-light;
   &--mail {
     text-align: center;
     font-size: 16px;
@@ -85,16 +84,10 @@
     border-radius: 4px;
     color: #C3CAD6;
     position: relative;
-    &::before {
-      content: '';
+    svg {
       position: absolute;
-      display: block;
-      background: url("../img/icons/icons.svg#email") no-repeat center;
-      background-size: cover;
-      width: 23px;
-      height: 17px;
       left: 18px;
-      top: 15px;
+      top: 12px;
     }
   }
 }

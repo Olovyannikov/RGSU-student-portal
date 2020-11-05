@@ -50,7 +50,7 @@ export default () => {
             prevEl: '.swiper-button-prev',
         },
     });
-    let faq = new Swiper('.faq__container', {
+    let faq = new Swiper('.faq__slider', {
         slidesPerView: 'auto',
         spaceBetween: 12,
         pagination: {

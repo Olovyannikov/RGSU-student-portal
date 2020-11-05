@@ -1,5 +1,4 @@
 .modal {
-  @include card;
   background: #fff;
   z-index: 999;
   position: fixed;
@@ -120,7 +119,7 @@
   width: 46px;
   height: 46px;
   border-radius: 50%;
-  background: #2BC584 url("../img/icons/icons.svg#sber") no-repeat center;
+  background: #2BC584 url("../img/sber.svg") no-repeat center;
   background-size: 50%;
   border: 1px solid #2BC584;
   box-sizing: border-box;

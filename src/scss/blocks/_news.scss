@@ -19,6 +19,8 @@
   margin-bottom: 30px;
   @media (min-width: $tablet) {
     margin-bottom: 0;
+    display: flex;
+    justify-content: space-between;
   }
 }
 

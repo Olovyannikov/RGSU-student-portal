@@ -1,9 +1,4 @@
-.profile__container {
-  @include container;
-}
-
 .profile__title {
-  @include title-main;
   padding-bottom: 43px;
 }
 
@@ -14,7 +9,6 @@
 
 .profile__main {
   background: #fff;
-  @include card;
   padding: 16px 0 0 21px;
   width: 660px;
   height: 247px;

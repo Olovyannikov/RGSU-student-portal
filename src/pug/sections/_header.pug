@@ -23,16 +23,18 @@ header.page-header.js-header
 
         .page-header__login
             button.page-header__login-button.js-menu-toggler.page-header__toggler Войти на портал
+                svg.page-header__toggler--icon(width="20" height="20" fill="#FFF")
+                    use(xlink:href="#key")
             .login
                 .login__navigation
                     ul.login__navigation-list
                         li.login__navigation-item
                             a.js-menu-link.js-menu-login(href="#") Мой профиль
                         li.login__navigation-item
-                            a.js-menu-link(href="#") Модерирование
+                            a.js-menu-link(href="moderate.html") Модерирование
                         li.login__navigation-item.login__navigation--exit
                             a.js-menu-link.page-header__menu-link--exit(href="#") Завершить сеанс
-                .login__modal.modal
+                .login__modal.modal.card--stack
                     button.modal__close.js-close-button Закрыть
                     h3.modal__title Вход на сайт
                     form.modal__form

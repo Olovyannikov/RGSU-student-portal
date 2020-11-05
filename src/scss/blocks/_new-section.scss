@@ -1,0 +1,143 @@
+.new-section__header {
+  @include headerBlock;
+  justify-content: space-between;
+}
+
+.new-section__title {
+  padding-bottom: 23px;
+}
+
+.new-section__link {
+  display: block;font-size: rem-calc(14);
+  line-height: 16px;
+  color: $c-darkgrey;
+  position: relative;
+  padding-left: 10px;
+  &::before {
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    background: url("../img/icons/icons.svg#arrow");
+    background-size: cover;
+    left: -24px;
+    display: block;
+    top: -25%;
+  }
+}
+
+.new-section__hero {
+  position: relative;
+  margin-bottom: 54px;
+}
+
+.new-section__content {
+  @media (min-width: $tablet) {
+    width: 1120px;
+    margin: 0 auto 42px;
+  }
+}
+
+.new-section__picture {
+  width: 100%;
+  height: 100%;
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background: linear-gradient(
+      180deg,
+      rgba(68, 68, 68, 0) 0%,
+      rgba(0, 0, 0, 0.4) 100%
+    );
+  }
+  img {
+    border-radius: 4px;
+    position: relative;
+  }
+}
+
+.new-item__title {
+  position: absolute;
+  top: 61px;
+  left: 239px;
+  width: 430px;
+  margin: 0;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 39px;
+  color: #ffffff;
+}
+
+.new-item__date {
+  position: absolute;
+  top: 61px;
+  left: 115px;
+  font-size: 14px;
+  line-height: 26px;
+  color: #ffffff;
+}
+
+.new-item__date-day {
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 39px;
+  color: $c-light;
+  display: block;
+}
+
+.new-item__date-month {
+  &::after {
+    content: " ";
+  }
+}
+
+.new-item__tags {
+  @include list-reset;
+  position: absolute;
+  bottom: 53px;
+  left: 242px;
+  display: flex;
+}
+
+.new-item__tags-item {
+  margin-right: 11px;
+  font-size: 14px;
+  line-height: 26px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 2px;
+  padding: 3px 12px;
+  a {
+    color: $c-light;
+    text-align: center;
+  }
+}
+
+.new-section__content-announce {
+  margin: 0;
+  font-size: 18px;
+  line-height: 32px;
+  padding: 29px 28px;
+  color: #444444;
+  border-bottom: 2px solid $c-grey;
+}
+
+.new-section__content-main {
+  padding: 25px 28px;
+  p {
+    font-size: 16px;
+    line-height: 26px;
+    color: #6E7781
+  }
+}
+
+.new-section__other-news {
+  @media (min-width: $tablet) {
+    width: 1120px;
+    margin: 0 auto;
+  }
+}

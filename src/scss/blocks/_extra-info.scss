@@ -45,7 +45,6 @@
 }
 
 .extra-info__card {
-  @include card;
   width: 430px;
   max-height: 246px;
   overflow-y: hidden;

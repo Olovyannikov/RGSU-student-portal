@@ -1,38 +1,48 @@
 section.faq
-    .faq__container.swiper-container
+    .faq__container.container
         .faq__header
-            h2.faq__titile Частые вопросы
-            span.divider
-        .swiper-wrapper.faq__wrapper
-            // Slides
-            .swiper-slide.faq__slide
-                .faq__block
-                    .block__content.block__content--main
-                        h3.block__title Учеба
-                        ul.block__list
-                            li.block__item Когда и как мы начнем учиться?
-                            li.block__item Как будет обеспечиваться безопасность студентов и сотрудников университета?
-                            li.block__item Где можно ознакомиться с расписанием занятий?
-                            li.block__item Если я поступил на 1 курс РГСУ?
-            .swiper-slide.faq__slide
-                .faq__block
-                    .block__content.block__content--main
-                        h3.block__title Работа
-                        ul.block__list
-                            li.block__item Когда и как мы начнем работать?
-                            li.block__item Как будет обеспечиваться безопасность студентов и сотрудников университета?
-                            li.block__item Где можно ознакомиться с расписанием работы?
-                            li.block__item Если я устроился в РГСУ?
-            .swiper-slide.faq__slide
-                .faq__block
-                    .block__content.block__content--main
-                        h3.block__title Еда
-                        ul.block__list
-                            li.block__item Когда и как мы начнем обедать?
-                            li.block__item Как будет обеспечиваться безопасность студентов и сотрудников университета?
-                            li.block__item Где можно ознакомиться с расписанием обедов?
-                            li.block__item Если я пошел на обед?
-        .faq__buttons
-            .swiper-button-prev
-            .swiper-pagination
-            .swiper-button-next
+            h2.faq__title.title--large Вопросы и ответы
+            button.btn.btn--light.faq__button.faq__button--helper Спросить помощника РГСУ
+                svg.faq__button-icon(width="24" height="24" fill="#3464E0")
+                    use(xlink:href="#robot")
+            button.btn.btn--light.faq__button.faq__button--question Задать вопрос
+        .faq__content
+            .faq__wrapper
+                input.faq__search(type="search" placeholder="Умный поиск")
+                h3.faq__subtitle.title--main Популярные вопросы
+                .faq__questions.question
+                    .question__item.accordeon-section
+                        p.question__item-title.accordeon-title Владение иностранными языками
+                            button.question__item-button.accordeon-button
+                        .question__item-content.accordeon-container
+                            img(src="https://pelikanprint.ru/storage/431/kond.jpg" "#{var}")
+            .faq__filter.filter
+                .filter__wrapper
+                    .filter__checkboxes
+                        .filter__checkboxes-container
+                            .filter__checkboxes-wrapper
+                                label.filter__label( for="studying") Учеба
+                                    input.filter__checkbox(disabled type="checkbox" id="studying" name="studying")
+                                    span.filter__checkbox-visible
+                            .filter__checkboxes-wrapper
+                                label.filter__label(for="food") Питание
+                                    input.filter__checkbox(checked type="checkbox" id="food" name="food")
+                                    span.filter__checkbox-visible
+                            .filter__checkboxes-wrapper
+                                label.filter__label(for="special") Covid-19
+                                    input.filter__checkbox(type="checkbox" id="special" name="special")
+                                    span.filter__checkbox-visible
+                    .filter__faculty
+                        h4.filter__title Факультет
+                        select.filter__select
+                            option(selected disabled) -- выберите --
+                            option(value="#") Радиотехнический
+                            option(value="#") Физики и Химии
+                            option(value="#") Искусств
+                    .filter__education
+                        h4.filter__title Уровень образования
+                        .filter__education-options
+                            span.filter__education-option IT
+                                button.filter__education-option--delete
+                            span.filter__education-option COVID-19
+                                button.filter__education-option--delete

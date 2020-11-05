@@ -99,6 +99,7 @@ export default () => {
         let htmlBar = "";
 
         htmlBar += '<div class="cookieShell">';
+        htmlBar += '<svg width="54" height="54" class="cookieIcon" fill="#3464E0"> <use xlink:href="#cookie-icon"></use></svg>'
         htmlBar += '<form action="#" method="post">';
         htmlBar +=
           "<p>Мы используем файлы cookie. <br> С их помощью мы позаботимся о вас, улучшая работу этого сайта.</p>";

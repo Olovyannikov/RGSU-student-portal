@@ -1,21 +1,45 @@
-.faq {
-  @include container;
-}
-
-.faq__container {
-}
-
 .faq__header {
   @include headerBlock;
   margin-bottom: 35px;
 }
 
-.faq__titile {
-  @include block-title;
+.faq__title {
+  margin-right: auto;
+  width: 100%;
+  color: $c-black;
+}
+
+.faq__button {
+  position: relative;
+  &--helper {
+    padding-left: 48px;
+    padding-right: 19px;
+    margin-right: 19px;
+  }
+  &--question {
+    padding-left: 28px;
+    padding-right: 28px;
+  }
+}
+
+.faq__button-icon {
+  position: absolute;
+  left: 17px;
+  top: 6px;
+  width: 24px;
+  height: 24px;
+  fill: #3464E0;
+  .faq__button--helper:hover & {
+    fill: $c-light;
+  }
 }
 
 .faq__buttons {
   @include swiperCenter;
+}
+
+.faq__slider {
+  width: 1005px;
 }
 
 .faq__slide {
@@ -23,7 +47,7 @@
   font-weight: normal;
   font-size: 16px;
   line-height: 24px;
-  color: #6E7781;
+  color: #6e7781;
   width: 100%;
   background-color: #fff;
   padding-left: 23px;
@@ -33,4 +57,22 @@
 
 .faq__block {
   min-height: 416px;
+}
+
+.faq__content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.faq__wrapper {
+  @media (min-width: $tablet) {
+    width: 1005px;
+  }
+}
+
+.faq__subtitle {
+  padding-bottom: 7px;
+  border-bottom: 1px solid #E4ECFA;
+  width: 100%;
+  margin-bottom: 25px;
 }

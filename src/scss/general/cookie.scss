@@ -90,15 +90,15 @@
 
 .cookieShell {
   position: relative;
-  &::before {
-    content: "";
-    position: absolute;
-    left: 17px;
-    width: 54px;
-    height: 54px;
-    display: block;
-    background: url("../img/icons/icons.svg#cookie-icon");
-  }
+}
+
+.cookieIcon {
+  position: absolute;
+  width: 54px;
+  height: 54px;
+  content: '';
+  left: 17px;
+  top: 0;
 }
 
 @media (max-width: $tablet) {

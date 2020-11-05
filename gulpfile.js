@@ -14,7 +14,7 @@ let path = {
 		pug: [source_folder + '/pug/pages/*.pug', "!" + source_folder + '/**/_*.pug'],
 		css: source_folder + '/scss/style.scss',
 		js: source_folder + '/js/script.js',
-		img: source_folder + '/img/**/*.{png,jpeg,jpg,gif,ico,webp}',
+		img: source_folder + '/img/**/*.{png,jpeg,jpg,gif,ico,webp,svg}',
 		fonts: source_folder + '/fonts/*.{woff,woff2,ttf,svg}',
 	},
 	watch: {
@@ -43,6 +43,8 @@ let { src, dest } = require('gulp'),
 	webp = require('gulp-webp'),
 	svgSprite = require('gulp-svg-sprite'),
 	svgmin = require('gulp-svgmin'),
+	cheerio = require('gulp-cheerio'),
+	svgClean = require('gulp-cheerio-clean-svg'),
 	ttf2woff = require('gulp-ttf2woff'),
 	ttf2woff2 = require('gulp-ttf2woff2'),
 	pug = require('gulp-pug'),
@@ -183,6 +185,25 @@ function fonts() {
 
 function svgsprite() {
 	return gulp.src([source_folder + '/img/icons/*.svg'])
+		.pipe(
+			cheerio(svgClean({
+				removeSketchType: true,
+				removeEmptyGroup: true,
+				removeEmptyDefs: true,
+				removeEmptyLines: true,
+				removeComments: true,
+				tags: [
+					'title',
+					'desc',
+				],
+				attributes: [
+					'style',
+					'fill',
+					'clip*',
+					'stroke*'
+				],
+			}))
+		)
 		.pipe(
 			svgmin({
 				cleanupListOfValues: true,
