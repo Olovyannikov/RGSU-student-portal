@@ -1,14 +1,13 @@
 
 
 .filter__title {
-  @include title-aside;
   span {
     color: rgb(210, 215, 224);
   }
 }
 
 .filter__age {
-  @include aside-divider;
+  @extend .filter__checkboxes
 }
 
 .filter__checkboxes {
@@ -129,7 +128,6 @@
   position: relative;
   background: url("../img/icons/icons.svg#vector") no-repeat 95% center;
   background-size: 11px;
-
 }
 
 .filter__select > option[disabled] {
@@ -141,7 +139,6 @@
 
 .filter__education {
   @extend .filter__checkboxes;
-  @include title-aside;
   padding-bottom: 34px;
 }
 
@@ -176,7 +173,7 @@
     width: 28px;
     height: 30px;
     background: #ABB3C1;
-    border-radius: 3px 0px 0px 3px;
+    border-radius: 3px 0 0 3px;
     &::before, &::after {
       content: '';
       position: absolute;
@@ -195,11 +192,9 @@
 }
 
 .filter__salary {
-  @include aside-divider;
-  @include title-aside;
+  @extend .filter__checkboxes
 }
 
 .filter__archive {
-  @include aside-divider;
-  @include title-aside;
+  @extend .filter__checkboxes
 }

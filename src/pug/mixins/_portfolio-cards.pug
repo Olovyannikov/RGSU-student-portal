@@ -1,4 +1,4 @@
-mixin portfolio-card(imgWebp, img, username, faculty, education, age, course, progress)
+mixin portfolio-card(imgWebp, img, username, faculty, education, age, course, progress, href='#')
     article.portfolio-cards.card
         .card__progress
             .progress--circle(data-progress=progress)
@@ -12,5 +12,4 @@ mixin portfolio-card(imgWebp, img, username, faculty, education, age, course, pr
             span.card__info-age Возраст: #{age}
             span.card__info-course #{course} курс
         .card__achievements.achievements
-            ul.achievements__list
-                block
+            block

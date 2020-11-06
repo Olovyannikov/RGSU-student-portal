@@ -8,17 +8,99 @@ section.faq
             button.btn.btn--light.faq__button.faq__button--question Задать вопрос
         .faq__content
             .faq__wrapper
-                input.faq__search(type="search" placeholder="Умный поиск")
-                h3.faq__subtitle.title--main Популярные вопросы
+                .faq__search-container
+                    input.faq__search(type="search" placeholder="Умный поиск")
+                    button.faq__search-button Найти
+                        svg(width="32" height="33").faq__search-icon
+                            use(xlink:href="#search")
+                h3.faq__subtitle.title--xs Популярные вопросы
                 .faq__questions.question
                     .question__item.accordeon-section
-                        p.question__item-title.accordeon-title Владение иностранными языками
+                        p.question__item-title.accordeon-title.title--xs Когда и как мы начнем учиться?
+                            button.question__item-button.accordeon-button
+                        .question__item-content.accordeon-container
+                            p Мы начинаем учебный год 1 сентября согласно утвержденным учебным планам.
+                            p Все что вам необходимо для получения знаний, будет доступно онлайн в соответствии с расписанием. Лабораторные и практические занятия, требующие физического присутствия на территории университета, поставлены в расписание после 1 ноября.
+                            p Все внеучебные мероприятия - кружки, конкурсы, секции и прочее,  будут проводится онлайн.
+                    .question__item.accordeon-section
+                        p.question__item-title.accordeon-title.title--xs Как будет обеспечиваться безопасность студентов и сотрудников университета?
                             button.question__item-button.accordeon-button
                         .question__item-content.accordeon-container
                             img(src="https://pelikanprint.ru/storage/431/kond.jpg" "#{var}")
+                    .question__item.accordeon-section
+                        p.question__item-title.accordeon-title.title--xs Если я поступил на 1 курс РГСУ?
+                            button.question__item-button.accordeon-button
+                        .question__item-content.accordeon-container
+                            img(src="https://pelikanprint.ru/storage/431/kond.jpg" "#{var}")
+                    .question__item.accordeon-section
+                        p.question__item-title.accordeon-title.title--xs Как будут проходить лабораторные, практические работы и занятия по физической культуре?
+                            button.question__item-button.accordeon-button
+                        .question__item-content.accordeon-container
+                            img(src="https://pelikanprint.ru/storage/431/kond.jpg" "#{var}")
+                    .question__item.accordeon-section
+                        p.question__item-title.accordeon-title.title--xs Смогу ли я проживать в общежитии?
+                            button.question__item-button.accordeon-button
+                        .question__item-content.accordeon-container
+                            img(src="https://pelikanprint.ru/storage/431/kond.jpg" "#{var}")
+                    .question__item.accordeon-section
+                        p.question__item-title.accordeon-title.title--xs Если я не заключу договор на общежитие до 1.11.2020, потеряю ли я свое место в общежитии?
+                            button.question__item-button.accordeon-button
+                        .question__item-content.accordeon-container
+                            img(src="https://pelikanprint.ru/storage/431/kond.jpg" "#{var}")
+                    .question__item.accordeon-section
+                        p.question__item-title.accordeon-title.title--xs Если я студент-иностранец, нужно ли мне по возвращению в Россию проходить самоизоляцию?
+                            button.question__item-button.accordeon-button
+                        .question__item-content.accordeon-container
+                            img(src="https://pelikanprint.ru/storage/431/kond.jpg" "#{var}")
+                    .question__item.accordeon-section
+                        p.question__item-title.accordeon-title.title--xs Изменится ли плата за обучение?
+                            button.question__item-button.accordeon-button
+                        .question__item-content.accordeon-container
+                            img(src="https://pelikanprint.ru/storage/431/kond.jpg" "#{var}")
+                    .question__item.accordeon-section
+                        p.question__item-title.accordeon-title.title--xs Как будут работать службы университета?
+                            button.question__item-button.accordeon-button
+                        .question__item-content.accordeon-container
+                            img(src="https://pelikanprint.ru/storage/431/kond.jpg" "#{var}")
+                    .question__item.accordeon-section
+                        p.question__item-title.accordeon-title.title--xs Как будут проходить лабораторные, практические работы и занятия по физической культуре?
+                            button.question__item-button.accordeon-button
+                        .question__item-content.accordeon-container
+                            img(src="https://pelikanprint.ru/storage/431/kond.jpg" "#{var}")
+                    .question__item.accordeon-section
+                        p.question__item-title.accordeon-title.title--xs Если я студент-иностранец, нужно ли мне по возвращению в Россию проходить самоизоляцию?
+                            button.question__item-button.accordeon-button
+                        .question__item-content.accordeon-container
+                            img(src="https://pelikanprint.ru/storage/431/kond.jpg" "#{var}")
+                    .question__item.accordeon-section
+                        p.question__item-title.accordeon-title.title--xs Если я студент-иностранец, нужно ли мне по возвращению в Россию проходить самоизоляцию?
+                            button.question__item-button.accordeon-button
+                        .question__item-content.accordeon-container
+                            img(src="https://pelikanprint.ru/storage/431/kond.jpg" "#{var}")
+                    .question__item.accordeon-section
+                        p.question__item-title.accordeon-title.title--xs Изменится ли плата за обучение?
+                            button.question__item-button.accordeon-button
+                        .question__item-content.accordeon-container
+                            img(src="https://pelikanprint.ru/storage/431/kond.jpg" "#{var}")
+                    .question__item.accordeon-section
+                        p.question__item-title.accordeon-title.title--xs Когда и как мы начнем учиться?
+                            button.question__item-button.accordeon-button
+                        .question__item-content.accordeon-container
+                            img(src="https://pelikanprint.ru/storage/431/kond.jpg" "#{var}")
+                    .question__item.accordeon-section
+                        p.question__item-title.accordeon-title.title--xs Как будут работать службы университета?
+                            button.question__item-button.accordeon-button
+                        .question__item-content.accordeon-container
+                            img(src="https://pelikanprint.ru/storage/431/kond.jpg" "#{var}")
+                    .question__item.accordeon-section
+                        p.question__item-title.accordeon-title.title--xs Как будут проходить лабораторные, практические работы и занятия по физической культуре?
+                            button.question__item-button.accordeon-button
+                        .question__item-content.accordeon-container
+                            img(src="https://pelikanprint.ru/storage/431/kond.jpg" "#{var}")
+
             .faq__filter.filter
                 .filter__wrapper
-                    .filter__checkboxes
+                    .filter__checkboxes.aside-divider
                         .filter__checkboxes-container
                             .filter__checkboxes-wrapper
                                 label.filter__label( for="studying") Учеба
@@ -33,14 +115,14 @@ section.faq
                                     input.filter__checkbox(type="checkbox" id="special" name="special")
                                     span.filter__checkbox-visible
                     .filter__faculty
-                        h4.filter__title Факультет
+                        h4.filter__title.title--aside Факультет
                         select.filter__select
                             option(selected disabled) -- выберите --
                             option(value="#") Радиотехнический
                             option(value="#") Физики и Химии
                             option(value="#") Искусств
                     .filter__education
-                        h4.filter__title Уровень образования
+                        h4.filter__title.title--aside Уровень образования
                         .filter__education-options
                             span.filter__education-option IT
                                 button.filter__education-option--delete

@@ -1,5 +1,4 @@
 .outstudy-work {
-  @include container;
 }
 
 .outstudy-work__header {
@@ -7,7 +6,6 @@
 }
 
 .outstudy-work__title {
-  @include extra-title;
 }
 
 .outstudy-work__progress {

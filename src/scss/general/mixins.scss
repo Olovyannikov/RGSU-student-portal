@@ -61,49 +61,6 @@
   transform: translate(-50%, -50%);
 }
 
-@mixin title {
-  font-style: normal;
-  font-weight: normal;
-  font-size: rem-calc(22);
-  line-height: 26px;
-  color: #C3CAD6;
-  margin: 0;
-  padding-top: 25px;
-  padding-left: 19px;
-  text-transform: uppercase;
-  @media (min-width: $tablet) {
-    font-size: rem-calc(18);
-    text-transform: unset;
-  }
-}
-
-@mixin title-main {
-  @media (min-width: $tablet) {
-    font-style: normal;
-    font-weight: normal;
-    font-size: rem-calc(26);
-    line-height: 30px;
-    color: #444444;
-  }
-}
-
-@mixin block-title {
-  font-size: rem-calc(22);
-  line-height: 26px;
-  color: $c-title;
-  font-weight: 400;
-  margin: 0 14px 0 0;
-}
-
-@mixin extra-title {
-  font-style: normal;
-  font-weight: normal;
-  font-size: 24px;
-  line-height: 28px;
-  color: #444444;
-  margin: 0 21px 0 0;
-}
-
 @mixin title-aside {
   font-style: normal;
   font-weight: 600;
@@ -140,19 +97,3 @@
   padding: 13px 28px;
 }
 
-@mixin aside-container {
-  @media (min-width: $tablet) {
-    width: 315px;
-    border-radius: 4px;
-    height: fit-content;
-  }
-}
-
-@mixin aside-divider {
-  @media (min-width: $tablet) {
-    margin-bottom: 2px;
-    background-color: #fff;
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-}

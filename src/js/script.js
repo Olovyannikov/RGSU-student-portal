@@ -10,10 +10,13 @@ import { default as avatar } from "./modules/avatar.js";
 import { default as range } from "./modules/range.js";
 import { default as progressbar } from "./modules/progressbar.js";
 import { default as accordeon } from "./modules/accordeon.js";
+import { default as extrainfo } from "./modules/extrainfo.js";
+import { default as parenttabs} from "./modules/parenttabs.js";
 
 // init modules
 menuToggle();
 advertisement();
+extrainfo();
 //slider();
 gauge();
 if (document.querySelector(".portfolio-tabs__container")) {
@@ -24,18 +27,7 @@ avatar();
 range();
 progressbar();
 accordeon();
-
-//extra-info
-if (document.querySelector(".extra-info")) {
-  document.querySelector(".extra-info__button").onclick = function () {
-    document
-      .querySelector(".extra-info__wrapper")
-      .classList.toggle("extra-info__wrapper--open");
-    document
-      .querySelector(".extra-info__button")
-      .classList.toggle("extra-info__button--active");
-  };
-}
+parenttabs();
 
 if (document.querySelector(".info__card--schedule")) {
   datetime();

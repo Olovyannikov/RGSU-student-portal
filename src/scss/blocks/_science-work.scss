@@ -1,5 +1,4 @@
 .science-work {
-  @include container;
 }
 
 .science-work__header {
@@ -7,7 +6,6 @@
 }
 
 .science-work__title {
-  @include extra-title;
 }
 
 .science-work__progress {

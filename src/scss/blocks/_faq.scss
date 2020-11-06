@@ -70,6 +70,38 @@
   }
 }
 
+.faq__search-container {
+  position: relative;
+  display: flex;
+}
+
+.faq__search {
+  font-size: 16px;
+  line-height: 26px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 19px 18px;
+  padding-right: 60px;
+  background: #FFFFFF;
+  border: 1px solid #F1F4F9;
+  box-sizing: border-box;
+  border-radius: 4px;
+  appearance: none;
+}
+
+.faq__search-button {
+  @include btn-reset;
+  position: absolute;
+  right: 18px;
+  top: 18px;
+  font-size: 0;
+}
+
+.faq__search-icon {
+  fill: $c-darkgrey;
+}
+
 .faq__subtitle {
   padding-bottom: 7px;
   border-bottom: 1px solid #E4ECFA;

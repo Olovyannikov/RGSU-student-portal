@@ -13,17 +13,16 @@
   color: $c-darkgrey;
   position: relative;
   padding-left: 10px;
-  &::before {
-    content: '';
-    position: absolute;
-    width: 24px;
-    height: 24px;
-    background: url("../img/icons/icons.svg#arrow");
-    background-size: cover;
-    left: -24px;
-    display: block;
-    top: -25%;
+  transition: .2s;
+  &:hover {
+    padding-left: 15px;
   }
+}
+
+.new-section__link-icon {
+  position: absolute;
+  left: -24px;
+  fill: $c-darkgrey;
 }
 
 .new-section__hero {

@@ -3,7 +3,7 @@ import Swiper, {Navigation, Pagination, Scrollbar} from "swiper";
 export default () => {
     Swiper.use([Navigation, Pagination, Scrollbar]);
 
-    let advertisement = new Swiper('.advertisement__container', {
+    let advertisement = new Swiper('.advertisement__slider', {
         slidesPerView: 'auto',
         spaceBetween: 30,
         pagination: {

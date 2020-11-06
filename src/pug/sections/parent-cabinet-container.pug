@@ -1,0 +1,138 @@
+mixin table
+    table.table-scroll.parent-cabinet__table
+        thead
+            tr
+                th.table-scroll__title.table-scroll__title--long Наименование учебной дисциплины
+                th.table-scroll__title Учебный год
+                th.table-scroll__title Оценка
+        tbody.body-half-screen
+            tr
+                td(colspan='4').table-scroll__divider 1 семестр
+            tr
+                td.table-scroll__cell Музыкально-исполнительские школы и концепции
+                td.table-scroll__cell 1 семестр,Осенний (1 курс)
+                td.table-scroll__cell Хорошо
+            tr
+                td.table-scroll__cell Иностранный язык
+                td.table-scroll__cell 1 семестр,Осенний (1 курс)
+                td.table-scroll__cell Зачтено
+            tr
+                td(colspan='4').table-scroll__divider 2 семестр
+            tr
+                td.table-scroll__cell Русский язык и культура речи
+                td.table-scroll__cell 1 семестр,Осенний (1 курс)
+                td.table-scroll__cell Хорошо
+            tr
+                td.table-scroll__cell Теория и история музыкального искусства
+                td.table-scroll__cell 1 семестр,Осенний (1 курс)
+                td.table-scroll__cell Зачтено
+            tr
+                td(colspan='4').table-scroll__divider 3 семестр
+            tr
+                td.table-scroll__cell Теория и история музыкального искусства
+                td.table-scroll__cell 1 семестр,Осенний (1 курс)
+                td.table-scroll__cell Зачтено
+            tr
+                td.table-scroll__cell Теория и история музыкального искусства
+                td.table-scroll__cell 1 семестр,Осенний (1 курс)
+                td.table-scroll__cell Зачтено
+            tr
+                td(colspan='4').table-scroll__divider 4 семестр
+            tr
+                td.table-scroll__cell Теория и история музыкального искусства
+                td.table-scroll__cell 1 семестр,Осенний (1 курс)
+                td.table-scroll__cell Зачтено
+            tr
+                td.table-scroll__cell Теория и история музыкального искусства
+                td.table-scroll__cell 1 семестр,Осенний (1 курс)
+                td.table-scroll__cell Зачтено
+
+mixin finance()
+    table.table-scroll.table-scroll__finance
+        thead
+            tr.table-scroll__header
+                th.table-scroll__title Ожидаемая дата по графику платежей(до)
+                th.table-scroll__title Ожидаемая сумма по графику платежей
+                th.table-scroll__title Фактически списано
+                th.table-scroll__title Долг
+        tfoot
+            tr
+                td.table-scroll__total Итого
+                td.table-scroll__sum-expect 492 850 р.
+                td.table-scroll__sum-real 492 850 р.
+                td.table-scroll__debt 0 ₽
+        tbody.body-half-screen
+            tr
+                td.table-scroll__cell 02.08.2014
+                td.table-scroll__cell 1 семестр,Осенний (1 курс)
+                td.table-scroll__cell Хорошо
+            tr
+                td.table-scroll__cell 21.01.2015
+                td.table-scroll__cell 1 семестр,Осенний (1 курс)
+                td.table-scroll__cell Зачтено
+            tr
+                td.table-scroll__cell 02.08.2014
+                td.table-scroll__cell 1 семестр,Осенний (1 курс)
+                td.table-scroll__cell Хорошо
+            tr
+                td.table-scroll__cell 31.07.2015
+                td.table-scroll__cell 1 семестр,Осенний (1 курс)
+                td.table-scroll__cell Зачтено
+            tr
+                td.table-scroll__cell 29.02.2016
+                td.table-scroll__cell 1 семестр,Осенний (1 курс)
+                td.table-scroll__cell Зачтено
+            tr
+                td.table-scroll__cell 02.08.14
+                td.table-scroll__cell 1 семестр,Осенний (1 курс)
+                td.table-scroll__cell Зачтено
+            tr
+                td.table-scroll__cell 02.08.14
+                td.table-scroll__cell 1 семестр,Осенний (1 курс)
+                td.table-scroll__cell Зачтено
+            tr
+                td.table-scroll__cell 02.08.14
+                td.table-scroll__cell 1 семестр,Осенний (1 курс)
+                td.table-scroll__cell Зачтено
+
+section.parent-cabinet
+    .parent-cabinet__container.container
+        .parent-cabinet__wrapper
+            .parent-cabinet__header
+                h2.parent-cabinet__title.title--large Кабинет родителя
+            .parent-cabinet__tabs
+                .parent-cabinet__buttons
+                    button(data-id="perfomance").parent-cabinet__button.parent-cabinet__button--active.btn.btn--light Успеваемость
+                        svg(width="36" height="36")
+                            use(href="#studentwork")
+                    button(data-id="finance").parent-cabinet__button.btn.btn--light Финансы
+                        svg(width="36" height="36")
+                            use(href="#wallet")
+                    button(data-id="schedules").parent-cabinet__button.btn.btn--light Расписание занятий
+                        svg(width="36" height="36")
+                            use(href="#schedule")
+                    button(data-id="visits").parent-cabinet__button.btn.btn--light Посещения
+                        svg(width="36" height="36")
+                            use(href="#clock")
+                include ./parent-cabinet-tabs
+
+            include ./_advertisement-content
+        aside.parent-cabinet__aside
+            h2.parent-cabinet__aside-title.title--large Ваш ребенок
+            .portfolio-cards__wrapper
+                +portfolio-card('card-avatar-1.webp', 'card-avatar-1.png', 'Мария Владимировна Н.', 'Факультет искусств', 'Педагогическое образование', '20', '2', '75', 'digital-profile.html')
+                    ul.portfolio-cards__buttons
+                        li
+                            a(href="my-children-profile.html").btn.btn--regular.portfolio-cards__button Открыть кабинет
+            section.portfolio
+                .portfolio__container.card--stack
+                    h2.portfolio__title.title Средний балл
+                    .portfolio__wrapper
+                        .portfolio__progress.gauge.gauge--score(data-width="236" data-value="3.59")
+                            span.gauge__value
+            section.portfolio
+                .portfolio__container.card--stack
+                    h2.portfolio__title.title Цифровой профиль
+                    .portfolio__wrapper
+                        .portfolio__progress.gauge(data-width="236" data-value="75")
+                            span.gauge__value

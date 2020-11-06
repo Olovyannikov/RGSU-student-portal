@@ -4,48 +4,129 @@ section.portfolio-cards
             h2.portfolio-cards__title.title--large Цифровое портфолио обучающегося
             span.portfolio-cards__counter 10 456
         .portfolio-cards__wrapper
-            +portfolio-card('card-avatar-1.webp', 'card-avatar-1.png', 'Мария Владимировна Н.', 'Факультет искусств', 'Педагогическое образование', '20', '2', '75')
-                li.achievement.achievement--handshake Достижение: Рукопожатие
-                li.achievement.achievement--cup Достижение: Кубок
-            +portfolio-card('card-avatar-2.webp', 'card-avatar-2.png', 'Анастасия Олеговна Б.', 'Факультет искусств', 'Педагогическое образование', '21', '1', '15')
-                li.achievement.achievement--cup Достижение: Кубок
-            +portfolio-card('card-avatar-3.webp', 'card-avatar-3.png', 'Родион Нугзарович К.', 'Гуманитарный Факультет', 'Политология', '22', '2', '85')
-                li.achievement.achievement--art Достижение: Искусство
-                li.achievement.achievement--cup Достижение: Кубок
-            +portfolio-card('card-avatar-4.webp', 'card-avatar-4.png', 'Мария Владимировна Н.', 'Факультет искусств', 'Педагогическое образование', '23', '3', '100')
-                li.achievement.achievement--handshake Достижение: Рукопожатие
-                li.achievement.achievement--art Достижение: Искусство
-                li.achievement.achievement--notebook Достижение: Книжка
+            a(href="digital-profile.html")
+                +portfolio-card('card-avatar-1.webp', 'card-avatar-1.png', 'Мария Владимировна Н.', 'Факультет искусств', 'Педагогическое образование', '20', '2', '75', 'digital-profile.html')
+                    ul.achievements__list
+                        li.achievement.achievement--handshake Достижение: Рукопожатие
+                            svg.achievement-icon(width="18" height="18")
+                                use(href="#handshake")
+                        li.achievement.achievement--cup Достижение: Кубок
+                            svg.achievement-icon(width="18" height="18")
+                                use(href="#trophy" )
 
-            +portfolio-card('card-avatar-5.webp', 'card-avatar-5.png', 'Мария Владимировна Н.', 'Факультет искусств', 'Педагогическое образование', '24', '4', '75')
-                li.achievement.achievement--handshake Достижение: Рукопожатие
-                li.achievement.achievement--cup Достижение: Кубок
-            +portfolio-card('card-avatar-6.webp', 'card-avatar-6.png', 'Анастасия Олеговна Б.', 'Факультет искусств', 'Педагогическое образование', '25', '5', '15')
-                li.achievement.achievement--cup Достижение: Кубок
-            +portfolio-card('card-avatar-7.webp', 'card-avatar-7.png', 'Родион Нугзарович К.', 'Факультет искусств', 'Педагогическое образование', '26', '10', '85')
-                li.achievement.achievement--art Достижение: Искусство
-                li.achievement.achievement--cup Достижение: Кубок
-            +portfolio-card('card-avatar-8.webp', 'card-avatar-8.png', 'Мария Владимировна Н.', 'Факультет искусств', 'Педагогическое образование', '27', '2', '100')
-                li.achievement.achievement--art Достижение: Искусство
+            a(href="digital-profile.html")
+                +portfolio-card('card-avatar-2.webp', 'card-avatar-2.png', 'Анастасия Олеговна Б.', 'Факультет искусств', 'Педагогическое образование', '21', '1', '15',  'digital-profile.html')
+                    ul.achievements__list
+                        li.achievement.achievement--cup Достижение: Кубок
+                            svg.achievement-icon(width="18" height="18")
+                                use(href="#trophy")
 
-            +portfolio-card('card-avatar-9.webp', 'card-avatar-9.png', 'Мария Владимировна Н.', 'Факультет искусств', 'Педагогическое образование', '28', '2', '75')
-                li.achievement.achievement--handshake Достижение: Рукопожатие
-                li.achievement.achievement--cup Достижение: Кубок
-            +portfolio-card('card-avatar-10.webp', 'card-avatar-10.png', 'Анастасия Олеговна Б.', 'Факультет искусств', 'Педагогическое образование', '29', '2', '15')
-                li.achievement.achievement--cup Достижение: Кубок
-            +portfolio-card('card-avatar-11.webp', 'card-avatar-11.png', 'Родион Нугзарович К.', 'Факультет искусств', 'Педагогическое образование', '30', '2', '85')
-                li.achievement.achievement--cup Достижение: Кубок
-                li.achievement.achievement--art Достижение: Искусство
-                li.achievement.achievement--notebook Достижение: Книжка
-            +portfolio-card('card-avatar-12.webp', 'card-avatar-12.png', 'Мария Владимировна Н.', 'Факультет искусств', 'Педагогическое образование', '111', '2', '100')
-                li.achievement.achievement--handshake Достижение: Рукопожатие
-                li.achievement.achievement--art Достижение: Искусство
-                li.achievement.achievement--cup Достижение: Кубок
+            a(href="digital-profile.html")
+                +portfolio-card('card-avatar-3.webp', 'card-avatar-3.png', 'Родион Нугзарович К.', 'Гуманитарный Факультет', 'Политология', '22', '2', '85',  'digital-profile.html')
+                    ul.achievements__list
+                        li.achievement.achievement--paint-palette Достижение: Искусство
+                            svg.achievement-icon(width="18" height="18")
+                                use(href="#paint-palette")
+                        li.achievement.achievement--cup Достижение: Кубок
+                            svg.achievement-icon(width="18" height="18")
+                                use(href="#trophy")
+
+            a(href="digital-profile.html")
+                +portfolio-card('card-avatar-4.webp', 'card-avatar-4.png', 'Мария Владимировна Н.', 'Факультет искусств', 'Педагогическое образование', '23', '3', '100',  'digital-profile.html')
+                    ul.achievements__list
+                        li.achievement.achievement--handshake Достижение: Рукопожатие
+                            svg.achievement-icon(width="18" height="18")
+                                use(href="#handshake")
+                        li.achievement.achievement--paint-palette Достижение: Искусство
+                            svg.achievement-icon(width="18" height="18")
+                                use(href="#paint-palette")
+                        li.achievement.achievement--notebook Достижение: Книжка
+                            svg.achievement-icon(width="18" height="18")
+                                use(href="#notebook")
+
+            a(href="digital-profile.html")
+                +portfolio-card('card-avatar-5.webp', 'card-avatar-5.png', 'Мария Владимировна Н.', 'Факультет искусств', 'Педагогическое образование', '24', '4', '75',  'digital-profile.html')
+                    ul.achievements__list
+                        li.achievement.achievement--handshake Достижение: Рукопожатие
+                            svg.achievement-icon(width="18" height="18")
+                                use(href="#handshake")
+                        li.achievement.achievement--cup Достижение: Кубок
+                            svg.achievement-icon(width="18" height="18")
+                                use(href="#trophy")
+
+            a(href="digital-profile.html")
+                +portfolio-card('card-avatar-6.webp', 'card-avatar-6.png', 'Анастасия Олеговна Б.', 'Факультет искусств', 'Педагогическое образование', '25', '5', '15',  'digital-profile.html')
+                    ul.achievements__list
+                        li.achievement.achievement--cup Достижение: Кубок
+                            svg.achievement-icon(width="18" height="18")
+                                use(href="#trophy")
+
+            a(href="digital-profile.html")
+                +portfolio-card('card-avatar-7.webp', 'card-avatar-7.png', 'Родион Нугзарович К.', 'Факультет искусств', 'Педагогическое образование', '26', '10', '85',  'digital-profile.html')
+                    ul.achievements__list
+                        li.achievement.achievement--paint-palette Достижение: Искусство
+                            svg.achievement-icon(width="18" height="18")
+                                use(href="#paint-palette")
+                        li.achievement.achievement--cup Достижение: Кубок
+                            svg.achievement-icon(width="18" height="18")
+                                use(href="#trophy" )
+
+            a(href="digital-profile.html")
+                +portfolio-card('card-avatar-8.webp', 'card-avatar-8.png', 'Мария Владимировна Н.', 'Факультет искусств', 'Педагогическое образование', '27', '2', '100',  'digital-profile.html')
+                    ul.achievements__list
+                        li.achievement.achievement--paint-palette Достижение: Искусство
+                            svg.achievement-icon(width="18" height="18")
+                                use(href="#paint-palette")
+
+            a(href="digital-profile.html")
+                +portfolio-card('card-avatar-9.webp', 'card-avatar-9.png', 'Мария Владимировна Н.', 'Факультет искусств', 'Педагогическое образование', '28', '2', '75',  'digital-profile.html')
+                    ul.achievements__list
+                        li.achievement.achievement--handshake Достижение: Рукопожатие
+                            svg.achievement-icon( width="18" height="18")
+                                use(href="#handshake")
+                        li.achievement.achievement--cup Достижение: Кубок
+                            svg.achievement-icon( width="18" height="18")
+                                use(href="#trophy")
+
+            a(href="digital-profile.html")
+                +portfolio-card('card-avatar-10.webp', 'card-avatar-10.png', 'Анастасия Олеговна Б.', 'Факультет искусств', 'Педагогическое образование', '29', '2', '15',  'digital-profile.html')
+                    ul.achievements__list
+                        li.achievement.achievement--cup Достижение: Кубок
+                            svg.achievement-icon( width="18" height="18")
+                                use(href="#trophy")
+
+            a(href="digital-profile.html")
+                +portfolio-card('card-avatar-11.webp', 'card-avatar-11.png', 'Родион Нугзарович К.', 'Факультет искусств', 'Педагогическое образование', '30', '2', '85',  'digital-profile.html')
+                    ul.achievements__list
+                        li.achievement.achievement--cup Достижение: Кубок
+                            svg.achievement-icon( width="18" height="18")
+                                use(href="#trophy")
+                        li.achievement.achievement--paint-palette Достижение: Искусство
+                            svg.achievement-icon( width="18" height="18")
+                                use(href="#paint-palette")
+                        li.achievement.achievement--notebook Достижение: Книжка
+                            svg.achievement-icon( width="18" height="18")
+                                use(href="#notebook")
+
+            a(href="digital-profile.html")
+                +portfolio-card('card-avatar-12.webp', 'card-avatar-12.png', 'Мария Владимировна Н.', 'Факультет искусств', 'Педагогическое образование', '111', '2', '100',  'digital-profile.html')
+                    ul.achievements__list
+                        li.achievement.achievement--handshake Достижение: Рукопожатие
+                            svg.achievement-icon( width="18" height="18")
+                                use(href="#handshake")
+                        li.achievement.achievement--paint-palette Достижение: Искусство
+                            svg.achievement-icon( width="18" height="18")
+                                use(href="#paint-palette")
+                        li.achievement.achievement--cup Достижение: Кубок
+                            svg.achievement-icon( width="18" height="18")
+                                use(href="#trophy")
 
             .portfolio-cards__pagination.pagination
                 .pagination__wrapper
                     span.pagination__button.pagination__button--back
                         a(href="#").pagination__link.pagination__link--back Назад
+                            svg.pagination__link--icon
+                                use(href="#back" width="8" height="14")
                     ul.pagination__list
                         li.pagination__item.pagination__item--active
                             a(href="#").pagination__link.pagination__link--active 1
@@ -65,10 +146,12 @@ section.portfolio-cards
                             a(href="#").pagination__link 8
                     span.pagination__button.pagination__button--forward
                         a(href="#").pagination__link.pagination__link--forward Вперед
+                            svg.pagination__link--icon
+                                use(href="#back" width="8" height="14" )
         .portfolio-cards__filter.filter
             .filter__wrapper
                 .filter__age
-                    h4.filter__title Возраст 
+                    h4.filter__title.title--aside Возраст 
                         span (лет)
                     .filter__range.two-range-slider.js-two-range-slider
                         .two-range-slider__output
@@ -108,14 +191,14 @@ section.portfolio-cards
                                     input.filter__checkbox(type="checkbox" id="other2-activity" name="other-activity")
                                     span.filter__checkbox-visible
                 .filter__faculty
-                    h4.filter__title Факультет
+                    h4.filter__title.title--aside Факультет
                     select.filter__select
                         option(selected disabled) -- выберите --
                         option(value="#") Радиотехнический
                         option(value="#") Физики и Химии
                         option(value="#") Искусств
                 .filter__education
-                    h4.filter__title Уровень образования
+                    h4.filter__title.title--aside Уровень образования
                     .filter__education-options
                         span.filter__education-option Аспирантура
                             button.filter__education-option--delete
@@ -124,7 +207,7 @@ section.portfolio-cards
                         span.filter__education-option Магистр
                             button.filter__education-option--delete
                 .filter__salary
-                    .filter__title Желаемая заработная плата
+                    h4.filter__title.title--aside Желаемая заработная плата
                     .filter__range.two-range-slider.js-two-range-slider
                         .two-range-slider__output
                             output.two-range-slider__value.js-two-range-slider-min-value.two-range-slider__value--left

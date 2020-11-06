@@ -1,5 +1,4 @@
 .international-work {
-  @include container;
 }
 
 .international-work__header {
@@ -7,7 +6,6 @@
 }
 
 .international-work__title {
-  @include extra-title;
 }
 
 .international-work__progress {

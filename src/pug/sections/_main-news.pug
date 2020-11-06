@@ -19,6 +19,8 @@ main.main
                         .pagination__wrapper
                             span.pagination__button.pagination__button--back
                                 a(href="#").pagination__link.pagination__link--back Назад
+                                    svg.pagination__link--icon
+                                        use(xlink:href="#back" width="8" height="14")
                             ul.pagination__list
                                 li.pagination__item.pagination__item--active
                                     a(href="#").pagination__link.pagination__link--active 1
@@ -38,6 +40,8 @@ main.main
                                     a(href="#").pagination__link 8
                             span.pagination__button.pagination__button--forward
                                 a(href="#").pagination__link.pagination__link--forward Вперед
+                                    svg.pagination__link--icon
+                                        use(xlink:href="#back" width="8" height="14")
 
                 .student-news__filter.filter.aside-content
                     .filter__wrapper
@@ -56,14 +60,14 @@ main.main
                                         input.filter__checkbox(type="checkbox" id="art-activity" name="art-activity")
                                         span.filter__checkbox-visible
                         .filter__faculty.aside-divider
-                            h4.filter__title Факультет
+                            h4.filter__title.title--aside Факультет
                             select.filter__select
                                 option(selected disabled) -- выберите --
                                 option(value="#") Радиотехнический
                                 option(value="#") Физики и Химии
                                 option(value="#") Искусств
                         .filter__archive
-                            h4.filter__title Архив
+                            h4.filter__title.title--aside Архив
                             select.filter__select
                                 option(selected) 2020 год
                                 option(value="#") 2019 год

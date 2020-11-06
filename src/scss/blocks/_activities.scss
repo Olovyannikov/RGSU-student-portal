@@ -5,6 +5,7 @@
 }
 
 .activities__link {
+  display: block;
   &--youtube {
     font-size: 0;
     width: 36px;
@@ -12,8 +13,10 @@
     border: 1px solid #E06364;
     box-sizing: border-box;
     border-radius: 50%;
-    background: url("../img/icons/icons.svg#yt-red") no-repeat center;
     background-size: 50%;
     padding: 17px;
+    position: relative;
+    background: url("../img/icons/yt-red.svg") no-repeat center;
+    background-size: 18px;
   }
 }

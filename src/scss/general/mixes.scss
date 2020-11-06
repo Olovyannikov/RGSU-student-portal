@@ -40,6 +40,7 @@
 	line-height: 26px;
 	font-style: normal;
 	font-weight: 500;
+	color: $c-title;
   }
   &--large {
 	font-size: rem-calc(26);
@@ -62,6 +63,11 @@
 	color: $c-title;
 	font-weight: 400;
 	margin: 0 14px 0 0;
+  }
+  &--aside {
+	margin: 0;
+	padding-top: 20px;
+	padding-bottom: 26px;
   }
 }
 

@@ -1,5 +1,4 @@
 .portfolio-tabs__container {
-  @include container;
   margin-bottom: 54px;
 }
 
@@ -9,7 +8,6 @@
 }
 
 .portfolio-tabs__title {
-  @include block-title;
   font-size: rem-calc(26);
 }
 

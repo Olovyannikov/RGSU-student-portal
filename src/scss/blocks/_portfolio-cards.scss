@@ -9,7 +9,7 @@
     max-width: 1006px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    gap: 18px;
     margin-right: 29px;
   }
 }
@@ -35,4 +35,8 @@
   }
 }
 
+.portfolio-cards__buttons {
+  @include list-reset;
+  margin-bottom: 27px;
+}
 

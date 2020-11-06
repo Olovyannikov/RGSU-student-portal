@@ -3,6 +3,8 @@ section.new-section
         .new-section__header
             h2.new-section__title.title--large Студенческие новости
             a(href="news.html").new-section__link Все новости
+                svg(width="24" height="18").new-section__link-icon
+                    use(xlink:href="#arrow")
         .new-section__wrapper
             .new-section__hero
                 picture.new-section__picture
@@ -41,7 +43,7 @@ section.new-section
                                     img(src="img/studyear.png")
                     .news__item
                         .block.block--wide.block--attention.block__content-news
-                            a(href="#").block__content
+                            a(href="new-layout.html").block__content.block__content--hot
                                 p.news__item-date.news__item-date--dark 28 августа
                                 h3.news__item-title Студенческая весна. приглашаем на еженедельные онлайн-встречи!
                                 picture.news__picture

@@ -37,13 +37,23 @@ td {
   flex-basis: 100%;
   display: block;
   text-align: left;
-  &:first-child {
+}
+
+.table-scroll__title {
+  &--long {
     min-width: 440px;
   }
 }
 
 .table-scroll td {
-  border-bottom: 1px solid #F1F4F9;
+  border-bottom: 1px solid #f1f4f9;
+}
+
+.table-scroll tfoot {
+  display: flex;
+  td {
+    padding: 17px 0 16px 12px;
+  }
 }
 
 /* Other options */
@@ -68,5 +78,26 @@ td {
   text-align: center;
   width: 100%;
   padding-bottom: 18px;
-  border-bottom: 1px solid #F1F4F9;
+  border-bottom: 1px solid #f1f4f9;
+}
+
+.table-scroll__total  {
+  width: 200px;
+}
+
+.table-scroll__header {
+  display: flex;
+  align-items: center;
+}
+
+.parent-cabinet__table {
+  padding-top: 27px;
+  max-height: 462px;
+  tbody {
+    height: 48vh;
+  }
+
+}
+.table-scroll__finance {
+  max-height: auto;
 }

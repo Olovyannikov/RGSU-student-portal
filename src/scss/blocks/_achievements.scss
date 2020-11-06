@@ -12,23 +12,21 @@
   width: 34px;
   height: 34px;
   margin-right: 21px;
+  position: relative;
+  transition: .2s;
   &:last-child {
     margin-right: 0;
   }
-  &--handshake {
-    background: #F1F4F9 url('../img/icons/icons.svg#handshake') no-repeat center;
-    background-size: 60%;
+  .card:hover & {
+    background: $c-green;
   }
-  &--cup {
-    background: #F1F4F9 url('../img/icons/icons.svg#trophy') no-repeat center;
-    background-size: 60%;
-  }
-  &--art {
-    background: #F1F4F9 url('../img/icons/icons.svg#paint-palette') no-repeat center;
-    background-size: 60%;
-  }
-  &--notebook {
-    background: #F1F4F9 url('../img/icons/icons.svg#notebook') no-repeat center;
-    background-size: 60%;
+}
+
+.achievement-icon {
+  position: absolute;
+  @include center;
+  fill: $c-darkgrey;
+  .card:hover  &{
+    fill: $c-light;
   }
 }
