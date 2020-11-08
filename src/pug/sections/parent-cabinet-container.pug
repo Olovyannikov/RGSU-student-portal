@@ -1,6 +1,6 @@
 mixin table
     table.table-scroll.parent-cabinet__table
-        thead
+        thead.table-scroll__header
             tr
                 th.table-scroll__title.table-scroll__title--long Наименование учебной дисциплины
                 th.table-scroll__title Учебный год
@@ -9,91 +9,130 @@ mixin table
             tr
                 td(colspan='4').table-scroll__divider 1 семестр
             tr
-                td.table-scroll__cell Музыкально-исполнительские школы и концепции
+                td.table-scroll__cell.table-scroll__cell--first-cell Музыкально-исполнительские школы и концепции
                 td.table-scroll__cell 1 семестр,Осенний (1 курс)
                 td.table-scroll__cell Хорошо
             tr
-                td.table-scroll__cell Иностранный язык
+                td.table-scroll__cell.table-scroll__cell--first-cell Иностранный язык
                 td.table-scroll__cell 1 семестр,Осенний (1 курс)
                 td.table-scroll__cell Зачтено
             tr
                 td(colspan='4').table-scroll__divider 2 семестр
             tr
-                td.table-scroll__cell Русский язык и культура речи
+                td.table-scroll__cell.table-scroll__cell--first-cell Русский язык и культура речи
                 td.table-scroll__cell 1 семестр,Осенний (1 курс)
                 td.table-scroll__cell Хорошо
             tr
-                td.table-scroll__cell Теория и история музыкального искусства
+                td.table-scroll__cell.table-scroll__cell--first-cell Теория и история музыкального искусства
                 td.table-scroll__cell 1 семестр,Осенний (1 курс)
                 td.table-scroll__cell Зачтено
             tr
                 td(colspan='4').table-scroll__divider 3 семестр
             tr
-                td.table-scroll__cell Теория и история музыкального искусства
+                td.table-scroll__cell.table-scroll__cell--first-cell Теория и история музыкального искусства
                 td.table-scroll__cell 1 семестр,Осенний (1 курс)
                 td.table-scroll__cell Зачтено
             tr
-                td.table-scroll__cell Теория и история музыкального искусства
+                td.table-scroll__cell.table-scroll__cell--first-cell Теория и история музыкального искусства
                 td.table-scroll__cell 1 семестр,Осенний (1 курс)
                 td.table-scroll__cell Зачтено
             tr
                 td(colspan='4').table-scroll__divider 4 семестр
             tr
-                td.table-scroll__cell Теория и история музыкального искусства
+                td.table-scroll__cell.table-scroll__cell--first-cell Теория и история музыкального искусства
                 td.table-scroll__cell 1 семестр,Осенний (1 курс)
                 td.table-scroll__cell Зачтено
             tr
-                td.table-scroll__cell Теория и история музыкального искусства
+                td.table-scroll__cell.table-scroll__cell--first-cell Теория и история музыкального искусства
                 td.table-scroll__cell 1 семестр,Осенний (1 курс)
                 td.table-scroll__cell Зачтено
 
 mixin finance()
-    table.table-scroll.table-scroll__finance
-        thead
-            tr.table-scroll__header
-                th.table-scroll__title Ожидаемая дата по графику платежей(до)
-                th.table-scroll__title Ожидаемая сумма по графику платежей
+    h3.parent-cabinet__table-title.title График платежей
+    table.table-scroll.table-scroll__finance.parent-cabinet__table
+        thead.table-scroll__header-clean
+            tr
+                th.table-scroll__title Ожидаемая дата по <br> графику платежей(до)
+                th.table-scroll__title Ожидаемая сумма по <br> графику платежей
                 th.table-scroll__title Фактически списано
                 th.table-scroll__title Долг
+        tbody.body-half-screen
+            tr
+                td.table-scroll__cell 02.08.2014
+                td.table-scroll__cell 35 000 р.
+                td.table-scroll__cell 35 000 р.
+                td.table-scroll__cell 0 ₽
+            tr
+                td.table-scroll__cell 21.01.2015
+                td.table-scroll__cell 35 000 р.
+                td.table-scroll__cell 35 000 р.
+                td.table-scroll__cell 0 ₽
+            tr
+                td.table-scroll__cell 02.08.2014
+                td.table-scroll__cell 35 000 р.
+                td.table-scroll__cell 35 000 р.
+                td.table-scroll__cell 0 ₽
+            tr
+                td.table-scroll__cell 31.07.2015
+                td.table-scroll__cell 35 000 р.
+                td.table-scroll__cell 35 000 р.
+                td.table-scroll__cell 0 ₽
+            tr
+                td.table-scroll__cell 29.02.2016
+                td.table-scroll__cell 35 000 р.
+                td.table-scroll__cell 35 000 р.
+                td.table-scroll__cell 0 ₽
+            tr
+                td.table-scroll__cell 02.08.14
+                td.table-scroll__cell 35 000 р.
+                td.table-scroll__cell 35 000 р.
+                td.table-scroll__cell 0 ₽
+            tr
+                td.table-scroll__cell 02.08.14
+                td.table-scroll__cell 35 000 р.
+                td.table-scroll__cell 35 000 р.
+                td.table-scroll__cell 0 ₽
+            tr
+                td.table-scroll__cell 02.08.14
+                td.table-scroll__cell 35 000 р.
+                td.table-scroll__cell 35 000 р.
+                td.table-scroll__cell 0 ₽
+            tr
+                td.table-scroll__cell 02.08.14
+                td.table-scroll__cell 35 000 р.
+                td.table-scroll__cell 35 000 р.
+                td.table-scroll__cell 0 ₽
+            tr
+                td.table-scroll__cell 02.08.14
+                td.table-scroll__cell 35 000 р.
+                td.table-scroll__cell 35 000 р.
+                td.table-scroll__cell 0 ₽
+            tr
+                td.table-scroll__cell 02.08.14
+                td.table-scroll__cell 35 000 р.
+                td.table-scroll__cell 35 000 р.
+                td.table-scroll__cell 0 ₽
+            tr
+                td.table-scroll__cell 02.08.14
+                td.table-scroll__cell 35 000 р.
+                td.table-scroll__cell 35 000 р.
+                td.table-scroll__cell 0 ₽
+            tr
+                td.table-scroll__cell 02.08.14
+                td.table-scroll__cell 35 000 р.
+                td.table-scroll__cell 35 000 р.
+                td.table-scroll__cell 0 ₽
+            tr
+                td.table-scroll__cell 02.08.14
+                td.table-scroll__cell 35 000 р.
+                td.table-scroll__cell 35 000 р.
+                td.table-scroll__cell 0 ₽
         tfoot
             tr
                 td.table-scroll__total Итого
                 td.table-scroll__sum-expect 492 850 р.
                 td.table-scroll__sum-real 492 850 р.
                 td.table-scroll__debt 0 ₽
-        tbody.body-half-screen
-            tr
-                td.table-scroll__cell 02.08.2014
-                td.table-scroll__cell 1 семестр,Осенний (1 курс)
-                td.table-scroll__cell Хорошо
-            tr
-                td.table-scroll__cell 21.01.2015
-                td.table-scroll__cell 1 семестр,Осенний (1 курс)
-                td.table-scroll__cell Зачтено
-            tr
-                td.table-scroll__cell 02.08.2014
-                td.table-scroll__cell 1 семестр,Осенний (1 курс)
-                td.table-scroll__cell Хорошо
-            tr
-                td.table-scroll__cell 31.07.2015
-                td.table-scroll__cell 1 семестр,Осенний (1 курс)
-                td.table-scroll__cell Зачтено
-            tr
-                td.table-scroll__cell 29.02.2016
-                td.table-scroll__cell 1 семестр,Осенний (1 курс)
-                td.table-scroll__cell Зачтено
-            tr
-                td.table-scroll__cell 02.08.14
-                td.table-scroll__cell 1 семестр,Осенний (1 курс)
-                td.table-scroll__cell Зачтено
-            tr
-                td.table-scroll__cell 02.08.14
-                td.table-scroll__cell 1 семестр,Осенний (1 курс)
-                td.table-scroll__cell Зачтено
-            tr
-                td.table-scroll__cell 02.08.14
-                td.table-scroll__cell 1 семестр,Осенний (1 курс)
-                td.table-scroll__cell Зачтено
 
 section.parent-cabinet
     .parent-cabinet__container.container

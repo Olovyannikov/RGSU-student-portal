@@ -1,0 +1,68 @@
+.finance__content {
+  display: inline-flex;
+  gap: 35px;
+}
+
+.finance__content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  svg {
+    margin-top: 51px;
+  }
+}
+
+.finance__content-history {
+  width: 485px;
+  height: 491px;
+}
+
+.finance__content-description {
+  font-size: 22px;
+  line-height: 32px;
+  text-align: center;
+  color: #6E7781;
+  width: 299px;
+  margin: 16px 0 19px;
+}
+
+.finance__content-debt {
+  width: 485px;
+}
+
+.finance__content-isDebt {
+  font-size: 22px;
+  line-height: 26px;
+  text-align: center;
+  color: $c-green;
+  margin: 0 0 30px;
+}
+
+.finance__content-debt-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  width: 100%;
+  padding: 0 38px;
+}
+
+.finance__content-debt-button {
+  width: 189px;
+  padding: 8px 13px;
+  justify-content: center;
+  &--pay {
+    width: 157px;
+  }
+}
+
+.finance__content-debt-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 40px;
+  a {
+    font-size: 16px;
+    line-height: 24px;
+    color: #C3CAD6;
+  }
+}

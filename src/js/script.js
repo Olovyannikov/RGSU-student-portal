@@ -32,3 +32,18 @@ parenttabs();
 if (document.querySelector(".info__card--schedule")) {
   datetime();
 }
+
+
+//checkbox
+
+const checkbox = document.querySelector('#iOS');
+
+checkbox.addEventListener('change', function () {
+  if ( this.checked ) {
+    document.querySelector('.parent-cabinet__tab-togglers--even').style.color = '#3464E0';
+    document.querySelector('.parent-cabinet__tab-togglers--odd').style.color = '#444';
+  } else {
+    document.querySelector('.parent-cabinet__tab-togglers--odd').style.color = '#3464E0';
+    document.querySelector('.parent-cabinet__tab-togglers--even').style.color = '#444';
+  }
+})

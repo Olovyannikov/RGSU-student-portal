@@ -5,15 +5,19 @@
   margin: 0 auto;
   border-spacing: 0;
   border: none;
+  overflow: hidden;
+  border-radius: 4px;
+  &--half {
+    max-width: 485px;
+    height: 350px;
+  }
 }
 
 .table-scroll thead {
-  background: #f1f4f9;
   position: relative;
   display: block;
   width: 100%;
   overflow-y: hidden;
-  margin-bottom: 19px;
 }
 
 .table-scroll tbody {
@@ -21,9 +25,13 @@
   display: block;
   position: relative;
   width: 100%;
-  height: 45vh;
+  height: 320px;
   overflow-y: scroll;
   padding-right: 7px;
+}
+
+.table-scroll--half tbody {
+  height: 230px;
 }
 
 .table-scroll tr {
@@ -52,7 +60,9 @@ td {
 .table-scroll tfoot {
   display: flex;
   td {
-    padding: 17px 0 16px 12px;
+    border: none;
+    background: #f1f4f9;
+    font-weight: bold;
   }
 }
 
@@ -65,9 +75,9 @@ td {
 }
 
 .table-scroll__title {
-  padding: 17px 0 16px 12px;
   font-size: rem-calc(16);
   line-height: 26px;
+  padding: 17px 0 16px 12px;
 }
 
 .table-scroll__divider {
@@ -81,7 +91,7 @@ td {
   border-bottom: 1px solid #f1f4f9;
 }
 
-.table-scroll__total  {
+.table-scroll__total {
   width: 200px;
 }
 
@@ -90,14 +100,29 @@ td {
   align-items: center;
 }
 
-.parent-cabinet__table {
-  padding-top: 27px;
-  max-height: 462px;
-  tbody {
-    height: 48vh;
-  }
+.table-scroll__cell--first-cell {
+  min-width: 440px;
+}
 
+.table-scroll__total {
+  padding-left: 12px;
+}
+
+tfoot {
+  td {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+}
+
+.table-scroll__header {
+  background-color: #f1f4f9;
+  margin-bottom: 19px;
+}
+
+.table-scroll__header-clean {
+  background-color: #fff;
 }
 .table-scroll__finance {
-  max-height: auto;
+  padding-top: 0;
 }
