@@ -41,7 +41,7 @@
 }
 
 .table-scroll th,
-td {
+.table-scroll td:not(.table-scroll__divider) {
   flex-basis: 100%;
   display: block;
   text-align: left;

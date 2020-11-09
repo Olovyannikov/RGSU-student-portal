@@ -1,0 +1,21 @@
+main.main
+    section.dashboard
+        .dashboard__container.container.container--aside
+            aside.dashboard__aside.aside-content
+                .dashboard__main-info
+                    .card__progress
+                        .progress--circle(data-progress="75")
+                            picture.card__avatar
+                                source(srcset="img/dashboard-avatar-1.webp", type="image/webp")
+                                img(src="img/dashboard-avatar-1.png", alt="Мазеин К.В.")
+                    p.card__name Мазеин Константин Викторович
+                    p.card__faculty Факультет информационных технологий
+                    .progress
+                        .progress-bar(data-progress='75')
+                    .progress-info Цифровой профиль -  
+                    section.dashboard__main-info-menu.dashboard__menu
+                        .dashboard__menu-wrapper
+                            h5.dasboard__menu-title.title--xs Мой профиль
+                            span.divider
+                            button(aria-label="Раскрыть меню Мой профиль") Раскрыть меню
+                        ul.dashboard__menu-list

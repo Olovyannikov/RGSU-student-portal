@@ -1,0 +1,176 @@
+-var names = ["пн", "вт", "ср", "чт", "пт", "сб", "вс"];
+
+-var days = [30, 31, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 1, 2];
+
+.parent-cabinet__performance.parent-cabinet__tab.parent-cabinet__tab--active(aria-label="Вкладка Успеваемость" id="performance")
+    .parent-cabinet__tab-wrapper
+        +table
+.parent-cabinet__finance.parent-cabinet__tab.finance(aria-label="Вкладка Финансы" id="finance")
+    p.parent-cabinet__finance-preheader Сведения о взаиморасчетах по договору №1401002038 от 01.08.2014
+    p.parent-cabinet__finance-number Ваш УИК: 37.05.01.02.622128
+    .parent-cabinet__tab-wrapper
+        +finance
+        p.parent-cabinet__table-date Данные обновлены 19.10.2020
+    .finance__content
+        .finance__content-history
+            .parent-cabinet__tab-wrapper.parent-cabinet__tab--active
+                h3.parent-cabinet__table-title.title История оплат
+                table.table-scroll.table-scroll--half
+                    thead.table-scroll__header-clean
+                        tr
+                            th.table-scroll__title Дата
+                            th.table-scroll__title Сумма
+                    tbody.body-half-screen
+                        tr
+                            td.table-scroll__cell 02.08.2014
+                            td.table-scroll__cell 35 000 р.
+                        tr
+                            td.table-scroll__cell 21.01.2015
+                            td.table-scroll__cell 35 000 р.
+                        tr
+                            td.table-scroll__cell 02.08.2014
+                            td.table-scroll__cell 35 000 р.
+                        tr
+                            td.table-scroll__cell 31.07.2015
+                            td.table-scroll__cell 35 000 р.
+                        tr
+                            td.table-scroll__cell 29.02.2016
+                            td.table-scroll__cell 35 000 р.
+                        tr
+                            td.table-scroll__cell 01.02.2017
+                            td.table-scroll__cell 35 000 р.
+                        tr
+                            td.table-scroll__cell 02.03.2018
+                            td.table-scroll__cell 35 000 р.
+                        tr
+                            td.table-scroll__cell 03.04.2019
+                            td.table-scroll__cell 35 000 р.
+                    tfoot
+                        tr
+                            td.table-scroll__total Итого
+                            td.table-scroll__sum-expect 492 850 р.
+                p.parent-cabinet__table-date Сведения о поступлении платежей обновляются в течение 10 дней с момента поступления средств на счет университета
+        .finance__content-debt
+            .parent-cabinet__tab-wrapper
+                .finance__content-container
+                    svg(width="110" height="110" fill="#2BC584")
+                        use(href="#shield")
+                    p.finance__content-description Задолженность по основному договору на 19.10.2020
+                    p.finance__content-isDebt Отсутствует
+                    .finance__content-debt-buttons
+                        button.finance__content-debt-button.finance__content-debt-button--pay.btn.btn--green Оплатить online
+                        button.finance__content-debt-button.finance__content-debt-button--check.btn.btn--grey Получить квитанцию
+                    .finance__content-debt-links
+                        a(href="#").main__link Задать вопрос
+                        a(href="#").main__link Кредит с государственной поддержкой
+.parent-cabinet__schedule.parent-cabinet__tab(aria-label="Вкладка Расписание" id="schedules")
+    .parent-cabinet__tab-wrapper
+        .parent-cabinet__tab-togglers
+            label(for="iOS").parent-cabinet__tab-toggler.parent-cabinet__tab-toggler--even Четная неделя
+            input(type="checkbox" id="iOS")
+            label(for="iOS").parent-cabinet__tab-toggle
+            label(for="iOS").parent-cabinet__tab-toggler.parent-cabinet__tab-toggler--odd Нечетная неделя
+        .parent-cabinet__tab-schedule
+            table.schedule__table
+                thead.schedule__table-header
+                    tr.schedule__row
+                        th.schedule__title.schedule__title--time Время
+                        th.schedule__title.schedule__title--auditory Аудитория
+                            svg(width="17" height="24" fill="#c3cad6")
+                                use(href="#geolocation")
+                        th.schedule__title.schedule__title--long Дисциплина
+                        th.schedule__title.schedule__title--teacher Преподаватель
+                tbody.schedule__body
+                    tr.schedule__row
+                        td.schedule__cell.schedule__cell--divider(colspan="4") 22.03.2020 Понедельник
+                    tr.schedule__row
+                        td.schedule__cell.schedule__cell--time 8:30 - 10:00
+                        td.schedule__cell.schedule__cell--auditory ВП8-404
+                        td.schedule__cell.schedule__cell--discipline Принятие и исполнение государственных решений
+                            span Лекция
+                        td.schedule__cell.schedule__cell--sensei Рябова Татьяна Михайловна
+                            span к.соц.н.
+                    tr.schedule__row
+                        td.schedule__cell.schedule__cell--time 8:30 - 10:00
+                        td.schedule__cell.schedule__cell--auditory ВП8-404
+                        td.schedule__cell.schedule__cell--discipline Принятие и исполнение государственных решений
+                            span Лекция
+                        td.schedule__cell.schedule__cell--sensei Ерокшин Сергей Юрьевич
+                            span к.соц.н.
+                    tr.schedule__row
+                        td.schedule__cell.schedule__cell--time 8:30 - 10:00
+                        td.schedule__cell.schedule__cell--auditory ВП8-404
+                        td.schedule__cell.schedule__cell--discipline Второй иностранный язык (Немецкий)
+                            span Семинар
+                        td.schedule__cell.schedule__cell--sensei Байнова Мария Сергеевна
+                            span к.соц.н.
+                    tr.schedule__row
+                        td.schedule__cell.schedule__cell--time 8:30 - 10:00
+                        td.schedule__cell.schedule__cell--auditory ВП8-404
+                        td.schedule__cell.schedule__cell--discipline Принятие и исполнение государственных решений
+                            span Лекция
+                        td.schedule__cell.schedule__cell--sensei Маркова Татьяна Сергеевна
+                            span к.соц.н.
+                    tr.schedule__row
+                        td.schedule__cell.schedule__cell--divider.schedule__cell--actual(colspan="4") 23.03.2020 Вторник
+                    tr.schedule__row
+                        td.schedule__cell.schedule__cell--time 8:30 - 10:00
+                        td.schedule__cell.schedule__cell--auditory ВП8-404
+                        td.schedule__cell.schedule__cell--discipline Принятие и исполнение государственных решений
+                            span Лекция
+                        td.schedule__cell.schedule__cell--sensei Рябова Татьяна Михайловна
+                            span к.соц.н.
+                    tr.schedule__row
+                        td.schedule__cell.schedule__cell--time 8:30 - 10:00
+                        td.schedule__cell.schedule__cell--auditory ВП8-404
+                        td.schedule__cell.schedule__cell--discipline Принятие и исполнение государственных решений
+                            span Лекция
+                        td.schedule__cell.schedule__cell--sensei Ерокшин Сергей Юрьевич
+                            span к.соц.н.
+                    tr.schedule__row
+                        td.schedule__cell.schedule__cell--divider(colspan="4") 24.03.2020 Среда
+                    tr.schedule__row
+                        td.schedule__cell.schedule__cell--time 8:30 - 10:00
+                        td.schedule__cell.schedule__cell--auditory ВП8-404
+                        td.schedule__cell.schedule__cell--discipline Принятие и исполнение государственных решений
+                            span Лекция
+                        td.schedule__cell.schedule__cell--sensei Рябова Татьяна Михайловна
+                            span к.соц.н.
+                    tr.schedule__row
+                        td.schedule__cell.schedule__cell--time 8:30 - 10:00
+                        td.schedule__cell.schedule__cell--auditory ВП8-404
+                        td.schedule__cell.schedule__cell--discipline Принятие и исполнение государственных решений
+                            span Лекция
+                        td.schedule__cell.schedule__cell--sensei Ерокшин Сергей Юрьевич
+                            span к.соц.н.
+                    tr.schedule__row
+                        td.schedule__cell.schedule__cell--divider.schedule__cell--nonactual(colspan="4") 25.03.2020 Суббота: занятий нет 😀
+
+.parent-cabinet__visits.parent-cabinet__tab(aria-label="Вкладка Посещения" id="visits")
+    .parent-cabinet__tab-wrapper
+        .calendar-container
+            .calendar-header
+                h3
+                    | Октябрь 2020 г.
+
+                .calendar-header__buttons
+                    button.calendar-header__button.calendar-header__button--backward Назад
+                    span Сегодня
+                    button.calendar-header__button.calendar-header__button--forward Вперед
+            .calendar
+                - for(i=0;i<7;i++)
+                    span.day-name= names[i]
+
+                - for(j=0;j<35;j++)
+                    - if(j == 0 || j == 1 || j == 33 || j == 34)
+                        div.day.day--disabled= days[j]
+
+                    - else
+                        div.day= days[j]
+
+                section.task.task--primary(style="grid-row: 2") Projects
+                section.task.task--primary Вильгельма Пика
+                    .task__detail
+                        h4 Product Checkup 1
+                        p 15-17th November
+                section.task.task--primary(style="margin-bottom: 50px") Вильгельма Пика

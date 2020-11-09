@@ -11,7 +11,8 @@ import { default as range } from "./modules/range.js";
 import { default as progressbar } from "./modules/progressbar.js";
 import { default as accordeon } from "./modules/accordeon.js";
 import { default as extrainfo } from "./modules/extrainfo.js";
-import { default as parenttabs} from "./modules/parenttabs.js";
+import { default as parenttabs } from "./modules/parenttabs.js";
+import { default as moderatortabs } from "./modules/moderatorTabs.js";
 
 // init modules
 menuToggle();
@@ -27,23 +28,34 @@ avatar();
 range();
 progressbar();
 accordeon();
-parenttabs();
+if (document.querySelector(".parent-cabinet__tabs")) {
+  parenttabs();
+}
+
+if (document.querySelector('.moderator__container')) {
+  moderatortabs();
+}
 
 if (document.querySelector(".info__card--schedule")) {
   datetime();
 }
 
-
 //checkbox
 
-const checkbox = document.querySelector('#iOS');
+if (document.querySelector('#iOS')) {
+  const checkbox = document.querySelector("#iOS");
 
-checkbox.addEventListener('change', function () {
-  if ( this.checked ) {
-    document.querySelector('.parent-cabinet__tab-togglers--even').style.color = '#3464E0';
-    document.querySelector('.parent-cabinet__tab-togglers--odd').style.color = '#444';
-  } else {
-    document.querySelector('.parent-cabinet__tab-togglers--odd').style.color = '#3464E0';
-    document.querySelector('.parent-cabinet__tab-togglers--even').style.color = '#444';
-  }
-})
+  checkbox.addEventListener("change", function () {
+    if (this.checked) {
+      document.querySelector(".parent-cabinet__tab-toggler--odd").style.color =
+          "#3464E0";
+      document.querySelector(".parent-cabinet__tab-toggler--even").style.color =
+          "#444";
+    } else {
+      document.querySelector(".parent-cabinet__tab-toggler--even").style.color =
+          "#3464E0";
+      document.querySelector(".parent-cabinet__tab-toggler--odd").style.color =
+          "#444";
+    }
+  });
+}

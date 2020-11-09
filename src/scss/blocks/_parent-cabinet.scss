@@ -155,7 +155,6 @@
 	  content: '';
 	  display: block;
 	  border-radius: 100px;
-	  will-change: transform;
 	  box-shadow: inset 0 10px 30px rgba(#F1F4F9, 1);
 	  transition: all 0.25s ease-in-out;
 	  will-change: background;
@@ -181,7 +180,7 @@
 	}
   }
 }
-input[type=checkbox]:checked + label.parent-cabinet__tab-toggle {
+#iOS:checked + label.parent-cabinet__tab-toggle {
   background-color: #40E699;
   transition: 0s background 0s ease-in-out;
   &:after {
@@ -201,5 +200,15 @@ input[type=checkbox]:checked + label.parent-cabinet__tab-toggle {
   justify-content: center;
   padding-top: 27px;
   padding-bottom: 27px;
+}
+
+.parent-cabinet__tab-toggler {
   cursor: pointer;
+  &--even {
+    color: $c-blue;
+  }
+}
+
+.parent-cabinet__tab-schedule {
+  padding-bottom: 30px;
 }

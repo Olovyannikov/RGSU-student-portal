@@ -1,0 +1,149 @@
+main.main
+    section.moderator
+        .moderator__container.container
+            h2.moderator__title.title--large Модерирование
+            .moderator__tabs-buttons
+                button.moderator__button.moderator__button--active.btn.btn--light(data-id="late") Опоздания
+                button.moderator__button.btn.btn--light(data-id="absence") Отсутствия
+                button.moderator__button.btn.btn--light(data-id="visit") Посещения гостями
+                button.moderator__button.btn.btn--light(data-id="agree") Согласия на прививку
+                button.moderator__button.btn.btn--light(data-id="enter") Вход/выход
+                button.moderator__button.btn.btn--light(data-id="studentHouse") Проживающие в общежитии
+                button.moderator__button.btn.btn--light(data-id="declaration") Заявления на общежитие
+                button.moderator__button.btn.btn--light(data-id="failure") Фиксация нарушений
+
+            .moderator__tabs
+                .moderator__tabs-tab.moderator__tab.moderator__tab--active(id="late")
+                    table.moderator__table
+                        thead.moderator__table-header
+                            tr.moderator__table-row
+                                th.moderator__title.moderator__table-cell ФИО
+                                th.moderator__title.moderator__table-cell Статус модератора
+                                th.moderator__title.moderator__table-cell Статус охраны
+                                th.moderator__title.moderator__table-cell Дата
+                                th.moderator__title.moderator__title--flat.moderator__table-cell Общежитие
+                        tbody.moderator__table-body
+                            tr.moderator__table-row
+                                td.moderator__table-cell.moderator__table-link Абраева Махриджемал Хайтгулыевна
+                                td.moderator__table-cell Ожидание проверки
+                                td.moderator__table-cell Ожидание проверки
+                                td.moderator__table-cell 02.11.2020
+                                td.moderator__table-cell г. Москва, Балтийский 1-й пер., д. 6/21, корп. 2, Общ.
+                            tr.moderator__table-row
+                                td.moderator__table-cell.moderator__table-link Акулин Егор Сергеевич
+                                td.moderator__table-cell Ожидание проверки
+                                td.moderator__table-cell Ожидание проверки
+                                td.moderator__table-cell 02.11.2020
+                                td.moderator__table-cell г. Москва, Лосиноостровская ул., д. 24, стр. 2, Общ.
+                            tr.moderator__table-row
+                                td.moderator__table-cell.moderator__table-link Акулин Егор Сергеевич
+                                td.moderator__table-cell Ожидание проверки
+                                td.moderator__table-cell Ожидание проверки
+                                td.moderator__table-cell 02.11.2020
+                                td.moderator__table-cell г. Москва, Инженерная ул., дом 4, Общ.
+                            tr.moderator__table-row
+                                td.moderator__table-cell.moderator__table-link Акулин Егор Сергеевич
+                                td.moderator__table-cell Ожидание проверки
+                                td.moderator__table-cell Ожидание проверки
+                                td.moderator__table-cell 02.11.2020
+                                td.moderator__table-cell г. Москва, Балтийский 1-й пер., д. 6/21, корп. 2, Общ.
+                            tr.moderator__table-row
+                                td.moderator__table-cell.moderator__table-link Андрияничева Полина Андреевна
+                                td.moderator__table-cell Ожидание проверки
+                                td.moderator__table-cell Ожидание проверки
+                                td.moderator__table-cell 02.11.2020
+                                td.moderator__table-cell г. Москва, Инженерная ул., дом 4, Общ.
+                            tr.moderator__table-row
+                                td.moderator__table-cell.moderator__table-link Акулин Егор Сергеевич
+                                td.moderator__table-cell Ожидание проверки
+                                td.moderator__table-cell Ожидание проверки
+                                td.moderator__table-cell 02.11.2020
+                                td.moderator__table-cell г. Москва, Балтийский 1-й пер., д. 6/21, корп. 2, Общ.
+                            tr.moderator__table-row
+                                td.moderator__table-cell.moderator__table-link Андрияничева Полина Андреевна
+                                td.moderator__table-cell Ожидание проверки
+                                td.moderator__table-cell Ожидание проверки
+                                td.moderator__table-cell 02.11.2020
+                                td.moderator__table-cell г. Москва, Инженерная ул., дом 4, Общ.
+                .moderator__tabs-tab.moderator__tab(id="absence")
+                    table
+                .moderator__tabs-tab.moderator__tab(id="visit")
+                    table
+                .moderator__tabs-tab.moderator__tab(id="agree")
+                    table
+                .moderator__tabs-tab.moderator__tab(id="enter")
+                    table
+                .moderator__tabs-tab.moderator__tab(id="studentHouse")
+                    table
+                .moderator__tabs-tab.moderator__tab(id="declaration")
+                .moderator__tabs-tab.moderator__tab(id="failure")
+                    .moderator__tab-wrapper
+                        table.moderator__table.moderator__table-fail
+                            thead.moderator__table-header
+                                th.moderator__title.moderator__table-cell Дата нарушения
+                                th.moderator__title.moderator__table-cell Студент
+                                th.moderator__title.moderator__table-cell Тип нарушения
+                                th.moderator__title.moderator__table-cell Комментарий
+                            tbody.moderator__table-body
+                                tr.moderator__table-row
+                                    td.moderator__table-cell 20.10.2020
+                                    td.moderator__table-cell.moderator__table-cell--student Абраева Махриджемал Хайтгулыевна
+                                        span 4 курс, направление Юриспруденция
+                                    td.moderator__table-cell Студент опоздал
+                                    td.moderator__table-cell --
+
+                                tr.moderator__table-row
+                                    td.moderator__table-cell 20.10.2020
+                                    td.moderator__table-cell.moderator__table-cell--student Абраева Махриджемал Хайтгулыевна
+                                        span 4 курс, направление Юриспруденция
+                                    td.moderator__table-cell Студент в состоянии наркотического опьянения
+                                    td.moderator__table-cell Подтверждено
+
+                                tr.moderator__table-row
+                                    td.moderator__table-cell 20.10.2020
+                                    td.moderator__table-cell.moderator__table-cell--student Абраева Махриджемал Хайтгулыевна
+                                        span 4 курс, направление Юриспруденция
+                                    td.moderator__table-cell Студент в состоянии алкогольного опьянения
+                                    td.moderator__table-cell Подтверждено
+
+                                tr.moderator__table-row
+                                    td.moderator__table-cell 20.10.2020
+                                    td.moderator__table-cell.moderator__table-cell--student Абраева Махриджемал Хайтгулыевна
+                                        span 4 курс, направление Юриспруденция
+                                    td.moderator__table-cell Студент отсутствует
+                                    td.moderator__table-cell --
+
+                                tr.moderator__table-row
+                                    td.moderator__table-cell 20.10.2020
+                                    td.moderator__table-cell.moderator__table-cell--student Абраева Махриджемал Хайтгулыевна
+                                        span 4 курс, направление Юриспруденция
+                                    td.moderator__table-cell Студент в состоянии алкогольного опьянения
+                                    td.moderator__table-cell Подтверждено
+
+                                tr.moderator__table-row
+                                    td.moderator__table-cell 20.10.2020
+                                    td.moderator__table-cell.moderator__table-cell--student Абраева Махриджемал Хайтгулыевна
+                                        span 4 курс, направление Юриспруденция
+                                    td.moderator__table-cell Студент отсутствует
+                                    td.moderator__table-cell --
+                        form.moderator__form
+                            .moderator__form-container
+                                label(for="date").moderator__form-label.moderator__form-label--require Дата
+                                input(id="date" name="date" type="date" placeholder="21.12.2020").moderator__form-date
+                            .moderator__form-container
+                                label(for="typeOfFail").moderator__form-label Тип нарушения
+                                select(id="typeOfFail" name="typeOfFail").moderator__form-select
+                                    option(selected disabled) -- выберите --
+                                    option Студент опоздал
+                                    option Студент в состоянии наркотического опьянения
+                                    option Студент в состоянии алкогольного опьянения
+                            .moderator__form-container
+                                label(for="studentName").moderator__form-label Студент
+                                select(id="studentName" name="studentName").moderator__form-select
+                                    option(selected disabled) -- выберите --
+                                    option Козырь А. А.
+                                    option Храмов С. В.
+                                    option Студент в состоянии алкогольного опьянения
+                            .moderator__form-container
+                                label(for="commentaryAbout").moderator__form-label.moderator__form-label--require Комментарий
+                                textarea(id="commentaryAbout" name="commentaryAbout"  ).moderator__form-textarea

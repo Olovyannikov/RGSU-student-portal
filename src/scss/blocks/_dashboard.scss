@@ -1,0 +1,30 @@
+.dashboard__main-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  .progress--circle {
+    width: 162px;
+    height: 162px;
+  }
+  .progress {
+    order: 2;
+  }
+  .progress-info {
+    order: 1;
+    margin-left: 0;
+  }
+  .card__progress {
+    margin-bottom: 12px;
+  }
+  .card__name {
+    width: 192px;
+  }
+  .card__faculty {
+    font-size: 14px;
+    line-height: 21px;
+    color: $c-darkgrey;
+    text-transform: unset;
+    width: 181px;
+  }
+}

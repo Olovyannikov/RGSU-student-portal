@@ -3,7 +3,7 @@ export default () => {
   let progressInfos = document.querySelectorAll(".progress-info");
 
   for (let i = 0; i < progressInfos.length; i++) {
-    progressInfos[i].innerHTML = progresses[i].getAttribute("data-progress");
+    progressInfos[i].innerHTML += progresses[i].getAttribute("data-progress");
     if (progresses[i].getAttribute("data-progress") < 50) {
       progresses[i].style.backgroundColor = "#F49617";
       progressInfos[i].style.color = "#F49617";

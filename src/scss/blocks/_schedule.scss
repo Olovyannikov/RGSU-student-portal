@@ -1,0 +1,87 @@
+.schedule__table {
+  margin: 0 auto;
+  width: 100%;
+  border-collapse: collapse;
+  padding-bottom: 30px;
+}
+
+.schedule__body {
+  position: relative;
+  width: 100%;
+}
+
+.schedule__title {
+  text-align: left;
+  font-size: rem-calc(18);
+  line-height: 26px;
+  color: #444444;
+  padding-left: 20px;
+  padding-bottom: 15px;
+}
+
+.schedule__cell {
+  font-size: rem-calc(16);
+  line-height: 26px;
+  color: #444444;
+  padding: 30px 20px;
+  border-bottom: 1px solid #f1f4f9;
+  &--divider {
+    text-align: center;
+    font-size: rem-calc(18);
+    line-height: 26px;
+    color: #c3cad6;
+    background: $c-grey;
+    padding-top: 17px;
+    padding-bottom: 17px;
+  }
+  &--actual {
+    color: $c-blue;
+  }
+  &--time {
+    color: $c-blue;
+    border-right: 1px solid #f1f4f9;
+    border-bottom: 1px solid #f1f4f9;
+    font-weight: 600;
+  }
+  &--auditory {
+    border-right: 1px solid #f1f4f9;
+  }
+  &--discipline {
+    border-right: 1px solid #f1f4f9;
+    span {
+      color: $c-darkgrey;
+      &::before {
+        content: "(";
+      }
+      &::after {
+        content: ")";
+      }
+    }
+  }
+  &--sensei {
+    span {
+      color: $c-darkgrey;
+      display: block;
+    }
+  }
+}
+
+.schedule__title {
+  &--time {
+    width: 133px;
+  }
+  &--auditory {
+    width: 147px;
+    display: flex;
+    align-items: center;
+    svg {
+      margin-left: 13px;
+    }
+  }
+  &--discipline {
+    width: 373px;
+  }
+  &--teacher {
+    width: 312px;
+  }
+}
