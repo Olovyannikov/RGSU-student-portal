@@ -2,12 +2,20 @@
   margin-bottom: 45px;
 }
 
+.services__container {
+  max-width: 1005px;
+}
+
 .services__header {
   display: flex;
   align-items: center;
   width: 100%;
   .divider {
     width: 100%;
+  }
+
+  @media (min-width: $tablet) {
+    margin-bottom: 37px;
   }
 }
 
@@ -37,10 +45,10 @@
   padding-left: 88px;
   position: relative;
   &::before {
-    content: '';
+    content: "";
     display: block;
     position: absolute;
-    background: url("../img/icons/icons.svg#methodist") no-repeat center;
+    background: url("../img/icons/methodist.svg") no-repeat center;
     width: 38px;
     height: 48px;
     background-size: cover;
@@ -53,11 +61,22 @@
   font-weight: 300;
   font-size: 16px;
   line-height: 26px;
-  color: #C3CAD6;
+  color: #c3cad6;
   margin: 0;
   padding-left: 88px;
 }
 
 .services__navigation {
   @include swiperCenter;
+  @media (min-width: $tablet) {
+    display: none;
+  }
+  &--desktop {
+    display: none;
+    @media (min-width: $tablet) {
+      display: flex;
+      width: auto;
+      margin-left: 15px;
+    }
+  }
 }

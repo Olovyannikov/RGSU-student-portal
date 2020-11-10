@@ -94,7 +94,6 @@
     align-items: center;
     justify-content: space-between;
     width: 267px;
-
   }
   @media (min-width: $mobile) {
     width: 100%;
@@ -162,17 +161,17 @@
     margin: 0;
   }
   li {
-    border-bottom: 1px solid #F1F4F9;
+    border-bottom: 1px solid #f1f4f9;
     &:last-child {
       border: none;
     }
-    &:last-child a{
+    &:last-child a {
       font-style: normal;
       font-weight: normal;
       font-size: 18px;
       line-height: 26px;
       padding-bottom: 20px;
-      color: #C3CAD6;
+      color: #c3cad6;
     }
   }
   a {
@@ -273,7 +272,8 @@
       height: 42px;
       animation: none;
       background-size: 20px;
-      &::before, &::after {
+      &::before,
+      &::after {
         all: unset;
       }
     }
@@ -285,7 +285,9 @@
   width: 20px;
   height: 20px;
   position: absolute;
-  left: 24px;
+  @media (min-width: $tablet) {
+    left: 24px;
+  }
 }
 
 @keyframes slideRight {
@@ -333,18 +335,18 @@
     height: 20px;
     background-size: cover;
   }
-    .page-header--menu-opened & {
-      .page-header__toggler--icon {
-        display: none;
-        @media (min-width: $tablet) {
-          top: 50%;
-          transform: translateY(-45%);
-          display: block;
-        }
+  .page-header--menu-opened & {
+    .page-header__toggler--icon {
+      display: none;
+      @media (min-width: $tablet) {
+        top: 50%;
+        transform: translateY(-45%);
+        display: block;
       }
-
-      box-shadow: none;
     }
+
+    box-shadow: none;
+  }
 
   @media (min-width: $tablet) {
     border-radius: 50px;
@@ -358,7 +360,7 @@
     &:focus {
     }
     &::before {
-      left: 24px;;
+      left: 24px;
       top: 11px;
     }
   }

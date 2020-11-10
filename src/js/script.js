@@ -13,8 +13,12 @@ import { default as accordeon } from "./modules/accordeon.js";
 import { default as extrainfo } from "./modules/extrainfo.js";
 import { default as parenttabs } from "./modules/parenttabs.js";
 import { default as moderatortabs } from "./modules/moderatorTabs.js";
+import { default as dashboardaccordeon } from "./modules/dashboardaccordeon.js";
 
 // init modules
+if (document.querySelectorAll(".dashboard__menu")) {
+  dashboardaccordeon();
+}
 menuToggle();
 advertisement();
 extrainfo();
@@ -32,7 +36,7 @@ if (document.querySelector(".parent-cabinet__tabs")) {
   parenttabs();
 }
 
-if (document.querySelector('.moderator__container')) {
+if (document.querySelector(".moderator__container")) {
   moderatortabs();
 }
 
@@ -42,20 +46,24 @@ if (document.querySelector(".info__card--schedule")) {
 
 //checkbox
 
-if (document.querySelector('#iOS')) {
+if (document.querySelector("#iOS")) {
   const checkbox = document.querySelector("#iOS");
 
   checkbox.addEventListener("change", function () {
     if (this.checked) {
       document.querySelector(".parent-cabinet__tab-toggler--odd").style.color =
-          "#3464E0";
+        "#3464E0";
       document.querySelector(".parent-cabinet__tab-toggler--even").style.color =
-          "#444";
+        "#444";
     } else {
       document.querySelector(".parent-cabinet__tab-toggler--even").style.color =
-          "#3464E0";
+        "#3464E0";
       document.querySelector(".parent-cabinet__tab-toggler--odd").style.color =
-          "#444";
+        "#444";
     }
   });
+}
+
+document.querySelector('.page-header__sidebar-toggler').onclick = function () {
+  document.querySelector('.dashboard__aside').classList.toggle('dashboard__aside--active')
 }

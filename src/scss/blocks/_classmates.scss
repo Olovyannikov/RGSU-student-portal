@@ -13,14 +13,12 @@
 
 .classmates__list {
   color: rgba(68, 68, 68, 1);
-  overflow-y: scroll;
-  max-height: 206px;
-  width: 96%;
+  overflow-y: unset;
   flex-direction: column;
   display: flex;
   align-items: center;
   position: relative;
-  &::before {
+  &::after {
     content:"";
     position: absolute;
     bottom: 0;
@@ -36,6 +34,11 @@
     overflow: hidden;
     width: 100%;
   }
+}
+
+.classmates__list-wrapper {
+  width: 90%;
+  overflow-y: scroll;
 }
 
 .classmates__user {

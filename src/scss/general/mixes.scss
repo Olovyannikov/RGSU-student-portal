@@ -7,6 +7,7 @@
   &--aside {
     gap: 30px;
     display: flex;
+	align-items: flex-start;
   }
 
   @media (min-width: $stop-scaling) {
@@ -72,6 +73,12 @@
 	margin: 0;
 	padding-top: 20px;
 	padding-bottom: 26px;
+  }
+  &--dashboard {
+	color: $c-darkgrey;
+	font-size: rem-calc(18);
+	line-height: 26px;
+	font-weight: 400;
   }
 }
 

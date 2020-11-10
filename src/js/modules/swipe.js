@@ -38,16 +38,16 @@ export default () => {
         }
     });
 
-    let services = new Swiper('.services__slider', {
-        slidesPerView: 'auto',
+    let services = new Swiper('.services__container', {
+        slidesPerView: 3,
         spaceBetween: 12,
         pagination: {
-            el: '.swiper-pagination',
+            el: '.services-pagination',
             clickable: true,
         },
         navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
+            nextEl: '.services-button-next',
+            prevEl: '.services-button-prev',
         },
     });
     let faq = new Swiper('.faq__slider', {
@@ -87,6 +87,37 @@ export default () => {
             1024: {
                 slidesPerView: 6,
                 spaceBetween: 30
+            }
+        },
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        }
+    });
+    let stories = new Swiper('.stories__container', {
+        slidesPerView: 6,
+        slidesPerGroup: 6,
+        spaceBetween: 25,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        breakpoints: {
+            320: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+            },
+            768: {
+                slidesPerView: 4,
+                spaceBetween: 40,
+            },
+            1024: {
+                slidesPerView: 6,
+                spaceBetween: 25
             }
         },
         autoplay: {

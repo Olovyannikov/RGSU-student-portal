@@ -5,12 +5,14 @@
 
 .faq__title {
   margin-right: auto;
-  width: 100%;
   color: $c-black;
+  white-space: nowrap;
+  margin-right: 8px;
 }
 
 .faq__button {
   position: relative;
+  white-space: nowrap;
   &--helper {
     padding-left: 48px;
     padding-right: 19px;

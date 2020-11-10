@@ -7,8 +7,14 @@
     width: 162px;
     height: 162px;
   }
+  .progress__wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 22px;
+  }
   .progress {
     order: 2;
+    margin-left: 0;
   }
   .progress-info {
     order: 1;
@@ -26,5 +32,195 @@
     color: $c-darkgrey;
     text-transform: unset;
     width: 181px;
+  }
+
+}
+
+.dashboard {
+  position: relative;
+  .advertisement__container {
+    max-width: 1005px;
+    padding: 0;
+  }
+  .news {
+    max-width: 1005px;
+  }
+}
+
+.dashboard__aside {
+  position: absolute;
+  transform: translateX(-200%);
+  padding: 0;
+  padding-top: 27px;
+  transition: .5s;
+  top: -27px;
+  &--active {
+    left: 0;
+    z-index: 2;
+    background: #F8FAFE;
+    width: 100%;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 100vh;
+    transform: translateX(0);
+  }
+  @media (min-width: $tablet) {
+    min-width: 315px;
+    position: static;
+    transform: translateX(0);
+  }
+}
+
+//menu style
+
+.dashboard__menu {
+  width: 100%;
+}
+
+.dashboard__menu-wrapper {
+  margin-bottom: 44px;
+}
+
+.dashboard__menu-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  cursor: pointer;
+  transition: .2s;
+  &:hover {
+    .dashboard__menu-title {
+      color: $c-blue;
+    }
+    .divider {
+      border-color: $c-blue;
+      transition: .2s;
+    }
+    .dashboard__menu-button {
+      border-color: $c-blue;
+      background: $c-blue;
+      svg {
+        fill: $c-light;
+      }
+    }
+  }
+}
+
+.dashboard__menu-title {
+  white-space: nowrap;
+  margin-right: 8px;
+  margin-top: 0;
+  margin-bottom: 0;
+  transition: .2s;
+}
+
+.dashboard__menu-button {
+  @include btn-reset;
+  font-size: 0;
+  border: 1px solid #e4ecfa;
+  box-sizing: border-box;
+  border-radius: 50%;
+  min-width: 32px;
+  height: 32px;
+  transition: .2s;
+  svg {
+    fill: #9cbaf0;
+    transition: .2s;
+  }
+  &--active {
+    transform: rotate(180deg);
+  }
+}
+
+.dashboard__menu-list {
+  @include list-reset;
+  flex-direction: column;
+  display: none;
+  gap: 19px;
+  &--active {
+    display: flex;
+    animation: toHeight .2s ease-in-out;
+  }
+}
+
+.dashboard__menu-item {
+  box-sizing: border-box;
+  position: relative;
+}
+
+.dashboard__menu-link {
+  border: 1px solid $c-darkgrey;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  padding-left: 71px;
+  font-size: 16px;
+  line-height: 26px;
+  color: $c-title;
+  padding-top: 26px;
+  padding-bottom: 25px;
+  transition: 0.2s;
+  svg {
+    position: absolute;
+    display: block;
+    fill: $c-darkgrey;
+    left: 17px;
+  }
+  &:hover {
+    background-color: $c-blue;
+    svg {
+      fill: $c-light;
+    }
+    color: $c-light;
+  }
+  &--active {
+    border-color: $c-blue;
+    border: 1px solid $c-blue;
+    color: $c-blue;
+    svg {
+      fill: $c-blue;
+    }
+  }
+}
+
+.dashboard__notification-counter {
+  text-align: center;
+  font-size: rem-calc(15);
+  padding: 3px 9px 1px 7px;
+  line-height: 18px;
+  color: $c-light;
+  width: 23px;
+  height: 23px;
+  background-color: $c-red;
+  border-radius: 50%;
+  margin-left: 11px;
+}
+
+.dashboard__main-content {
+  margin-top: 64px;
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  width: 100%;
+  flex-wrap: wrap;
+  .info__card-stack {
+    max-height: 272px;
+  }
+  .portfolio__container {
+    width: 315px;
+    height: 100%;
+  }
+  .classmates__wrapper {
+    background-color: #fff;
+    width: 315px;
+  }
+  .classmates__list {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    position: relative;
+    justify-content: flex-start;
+  }
+  .card {
+    align-items: flex-start;
+    padding-top: 0;
   }
 }
