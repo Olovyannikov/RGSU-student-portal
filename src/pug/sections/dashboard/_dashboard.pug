@@ -4,7 +4,7 @@ main.main
         .dashboard__container.container.container--aside
             aside.dashboard__aside.aside-content
                 .dashboard__main-info
-                    .card__progress
+                    a.card__progress(href="profile.html" title="Перейти в настройки профиля")
                         .progress--circle(data-progress="75")
                             picture.card__avatar
                                 source(srcset="img/dashboard-avatar-1.webp", type="image/webp")
@@ -106,33 +106,34 @@ main.main
                                         svg(width='36' height='36')
                                             use(href="#studenthouse")
             .dashboard__main-content
-                .info__card-block.swiper-slide
-                    article.info__card-stack.info__card--schedule.card--stack
-                        h4.info__card-title.title Расписание
-                        p.info__card-week
-                        p.info__card-main.info__card-time
-                        p.info__card-sub.info__card-date
-                        p.info__card-daytime Идет <span>5</span> пара 😟
-                .portfolio__container.card--stack
-                    h2.portfolio__title.title Цифровой профиль
-                    .portfolio__wrapper
-                        .portfolio__progress.gauge(data-width="236" data-value="75")
-                            span.gauge__value
-                .classmates__wrapper.card.card--stack
-                    h2.classmates__title.title Одногруппники
-                    .classmates__list
-                        .classmates__list-wrapper
-                            +user('Ивко Валентина Петросовна', '23 февраля', 'avatar-1.jpg', 'avatar-1.webp', '#')
-                            +user('Цепко Харитон Викторович', '24 августа', 'avatar-2.jpg', 'avatar-2.webp', '#')
-                            +user('Лобкова Ольга Федоровна', '25 мая', 'avatar-3.jpg', 'avatar-3.webp', '#')
-                            +user('Ивко Валентина Петросовна', '23 февраля', 'avatar-1.jpg', 'avatar-1.webp', '#')
-                            +user('Цепко Харитон Викторович', '24 августа', 'avatar-2.jpg', 'avatar-2.webp', '#')
-                            +user('Лобкова Ольга Федоровна', '25 мая', 'avatar-3.jpg', 'avatar-3.webp', '#')
+                .dashboard__info
+                    .info__card-block.swiper-slide
+                        article.info__card-stack.info__card--schedule.card--stack
+                            h4.info__card-title.title Расписание
+                            p.info__card-week
+                            p.info__card-main.info__card-time
+                            p.info__card-sub.info__card-date
+                            p.info__card-daytime Идет <span>5</span> пара 😟
+                    .portfolio__container.card--stack
+                        h2.portfolio__title.title Цифровой профиль
+                        .portfolio__wrapper
+                            .portfolio__progress.gauge(data-width="236" data-value="75")
+                                span.gauge__value
+                    .classmates__wrapper.card.card--stack
+                        h2.classmates__title.title Одногруппники
+                        .classmates__list
+                            .classmates__list-wrapper
+                                +user('Ивко Валентина Петросовна', '23 февраля', 'avatar-1.jpg', 'avatar-1.webp', '#')
+                                +user('Цепко Харитон Викторович', '24 августа', 'avatar-2.jpg', 'avatar-2.webp', '#')
+                                +user('Лобкова Ольга Федоровна', '25 мая', 'avatar-3.jpg', 'avatar-3.webp', '#')
+                                +user('Ивко Валентина Петросовна', '23 февраля', 'avatar-1.jpg', 'avatar-1.webp', '#')
+                                +user('Цепко Харитон Викторович', '24 августа', 'avatar-2.jpg', 'avatar-2.webp', '#')
+                                +user('Лобкова Ольга Федоровна', '25 мая', 'avatar-3.jpg', 'avatar-3.webp', '#')
                 .stories
                     .stories__header
                         h3.stories__title.title--large Студенческие истории
                         span.divider
-                        button.stories__accordeon-button +
+                        button.stories__accordeon-button
                     .stories__container.swiper-container
                         .stories__wrapper.swiper-wrapper
                             .swiper-slide.stories__slide

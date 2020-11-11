@@ -50,10 +50,11 @@
   border-radius: 4px;
   padding: 3px 8px;
   top: 0;
+  transform: translateX(-45%);
   &--left {
-    left: 45px;
+    left: 0;
   }
   &--right {
-    left: 225px;
+    left: 100%;
   }
 }

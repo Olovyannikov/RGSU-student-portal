@@ -13,7 +13,6 @@
 .page-header__wrapper {
   display: flex;
   align-items: center;
-  @include container;
   justify-content: space-between;
 }
 
@@ -62,8 +61,7 @@
       top: 7px;
     }
   }
-  &:focus {
-    //ДЛЯ ДЕМОНСТРАЦИИ, ПОТОМ ПЕРЕКИНУТЬ В JS
+  &--active {
     .toggler-element {
       transform: rotate(45deg);
       &::before {
@@ -73,6 +71,20 @@
       &::after {
         top: 0;
         transform: rotate(90deg);
+      }
+    }
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 69px;
+    width: 54px;
+    background-color: #F8FAFE;
+    .toggler-element {
+      left: 15px;
+      &::before,
+      &::after {
+        background-color: $c-blue;
       }
     }
   }

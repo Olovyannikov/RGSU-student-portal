@@ -49,6 +49,17 @@ export default () => {
             nextEl: '.services-button-next',
             prevEl: '.services-button-prev',
         },
+        breakpoints: {
+            1200: {
+                slidesPerView: 3,
+            },
+            768: {
+                slidesPerView: 2,
+            },
+            320: {
+                slidesPerView: 1,
+            }
+        }
     });
     let faq = new Swiper('.faq__slider', {
         slidesPerView: 'auto',
@@ -108,8 +119,8 @@ export default () => {
         },
         breakpoints: {
             320: {
-                slidesPerView: 2,
-                spaceBetween: 20,
+              slidesPerView: 2,
+              spaceBetween: 10
             },
             768: {
                 slidesPerView: 4,

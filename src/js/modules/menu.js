@@ -5,7 +5,12 @@ export default () => {
   let modalLink = document.querySelector(".js-menu-login");
   let modal = document.querySelector(".modal");
   let modalClose = document.querySelector(".js-close-button");
-  let overlay = document.querySelector('#overlay-modal');
+  let overlay = document.querySelector("#overlay-modal");
+  let sideBar = document.querySelector(".page-header__sidebar-toggler");
+
+  sideBar.addEventListener("click", function () {
+    sideBar.classList.toggle("page-header__sidebar-toggler--active");
+  });
 
   if (menuToggler) {
     menuToggler.addEventListener(`click`, function () {
@@ -20,21 +25,21 @@ export default () => {
   }
 
   if (overlay) {
-    overlay.addEventListener('click', function () {
+    overlay.addEventListener("click", function () {
       if (header.classList.contains(`page-header--menu-opened`)) {
         header.classList.remove(`page-header--menu-opened`);
         document.body.classList.remove(`menu-opened`);
         modal.classList.remove("modal--active");
-        overlay.classList.remove('active');
+        overlay.classList.remove("active");
       }
-    })
+    });
   }
 
   if (modalLink) {
     modalLink.addEventListener("click", function () {
       if (header.classList.contains(`page-header--menu-opened`)) {
         modal.classList.add("modal--active");
-        overlay.classList.add('active');
+        overlay.classList.add("active");
       } else {
         modal.classList.remove("modal--active");
       }
@@ -45,7 +50,7 @@ export default () => {
     modalClose.addEventListener("click", function () {
       if (modal.classList.contains("modal--active")) {
         modal.classList.remove("modal--active");
-        overlay.classList.remove('active');
+        overlay.classList.remove("active");
       }
     });
   }
@@ -76,4 +81,3 @@ document.body.addEventListener(
   },
   false
 );
-

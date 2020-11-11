@@ -179,15 +179,6 @@
   margin: 0 21px 0px 0;
 }
 
-.news__container {
-  padding: 0 45px;
-  margin-left: auto;
-  margin-right: auto;
-  position: relative;
-  overflow: hidden;
-  list-style: none;
-  z-index: 1;
-}
 
 .news__buttons {
   @include swiperCenter;

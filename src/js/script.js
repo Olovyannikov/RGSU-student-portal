@@ -14,8 +14,13 @@ import { default as extrainfo } from "./modules/extrainfo.js";
 import { default as parenttabs } from "./modules/parenttabs.js";
 import { default as moderatortabs } from "./modules/moderatorTabs.js";
 import { default as dashboardaccordeon } from "./modules/dashboardaccordeon.js";
+import { default as filterBtn } from "./modules/filter.js";
 
 // init modules
+if (document.querySelector(".js-filter-btn")) {
+  filterBtn();
+}
+range();
 if (document.querySelectorAll(".dashboard__menu")) {
   dashboardaccordeon();
 }
@@ -29,7 +34,6 @@ if (document.querySelector(".portfolio-tabs__container")) {
 }
 cookie();
 avatar();
-range();
 progressbar();
 accordeon();
 if (document.querySelector(".parent-cabinet__tabs")) {
@@ -64,6 +68,8 @@ if (document.querySelector("#iOS")) {
   });
 }
 
-document.querySelector('.page-header__sidebar-toggler').onclick = function () {
-  document.querySelector('.dashboard__aside').classList.toggle('dashboard__aside--active')
-}
+document.querySelector(".page-header__sidebar-toggler").onclick = function () {
+  document
+    .querySelector(".dashboard__aside")
+    .classList.toggle("dashboard__aside--active");
+};

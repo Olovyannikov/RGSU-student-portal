@@ -1,30 +1,35 @@
 .services {
   margin-bottom: 45px;
+  max-width: 100%;
 }
 
 .services__container {
-  max-width: 1005px;
+  max-width: 100%;
+  @media (min-width: $tablet) {
+    max-width: 1005px;
+  }
 }
 
 .services__header {
   display: flex;
   align-items: center;
   width: 100%;
+  margin-bottom: 27px;
   .divider {
     width: 100%;
   }
-
   @media (min-width: $tablet) {
     margin-bottom: 37px;
   }
 }
 
 .services__title {
-  margin: 0 14px 0 0;
+  @media (min-width: $tablet) {
+    margin: 0 14px 0 0;
+  }
 }
 
-.services__wrapper {
-  margin-top: 27px;
+.services__slider {
   margin-bottom: 32px;
 }
 

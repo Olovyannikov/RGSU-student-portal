@@ -1,6 +1,7 @@
 .stories {
   width: 100%;
   max-width: 1005px;
+  margin-bottom: 45px;
 }
 
 .stories__header {
@@ -33,4 +34,32 @@
   justify-content: center;
   align-items: center;
   height: 26px;
+}
+
+.stories__accordeon-button {
+  @include btn-reset;
+  color: $c-light;
+  background-color: $c-blue;
+  min-width: 31px;
+  height: 31px;
+  border-radius: 50%;
+  position: relative;
+  &::before, &::after {
+    position: absolute;
+    display: block;
+    content: '';
+    background: $c-light;
+    transform: translateX(-50%);
+    left: 50%;
+  }
+  &::after {
+    width: 17px;
+    height: 1px;
+  }
+  &::before {
+    width: 1px;
+    height: 17px;
+    top: 50%;
+    transform: translateY(-50%)
+  }
 }

@@ -1,0 +1,94 @@
+mixin vacancy
+    .vacancy__item
+        p.vacancy__item-title Требования:
+        ul.vacancy__item-list
+            li.vacancy__item-item Активная жизненная позиция и позитивный настрой
+            li.vacancy__item-item Желание приобрести новый опыт работы и работать в команде профессионалов
+            li.vacancy__item-item Общительность и ориентация на клиента
+            li.vacancy__item-item Нацеленность на результат
+            li.vacancy__item-item Знания по работе в MS Office (Word, Excel, Power Point)
+            li.vacancy__item-item Готовность к разъездному характеру работы
+        p.vacancy__item-title Обязанности:
+            ul.vacancy__item-list
+                li.vacancy__item-item Консультировать студентов и абитуриентов, партнеров РГСУ по продуктам Университета
+                li.vacancy__item-item Проводить презентации
+                li.vacancy__item-item Устанавливать долгосрочные отношения с компаниями-партнерами
+        p.vacancy__item-title Документы для устройства на работу:
+            ul.vacancy__item-list
+                li.vacancy__item-item Паспорт (для иностранных студентов + нотариально заверенный перевод)
+                li.vacancy__item-item Миграционная карта (Для иностранных студентов)
+                li.vacancy__item-item Виза (для иностранных студентов)
+                li.vacancy__item-item Регистрация (для иностранных студентов)
+                li.vacancy__item-item СНИЛС
+                li.vacancy__item-item ИНН
+                li.vacancy__item-item Справка, подтверждающая обучение студента
+    .vacancy__salary
+        p.vacancy__item-title.vacancy__salary-title Заработная плата:
+            span.vacancy__salary-item Оплата сдельная
+        a(href="#").vacancy__button.btn--green Откликнуться
+
+section.vacancy.dashboard__vacancy
+    .vacancy__container.container
+        .vacancy__header
+            h2.vacancy__title.title--large Открытые вакансии портала
+            button(href="#").vacancy__filter-button.btn.btn--regular.js-filter-btn Фильтры
+                svg(width="22" height="22")
+                    use(href="#controls")
+            .vacancy__filter
+                .vacancy__filter-type
+                    h4.vacancy__filter-title Тип
+                    label(for="study").filter__label Учебная
+                        input(id="study" name="study" type="checkbox").filter__checkbox
+                        span.filter__checkbox-visible
+                    label(for="outstudy").filter__label Неучебная
+                        input(id="outstudy" name="outstudy" type="checkbox").filter__checkbox
+                        span.filter__checkbox-visible
+                .vacancy__filter-type
+                    h4.vacancy__filter-title Лаборатория
+                    select.filter__select
+                        option(disabled selected) -- выберите --
+                        option 1
+                        option 2
+                .vacancy__filter-type
+                    h4.vacancy__filter-title Область
+                    .filter__education-options
+                        span.filter__education-option IT
+                            button.filter__education-option--delete
+                        span.filter__education-option Бухгалтерия
+                            button.filter__education-option--delete
+                .vacancy__filter-type
+                    h4.vacancy__filter-title Заработная плата
+                    .filter__salary(style="position: relative")
+                        .filter__range.two-range-slider.js-two-range-slider(style="position: static")
+                            .two-range-slider__output
+                                output.two-range-slider__value.js-two-range-slider-min-value.two-range-slider__value--left
+                                output.two-range-slider__value.js-two-range-slider-max-value.two-range-slider__value--right
+                            input.two-range-slider__input.js-two-range-slider-input(type='range' min='0' max='250000' value='250000' step='10000')#right-range
+                            input.two-range-slider__input.js-two-range-slider-input(type='range' min='0' max='250000' value='0' step='10000')#left-range
+        .vacancy__content
+            .vacancy__wrapper
+                .vacancy__section.accordeon-section
+                    p.vacancy__section-title.accordeon-title.title--main Агент по корпоративным продажам
+                        button.vacancy-button.accordeon-button
+                    .vacancy-container.accordeon-container
+                        +vacancy
+                .vacancy__section.accordeon-section
+                    p.vacancy__section-title.accordeon-title.title--main Делопроизводитель в архиве
+                        button.vacancy-button.accordeon-button
+                    .vacancy-container.accordeon-container
+                        +vacancy
+                .vacancy__section.accordeon-section
+                    p.vacancy__section-title.accordeon-title.title--main Сотрудник деканата
+                        button.vacancy-button.accordeon-button
+                    .vacancy-container.accordeon-container
+                        +vacancy
+                .vacancy__section.accordeon-section
+                    p.vacancy__section-title.vacancy__section-title--hot.accordeon-title.title--main Оператор контактного центра
+                        button.vacancy-button.accordeon-button
+                    .vacancy-container.accordeon-container
+                        +vacancy
+                .vacancy__section.accordeon-section
+                    p.vacancy__section-title.accordeon-title.title--main Сотрудник службы приёма и размещения в общежитии
+                        button.vacancy-button.accordeon-button
+                    .vacancy-container.accordeon-container
+                        +vacancy

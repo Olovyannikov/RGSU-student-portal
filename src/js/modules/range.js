@@ -32,11 +32,12 @@ export default () => {
             item.addEventListener("input", () => {
                 rangeCheck(rangeInputs, rangeMinOutput, rangeMaxOutput);
                 let directions = {
-                    left : rangeMinOutput.value * 2 * 2.5,
-                    right : rangeMaxOutput.value * 2 * 2.5
+                    left :((rangeMinOutput.value) / document.querySelector('#left-range').getAttribute('max')) * 100,
+                    right: ((rangeMaxOutput.value) / document.querySelector('#left-range').getAttribute('max')) * 100
                 }
-                rangeMinOutput.style.left = directions.left + 'px';
-                rangeMaxOutput.style.left = directions.right + 'px';
+                console.log(document.querySelector('#left-range').getAttribute('max'))
+                rangeMinOutput.style.left = directions.left + '%';
+                rangeMaxOutput.style.left = directions.right + '%';
             });
 
             rangeCheck(rangeInputs, rangeMinOutput, rangeMaxOutput);

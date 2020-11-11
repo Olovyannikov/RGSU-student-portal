@@ -38,36 +38,59 @@
 
 .dashboard {
   position: relative;
+  .container {
+    @media (min-width: $tablet) {
+      padding: 0;
+    }
+  }
+  .dashboard__container {
+    @media (min-width: $tablet) {
+      max-width: 1440px;
+    }
+  }
+  section {
+    @media (min-width: $tablet) {
+      max-width: 1005px;
+    }
+  }
   .advertisement__container {
-    max-width: 1005px;
     padding: 0;
   }
-  .news {
-    max-width: 1005px;
+  .block {
+    &--wide {
+      @media (min-width: $tablet) {
+        width: 487px;
+      }
+    }
+  }
+  .slider__item-descr--wide {
+    @media (min-width: $tablet) {
+      display: none;
+    }
   }
 }
 
 .dashboard__aside {
   position: absolute;
   transform: translateX(-200%);
-  padding: 0;
-  padding-top: 27px;
+  padding: 27px 0 0;
   transition: .5s;
   top: -27px;
   &--active {
     left: 0;
-    z-index: 2;
     background: #F8FAFE;
     width: 100%;
     padding-left: 30px;
     padding-right: 30px;
     padding-bottom: 100vh;
     transform: translateX(0);
+    z-index: 11;
   }
-  @media (min-width: $tablet) {
-    min-width: 315px;
+  @media (min-width: 1296px) {
+    width: 100%;
     position: static;
     transform: translateX(0);
+    max-width: 315px;
   }
 }
 
@@ -156,8 +179,8 @@
   font-size: 16px;
   line-height: 26px;
   color: $c-title;
-  padding-top: 26px;
-  padding-bottom: 25px;
+  padding-top: 21px;
+  padding-bottom: 21px;
   transition: 0.2s;
   svg {
     position: absolute;
@@ -196,31 +219,63 @@
 }
 
 .dashboard__main-content {
-  margin-top: 64px;
+  margin-top: 34px;
   display: flex;
-  gap: 30px;
   justify-content: center;
   width: 100%;
   flex-wrap: wrap;
+  @media (min-width: $tablet) {
+
+    margin-top: 64px;
+  }
   .info__card-stack {
     max-height: 272px;
   }
   .portfolio__container {
-    width: 315px;
+    width: 314px;
     height: 100%;
   }
   .classmates__wrapper {
     background-color: #fff;
-    width: 315px;
+    width: 314px;
   }
   .classmates__list {
     flex-direction: column;
     flex-wrap: nowrap;
     position: relative;
     justify-content: flex-start;
+    overflow-y: scroll;
+    width: 100%;
+    @media (min-width: $tablet) {
+      overflow-y: unset;
+    }
+  }
+  .classmates__list-wrapper {
+    overflow-y: unset;
+    width: 90%;
+    @media (min-width: $tablet) {
+      overflow-y: scroll;
+    }
   }
   .card {
     align-items: flex-start;
     padding-top: 0;
+    &--stack {
+      height: 272px;
+    }
+  }
+}
+
+.dashboard__info {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 30px;
+  @media (min-width: $tablet) {
+    flex-direction: row;
+  }
+  .info__card-block {
+    height: fit-content;
   }
 }
