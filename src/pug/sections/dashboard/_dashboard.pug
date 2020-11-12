@@ -1,266 +1,94 @@
 include ./../../mixins/_users
-main.main
-    section.dashboard
-        .dashboard__container.container.container--aside
-            aside.dashboard__aside.aside-content
-                .dashboard__main-info
-                    a.card__progress(href="profile.html" title="Перейти в настройки профиля")
-                        .progress--circle(data-progress="75")
-                            picture.card__avatar
-                                source(srcset="img/dashboard-avatar-1.webp", type="image/webp")
-                                img(src="img/dashboard-avatar-1.png", alt="Мазеин К.В.")
-                    p.card__name Мазеин Константин Викторович
-                    p.card__faculty Факультет информационных технологий
-                    .progress__wrapper
-                        .progress
-                            .progress-bar(data-progress='75')
-                        .progress-info Цифровой профиль -  
-                    section.dashboard__main-info-menu.dashboard__menu
-                        .dashboard__menu-wrapper
-                            .dashboard__menu-header
-                                h5.dashboard__menu-title.title--dashboard Мой профиль
-                                span.divider
-                                button(aria-label="Раскрыть меню Мой профиль").dashboard__menu-button.dashboard__menu-button--active Раскрыть меню
-                                    svg(width="12" height="12")
-                                        use(href="#vector")
-                            ul.dashboard__menu-list.dashboard__menu-list--active
-                                li.dashboard__menu-item
-                                    a.dashboard__menu-link.dashboard__menu-link--active(href='#') Дашборд
-                                        svg(width='36' height='36')
-                                            use(href="#dashboard")
-                                li.dashboard__menu-item
-                                    a.dashboard__menu-link(href='#') Редактировать профиль
-                                        svg(width='36' height='36')
-                                            use(href="#profile")
-                                li.dashboard__menu-item
-                                    a.dashboard__menu-link(href='#') Уведомления
-                                        svg(width='36' height='36')
-                                            use(href="#notifications")
-                                        span.dashboard__notification-counter 1
-                        .dashboard__menu-wrapper
-                            .dashboard__menu-header
-                                h5.dashboard__menu-title.title--dashboard МФЦ обучающегося
-                                span.divider
-                                button(aria-label="Раскрыть меню МФЦ обучающегося").dashboard__menu-button Раскрыть меню
-                                    svg(width="12" height="12")
-                                        use(href="#vector")
-                            ul.dashboard__menu-list
-                                li.dashboard__menu-item
-                                    a.dashboard__menu-link(href='#') Заявки
-                                        svg(width='36' height='36')
-                                            use(href="#order")
-                                li.dashboard__menu-item
-                                    a.dashboard__menu-link(href='#') Оплата услуг
-                                        svg(width='36' height='36')
-                                            use(href="#wallet")
-                                li.dashboard__menu-item
-                                    a.dashboard__menu-link(href='#') Мои оплаты
-                                        svg(width='36' height='36')
-                                            use(href="#list")
-                        .dashboard__menu-wrapper
-                            .dashboard__menu-header
-                                h5.dashboard__menu-title.title--dashboard Онлайн деканат
-                                span.divider
-                                button(aria-label="Раскрыть меню Онлайн деканат").dashboard__menu-button Раскрыть меню
-                                    svg(width="12" height="12")
-                                        use(href="#vector")
-                            ul.dashboard__menu-list
-                                li.dashboard__menu-item
-                                    a.dashboard__menu-link(href='#') Расписание
-                                        svg(width='36' height='36')
-                                            use(href="#schedule")
-                                li.dashboard__menu-item
-                                    a.dashboard__menu-link(href='#') Студенческий билет
-                                        svg(width='36' height='36')
-                                            use(href="#studentpass")
-                                li.dashboard__menu-item
-                                    a.dashboard__menu-link(href='#') Зачетная книжка
-                                        svg(width='36' height='36')
-                                            use(href="#markbook")
-                                li.dashboard__menu-item
-                                    a.dashboard__menu-link(href='#') Общежития
-                                        svg(width='36' height='36')
-                                            use(href="#studenthouse")
-                        .dashboard__menu-wrapper
-                            .dashboard__menu-header
-                                h5.dashboard__menu-title.title--dashboard Портфолио
-                                span.divider
-                                button(aria-label="Раскрыть меню Портфолио").dashboard__menu-button Раскрыть меню
-                                    svg(width="12" height="12")
-                                        use(href="#vector")
-                            ul.dashboard__menu-list
-                                li.dashboard__menu-item
-                                    a.dashboard__menu-link(href='#') Расписание
-                                        svg(width='36' height='36')
-                                            use(href="#schedule")
-                                li.dashboard__menu-item
-                                    a.dashboard__menu-link(href='#') Студенческий билет
-                                        svg(width='36' height='36')
-                                            use(href="#studentpass")
-                                li.dashboard__menu-item
-                                    a.dashboard__menu-link(href='#') Зачетная книжка
-                                        svg(width='36' height='36')
-                                            use(href="#markbook")
-                                li.dashboard__menu-item
-                                    a.dashboard__menu-link(href='#') Общежития
-                                        svg(width='36' height='36')
-                                            use(href="#studenthouse")
-            .dashboard__main-content
-                .dashboard__info
-                    .info__card-block.swiper-slide
-                        article.info__card-stack.info__card--schedule.card--stack
-                            h4.info__card-title.title Расписание
-                            p.info__card-week
-                            p.info__card-main.info__card-time
-                            p.info__card-sub.info__card-date
-                            p.info__card-daytime Идет <span>5</span> пара 😟
-                    .portfolio__container.card--stack
-                        h2.portfolio__title.title Цифровой профиль
-                        .portfolio__wrapper
-                            .portfolio__progress.gauge(data-width="236" data-value="75")
-                                span.gauge__value
-                    .classmates__wrapper.card.card--stack
-                        h2.classmates__title.title Одногруппники
-                        .classmates__list
-                            .classmates__list-wrapper
-                                +user('Ивко Валентина Петросовна', '23 февраля', 'avatar-1.jpg', 'avatar-1.webp', '#')
-                                +user('Цепко Харитон Викторович', '24 августа', 'avatar-2.jpg', 'avatar-2.webp', '#')
-                                +user('Лобкова Ольга Федоровна', '25 мая', 'avatar-3.jpg', 'avatar-3.webp', '#')
-                                +user('Ивко Валентина Петросовна', '23 февраля', 'avatar-1.jpg', 'avatar-1.webp', '#')
-                                +user('Цепко Харитон Викторович', '24 августа', 'avatar-2.jpg', 'avatar-2.webp', '#')
-                                +user('Лобкова Ольга Федоровна', '25 мая', 'avatar-3.jpg', 'avatar-3.webp', '#')
-                .stories
-                    .stories__header
-                        h3.stories__title.title--large Студенческие истории
-                        span.divider
-                        button.stories__accordeon-button
-                    .stories__container.swiper-container
-                        .stories__wrapper.swiper-wrapper
-                            .swiper-slide.stories__slide
-                                picture
-                                    source(srcset="img/studyear.webp" type="image/webp")
-                                    img.stories__picture(src="img/studyear.png" alt="История ")
-                            .swiper-slide.stories__slide
-                                picture
-                                    source(srcset="img/studyear.webp" type="image/webp")
-                                    img.stories__picture(src="img/studyear.png" alt="История ")
-                            .swiper-slide.stories__slide
-                                picture
-                                    source(srcset="img/studyear.webp" type="image/webp")
-                                    img.stories__picture(src="img/studyear.png" alt="История ")
-                            .swiper-slide.stories__slide
-                                picture
-                                    source(srcset="img/studyear.webp" type="image/webp")
-                                    img.stories__picture(src="img/studyear.png" alt="История ")
-                            .swiper-slide.stories__slide
-                                picture
-                                    source(srcset="img/studyear.webp" type="image/webp")
-                                    img.stories__picture(src="img/studyear.png" alt="История ")
-                            .swiper-slide.stories__slide
-                                picture
-                                    source(srcset="img/studyear.webp" type="image/webp")
-                                    img.stories__picture(src="img/studyear.png" alt="История ")
-                            .swiper-slide.stories__slide
-                                picture
-                                    source(srcset="img/studyear.webp" type="image/webp")
-                                    img.stories__picture(src="img/studyear.png" alt="История ")
-                            .swiper-slide.stories__slide
-                                picture
-                                    source(srcset="img/studyear.webp" type="image/webp")
-                                    img.stories__picture(src="img/studyear.png" alt="История ")
-                            .swiper-slide.stories__slide
-                                picture
-                                    source(srcset="img/studyear.webp" type="image/webp")
-                                    img.stories__picture(src="img/studyear.png" alt="История ")
-                            .swiper-slide.stories__slide
-                                picture
-                                    source(srcset="img/studyear.webp" type="image/webp")
-                                    img.stories__picture(src="img/studyear.png" alt="История ")
-                            .swiper-slide.stories__slide
-                                picture
-                                    source(srcset="img/studyear.webp" type="image/webp")
-                                    img.stories__picture(src="img/studyear.png" alt="История ")
-                            .swiper-slide.stories__slide
-                                picture
-                                    source(srcset="img/studyear.webp" type="image/webp")
-                                    img.stories__picture(src="img/studyear.png" alt="История ")
-                            .swiper-slide.stories__slide
-                                picture
-                                    source(srcset="img/studyear.webp" type="image/webp")
-                                    img.stories__picture(src="img/studyear.png" alt="История ")
-                            .swiper-slide.stories__slide
-                                picture
-                                    source(srcset="img/studyear.webp" type="image/webp")
-                                    img.stories__picture(src="img/studyear.png" alt="История ")
-                        .stories__buttons
-                            .stories__button.stories__button--prev.swiper-button-prev
-                            .swiper-pagination
-                            .stories__button.stories__button--next.swiper-button-next
-                include ./../_announcement
-                include ./../_services
-                include ./../_advertisement
-                .faq__wrapper
-                    .faq__header
-                        h3.faq__title.title--large Частые вопросы
-                        span.divider
-                        a(href="faq.html").faq__button.btn Все вопросы
-                    .faq__questions.question
-                        .question__item.accordeon-section
-                            p.question__item-title.accordeon-title.title--xs Когда и как мы начнем учиться?
-                                button.question__item-button.accordeon-button
-                            .question__item-content.accordeon-container
-                                p Мы начинаем учебный год 1 сентября согласно утвержденным учебным планам.
-                                p Все что вам необходимо для получения знаний, будет доступно онлайн в соответствии с расписанием. Лабораторные и практические занятия, требующие физического присутствия на территории университета, поставлены в расписание после 1 ноября.
-                                p Все внеучебные мероприятия - кружки, конкурсы, секции и прочее,  будут проводится онлайн.
-                        .question__item.accordeon-section
-                            p.question__item-title.accordeon-title.title--xs Как будет обеспечиваться безопасность студентов и сотрудников университета?
-                                button.question__item-button.accordeon-button
-                            .question__item-content.accordeon-container
-                                img(src="https://pelikanprint.ru/storage/431/kond.jpg" "#{var}")
-                        .question__item.accordeon-section
-                            p.question__item-title.accordeon-title.title--xs Если я поступил на 1 курс РГСУ?
-                                button.question__item-button.accordeon-button
-                            .question__item-content.accordeon-container
-                                img(src="https://pelikanprint.ru/storage/431/kond.jpg" "#{var}")
-                        .question__item.accordeon-section
-                            p.question__item-title.accordeon-title.title--xs Как будут проходить лабораторные, практические работы и занятия по физической культуре?
-                                button.question__item-button.accordeon-button
-                            .question__item-content.accordeon-container
-                                img(src="https://pelikanprint.ru/storage/431/kond.jpg" "#{var}")
-                        .question__item.accordeon-section
-                            p.question__item-title.accordeon-title.title--xs Смогу ли я проживать в общежитии?
-                                button.question__item-button.accordeon-button
-                            .question__item-content.accordeon-container
-                                img(src="https://pelikanprint.ru/storage/431/kond.jpg" "#{var}")
-                        .question__item.accordeon-section
-                            p.question__item-title.accordeon-title.title--xs Если я не заключу договор на общежитие до 1.11.2020, потеряю ли я свое место в общежитии?
-                                button.question__item-button.accordeon-button
-                            .question__item-content.accordeon-container
-                                img(src="https://pelikanprint.ru/storage/431/kond.jpg" "#{var}")
-                        .question__item.accordeon-section
-                            p.question__item-title.accordeon-title.title--xs Если я студент-иностранец, нужно ли мне по возвращению в Россию проходить самоизоляцию?
-                                button.question__item-button.accordeon-button
-                            .question__item-content.accordeon-container
-                                img(src="https://pelikanprint.ru/storage/431/kond.jpg" "#{var}")
-                        .question__item.accordeon-section
-                            p.question__item-title.accordeon-title.title--xs Изменится ли плата за обучение?
-                                button.question__item-button.accordeon-button
-                            .question__item-content.accordeon-container
-                                img(src="https://pelikanprint.ru/storage/431/kond.jpg" "#{var}")
-                        .question__item.accordeon-section
-                            p.question__item-title.accordeon-title.title--xs Как будут работать службы университета?
-                                button.question__item-button.accordeon-button
-                            .question__item-content.accordeon-container
-                                img(src="https://pelikanprint.ru/storage/431/kond.jpg" "#{var}")
-                        .question__item.accordeon-section
-                            p.question__item-title.accordeon-title.title--xs Как будут проходить лабораторные, практические работы и занятия по физической культуре?
-                                button.question__item-button.accordeon-button
-                            .question__item-content.accordeon-container
-                                img(src="https://pelikanprint.ru/storage/431/kond.jpg" "#{var}")
-                        .question__item.accordeon-section
-                            p.question__item-title.accordeon-title.title--xs Если я студент-иностранец, нужно ли мне по возвращению в Россию проходить самоизоляцию?
-                                button.question__item-button.accordeon-button
-                            .question__item-content.accordeon-container
-                                img(src="https://pelikanprint.ru/storage/431/kond.jpg" "#{var}")
 
-                include ./../_news
+.dashboard__info
+    .info__card-block.swiper-slide
+        article.info__card-stack.info__card--schedule.card--stack
+            h4.info__card-title.title Расписание
+            p.info__card-week
+            p.info__card-main.info__card-time
+            p.info__card-sub.info__card-date
+            p.info__card-daytime Идет <span>5</span> пара 😟
+    .portfolio__container.card--stack
+        h2.portfolio__title.title Цифровой профиль
+        .portfolio__wrapper
+            .portfolio__progress.gauge(data-width="236" data-value="75")
+                span.gauge__value
+    .classmates__wrapper.card.card--stack
+        h2.classmates__title.title Одногруппники
+        .classmates__list.scrollbar-custom
+            .classmates__list-wrapper
+                +user('Ивко Валентина Петросовна', '23 февраля', 'avatar-1.jpg', 'avatar-1.webp', '#')
+                +user('Цепко Харитон Викторович', '24 августа', 'avatar-2.jpg', 'avatar-2.webp', '#')
+                +user('Лобкова Ольга Федоровна', '25 мая', 'avatar-3.jpg', 'avatar-3.webp', '#')
+                +user('Ивко Валентина Петросовна', '23 февраля', 'avatar-1.jpg', 'avatar-1.webp', '#')
+                +user('Цепко Харитон Викторович', '24 августа', 'avatar-2.jpg', 'avatar-2.webp', '#')
+                +user('Лобкова Ольга Федоровна', '25 мая', 'avatar-3.jpg', 'avatar-3.webp', '#')
+
+include ./../_announcement
+include ./../_services
+include ./../_advertisement
+.faq__wrapper
+    .faq__header
+        h3.faq__title.title--large Частые вопросы
+        span.divider
+        a(href="faq.html").faq__button.btn Все вопросы
+    .faq__questions.question
+        .question__item.accordeon-section
+            p.question__item-title.accordeon-title.title--xs Когда и как мы начнем учиться?
+                button.question__item-button.accordeon-button
+            .question__item-content.accordeon-container
+                p Мы начинаем учебный год 1 сентября согласно утвержденным учебным планам.
+                p Все что вам необходимо для получения знаний, будет доступно онлайн в соответствии с расписанием. Лабораторные и практические занятия, требующие физического присутствия на территории университета, поставлены в расписание после 1 ноября.
+                p Все внеучебные мероприятия - кружки, конкурсы, секции и прочее,  будут проводится онлайн.
+        .question__item.accordeon-section
+            p.question__item-title.accordeon-title.title--xs Как будет обеспечиваться безопасность студентов и сотрудников университета?
+                button.question__item-button.accordeon-button
+            .question__item-content.accordeon-container
+                img(src="https://pelikanprint.ru/storage/431/kond.jpg" "#{var}")
+        .question__item.accordeon-section
+            p.question__item-title.accordeon-title.title--xs Если я поступил на 1 курс РГСУ?
+                button.question__item-button.accordeon-button
+            .question__item-content.accordeon-container
+                img(src="https://pelikanprint.ru/storage/431/kond.jpg" "#{var}")
+        .question__item.accordeon-section
+            p.question__item-title.accordeon-title.title--xs Как будут проходить лабораторные, практические работы и занятия по физической культуре?
+                button.question__item-button.accordeon-button
+            .question__item-content.accordeon-container
+                img(src="https://pelikanprint.ru/storage/431/kond.jpg" "#{var}")
+        .question__item.accordeon-section
+            p.question__item-title.accordeon-title.title--xs Смогу ли я проживать в общежитии?
+                button.question__item-button.accordeon-button
+            .question__item-content.accordeon-container
+                img(src="https://pelikanprint.ru/storage/431/kond.jpg" "#{var}")
+        .question__item.accordeon-section
+            p.question__item-title.accordeon-title.title--xs Если я не заключу договор на общежитие до 1.11.2020, потеряю ли я свое место в общежитии?
+                button.question__item-button.accordeon-button
+            .question__item-content.accordeon-container
+                img(src="https://pelikanprint.ru/storage/431/kond.jpg" "#{var}")
+        .question__item.accordeon-section
+            p.question__item-title.accordeon-title.title--xs Если я студент-иностранец, нужно ли мне по возвращению в Россию проходить самоизоляцию?
+                button.question__item-button.accordeon-button
+            .question__item-content.accordeon-container
+                img(src="https://pelikanprint.ru/storage/431/kond.jpg" "#{var}")
+        .question__item.accordeon-section
+            p.question__item-title.accordeon-title.title--xs Изменится ли плата за обучение?
+                button.question__item-button.accordeon-button
+            .question__item-content.accordeon-container
+                img(src="https://pelikanprint.ru/storage/431/kond.jpg" "#{var}")
+        .question__item.accordeon-section
+            p.question__item-title.accordeon-title.title--xs Как будут работать службы университета?
+                button.question__item-button.accordeon-button
+            .question__item-content.accordeon-container
+                img(src="https://pelikanprint.ru/storage/431/kond.jpg" "#{var}")
+        .question__item.accordeon-section
+            p.question__item-title.accordeon-title.title--xs Как будут проходить лабораторные, практические работы и занятия по физической культуре?
+                button.question__item-button.accordeon-button
+            .question__item-content.accordeon-container
+                img(src="https://pelikanprint.ru/storage/431/kond.jpg" "#{var}")
+        .question__item.accordeon-section
+            p.question__item-title.accordeon-title.title--xs Если я студент-иностранец, нужно ли мне по возвращению в Россию проходить самоизоляцию?
+                button.question__item-button.accordeon-button
+            .question__item-content.accordeon-container
+                img(src="https://pelikanprint.ru/storage/431/kond.jpg" "#{var}")
+
+include ./../_news

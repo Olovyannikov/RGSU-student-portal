@@ -157,10 +157,10 @@ section.portfolio-cards
                         .two-range-slider__output
                             output.two-range-slider__value.js-two-range-slider-min-value.two-range-slider__value--left
                             output.two-range-slider__value.js-two-range-slider-max-value.two-range-slider__value--right
-                        input.two-range-slider__input.js-two-range-slider-input(type='range' min='0' max='50' value='45' step='1')
-                        input.two-range-slider__input.js-two-range-slider-input(type='range' min='0' max='50' value='9' step='1')
+                        input.two-range-slider__input.js-two-range-slider-input(type='range' min='0' max='50' value='50' step='1').left-range
+                        input.two-range-slider__input.js-two-range-slider-input(type='range' min='0' max='50' value='0' step='1').left-range
                 .filter__checkboxes
-                    .filter__checkboxes-container
+                    .filter__checkboxes-container.scrollbar-custom
                         .filter__checkboxes-scroll
                             .filter__checkboxes-wrapper
                                 label.filter__label( for="social-activity") Общественная деятельность
@@ -210,7 +210,7 @@ section.portfolio-cards
                     h4.filter__title.title--aside Желаемая заработная плата
                     .filter__range.two-range-slider.js-two-range-slider
                         .two-range-slider__output
-                            output.two-range-slider__value.js-two-range-slider-min-value.two-range-slider__value--left
-                            output.two-range-slider__value.js-two-range-slider-max-value.two-range-slider__value--right
-                        input.two-range-slider__input.js-two-range-slider-input(type='range' min='0' max='50' value='45' step='1')
-                        input.two-range-slider__input.js-two-range-slider-input(type='range' min='0' max='50' value='9' step='1')
+                            output.two-range-slider__value.js-two-range-slider-min-value.two-range-slider__value--left.range-money
+                            output.two-range-slider__value.js-two-range-slider-max-value.two-range-slider__value--right.range-money
+                        input.two-range-slider__input.js-two-range-slider-input(type='range' min='0' max='250000' value='250000' step='10000').left-range
+                        input.two-range-slider__input.js-two-range-slider-input(type='range' min='0' max='250000' value='0' step='10000').left-range

@@ -138,7 +138,7 @@
     object-fit: cover;
     min-width: 300px;
     min-height: 300px;
-    transition: .5s;
+    transition: 1s;
   }
   &::after {
     content: '';
@@ -176,7 +176,7 @@
   font-weight: normal;
   font-size: 26px;
   line-height: 26px;
-  margin: 0 21px 0px 0;
+  margin: 0 21px 0 0;
 }
 
 
