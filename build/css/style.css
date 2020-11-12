@@ -5213,10 +5213,8 @@ tfoot td {
 }
 
 .dashboard__vacancy .vacancy__filter {
+  display: none;
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   background-color: #ffffff;
   padding-left: 30px;
   padding-right: 30px;
@@ -5224,6 +5222,12 @@ tfoot td {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.dashboard__vacancy .vacancy__filter--active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .dashboard__vacancy .filter__label {

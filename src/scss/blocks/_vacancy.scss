@@ -148,13 +148,16 @@
 
 .dashboard__vacancy {
   .vacancy__filter {
+    display: none;
     width: 100%;
-    display: flex;
     background-color: $c-light;
     padding-left: 30px;
     padding-right: 30px;
     padding-bottom: 25px;
     justify-content: space-between;
+    &--active {
+      display: flex;
+    }
   }
   .filter__label {
     padding-left: 36px;

@@ -1258,7 +1258,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ 
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (function () {\n  var filterBtn = document.querySelector(\".js-filter-btn\");\n  filterBtn.addEventListener(\"click\", function () {\n    filterBtn.classList.toggle('vacancy__filter-button--active');\n  });\n});\n\n//# sourceURL=webpack:///./src/js/modules/filter.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (function () {\n  var filterBtn = document.querySelector(\".js-filter-btn\");\n  filterBtn.addEventListener(\"click\", function () {\n    filterBtn.classList.toggle('vacancy__filter-button--active');\n    document.querySelector('.vacancy__filter').classList.toggle('vacancy__filter--active');\n  });\n});\n\n//# sourceURL=webpack:///./src/js/modules/filter.js?");
 
 /***/ }),
 
