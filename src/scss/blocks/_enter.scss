@@ -12,7 +12,7 @@
 .enter__wrapper {
   position: relative;
   margin: 0 auto;
-  max-width: 1440px;
+  max-width: calc(1440px - 90px);
   h1 {
     visibility: hidden;
     font-size: 0;
@@ -27,39 +27,24 @@
       color: white;
       margin: 0;
       width: 388px;
-      height: auto;
-      padding: 9px;
-      background-color: #3464e0;
-      text-transform: uppercase;
       position: absolute;
-      top: 79px;
-      left: 76px;
+      height: auto;
+      top: 52px;
+      left: 37px;
     }
   }
 }
 
 .enter__button {
-  @include btn-reset;
-  background: #2bc584;
-  border: 1px solid #2bc584;
-  box-sizing: border-box;
-  font-size: 16px;
-  line-height: 26px;
-  text-align: center;
-  color: #ffffff;
   width: 100%;
   padding: 10px 0;
 
   @media (min-width: 768px) {
     position: absolute;
     width: 236px;
-    bottom: 48px;
-    left: 85px;
-    border-radius: 4px;
+    bottom: 51px;
+    left: 37px;
     transition: all .5s;
-    &:hover, &:focus {
-      box-shadow: 0 2px 2px rgba(0,0,0,.5);
-    }
   }
 }
 
@@ -71,6 +56,18 @@
     width: 100%;
     max-width: 1350px;
     min-height: 270px;
+    max-height: 300px;
     object-fit: cover;
+    border-radius: 4px;
   }
+}
+
+.enter__subtitle {
+  position: absolute;
+  font-size: rem-calc(20);
+  line-height: 28px;
+  top: 111px;
+  left: 37px;
+  color: $c-light;
+  margin: 0;
 }

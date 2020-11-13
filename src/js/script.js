@@ -73,3 +73,4 @@ document.querySelector(".page-header__sidebar-toggler").onclick = function () {
     .querySelector(".dashboard__aside")
     .classList.toggle("dashboard__aside--active");
 };
+

@@ -57,11 +57,11 @@
     padding: 0;
   }
   .block {
-    &--wide {
+
       @media (min-width: $tablet) {
         width: 487px;
       }
-    }
+
   }
   .slider__item-descr--wide {
     @media (min-width: $tablet) {

@@ -61,9 +61,8 @@
   &--active {
     background-color: $c-blue;
     border-radius: 50%;
-    width: 31px;
+    min-width: 31px;
     height: 31px;
-    margin-right: 23px;
     transform: rotate(45deg);
     &::after,
     &::before {

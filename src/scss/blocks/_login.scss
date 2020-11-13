@@ -1,13 +1,4 @@
-.login {
-  //visibility: hidden;
-  //opacity: 0;
-  z-index: 10;
-  transition: opacity 0.2s;
-  .page-header--menu-opened & {
-    visibility: visible;
-    opacity: 1;
-  }
-}
+
 .page-header__login {
   padding-left: 15px;
   border-left: 1px solid #2955c9;
@@ -36,8 +27,8 @@
   @media (min-width: $tablet) {
     .page-header--menu-opened & {
       width: 258px;
-      left: 74%;
-      top: 88px;
+      top: 75px;
+      left: -58px;
       transition: 0.2s;
       animation: none;
       &::after {

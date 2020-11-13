@@ -7,11 +7,11 @@
   font-weight: 400;
   font-size: rem-calc(16);
   line-height: rem-calc(26);
-  border: 1px solid #C3CAD6;
+  border: 1px solid #c3cad6;
   box-sizing: border-box;
   border-radius: 50px;
-  transition: .2s;
-  color: #C3CAD6;
+  transition: 0.2s;
+  color: #c3cad6;
 
   @media (min-width: $stop-scaling) {
     padding: 15px 29px;
@@ -19,22 +19,26 @@
     line-height: 30px;
   }
 
-  &:hover {
-    background: #3464E0;
-    border: 1px solid #3464E0;
+  &:hover,
+  &:focus {
+    border: none;
+    background: #3464e0;
     color: #fff;
   }
 
   &--light {
-    border: 1px solid #3464E0;
+    border: 1px solid #3464e0;
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
     line-height: 16px;
-    color: #3464E0;
+    color: #3464e0;
     white-space: nowrap;
     padding-top: 12px;
     padding-bottom: 12px;
+    &:hover {
+      border: none;
+    }
   }
 }
 
@@ -44,10 +48,49 @@
   font-weight: normal;
   font-size: 16px;
   line-height: 18px;
-  color: #3464E0;
+  color: #3464e0;
   border-color: #3464e0;
   padding: 11px 30px;
+  &:hover {
+    border: none;
+  }
 }
+
+$turqoise: #1abc9c;
+$blue: #2196f3;
+$cubic: cubic-bezier(.75,.37,.83,1);
+
+.btn--blue {
+  color: $c-light;
+  background: $c-blue;
+  border: none;
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding: 10px 29px;
+  transition: .5s;
+  overflow: hidden;
+  will-change: transform;
+  position: relative;
+  &::before {
+    content: '';
+    background: #90aaef;
+    opacity: 0.4;
+    position: absolute;
+    left: -60%;
+    top: -60%;
+    height: 100px;
+    width: 50px;
+    transform: rotate(20deg);
+    transition: all 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+  }
+  &:hover {
+    &::before {
+      left: 120%;
+    }
+  }
+}
+
+
 
 .btn--green {
   @include btn-reset;
@@ -58,10 +101,43 @@
   padding: 8px 30px;
   display: flex;
   align-items: center;
+  position: relative;
+  &:hover {
+    border: none;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    border-radius: 50%;
+    padding: 50%;
+    width: 32px; /* Safari */
+    height: 32px; /* Safari */
+    background-color: rgb(255, 255, 255);
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1);
+    transition: opacity 1s, transform 0.5s;
+  }
 }
 
 .btn--grey {
   background: $c-darkgrey;
   border-radius: 4px;
   color: $c-light;
+  &:hover {
+    border: none;
+  }
+}
+
+.btn--transparent {
+  text-align: center;
+  color: #ffffff;
+  background-color: transparent;
+  border-color: $c-light;
+  box-sizing: border-box;
+  border-radius: 4px;
+  &:hover {
+    border: 1px solid transparent;
+  }
 }

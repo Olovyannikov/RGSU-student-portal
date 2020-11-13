@@ -62,10 +62,9 @@
   }
   &--narrow {
     width: 281px;
-
-    font-size: 20px;
+    font-size: rem-calc(20);
     line-height: 26px;
-    color: #C3CAD6;
+    color: $c-darkgrey;
   }
 }
 

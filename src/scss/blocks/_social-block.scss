@@ -19,9 +19,26 @@
   margin-right: 10px;
   display: block;
   position: relative;
+  transition: .2s;
   svg {
     position: absolute;
     @include center;
+    fill: $c-darkgrey;
+  }
+  &:hover {
+    background-color: #4a76a8;
+    border: 1px solid #4a76a8;
+    svg {
+      fill: $c-light;
+    }
+  }
+  &--fb:hover {
+    background-color: #3578E5;
+    border: 1px solid #3578E5;
+  }
+  &--insta:hover {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    border: none;
   }
 }
 

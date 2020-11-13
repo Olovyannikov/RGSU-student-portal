@@ -1,9 +1,9 @@
 .block__title {
   font-style: normal;
   font-weight: normal;
-  font-size: 20px;
+  font-size: rem-calc(20);
   line-height: 26px;
-  color: #C3CAD6;
+  color: $c-darkgrey;
   margin: 33px 0 23px 0;
 }
 
@@ -25,7 +25,7 @@
 }
 
 .block__content-news {
-  min-width: 300px  ;
+  min-width: 300px;
 }
 
 
@@ -63,14 +63,19 @@
   }
 }
 
+.block {
+  max-width: 545px;
+  width: 487px;
+  @media (min-width: $tablet) {
+    width: 545px;
+  }
+}
+
 .block--wide {
   background: #3464e0;
   box-sizing: border-box;
   overflow: hidden;
   width: 100%;
-  @media (min-width: $mobile) {
-    width: 545px;
-  }
   .slider__item-descr {
     display: none;
     @media (min-width: $tablet) {
@@ -85,15 +90,9 @@
   width: 100%;
   box-sizing: border-box;
   color: #6E7781;
-  @media (min-width: $mobile) {
-    width: 430px;
-  }
 }
 
 .block--narrow {
   background: #fff;
   box-sizing: border-box;
-  @media (min-width: $mobile) {
-    width: 420px;
-  }
 }

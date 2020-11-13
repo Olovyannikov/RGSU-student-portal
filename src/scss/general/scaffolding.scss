@@ -101,6 +101,11 @@ img {
     opacity: 1;
     visibility: visible;
   }
+  &--menu {
+    opacity: 1;
+    visibility: visible;
+    background-color: rgba(0, 0, 0, 0);
+  }
 }
 
 //custom scrollbar

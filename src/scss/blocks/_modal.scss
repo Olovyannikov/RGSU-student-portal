@@ -15,11 +15,11 @@
 }
 
 .modal__close {
+  @include btn-reset;
   font-size: 0;
   position: absolute;
   content: '';
   display: block;
-  @include btn-reset;
   border: 1px solid #C3CAD6;
   box-sizing: border-box;
   width: 32px;
@@ -28,6 +28,7 @@
   top: 12px;
   right: 12px;
   border-radius: 50%;
+  transition: .5s;
   &::after,&::before {
     position: absolute;
     width: 15px;
@@ -40,6 +41,26 @@
   }
   &::after {
     transform: rotate(-45deg);
+    animation: rotateToX 0.5s ease-in-out;
+  }
+  &::before {
+    animation: rotateToY 0.5s ease-in-out;
+  }
+  &:hover {
+    background-color: $c-blue;
+    animation: fullRotate .5s;
+    &::after,&::before {
+      background: $c-light;
+    }
+  }
+}
+
+@keyframes fullRotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(180deg);
   }
 }
 
@@ -108,8 +129,6 @@
 }
 
 .modal__enter {
-  @include btn-reset;
-  @include button-blue;
   margin-right: 21px;
 }
 
@@ -132,5 +151,13 @@
   font-size: 16px;
   line-height: 26px;
   text-align: center;
-  color: #C3CAD6;
+  color: $c-darkgrey;
+  transition: .2s;
+  position: relative;
+  padding-bottom: 0;
+  &:hover {
+    color: $c-blue;
+    border-bottom: 2px solid $c-blue;
+    padding-bottom: 5px;
+  }
 }

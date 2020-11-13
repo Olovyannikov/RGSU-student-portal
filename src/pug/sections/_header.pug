@@ -5,9 +5,9 @@ header.page-header.js-header
             button.page-header__sidebar-toggler
                 span.toggler-element
                 span Профиль
-        .page-header__logo
+        a(href="index.html").page-header__logo
             svg.page-header__logo-image(width="48" height="48" fill="#FFFFFF")
-                use(xlink:href="#brain")
+                use(href="#brain")
             h1.page-header__logo-description Smart портал РГСУ
 
         .page-header__menu
@@ -45,6 +45,6 @@ header.page-header.js-header
                             label.form__label Введите пароль
                             input(required placeholder='*****').form__input
                         .modal__buttons
-                            button(type="submit").modal__enter Войти
+                            button(type="submit").modal__enter.btn.btn--blue Войти
                             button(type="submit").modal__sber Войти с помощью Сбер ID
                             a(href="#").modal__error Не можете войти?
