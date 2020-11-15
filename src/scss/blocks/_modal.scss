@@ -8,6 +8,9 @@
   top: 25%;
   transform: translate(-50%);
   display: none;
+  @media (max-width: $mobile) {
+    max-width: 90%;
+  }
 }
 
 .modal--active {
@@ -48,19 +51,12 @@
   }
   &:hover {
     background-color: $c-blue;
-    animation: fullRotate .5s;
+    transform: rotate(360deg);
+    border: none;
     &::after,&::before {
       background: $c-light;
+      right: 8px;
     }
-  }
-}
-
-@keyframes fullRotate {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(180deg);
   }
 }
 

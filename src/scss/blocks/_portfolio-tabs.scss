@@ -29,9 +29,17 @@
   text-transform: unset;
   color: #6E7781;
   margin-bottom: 32px;
+
+  &:hover {
+    border: 1px solid #3464e0;
+  }
   &--active {
     background: #3464e0;
     color: #FFFFFF;
+    border: 1px solid transparent;
+    &:hover {
+      border: 1px solid transparent;
+    }
   }
 }
 

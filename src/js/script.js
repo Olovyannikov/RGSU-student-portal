@@ -15,8 +15,12 @@ import { default as parenttabs } from "./modules/parenttabs.js";
 import { default as moderatortabs } from "./modules/moderatorTabs.js";
 import { default as dashboardaccordeon } from "./modules/dashboardaccordeon.js";
 import { default as filterBtn } from "./modules/filter.js";
+import { default as tags } from "./modules/tags.js"
 
 // init modules
+
+tags();
+
 if (document.querySelector(".js-filter-btn")) {
   filterBtn();
 }

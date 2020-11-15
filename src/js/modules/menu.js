@@ -47,7 +47,7 @@ export default () => {
 
   if (overlay) {
     overlay.addEventListener("click", function () {
-      if (header.classList.contains(`page-header--menu-opened`)) {
+      if (overlay.classList.contains(`active`)) {
         header.classList.remove(`page-header--menu-opened`);
         document.body.classList.remove(`menu-opened`);
         modal.classList.remove("modal--active");
