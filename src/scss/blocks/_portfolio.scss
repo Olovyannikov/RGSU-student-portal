@@ -1,7 +1,9 @@
 .portfolio {
   z-index: 1;
-  margin-bottom: 41px;
-  width: 315px;
+  width: 100%;
+  @media (min-width: $tablet) {
+    width: 315px;
+  }
 }
 
 .portfolio__container {

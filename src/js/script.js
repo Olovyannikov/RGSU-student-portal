@@ -15,10 +15,13 @@ import { default as parenttabs } from "./modules/parenttabs.js";
 import { default as moderatortabs } from "./modules/moderatorTabs.js";
 import { default as dashboardaccordeon } from "./modules/dashboardaccordeon.js";
 import { default as filterBtn } from "./modules/filter.js";
-import { default as tags } from "./modules/tags.js"
+import { default as tags } from "./modules/tags.js";
+import { default as dashboardtabs } from "./modules/dashboardtabs.js";
 
 // init modules
-
+if (document.querySelector(".settings__tabs")) {
+  dashboardtabs();
+}
 tags();
 
 if (document.querySelector(".js-filter-btn")) {
@@ -77,4 +80,3 @@ document.querySelector(".page-header__sidebar-toggler").onclick = function () {
     .querySelector(".dashboard__aside")
     .classList.toggle("dashboard__aside--active");
 };
-

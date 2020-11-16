@@ -1,22 +1,32 @@
+.profile {
+  margin-bottom: 41px;
+}
+
 .profile__title {
   padding-bottom: 43px;
 }
 
 .profile__wrapper {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
 }
 
 .profile__main {
   background: #fff;
   padding: 16px 0 0 21px;
-  width: 660px;
-  height: 247px;
   justify-content: space-between;
+  @media (min-width: $tablet) {
+    width: 660px;
+    height: fit-content;
+  }
 }
 
 .profile__card {
   display: flex;
+  width: 100%;
+  flex-wrap: wrap;
 }
 
 .profile__progress {
@@ -33,7 +43,7 @@
   margin: 0 0 12px;
 
   &::after {
-    content: ' ';
+    content: " ";
   }
 }
 
@@ -43,23 +53,23 @@
   line-height: 26px;
   display: inline-block;
   &::before {
-    content: '(';
+    content: "(";
   }
   &::after {
-    content: ')';
+    content: ")";
   }
 }
 
 .profile__age {
   &::after {
-    content: ', ';
+    content: ", ";
   }
 }
 
 .profile__info {
   font-size: 16px;
   line-height: 28px;
-  color: #6E7781;
+  color: #6e7781;
   margin-bottom: 16px;
 }
 
@@ -67,10 +77,54 @@
   color: #444;
 }
 
+.profile__info-avatar-section {
+  position: relative;
+  transition: .5s;
+}
+
+.profile__upload-image {
+  font-size: 0;
+  @include btn-reset;
+  position: absolute;
+  top: 70px;
+  left: 68px;
+  border-radius: 50%;
+  background: rgba(68, 68, 68, 0.2);
+  width: 71px;
+  height: 71px;
+  display: none;
+  transition: .5s;
+  .profile__info-avatar-section:hover & {
+    display: block;
+    transition: .5s;
+  }
+}
+
+.profile__info-avatar {
+  align-items: flex-start;
+  max-height: 206px;
+  position: relative;
+  transition: .5s;
+}
+.profile__info-avatar-description {
+  font-size: rem-calc(14);
+  line-height: 21px;
+  text-align: center;
+  color: $c-darkgrey;
+}
+
 .profile__contacts {
   display: flex;
   align-items: center;
-  margin-bottom: 30px;
+  margin-bottom: 23px;
+  flex-wrap: wrap;
+  gap: 20px;
+  ul {
+    margin-bottom: 0;
+  }
+  @media (min-width: $tablet) {
+    gap: 0;
+  }
 }
 
 .profile__social {
@@ -83,4 +137,3 @@
 .profile__contacts-data {
   margin-right: auto;
 }
-

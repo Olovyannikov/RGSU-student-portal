@@ -7,9 +7,11 @@
   width: 238px;
   background: #ffffff;
   border-radius: 4px;
-  transition: .5s;
-  &:hover {
+  transition: 0.5s;
+  &:hover,
+  &:focus {
     box-shadow: 0px 5px 20px rgba(110, 119, 129, 0.1);
+    transform: scale(1.01);
   }
 }
 
@@ -53,7 +55,7 @@
   font-size: 14px;
   line-height: 21px;
   text-align: center;
-  color: #C3CAD6;
+  color: #c3cad6;
 }
 
 $themeColor: #2bc584;
@@ -111,5 +113,3 @@ $half: round($loops / 2);
     }
   }
 }
-
-

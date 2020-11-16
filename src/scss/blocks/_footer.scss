@@ -2,8 +2,10 @@
   background: #6E7781;
   margin-top: rem-calc(41);
   hr {
-    border-bottom: 1px solid #6F7D8B;
-    margin: 0;
+      color: #6F7D8B; /*для IE */
+      background-color:#6F7D8B; /*для Firefox, Opera, Safari*/
+      border:0px none;
+      height:1px; /* высота 1px IE, Firefox, Opera, Safari */
   }
 }
 
@@ -11,11 +13,8 @@
   border-radius: 0;
   padding-top: 45px;
   display: flex;
-  flex-direction: column;
-  @media (min-width: $tablet) {
-    flex-direction: row;
-  }
-  justify-content: space-between;
+  gap: 30px;
+  flex-wrap: wrap;
 }
 
 .footer__section {

@@ -8,6 +8,7 @@
   justify-content: space-between;
   margin-bottom: 31px;
   flex-wrap: wrap;
+  align-items: center;
 }
 
 .vacancy__question {
@@ -38,7 +39,7 @@
   border-top: 1px solid #e4ecfa;
   padding-top: 24px;
   padding-left: 20px;
-  height: 720px;
+  min-height: 720px;
 }
 
 .vacancy__item-title {
@@ -76,6 +77,7 @@
 .vacancy__salary {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   margin-bottom: 25px;
   padding-top: 27px;
   margin-right: 28px;
@@ -99,15 +101,22 @@
   }
 }
 
+.vacancy__filter {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.vacancy__title {
+}
+
 .vacancy__filter-button {
   position: relative;
-  padding-left: 62px;
   transition: 0.5s;
   margin-bottom: 20px;
   svg {
     position: absolute;
-    left: 28px;
     top: 10px;
+    left: 10px;
     width: 22px;
     height: 22px;
     fill: $c-blue;
@@ -129,9 +138,9 @@
       position: absolute;
       display: block;
       width: 25px;
+      left: 9px;
       height: 1px;
       background: #fff;
-      left: 28px;
       top: 50%;
       z-index: 2;
     }
@@ -142,6 +151,20 @@
     &::before {
       transform: rotate(-45deg);
       animation: rotateToY 0.5s ease-in-out;
+    }
+  }
+  font-size: 0;
+  padding-right: 10px;
+  @media (min-width: $mobile) {
+    font-size: 100%;
+    padding-left: 62px;
+    svg {
+      left: 28px;
+    }
+    &--active {
+      &::before, &::after {
+        left: 28px;
+      }
     }
   }
 }

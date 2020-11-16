@@ -12,6 +12,7 @@ export default () => {
     const selectCatsTxt = document.createTextNode("Выберите категорию");
 
     fancySelect.classList.add("fancy-select-wrap");
+    fancySelect.classList.add('scrollbar-custom');
     fancySelect.dataset.name = select.name;
 
     optionsWrap.classList.add("options");

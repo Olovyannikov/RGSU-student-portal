@@ -100,6 +100,7 @@ img {
   &.active {
     opacity: 1;
     visibility: visible;
+    backdrop-filter: blur(1px);
   }
   &--menu {
     opacity: 1;

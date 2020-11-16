@@ -1,8 +1,10 @@
 .similar-profiles__wrapper {
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 30px;
   .card {
     width: 314px;
   }
+  flex-wrap: wrap;
 }

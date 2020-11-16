@@ -21,6 +21,10 @@
 
 .activity-work__header {
   @include headerBlock;
+  flex-wrap: wrap;
+  @media (min-width: $tablet) {
+    flex-wrap: unset;
+  }
 }
 
 .activity-work__progress {

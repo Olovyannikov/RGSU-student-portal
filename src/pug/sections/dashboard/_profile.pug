@@ -1,2 +1,99 @@
-main.main
-    section.
+section.settings
+    .settings__container
+        .settings__header
+            h2.settings__title.title--large Мой профиль
+        .settings__content.card--stack
+            .settings__info
+                .settings__info-wrapper
+                    h3.settings__info-title Изменить данные
+                    .profile__info
+                        p.profile__name Мария Владимировна Н.
+                        .profile__year Год поступления: 
+                            span.profile__info-data 2017/2018
+                        .profile__education Образование: 
+                            span.profile__info-data Бакалавр
+                        .profile__faculty Факультет: 
+                            span.profile__info-data Факультет искусств
+                        .profile__direction Направление подготовки: 
+                            span.profile__info-data Социально-культурная деятельность
+                        .profile__midscore Средний балл: 
+                            span.profile__info-data 4.59
+                        .profile__course Курс: 
+                            span.profile__info-data 4
+                .profile__info-avatar-section
+                    img.profile__info-avatar(src="img/dashboard-avatar-1.png" alt="Мазеин К. В." width=206 height=206)
+                    button.profile__upload-image Загрузить фото
+                        svg(width=29 height=29 fill="#ffffff")
+                            use(href='#pencil')
+                    p.profile__info-avatar-description
+                        | * требования к файлу: <br> формат JPG, PNG, не более 2 МБ
+            .settings__tabs
+                .settings__tabs-buttons
+                    button.settings__tabs-btn.settings__tabs-btn--active(data-id="info") Информация
+                    button.settings__tabs-btn(data-id="socials") Социальные сети
+                    button.settings__tabs-btn(data-id="about") О себе
+                    button.settings__tabs-btn(data-id="work") Трудоустройство
+                .settings__tabs-container
+                    .settings__tab.settings__tab--active.settings__tab--info#info
+                        p Some info
+                    .settings__tab.settings__tab--socials#socials
+                        ul.social-block__list.footer__list
+                            li.social-block__item
+                                a(href="mailto:info@rgsu.net").social-block__link.social-block__link--vk Вконтакте
+                                    svg(width="18" height="11")
+                                        use(href="#vk")
+                            li.social-block__item
+                                a(href="mailto:info@rgsu.net").social-block__link.social-block__link--fb Фейсбук
+                                    svg(width="8" height="16")
+                                        use(href="#fb")
+                            li.social-block__item
+                                a(href="mailto:info@rgsu.net").social-block__link.social-block__link--insta Инстаграм
+                                    svg(width="16" height="16")
+                                        use(href="#insta")
+                    .settings__tab.settings__tab--about#about
+                        ul.social-block__list.footer__list
+                            li.social-block__item
+                                a(href="mailto:info@rgsu.net").social-block__link.social-block__link--vk Вконтакте
+                                    svg(width="18" height="11")
+                                        use(href="#vk")
+                            li.social-block__item
+                                a(href="mailto:info@rgsu.net").social-block__link.social-block__link--fb Фейсбук
+                                    svg(width="8" height="16")
+                                        use(href="#fb")
+                    .settings__tab.settings__tab--work#work
+                        .settings__tab-content
+                            .settings__tab-togglers
+                                input(type="checkbox" id="isHire").ios-toggle
+                                label(for="isHire").settings__tab-toggle
+                                label(for="isHire").settings__tab-toggler Нахожусь в поиске работы
+                            .settings__filter
+                                .settings__filter-container
+                                    label.settings__filter-label(for="position") Желаемая должность
+                                    select(required).settings__filter-select#position(name="position")
+                                        option(disabled) --выберите--
+                                        option(selected) Директор
+                                        option() Уборщик
+                                        option() Владыка
+                                .settings__filter-container
+                                    label.settings__filter-label(for="environment") Профессиональная сфера
+                                    select(required).settings__filter-select#environment(name="environment")
+                                        option(disabled) --выберите--
+                                        option(selected) IT
+                                        option() Поломойка
+                                        option() На параше
+                                .settings__filter-container
+                                    label.settings__filter-label(for="salary") Заработная плата
+                                    .two-range-slider.js-two-range-slider#salary
+                                        .two-range-slider__output
+                                            output.two-range-slider__value.js-two-range-slider-min-value.two-range-slider__value--left.range-money
+                                            output.two-range-slider__value.js-two-range-slider-max-value.two-range-slider__value--right.range-money
+                                        input.two-range-slider__input.js-two-range-slider-input(type='range' min='0' max='250000' value='250000' step='10000').left-range
+                                        input.two-range-slider__input.js-two-range-slider-input(type='range' min='0' max='250000' value='0' step='10000').left-range
+                                .settings__filter-container
+                                    label.settings__filter-label Желаемый вид занятости
+                                    select(required).settings__filter-select
+                                        option(disabled) --выберите--
+                                        option(selected) Частичная
+                                        option() Полная
+                                        option() Полная частичная
+                        button.settings__save-btn.btn.btn--regular Сохранить

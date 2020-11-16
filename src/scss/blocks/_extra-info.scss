@@ -37,17 +37,22 @@
 }
 
 .extra-info__wrapper {
-  justify-content: space-between;
+  justify-content: center;
   display: none;
+  gap: 30px;
   &--open {
     display: flex;
+    flex-wrap: wrap;
   }
 }
 
 .extra-info__card {
-  width: 430px;
+  width: 100%;
   max-height: 246px;
   overflow-y: hidden;
+  @media (min-width: $tablet) {
+    width: 430px;
+  }
 }
 
 .extra-info__card-title {

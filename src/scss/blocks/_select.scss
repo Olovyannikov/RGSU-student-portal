@@ -3,7 +3,7 @@
   font-size: rem-calc(14);
   line-height: 26px;
   margin: 0;
-  width: 266px;
+  width: 214px;
   padding: 0;
   overflow: hidden;
   position: relative;
@@ -13,8 +13,7 @@
   border-radius: 4px;
 
   .selected {
-    padding: 10px;
-    padding-right: 35px;
+    padding: 7px 20px 7px 6px;
     cursor: pointer;
     font-size: rem-calc(14);
     line-height: 26px;
