@@ -1,0 +1,149 @@
+.fancy-select-wrap {
+  background: white;
+  font-size: rem-calc(14);
+  line-height: 26px;
+  margin: 0;
+  width: 266px;
+  padding: 0;
+  overflow: hidden;
+  position: relative;
+  appearance: none;
+  border: 1px solid #F1F4F9;
+  box-sizing: border-box;
+  border-radius: 4px;
+
+  .selected {
+    padding: 10px;
+    padding-right: 35px;
+    cursor: pointer;
+    font-size: rem-calc(14);
+    line-height: 26px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+
+    > span {
+      display: inline-block;
+      background: $c-darkgrey;
+      padding: 0 0.5rem 0 36px;
+      max-height: 30px;
+      color: $c-light;
+      line-height: 2rem;
+      border-radius: 5px;
+      position: relative;
+      transition: all 0.2s ease;
+
+      &:before {
+        content: '';
+        background: url("../img/icons/cross.svg") no-repeat center;
+        background-color: #ABB3C1;
+        font-weight: bold;
+        border-radius: 3px 0 0 3px;
+        position: absolute;
+        line-height: 2rem;
+        font-size: 18px;
+        width: 28px;
+        height: 30px;
+        left: 0;
+        top: 0;
+        opacity: 0.5;
+        text-align: center;
+        transition: all 0.2s ease;
+      }
+
+      &:hover {
+        background-color: mix(#efefef, red, 70%);
+        &:after {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  .options {
+    display: none;
+    max-height: 250px;
+    overflow-x: hidden;
+    > div {
+      padding: 10px 15px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      position: relative;
+
+      &:not(.subopt) {
+        font-weight: bold;
+      }
+      &.subopt {
+        padding-left: 2rem;
+      }
+
+      &:after {
+        content: '+';
+        font-weight: bold;
+        position: absolute;
+        font-size: 20px;
+        right: 1rem;
+        top: 50%;
+        transform: translateY(-50%);
+        display: block;
+        opacity: 0;
+        transition: all 0.2s ease;
+      }
+
+      &:hover {
+        background-color: #efefef;
+
+        &:after {
+          opacity: 1;
+        }
+      }
+
+      &[data-selected='1'] {
+        background-color: mix(#efefef, #32c509, 70%);
+        &:after {
+          opacity: 1;
+          content: '✓';
+        }
+
+        &:hover {
+          background-color: mix(#efefef, red, 70%);
+          &:after {
+            content: 'x';
+          }
+        }
+      }
+    }
+  }
+
+  + select {
+    visibility: hidden;
+    position: absolute;
+  }
+
+
+
+  &:hover {
+    &:after {
+      opacity: 1;
+    }
+  }
+
+  &.expanded {
+    min-height: 300px;
+    .selected {
+      border-bottom: 1px solid #e6e6e6;
+    }
+    .options {
+      display: block;
+    }
+
+    &:after {
+      background-image: linear-gradient(
+                      to bottom right,
+                      transparent 50%,
+                      #bbb 51%
+      ),
+      linear-gradient(to bottom left, transparent 50%, #bbb 51%);
+    }
+  }
+}

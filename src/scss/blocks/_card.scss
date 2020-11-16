@@ -7,6 +7,10 @@
   width: 238px;
   background: #ffffff;
   border-radius: 4px;
+  transition: .5s;
+  &:hover {
+    box-shadow: 0px 5px 20px rgba(110, 119, 129, 0.1);
+  }
 }
 
 .card__progress {

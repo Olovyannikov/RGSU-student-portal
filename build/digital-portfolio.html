@@ -477,10 +477,16 @@
               </div>
               <div class="filter__education">
                 <h4 class="filter__title title--aside">Уровень образования</h4>
-                <div class="filter__education-options"><span class="filter__education-option">Аспирантура
-                    <button class="filter__education-option--delete"></button></span><span class="filter__education-option">Бакалавр
-                    <button class="filter__education-option--delete"></button></span><span class="filter__education-option">Магистр
-                    <button class="filter__education-option--delete"></button></span></div>
+                <div class="filter__education-options">
+                  <select class="fancy-select" name="category" required="required" multiple="multiple">
+                    <option value="Бухгалтерия">Бухгалтерия</option>
+                    <option value="IT">IT</option>
+                    <option value="PM">Product Management</option>
+                    <option value="PrM">Project Management</option>
+                    <option value="Audio">Audio Production</option>
+                    <option value="Video">Videoprod</option>
+                  </select>
+                </div>
               </div>
               <div class="filter__salary">
                 <h4 class="filter__title title--aside">Желаемая заработная плата</h4>
