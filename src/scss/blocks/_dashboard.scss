@@ -91,6 +91,16 @@
     position: static;
     transform: translateX(0);
     max-width: 315px;
+    &--short {
+      max-width: 68px;
+      .card__name, .card__faculty, .progress__wrapper {
+        display: none;
+      }
+      .progress--circle {
+        width: 62px;
+        height: 62px;
+      }
+    }
   }
 }
 
@@ -205,6 +215,11 @@
       fill: $c-blue;
     }
   }
+  &--short {
+    font-size: 0;
+    width: 68px;
+    position: relative;
+  }
 }
 
 .dashboard__notification-counter {
@@ -218,6 +233,11 @@
   background-color: $c-red;
   border-radius: 50%;
   margin-left: 11px;
+  .dashboard__menu-link--short & {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+  }
 }
 
 .dashboard__main-content {
@@ -227,7 +247,9 @@
   width: 100%;
   flex-wrap: wrap;
   @media (min-width: $tablet) {
-
+  section {
+    width: 100%;
+  }
   }
   .info__card-stack {
     max-height: 272px;

@@ -1,0 +1,23 @@
+.parents-list {
+  @include list-reset;
+  margin-bottom: 41px;
+}
+
+.parents-list__item {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #F1F4F9;
+}
+
+.parents-list__available {
+  font-size: rem-calc(14);
+  line-height: 26px;
+  color: $c-darkgrey;
+  display: block;
+}
+
+.parents-list__link {
+  font-size: rem-calc(18);
+  line-height: 26px;
+  color: $c-black;
+}

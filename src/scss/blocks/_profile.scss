@@ -71,6 +71,7 @@
   line-height: 28px;
   color: #6e7781;
   margin-bottom: 16px;
+  margin-top: 22px;
 }
 
 .profile__info-data {
@@ -80,23 +81,40 @@
 .profile__info-avatar-section {
   position: relative;
   transition: .5s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .profile__upload-image {
-  font-size: 0;
-  @include btn-reset;
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
   position: absolute;
-  top: 70px;
-  left: 68px;
-  border-radius: 50%;
-  background: rgba(68, 68, 68, 0.2);
-  width: 71px;
-  height: 71px;
-  display: none;
-  transition: .5s;
-  .profile__info-avatar-section:hover & {
-    display: block;
-    transition: .5s;
+  z-index: -1;
+  + .profile__upload-label {
+    font-size: 0;
+    width: 71px;
+    height: 71px;
+    color: white;
+    border-radius: 50%;
+    background: rgba(68, 68, 68, 0.2);
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-100%);
+    svg {
+      position: absolute;
+      display: block;
+      content: '';
+      @include center;
+    }
+    .profile__info-avatar-section:hover & {
+      display: inline-block;
+    }
   }
 }
 

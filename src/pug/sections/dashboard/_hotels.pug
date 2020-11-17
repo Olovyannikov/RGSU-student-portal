@@ -1,0 +1,47 @@
+section.hotels
+    .hotels__tabs
+        .hotels__buttons
+            button(data-id="late").hotels__tab-btn.hotels__tab-btn--active.btn.btn--light Опоздание в общежитие
+            button(data-id="missing").hotels__tab-btn.btn.btn--light Отсутствие в общежитии
+            button(data-id="guests").hotels__tab-btn.btn.btn--light Посещение гостями
+            button(data-id="washing").hotels__tab-btn.btn.btn--light Стирка
+        .hotels__tab-container
+            .hotels__tab.hotels__tab--active.hotels__tab--late(id="late")
+                .hotels__tab-wrapper
+                    h3.hotels__tab-title Заявка на опоздание
+                    form.hotels__form
+                        .hotels__form-wrapper
+                            label.hotels__form-label(for="date") Дата
+                            input(type="date" name="date" id="date").hotels__form-input
+                        .hotels__form-wrapper
+                            label.hotels__form-label(for="time") Время
+                            input(type="time" name="time" id="time").hotels__form-input
+                        .hotels__form-wrapper
+                            label.hotels__form-label(for="reason") Причина
+                            input(type="text" name="reason" id="reason").hotels__form-input
+                        .hotels__form-wrapper.hotels__form-wrapper--approve
+                            p.hotels__form-label Подтверждение
+                            label(for="approve").hotels__form-file Выбрать файл
+                                svg(width="19" height="20")
+                                    use(href="#clip")
+                            input(name="approve" id="approve" type="file").hotels__form-input
+                            span.hotels__form-description  * требования к файлу: формат JPG, PNG, не более 2 МБ
+                        button(type="submit").hotels__form-submit.btn.btn--blue Отправить
+                .hotels__tab-wrapper
+                    table.hotels__table
+                        thead.hotels__table-header
+                            tr.hotels__table-header-row
+                                th.hotels__table-title История опозданий 
+                                    span.hotels__table-counter 23
+                        tbody.hotels__table-body
+                            tr.hotels__table-row
+                                td.hotels__table-col.hotels__table-col--date 22.12.2020
+                                    span.hotels__table-col--time 11:23
+                                td.hotels__table-col.hotels__table-col--reason Девушка не отпускала
+                                td.hotels__table-col.hotels__table-col--approve Подтверждено
+
+            .hotels__tab.hotels__tab--missing(id="missing")
+
+            .hotels__tab.hotels__tab--guests(id="guests")
+
+            .hotels__tab.hotels__tab--washing(id="washing")

@@ -80,3 +80,32 @@ document.querySelector(".page-header__sidebar-toggler").onclick = function () {
     .querySelector(".dashboard__aside")
     .classList.toggle("dashboard__aside--active");
 };
+
+if (document.querySelector("#fullMenu")) {
+  let menuState = document.querySelector("#fullMenu");
+  let menuHeaders = document.querySelectorAll(".dashboard__menu-header");
+  let menuLists = document.querySelectorAll(".dashboard__menu-list");
+  let menuLinks = document.querySelectorAll(".dashboard__menu-link");
+  let aside = document.querySelector(".dashboard__aside");
+  menuState.addEventListener("change", function () {
+    if (this.checked) {
+      for (let i = 0; i < menuHeaders.length; i++) {
+        menuHeaders[i].style.display = "none";
+        menuLists[i].classList.add("dashboard__menu-list--active");
+        menuLinks.forEach((menuLinks) => {
+          menuLinks.classList.add("dashboard__menu-link" + "--short");
+        });
+        aside.classList.add("dashboard__aside--short");
+      }
+    } else {
+      for (let i = 0; i < menuHeaders.length; i++) {
+        menuHeaders[i].style.display = "flex";
+        menuLists[i].classList.remove("dashboard__menu-list--active");
+        menuLinks.forEach((menuLinks) => {
+          menuLinks.classList.remove("dashboard__menu-link" + "--short");
+        });
+        aside.classList.remove("dashboard__aside--short");
+      }
+    }
+  });
+}

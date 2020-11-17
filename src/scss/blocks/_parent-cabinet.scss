@@ -33,7 +33,7 @@
 	left: 18px;
 	top: 12px;
   }
-  &:hover {
+  &:hover,&:focus {
 	svg {
 	  fill: $c-light;
 	}

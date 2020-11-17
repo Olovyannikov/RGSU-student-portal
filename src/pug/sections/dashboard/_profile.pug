@@ -22,7 +22,8 @@ section.settings
                             span.profile__info-data 4
                 .profile__info-avatar-section
                     img.profile__info-avatar(src="img/dashboard-avatar-1.png" alt="Мазеин К. В." width=206 height=206)
-                    button.profile__upload-image Загрузить фото
+                    input(type="file" name="file" id="file").profile__upload-image
+                    label(for="file").profile__upload-label Выберите файл
                         svg(width=29 height=29 fill="#ffffff")
                             use(href='#pencil')
                     p.profile__info-avatar-description
@@ -69,14 +70,14 @@ section.settings
                             .settings__filter
                                 .settings__filter-container
                                     label.settings__filter-label(for="position") Желаемая должность
-                                    select(required).settings__filter-select#position(name="position")
+                                    select(required name="position").settings__filter-select#position
                                         option(disabled) --выберите--
                                         option(selected) Директор
                                         option() Уборщик
                                         option() Владыка
                                 .settings__filter-container
                                     label.settings__filter-label(for="environment") Профессиональная сфера
-                                    select(required).settings__filter-select#environment(name="environment")
+                                    select(required name="environment").settings__filter-select#environment
                                         option(disabled) --выберите--
                                         option(selected) IT
                                         option() Поломойка
@@ -96,4 +97,46 @@ section.settings
                                         option(selected) Частичная
                                         option() Полная
                                         option() Полная частичная
-                        button.settings__save-btn.btn.btn--regular Сохранить
+                    button.settings__save-btn.btn.btn--regular Сохранить
+        .settings__global
+            .settings__site.settings__site-profile
+                h3.settings__info-title Настройки сайта и профиля
+                .settings__site-togglers
+                    input(type="checkbox" id="public").ios-toggle
+                    label(for="public").settings__tab-toggle
+                    label(for="public").settings__tab-toggler Я даю согласие на публикацию моего <br> портфолио на сайте ?
+                .settings__site-togglers
+                    input(type="checkbox" id="terms" disabled checked).ios-toggle
+                    label(for="terms").settings__tab-toggle
+                    label(for="terms").settings__tab-toggler Я согласен с <a href="#">пользовательским соглашением</a>
+                .settings__site-togglers
+                    input(type="checkbox" id="notification" disabled checked).ios-toggle
+                    label(for="notification").settings__tab-toggle
+                    label(for="notification").settings__tab-toggler Я согласен получать уведомления <br>о запросах работодателей
+                .settings__site-togglers
+                    input(type="checkbox" id="ablimpix" disabled checked).ios-toggle
+                    label(for="ablimpix").settings__tab-toggle
+                    label(for="ablimpix").settings__tab-toggler Участника "Абилимпикса"
+                .settings__site-togglers
+                    input(type="checkbox" id="volunteer").ios-toggle
+                    label(for="volunteer").settings__tab-toggle
+                    label(for="volunteer").settings__tab-toggler Волонтер "Абилимпикса"
+                .settings__site-togglers
+                    input(type="checkbox" id="fullMenu").ios-toggle
+                    label(for="fullMenu").settings__tab-toggle
+                    label(for="fullMenu").settings__tab-toggler Полный вывод панели меню
+            .settings__site.settings__site-parents
+                h3.settings__info-title Мои родители
+                ul.settings__site-parents-list.parents-list
+                    li.parents-list__item
+                        span.parents-list__available Была на сайте: 24.11.2020
+                        a(href="#").parents-list__link Иванова Мария Петровна
+                    li.parents-list__item
+                        span.parents-list__available Был на сайте: 24.11.2020
+                        a(href="#").parents-list__link Иванова Мария Петровна
+
+                p.settings__info-title Отправить приглашение
+                .settings__invite
+                    label(for="parent-mail") Email родителя
+                    input(type="email" id="parent-mail" required)
+                    button.settings__invite-btn.btn.btn--regular Отправить

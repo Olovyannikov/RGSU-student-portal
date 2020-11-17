@@ -23,6 +23,7 @@
   &:focus {
     background: #3464e0;
     color: #fff;
+    border: 1px solid transparent;
   }
 
   &--light {
@@ -56,7 +57,7 @@ $cubic: cubic-bezier(.75,.37,.83,1);
 .btn--blue {
   color: $c-light;
   background: $c-blue;
-  border: none;
+  border: 1px solid transparent;
   box-sizing: border-box;
   border-radius: 4px;
   padding: 10px 29px;
@@ -96,7 +97,7 @@ $cubic: cubic-bezier(.75,.37,.83,1);
   align-items: center;
   position: relative;
   &:hover {
-    border: none;
+    border: 1px solid transparent;
   }
   &::after {
     content: "";
@@ -119,7 +120,7 @@ $cubic: cubic-bezier(.75,.37,.83,1);
   border-radius: 4px;
   color: $c-light;
   &:hover {
-    border: none;
+    border: 1px solid transparent;
   }
 }
 
