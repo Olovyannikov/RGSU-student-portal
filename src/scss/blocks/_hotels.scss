@@ -1,19 +1,5 @@
-.hotels__tab-btn {
-  border-radius: 2px;
-  margin-right: 25px;
-  background: 0 0;
-  border: 1px solid #e4ecfa;
-  cursor: pointer;
-  outline: 0;
-  position: relative;
-  color: #6e7781;
-  font-size: rem-calc(16);
-  line-height: 26px;
-  &--active {
-    color: #3464e0;
-    border: 1px solid #3464e0;
-  }
-}
+//tabs
+
 
 .hotels__tab-wrapper {
   background-color: $c-light;
@@ -30,7 +16,6 @@
   font-weight: 500;
   padding: 0 0 7px;
   margin: 0;
-  border-bottom: 1px solid #e4ecfa;
 }
 
 .hotels__form {
@@ -74,7 +59,7 @@
     color: transparent;
     opacity: 1;
     background: url("../img/icons/calendar.svg") no-repeat center;
-    background-size: contain;
+    background-size: 20px;
     cursor: pointer;
     padding-right: 9px;
   }
@@ -82,7 +67,7 @@
     color: transparent;
     opacity: 1;
     background: url("../img/icons/timer.svg") no-repeat center;
-    background-size: contain;
+    background-size: 26px;
     cursor: pointer;
     padding-right: 9px;
   }
@@ -96,7 +81,7 @@
   }
 }
 
-.hotels__form-label {
+.hotels__form-approve {
   color: $c-black;
   font-size: rem-calc(16);
   line-height: 26px;
@@ -117,7 +102,7 @@
   border: 1px solid $c-blue;
   padding: 9px 45px 9px 16px;
   position: relative;
-  transition: .2s;
+  transition: 0.2s;
   margin-right: 15px;
   svg {
     fill: $c-blue;
@@ -141,4 +126,109 @@
 
 .hotels__form-submit {
   margin-top: 35px;
+}
+
+//table style
+
+.hotels__table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.hotels__table-header {
+  border-bottom: 1px solid #e4ecfa;
+  display: flex;
+}
+
+.hotels__table-title {
+  font-size: rem-calc(22);
+  line-height: 26px;
+  color: $c-black;
+  font-weight: 500;
+  padding-bottom: 7px;
+}
+
+.hotels__table-counter {
+  color: $c-light;
+  font-size: rem-calc(15);
+  line-height: 18px;
+  border-radius: 50%;
+  background: $c-red;
+  padding: 3px 4px;
+}
+
+.hotels__table-row {
+  padding-top: 22px;
+  padding-bottom: 22px;
+  display: flex;
+  border-bottom: 1px solid #f1f4f9;
+  font-size: rem-calc(16);
+  line-height: 22px;
+  &:last-child {
+    border: none;
+  }
+}
+
+.hotels__table-col--time {
+  &::before {
+    content: " ";
+  }
+}
+
+.hotels__table-col--date {
+  font-size: rem-calc(14);
+  line-height: 22px;
+  color: $c-darkgrey;
+  width: 113px;
+}
+
+.hotels__table-col {
+  &--approve {
+    margin-left: auto;
+    color: $c-green;
+  }
+  &--notapprove {
+    margin-left: auto;
+    color: $c-red;
+  }
+  &--name {
+    margin-left: 40px;
+  }
+}
+
+.hotels__tab-header {
+  display: flex;
+  border-bottom: 1px solid #e4ecfa;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hotels__tab-remains {
+  color: $c-green;
+}
+
+.hotels__tab-available {
+  color: $c-darkgrey;
+}
+
+.hotels__tab-today {
+  color: $c-darkgrey;
+  margin-left: auto;
+  margin-right: 19px;
+}
+
+.hotels__tab-week {
+  @include btn-reset;
+  color: $c-blue;
+  border-bottom: 1px dotted $c-blue;
+}
+
+//chart
+
+.hotels__chart {
+  margin-top: 32px;
+}
+
+.form__wash {
+  width: 452px;
 }

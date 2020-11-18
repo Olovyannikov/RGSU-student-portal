@@ -135,35 +135,31 @@
 
 //tabs
 
-.settings__tabs-buttons {
-  padding-left: 21px;
-  gap: 53px;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-}
-
 .settings__tabs-btn {
   @include btn-reset;
   font-size: rem-calc(18);
   line-height: 26px;
   color: $c-darkgrey;
   padding-bottom: 17px;
-  &--active {
+}
+
+.settings__tabs-buttons {
+  padding-left: 21px;
+  gap: 53px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  .tabs__button--active {
     color: $c-blue;
     border-bottom: 2px solid $c-blue;
   }
 }
 
 .settings__tab {
-  display: none;
   border-top: 1px solid #E4ECFA;
   border-bottom: 1px solid #E4ECFA;
   padding-bottom: 24px;
   margin-bottom: 31px;
-  &--active {
-    display: block;
-  }
 }
 
 //filters
@@ -221,7 +217,7 @@
 
 .settings__site {
   background-color: $c-light;
-  padding: 26px 72px 30px 19px;
+  padding: 26px 60px 30px 19px;
   border-radius: 4px;
   max-width: 485px;
   box-sizing: border-box;

@@ -28,16 +28,16 @@ section.settings
                             use(href='#pencil')
                     p.profile__info-avatar-description
                         | * требования к файлу: <br> формат JPG, PNG, не более 2 МБ
-            .settings__tabs
-                .settings__tabs-buttons
-                    button.settings__tabs-btn.settings__tabs-btn--active(data-id="info") Информация
-                    button.settings__tabs-btn(data-id="socials") Социальные сети
-                    button.settings__tabs-btn(data-id="about") О себе
-                    button.settings__tabs-btn(data-id="work") Трудоустройство
+            .settings__tabs.tabs__container
+                .settings__tabs-buttons.tabs__buttons
+                    button.settings__tabs-btn(data-id="info").tabs__button.tabs__button--active Информация
+                    button.settings__tabs-btn(data-id="socials").tabs__button Социальные сети
+                    button.settings__tabs-btn(data-id="about").tabs__button О себе
+                    button.settings__tabs-btn(data-id="work").tabs__button Трудоустройство
                 .settings__tabs-container
-                    .settings__tab.settings__tab--active.settings__tab--info#info
+                    .settings__tab.settings__tab--active.settings__tab--info#info.tabs__item.tabs__item--active
                         p Some info
-                    .settings__tab.settings__tab--socials#socials
+                    .settings__tab.settings__tab--socials#socials.tabs__item
                         ul.social-block__list.footer__list
                             li.social-block__item
                                 a(href="mailto:info@rgsu.net").social-block__link.social-block__link--vk Вконтакте
@@ -51,7 +51,7 @@ section.settings
                                 a(href="mailto:info@rgsu.net").social-block__link.social-block__link--insta Инстаграм
                                     svg(width="16" height="16")
                                         use(href="#insta")
-                    .settings__tab.settings__tab--about#about
+                    .settings__tab.settings__tab--about#about.tabs__item
                         ul.social-block__list.footer__list
                             li.social-block__item
                                 a(href="mailto:info@rgsu.net").social-block__link.social-block__link--vk Вконтакте
@@ -61,7 +61,7 @@ section.settings
                                 a(href="mailto:info@rgsu.net").social-block__link.social-block__link--fb Фейсбук
                                     svg(width="8" height="16")
                                         use(href="#fb")
-                    .settings__tab.settings__tab--work#work
+                    .settings__tab.settings__tab--work#work.tabs__item
                         .settings__tab-content
                             .settings__tab-togglers
                                 input(type="checkbox" id="isHire").ios-toggle

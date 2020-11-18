@@ -1,13 +1,14 @@
-@import "general/rem-calc";
-@import "general/variables.scss";
 @import "vendor/normalize.scss";
 @import "vendor/swiper.scss";
+@import "general/rem-calc";
+@import "general/variables.scss";
 @import "general/mixins.scss";
 @import "general/fonts.scss";
 @import "general/scaffolding.scss";
 @import "general/mixes";
 @import "general/btn";
 @import "general/cookie";
+@import "general/tabs";
 @import "blocks/block-content";
 
 //global

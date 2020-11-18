@@ -67,20 +67,20 @@
     </header>
     <main class="main">
       <section class="moderator">
-        <div class="moderator__container container">
+        <div class="moderator__container container tabs__container">
           <h2 class="moderator__title title--large">Модерирование</h2>
           <div class="moderator__tabs-buttons">
-            <button class="moderator__button moderator__button--active btn btn--light" data-id="late">Опоздания</button>
-            <button class="moderator__button btn btn--light" data-id="absence">Отсутствия</button>
-            <button class="moderator__button btn btn--light" data-id="visit">Посещения гостями</button>
-            <button class="moderator__button btn btn--light" data-id="agree">Согласия на прививку</button>
-            <button class="moderator__button btn btn--light" data-id="enter">Вход/выход</button>
-            <button class="moderator__button btn btn--light" data-id="studentHouse">Проживающие в общежитии</button>
-            <button class="moderator__button btn btn--light" data-id="declaration">Заявления на общежитие</button>
-            <button class="moderator__button btn btn--light" data-id="failure">Фиксация нарушений</button>
+            <button class="moderator__button btn btn--border tabs__button tabs__button--active" data-id="late">Опоздания</button>
+            <button class="moderator__button btn btn--border tabs__button" data-id="absence">Отсутствия</button>
+            <button class="moderator__button btn btn--border tabs__button" data-id="visit">Посещения гостями</button>
+            <button class="moderator__button btn btn--border tabs__button" data-id="agree">Согласия на прививку</button>
+            <button class="moderator__button btn btn--border tabs__button" data-id="enter">Вход/выход</button>
+            <button class="moderator__button btn btn--border tabs__button" data-id="studentHouse">Проживающие в общежитии</button>
+            <button class="moderator__button btn btn--border tabs__button" data-id="declaration">Заявления на общежитие</button>
+            <button class="moderator__button btn btn--border tabs__button" data-id="failure">Фиксация нарушений</button>
           </div>
           <div class="moderator__tabs">
-            <div class="moderator__tabs-tab moderator__tab moderator__tab--active" id="late">
+            <div class="moderator__tabs-tab moderator__tab tabs__item tabs__item--active" id="late">
               <table class="moderator__table">
                 <thead class="moderator__table-header">
                   <tr class="moderator__table-row">
@@ -144,23 +144,23 @@
                 </tbody>
               </table>
             </div>
-            <div class="moderator__tabs-tab moderator__tab" id="absence">
+            <div class="moderator__tabs-tab moderator__tab tabs__item" id="absence">
               <table></table>
             </div>
-            <div class="moderator__tabs-tab moderator__tab" id="visit">
+            <div class="moderator__tabs-tab moderator__tab tabs__item" id="visit">
               <table></table>
             </div>
-            <div class="moderator__tabs-tab moderator__tab" id="agree">
+            <div class="moderator__tabs-tab moderator__tab tabs__item" id="agree">
               <table></table>
             </div>
-            <div class="moderator__tabs-tab moderator__tab" id="enter">
+            <div class="moderator__tabs-tab moderator__tab tabs__item" id="enter">
               <table></table>
             </div>
-            <div class="moderator__tabs-tab moderator__tab" id="studentHouse">
+            <div class="moderator__tabs-tab moderator__tab tabs__item" id="studentHouse">
               <table></table>
             </div>
-            <div class="moderator__tabs-tab moderator__tab" id="declaration"></div>
-            <div class="moderator__tabs-tab moderator__tab" id="failure">
+            <div class="moderator__tabs-tab moderator__tab tabs__item" id="declaration"></div>
+            <div class="moderator__tabs-tab moderator__tab tabs__item" id="failure">
               <div class="moderator__tab-wrapper">
                 <table class="moderator__table moderator__table-fail">
                   <thead class="moderator__table-header">

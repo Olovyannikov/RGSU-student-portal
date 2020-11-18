@@ -130,11 +130,11 @@
   min-width: 215px;
   font-style: normal;
   font-weight: normal;
-  font-size: 20px;
+  font-size: rem-calc(20);
   line-height: 26px;
   color: #FFFFFF;
   @media (min-width: $tablet) {
-    font-size: 24px;
+    font-size: rem-calc(24);
     line-height: 30px;
     margin: 0 0 23px;
     max-width: 353px;
@@ -144,27 +144,25 @@
 .slider__item-descr {
   font-style: normal;
   font-weight: normal;
-  font-size: 14px;
+  font-size: rem-calc(14);
   line-height: 18px;
   margin-bottom: 0;
   width: 262px;
   max-width: 100%;
   @media (min-width: $tablet) {
-    font-size: 16px;
+    font-size: rem-calc(16);
+    line-height: 21px;
     width: 100%;
     margin: 0 0 24px;
-    line-height: 21px;
-
   }
   &--medium {
-    font-size: 18px;
+    font-size: rem-calc(18);
     line-height: 26px;
     color: #c3cad6;
   }
   &--narrow {
     width: 281px;
-
-    font-size: 20px;
+    font-size: rem-calc(20);
     line-height: 26px;
     color: #c3cad6;
   }
@@ -185,7 +183,7 @@
   transition: .5s;
   @media (min-width: $mobile) {
     left: 29px;
-    bottom: 25px;
+    bottom: 15px;
     right: auto;
   }
   &:hover {

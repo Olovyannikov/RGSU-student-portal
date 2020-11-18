@@ -193,18 +193,20 @@
           </aside>
           <div class="dashboard__main-content">
             <section class="hotels">
-              <div class="hotels__tabs">
-                <div class="hotels__buttons">
-                  <button class="hotels__tab-btn hotels__tab-btn--active btn btn--light" data-id="late">Опоздание в общежитие</button>
-                  <button class="hotels__tab-btn btn btn--light" data-id="missing">Отсутствие в общежитии</button>
-                  <button class="hotels__tab-btn btn btn--light" data-id="guests">Посещение гостями</button>
-                  <button class="hotels__tab-btn btn btn--light" data-id="washing">Стирка</button>
+              <div class="hotels__tabs tabs__container">
+                <div class="hotels__buttons tabs__buttons">
+                  <button class="hotels__tab-btn tabs__button tabs__button--active btn btn--border" data-id="late">Опоздание в общежитие</button>
+                  <button class="hotels__tab-btn tabs__button btn btn--border" data-id="missing">Отсутствие в общежитии</button>
+                  <button class="hotels__tab-btn tabs__button btn btn--border" data-id="guests">Посещение гостями</button>
+                  <button class="hotels__tab-btn tabs__button btn btn--border" data-id="washing">Стирка</button>
                 </div>
                 <div class="hotels__tab-container">
-                  <div class="hotels__tab hotels__tab--active hotels__tab--late" id="late">
+                  <div class="hotels__tab tabs__item tabs__item--active hotels__tab--late" id="late">
                     <div class="hotels__tab-wrapper">
-                      <h3 class="hotels__tab-title">Заявка на опоздание</h3>
-                      <form class="hotels__form">
+                      <div class="hotels__tab-header">
+                        <h3 class="hotels__tab-title">Заявка на опоздание</h3>
+                      </div>
+                      <form class="hotels__form form__late">
                         <div class="hotels__form-wrapper">
                           <label class="hotels__form-label" for="date">Дата</label>
                           <input class="hotels__form-input" type="date" name="date" id="date"/>
@@ -218,7 +220,7 @@
                           <input class="hotels__form-input" type="text" name="reason" id="reason"/>
                         </div>
                         <div class="hotels__form-wrapper hotels__form-wrapper--approve">
-                          <p class="hotels__form-label">Подтверждение</p>
+                          <p class="hotels__form-approve">Подтверждение</p>
                           <label class="hotels__form-file" for="approve">Выбрать файл
                             <svg width="19" height="20">
                               <use href="#clip"></use>
@@ -242,13 +244,83 @@
                             <td class="hotels__table-col hotels__table-col--reason">Девушка не отпускала</td>
                             <td class="hotels__table-col hotels__table-col--approve">Подтверждено</td>
                           </tr>
+                          <tr class="hotels__table-row">
+                            <td class="hotels__table-col hotels__table-col--date">22.12.2020<span class="hotels__table-col--time">11:23</span></td>
+                            <td class="hotels__table-col hotels__table-col--reason">Девушка не отпускала</td>
+                            <td class="hotels__table-col hotels__table-col--notapprove">Отклонено</td>
+                          </tr>
+                          <tr class="hotels__table-row">
+                            <td class="hotels__table-col hotels__table-col--date">22.12.2020<span class="hotels__table-col--time">11:23</span></td>
+                            <td class="hotels__table-col hotels__table-col--reason">Девушка не отпускала</td>
+                            <td class="hotels__table-col hotels__table-col--notapprove">Отклонено</td>
+                          </tr>
+                          <tr class="hotels__table-row">
+                            <td class="hotels__table-col hotels__table-col--date">22.12.2020<span class="hotels__table-col--time">11:23</span></td>
+                            <td class="hotels__table-col hotels__table-col--reason">Девушка не отпускала</td>
+                            <td class="hotels__table-col hotels__table-col--approve">Подтверждено</td>
+                          </tr>
+                          <tr class="hotels__table-row">
+                            <td class="hotels__table-col hotels__table-col--date">22.12.2020<span class="hotels__table-col--time">11:23</span></td>
+                            <td class="hotels__table-col hotels__table-col--reason">Девушка не отпускала</td>
+                            <td class="hotels__table-col hotels__table-col--notapprove">Отклонено</td>
+                          </tr>
+                          <tr class="hotels__table-row">
+                            <td class="hotels__table-col hotels__table-col--date">22.12.2020<span class="hotels__table-col--time">11:23</span></td>
+                            <td class="hotels__table-col hotels__table-col--reason">Девушка не отпускала</td>
+                            <td class="hotels__table-col hotels__table-col--notapprove">Отклонено</td>
+                          </tr>
                         </tbody>
                       </table>
                     </div>
                   </div>
-                  <div class="hotels__tab hotels__tab--missing" id="missing"></div>
-                  <div class="hotels__tab hotels__tab--guests" id="guests"></div>
-                  <div class="hotels__tab hotels__tab--washing" id="washing"></div>
+                  <div class="hotels__tab hotels__tab--missing tabs__item" id="missing"></div>
+                  <div class="hotels__tab hotels__tab--guests tabs__item" id="guests"></div>
+                  <div class="hotels__tab hotels__tab--washing tabs__item" id="washing">
+                    <div class="hotels__tab-wrapper">
+                      <div class="hotels__tab-header">
+                        <h3 class="hotels__tab-title">Заявка на стирку</h3><span class="hotels__tab-remains">Осталось: 2 раза на этой неделе</span>
+                      </div>
+                      <form class="hotels__form form__wash">
+                        <div class="hotels__form-wrapper">
+                          <label class="hotels__form-label" for="dateWash">Дата</label>
+                          <input class="hotels__form-input" type="date" name="dateWash" id="dateWash"/>
+                        </div>
+                        <div class="hotels__form-wrapper">
+                          <label class="hotels__form-label" for="timeWash">Время</label>
+                          <input class="hotels__form-input" type="time" name="timeWash" id="timeWash"/>
+                        </div>
+                        <button class="hotels__form-submit btn btn--blue" type="submit">Отправить</button>
+                      </form>
+                    </div>
+                    <div class="hotels__tab-wrapper">
+                      <div class="hotels__tab-header">
+                        <h3 class="hotels__tab-title">Расписание на сегодня</h3><span class="hotels__tab-available">5 свободных мест</span>
+                      </div>
+                      <table class="hotels__table">
+                        <tr class="hotels__table-row">
+                          <td class="hotels__table-col">11:00</td>
+                          <td class="hotels__table-col hotels__table-col--name">Мазеин Константин Викторович</td>
+                        </tr>
+                        <tr class="hotels__table-row">
+                          <td class="hotels__table-col">11:00</td>
+                          <td class="hotels__table-col hotels__table-col--name"><a href="#">Софинская Виолетта Васильевна</a></td>
+                        </tr>
+                        <tr class="hotels__table-row">
+                          <td class="hotels__table-col">11:00</td>
+                          <td class="hotels__table-col hotels__table-col--name"><a href="#">Жуков Руслан Валерьевич</a></td>
+                        </tr>
+                      </table>
+                    </div>
+                    <div class="hotels__tab-wrapper">
+                      <div class="hotels__tab-header">
+                        <h3 class="hotels__tab-title">Средняя загрузка</h3><span class="hotels__tab-today"></span>
+                        <button class="hotels__tab-week">Неделя</button>
+                      </div>
+                      <div class="hotels__chart chart">
+                        <canvas id="myChart"></canvas>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </section>

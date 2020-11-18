@@ -72,30 +72,30 @@
             <div class="parent-cabinet__header">
               <h2 class="parent-cabinet__title title--large">Кабинет родителя</h2>
             </div>
-            <div class="parent-cabinet__tabs">
-              <div class="parent-cabinet__buttons">
-                <button class="parent-cabinet__button parent-cabinet__button--active btn btn--light" data-id="perfomance">Успеваемость
+            <div class="parent-cabinet__tabs tabs__container">
+              <div class="parent-cabinet__buttons tabs__buttons">
+                <button class="parent-cabinet__button btn btn--icon btn--light tabs__button tabs__button--active" data-id="performance">Успеваемость
                   <svg width="36" height="36">
                     <use href="#studentwork"></use>
                   </svg>
                 </button>
-                <button class="parent-cabinet__button btn btn--light" data-id="finance">Финансы
+                <button class="parent-cabinet__button btn btn--light tabs__button btn--icon" data-id="finance">Финансы
                   <svg width="36" height="36">
                     <use href="#wallet"></use>
                   </svg>
                 </button>
-                <button class="parent-cabinet__button btn btn--light" data-id="schedules">Расписание занятий
+                <button class="parent-cabinet__button btn btn--light tabs__button btn--icon" data-id="schedules">Расписание занятий
                   <svg width="36" height="36">
                     <use href="#schedule"></use>
                   </svg>
                 </button>
-                <button class="parent-cabinet__button btn btn--light" data-id="visits">Посещения
+                <button class="parent-cabinet__button btn btn--light tabs__button btn--icon" data-id="visits">Посещения
                   <svg width="36" height="36">
                     <use href="#clock"></use>
                   </svg>
                 </button>
               </div>
-              <div class="parent-cabinet__performance parent-cabinet__tab parent-cabinet__tab--active" aria-label="Вкладка Успеваемость" id="performance">
+              <div class="parent-cabinet__performance parent-cabinet__tab tabs__item tabs__item--active" aria-label="Вкладка Успеваемость" id="performance">
                 <div class="parent-cabinet__tab-wrapper">
                         <table class="table-scroll parent-cabinet__table scrollbar-custom">
                           <thead class="table-scroll__header">
@@ -162,7 +162,7 @@
                         </table>
                 </div>
               </div>
-              <div class="parent-cabinet__finance parent-cabinet__tab finance" aria-label="Вкладка Финансы" id="finance">
+              <div class="parent-cabinet__finance parent-cabinet__tab finance tabs__item" aria-label="Вкладка Финансы" id="finance">
                 <p class="parent-cabinet__finance-preheader">Сведения о взаиморасчетах по договору №1401002038 от 01.08.2014</p>
                 <p class="parent-cabinet__finance-number">Ваш УИК: 37.05.01.02.622128</p>
                 <div class="parent-cabinet__tab-wrapper">
@@ -346,7 +346,7 @@
                   </div>
                 </div>
               </div>
-              <div class="parent-cabinet__schedule parent-cabinet__tab" aria-label="Вкладка Расписание" id="schedules">
+              <div class="parent-cabinet__schedule parent-cabinet__tab tabs__item" aria-label="Вкладка Расписание" id="schedules">
                 <div class="parent-cabinet__tab-wrapper">
                   <div class="parent-cabinet__tab-togglers">
                     <label class="parent-cabinet__tab-toggler parent-cabinet__tab-toggler--even" for="iOS">Четная неделя</label>
@@ -434,7 +434,7 @@
                   </div>
                 </div>
               </div>
-              <div class="parent-cabinet__visits parent-cabinet__tab" aria-label="Вкладка Посещения" id="visits">
+              <div class="parent-cabinet__visits parent-cabinet__tab tabs__item" aria-label="Вкладка Посещения" id="visits">
                 <div class="parent-cabinet__tab-wrapper">
                   <div class="calendar-container">
                     <div class="calendar-header">

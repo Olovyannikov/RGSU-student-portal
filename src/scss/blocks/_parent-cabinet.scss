@@ -1,6 +1,7 @@
 .parent-cabinet__container {
   display: flex;
   gap: 30px;
+  padding-top: 11px;
 }
 
 .parent-cabinet__wrapper {
@@ -17,56 +18,12 @@
   margin-bottom: 16px;
 }
 
-.parent-cabinet__button {
-  @include btn-reset;
-  position: relative;
-  padding: 21px 20px 21px 73px;
-  margin-right: 30px;
-  border-radius: 2px;
-  color: #6E7781;
-  border-width: 1px;
-  border-style: solid;
-  border-color: #E4ECFA;
-  svg {
-	position: absolute;
-	fill: $c-darkgrey;
-	left: 18px;
-	top: 12px;
-  }
-  &:hover,&:focus {
-	svg {
-	  fill: $c-light;
-	}
-  }
-  &--active {
-	color: $c-blue;
-	border-width: 1px;
-	border-style: solid;
-	border-color: $c-blue;
-	svg {
-	  position: absolute;
-	  fill: $c-blue;
-	  left: 18px;
-	  top: 12px;
-	}
-  }
-}
-
 .parent-cabinet__tabs {
   margin-bottom: 38px;
   display: inline-block;
   width: 100%;
 }
 
-.parent-cabinet__tab {
-  display: none;
-
-  &--active {
-	display: inline-block;
-	width: 100%;
-	margin-bottom: 40px;
-  }
-}
 
 .parent-cabinet__tab-wrapper {
   padding: 0 24px;
@@ -76,19 +33,22 @@
 
 .parent-cabinet__aside {
   width: 315px;
+  display: flex;
+  flex-direction: column;
+  gap: 45px;
   .portfolio-cards__wrapper {
 	margin: 0;
   }
    .card {
 	width: 315px;
-	margin: 0 0 48px;
+	margin: 0 ;
   }
   .portfolio__container {
 	width: 100%;
   }
 }
 .parent-cabinet__aside-title {
-  margin-bottom: 21px;
+  margin-bottom: -24px;
 }
 
 .parent-cabinet__finance-preheader {

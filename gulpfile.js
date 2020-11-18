@@ -8,6 +8,7 @@ let path = {
 		js: project_folder + '/js/',
 		img: project_folder + '/img/',
 		fonts: project_folder + '/fonts/',
+		video: project_folder + '/video/'
 	},
 	src: {
 		html: [source_folder + '/html/*.html', "!" + source_folder + '/**/_*.html'],
@@ -16,6 +17,7 @@ let path = {
 		js: source_folder + '/js/script.js',
 		img: source_folder + '/img/**/*.{png,jpeg,jpg,gif,ico,webp,svg}',
 		fonts: source_folder + '/fonts/*.{woff,woff2,ttf,svg}',
+		video: source_folder + '/video/*'
 	},
 	watch: {
 		html: source_folder + '/**/*.html',
@@ -23,6 +25,7 @@ let path = {
 		css: source_folder + '/scss/**/*.scss',
 		js: source_folder + '/js/**/*.js',
 		img: source_folder + '/img/**/*.{png,jpeg,jpg,svg,gif,ico,webp}',
+		video: source_folder + '/video/*.{webm}'
 	},
 	clean: './' + project_folder + '/'
 }
@@ -183,6 +186,13 @@ function fonts() {
 		.pipe(dest(path.build.fonts));
 }
 
+function video() {
+	src(path.src.video)
+		.pipe(dest(path.build.video));
+	return src(path.src.video)
+		.pipe(dest(path.build.video));
+}
+
 function svgsprite() {
 	return gulp.src([source_folder + '/img/icons/*.svg'])
 		.pipe(
@@ -230,10 +240,11 @@ function clean(params) {
 	return del(path.clean);
 }
 
-let build = gulp.series(clean, gulp.parallel(svgsprite, images, js, css, pug2html, fonts));
+let build = gulp.series(clean, gulp.parallel(svgsprite, images, js, css, pug2html, fonts, video));
 let watch = gulp.parallel(build, watchFiles, browserSync);
 
 exports.pug2html = pug2html;
+exports.video = video;
 exports.fonts = fonts;
 exports.svgsprite = svgsprite;
 exports.images = images;

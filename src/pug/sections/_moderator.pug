@@ -1,19 +1,19 @@
 main.main
     section.moderator
-        .moderator__container.container
+        .moderator__container.container.tabs__container
             h2.moderator__title.title--large Модерирование
             .moderator__tabs-buttons
-                button.moderator__button.moderator__button--active.btn.btn--light(data-id="late") Опоздания
-                button.moderator__button.btn.btn--light(data-id="absence") Отсутствия
-                button.moderator__button.btn.btn--light(data-id="visit") Посещения гостями
-                button.moderator__button.btn.btn--light(data-id="agree") Согласия на прививку
-                button.moderator__button.btn.btn--light(data-id="enter") Вход/выход
-                button.moderator__button.btn.btn--light(data-id="studentHouse") Проживающие в общежитии
-                button.moderator__button.btn.btn--light(data-id="declaration") Заявления на общежитие
-                button.moderator__button.btn.btn--light(data-id="failure") Фиксация нарушений
+                button.moderator__button.btn.btn--border(data-id="late").tabs__button.tabs__button--active Опоздания
+                button.moderator__button.btn.btn--border(data-id="absence").tabs__button Отсутствия
+                button.moderator__button.btn.btn--border(data-id="visit").tabs__button Посещения гостями
+                button.moderator__button.btn.btn--border(data-id="agree").tabs__button Согласия на прививку
+                button.moderator__button.btn.btn--border(data-id="enter").tabs__button Вход/выход
+                button.moderator__button.btn.btn--border(data-id="studentHouse").tabs__button Проживающие в общежитии
+                button.moderator__button.btn.btn--border(data-id="declaration").tabs__button Заявления на общежитие
+                button.moderator__button.btn.btn--border(data-id="failure").tabs__button Фиксация нарушений
 
             .moderator__tabs
-                .moderator__tabs-tab.moderator__tab.moderator__tab--active(id="late")
+                .moderator__tabs-tab.moderator__tab.tabs__item.tabs__item--active(id="late")
                     table.moderator__table
                         thead.moderator__table-header
                             tr.moderator__table-row
@@ -65,18 +65,18 @@ main.main
                                 td.moderator__table-cell Ожидание проверки
                                 td.moderator__table-cell 02.11.2020
                                 td.moderator__table-cell г. Москва, Инженерная ул., дом 4, Общ.
-                .moderator__tabs-tab.moderator__tab(id="absence")
+                .moderator__tabs-tab.moderator__tab(id="absence").tabs__item
                     table
-                .moderator__tabs-tab.moderator__tab(id="visit")
+                .moderator__tabs-tab.moderator__tab(id="visit").tabs__item
                     table
-                .moderator__tabs-tab.moderator__tab(id="agree")
+                .moderator__tabs-tab.moderator__tab(id="agree").tabs__item
                     table
-                .moderator__tabs-tab.moderator__tab(id="enter")
+                .moderator__tabs-tab.moderator__tab(id="enter").tabs__item
                     table
-                .moderator__tabs-tab.moderator__tab(id="studentHouse")
+                .moderator__tabs-tab.moderator__tab(id="studentHouse").tabs__item
                     table
-                .moderator__tabs-tab.moderator__tab(id="declaration")
-                .moderator__tabs-tab.moderator__tab(id="failure")
+                .moderator__tabs-tab.moderator__tab(id="declaration").tabs__item
+                .moderator__tabs-tab.moderator__tab(id="failure").tabs__item
                     .moderator__tab-wrapper
                         table.moderator__table.moderator__table-fail
                             thead.moderator__table-header

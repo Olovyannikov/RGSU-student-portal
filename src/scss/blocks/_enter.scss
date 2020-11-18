@@ -1,6 +1,7 @@
 .enter {
   margin-bottom: 32px;
   display: none;
+
   @media (min-width: $mobile) {
     display: block;
   }
@@ -52,14 +53,10 @@
   display: flex;
   width: 100%;
   justify-content: center;
-  img {
-    width: 100%;
-    max-width: 1350px;
-    min-height: 270px;
-    max-height: 300px;
-    object-fit: cover;
-    border-radius: 4px;
-  }
+  max-height: 300px;
+  object-fit: cover;
+  object-position: 0 60%;
+  border-radius: 4px;
 }
 
 .enter__subtitle {

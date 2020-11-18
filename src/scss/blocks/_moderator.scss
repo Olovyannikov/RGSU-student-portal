@@ -10,24 +10,6 @@
   margin-bottom: 28px;
 }
 
-.moderator__button {
-  border-radius: 2px;
-  color: #6e7781;
-  border: 1px solid #e4ecfa;
-  &--active {
-    border: 1px solid #3464e0;
-    color: #3464e0;
-  }
-}
-
-.moderator__tab {
-  display: none;
-  &--active {
-    display: block;
-    border-radius: 4px;
-  }
-}
-
 .moderator__table {
   margin: 0 auto;
   background-color: #fff;
@@ -146,6 +128,15 @@
   padding-bottom: 14px;
   font-size: 16px;
   line-height: 22px;
+  &[type="date"]::-webkit-calendar-picker-indicator {
+    color: transparent;
+    opacity: 1;
+    background: url("../img/icons/calendar.svg") no-repeat center;
+    background-size: 20px;
+    cursor: pointer;
+    padding-right: 9px;
+
+  }
 }
 
 .moderator__form-input {

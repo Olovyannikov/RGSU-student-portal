@@ -221,18 +221,18 @@
                       <p class="profile__info-avatar-description">* требования к файлу: <br> формат JPG, PNG, не более 2 МБ</p>
                     </div>
                   </div>
-                  <div class="settings__tabs">
-                    <div class="settings__tabs-buttons">
-                      <button class="settings__tabs-btn settings__tabs-btn--active" data-id="info">Информация</button>
-                      <button class="settings__tabs-btn" data-id="socials">Социальные сети</button>
-                      <button class="settings__tabs-btn" data-id="about">О себе</button>
-                      <button class="settings__tabs-btn" data-id="work">Трудоустройство</button>
+                  <div class="settings__tabs tabs__container">
+                    <div class="settings__tabs-buttons tabs__buttons">
+                      <button class="settings__tabs-btn tabs__button tabs__button--active" data-id="info">Информация</button>
+                      <button class="settings__tabs-btn tabs__button" data-id="socials">Социальные сети</button>
+                      <button class="settings__tabs-btn tabs__button" data-id="about">О себе</button>
+                      <button class="settings__tabs-btn tabs__button" data-id="work">Трудоустройство</button>
                     </div>
                     <div class="settings__tabs-container">
-                      <div class="settings__tab settings__tab--active settings__tab--info" id="info">
+                      <div class="settings__tab settings__tab--active settings__tab--info tabs__item tabs__item--active" id="info">
                         <p>Some info</p>
                       </div>
-                      <div class="settings__tab settings__tab--socials" id="socials">
+                      <div class="settings__tab settings__tab--socials tabs__item" id="socials">
                         <ul class="social-block__list footer__list">
                           <li class="social-block__item"><a class="social-block__link social-block__link--vk" href="mailto:info@rgsu.net">Вконтакте
                               <svg width="18" height="11">
@@ -248,7 +248,7 @@
                               </svg></a></li>
                         </ul>
                       </div>
-                      <div class="settings__tab settings__tab--about" id="about">
+                      <div class="settings__tab settings__tab--about tabs__item" id="about">
                         <ul class="social-block__list footer__list">
                           <li class="social-block__item"><a class="social-block__link social-block__link--vk" href="mailto:info@rgsu.net">Вконтакте
                               <svg width="18" height="11">
@@ -260,7 +260,7 @@
                               </svg></a></li>
                         </ul>
                       </div>
-                      <div class="settings__tab settings__tab--work" id="work">
+                      <div class="settings__tab settings__tab--work tabs__item" id="work">
                         <div class="settings__tab-content">
                           <div class="settings__tab-togglers">
                             <input class="ios-toggle" type="checkbox" id="isHire"/>

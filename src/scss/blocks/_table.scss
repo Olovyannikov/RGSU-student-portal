@@ -37,7 +37,6 @@
 .table-scroll tr {
   width: 100%;
   display: flex;
-  margin: 9px 0;
 }
 
 .table-scroll th,
@@ -69,15 +68,15 @@
 /* Other options */
 
 .table-scroll__cell {
-  padding-top: 12px;
-  padding-bottom: 12px;
+  padding-top: 16px;
+  padding-bottom: 20px;
   padding-left: 12px;
 }
 
 .table-scroll__title {
   font-size: rem-calc(16);
   line-height: 26px;
-  padding: 17px 0 16px 12px;
+  padding: 17px 0 17px 12px;
 }
 
 .table-scroll__divider {
@@ -89,6 +88,7 @@
   width: 100%;
   padding-bottom: 18px;
   border-bottom: 1px solid #f1f4f9;
+  margin-top: 19px;
 }
 
 .table-scroll__total {
@@ -117,7 +117,6 @@ tfoot {
 
 .table-scroll__header {
   background-color: #f1f4f9;
-  margin-bottom: 19px;
 }
 
 .table-scroll__header-clean {

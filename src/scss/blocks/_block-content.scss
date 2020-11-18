@@ -24,11 +24,6 @@
   }
 }
 
-.block__content-news {
-  min-width: 300px;
-}
-
-
 .block__content {
   color: inherit;
   display: block;
@@ -67,6 +62,13 @@
   max-width: 545px;
   width: 487px;
   @media (min-width: $tablet) {
+    width: 487px;
+  }
+}
+
+.block__content-news {
+  min-width: 300px;
+  @media (min-width: $tablet) {
     width: 545px;
   }
 }
@@ -80,7 +82,7 @@
     display: none;
     @media (min-width: $tablet) {
       display: block;
-      width: 400px;
+      width: 355px;
     }
   }
 }

@@ -130,6 +130,8 @@
 
   &.expanded {
     min-height: 300px;
+    position: absolute;
+    z-index: 1;
     .selected {
       border-bottom: 1px solid #e6e6e6;
     }
