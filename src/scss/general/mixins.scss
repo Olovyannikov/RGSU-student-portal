@@ -1,90 +1,93 @@
 @mixin retina {
-  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    @content;
-  }
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        @content;
+    }
 }
 
 @mixin container {
-  margin: 0 auto;
-  padding: 0 45px;
-  width: 100%;
-  max-width: 1440px;
-  border-radius: 4px;
+    margin: 0 auto;
+    padding: 0 45px;
+    width: 100%;
+    max-width: 1440px;
+    border-radius: 4px;
 
-  @media (min-width: $stop-scaling) {
-    padding: 0 40px;
-  }
+    @media (min-width: $stop-scaling) {
+        padding: 0 40px;
+    }
 
-  @media (max-width: $tablet) {
-    padding: 0 20px;
-  }
+    @media (max-width: $tablet) {
+        padding: 0 20px;
+    }
 
-  @media (max-width: $mobile) {
-    padding: 0 12px;
-  }
+    @media (max-width: $mobile) {
+        padding: 0 12px;
+    }
 }
 
 @mixin list-reset {
-  padding: 0;
-  margin: 0;
-  list-style: none;
+    padding: 0;
+    margin: 0;
+    list-style: none;
 }
 
 @mixin btn-reset {
-  padding: 0;
-  margin: 0;
-  background: none;
-  border: none;
-  cursor: pointer;
-  outline: none;
-
-  &:focus {
+    padding: 0;
+    margin: 0;
+    background: none;
+    border: none;
+    cursor: pointer;
     outline: none;
-  }
+
+    &:focus {
+        outline: none;
+    }
 }
 
 @mixin hover {
-  &:hover {
-    opacity: 0.8;
-  }
+    &:hover {
+        opacity: 0.8;
+    }
 
-  &:focus {
-    outline: none;
-    opacity: 0.7;
-  }
+    &:focus {
+        outline: none;
+        opacity: 0.7;
+    }
 }
 
 @mixin center {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 @mixin title-aside {
-  font-style: normal;
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 18px;
-  color: #444444;
-  margin: 0 0 20px;
-  padding-top: 19px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 18px;
+    color: #444444;
+    margin: 0 0 20px;
+    padding-top: 19px;
 }
 
 @mixin swiperCenter {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 38px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 38px;
 }
 
 @mixin headerBlock {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  .divider {
+    display: flex;
+    align-items: center;
     width: 100%;
-  }
+    .divider {
+        width: 100%;
+    }
 }
 
+@mixin aside-content {
+    width: calc(100% - 345px);
+}

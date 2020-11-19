@@ -5,7 +5,9 @@
   max-width: 1440px;
   border-radius: 4px;
   &--aside {
-    gap: 30px;
+      padding: 0 45px;
+      gap: 28px;
+
     display: flex;
 	align-items: flex-start;
   }
@@ -21,6 +23,10 @@
   @media (max-width: $mobile) {
 	padding: 0 12px;
   }
+}
+
+.title-block {
+    margin-bottom: 21px;
 }
 
 .title {

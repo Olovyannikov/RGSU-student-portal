@@ -1,0 +1,145 @@
+mixin finance()
+    h3.parent-cabinet__table-title.title График платежей
+    table.table-scroll.table-scroll__finance.parent-cabinet__table.scrollbar-custom
+        thead.table-scroll__header-clean
+            tr
+                th.table-scroll__title Ожидаемая дата по <br> графику платежей(до)
+                th.table-scroll__title Ожидаемая сумма по <br> графику платежей
+                th.table-scroll__title Фактически списано
+                th.table-scroll__title Долг
+        tbody.body-half-screen
+            tr
+                td.table-scroll__cell 02.08.2014
+                td.table-scroll__cell 35 000 р.
+                td.table-scroll__cell 35 000 р.
+                td.table-scroll__cell 0 ₽
+            tr
+                td.table-scroll__cell 21.01.2015
+                td.table-scroll__cell 35 000 р.
+                td.table-scroll__cell 35 000 р.
+                td.table-scroll__cell 0 ₽
+            tr
+                td.table-scroll__cell 02.08.2014
+                td.table-scroll__cell 35 000 р.
+                td.table-scroll__cell 35 000 р.
+                td.table-scroll__cell 0 ₽
+            tr
+                td.table-scroll__cell 31.07.2015
+                td.table-scroll__cell 35 000 р.
+                td.table-scroll__cell 35 000 р.
+                td.table-scroll__cell 0 ₽
+            tr
+                td.table-scroll__cell 29.02.2016
+                td.table-scroll__cell 35 000 р.
+                td.table-scroll__cell 35 000 р.
+                td.table-scroll__cell 0 ₽
+            tr
+                td.table-scroll__cell 02.08.14
+                td.table-scroll__cell 35 000 р.
+                td.table-scroll__cell 35 000 р.
+                td.table-scroll__cell 0 ₽
+            tr
+                td.table-scroll__cell 02.08.14
+                td.table-scroll__cell 35 000 р.
+                td.table-scroll__cell 35 000 р.
+                td.table-scroll__cell 0 ₽
+            tr
+                td.table-scroll__cell 02.08.14
+                td.table-scroll__cell 35 000 р.
+                td.table-scroll__cell 35 000 р.
+                td.table-scroll__cell 0 ₽
+            tr
+                td.table-scroll__cell 02.08.14
+                td.table-scroll__cell 35 000 р.
+                td.table-scroll__cell 35 000 р.
+                td.table-scroll__cell 0 ₽
+            tr
+                td.table-scroll__cell 02.08.14
+                td.table-scroll__cell 35 000 р.
+                td.table-scroll__cell 35 000 р.
+                td.table-scroll__cell 0 ₽
+            tr
+                td.table-scroll__cell 02.08.14
+                td.table-scroll__cell 35 000 р.
+                td.table-scroll__cell 35 000 р.
+                td.table-scroll__cell 0 ₽
+            tr
+                td.table-scroll__cell 02.08.14
+                td.table-scroll__cell 35 000 р.
+                td.table-scroll__cell 35 000 р.
+                td.table-scroll__cell 0 ₽
+            tr
+                td.table-scroll__cell 02.08.14
+                td.table-scroll__cell 35 000 р.
+                td.table-scroll__cell 35 000 р.
+                td.table-scroll__cell 0 ₽
+            tr
+                td.table-scroll__cell 02.08.14
+                td.table-scroll__cell 35 000 р.
+                td.table-scroll__cell 35 000 р.
+                td.table-scroll__cell 0 ₽
+        tfoot
+            tr
+                td.table-scroll__total Итого
+                td.table-scroll__sum-expect 492 850 р.
+                td.table-scroll__sum-real 492 850 р.
+                td.table-scroll__debt 0 ₽
+
+.parent-cabinet__finance.parent-cabinet__tab.finance(aria-label="Вкладка Финансы" id="finance")
+    .payments__header.title-block
+        h2.payments__title.title--large Мои оплаты
+    .parent-cabinet__tab-wrapper
+        +finance
+        p.parent-cabinet__table-date Данные обновлены 19.10.2020
+    .finance__content
+        .finance__content-history
+            .parent-cabinet__tab-wrapper.parent-cabinet__tab--active
+                h3.parent-cabinet__table-title.title История оплат
+                table.table-scroll.table-scroll--half.scrollbar-custom
+                    thead.table-scroll__header-clean
+                        tr
+                            th.table-scroll__title Дата
+                            th.table-scroll__title Сумма
+                    tbody.body-half-screen
+                        tr
+                            td.table-scroll__cell 02.08.2014
+                            td.table-scroll__cell 35 000 р.
+                        tr
+                            td.table-scroll__cell 21.01.2015
+                            td.table-scroll__cell 35 000 р.
+                        tr
+                            td.table-scroll__cell 02.08.2014
+                            td.table-scroll__cell 35 000 р.
+                        tr
+                            td.table-scroll__cell 31.07.2015
+                            td.table-scroll__cell 35 000 р.
+                        tr
+                            td.table-scroll__cell 29.02.2016
+                            td.table-scroll__cell 35 000 р.
+                        tr
+                            td.table-scroll__cell 01.02.2017
+                            td.table-scroll__cell 35 000 р.
+                        tr
+                            td.table-scroll__cell 02.03.2018
+                            td.table-scroll__cell 35 000 р.
+                        tr
+                            td.table-scroll__cell 03.04.2019
+                            td.table-scroll__cell 35 000 р.
+                    tfoot
+                        tr
+                            td.table-scroll__total Итого
+                            td.table-scroll__sum-expect 492 850 р.
+                p.parent-cabinet__table-date Сведения о поступлении платежей обновляются в течение 10 дней с момента поступления средств на счет университета
+        .finance__content-debt
+            .parent-cabinet__tab-wrapper
+                .finance__content-container
+                    svg(width="110" height="110" fill="#2BC584")
+                        use(href="#shield")
+                    p.finance__content-description Задолженность по основному договору на 19.10.2020
+                    p.finance__content-isDebt Отсутствует
+                    .finance__content-debt-buttons
+                        button.finance__content-debt-button.finance__content-debt-button--pay.btn.btn--green Оплатить online
+                        button.finance__content-debt-button.finance__content-debt-button--check.btn.btn--grey Получить квитанцию
+                    .finance__content-debt-links
+                        a(href="#").main__link Задать вопрос
+                        a(href="#").main__link Кредит с государственной поддержкой

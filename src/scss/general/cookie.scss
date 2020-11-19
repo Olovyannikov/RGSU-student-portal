@@ -1,113 +1,110 @@
 #cookie * {
-  padding: 0;
-  margin: 0;
-  outline: 0;
-  box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    outline: 0;
+    box-sizing: border-box;
 }
 
 #cookie {
-  position: fixed;
-  bottom: 10px;
-  left: 10px;
-  transform: translateX(0);
-  z-index: 9999;
-  overflow-x: hidden;
-  overflow-y: hidden;
-  max-width: 558px;
-  max-height: 95px;
-  padding: 30px 0;
-  background: #fff;
-  font-family: "Russia", sans-serif;
-  text-align: left;
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    transform: translateX(0);
+    z-index: 9999;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    max-width: 558px;
+    max-height: 95px;
+    padding-top: 27px;
+    padding-bottom: 26px;
+    background: #fff;
+    font-family: "Russia", sans-serif;
+    text-align: left;
 }
 
 #cookie .cookieBtnCross {
-  position: absolute;
-  top: 15px;
-  right: 7px;
-  width: 17px;
-  height: 1px;
-  transform: rotate(45deg);
-  background: #fff;
+    position: absolute;
+    top: 15px;
+    right: 7px;
+    width: 17px;
+    height: 1px;
+    transform: rotate(45deg);
+    background: #fff;
 }
 
 #cookie .cookieBtn:after {
-  transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
 }
 #cookie .cookieShell {
-  width: 100%;
-  margin: 0 auto;
-  padding-left: 87px;
-  padding-right: 28px;
+    width: 100%;
+    margin: 0 auto;
+    padding-left: 87px;
+    padding-right: 28px;
 }
 #cookie p {
-  font-size: 15px;
-  line-height: 21px;
-  color: #6e7781;
-  font-weight: normal;
-  position: relative;
-}
-#cookie .cookieActions {
-  padding-top: 10px;
+    font-size: 15px;
+    line-height: 21px;
+    color: #6e7781;
+    font-weight: normal;
+    position: relative;
 }
 #cookie .cookieBtn {
-  position: absolute;
-  border-radius: 100%;
-  top: -27px;
-  right: 3px;
-  display: block;
-  width: 31px;
-  height: 31px;
-  background: #3464e0;
-  font-size: 18px;
-  line-height: 44px;
-  color: #fff;
-  text-decoration: none;
-  vertical-align: middle;
-  cursor: pointer;
-  border: 0;
-  -webkit-appearance: none;
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -moz-osx-font-smoothing: grayscale;
+    position: absolute;
+    border-radius: 100%;
+    top: -20px;
+    right: 3px;
+    display: block;
+    width: 31px;
+    height: 31px;
+    background: #3464e0;
+    font-size: 18px;
+    line-height: 44px;
+    color: #fff;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    border: 0;
+    -webkit-appearance: none;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 .cookieBtnCross {
-  display: block;
-  &::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 17px;
-    height: 1px;
-    transform: rotate(90deg);
-    background: #fff;
-  }
+    display: block;
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 17px;
+        height: 1px;
+        transform: rotate(90deg);
+        background: #fff;
+    }
 }
 
 .cookieShell {
-  position: relative;
+    position: relative;
 }
 
 .cookieIcon {
-  position: absolute;
-  width: 54px;
-  height: 54px;
-  content: '';
-  left: 17px;
-  top: 0;
+    position: absolute;
+    width: 54px;
+    height: 54px;
+    content: "";
+    left: 17px;
+    top: -7px;
 }
 
 @media (max-width: $tablet) {
-  #cookie {
-    min-width: 300px;
-    min-height: 120px;
-  }
-  #cookie p {
-
-    font-size: rem-calc(12);
-  }
+    #cookie {
+        min-width: 300px;
+        min-height: 120px;
+    }
+    #cookie p {
+        font-size: rem-calc(12);
+    }
 }

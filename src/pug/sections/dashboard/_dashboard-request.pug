@@ -1,0 +1,132 @@
+section.request
+    .request__header.title-block
+        h2.request__title.title--large Заявки
+    .request__tabs.tabs__container
+        .request__buttons.tabs__buttons
+            button(data-id="doc").request__tab-btn.tabs__button.btn.btn--border Заказать справку/документ
+            button(data-id="question").request__tab-btn.tabs__button.btn.btn--border Задать вопрос
+            button(data-id="send").request__tab-btn.tabs__button.btn.btn--border.tabs__button--active Отправить документ
+        .request__tab-container
+            .request__tab.tabs__item.request__tab--doc(id="doc")
+                .request__tab-wrapper
+                    .request__tab-header
+                        h3.request__tab-title Заявка на опоздание
+                    form.request__form.form__doc
+                        .request__form-wrapper
+                            label.request__form-label(for="date") Дата
+                            input(type="date" name="date" id="date").request__form-input
+                        .request__form-wrapper
+                            label.request__form-label(for="time") Время
+                            input(type="time" name="time" id="time").request__form-input
+                        .request__form-wrapper
+                            label.request__form-label(for="reason") Причина
+                            input(type="text" name="reason" id="reason").request__form-input
+                        .request__form-wrapper.request__form-wrapper--approve
+                            p.request__form-approve Подтверждение
+                            label(for="approve").request__form-file Выбрать файл
+                                svg(width="19" height="20")
+                                    use(href="#clip")
+                            input(name="approve" id="approve" type="file").request__form-input
+                            span.request__form-description  * требования к файлу: формат JPG, PNG, не более 2 МБ
+                        button(type="submit").request__form-submit.btn.btn--blue Отправить
+                .request__tab-wrapper
+                    table.request__table
+                        thead.request__table-header
+                            tr.request__table-header-row
+                                th.request__table-title История опозданий 
+                                    span.request__table-counter 23
+                        tbody.request__table-body
+                            tr.request__table-row
+                                td.request__table-col.request__table-col--date 22.12.2020
+                                    span.request__table-col--time 11:23
+                                td.request__table-col.request__table-col--reason Девушка не отпускала
+                                td.request__table-col.request__table-col--approve Подтверждено
+                            tr.request__table-row
+                                td.request__table-col.request__table-col--date 22.12.2020
+                                    span.request__table-col--time 11:23
+                                td.request__table-col.request__table-col--reason Девушка не отпускала
+                                td.request__table-col.request__table-col--notapprove Отклонено
+                            tr.request__table-row
+                                td.request__table-col.request__table-col--date 22.12.2020
+                                    span.request__table-col--time 11:23
+                                td.request__table-col.request__table-col--reason Девушка не отпускала
+                                td.request__table-col.request__table-col--notapprove Отклонено
+                            tr.request__table-row
+                                td.request__table-col.request__table-col--date 22.12.2020
+                                    span.request__table-col--time 11:23
+                                td.request__table-col.request__table-col--reason Девушка не отпускала
+                                td.request__table-col.request__table-col--approve Подтверждено
+                            tr.request__table-row
+                                td.request__table-col.request__table-col--date 22.12.2020
+                                    span.request__table-col--time 11:23
+                                td.request__table-col.request__table-col--reason Девушка не отпускала
+                                td.request__table-col.request__table-col--notapprove Отклонено
+                            tr.request__table-row
+                                td.request__table-col.request__table-col--date 22.12.2020
+                                    span.request__table-col--time 11:23
+                                td.request__table-col.request__table-col--reason Девушка не отпускала
+                                td.request__table-col.request__table-col--notapprove Отклонено
+
+            .request__tab.request__tab--question(id="question").tabs__item
+
+
+            .request__tab.request__tab--send(id="send").tabs__item.tabs__item--active
+                .request__tab-wrapper
+                    form.request__form
+                        .request__form-wrapper
+                            label.request__form-label(for="fullName") ФИО
+                            input(type="text" name="fullName" id="fullName" required placeholder="ФИО").request__form-input
+                        .request__form-wrapper
+                            .request__form-col
+                                label.request__form-label(for="email") Email
+                                input(type="email" name="email" id="email").request__form-input
+                            .request__form-col
+                                label(for="type").request__form-label Вид справки/документа
+                                select.request__form-select(name="type" id="type" required)
+                                    option(selected disabled) --выберите--
+                                    option Справка
+                                    option Документ
+                        .request__form-wrapper
+                            label(for="textarea").request__form-label Комментарий
+                            textarea(id="textarea" name="textarea").request__form-textarea
+                            label(for="pin").request__form-file Прикрепите документ
+                                svg(width='19' height='20')
+                                    use(href="#clip")
+                            input(type="file" id="pin" name="pin")
+                        button(type="submit").request__form-submit.btn.btn--blue Отправить
+                    .request__payments
+                        h3.request__payments-title Мои заявки
+                        table.request__payments-table.scrollbar-custom
+                            thead.request__payments-table-header
+                                tr.request__payments-table-row
+                                    th.request__payments-table-title(colspan=2) Запрос
+                            tbody.request__payments-table-body
+                                tr.request__payments-table-row
+                                    td.request__payments-table-cell.request__payments-table-cell--date 02.08.2014
+                                    td.request__payments-table-cell Справка о выплатах/размере стипендии
+
+                                tr.request__payments-table-row
+                                    td.request__payments-table-cell.request__payments-table-cell--date 21.01.2015
+                                    td.request__payments-table-cell Копия документа об образовании
+
+                                tr.request__payments-table-row
+                                    td.request__payments-table-cell.request__payments-table-cell--date 02.08.2014
+                                    td.request__payments-table-cell Справка о выплатах/размере стипендии
+
+                                tr.request__payments-table-row
+                                    td.request__payments-table-cell.request__payments-table-cell--date 21.01.2015
+                                    td.request__payments-table-cell Копия документа об образовании
+
+                                tr.request__payments-table-row
+                                    td.request__payments-table-cell.request__payments-table-cell--date 02.08.2014
+                                    td.request__payments-table-cell Справка о выплатах/размере стипендии
+                                tr.request__payments-table-row
+                                    td.request__payments-table-cell.request__payments-table-cell--date 02.08.2014
+                                    td.request__payments-table-cell Справка о выплатах/размере стипендии
+                .request__tab-wrapper
+                    p.request__infoblock
+                        | В случае наличия у Вас СНИЛС, Вам необходимо в срок до 30.06.2015 г. ввести его данные во вкладку «Страховой номер ПФР» в личном кабинете, и отправить отсканированную копию СНИЛС.
+                        | Если Вы еще не оформляли и не получали Страховое свидетельство Обязательного Пенсионного Страхования, то Вы можете: <br><br>
+                        | 1. самостоятельно обратиться в территориальный орган ПФР по месту Вашей регистрации (жительства), предъявить паспорт (или любое другое удостоверение личности) и заполнить «Анкету застрахованного лица (Форма АДВ)». Свидетельство оформляется в течение одной-двух недель,
+                        | ИЛИ<br><br>
+                        | 2. обратиться к работникам Централизованного деканата, которые помогут Вам заполнить «Анкету застрахованного лица (Форма АДВ)». При себе иметь паспорт, копию паспорта. В этом случае Вы получите СНИЛС по месту учебы.

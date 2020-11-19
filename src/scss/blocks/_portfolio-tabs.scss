@@ -27,15 +27,11 @@
   font-size: 16px;
   line-height: 26px;
   text-transform: unset;
-  color: #6E7781;
   margin-bottom: 32px;
 
-  &:hover {
-    border: 1px solid #3464e0;
-  }
   &--active {
     background: #3464e0;
-    color: #FFFFFF;
+    color: #ffffff;
     border: 1px solid transparent;
     &:hover {
       border: 1px solid transparent;
@@ -78,8 +74,8 @@
   font-weight: normal;
   font-size: 12px;
   line-height: 26px;
-  color: #6E7781;
-  background: #F1F4F9;
+  color: #6e7781;
+  background: #f1f4f9;
   border-radius: 50%;
   padding: 1px 9px;
 }
@@ -89,16 +85,16 @@
   align-items: center;
   max-width: 398px;
   color: #444444;
-  transition: .2s;
+  transition: 0.2s;
   &:hover {
     .portfolio__description {
       color: rgba(52, 100, 224, 1);
     }
     .divider {
-      background-color: rgba(52, 100, 224, 1);;
+      background-color: rgba(52, 100, 224, 1);
     }
     .portfolio__counter {
-      background: #3464E0;
+      background: #3464e0;
       color: #fff;
     }
   }
@@ -118,11 +114,7 @@
 }
 //active - unactive
 .portfolio-tabs__article {
-  display: none;
-  &--active {
-    display: block;
-    @media (min-width: $tablet) {
-      white-space: nowrap;
-    }
+  @media (min-width: $tablet) {
+    white-space: nowrap;
   }
 }

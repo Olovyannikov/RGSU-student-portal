@@ -14,6 +14,14 @@ export default () => {
             nextEl: '.advertisement-button-next',
             prevEl: '.advertisement-button-prev',
         },
+        breakpoints: {
+            768: {
+                spaceBetween: 20,slidesPerView: 'auto',
+            },
+            1024: {
+                spaceBetween: 30,slidesPerView: 'auto',
+            }
+        }
     });
 
     let news = new Swiper('.news__container', {

@@ -1,127 +1,128 @@
 .table-scroll {
-  max-width: 1300px;
-  display: block;
-  empty-cells: show;
-  margin: 0 auto;
-  border-spacing: 0;
-  border: none;
-  overflow: hidden;
-  border-radius: 4px;
-  &--half {
-    max-width: 485px;
-    height: 350px;
-  }
+    max-width: 1300px;
+    display: block;
+    empty-cells: show;
+    margin: 0 auto;
+    border-spacing: 0;
+    border: none;
+    overflow: hidden;
+    border-radius: 4px;
+    &--half {
+        max-width: 485px;
+        height: 350px;
+    }
 }
 
 .table-scroll thead {
-  position: relative;
-  display: block;
-  width: 100%;
-  overflow-y: hidden;
+    position: relative;
+    display: block;
+    width: 100%;
+    overflow-y: hidden;
 }
 
 .table-scroll tbody {
-  /* Position */
-  display: block;
-  position: relative;
-  width: 100%;
-  height: 320px;
-  overflow-y: scroll;
-  padding-right: 7px;
+    /* Position */
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 320px;
+    overflow-y: scroll;
+    padding-right: 7px;
 }
 
 .table-scroll--half tbody {
-  height: 230px;
+    height: 230px;
 }
 
 .table-scroll tr {
-  width: 100%;
-  display: flex;
+    width: 100%;
+    display: flex;
 }
 
 .table-scroll th,
 .table-scroll td:not(.table-scroll__divider) {
-  flex-basis: 100%;
-  display: block;
-  text-align: left;
+    flex-basis: 100%;
+    display: block;
+    text-align: left;
 }
 
 .table-scroll__title {
-  &--long {
-    min-width: 440px;
-  }
+    &--long {
+        min-width: 440px;
+    }
 }
 
 .table-scroll td {
-  border-bottom: 1px solid #f1f4f9;
+    border-bottom: 1px solid #f1f4f9;
 }
 
 .table-scroll tfoot {
-  display: flex;
-  td {
-    border: none;
-    background: #f1f4f9;
-    font-weight: bold;
-  }
+    display: flex;
+    td {
+        border: none;
+        background: #f1f4f9;
+        font-weight: bold;
+    }
 }
 
 /* Other options */
 
 .table-scroll__cell {
-  padding-top: 16px;
-  padding-bottom: 20px;
-  padding-left: 12px;
+    padding-top: 16px;
+    padding-bottom: 20px;
+    padding-left: 12px;
 }
 
 .table-scroll__title {
-  font-size: rem-calc(16);
-  line-height: 26px;
-  padding: 17px 0 17px 12px;
+    font-size: rem-calc(16);
+    line-height: 26px;
+    padding: 17px 0 17px 12px;
 }
 
 .table-scroll__divider {
-  font-weight: 600;
-  font-size: rem-calc(20);
-  line-height: 24px;
-  color: #3464e0;
-  text-align: center;
-  width: 100%;
-  padding-bottom: 18px;
-  border-bottom: 1px solid #f1f4f9;
-  margin-top: 19px;
+    font-weight: 600;
+    font-size: rem-calc(20);
+    line-height: 24px;
+    color: #3464e0;
+    text-align: center;
+    width: 100%;
+    padding-bottom: 18px;
+    border-bottom: 1px solid #f1f4f9;
+    margin-top: 19px;
 }
 
 .table-scroll__total {
-  width: 200px;
+    width: 200px;
 }
 
 .table-scroll__header {
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
 }
 
 .table-scroll__cell--first-cell {
-  min-width: 440px;
+    min-width: 440px;
 }
 
 .table-scroll__total {
-  padding-left: 12px;
+    padding-left: 12px;
 }
 
 tfoot {
-  td {
-    padding-top: 12px;
-    padding-bottom: 12px;
-  }
+    td {
+        padding-top: 12px;
+        padding-bottom: 12px;
+    }
 }
 
 .table-scroll__header {
-  background-color: #f1f4f9;
+    background-color: #f1f4f9;
 }
 
 .table-scroll__header-clean {
-  background-color: #fff;
+    background-color: #fff;
+    padding-right: 12px;
 }
 .table-scroll__finance {
-  padding-top: 0;
+    padding-top: 0;
 }

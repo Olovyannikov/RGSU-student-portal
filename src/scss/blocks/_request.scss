@@ -1,0 +1,139 @@
+.request__buttons {
+    margin-bottom: 31px;
+}
+
+.request__tab-wrapper {
+    display: flex;
+    gap: 30px;
+}
+
+.request__form {
+    display: flex;
+    background: $c-light;
+    width: 545px;
+    border-radius: 4px;
+    flex-wrap: wrap;
+    padding: 20px 20px 52px 20px;
+    gap: 20px;
+}
+
+.request__form-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.request__form-col {
+    max-width: 245px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.request__form-select {
+    width: 242px;
+}
+
+.request__form-label {
+    display: block;
+    width: 100%;
+    &::after {
+        content: " *";
+        color: $c-red;
+    }
+}
+
+.request__form-input {
+    width: 245px;
+}
+
+.request__form-submit {
+    margin-top: 13px;
+}
+
+.request__form-textarea {
+    width: 100%;
+    min-height: 98px;
+    margin-bottom: 29px;
+}
+
+.request__form-file {
+    @extend .hotels__form-file;
+    width: 226px;
+    height: 44px;
+    white-space: nowrap;
+    svg {
+        right: 15px;
+    }
+    &::after {
+        content: ' *';
+        color: $c-red;
+    }
+}
+
+.request__payments {
+    background: $c-light;
+    padding: 20px;
+    border-radius: 4px;
+    flex-grow: 1;
+}
+
+.request__payments-title {
+    font-size: rem-calc(22);
+    line-height: 26px;
+    color: $c-darkgrey;
+    font-weight: 500;
+    margin: 0 0 30px;
+}
+
+//table
+
+.request__payments-table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.request__payments-table-body {
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    max-height: 424px;
+}
+
+.request__payments-table-row {
+    border-bottom: 1px solid #F1F4F9;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.request__payments-table-title {
+    text-align: left;
+    padding-bottom: 9px;
+    padding-left: 9px;
+}
+
+.request__payments-table-cell {
+    padding-bottom: 9px;
+    padding-left: 9px;
+    font-size: rem-calc(16);
+    line-height: 26px;
+    color: $c-black;
+    &--date {
+        padding-top: 13px;
+        padding-bottom: 4px;
+        color: #6E7781;
+        font-size: rem-calc(14);
+        line-height: 26px;
+    }
+}
+
+.request__infoblock {
+    padding: 17px 69px 14px 25px;
+    background: rgba(43, 197, 132, 0.1);
+    border-radius: 4px;
+    margin-top: 38px;
+    font-size: rem-calc(13);
+    line-height: 21px;
+    color: #6E7781;
+}
