@@ -65,25 +65,50 @@
         </div>
       </div>
     </header>
-    <div class="card--stack container" style="margin-top: 60px">
-      <h1 class="title">Список страниц</h1>
-      <ul class="list" style="display: flex; flex-wrap: wrap; list-style: none; padding: 0;  max-height: 200px; flex-direction: column; align-items: center">
-        <li class="list__item" style=" border: 1px solid grey; margin-bottom: 10px;"><a class="list__link" href="index.html" style="padding: 10px; display: block; text-align: center; width: 250px">index.html</a></li>
-        <li class="list__item" style=" border: 1px solid grey; margin-bottom: 10px;"><a class="list__link" href="dashboard.html" style="padding: 10px; display: block; text-align: center; width: 250px">dashboard.html</a></li>
-        <li class="list__item" style=" border: 1px solid grey; margin-bottom: 10px;"><a class="list__link" href="dashboard-vacancy.html" style="padding: 10px; display: block; text-align: center; width: 250px">dashboard-vacancy.html</a></li>
-        <li class="list__item" style=" border: 1px solid grey; margin-bottom: 10px;"><a class="list__link" href="digital-portfolio.html" style="padding: 10px; display: block; text-align: center; width: 250px">digital-portfolio.html</a></li>
-        <li class="list__item" style=" border: 1px solid grey; margin-bottom: 10px;"><a class="list__link" href="digital-profile.html" style="padding: 10px; display: block; text-align: center; width: 250px">digital-profile.html</a></li>
-        <li class="list__item" style=" border: 1px solid grey; margin-bottom: 10px;"><a class="list__link" href="faq.html" style="padding: 10px; display: block; text-align: center; width: 250px">faq.html</a></li>
-        <li class="list__item" style=" border: 1px solid grey; margin-bottom: 10px;"><a class="list__link" href="moderate.html" style="padding: 10px; display: block; text-align: center; width: 250px">moderate.html</a></li>
-        <li class="list__item" style=" border: 1px solid grey; margin-bottom: 10px;"><a class="list__link" href="my-children-profile.html" style="padding: 10px; display: block; text-align: center; width: 250px">my-children-profile.html</a></li>
-        <li class="list__item" style=" border: 1px solid grey; margin-bottom: 10px;"><a class="list__link" href="new-layout.html" style="padding: 10px; display: block; text-align: center; width: 250px">new-layout.html</a></li>
-        <li class="list__item" style=" border: 1px solid grey; margin-bottom: 10px;"><a class="list__link" href="news.html" style="padding: 10px; display: block; text-align: center; width: 250px">news.html</a></li>
-        <li class="list__item" style=" border: 1px solid grey; margin-bottom: 10px;"><a class="list__link" href="parent.html" style="padding: 10px; display: block; text-align: center; width: 250px">parent.html</a></li>
-        <li class="list__item" style=" border: 1px solid grey; margin-bottom: 10px;"><a class="list__link" href="profile.html" style="padding: 10px; display: block; text-align: center; width: 250px">profile.html</a></li>
-        <li class="list__item" style=" border: 1px solid grey; margin-bottom: 10px;"><a class="list__link" href="profile-settings.html" style="padding: 10px; display: block; text-align: center; width: 250px">profile-settings.html</a></li>
-        <li class="list__item" style=" border: 1px solid grey; margin-bottom: 10px;"><a class="list__link" href="student-house.html" style="padding: 10px; display: block; text-align: center; width: 250px">student-house.html</a></li>
-        <li class="list__item" style=" border: 1px solid grey; margin-bottom: 10px;"><a class="list__link" href="vacancy.html" style="padding: 10px; display: block; text-align: center; width: 250px">vacancy.html</a></li>
-      </ul>
+    <div class="wrapper container container--aside" style="display: flex; margin-top: 40px">
+      <div class="tabs__buttons" style="width: 315px; gap: 10px">
+        <style>.btn {width: 100%}</style>
+        <button class="btn btn--border tabs__button tabs__button--active" data-id="page-list">Список страниц</button>
+        <button class="btn btn--border tabs__button" data-id="introduction">Введение</button>
+        <button class="btn btn--border tabs__button" data-id="tech">Описание технологий</button>
+        <button class="btn btn--border tabs__button" data-id="grid">Сетка</button>
+        <button class="btn btn--border tabs__button" data-id="buttons">Кнопки</button>
+        <button class="btn btn--border tabs__button" data-id="slider">Слайдер</button>
+        <button class="btn btn--border tabs__button" data-id="modals">Модальное окно</button>
+        <button class="btn btn--border tabs__button" data-id="datetime">Время / дата</button>
+        <button class="btn btn--border tabs__button" data-id="chart">Чарты / графики</button>
+        <button class="btn btn--border tabs__button" data-id="progress">Прогресс-бары</button>
+        <button class="btn btn--border tabs__button" data-id="tabs">Табы (вкладки)</button>
+        <button class="btn btn--border tabs__button" data-id="socials">Социальные иконки</button>
+        <button class="btn btn--border tabs__button" data-id="links">Ссылки</button>
+        <button class="btn btn--border tabs__button" data-id="cards">Карточки "товаров"</button>
+        <button class="btn btn--border tabs__button" data-id="range">Range-slider</button>
+        <button class="btn btn--border tabs__button" data-id="options">Option-select</button>
+        <button class="btn btn--border tabs__button" data-id="scrollbar">Scrollbar</button>
+      </div>
+      <div class="card--stack tabs__item tabs__item--active" style="margin-top: 0px" id="page-list">
+        <h1 class="title">Список страниц</h1>
+        <ul class="list" style="padding:0 20px;width: 100%;display: flex; flex-wrap: wrap; list-style: none;  justify-content: space-between;  align-items: center">
+          <li class="list__item" style=" border: 1px solid grey; margin-bottom: 10px;"><a class="list__link" href="index.html" style="padding: 10px; display: block; text-align: center; width: 250px">index.html</a></li>
+          <li class="list__item" style=" border: 1px solid grey; margin-bottom: 10px;"><a class="list__link" href="dashboard.html" style="padding: 10px; display: block; text-align: center; width: 250px">dashboard.html</a></li>
+          <li class="list__item" style=" border: 1px solid grey; margin-bottom: 10px;"><a class="list__link" href="dashboard-vacancy.html" style="padding: 10px; display: block; text-align: center; width: 250px">dashboard-vacancy.html</a></li>
+          <li class="list__item" style=" border: 1px solid grey; margin-bottom: 10px;"><a class="list__link" href="dashboard-request.html" style="padding: 10px; display: block; text-align: center; width: 250px">dashboard-request.html</a></li>
+          <li class="list__item" style=" border: 1px solid grey; margin-bottom: 10px;"><a class="list__link" href="digital-portfolio.html" style="padding: 10px; display: block; text-align: center; width: 250px">digital-portfolio.html</a></li>
+          <li class="list__item" style=" border: 1px solid grey; margin-bottom: 10px;"><a class="list__link" href="dashboard-payments.html" style="padding: 10px; display: block; text-align: center; width: 250px">dashboard-payments.html</a></li>
+          <li class="list__item" style=" border: 1px solid grey; margin-bottom: 10px;"><a class="list__link" href="dashboard-question.html" style="padding: 10px; display: block; text-align: center; width: 250px">dashboard-question.html</a></li>
+          <li class="list__item" style=" border: 1px solid grey; margin-bottom: 10px;"><a class="list__link" href="digital-profile.html" style="padding: 10px; display: block; text-align: center; width: 250px">digital-profile.html</a></li>
+          <li class="list__item" style=" border: 1px solid grey; margin-bottom: 10px;"><a class="list__link" href="faq.html" style="padding: 10px; display: block; text-align: center; width: 250px">faq.html</a></li>
+          <li class="list__item" style=" border: 1px solid grey; margin-bottom: 10px;"><a class="list__link" href="moderate.html" style="padding: 10px; display: block; text-align: center; width: 250px">moderate.html</a></li>
+          <li class="list__item" style=" border: 1px solid grey; margin-bottom: 10px;"><a class="list__link" href="my-children-profile.html" style="padding: 10px; display: block; text-align: center; width: 250px">my-children-profile.html</a></li>
+          <li class="list__item" style=" border: 1px solid grey; margin-bottom: 10px;"><a class="list__link" href="new-layout.html" style="padding: 10px; display: block; text-align: center; width: 250px">new-layout.html</a></li>
+          <li class="list__item" style=" border: 1px solid grey; margin-bottom: 10px;"><a class="list__link" href="news.html" style="padding: 10px; display: block; text-align: center; width: 250px">news.html</a></li>
+          <li class="list__item" style=" border: 1px solid grey; margin-bottom: 10px;"><a class="list__link" href="parent.html" style="padding: 10px; display: block; text-align: center; width: 250px">parent.html</a></li>
+          <li class="list__item" style=" border: 1px solid grey; margin-bottom: 10px;"><a class="list__link" href="profile.html" style="padding: 10px; display: block; text-align: center; width: 250px">profile.html</a></li>
+          <li class="list__item" style=" border: 1px solid grey; margin-bottom: 10px;"><a class="list__link" href="profile-settings.html" style="padding: 10px; display: block; text-align: center; width: 250px">profile-settings.html</a></li>
+          <li class="list__item" style=" border: 1px solid grey; margin-bottom: 10px;"><a class="list__link" href="student-house.html" style="padding: 10px; display: block; text-align: center; width: 250px">student-house.html</a></li>
+          <li class="list__item" style=" border: 1px solid grey; margin-bottom: 10px;"><a class="list__link" href="vacancy.html" style="padding: 10px; display: block; text-align: center; width: 250px">vacancy.html</a></li>
+        </ul>
+      </div>
     </div>
     <footer class="footer">
       <div class="footer__container container">

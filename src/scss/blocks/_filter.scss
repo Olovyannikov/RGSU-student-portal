@@ -1,199 +1,199 @@
-
-
 .filter__title {
-  span {
-    color: rgb(210, 215, 224);
-  }
+    span {
+        color: rgb(210, 215, 224);
+    }
 }
 
 .filter__age {
-  @extend .filter__checkboxes
+    @extend .filter__checkboxes;
 }
 
 .filter__checkboxes {
-  @media (min-width: $tablet) {
-    margin-bottom: 2px;
-    background-color: #fff;
-    padding-left: 20px;
-    padding-right: 20px;
-  }
+    @media (min-width: $tablet) {
+        margin-bottom: 2px;
+        background-color: #fff;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
 }
 
 .filter__checkboxes-container {
-  width: 100%;
-  overflow-y: hidden;
-  padding-top: 23px;
-  padding-bottom: 23px;
+    width: 100%;
+    overflow-y: hidden;
+    padding-top: 23px;
+    padding-bottom: 23px;
 }
 
 .filter__checkboxes-scroll {
-  width: 100%;
-  height: 201px;
-  margin: 20px 0;
-  overflow-y: scroll;
+    width: 100%;
+    height: 201px;
+    margin: 20px 0;
+    overflow-y: scroll;
 }
 
 .filter__checkboxes-wrapper {
-  max-width: 255px;
-  padding-left: 36px;
-  padding-top: 22px;
-  &:first-child {
-    padding-top: 0;
-  }
+    max-width: 255px;
+    padding-left: 36px;
+    padding-top: 22px;
+    &:first-child {
+        padding-top: 0;
+    }
 }
 
 //custom checkbox
 
 .filter__label {
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 26px;
-  display: flex;
-  align-items: center;
-  position: relative;
-  cursor: pointer;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 26px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
 }
 
 .filter__checkbox {
-  margin: 0;
-  padding: 0;
-  appearance: none;
-  display: none; //fallback
-  position: absolute;
+    margin: 0;
+    padding: 0;
+    appearance: none;
+    display: none; //fallback
+    position: absolute;
 }
 
 .filter__checkbox-visible {
-  position: absolute;
-  box-sizing: border-box;
-  margin-left: -36px;
-  width: 20px;
-  height: 20px;
-  background-color: #fff;
-  border: 1px solid #c3cad6;
-  &::before {
-    animation: fadeIn 0.2s ease-in-out;
-  }
+    position: absolute;
+    box-sizing: border-box;
+    margin-left: -36px;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border: 1px solid #c3cad6;
+    &::before {
+        animation: fadeIn 0.2s ease-in-out;
+    }
 }
 
 @keyframes fadeIn {
-  from {
-    transform: scale(0);
-  }
-  to {
-    transform: scale(1);
-  }
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
 }
 
 //checked
 .filter__checkbox:checked + .filter__checkbox-visible {
-  border: 1px solid #3464e0;
+    border: 1px solid #3464e0;
 }
 
 .filter__checkbox:checked + .filter__checkbox-visible::before {
-  content: "";
-  width: 10px;
-  height: 10px;
-  top: 4px;
-  left: 4px;
-  display: block;
-  position: absolute;
-  background-color: #3464e0;
+    content: "";
+    width: 10px;
+    height: 10px;
+    top: 4px;
+    left: 4px;
+    display: block;
+    position: absolute;
+    background-color: #3464e0;
 }
 
 //disabled
 
 .filter__checkbox:disabled + .filter__checkbox-visible {
-  border: 1px solid $c-grey;
-  background: $c-grey;
-  &::before {
-    display: none;
-  }
+    border: 1px solid $c-grey;
+    background: $c-grey;
+    &::before {
+        display: none;
+    }
 }
 
 .filter__faculty {
-  @extend .filter__checkboxes;
+    @extend .filter__checkboxes;
 }
 .filter__select {
-  width: 266px;
-  padding: 9px;
-  border: 1px solid #F1F4F9;
-  box-sizing: border-box;
-  border-radius: 4px;
-  margin-bottom: 23px;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 26px;
-  color: #444;
-  appearance: none;
-  position: relative;
-  background: url("../img/icons/icons.svg#vector") no-repeat 95% center;
-  background-size: 11px;
+    width: 266px;
+    padding: 9px;
+    border: 1px solid #f1f4f9;
+    box-sizing: border-box;
+    border-radius: 4px;
+    margin-bottom: 23px;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 26px;
+    color: #444;
+    appearance: none;
+    position: relative;
+    background: url("../img/icons/icons.svg#vector") no-repeat 95% center;
+    background-size: 11px;
 }
 
 .filter__select > option[disabled] {
-  color: #C3CAD6;
-  &:first-of-type {
-    color: #C3CAD6;
-  }
+    color: #c3cad6;
+    &:first-of-type {
+        color: #c3cad6;
+    }
 }
 
 .filter__education {
-  @extend .filter__checkboxes;
-  padding-bottom: 34px;
+    @extend .filter__checkboxes;
+    padding-bottom: 34px;
+    min-height: 170px;
 }
 
 .filter__education-options {
-  box-sizing: border-box;
-  border-radius: 4px;
-  display: flex;
-  flex-wrap: wrap;
-  margin-bottom: 27px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 27px;
 }
 
 .filter__education-option {
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 26px;
-  color: #FFFFFF;
-  display: block;
-  margin: 8px 8px 8px 6px;
-  padding: 2px 9px 2px 36px;
-  background: #C3CAD6;
-  border-radius: 3px;
-  position: relative;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 26px;
+    color: #ffffff;
+    display: block;
+    margin: 8px 8px 8px 6px;
+    padding: 2px 9px 2px 36px;
+    background: #c3cad6;
+    border-radius: 3px;
+    position: relative;
 }
 
 .filter__education-option {
-  &--delete {
-    @include btn-reset;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 28px;
-    height: 30px;
-    background: #ABB3C1;
-    border-radius: 3px 0 0 3px;
-    &::before, &::after {
-      content: '';
-      position: absolute;
-      display: block;
-      width: 15px;
-      height: 1px;
-      background-color: #fff;
-      transform: rotate(45deg);
-      top: 15px;
-      left: 7px;
+    &--delete {
+        @include btn-reset;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 28px;
+        height: 30px;
+        background: #abb3c1;
+        border-radius: 3px 0 0 3px;
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            display: block;
+            width: 15px;
+            height: 1px;
+            background-color: #fff;
+            transform: rotate(45deg);
+            top: 15px;
+            left: 7px;
+        }
+        &::after {
+            transform: rotate(-45deg);
+        }
     }
-    &::after {
-      transform: rotate(-45deg);
-    }
-  }
 }
 
 .filter__salary {
-  @extend .filter__checkboxes
+    @extend .filter__checkboxes;
 }
 
 .filter__archive {
-  @extend .filter__checkboxes
+    @extend .filter__checkboxes;
 }

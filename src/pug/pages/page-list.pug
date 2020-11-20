@@ -4,36 +4,120 @@ block variables
     - const title = 'Студенческий портал - Список страниц';
 
 block content
-    .card--stack.container(style="margin-top: 60px")
-        h1.title Список страниц
-        ul.list(style="display: flex; flex-wrap: wrap; list-style: none; padding: 0;  max-height: 200px; flex-direction: column; align-items: center")
-            li.list__item(style=" border: 1px solid grey; margin-bottom: 10px;")
-                a.list__link(href="index.html" style="padding: 10px; display: block; text-align: center; width: 250px") index.html
-            li.list__item(style=" border: 1px solid grey; margin-bottom: 10px;")
-                a.list__link(href="dashboard.html" style="padding: 10px; display: block; text-align: center; width: 250px") dashboard.html
-            li.list__item(style=" border: 1px solid grey; margin-bottom: 10px;")
-                a.list__link(href="dashboard-vacancy.html"  style="padding: 10px; display: block; text-align: center; width: 250px") dashboard-vacancy.html
-            li.list__item(style=" border: 1px solid grey; margin-bottom: 10px;")
-                a.list__link(href="digital-portfolio.html"  style="padding: 10px; display: block; text-align: center; width: 250px") digital-portfolio.html
-            li.list__item(style=" border: 1px solid grey; margin-bottom: 10px;")
-                a.list__link(href="digital-profile.html"  style="padding: 10px; display: block; text-align: center; width: 250px") digital-profile.html
-            li.list__item(style=" border: 1px solid grey; margin-bottom: 10px;")
-                a.list__link(href="faq.html"  style="padding: 10px; display: block; text-align: center; width: 250px") faq.html
-            li.list__item(style=" border: 1px solid grey; margin-bottom: 10px;")
-                a.list__link(href="moderate.html"  style="padding: 10px; display: block; text-align: center; width: 250px") moderate.html
-            li.list__item(style=" border: 1px solid grey; margin-bottom: 10px;")
-                a.list__link(href="my-children-profile.html"  style="padding: 10px; display: block; text-align: center; width: 250px") my-children-profile.html
-            li.list__item(style=" border: 1px solid grey; margin-bottom: 10px;")
-                a.list__link(href="new-layout.html"  style="padding: 10px; display: block; text-align: center; width: 250px") new-layout.html
-            li.list__item(style=" border: 1px solid grey; margin-bottom: 10px;")
-                a.list__link(href="news.html" style="padding: 10px; display: block; text-align: center; width: 250px") news.html
-            li.list__item(style=" border: 1px solid grey; margin-bottom: 10px;")
-                a.list__link(href="parent.html" style="padding: 10px; display: block; text-align: center; width: 250px") parent.html
-            li.list__item(style=" border: 1px solid grey; margin-bottom: 10px;")
-                a.list__link(href="profile.html" style="padding: 10px; display: block; text-align: center; width: 250px") profile.html
-            li.list__item(style=" border: 1px solid grey; margin-bottom: 10px;")
-                a.list__link(href="profile-settings.html" style="padding: 10px; display: block; text-align: center; width: 250px") profile-settings.html
-            li.list__item(style=" border: 1px solid grey; margin-bottom: 10px;")
-                a.list__link(href="student-house.html" style="padding: 10px; display: block; text-align: center; width: 250px") student-house.html
-            li.list__item(style=" border: 1px solid grey; margin-bottom: 10px;")
-                a.list__link(href="vacancy.html" style="padding: 10px; display: block; text-align: center; width: 250px") vacancy.html
+    .wrapper.container.container--aside(style="display: flex; margin-top: 40px")
+        .tabs__buttons(style="width: 315px; gap: 10px")
+            style.
+                .btn {width: 100%}
+            button.btn.btn--border.tabs__button.tabs__button--active(data-id="page-list") Список страниц
+            button.btn.btn--border.tabs__button(data-id="introduction") Введение
+            button.btn.btn--border.tabs__button(data-id="tech") Описание технологий
+            button.btn.btn--border.tabs__button(data-id="arch") Архитектура проекта
+            button.btn.btn--border.tabs__button(data-id="grid") Сетка
+            button.btn.btn--border.tabs__button(data-id="buttons") Кнопки
+            button.btn.btn--border.tabs__button(data-id="slider") Слайдер
+            button.btn.btn--border.tabs__button(data-id="modals") Модальное окно
+            button.btn.btn--border.tabs__button(data-id="datetime") Время / дата
+            button.btn.btn--border.tabs__button(data-id="chart") Чарты / графики
+            button.btn.btn--border.tabs__button(data-id="progress") Прогресс-бары
+            button.btn.btn--border.tabs__button(data-id="tabs") Табы (вкладки)
+            button.btn.btn--border.tabs__button(data-id="socials") Социальные иконки
+            button.btn.btn--border.tabs__button(data-id="links") Ссылки
+            button.btn.btn--border.tabs__button(data-id="cards") Карточки "товаров"
+            button.btn.btn--border.tabs__button(data-id="range") Range-slider
+            button.btn.btn--border.tabs__button(data-id="options") Option-select
+            button.btn.btn--border.tabs__button(data-id="scrollbar") Scrollbar
+            button.btn.btn--border.tabs__button(data-id="accordion") Accordion
+            button.btn.btn--border.tabs__button(data-id="sidebar") SideBar
+
+        .card--stack.tabs__item.tabs__item--active(style="margin-top: 0px")(id="page-list")
+            h1.title Список страниц
+            ul.list(style="padding:0 20px;width: 100%;display: flex; flex-wrap: wrap; list-style: none;  justify-content: space-between;  align-items: center")
+                li.list__item(style=" border: 1px solid grey; margin-bottom: 10px;")
+                    a.list__link(href="index.html" style="padding: 10px; display: block; text-align: center; width: 250px") index.html
+                li.list__item(style=" border: 1px solid grey; margin-bottom: 10px;")
+                    a.list__link(href="dashboard.html" style="padding: 10px; display: block; text-align: center; width: 250px") dashboard.html
+                li.list__item(style=" border: 1px solid grey; margin-bottom: 10px;")
+                    a.list__link(href="dashboard-vacancy.html"  style="padding: 10px; display: block; text-align: center; width: 250px") dashboard-vacancy.html
+                li.list__item(style=" border: 1px solid grey; margin-bottom: 10px;")
+                    a.list__link(href="dashboard-request.html"  style="padding: 10px; display: block; text-align: center; width: 250px") dashboard-request.html
+                li.list__item(style=" border: 1px solid grey; margin-bottom: 10px;")
+                    a.list__link(href="digital-portfolio.html"  style="padding: 10px; display: block; text-align: center; width: 250px") digital-portfolio.html
+                li.list__item(style=" border: 1px solid grey; margin-bottom: 10px;")
+                    a.list__link(href="dashboard-payments.html"  style="padding: 10px; display: block; text-align: center; width: 250px") dashboard-payments.html
+                li.list__item(style=" border: 1px solid grey; margin-bottom: 10px;")
+                    a.list__link(href="dashboard-question.html"  style="padding: 10px; display: block; text-align: center; width: 250px") dashboard-question.html
+                li.list__item(style=" border: 1px solid grey; margin-bottom: 10px;")
+                    a.list__link(href="digital-profile.html"  style="padding: 10px; display: block; text-align: center; width: 250px") digital-profile.html
+                li.list__item(style=" border: 1px solid grey; margin-bottom: 10px;")
+                    a.list__link(href="faq.html"  style="padding: 10px; display: block; text-align: center; width: 250px") faq.html
+                li.list__item(style=" border: 1px solid grey; margin-bottom: 10px;")
+                    a.list__link(href="moderate.html"  style="padding: 10px; display: block; text-align: center; width: 250px") moderate.html
+                li.list__item(style=" border: 1px solid grey; margin-bottom: 10px;")
+                    a.list__link(href="my-children-profile.html"  style="padding: 10px; display: block; text-align: center; width: 250px") my-children-profile.html
+                li.list__item(style=" border: 1px solid grey; margin-bottom: 10px;")
+                    a.list__link(href="new-layout.html"  style="padding: 10px; display: block; text-align: center; width: 250px") new-layout.html
+                li.list__item(style=" border: 1px solid grey; margin-bottom: 10px;")
+                    a.list__link(href="news.html" style="padding: 10px; display: block; text-align: center; width: 250px") news.html
+                li.list__item(style=" border: 1px solid grey; margin-bottom: 10px;")
+                    a.list__link(href="parent.html" style="padding: 10px; display: block; text-align: center; width: 250px") parent.html
+                li.list__item(style=" border: 1px solid grey; margin-bottom: 10px;")
+                    a.list__link(href="profile.html" style="padding: 10px; display: block; text-align: center; width: 250px") profile.html
+                li.list__item(style=" border: 1px solid grey; margin-bottom: 10px;")
+                    a.list__link(href="profile-settings.html" style="padding: 10px; display: block; text-align: center; width: 250px") profile-settings.html
+                li.list__item(style=" border: 1px solid grey; margin-bottom: 10px;")
+                    a.list__link(href="student-house.html" style="padding: 10px; display: block; text-align: center; width: 250px") student-house.html
+                li.list__item(style=" border: 1px solid grey; margin-bottom: 10px;")
+                    a.list__link(href="vacancy.html" style="padding: 10px; display: block; text-align: center; width: 250px") vacancy.html
+
+
+        .card--stack.tabs__item(id="introduction")
+            h1.title Введение
+            p Привет, мир!
+            p На этой странице я расскажу о различных нюансах при работе с проектом и, по возможности, отвечу на очевидные вопросы
+            .accordeon-section
+                p.accordeon-title.title--main Почему не Bootstrap (Foundation, smartGrid, другая_смешная_опция)?
+                    button.accordeon-button
+                .accordeon-container
+                    p У CSS есть несколько базовых проблем, которые позволяют очень быстро отстрелить себе ногу при неправильном использовании:
+                    ol
+                        li
+                            p Глобальный неймспейс – в серверном программировании все что написано в файле, в файле и остается. Все же что написано в css и js засирает глобальное пространство имен со всеми вытекающими. В JS эту проблему сейчас побороли всякими модульными системами, а вот с css сложнее. В идеальном мире это должен починить Shadow DOM и настоящие Web Components, но пока их нет единственный способ с этим бороться – следовать какой-то системе именований селекторов, которая по возможности уменьшает и исключает возможные конфликты.
+                        li
+                            p Каскадность – если на один элемент может сработать несколько правил, то они все и сработают последовательно. Если есть элемент h1.title, на него сработают все правила для тегов h1 и все правила для класса .title. Так как весь html состоит из тегов, то правил которые применяются на теги без классов будут работать на все вообще.
+                            p Соответственно назначать или переназначать стили у тегов – это примерно то же самое, что править прототипы объектов в JS, чем в свое время печально славился <a href="http://prototypejs.org/" class="main__link">Prototype.js</a>. Эти стили унаследует вообще все объекты и если их потом захочется поменять, то результат будет такой же, как если ты решил в прототипе объекта поменять результаты какого-то метода, который используют все дети этого объекта. Вероятность что-то сломать почти 100%.
+        .card--stack.tabs__item(id="tech")
+            h1.title Список страниц
+        .card--stack.tabs__item(id="arch")
+            h1.title Список страниц
+        .card--stack.tabs__item(id="grid")
+            h1.title Список страниц
+        .card--stack.tabs__item(id="buttons")
+            h1.title Список страниц
+        .card--stack.tabs__item(id="slider")
+            h1.title Список страниц
+        .card--stack.tabs__item(id="modals")
+            h1.title Список страниц
+        .card--stack.tabs__item(id="datetime")
+            h1.title Список страниц
+        .card--stack.tabs__item(id="chart")
+            h1.title Список страниц
+        .card--stack.tabs__item(id="progress")
+            h1.title Список страниц
+        .card--stack.tabs__item(id="tabs")
+            h1.title Список страниц
+        .card--stack.tabs__item(id="socials")
+            h1.title Список страниц
+        .card--stack.tabs__item(id="links")
+            h1.title Список страниц
+        .card--stack.tabs__item(id="cards")
+            h1.title Список страниц
+        .card--stack.tabs__item(id="range")
+            h1.title Список страниц
+        .card--stack.tabs__item(id="options")
+            h1.title Список страниц
+        .card--stack.tabs__item(id="scrollbar")
+            h1.title Список страниц
+        .card--stack.tabs__item(id="accordion")
+            h1.title Список страниц
+        .card--stack.tabs__item(id="sidebar")
+            h1.title Список страниц
