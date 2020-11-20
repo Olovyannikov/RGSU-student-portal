@@ -20,6 +20,8 @@
     background: #fff;
     font-family: "Russia", sans-serif;
     text-align: left;
+    display: none;
+    animation: slideLeft .5s;
 }
 
 #cookie .cookieBtnCross {
@@ -103,6 +105,7 @@
     #cookie {
         min-width: 300px;
         min-height: 120px;
+        display: none;
     }
     #cookie p {
         font-size: rem-calc(12);

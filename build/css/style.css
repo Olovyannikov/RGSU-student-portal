@@ -1174,6 +1174,9 @@ textarea:hover {
   background: #fff;
   font-family: "Russia", sans-serif;
   text-align: left;
+  display: none;
+  -webkit-animation: slideLeft .5s;
+          animation: slideLeft .5s;
 }
 
 #cookie .cookieBtnCross {
@@ -9007,6 +9010,7 @@ tfoot td {
   #cookie {
     min-width: 300px;
     min-height: 120px;
+    display: none;
   }
 
   #cookie p {

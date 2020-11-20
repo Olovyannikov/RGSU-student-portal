@@ -1,141 +1,197 @@
 export default () => {
-  (function (window, undefined) {
-    "use strict";
-
-    let document = window.document;
-
-    function log() {
-      if (window.console && window.console.log) {
-        for (let x in arguments) {
-          if (arguments.hasOwnProperty(x)) {
-            window.console.log(arguments[x]);
-          }
+    (function (factory) {
+        let registeredInModuleLoader;
+        if (typeof define === "function" && define.amd) {
+            define(factory);
+            registeredInModuleLoader = true;
         }
-      }
-    }
-
-    function AcceptCookie() {
-      if (!(this instanceof AcceptCookie)) {
-        return new AcceptCookie();
-      }
-
-      this.init.call(this);
-
-      return this;
-    }
-
-    AcceptCookie.prototype = {
-      init: function () {
-        let self = this;
-
-        if (self.readCookie("AcceptCookie") == null) {
-          self.addCookieBar();
+        if (typeof exports === "object") {
+            module.exports = factory();
+            registeredInModuleLoader = true;
         }
-      },
-      getElementsByClass: function (searchClass, node, tag) {
-        let classElements = new Array();
-        if (node == null) {
-          node = document;
+        if (!registeredInModuleLoader) {
+            let OldCookies = window.Cookies;
+            let api = (window.Cookies = factory());
+            api.noConflict = function () {
+                window.Cookies = OldCookies;
+                return api;
+            };
         }
-        if (tag == null) {
-          tag = "*";
-        }
-        let els = node.getElementsByTagName(tag);
-        let elsLen = els.length;
-        let pattern = new RegExp("(^|\\s)" + searchClass + "(\\s|$)");
-        for (let i = 0, j = 0; i < elsLen; i++) {
-          if (pattern.test(els[i].className)) {
-            classElements[j] = els[i];
-            j++;
-          }
-        }
-        return classElements;
-      },
-      addEvent: function (obj, type, fn) {
-        if (obj.addEventListener) {
-          obj.addEventListener(type, fn, false);
-        } else if (obj.attachEvent) {
-          obj["e" + type + fn] = fn;
-          obj[type + fn] = function () {
-            obj["e" + type + fn](window.event);
-          };
-          obj.attachEvent("on" + type, obj[type + fn]);
-        } else {
-          obj["on" + type] = obj["e" + type + fn];
-        }
-      },
-      createCookie: function (name, value, days) {
-        let expires;
-        if (days) {
-          let date = new Date();
-          date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
-          expires = "; expires=" + date.toGMTString();
-        } else {
-          expires = "";
-        }
-        document.cookie = name + "=" + value + expires + "; path=/";
-      },
-      readCookie: function (name) {
-        let nameEQ = name + "=";
-        let ca = document.cookie.split(";");
-        for (let i = 0; i < ca.length; i++) {
-          let c = ca[i];
-          while (c.charAt(0) === " ") {
-            c = c.substring(1, c.length);
-          }
-          if (c.indexOf(nameEQ) === 0) {
-            return c.substring(nameEQ.length, c.length);
-          }
-        }
-        return null;
-      },
-      eraseCookie: function (name) {
-        let self = this;
-        self.createCookie(name, "", -1);
-      },
-
-      addCookieBar: function () {
-        let self = this;
-        let htmlBar = "";
-
-        htmlBar += '<div class="cookieShell">';
-        htmlBar += '<svg width="54" height="54" class="cookieIcon" fill="#3464E0"> <use xlink:href="#cookie-icon"></use></svg>'
-        htmlBar +=
-          "<p>Мы используем файлы cookie. <br> С их помощью мы позаботимся о вас, улучшая работу этого сайта.</p>";
-        htmlBar += '<div class="cookieActions">';
-        htmlBar +=
-          '<button type="button" class="cookieBtn"> <span class="cookieBtnCross"></span> </button>';
-        htmlBar += "</div>";
-        htmlBar += "</div>";
-
-        let barDiv = document.createElement("div");
-        barDiv.id = "cookie";
-        document.body.appendChild(barDiv);
-        barDiv.innerHTML = htmlBar;
-
-        self.bindCookieBar();
-      },
-      bindCookieBar: function () {
-        let self = this;
-        let btn_arr = self.getElementsByClass("cookieBtn", null, "button");
-        if (btn_arr.length > 0) {
-          self.addEvent(btn_arr[0], "click", function (e) {
-            if (e.preventDefault) {
-              e.preventDefault();
+    })(function () {
+        function extend() {
+            let i = 0;
+            let result = {};
+            for (; i < arguments.length; i++) {
+                let attributes = arguments[i];
+                for (let key in attributes) {
+                    result[key] = attributes[key];
+                }
             }
-            self.createCookie("cookie", "YES", 5);
-
-            document.getElementById("cookie").remove();
-            return false;
-          });
+            return result;
         }
-      },
+
+        function decode(s) {
+            return s.replace(/(%[0-9A-Z]{2})+/g, decodeURIComponent);
+        }
+
+        function init(converter) {
+            function api() {}
+
+            function set(key, value, attributes) {
+                if (typeof document === "undefined") {
+                    return;
+                }
+
+                attributes = extend(
+                    {
+                        path: "/",
+                    },
+                    api.defaults,
+                    attributes
+                );
+
+                if (typeof attributes.expires === "number") {
+                    attributes.expires = new Date(
+                        new Date() * 1 + attributes.expires * 864e5
+                    );
+                }
+
+                // We're using "expires" because "max-age" is not supported by IE
+                attributes.expires = attributes.expires
+                    ? attributes.expires.toUTCString()
+                    : "";
+
+                try {
+                    let result = JSON.stringify(value);
+                    if (/^[\{\[]/.test(result)) {
+                        value = result;
+                    }
+                } catch (e) {}
+
+                value = converter.write
+                    ? converter.write(value, key)
+                    : encodeURIComponent(String(value)).replace(
+                          /%(23|24|26|2B|3A|3C|3E|3D|2F|3F|40|5B|5D|5E|60|7B|7D|7C)/g,
+                          decodeURIComponent
+                      );
+
+                key = encodeURIComponent(String(key))
+                    .replace(/%(23|24|26|2B|5E|60|7C)/g, decodeURIComponent)
+                    .replace(/[\(\)]/g, escape);
+
+                let stringifiedAttributes = "";
+                for (let attributeName in attributes) {
+                    if (!attributes[attributeName]) {
+                        continue;
+                    }
+                    stringifiedAttributes += "; " + attributeName;
+                    if (attributes[attributeName] === true) {
+                        continue;
+                    }
+
+                    // Considers RFC 6265 section 5.2:
+                    // ...
+                    // 3.  If the remaining unparsed-attributes contains a %x3B (";")
+                    //     character:
+                    // Consume the characters of the unparsed-attributes up to,
+                    // not including, the first %x3B (";") character.
+                    // ...
+                    stringifiedAttributes +=
+                        "=" + attributes[attributeName].split(";")[0];
+                }
+
+                return (document.cookie =
+                    key + "=" + value + stringifiedAttributes);
+            }
+
+            function get(key, json) {
+                if (typeof document === "undefined") {
+                    return;
+                }
+
+                let jar = {};
+                // To prevent the for loop in the first place assign an empty array
+                // in case there are no cookies at all.
+                let cookies = document.cookie
+                    ? document.cookie.split("; ")
+                    : [];
+                let i = 0;
+
+                for (; i < cookies.length; i++) {
+                    let parts = cookies[i].split("=");
+                    let cookie = parts.slice(1).join("=");
+
+                    if (!json && cookie.charAt(0) === '"') {
+                        cookie = cookie.slice(1, -1);
+                    }
+
+                    try {
+                        let name = decode(parts[0]);
+                        cookie =
+                            (converter.read || converter)(cookie, name) ||
+                            decode(cookie);
+
+                        if (json) {
+                            try {
+                                cookie = JSON.parse(cookie);
+                            } catch (e) {}
+                        }
+
+                        jar[name] = cookie;
+
+                        if (key === name) {
+                            break;
+                        }
+                    } catch (e) {}
+                }
+
+                return key ? jar[key] : jar;
+            }
+
+            api.set = set;
+            api.get = function (key) {
+                return get(key, false /* read as raw */);
+            };
+            api.getJSON = function (key) {
+                return get(key, true /* read as json */);
+            };
+            api.remove = function (key, attributes) {
+                set(
+                    key,
+                    "",
+                    extend(attributes, {
+                        expires: -1,
+                    })
+                );
+            };
+
+            api.defaults = {};
+
+            api.withConverter = init;
+
+            return api;
+        }
+
+        return init(function () {});
+    });
+
+    const cookieEl = document.querySelector("#cookie");
+    const cookieAccept = document.querySelector('.cookieBtn');
+
+    cookieAccept.addEventListener('click', () => {
+        cookieEl.style.display = "none";
+    });
+
+    let cookies = () => {
+        if (!Cookies.get("hide-cookie")) {
+            setTimeout(() => {
+                cookieEl.style.display = "block";
+            }, 1000);
+        }
+        Cookies.set("hide-cookie", "true", {
+            expires: 30,
+        });
     };
 
-    window.AcceptCookie = AcceptCookie;
-  })(window);
-
-  window.onload = function () {
-    AcceptCookie = AcceptCookie();
-  };
+    cookies();
 };
