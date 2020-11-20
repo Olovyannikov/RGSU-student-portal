@@ -65,12 +65,38 @@
         </div>
       </div>
     </header>
-    <div class="wrapper container container--aside" style="display: flex; margin-top: 40px">
+    <style>
+      .btn {
+          width: 100%
+      }
+      
+      .title--large {
+          padding-left: 20px;
+          padding-top: 20px
+      }
+      
+      p {
+          padding-left: 20px;
+          font-size: 18px;
+          padding-right: 20px;
+          line-height: 26px;
+      }
+      
+      pre, code {
+          padding: 20px;
+      }
+      
+      pre {
+          background: #F1F4F9
+      }
+      
+    </style>
+    <div class="wrapper container container--aside tabs__container" style="display: flex; margin-top: 40px">
       <div class="tabs__buttons" style="width: 315px; gap: 10px">
-        <style>.btn {width: 100%}</style>
         <button class="btn btn--border tabs__button tabs__button--active" data-id="page-list">Список страниц</button>
         <button class="btn btn--border tabs__button" data-id="introduction">Введение</button>
         <button class="btn btn--border tabs__button" data-id="tech">Описание технологий</button>
+        <button class="btn btn--border tabs__button" data-id="arch">Архитектура проекта</button>
         <button class="btn btn--border tabs__button" data-id="grid">Сетка</button>
         <button class="btn btn--border tabs__button" data-id="buttons">Кнопки</button>
         <button class="btn btn--border tabs__button" data-id="slider">Слайдер</button>
@@ -85,6 +111,8 @@
         <button class="btn btn--border tabs__button" data-id="range">Range-slider</button>
         <button class="btn btn--border tabs__button" data-id="options">Option-select</button>
         <button class="btn btn--border tabs__button" data-id="scrollbar">Scrollbar</button>
+        <button class="btn btn--border tabs__button" data-id="accordion">Accordion</button>
+        <button class="btn btn--border tabs__button" data-id="sidebar">SideBar</button>
       </div>
       <div class="card--stack tabs__item tabs__item--active" style="margin-top: 0px" id="page-list">
         <h1 class="title">Список страниц</h1>
@@ -108,6 +136,440 @@
           <li class="list__item" style=" border: 1px solid grey; margin-bottom: 10px;"><a class="list__link" href="student-house.html" style="padding: 10px; display: block; text-align: center; width: 250px">student-house.html</a></li>
           <li class="list__item" style=" border: 1px solid grey; margin-bottom: 10px;"><a class="list__link" href="vacancy.html" style="padding: 10px; display: block; text-align: center; width: 250px">vacancy.html</a></li>
         </ul>
+      </div>
+      <div class="card--stack tabs__item" id="introduction">
+        <h1 class="title--large">Введение</h1>
+        <p style="padding-left: 20px">Привет, мир!</p>
+        <p style="padding-left: 20px">На этой странице я расскажу о различных нюансах при работе с проектом и, по возможности, отвечу на очевидные вопросы</p>
+        <div class="accordeon-section">
+          <p class="accordeon-title title--main">Почему не Bootstrap (Foundation, smartGrid, другая_смешная_опция)?
+            <button class="accordeon-button"></button>
+          </p>
+          <div class="accordeon-container">
+            <h3>У CSS есть несколько базовых проблем, которые позволяют очень быстро отстрелить себе ногу при неправильном использовании:</h3>
+            <ol>
+              <li>
+                <p>Глобальный неймспейс – в серверном программировании все что написано в файле, в файле и остается. Все же что написано в css и js засирает глобальное пространство имен со всеми вытекающими. В JS эту проблему сейчас побороли всякими модульными системами, а вот с css сложнее. В идеальном мире это должен починить Shadow DOM и настоящие Web Components, но пока их нет единственный способ с этим бороться – следовать какой-то системе именований селекторов, которая по возможности уменьшает и исключает возможные конфликты.</p>
+              </li>
+              <li>
+                <p>Каскадность – если на один элемент может сработать несколько правил, то они все и сработают последовательно. Если есть элемент h1.title, на него сработают все правила для тегов h1 и все правила для класса .title. Так как весь html состоит из тегов, то правил которые применяются на теги без классов будут работать на все вообще.</p>
+                <p>Соответственно назначать или переназначать стили у тегов – это примерно то же самое, что править прототипы объектов в JS, чем в свое время печально славился <a href="http://prototypejs.org/" class="main__link">Prototype.js</a>. Эти стили унаследует вообще все объекты и если их потом захочется поменять, то результат будет такой же, как если ты решил в прототипе объекта поменять результаты какого-то метода, который используют все дети этого объекта. Вероятность что-то сломать почти 100%.</p>
+              </li>
+              <li>
+                <p>Вложенные селекторы. Можно написать селекторы .nav .item {...} и .menu .item и .item в зависимости от места вывода будет показываться по-разному. Все хорошо пока тебе не нужно поместить блок menu внутрь блока nav. Тогда сайдэффекты становятся совершенно непредсказуемые. По сути аналог вложенных селекторов из программирования – это функция которая в зависимости от места где её вызывают, выдает разный результат. Например в одном месте sum(2,2) может возвращать 3, а в другом 5.</p>
+              </li>
+            </ol>
+            <h3>Зачем нужны методологии</h3>
+            <p>Хорошая методология занимает предотвращением этих проблем. Покажу как это делает БЭМ, но CSS Modules, Polymer или всякие решения с инлайновыми стилями для Реакта тоже решают именно их, только другим способом.</p>
+            <p>Как именование классов по БЭМу помогает решать эти проблемы:</p>
+            <ol>
+              <li>
+                <p>БЭМ запрещает применять стили на теги, максимум ресет. На id тоже нельзя, потому что такие элементы нельзя на странице использовать 2 раза, а сколько раз он тебе понадобится ты не всегда знаешь заранее. Все стили можно применять только к классам.</p>
+              </li>
+              <li>
+                <p>БЭМ создает для всех компонентов глобальный неймспейс – все классы которые относятся к компоненту начинаются с одного префикса. Это позволяет исправить второй пример таким образом: .nav__item, .menu__item. Если один вложить в другой не будет конфликта правил.</p>
+              </li>
+              <li>
+                <p>Под каждый компонент в БЭМ создается своя папка – это защищает тебя от конфликтов в именах компонентов и при правильном использовании дает гарантию, что в глобальном неймспейсе будет только один компонент с таким префиксом.</p>
+              </li>
+              <li>
+                <p>В БЭМ есть только один вид вложенных селекторов: модификатор > элемент. Оба начинаются с одного префикса, оба живут в одном файле, оба никак не влияют на другие компоненты.</p>
+              </li>
+            </ol>
+            <h3>Что делает Bootstrap</h3>
+            <p>Bootstrap нарушает КАЖДОЕ из этих правил:</p>
+            <ol>
+              <li>
+                <p>Bootstrap переназначает стили тэгов.</p>
+              </li>
+              <li>
+                <p>Bootstrap в куче случаев меняет способ отображения элемента в зависимости от того, кто его родители. Хорошо хоть сейчас делает это через >, а не просто так. Но вот https://github.com/twbs/bootstrap/blob/master/scss/_button-groups.scss такие штуки все равно сильно уменьшают предсказуемость и усложняют редизайн.</p>
+              </li>
+              <li>
+                <p>Bootstrap загрязняет глобальный неймспейс сотнями классов с очень generic именами: .table, .dropdown, .row, .left, и т. д. Которые надо все помнить и ни в коем случае не использовать самому.</p>
+              </li>
+            </ol>
+            <p>При таком подходе отстреливание себе ноги становится только вопросом времени.</p>
+          </div>
+        </div>
+        <div class="accordeon-section">
+          <p class="accordeon-title title--main">Почему не jQuery(ExtJS, Mootools, другая_смешная_опция)?
+            <button class="accordeon-button"></button>
+          </p>
+          <div class="accordeon-container">
+            <p>Раньше JavaScript использовали для небольших скриптов или несложных страниц, а теперь на нём делают вообще всё в интерфейсах сайтов.</p>
+            <p>Библиотека jQuery была популярна из-за существования IE6 и большого количества браузеров с разной поддержкой веб-стандартов. Программист не мог быть уверен, что его код запустится у всех пользователей. Проще было взять jQuery и написать скрипты, которые будут работать одинаково вне зависимости от браузера.</p>
+            <p>Также jQuery заметно облегчала работу с DOM, AJAX и анимациями.</p>
+            <h4>Когда jQuery уместна?</h4>
+            <p>Чтобы сделать простой сайт, который сами будете поддерживать (или не будете поддерживать вовсе — написали и забыли, так тоже бывает). Если сайт сложный, то чтобы работать над ним в большой команде, развивать и поддерживать, jQuery не подойдёт.</p>
+            <p>На jQuery иногда пишут большие приложения, но их сложно и дорого поддерживать. В код нужно погружаться и всегда быть в контексте этой библиотеки, иначе уже через месяц будет сложно понять, что там написано.</p>
+            <p>В полноценных фреймворках (например, Vue.js или Angular.js) возможности для нормальной работы уже идут «из коробки». Это, в первую очередь, компонентный подход к построению интерфейсов и абстрагирование от DOM. И любой человек, который придёт в команду со знанием фреймворка, сможет разобраться в коде — как минимум, потому что есть общепринятые структуры проектов, документация, сообщество и StackOverflow. Конечно, в jQuery тоже большое сообщество и тоже есть документация, но мне кажется, там каждый пишет код под себя.</p>
+            <h4>Но нужно ли?</h4>
+            <p>Это вопрос о выборе удобного инструмента для конкретной задачи. Простую страничку с простой формой можно написать и на jQuery. Но если всё, что вы пишете, это простые странички с формами, то это не значит, что нужно перестать изучать новое и знакомиться с современными фреймворками. Большинство вещей, в которых была полезна jQuery, уже добавлены в «ванильный» Javascript и без всяких библиотек.</p>
+            <p>То есть обходные пути есть — главное их найти и разобраться.</p>
+          </div>
+        </div>
+        <h3 class="title--large">ES6!</h3>
+        <p>Я стараюсь абстрогироваться от тонны библиотек, чтобы привести все к общему знаменателю, развиваться самим, развивать чистый язык, не увеличивать размер бандла => делать жизнь пользователя интерфейсом комфортной.</p>
+        <h3 class="title--large">Но если все-таки хочется?</h3>
+        <p>Тогда используем методы ES6 и <a href="https://www.w3.org/TR/selectors-api/" class="main__link">Selectors API</a> или <a href="https://framework7.io/docs/dom7.html">Dom7 JS</a></p>
+        <pre><code>function $$(selector, node) {
+// NodeList имеет только метод item и свойство length. Array предоставляет гораздо более широкий набор функционал.
+return [].slice.call((node || document).querySelectorAll(selector));
+}
+// Та же функция на ES6 выглядит намного элегантнее
+const $$ = (selector, node = document) => [...node.querySelectorAll(selector)];</code></pre>
+        <h3 class="title--large">А как же сторонние тысячи библиотек?</h3>
+        <p>Все подключаемые библиотеки подключаются через npm и при сборке в бандл с помощью webpack убираются неиспользуемые компоненты, что значительно позволяет сократить бандл(хотя можно пожать еще больше, но я пока не гуру).</p>
+        <p>Пример moment.js (необходим для отрисовки chart.js), где убираются все локализации, кроме Русской</p>
+        <pre><code>function js() {
+    return src(path.src.js)
+        .pipe(
+            webpackStream({
+            mode: "development",
+        output: {
+        filename: "script.js",
+        },
+        module: {
+        rules: [
+        {
+        test: /\.m?js$/,
+        exclude: /(node_modules|bower_components)/,
+            use: {
+            loader: "babel-loader",
+        options: {
+        presets: ["@babel/preset-env"],
+        },
+    },
+   },
+  ],
+ },
+       plugins: [
+        new webpack.ContextReplacementPlugin(
+        /moment[/\\]locale$/,
+        /ru/
+        ),
+       ],
+      })
+     )
+    .pipe(dest(path.build.js))
+    .pipe(uglify())
+    .pipe(
+          rename({
+          extname: ".min.js",
+        })
+       )
+    .pipe(dest(path.build.js))
+    .pipe(browsersync.stream());
+    }</code></pre>
+      </div>
+      <div class="card--stack tabs__item" id="tech">
+        <h1 class="title">Список технологий</h1>
+        <ol>
+          <li class="accordeon-section">
+            <p class="accordeon-title title--main">БЭМ, как методология наименования классов
+              <button class="accordeon-button"></button>
+            </p>
+            <div class="accordeon-container">
+              <div class="post__content">
+                <div class="intro">
+                  <p><a href="https://ru.bem.info/">БЭМ</a> расшифровывается как «Блок Элемент Модификатор». На самом деле, это целый стэк технологий, из которого мы воспользуемся только <a href="https://ru.bem.info/methodology/naming-convention/">соглашением по именованию классов</a>.</p>
+                  <p class="title--xs">Почему БЭМ?</p>
+                  <ul>
+                    <li>БЭМ позволяет создавать абсолютно независимые блоки. Блоки и элементы получают уникальные имена, так что стили для одного элемента ничего не поломают в другом.</li>
+                    <li>БЭМ помогает легко придумывать любое количество классов, не повторяющихся между собой.</li>
+                    <li>БЭМ помогает писать самодокументирующийся код, в классе любого элемента содержится информация о нём.</li>
+                  </ul>
+                  <p>Подробнее можно почитать в разделах  <a href="https://ru.bem.info/methodology/quick-start/">Быстрый старт </a> и <a href="https://ru.bem.info/methodology/faq/">Часто задаваемые вопросы </a> на сайте <a href="https://ru.bem.info/">bem.info</a></p>
+                  <p class="title--xs">Что такое БЭМ ?</p>
+                  <p>БЭМ (Блок, Элемент, Модификатор) — компонентный подход к веб-разработке. В его основе лежит принцип разделения интерфейса на независимые блоки. Он позволяет легко и быстро разрабатывать интерфейсы любой сложности и повторно использовать существующий код, избегая «Copy-Paste». БЭМ применяется по разному, кто-то использует только именования, кто-то берет за основу всю методологию себе на вооружение.</p>
+                  <p>Именование в БЭМ представляет собой определенный метод именования классов, этот метод позволяет:</p>
+                  <ul>
+                    <li>
+                      <p>Упростить код и его отладку</p>
+                    </li>
+                    <li>
+                      <p>Повторно использовать код избегая «Copy-Paste»</p>
+                    </li>
+                    <li>
+                      <p>Быстро понять связь между компонентами в разметке и CSS</p>
+                    </li>
+                    <li>
+                      <p>Ускорить написание css при использовании css-препроцессоров</p>
+                    </li>
+                  </ul>
+                  <p class="title--xs">Блок</p>
+                  <p>Блок — это самодостаточный независимый компонент страницы, который может быть повторно использован. Вся страница строится из блоков. Блоки могут содержать другие блоки. Классы блоков выглядят обычно и ничем не отличаются от любых других классов: header, navigate, works</p>
+                  <pre>Блок Header
+header.header
+
+Блок Nav
+nav.nav</pre>
+                  <p class="title--xs">Элемент</p>
+                  <p>Cоставная часть блока, не может быть использована отдельно от блока. Например, пункт меню не может использоваться вне блока меню, он является его элементом. Класс элемента пишется так: block __ element</p>
+                  <pre>Хорошо, элемент внутри родителя:
+
+Блок Header
+
+header.header
+    img.header__logo
+
+Плохо, где элемент лежит вне своего родителя:
+
+header.header
+img.header__logo</pre>
+                  <p class="title--xs">Модификатор</p>
+                  <p>Модификатор определяет вид, состояние или поведение блока или элемента. Модификаторы не определяют основные стили блока или элемента, они лишь модифицируют (изменяют) его. Класс модификатора пишется так: block__element--modifier. В примере ниже мы изменили внешний вид активного и неактивного пункта меню с помощью модификаторов.</p>
+                  <pre>Блок Nav
+nav.nav
+    ul.nav__list
+Хорошо
+        li class="nav__item nav__item--active
+        li class="nav__item
+Плохо: модификатор применен без основного класса
+        li.nav__item--active</pre>
+                  <p>Таким образом стили:</p>
+                  <pre>nav {
+    font-size: 1rem
+    }
+nav__item {
+     font-size: 15px;
+     color: #555;
+        &--active{
+            color: red;
+            border-bottom: 1px solid;
+        }
+    }
+}</pre>
+                  <p>Обратите внимание, что стили для блока и для элемента не определяются вложенностью, а вот модификатор блока или элемента может быть вложен. Так почему мы не вкладываем блок в элемент, если можем?</p>
+                  <p>Дело в том, что при вкладывании элемента в блок, мы можем подвергнуться напасти CSS - это каскад и блоки не будут модульными, а только усугубят положение, да и к тому же - усложнят чтение кода.</p>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="accordeon-section">
+            <p class="accordeon-title title--main">Модульный JavaScript, изоляция
+              <button class="accordeon-button"></button>
+            </p>
+            <div class="accordeon-container">
+              <h3 class="title--xs">Что такое модуль?</h3>
+              <p>Модуль – это просто файл. Один скрипт – это один модуль.</p>
+              <p>Модули могут загружать друг друга и использовать директивы export и import, чтобы обмениваться функциональностью, вызывать функции одного модуля из другого:</p>
+              <ul>
+                <li>
+                  <p><b>export</b> отмечает переменные и функции, которые должны быть доступны вне текущего модуля.</p>
+                </li>
+                <li>
+                  <p><b>import</b> позволяет импортировать функциональность из других модулей.</p>
+                </li>
+              </ul>
+              <p>Например, если у нас есть файл sayHi.js, который экспортирует функцию:</p>
+              <pre>../js/sayHi.js
+
+export function sayHi(user) {
+  alert(`Hello, ${user}!`);
+}</pre>
+              <p>…Тогда другой файл может импортировать её и использовать:</p>
+              <pre>../js/main.js
+
+import {sayHi} from './sayHi.js';
+
+alert(sayHi); // function...
+sayHi('John'); // Hello, John!
+</pre>
+              <p>Модули или подобные структуры это неотъемлемая часть любого взрослого языка программирования. Просто иначе никак. Модули позволяют ограничить область видимости, позволяют реиспользовать части приложения, делают приложение более структурированным, отделяют ресурсы от шума и вообще делают код нагляднее.</p>
+              <p>Каждый модуль имеет свою собственную область видимости. Другими словами, переменные и функции, объявленные в модуле, не видны в других скриптах.</p>
+              <p>В следующем примере импортированы 2 скрипта, и hello.js пытается использовать переменную user, объявленную в user.js. В итоге ошибка:
+                <pre>// hello.js
+alert(user); // в этом модуле нет такой переменной (каждый модуль имеет независимые переменные)</pre>
+                <pre>// user.js
+let user = "John";</pre>
+                <pre>// index.html
+!doctype html
+script(type="module" src="user.js")
+script(type="module" src="hello.js")</pre>
+                <pre>// result
+</pre>
+              </p>
+            </div>
+          </li>
+          <li class="accordeon-section">
+            <p class="accordeon-title title--main">SCSS - Sassy CSS
+              <button class="accordeon-button"></button>
+            </p>
+            <div class="accordeon-container">
+              <p class="title--xs">Зачем использовать Sass/SCSS вместо CSS?</p>
+              <ol>
+                <li>
+                  <p>Вложенность — SCSS позволяет вкладывать правила CSS друг в друга. Вложенные правила применяются только для элементов, соответствующих внешним селекторам (а если речь идёт о Sass, то там и без скобок всё красиво и интуитивно понятно).</p>
+                </li>
+                <li>
+                  <p>Переменные — в стандартном CSS тоже есть понятие переменных, но в Sass с ними можно работать немного по-другому. Например, повторять их через директиву @for. Или генерировать свойства динамически. Подробнее можете изучить на русскоязычном сайте проекта.</p>
+                </li>
+                <li>
+                  <p>Улучшенные математические операции— можно складывать, вычитать, умножать и делить значения CSS. В отличие от стандартного CSS, Sass/SCSS позволяют обойтись без calc().</p>
+                </li>
+                <li>
+                  <p>Тригонометрия — SCSS позволяет писать собственные (синусоидальные и косинусоидальные) функции, используя только синтаксис Sass/SCSS, подобно тому, как это можно делать в других языках вроде JavaScript.</p>
+                </li>
+                <li>
+                  <p>Директивы @for, @while и выражение @if-else — можно писать CSS-код, используя знакомые элементы из других языков. Но не обольщайтесь — в итоге на выходе будет обычный CSS.</p>
+                </li>
+                <li>
+                  <p>Миксины (примеси) — можно один раз создать набор CSS-свойств и работать с ними повторно или смешивать с другими значениями. Миксины можно использовать для создания отдельных тем одного макета. Примеси также могут содержать целые CSS-правила или что-либо другое, разрешённое в Sass-документе. Они даже могут принимать аргументы, что позволяет создавать большое разнообразие стилей при помощи небольшого количества миксинов.</p>
+                </li>
+                <li>
+                  <p>Функции — можно создавать определения CSS в виде функций для многократного использования.</p>
+                </li>
+              </ol>
+              <p class="title--xs">Переменные?</p>
+              <p>Да! Sass/SCSS позволяет работать с переменными. В CSS они обозначаются двойным тире (--), а в препроцессорах знаком доллара ($).</p>
+              <pre>$number: 1;
+$color: #ff0000;
+$text: "tproger forever.";
+$text: "IT forever." !default;
+$nothing: null;</pre>
+              <p>Вы можете присваивать значение по умолчанию переменным, у которых ещё нет значения, добавив метку !default в конце значения. В таком случае, если переменной уже было присвоено значение, оно не изменится; если же переменная пуста, ей будет присвоено новое указанное значение.</p>
+              <pre>#container {
+  content: $text;
+}</pre>
+              <p class="title--xs">Вложенные правила</p>
+              <p>Стандартные вложенные CSS-элементы с использованием пробела:</p>
+              <pre>/* Вложенные правила */
+#A {
+  color: red;
+}
+#A #B {
+  color: green;
+}
+#A #B #C p {
+  color: blue;
+}</pre>
+              <p>Те же вложенные элементы с помощью SCSS:</p>
+              <pre>/* Вложенные правила */
+#A {
+  color: red;
+  #B {
+    color: green;
+    #C p {
+      color: blue;
+    }
+  }
+}</pre>
+              <p>Амперсанд</p>
+              <p>В SCSS используется директива &.</p>
+              <pre>#p {
+  color: black;
+  a {
+    font-weight: bold;
+    &:hover {
+      color: red;
+    }
+  }
+}</pre>
+              <p class="title--xs">Миксины (они же примеси)</p>
+              <p>Миксины объявляются директивой @mixin. После неё должно стоять имя миксина и, опционально, его параметры, а также блок, содержащий тело миксина. Например, можно определить миксин flexible(), который далее будет включён, например, в класс .centered-elements следующим образом:</p>
+              <pre>@mixin flexible () {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+.centered-elements {
+    @include flexible ();
+    border: 1px solid gray;
+  }</pre>
+              <p>Теперь каждый раз после применения класса .centered-elements к HTML-элементу, последний будет преобразован во Flexbox.</p>
+            </div>
+          </li>
+          <li class="accordeon-section">
+            <p class="accordeon-title title--main">Gulp / Webpack
+              <button class="accordeon-button"></button>
+            </p>
+            <div class="accordeon-container"></div>
+          </li>
+          <li class="accordeon-section">
+            <p class="accordeon-title title--main">.eslint / .stylelint / prettier / .editorconfig
+              <button class="accordeon-button"></button>
+            </p>
+            <div class="accordeon-container"></div>
+          </li>
+          <li class="accordeon-section">
+            <p class="accordeon-title title--main">Модульный JavaScript, изоляция
+              <button class="accordeon-button"></button>
+            </p>
+            <div class="accordeon-container"></div>
+          </li>
+          <li class="accordeon-section">
+            <p class="accordeon-title title--main">Препроцессор HTML pug / jade
+              <button class="accordeon-button"></button>
+            </p>
+            <div class="accordeon-container"></div>
+          </li>
+          <li class="accordeon-section">
+            <p class="accordeon-title title--main">Графики / чарты Chart.js
+              <button class="accordeon-button"></button>
+            </p>
+            <div class="accordeon-container"></div>
+          </li>
+          <li class="accordeon-section">
+            <p class="accordeon-title title--main">Слайдер SwiperJS
+              <button class="accordeon-button"></button>
+            </p>
+            <div class="accordeon-container"></div>
+          </li>
+        </ol>
+      </div>
+      <div class="card--stack tabs__item" id="arch">
+        <h1 class="title">Список страниц</h1>
+      </div>
+      <div class="card--stack tabs__item" id="grid">
+        <h1 class="title">Список страниц</h1>
+      </div>
+      <div class="card--stack tabs__item" id="buttons">
+        <h1 class="title">Список страниц</h1>
+      </div>
+      <div class="card--stack tabs__item" id="slider">
+        <h1 class="title">Список страниц</h1>
+      </div>
+      <div class="card--stack tabs__item" id="modals">
+        <h1 class="title">Список страниц</h1>
+      </div>
+      <div class="card--stack tabs__item" id="datetime">
+        <h1 class="title">Список страниц</h1>
+      </div>
+      <div class="card--stack tabs__item" id="chart">
+        <h1 class="title">Список страниц</h1>
+      </div>
+      <div class="card--stack tabs__item" id="progress">
+        <h1 class="title">Список страниц</h1>
+      </div>
+      <div class="card--stack tabs__item" id="tabs">
+        <h1 class="title">Список страниц</h1>
+      </div>
+      <div class="card--stack tabs__item" id="socials">
+        <h1 class="title">Список страниц</h1>
+      </div>
+      <div class="card--stack tabs__item" id="links">
+        <h1 class="title">Список страниц</h1>
+      </div>
+      <div class="card--stack tabs__item" id="cards">
+        <h1 class="title">Список страниц</h1>
+      </div>
+      <div class="card--stack tabs__item" id="range">
+        <h1 class="title">Список страниц</h1>
+      </div>
+      <div class="card--stack tabs__item" id="options">
+        <h1 class="title">Список страниц</h1>
+      </div>
+      <div class="card--stack tabs__item" id="scrollbar">
+        <h1 class="title">Список страниц</h1>
+      </div>
+      <div class="card--stack tabs__item" id="accordion">
+        <h1 class="title">Список страниц</h1>
+      </div>
+      <div class="card--stack tabs__item" id="sidebar">
+        <h1 class="title">Список страниц</h1>
       </div>
     </div>
     <footer class="footer">

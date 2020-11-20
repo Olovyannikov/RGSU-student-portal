@@ -1,75 +1,81 @@
 .accordeon-container {
-  display: none;
-  width: 100%;
-  min-height: 440px;
-  padding-bottom: 25px;
-  padding-left: 20px;
-  padding-right: 20px;
-  animation: toHeight 0.2s reverse;
-  .accordeon-section--active & {
-    display: block;
-    animation: toHeight 0.2s ease-in-out;
-  }
+    display: none;
+    width: 100%;
+    min-height: 440px;
+    padding-bottom: 25px;
+    padding-left: 20px;
+    padding-right: 20px;
+    animation: toHeight 0.2s reverse;
+    .accordeon-section--active & {
+        display: block;
+        animation: toHeight 0.2s ease-in-out;
+    }
 }
 
 .accordeon-title {
-  align-items: center;
-  display: flex;
-  width: 100%;
-  padding: 17px 0 17px 20px;
+    align-items: center;
+    display: flex;
+    width: 100%;
+    padding: 17px 0 17px 20px;
+    transition: 0.2s;
+    &:hover,
+    &:focus,
+    .accordeon-section--active & {
+        color: $c-blue;
+    }
 }
 
 .accordeon-section {
-  margin-bottom: 32px;
-  position: relative;
-  background-color: #fff;
-  border-radius: 4px;
+    margin-bottom: 32px;
+    position: relative;
+    background-color: #fff;
+    border-radius: 4px;
 }
 
 @keyframes toHeight {
-  from {
-    height: 0;
-  }
-  to {
-    height: 400px;
-  }
+    from {
+        height: 0;
+    }
+    to {
+        height: 400px;
+    }
 }
 
 .accordeon-button {
-  @include btn-reset;
-  width: 31px;
-  height: 31px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-right: 17px;
-  position: relative;
-  transition: 0.2s;
-  margin-left: auto;
-  &::after,
-  &::before {
-    content: "";
-    position: absolute;
-    display: block;
-    width: 17px;
-    height: 1px;
-    background-color: $c-darkgrey;
-  }
-  &::before {
-    transform: rotate(90deg);
-  }
-  &--active {
-    background-color: $c-blue;
-    border-radius: 50%;
-    min-width: 31px;
+    @include btn-reset;
+    width: 31px;
     height: 31px;
-    transform: rotate(45deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 17px;
+    position: relative;
+    transition: 0.2s;
+    margin-left: auto;
     &::after,
     &::before {
-      background-color: $c-light;
-      left: 7px;
+        content: "";
+        position: absolute;
+        display: block;
+        width: 17px;
+        height: 1px;
+        background-color: $c-darkgrey;
     }
     &::before {
+        transform: rotate(90deg);
     }
-  }
+    &--active {
+        background-color: $c-blue;
+        border-radius: 50%;
+        min-width: 31px;
+        height: 31px;
+        transform: rotate(45deg);
+        &::after,
+        &::before {
+            background-color: $c-light;
+            left: 7px;
+        }
+        &::before {
+        }
+    }
 }

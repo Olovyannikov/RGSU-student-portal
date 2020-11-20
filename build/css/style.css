@@ -5508,6 +5508,15 @@ tfoot td {
   display: flex;
   width: 100%;
   padding: 17px 0 17px 20px;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.accordeon-title:hover,
+.accordeon-title:focus,
+.accordeon-section--active .accordeon-title {
+  color: #3464e0;
 }
 
 .accordeon-section {
