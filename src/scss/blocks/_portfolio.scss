@@ -1,52 +1,52 @@
 .portfolio {
-  z-index: 1;
-  width: 100%;
-  @media (min-width: $tablet) {
-    width: 315px;
-  }
+    z-index: 1;
+    width: 100%;
+    @media (min-width: $tablet) {
+        width: 315px;
+    }
 }
 
 .portfolio__container {
-  background-color: #fff;
-  position: relative;
-  border-radius: 4px;
+    background-color: #fff;
+    position: relative;
+    border-radius: 4px;
 }
 
 .portfolio__title {
-  margin-bottom: 33px;
-  @media (min-width: $tablet) {
-    text-transform: unset;
-  }
+    margin-bottom: 33px;
+    @media (min-width: $tablet) {
+        text-transform: unset;
+    }
 }
 
 .gauge {
-  display: flex;
-  position: relative;
-  justify-content: center;
-  padding-bottom: 70px;
-  width: 100%;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    padding-bottom: 70px;
+    width: 100%;
 }
 
 .gauge__value {
-  position: absolute;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 60px;
-  line-height: 26px;
-  top: 80px;
-  left: 50%;
-  transform: translateX(-50%);
-  &::after {
-    content: "%";
-  }
+    position: absolute;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 60px;
+    line-height: 26px;
+    top: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    &::after {
+        content: "%";
+    }
 }
 
 .gauge {
-  &--score {
-    .gauge__value {
-      &::after {
-        content: '';
-      }
+    &--score {
+        .gauge__value {
+            &::after {
+                content: "";
+            }
+        }
     }
-  }
 }

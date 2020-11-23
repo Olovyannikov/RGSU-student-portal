@@ -137,8 +137,7 @@
 
 .filter__education {
     @extend .filter__checkboxes;
-    padding-bottom: 34px;
-    min-height: 170px;
+    padding-bottom: 30px;
 }
 
 .filter__education-options {
@@ -146,7 +145,6 @@
     border-radius: 4px;
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 27px;
 }
 
 .filter__education-option {

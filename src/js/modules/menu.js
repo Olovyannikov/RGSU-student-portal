@@ -10,15 +10,6 @@ export default () => {
 
     sideBar.addEventListener("click", function () {
         sideBar.classList.toggle("page-header__sidebar-toggler--active");
-        if (
-            sideBar.classList.contains("page-header__sidebar-toggler--active")
-        ) {
-            document.querySelector(".page-header__logo").style.paddingLeft =
-                37 + "px";
-        } else {
-            document.querySelector(".page-header__logo").style.paddingLeft =
-                0 + "px";
-        }
     });
 
     if (menuToggler && document.body.clientWidth > 1024) {

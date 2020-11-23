@@ -1,49 +1,49 @@
 .social-block {
-  position: relative;
+    position: relative;
 }
 
 .social-block__list {
-  padding-bottom: 25px;
-  @include list-reset;
-  display: flex;
-  margin-bottom: 25px;
+    @include list-reset;
+    padding-bottom: 25px;
+    display: flex;
+    margin-bottom: 25px;
 }
 
 .social-block__link {
-  font-size: 0;
-  width: 36px;
-  height: 36px;
-  background-size: 50%;
-  border: 1px solid #c3cad6;
-  border-radius: 50%;
-  margin-right: 10px;
-  display: block;
-  position: relative;
-  transition: .2s;
-  svg {
-    position: absolute;
-    @include center;
-    fill: $c-darkgrey;
-  }
-  &:hover {
-    background-color: #4a76a8;
-    border: 1px solid #4a76a8;
+    font-size: 0;
+    width: 36px;
+    height: 36px;
+    background-size: 50%;
+    border: 1px solid #c3cad6;
+    border-radius: 50%;
+    margin-right: 10px;
+    display: block;
+    position: relative;
+    transition: 0.2s;
     svg {
-      fill: $c-light;
+        position: absolute;
+        @include center;
+        fill: $c-darkgrey;
     }
-  }
-  &--fb:hover {
-    background-color: #3578E5;
-    border: 1px solid #3578E5;
-  }
-  &--insta:hover {
-    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
-    border: none;
-  }
+    &:hover {
+        background-color: #4a76a8;
+        border: 1px solid #4a76a8;
+        svg {
+            fill: $c-light;
+        }
+    }
+    &--fb:hover {
+        background-color: #3578e5;
+        border: 1px solid #3578e5;
+    }
+    &--insta:hover {
+        background: $c-black;
+        border: none;
+    }
 }
 
 .social-block__item {
-  &:last-child a {
-    margin-right: 0;
-  }
+    &:last-child a {
+        margin-right: 0;
+    }
 }

@@ -1,62 +1,64 @@
-
 .page-header__login {
-  padding-left: 15px;
-  border-left: 1px solid #2955c9;
-  @media (min-width: $mobile) {
-    border: none;
-    padding-left: 0;
-  }
+    padding-left: 17px;
+    border-left: 1px solid #2955c9;
+    .page-header--menu-opened & {
+        padding-left: 0;
+    }
+    @media (min-width: $mobile) {
+        border: none;
+        padding-left: 0;
+    }
 }
 
 .login__navigation-list {
-  @include list-reset;
-  position: absolute;
-  background-color: #fff;
-  z-index: 12;
-  left: 0;
-  width: 100%;
-  height: 177px;
-  top: 70px;
-  box-shadow: 0 5px 24px rgba(110, 119, 129, 0.1);
-  display: none;
-  .page-header--menu-opened & {
-    display: block;
-    animation: slideLeft 0.5s;
-  }
-
-  @media (min-width: $tablet) {
+    @include list-reset;
+    position: absolute;
+    background-color: #fff;
+    z-index: 12;
+    left: 0;
+    width: 100%;
+    height: 177px;
+    top: 70px;
+    box-shadow: 0 5px 24px rgba(110, 119, 129, 0.1);
+    display: none;
     .page-header--menu-opened & {
-      width: 258px;
-      top: 75px;
-      left: -58px;
-      transition: 0.2s;
-      animation: fadeIn .5s;
-      &::after {
-        content: "";
-        position: absolute;
-        right: 120px;
-        top: -34px;
-        border: 17px solid transparent;
-        border-bottom: 17px solid white;
-      }
+        display: block;
+        animation: slideLeft 0.5s;
     }
-  }
+
+    @media (min-width: $tablet) {
+        .page-header--menu-opened & {
+            width: 258px;
+            top: 75px;
+            left: -58px;
+            transition: 0.2s;
+            animation: fadeIn 0.5s;
+            &::after {
+                content: "";
+                position: absolute;
+                right: 120px;
+                top: -34px;
+                border: 17px solid transparent;
+                border-bottom: 17px solid white;
+            }
+        }
+    }
 }
 
 .login__navigation-item {
-  border-bottom: 1px solid #f1f4f9;
-  a {
-    display: block;
-    font-size: 18px;
-    line-height: 26px;
-    padding: 18px 0 15px 25px;
-    color: $c-black;
-  }
+    border-bottom: 1px solid #f1f4f9;
+    a {
+        display: block;
+        font-size: 18px;
+        line-height: 26px;
+        padding: 18px 0 15px 25px;
+        color: $c-black;
+    }
 }
 .login__navigation--exit {
-  border-bottom: none;
-  a {
-    color: #c3cad6;
-    padding-bottom: 20px;
-  }
+    border-bottom: none;
+    a {
+        color: #c3cad6;
+        padding-bottom: 20px;
+    }
 }

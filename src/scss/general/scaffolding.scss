@@ -132,7 +132,7 @@ input:not([type="range"]) {
     min-height: 44px;
     border: 1px solid #f1f4f9;
     border-radius: 3px;
-    padding: 9px;
+    padding: 9px 15px;
     &[type="date"]::-webkit-calendar-picker-indicator {
         color: transparent;
         opacity: 1;
@@ -158,19 +158,24 @@ input:not([type="range"]) {
         z-index: -1;
     }
     &[type="text"],
-    &[type="email"] {
+    &[type="email"],
+    &[type="password"]{
         border: 1px solid #e4ecfa;
         box-sizing: border-box;
         border-radius: 3px;
         padding: 9px 3px 8px 15px;
     }
-    &:focus,
     &:hover {
         border-color: $c-blue;
         box-shadow: 0 0 0 1px rgba(156, 186, 240, 0.5);
+    }
+    &:focus {
+        border-color: $c-blue;
+        box-shadow: 0 0 0 2px rgba(156, 186, 240, 0.5);
         outline: none;
         &:invalid:not(:placeholder-shown) {
             border-color: $c-red;
+            box-shadow: 0 0 0 2px rgba(224, 99, 100, 0.5);
         }
     }
 }
