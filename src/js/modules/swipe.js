@@ -1,7 +1,7 @@
-import Swiper, {Navigation, Pagination, Scrollbar} from "swiper";
+import Swiper, {Navigation, Pagination} from "swiper";
 
 export default () => {
-    Swiper.use([Navigation, Pagination, Scrollbar]);
+    Swiper.use([Navigation, Pagination]);
 
     let newsblock = new Swiper('.news__wrapper', {
         slidesPerView: 'auto',
@@ -159,5 +159,6 @@ export default () => {
             disableOnInteraction: false,
         }
     });
+
 
 }

@@ -178,7 +178,7 @@ export default () => {
     const cookieEl = document.querySelector("#cookie");
     const cookieAccept = document.querySelector('.cookieBtn');
 
-    if(document.querySelector('.cookieBtn') == true)
+    if(document.querySelector('.cookieBtn'))
     cookieAccept.addEventListener('click', () => {
         cookieEl.style.display = "none";
     });

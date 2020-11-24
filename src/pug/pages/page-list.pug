@@ -4,6 +4,7 @@ extends ../layouts/_main.pug
 block variables
     - const title = 'Студенческий портал - Список страниц';
 
+
 block content
     style.
         .btn {
@@ -30,12 +31,15 @@ block content
             background: #F1F4F9
         }
 
+        .tabs__item {
+            max-width: calc(100% - 315px);
+        }
+
     .wrapper.container.container--aside.tabs__container(style="display: flex; margin-top: 40px")
         .tabs__buttons(style="width: 315px;")
             button.btn.btn--border.tabs__button.tabs__button--active(data-id="page-list") Список страниц
             button.btn.btn--border.tabs__button(data-id="introduction") Введение
             button.btn.btn--border.tabs__button(data-id="tech") Описание технологий
-            button.btn.btn--border.tabs__button(data-id="arch") Архитектура проекта
             button.btn.btn--border.tabs__button(data-id="grid") Сетка
             button.btn.btn--border.tabs__button(data-id="buttons") Кнопки
             button.btn.btn--border.tabs__button(data-id="slider") Слайдер
@@ -473,20 +477,150 @@ block content
                     p.accordeon-title.title--main Графики / чарты Chart.js
                         button.accordeon-button
                     .accordeon-container
+                        p Chart.js является JavaScript-библиотекой, с помощью которой можно создавать на странице различные типы диаграмм; при этом используются возможности HTML5-элемента Canvas
+                        p Библиотека Chart.js не имеет каких-либо зависимостей; размер ее так мал, что составляет примерно 11Kb в минифицированном, конкатенированном и архивированном виде. Однако, есть возможность еще уменьшить размер библиотеки путем включения в нее только тех модулей, которые необходимы в конкретном случае; то есть, если нет необходимости в поддержке всех шести типов диаграмм, включенных по умолчанию в ядро Chart.js.
+                        p Пример
+                        .hotels__chart.chart
+                            canvas#myChart
                 li.accordeon-section
                     p.accordeon-title.title--main Слайдер SwiperJS
                         button.accordeon-button
                     .accordeon-container
+                        p Это вообще пушка-мастхэв.
+                        p В целом, сделать свой слайдер достаточно просто, но продумать столько деталей и мелочей - почти невозможно :)
+                        p Превосходный слайдер заточенный строго для работы с мобильными сайтами или веб приложениями.
+                        p Его прелесть в том, что при установке через npm можно указать, какие методы использовать, и, соответственно, тянуть в зависимости.
 
-
-        .card--stack.tabs__item(id="arch")
-            h1.title Список страниц
         .card--stack.tabs__item(id="grid")
-            h1.title Список страниц
+            h1.title Сетка
+            p Сетка построена на flex-layout (display: flex)
+            p Основной контент расположен в контейнере .container ; Этот класс является миксом и его следует использовать только с ключевым классом, например .page-header__container
+            p Базовый отступ от края контента (padding) 12px, и 45px на экранах > 1024px
+            p У .container есть модификатор .container--aside, который предполагает наличие класса .container и представляет собой версию контейнера для блоков, которые содержат sidebar (aside)
         .card--stack.tabs__item(id="buttons")
-            h1.title Список страниц
+            h1.title Кнопки
+            p Синтаксис
+            pre.
+                button(class="page__button btn btn--modifier")
+            ul(style="display:flex; flex-wrap: wrap; width: 180px; gap: 10px; list-style: none; flex-direction: column")
+                li
+                    .btn .btn
+                li
+                    .btn--light .btn--light
+                li
+                    .btn.btn--icon(style="position: relative") .btn--icon
+                        svg(width='18' height='18' style='position: absolute; content: ""; display: block; width: 18px; height: 18px; top: 40px; left: 30px;')
+                            use(href="#key")
+                li
+                    .btn.btn--border .btn--border
+                li
+                    .btn.btn--regular .btn--regular
+                li
+                    .btn.btn--blue .btn--blue
+                li
+                    .btn.btn--green .btn--green
+                li
+                    .btn.btn--grey .btn--grey
+
         .card--stack.tabs__item(id="slider")
-            h1.title Список страниц
+            h1.title Слайдер
+            p В каталоге src => js => modules файл swipe.js
+            p Верхняя строчка - импорт модулей Swiper
+            pre.
+                import Swiper, {Navigation, Pagination} from "swiper";
+            p Далее экспорт классов
+            pre Swiper.use([Navigation, Pagination]);
+            p Описание текущего слайдера
+            p.
+                <pre>
+                    let advertisement = new Swiper('.advertisement__slider', { //Инициализация слайдера
+                            slidesPerView: 'auto', //Сколько слайдов показывать на странице
+                            spaceBetween: 30, //расстояние между слайдами (margin-right)
+                            pagination: { //инициализация пагинации
+                                el: '.advertisement-pagination', //Элемент пагинации
+                                clickable: true, //Кликабельность
+                            },
+                            navigation: { //инициализация навигации
+                                nextEl: '.advertisement-button-next', // Элемент навигации - далее
+                                prevEl: '.advertisement-button-prev', // Элемент навигации - Назад
+                            },
+                            breakpoints: { // Брейкпоинты для адаптивного отображения, mobileFirst подход
+                                768: {
+                                    spaceBetween: 20,slidesPerView: 'auto',
+                                },
+                                1024: {
+                                    spaceBetween: 30,slidesPerView: 'auto',
+                                }
+                            }
+                        });
+                </pre>
+            p pug-разметка
+            p
+                pre.
+                    .swiper-container - инициализация слайдера
+                        .swiper-wrapper - обертка для слайдов
+                            // Slides
+                            .swiper-slide Slide 1
+                            .swiper-slide Slide 2
+                            .swiper-slide Slide 3
+                        .swiper-pagination - пагинация
+                        .swiper-button-prev - навигация
+                        .swiper-button-next - навигация
+            .news__container.swiper-container
+                .news__header
+                    span.divider
+                    .news__buttons.news__buttons--extra
+                        .swiper-button-prev.news-button-prev
+                        .swiper-pagination.news-pagination
+                        .swiper-button-next.news-button-next
+                .news__wrapper.swiper-wrapper
+                    .news__item.swiper-slide
+                        .block.block--wide.block__content-news
+                            a(href="new-layout.html").block__content
+                                p.news__item-date 1 сентября
+                                h3.news__item-title Поздравление с Днем знаний и началом нового учебного года
+                                picture.news__picture
+                                    source(srcset="img/studyear.webp" type="image/webp")
+                                    img(src="img/studyear.png")
+                    .news__item.swiper-slide
+                        .block.block--wide.block--attention.block__content-news
+                            a(href="new-layout.html").block__content.block__content--hot
+                                p.news__item-date.news__item-date--dark 28 августа
+                                h3.news__item-title Студенческая весна. приглашаем на еженедельные онлайн-встречи!
+                                picture.news__picture
+                                    source(srcset="img/studyspring.webp" type="image/webp")
+                                    img(src="img/studyspring.png")
+                    .news__item.swiper-slide
+                        .block.block--wide.block__content-news
+                            a(href="new-layout.html").block__content
+                                p.news__item-date 1 сентября
+                                h3.news__item-title Поздравление с Днем знаний и началом нового учебного года
+                                picture.news__picture
+                                    source(srcset="img/studyear.webp" type="image/webp")
+                                    img(src="img/studyear.png")
+                    .news__item.swiper-slide
+                        .block.block--wide.block__content-news
+                            a(href="new-layout.html").block__content
+                                p.news__item-date 1 сентября
+                                h3.news__item-title Поздравление с Днем знаний и началом нового учебного года
+                                picture.news__picture
+                                    source(srcset="img/studyspring.webp" type="image/webp")
+                                    img(src="img/studyspring.png")
+                    .news__item.swiper-slide
+                        .block.block--wide.block__content-news
+                            a(href="new-layout.html").block__content
+                                p.news__item-date 1 сентября
+                                h3.news__item-title Поздравление с Днем знаний и началом нового учебного года
+                                picture.news__picture
+                                    source(srcset="img/studyear.webp" type="image/webp")
+                                    img(src="img/studyear.png")
+                .news__buttons
+                    .swiper-button-prev.news-button-prev
+                    .swiper-pagination.news-pagination
+                    .swiper-button-next.news-button-next
+
+
+
         .card--stack.tabs__item(id="modals")
             h1.title Список страниц
         .card--stack.tabs__item(id="datetime")

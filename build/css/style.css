@@ -1015,6 +1015,12 @@ textarea:hover {
 }
 
 .btn--light {
+  padding: 0;
+  margin: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
   border: 1px solid #3464e0;
   font-style: normal;
   font-weight: normal;
@@ -1022,12 +1028,27 @@ textarea:hover {
   line-height: 16px;
   color: #3464e0;
   white-space: nowrap;
-  padding-top: 12px;
-  padding-bottom: 12px;
+  -webkit-transition: .2s;
+  -o-transition: .2s;
+  transition: .2s;
+  padding: 12px 25px;
+}
+
+.btn--light:focus {
+  outline: none;
+}
+
+.btn--light:hover {
+  background: #3464e0;
+  color: #ffffff;
 }
 
 .btn--icon {
   padding: 21px 20px 21px 73px;
+}
+
+.btn--icon:hover svg {
+  fill: #fff;
 }
 
 .btn--border {
@@ -1043,6 +1064,7 @@ textarea:hover {
   color: #3464e0;
   border-color: #3464e0;
   padding: 11px 30px;
+  padding: 8px 25px;
 }
 
 .btn--blue {
@@ -1053,16 +1075,16 @@ textarea:hover {
           box-sizing: border-box;
   border-radius: 4px;
   padding: 10px 29px;
-  -webkit-transition: .5s;
-  -o-transition: .5s;
-  transition: .5s;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
   overflow: hidden;
   will-change: transform;
   position: relative;
 }
 
 .btn--blue::before {
-  content: '';
+  content: "";
   background: #90aaef;
   opacity: 0.4;
   position: absolute;
@@ -1102,14 +1124,11 @@ textarea:hover {
       -ms-flex-align: center;
           align-items: center;
   position: relative;
+  border: 1px solid #2BC584;
 }
 
 .btn--green:focus {
   outline: none;
-}
-
-.btn--green:hover {
-  border: 1px solid transparent;
 }
 
 .btn--green::after {
@@ -1139,6 +1158,7 @@ textarea:hover {
   background: #c3cad6;
   border-radius: 4px;
   color: #ffffff;
+  padding: 8px 25px;
 }
 
 .btn--grey:hover {
@@ -1153,6 +1173,7 @@ textarea:hover {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border-radius: 4px;
+  padding: 8px 25px;
 }
 
 .btn--transparent:hover {
@@ -8919,6 +8940,10 @@ tfoot td {
             justify-content: space-between;
     padding-top: 18px;
     padding-bottom: 18px;
+  }
+
+  .social-block__list {
+    padding-bottom: 0;
   }
 
   .enter {

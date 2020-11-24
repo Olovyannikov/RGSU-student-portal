@@ -120,8 +120,22 @@ export default () => {
 
     gauges.forEach(function (gauge) {
         let gaugeVal = Number(gauge.dataset.value);
+        const min = 0;
+        const max = gaugeVal;
+        const time = 500;
         const gaugeValueElement = gauge.querySelector(".gauge__value");
-        gaugeValueElement.textContent = gaugeVal;
+
+        (function step(val) {
+            setTimeout(function() {
+                gaugeValueElement.textContent = val;
+                if (val < max) {
+                    step(val + 1);
+                    if (gaugeValueElement.parentElement.classList.contains("gauge--score")) {
+                        step(val + 0.5)
+                    }
+                }
+            }, time / (max - min));
+        })(min);
         gaugeValueElement.style.color =
             gaugeVal > 50 ? "rgb(43,197,132)" : "rgb(224,99,100)";
 

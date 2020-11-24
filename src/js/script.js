@@ -16,7 +16,9 @@ import { default as chart } from "./modules/chart.js";
 import { default as tabs } from "./modules/tabs.js";
 // init modules
 
-swiper();
+window.onload = function () {
+    swiper();
+};
 if (document.querySelector(".chart")) {
     chart();
 }

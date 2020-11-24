@@ -7,6 +7,9 @@
     padding-bottom: 25px;
     display: flex;
     margin-bottom: 25px;
+    @media (min-width: $tablet) {
+        padding-bottom: 0;
+    }
 }
 
 .social-block__link {

@@ -1,138 +1,153 @@
 .btn {
-  @include btn-reset;
-  position: relative;
-  padding: 8px 25px;
-  text-align: center;
-  font-family: $font;
-  font-weight: 400;
-  font-size: rem-calc(16);
-  line-height: rem-calc(26);
-  border: 1px solid #c3cad6;
-  box-sizing: border-box;
-  border-radius: 50px;
-  transition: 0.2s;
-  color: #c3cad6;
+    @include btn-reset;
+    position: relative;
+    padding: 8px 25px;
+    text-align: center;
+    font-family: $font;
+    font-weight: 400;
+    font-size: rem-calc(16);
+    line-height: rem-calc(26);
+    border: 1px solid #c3cad6;
+    box-sizing: border-box;
+    border-radius: 50px;
+    transition: 0.2s;
+    color: #c3cad6;
 
-  &:hover,
-  &:focus {
-    background: #3464e0;
-    color: #fff;
-    border: 1px solid transparent;
-  }
+    &:hover,
+    &:focus {
+        background: #3464e0;
+        color: #fff;
+        border: 1px solid transparent;
+    }
 
-  &--light {
-    border: 1px solid #3464e0;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 16px;
-    color: #3464e0;
-    white-space: nowrap;
-    padding-top: 12px;
-    padding-bottom: 12px;
-  }
+    &--light {
+        @include btn-reset;
+        border: 1px solid #3464e0;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 16px;
+        color: #3464e0;
+        white-space: nowrap;
+        transition: .2s;
 
-  &--icon {
-    padding: 21px 20px 21px 73px;
-  }
-  &--border {
-    padding: 12px 24px;
-  }
+        padding: 12px 25px;
+        &:hover {
+            background: $c-blue;
+            color: $c-light;
+
+        }
+    }
+
+    &--icon {
+        padding: 21px 20px 21px 73px;
+        &:hover {
+            svg {
+                fill: #fff;
+            }
+        }
+    }
+    &--border {
+        padding: 12px 24px;
+    }
 }
 
 .btn--regular {
-  font-family: inherit;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 18px;
-  color: #3464e0;
-  border-color: #3464e0;
-  padding: 11px 30px;
+    font-family: inherit;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 18px;
+    color: #3464e0;
+    border-color: #3464e0;
+    padding: 11px 30px;
+
+    padding: 8px 25px;
 }
 
 $turqoise: #1abc9c;
 $blue: #2196f3;
-$cubic: cubic-bezier(.75,.37,.83,1);
+$cubic: cubic-bezier(0.75, 0.37, 0.83, 1);
 
 .btn--blue {
-  color: $c-light;
-  background: $c-blue;
-  border: 1px solid transparent;
-  box-sizing: border-box;
-  border-radius: 4px;
-  padding: 10px 29px;
-  transition: .5s;
-  overflow: hidden;
-  will-change: transform;
-  position: relative;
-  &::before {
-    content: '';
-    background: #90aaef;
-    opacity: 0.4;
-    position: absolute;
-    left: -60%;
-    top: -60%;
-    height: 100px;
-    width: 50px;
-    transform: rotate(20deg);
-    transition: all 0.6s cubic-bezier(0.19, 1, 0.22, 1);
-  }
-  &:hover {
+    color: $c-light;
+    background: $c-blue;
+    border: 1px solid transparent;
+    box-sizing: border-box;
+    border-radius: 4px;
+    padding: 10px 29px;
+    transition: 0.5s;
+    overflow: hidden;
+    will-change: transform;
+    position: relative;
     &::before {
-      left: 120%;
+        content: "";
+        background: #90aaef;
+        opacity: 0.4;
+        position: absolute;
+        left: -60%;
+        top: -60%;
+        height: 100px;
+        width: 50px;
+        transform: rotate(20deg);
+        transition: all 0.6s cubic-bezier(0.19, 1, 0.22, 1);
     }
-  }
+    &:hover {
+        &::before {
+            left: 120%;
+        }
+    }
 }
 
-
-
 .btn--green {
-  @include btn-reset;
-  background: $c-green;
-  box-sizing: border-box;
-  border-radius: 4px;
-  color: $c-light;
-  padding: 8px 30px;
-  display: flex;
-  align-items: center;
-  position: relative;
-  &:hover {
-    border: 1px solid transparent;
-  }
-  &::after {
-    content: "";
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    border-radius: 50%;
-    padding: 50%;
-    width: 32px; /* Safari */
-    height: 32px; /* Safari */
-    background-color: rgb(255, 255, 255);
-    opacity: 0;
-    transform: translate(-50%, -50%) scale(1);
-    transition: opacity 1s, transform 0.5s;
-  }
+    @include btn-reset;
+    background: $c-green;
+    box-sizing: border-box;
+    border-radius: 4px;
+    color: $c-light;
+    padding: 8px 30px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    border: 1px solid $c-green;
+
+    &::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        border-radius: 50%;
+        padding: 50%;
+        width: 32px; /* Safari */
+        height: 32px; /* Safari */
+        background-color: rgb(255, 255, 255);
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(1);
+        transition: opacity 1s, transform 0.5s;
+    }
 }
 
 .btn--grey {
-  background: $c-darkgrey;
-  border-radius: 4px;
-  color: $c-light;
-  &:hover {
-    border: 1px solid transparent;
-  }
+    background: $c-darkgrey;
+    border-radius: 4px;
+    color: $c-light;
+
+    padding: 8px 25px;
+    &:hover {
+        border: 1px solid transparent;
+    }
 }
 
 .btn--transparent {
-  text-align: center;
-  color: #ffffff;
-  background-color: transparent;
-  border-color: $c-light;
-  box-sizing: border-box;
-  border-radius: 4px;
-  &:hover {
-    border: 1px solid transparent;
-  }
+    text-align: center;
+    color: #ffffff;
+    background-color: transparent;
+    border-color: $c-light;
+    box-sizing: border-box;
+    border-radius: 4px;
+
+    padding: 8px 25px;
+    &:hover {
+        border: 1px solid transparent;
+    }
 }
