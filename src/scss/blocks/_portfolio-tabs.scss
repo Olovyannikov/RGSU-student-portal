@@ -13,8 +13,8 @@
 
 .portfolio-tabs__buttons {
   margin: 0 auto;
-  width: 60%;
-  justify-content: space-between;
+  width: 100%;
+  justify-content: center;
   display: flex;
   flex-wrap: wrap;
 }
@@ -27,7 +27,6 @@
   font-size: 16px;
   line-height: 26px;
   text-transform: unset;
-  margin-bottom: 32px;
 
   &--active {
     background: #3464e0;

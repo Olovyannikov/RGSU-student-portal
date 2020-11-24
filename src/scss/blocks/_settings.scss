@@ -141,11 +141,11 @@
     line-height: 26px;
     color: $c-darkgrey;
     padding-bottom: 17px;
+    margin-right: 53px;
 }
 
 .settings__tabs-buttons {
     padding-left: 21px;
-    gap: 53px;
     display: flex;
     flex-wrap: wrap;
     align-items: baseline;
@@ -159,6 +159,7 @@
     border-top: 1px solid #e4ecfa;
     border-bottom: 1px solid #e4ecfa;
     padding-bottom: 24px;
+    padding-top: 20px;
     margin-bottom: 31px;
 }
 
@@ -214,14 +215,23 @@
     width: 100%;
     gap: 35px;
     flex-wrap: wrap;
+    @media (min-width: $tablet) {
+        flex-wrap: unset;
+    }
 }
 
 .settings__site {
     background-color: $c-light;
-    padding: 26px 60px 30px 19px;
     border-radius: 4px;
     box-sizing: border-box;
     width: 100%;
+    padding-bottom: 30px;
+    padding-top: 26px;
+    padding-left: 10px;
+    padding-right: 10px;
+    @media (min-width: $tablet) {
+        padding: 26px 60px 30px 19px;
+    }
 }
 
 .settings__site-parents {

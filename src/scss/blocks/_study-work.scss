@@ -1,73 +1,73 @@
 .activity-work__wrapper {
-  position: relative;
-  &--active  {
-    background-color: #fff;
-    margin-bottom: 44px;
-    border-radius: 4px;
-    height: 490px;
-  }
-  &:first-of-type {
-    margin-top: 26px;
-  }
-  &:last-of-type {
-    margin-bottom: 75px;
-  }
+    position: relative;
+    &--active {
+        background-color: #fff;
+        margin-bottom: 44px;
+        border-radius: 4px;
+        height: 490px;
+    }
+    &:first-of-type {
+        margin-top: 26px;
+    }
+    &:last-of-type {
+        margin-bottom: 75px;
+    }
 }
 
 .activity-work__table-container {
-  width: 100%;
-  height: 400px;
+    width: 100%;
+    height: 400px;
 }
 
 .activity-work__header {
-  @include headerBlock;
-  flex-wrap: wrap;
-  @media (min-width: $tablet) {
-    flex-wrap: unset;
-  }
+    @include headerBlock;
+    flex-wrap: wrap;
+    @media (min-width: $tablet) {
+        flex-wrap: unset;
+        white-space: nowrap;
+    }
 }
 
 .activity-work__progress {
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
 }
 
 .activity-work__section {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  background: #fff;
-  border-radius: 4px;
-  margin-top: 32px;
-  margin-bottom: 32px;
-  position: relative;
-  cursor: pointer;
-  align-items: center;
-  width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background: #fff;
+    border-radius: 4px;
+    margin-top: 32px;
+    margin-bottom: 32px;
+    position: relative;
+    cursor: pointer;
+    align-items: center;
+    width: 100%;
 }
 
 .activity-work__section-title {
-  font-weight: normal;
-  font-size: 22px;
-  line-height: 26px;
-  color: #6e7781;
-  margin: 0;
-  padding-left: 20px;
-  padding-top: 17px;
-  padding-bottom: 17px;
-  display: flex;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 26px;
+    color: #6e7781;
+    margin: 0;
+    padding-left: 20px;
+    padding-top: 17px;
+    padding-bottom: 17px;
+    display: flex;
 }
 
 .activity-work__section-count {
-  font-weight: normal;
-  font-size: 15px;
-  line-height: 18px;
-  color: #6e7781;
-  background: #f1f4f9;
-  border-radius: 50%;
-  padding: 4px 9px;
-  position: relative;
-  display: block;
-  margin-left: 12px;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 18px;
+    color: #6e7781;
+    background: #f1f4f9;
+    border-radius: 50%;
+    padding: 4px 9px;
+    position: relative;
+    display: block;
+    margin-left: 12px;
 }
-

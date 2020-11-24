@@ -32,7 +32,7 @@
 
 .new-section__content {
   @media (min-width: $tablet) {
-    width: 1120px;
+    max-width: 1120px;
     margin: 0 auto 42px;
   }
 }
@@ -136,7 +136,7 @@
 
 .new-section__other-news {
   @media (min-width: $tablet) {
-    width: 1120px;
+    max-width: 1120px;
     margin: 0 auto;
   }
 }

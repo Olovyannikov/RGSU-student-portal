@@ -3,6 +3,21 @@ import Swiper, {Navigation, Pagination, Scrollbar} from "swiper";
 export default () => {
     Swiper.use([Navigation, Pagination, Scrollbar]);
 
+    let newsblock = new Swiper('.news__wrapper', {
+        slidesPerView: 'auto',
+        spaceBetween: 30,
+
+
+        breakpoints: {
+            768: {
+                spaceBetween: 20,slidesPerView: 'auto',
+            },
+            1024: {
+                spaceBetween: 30,slidesPerView: 'auto',
+            }
+        }
+    });
+
     let advertisement = new Swiper('.advertisement__slider', {
         slidesPerView: 'auto',
         spaceBetween: 30,

@@ -1,28 +1,24 @@
 .container {
-  margin: 0 auto;
-  padding: 0 45px;
-  width: 100%;
-  max-width: 1440px;
-  border-radius: 4px;
-  &--aside {
-      padding: 0 45px;
-      gap: 28px;
+    margin: 0 auto;
+    padding: 0 45px;
+    width: 100%;
+    max-width: 1440px;
+    border-radius: 4px;
+    &--aside {
+        padding: 0 45px;
+        gap: 28px;
 
-    display: flex;
-	align-items: flex-start;
-  }
+        display: flex;
+        align-items: flex-start;
+    }
 
-  @media (min-width: $stop-scaling) {
-	padding: 0 40px;
-  }
+    @media (max-width: $tablet) {
+        padding: 0 20px;
+    }
 
-  @media (max-width: $tablet) {
-	padding: 0 20px;
-  }
-
-  @media (max-width: $mobile) {
-	padding: 0 12px;
-  }
+    @media (max-width: $mobile) {
+        padding: 0 12px;
+    }
 }
 
 .title-block {
@@ -30,111 +26,112 @@
 }
 
 .title {
-  font-size: rem-calc(18);
-  line-height: 26px;
-  color: $c-darkgrey;
-  padding-top: 25px;
-  padding-left: 19px;
-  font-style: normal;
-  font-weight: normal;
-  margin: 0;
-  text-transform: uppercase;
-  @media (min-width: $tablet) {
-	font-size: rem-calc(22);
-	text-transform: unset;
-  }
-  &--dark {
-	color: $c-black;
-  }
-  &--xs {
-	font-size: rem-calc(18);
-	line-height: 26px;
-	font-style: normal;
-	font-weight: 500;
-	color: $c-title;
-  }
-  &--large {
-	font-size: rem-calc(26);
-	line-height: 30px;
-	margin: 0 11px 0 0;
-	font-style: normal;
-	font-weight: normal;
-	@media (max-width: $mobile) {
-	  font-size: 1.325rem;
-	}
-  }
-  &--s {
-	font-size: rem-calc(24);
-	line-height: 28px;
-	color: $c-black;
-	margin: 0 21px 0 0;
-	font-style: normal;
-	font-weight: normal;
-  }
-  &--main {
-	font-size: rem-calc(22);
-	line-height: 26px;
-	color: $c-title;
-	font-weight: 400;
-	margin: 0 14px 0 0;
-  }
-  &--aside {
-	margin: 0;
-	padding-top: 20px;
-	padding-bottom: 26px;
-  }
-  &--dashboard {
-	color: $c-darkgrey;
-	font-size: rem-calc(18);
-	line-height: 26px;
-	font-weight: 400;
-  }
+    font-size: rem-calc(18);
+    line-height: 26px;
+    color: $c-darkgrey;
+    padding-top: 25px;
+    padding-left: 19px;
+    font-style: normal;
+    font-weight: normal;
+    margin: 0;
+    text-transform: uppercase;
+    @media (min-width: $tablet) {
+        font-size: rem-calc(22);
+        text-transform: unset;
+    }
+    &--dark {
+        color: $c-black;
+    }
+    &--xs {
+        font-size: rem-calc(18);
+        line-height: 26px;
+        font-style: normal;
+        font-weight: 500;
+        color: $c-title;
+    }
+    &--large {
+        font-size: rem-calc(26);
+        line-height: 30px;
+        margin: 0 11px 0 0;
+        font-style: normal;
+        font-weight: normal;
+        @media (max-width: $mobile) {
+            font-size: 1.325rem;
+        }
+    }
+    &--s {
+        font-size: rem-calc(24);
+        line-height: 28px;
+        color: $c-black;
+        margin: 0 21px 0 0;
+        font-style: normal;
+        font-weight: normal;
+    }
+    &--main {
+        font-size: rem-calc(22);
+        line-height: 26px;
+        color: $c-title;
+        font-weight: 400;
+        margin: 0 14px 0 0;
+    }
+    &--aside {
+        margin: 0;
+        padding-top: 20px;
+        padding-bottom: 26px;
+    }
+    &--dashboard {
+        color: $c-darkgrey;
+        font-size: rem-calc(18);
+        line-height: 26px;
+        font-weight: 400;
+    }
 }
 
 .aside-content {
-  @media (min-width: $tablet) {
-	width: 315px;
-	border-radius: 4px;
-	height: fit-content;
-  }
+    @media (min-width: $tablet) {
+        width: 315px;
+        border-radius: 4px;
+        height: fit-content;
+    }
 }
 
 .aside-divider {
-  @media (min-width: $tablet) {
-	margin-bottom: 2px;
-	background-color: #fff;
-	padding-left: 20px;
-	padding-right: 20px;
-  }
+    @media (min-width: $tablet) {
+        margin-bottom: 2px;
+        background-color: #fff;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
 }
 
 .card--stack {
-  background: #fff;
-  border-radius: 4px;
-  position: relative;
-  width: 100%;
-  &::before {
-    content: "";
-    position: absolute;
-    width: calc(100% - 40px);
-    height: 100%;
-    top: -20px;
-    left: 20px;
-    background: rgba(255, 255, 255, 0.6);
+    background: #fff;
     border-radius: 4px;
-    z-index: -1;
-    display: block;
-  }
-  &::after {
-    content: "";
-    position: absolute;
-    width: calc(100% - 20px);
+    position: relative;
+    width: 100%;
     height: 100%;
-    top: -10px;
-    left: 10px;
-    background: rgba(255, 255, 255, 0.8);
-    border-radius: 4px;
-    z-index: -1;
-    display: block;
-  }
+    &::before {
+        content: "";
+        position: absolute;
+        width: calc(100% - 40px);
+        height: 100%;
+        top: -20px;
+        left: 20px;
+        background: rgba(255, 255, 255, 0.6);
+        border-radius: 4px;
+        z-index: -1;
+        display: block;
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        width: calc(100% - 20px);
+        height: 100%;
+        top: -10px;
+        left: 10px;
+        background: rgba(255, 255, 255, 0.8);
+        border-radius: 4px;
+        z-index: -1;
+        display: block;
+    }
 }

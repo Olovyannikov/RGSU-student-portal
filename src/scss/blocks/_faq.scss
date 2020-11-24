@@ -59,6 +59,9 @@
 .faq__content {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap-reverse;
+    background: $c-light;
+    padding-left: 20px;
 }
 
 .faq__wrapper {

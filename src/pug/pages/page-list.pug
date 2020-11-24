@@ -31,9 +31,7 @@ block content
         }
 
     .wrapper.container.container--aside.tabs__container(style="display: flex; margin-top: 40px")
-        .tabs__buttons(style="width: 315px; gap: 10px")
-
-
+        .tabs__buttons(style="width: 315px;")
             button.btn.btn--border.tabs__button.tabs__button--active(data-id="page-list") Список страниц
             button.btn.btn--border.tabs__button(data-id="introduction") Введение
             button.btn.btn--border.tabs__button(data-id="tech") Описание технологий
@@ -343,6 +341,7 @@ block content
                                 script(type="module" src="hello.js")
                           pre.
                                 // result
+                                ERROR
 
                 li.accordeon-section
                     p.accordeon-title.title--main SCSS - Sassy CSS
@@ -366,6 +365,7 @@ block content
                                 p Директивы @for, @while и выражение @if-else — можно писать CSS-код, используя знакомые элементы из других языков. Но не обольщайтесь — в итоге на выходе будет обычный CSS.
                             li
                                 p Миксины (примеси) — можно один раз создать набор CSS-свойств и работать с ними повторно или смешивать с другими значениями. Миксины можно использовать для создания отдельных тем одного макета. Примеси также могут содержать целые CSS-правила или что-либо другое, разрешённое в Sass-документе. Они даже могут принимать аргументы, что позволяет создавать большое разнообразие стилей при помощи небольшого количества миксинов.
+
 
                             li
                                 p Функции — можно создавать определения CSS в виде функций для многократного использования.
@@ -439,18 +439,36 @@ block content
                     p.accordeon-title.title--main Gulp / Webpack
                         button.accordeon-button
                     .accordeon-container
+                        p.
+                            Gulp — это таск-менеджер для автоматического выполнения часто используемых задач (например, минификации, тестирования, объединения файлов), написанный на языке программирования JavaScript. Программное обеспечение использует командную строку для запуска задач, определённых в файле gulpfile.js в корне проекта
+                        p.
+                            Взаимодействия между частями программы реализуется через оператор .pipe(), выполняя по одной задаче за раз, не затрагивая исходные файлы, до конца процедуры. Это даёт возможность комбинации плагинов в любой последовательности и количестве.
+                        p.
+                            Так же в Gulp усовершенствована система сборки. Это значит, что помимо запуска задач, можно также копировать файлы с места на место, компилировать и развёртывать проект в новом окружении.
+                        p.
+                            Webpack я использовал также, как модуль для Gulp (Где Gulp - таскменеджер,а webpack - сборщик модулей JavaScript)
                 li.accordeon-section
                     p.accordeon-title.title--main .eslint / .stylelint / prettier / .editorconfig
                         button.accordeon-button
                     .accordeon-container
-                li.accordeon-section
-                    p.accordeon-title.title--main Модульный JavaScript, изоляция
-                        button.accordeon-button
-                    .accordeon-container
+                        p.
+                            EditorConfig это конфигурационный файл и набор расширений, к большому количеству редакторов кода и IDE (Далее просто IDE).
+                        p.
+                            Его задача — создать единый формат настроек, и, раз и навсегда, решить вопросы вроде “табы или пробелы” для всех IDE и всех языков программирования. Такой файл может храниться в системе контроля версий проекта, что позволит всем его разработчикам использовать одну и ту же конфигурацию.
+
                 li.accordeon-section
                     p.accordeon-title.title--main Препроцессор HTML pug / jade
                         button.accordeon-button
                     .accordeon-container
+                        p <a href="https://pugjs.org/api/getting-started.html">Pug</a> - это препроцессор HTML и шаблонизатор, который был написан на JavaScript для Node.js.
+                        p В Pug нет закрывающих тегов, вместо этого он использует строгую табуляцию (или отступы) для определения вложености тегов
+                        p Pug:
+                        pre.
+                            ul
+                              li Item A
+                              li Item B
+                              li Item C
+
                 li.accordeon-section
                     p.accordeon-title.title--main Графики / чарты Chart.js
                         button.accordeon-button

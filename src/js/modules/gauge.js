@@ -29,9 +29,8 @@ export default () => {
         this.options = options;
 
         this.ctx = canvas.getContext("2d");
-        this.width = options.width || 100;
+        this.width = options.width || 236;
         this.height = options.height || this.width;
-        this.borderRadius = options.borderRadius || 56;
         this.transition = 2;
 
         // readjust lineWidth based on radius
@@ -124,8 +123,12 @@ export default () => {
         const gaugeValueElement = gauge.querySelector(".gauge__value");
         gaugeValueElement.textContent = gaugeVal;
         gaugeValueElement.style.color =
-            gaugeVal > 50 ? "rgba(43, 197, 132, 1)" : "rgba(224, 99, 100, 1)";
+            gaugeVal > 50 ? "rgb(43,197,132)" : "rgb(224,99,100)";
 
-        gauge = new Gauge(gauge, gauge.dataset)
+        gauge = new Gauge(gauge, {
+            value: gauge.dataset.value,
+            lineWidth: 4,
+
+        })
     });
 };

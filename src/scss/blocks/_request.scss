@@ -4,17 +4,21 @@
 
 .request__tab-wrapper {
     display: flex;
-    gap: 30px;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .request__form {
     display: flex;
     background: $c-light;
-    width: 545px;
     border-radius: 4px;
     flex-wrap: wrap;
     padding: 20px 20px 52px 20px;
     gap: 20px;
+    @media (min-width: $tablet) {
+
+        max-width: 545px;
+    }
 }
 
 .request__form-wrapper {
@@ -76,6 +80,9 @@
     padding: 20px;
     border-radius: 4px;
     flex-grow: 1;
+    @media (min-width: $tablet) {
+        max-width: 430px;
+    }
 }
 
 .request__payments-title {

@@ -11,10 +11,6 @@
     max-width: 1440px;
     border-radius: 4px;
 
-    @media (min-width: $stop-scaling) {
-        padding: 0 40px;
-    }
-
     @media (max-width: $tablet) {
         padding: 0 20px;
     }

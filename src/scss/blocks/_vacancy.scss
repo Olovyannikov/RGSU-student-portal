@@ -1,214 +1,216 @@
 .vacancy__content {
-  display: flex;
-  justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
 }
 
 .vacancy__header {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 31px;
-  flex-wrap: wrap;
-  align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 31px;
+    flex-wrap: wrap;
+    align-items: center;
 }
 
 .vacancy__question {
-  font-size: rem-calc(14);
-  line-height: 21px;
-  color: #3464e0;
+    font-size: rem-calc(14);
+    line-height: 21px;
+    color: #3464e0;
 }
 
 .vacancy__section {
-  position: relative;
-  background-color: #fff;
-  border-radius: 4px;
+    position: relative;
+    background-color: #fff;
+    border-radius: 4px;
 }
 
 .vacancy__section-title {
-  padding: 17px 0 17px 20px;
-  margin-right: 0;
-  &--hot {
-    color: $c-red;
-    &::before {
-      content: "⚡";
-      padding-right: 11px;
+    padding: 17px 0 17px 20px;
+    margin-right: 0;
+    &--hot {
+        color: $c-red;
+        &::before {
+            content: "⚡";
+            padding-right: 11px;
+        }
     }
-  }
 }
 
 .vacancy-container {
-  border-top: 1px solid #e4ecfa;
-  padding-top: 24px;
-  padding-left: 20px;
-  min-height: 720px;
+    border-top: 1px solid #e4ecfa;
+    padding-top: 24px;
+    padding-left: 20px;
+    min-height: 720px;
 }
 
 .vacancy__item-title {
-  font-weight: 600;
-  font-size: rem-calc(18);
-  line-height: 22px;
-  color: #444;
-  margin: 0 0 15px;
+    font-weight: 600;
+    font-size: rem-calc(18);
+    line-height: 22px;
+    color: #444;
+    margin: 0 0 15px;
 }
 
 .vacancy__item-list {
-  @include list-reset;
-  margin-top: 15px;
-  margin-bottom: 23px;
+    @include list-reset;
+    margin-top: 15px;
+    margin-bottom: 23px;
 }
 
 .vacancy__item-item {
-  padding-left: 30px;
-  position: relative;
-  font-size: rem-calc(16);
-  line-height: 26px;
-  &::before {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 20px;
-    height: 1px;
-    background-color: #c3cad6;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-  }
+    padding-left: 30px;
+    position: relative;
+    font-size: rem-calc(16);
+    line-height: 26px;
+    &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 20px;
+        height: 1px;
+        background-color: #c3cad6;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+    }
 }
 
 .vacancy__salary {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  margin-bottom: 25px;
-  padding-top: 27px;
-  margin-right: 28px;
-  border-top: 1px solid #e4ecfa;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+    padding-top: 27px;
+    margin-right: 28px;
+    border-top: 1px solid #e4ecfa;
 }
 
 .vacancy__salary-item {
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 26px;
-  display: block;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 26px;
+    display: block;
 }
 
 .vacancy__salary-title {
-  margin-bottom: 2px;
+    margin-bottom: 2px;
 }
 
 .vacancy__wrapper {
-  @media (min-width: $tablet) {
-    width: 1006px;
-  }
+    @media (min-width: $tablet) {
+        width: 1006px;
+    }
 }
 
 .vacancy__filter {
-  display: flex;
-  flex-wrap: wrap;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .vacancy__title {
 }
 
 .vacancy__filter-button {
-  position: relative;
-  transition: 0.5s;
-  margin-bottom: 20px;
-  svg {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    width: 22px;
-    height: 22px;
-    fill: $c-blue;
-  }
-  &:hover {
+    position: relative;
+    transition: 0.5s;
+    margin-bottom: 20px;
     svg {
-      fill: $c-light;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        width: 22px;
+        height: 22px;
+        fill: $c-blue;
     }
-  }
-  &--active {
-    background: $c-blue;
-    color: $c-light;
-    svg {
-      display: none;
-    }
-    &::after,
-    &::before {
-      content: "";
-      position: absolute;
-      display: block;
-      width: 25px;
-      left: 9px;
-      height: 1px;
-      background: #fff;
-      top: 50%;
-      z-index: 2;
-    }
-    &::after {
-      transform: rotate(45deg);
-      animation: rotateToX 0.5s ease-in-out;
-    }
-    &::before {
-      transform: rotate(-45deg);
-      animation: rotateToY 0.5s ease-in-out;
-    }
-  }
-  font-size: 0;
-  padding-right: 10px;
-  @media (min-width: $mobile) {
-    font-size: 100%;
-    padding-left: 62px;
-    svg {
-      left: 28px;
+    &:hover {
+        svg {
+            fill: $c-light;
+        }
     }
     &--active {
-      &::before, &::after {
-        left: 28px;
-      }
+        background: $c-blue;
+        color: $c-light;
+        svg {
+            display: none;
+        }
+        &::after,
+        &::before {
+            content: "";
+            position: absolute;
+            display: block;
+            width: 25px;
+            left: 9px;
+            height: 1px;
+            background: #fff;
+            top: 50%;
+            z-index: 2;
+        }
+        &::after {
+            transform: rotate(45deg);
+            animation: rotateToX 0.5s ease-in-out;
+        }
+        &::before {
+            transform: rotate(-45deg);
+            animation: rotateToY 0.5s ease-in-out;
+        }
     }
-  }
+    font-size: 0;
+    padding-right: 10px;
+    @media (min-width: $mobile) {
+        font-size: 100%;
+        padding-left: 56px;
+        padding-right: 25px;
+        svg {
+            left: 28px;
+        }
+        &--active {
+            &::before,
+            &::after {
+                left: 28px;
+            }
+        }
+    }
 }
 
 .dashboard__vacancy {
-  .vacancy__filter {
-    display: none;
-    width: 100%;
-    background-color: $c-light;
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-bottom: 25px;
-    justify-content: space-between;
-    &--active {
-      display: flex;
+    .vacancy__filter {
+        display: none;
+        width: 100%;
+        background-color: $c-light;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-bottom: 25px;
+        justify-content: space-between;
+        &--active {
+            display: flex;
+        }
     }
-  }
-  .filter__label {
-    padding-left: 36px;
-  }
-  .filter__select {
-    width: 200px;
-  }
-  .filter__education-options {
-    width: 214px;
-  }
-  .filter__salary {
-    width: 240px;
-  }
+    .filter__label {
+        padding-left: 36px;
+    }
+    .filter__select {
+        width: 200px;
+    }
+    .filter__education-options {
+        width: 214px;
+    }
+    .filter__salary {
+        width: 240px;
+    }
 }
 
 @keyframes rotateToX {
-  from {
-    transform: rotate(0);
-  }
-  to {
-    transform: rotate(45deg);
-  }
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(45deg);
+    }
 }
 @keyframes rotateToY {
-  from {
-    transform: rotate(0);
-  }
-  to {
-    transform: rotate(-45deg);
-  }
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(-45deg);
+    }
 }

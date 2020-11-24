@@ -78,7 +78,7 @@ document.querySelector(".page-header__sidebar-toggler").onclick = function () {
         .classList.toggle("dashboard__aside--active");
 };
 
-if (document.querySelector("#fullMenu") == true) {
+if (document.querySelector("#fullMenu")) {
     let menuState = document.querySelector("#fullMenu");
     let menuHeaders = document.querySelectorAll(".dashboard__menu-header");
     let menuLists = document.querySelectorAll(".dashboard__menu-list");

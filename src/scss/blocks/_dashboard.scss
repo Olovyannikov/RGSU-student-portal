@@ -196,17 +196,23 @@
     }
     &:hover {
         background-color: $c-blue;
+        border: 1px solid transparent;
         svg {
             fill: $c-light;
         }
         color: $c-light;
     }
     &--active {
-        border-color: $c-blue;
         border: 1px solid $c-blue;
         color: $c-blue;
         svg {
             fill: $c-blue;
+        }
+        &:visited {
+            color: $c-blue;
+            &:hover {
+                color: $c-light
+            }
         }
     }
     &--short {
@@ -244,6 +250,9 @@
     @media (min-width: $tablet) {
         section {
             width: 100%;
+        }
+        .container {
+            padding: 0;
         }
     }
     .info__card-stack {
@@ -297,7 +306,9 @@
     width: 100%;
     @media (min-width: $tablet) {
         flex-direction: row;
-        width: auto;
+
+        width: 100%;
+        justify-content: space-between;
     }
     .info__card-block {
         height: fit-content;

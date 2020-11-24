@@ -2,6 +2,7 @@
     display: flex;
     gap: 30px;
     padding-top: 11px;
+    flex-wrap: wrap;
 }
 
 .parent-cabinet__wrapper {
@@ -25,9 +26,9 @@
 }
 
 .parent-cabinet__tab-wrapper {
-    padding: 0 24px;
     background-color: $c-light;
     border-radius: 4px;
+    padding: 0 24px;
 }
 
 .parent-cabinet__aside {
@@ -48,6 +49,10 @@
 }
 .parent-cabinet__aside-title {
     margin-bottom: -24px;
+}
+
+.parent-cabinet__finance {
+    width: 100%;
 }
 
 .parent-cabinet__finance-preheader {

@@ -66,6 +66,12 @@
   padding-left: 102px;
   padding-top: 36px;
   display: block;
+    a {
+        color: $c-black;
+        &:visited {
+            color: $c-black;
+        }
+    }
 }
 
 .info__card-media-icon {
@@ -128,10 +134,11 @@
 
 .info__card-media-name {
   margin: 0;
+    color: $c-black;
 }
 .info__card-media-hash {
   margin: 0;
-  color: #3464e0;
+  color: #3464E0;
 }
 
 //Стили внутри карточки

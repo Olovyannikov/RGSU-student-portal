@@ -17,7 +17,6 @@
     z-index: 12;
     left: 0;
     width: 100%;
-    height: 177px;
     top: 70px;
     box-shadow: 0 5px 24px rgba(110, 119, 129, 0.1);
     display: none;
@@ -47,18 +46,27 @@
 
 .login__navigation-item {
     border-bottom: 1px solid #f1f4f9;
+    transition: .5s;
+    &:hover {
+        background: $c-grey;
+    }
     a {
         display: block;
         font-size: 18px;
         line-height: 26px;
         padding: 18px 0 15px 25px;
         color: $c-black;
+        &:visited {
+            color: $c-black;
+        }
     }
 }
 .login__navigation--exit {
     border-bottom: none;
     a {
-        color: #c3cad6;
-        padding-bottom: 20px;
+        color: $c-darkgrey;
+        &:visited {
+            color: $c-darkgrey;
+        }
     }
 }

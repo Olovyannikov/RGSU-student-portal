@@ -112,7 +112,7 @@
       
     </style>
     <div class="wrapper container container--aside tabs__container" style="display: flex; margin-top: 40px">
-      <div class="tabs__buttons" style="width: 315px; gap: 10px">
+      <div class="tabs__buttons" style="width: 315px;">
         <button class="btn btn--border tabs__button tabs__button--active" data-id="page-list">Список страниц</button>
         <button class="btn btn--border tabs__button" data-id="introduction">Введение</button>
         <button class="btn btn--border tabs__button" data-id="tech">Описание технологий</button>
@@ -409,6 +409,7 @@ let user = "John";</pre>
 script(type="module" src="user.js")
 script(type="module" src="hello.js")</pre>
                 <pre>// result
+ERROR
 </pre>
               </p>
             </div>
@@ -506,25 +507,39 @@ $nothing: null;</pre>
             <p class="accordeon-title title--main">Gulp / Webpack
               <button class="accordeon-button"></button>
             </p>
-            <div class="accordeon-container"></div>
+            <div class="accordeon-container">
+              <p>Gulp — это таск-менеджер для автоматического выполнения часто используемых задач (например, минификации, тестирования, объединения файлов), написанный на языке программирования JavaScript. Программное обеспечение использует командную строку для запуска задач, определённых в файле gulpfile.js в корне проекта</p>
+              <p>Взаимодействия между частями программы реализуется через оператор .pipe(), выполняя по одной задаче за раз, не затрагивая исходные файлы, до конца процедуры. Это даёт возможность комбинации плагинов в любой последовательности и количестве.</p>
+              <p>Так же в Gulp усовершенствована система сборки. Это значит, что помимо запуска задач, можно также копировать файлы с места на место, компилировать и развёртывать проект в новом окружении.</p>
+              <p>Webpack я использовал также, как модуль для Gulp (Где Gulp - таскменеджер,а webpack - сборщик модулей JavaScript)</p>
+            </div>
           </li>
           <li class="accordeon-section">
             <p class="accordeon-title title--main">.eslint / .stylelint / prettier / .editorconfig
               <button class="accordeon-button"></button>
             </p>
-            <div class="accordeon-container"></div>
-          </li>
-          <li class="accordeon-section">
-            <p class="accordeon-title title--main">Модульный JavaScript, изоляция
-              <button class="accordeon-button"></button>
-            </p>
-            <div class="accordeon-container"></div>
+            <div class="accordeon-container">
+              <p>EditorConfig это конфигурационный файл и набор расширений, к большому количеству редакторов кода и IDE (Далее просто IDE).</p>
+              <p>
+                Его задача — создать единый формат настроек, и, раз и навсегда, решить вопросы вроде “табы или пробелы” для всех IDE и всех языков программирования. Такой файл может храниться в системе контроля версий проекта, что позволит всем его разработчикам использовать одну и ту же конфигурацию.
+                
+              </p>
+            </div>
           </li>
           <li class="accordeon-section">
             <p class="accordeon-title title--main">Препроцессор HTML pug / jade
               <button class="accordeon-button"></button>
             </p>
-            <div class="accordeon-container"></div>
+            <div class="accordeon-container">
+              <p><a href="https://pugjs.org/api/getting-started.html">Pug</a> - это препроцессор HTML и шаблонизатор, который был написан на JavaScript для Node.js.</p>
+              <p>В Pug нет закрывающих тегов, вместо этого он использует строгую табуляцию (или отступы) для определения вложености тегов</p>
+              <p>Pug:</p>
+              <pre>ul
+  li Item A
+  li Item B
+  li Item C
+</pre>
+            </div>
           </li>
           <li class="accordeon-section">
             <p class="accordeon-title title--main">Графики / чарты Chart.js
@@ -608,7 +623,7 @@ $nothing: null;</pre>
           <ul class="footer__message-list footer__list">
             <li class="footer__message-item footer__message-item--mail"><a class="footer__message-link footer__message-link--mail" href="mailto:info@rgsu.net">Интернет приемная
                 <svg width="23" height="18">
-                  <use href="img/icons/icons.svg#email" fill="#FFF"></use>
+                  <use href="img/icons/icons.svg#email"></use>
                 </svg></a></li>
             <li class="footer__message-item"><a class="footer__message-link footer__message-link--telegram" href="mailto:info@rgsu.net"><img src="img/telegram-light.svg" alt="Написать нам в Телеграм" width="36" height="36"/></a></li>
             <li class="footer__message-item"><a class="footer__message-link footer__message-link--whatsapp" href="mailto:info@rgsu.net"><img src="img/whatsapp.svg" alt="Написать нам в Whatsapp" width="36" height="36"/></a></li>

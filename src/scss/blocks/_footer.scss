@@ -1,147 +1,191 @@
 .footer {
-  background: #6E7781;
-  margin-top: rem-calc(41);
-  hr {
-      color: #6F7D8B; /*для IE */
-      background-color:#6F7D8B; /*для Firefox, Opera, Safari*/
-      border:0px none;
-      height:1px; /* высота 1px IE, Firefox, Opera, Safari */
-  }
+    background: #6e7781;
+    margin-top: rem-calc(41);
+    hr {
+        color: #6f7d8b; /*для IE */
+        background-color: #6f7d8b; /*для Firefox, Opera, Safari*/
+        border: 0px none;
+        height: 1px; /* высота 1px IE, Firefox, Opera, Safari */
+    }
 }
 
 .footer__container {
-  border-radius: 0;
-  padding-top: 45px;
-  display: flex;
-  gap: 30px;
-  flex-wrap: wrap;
+    border-radius: 0;
+    padding-top: 45px;
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
 }
 
 .footer__section {
-  @media (min-width: $tablet) {
-    width: 429px;
-  }
+    @media (min-width: $tablet) {
+        width: 429px;
+    }
 }
 
 .footer__section-title {
-  padding-left: 0;
-  margin-bottom: rem-calc(21);
-  @media (min-width: $tablet) {
-    padding-top: 0;
-  }
+    padding-left: 0;
+    margin-bottom: rem-calc(21);
+    @media (min-width: $tablet) {
+        padding-top: 0;
+    }
 }
 
-
 .footer__contacts-item {
-  @media (min-width: $tablet) {
-    font-size: rem-calc(16);
-    line-height: rem-calc(28);
-  }
+    color: $c-darkgrey;
+    a {
+        color: $c-light;
+        transition: .5s;
+        &:hover {
+            color: $c-darkgrey
+        }
+    }
+    @media (min-width: $tablet) {
+        font-size: rem-calc(16);
+        line-height: rem-calc(28);
+    }
 }
 
 .footer__list {
-  @include list-reset;
-  font-size: rem-calc(16);
-  line-height: 28px;
-  color: #FFFFFF;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  position: relative;
+    @include list-reset;
+    font-size: rem-calc(16);
+    line-height: 28px;
+    color: #ffffff;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    position: relative;
 }
 
-
 .footer__contacts-list {
-  flex-direction: column;
-  align-items: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 .footer__contacts-link {
-  color: $c-light;
+    color: $c-light;
 }
 
 .footer__schedule {
-  font-style: normal;
-  font-weight: normal;
-  font-size: rem-calc(16);
-  line-height: rem-calc(28);
-  color: #FFFFFF;
-  @media (min-width: $tablet) {
-    margin-bottom: 34px;
-  }
+    font-style: normal;
+    font-weight: normal;
+    font-size: rem-calc(16);
+    line-height: rem-calc(28);
+    color: $c-darkgrey;
+    @media (min-width: $tablet) {
+        margin-bottom: 34px;
+    }
+}
+
+.footer__message-item {
+    transition: .5s;
+    &:hover:not(:first-child) {
+        transform: scale(1.1);
+    }
 }
 
 .footer__message-link {
-  color: $c-light;
-  &--mail {
-    text-align: center;
-    font-size: 16px;
-    padding: 12px 14px 12px 52px;
-    border: 1px solid #C3CAD6;
-    box-sizing: border-box;
-    border-radius: 4px;
-    color: #C3CAD6;
-    position: relative;
-    svg {
-      position: absolute;
-      left: 18px;
-      top: 12px;
+    color: $c-light;
+
+    &--mail {
+        text-align: center;
+        font-size: 16px;
+        padding: 12px 14px 12px 52px;
+        border: 1px solid #c3cad6;
+        box-sizing: border-box;
+        border-radius: 4px;
+        color: #c3cad6;
+        position: relative;
+        transition: .2s;
+        svg {
+            position: absolute;
+            left: 18px;
+            top: 12px;
+            fill: $c-light;
+        }
+        &:hover {
+            color: $c-light;
+            background: $c-blue;
+            border: 1px solid transparent;
+            svg {
+                fill: $c-light;
+            }
+        }
     }
-  }
 }
 
 .footer__message-list {
-  width: 310px;
-  justify-content: space-between;
-  @media (min-width: $tablet) {
-    margin-bottom: 39px;
-  }
+    max-width: 310px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    @media (min-width: $small + 5) {
+
+        width: 310px;
+    }
+    @media (min-width: $tablet) {
+        margin-bottom: 39px;
+    }
 }
 
 //internet - services
 .footer__services-title {
-  margin-top: 20px;
-  @media (min-width: $tablet) {
-    margin-top: 0;
-  }
+    margin-top: 20px;
+    @media (min-width: $tablet) {
+        margin-top: 0;
+    }
 }
 .footer__services-link {
-  font-style: normal;
-  font-weight: normal;
-  font-size: rem-calc(16);
-  line-height: 28px;
-  color: #FFFFFF;
+    font-style: normal;
+    font-weight: normal;
+    font-size: rem-calc(16);
+    line-height: 28px;
+    color: $c-light;
+    transition: .5s;
+    &:hover {
+        color: $c-darkgrey;
+    }
 }
 .footer__services-list {
-  margin-bottom: 14px;
-  @media (min-width: $tablet) {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-bottom: 34px;
-  }
+    margin-bottom: 14px;
+    @media (min-width: $tablet) {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 34px;
+    }
 }
 
 .footer__policy {
-  margin-top: 17px;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  font-style: normal;
-  font-weight: normal;
-  font-size: rem-calc(14);
-  line-height: rem-calc(26);
-  color: #FFFFFF;
-  padding-bottom: 17px;
-  a {
-    color: #fff;
-  }
-  @media (min-width: $tablet) {
-    flex-direction: row;
-    @include container;
-    justify-content: space-between;
-    padding-top: 18px;
-    padding-bottom: 18px;
-  }
+    margin-top: 17px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    font-style: normal;
+    font-weight: normal;
+    font-size: rem-calc(14);
+    line-height: rem-calc(26);
+    color: #ffffff;
+    padding-bottom: 17px;
+    a {
+        color: #fff;
+    }
+    @media (min-width: $tablet) {
+        @include container;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-top: 18px;
+        padding-bottom: 18px;
+    }
 }
+
+.footer__policy-item {
+    a:not(.footer__copyright) {
+        color: $c-light;
+        transition: .5s;
+        &:hover {
+            color: $c-darkgrey;
+        }
+    }
+}
+

@@ -13,12 +13,6 @@
   transition: 0.2s;
   color: #c3cad6;
 
-  @media (min-width: $stop-scaling) {
-    padding: 15px 29px;
-    font-size: 24px;
-    line-height: 30px;
-  }
-
   &:hover,
   &:focus {
     background: #3464e0;
@@ -42,7 +36,7 @@
     padding: 21px 20px 21px 73px;
   }
   &--border {
-    padding: 16px 24px;
+    padding: 12px 24px;
   }
 }
 

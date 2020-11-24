@@ -24,10 +24,9 @@ export default () => {
             rangeInputs[1].style.background = `linear-gradient(to right,#c3cad6 ${rangeMinPercentage}%, transparent ${rangeMinPercentage}%)`;
 
             // Update value on screen
-            rangeMinOutput.innerHTML = `${rangeMinValue}` ;
+
+            rangeMinOutput.innerHTML = `${rangeMinValue}`;
             rangeMaxOutput.innerHTML = `${rangeMaxValue}`;
-
-
         };
 
         const bindComponent = (item) => {
@@ -41,7 +40,8 @@ export default () => {
                 ".js-two-range-slider-max-value"
             );
 
-            item.addEventListener("input", () => { // Update value on screen
+            item.addEventListener("input", () => {
+                // Update value on screen
                 rangeCheck(rangeInputs, rangeMinOutput, rangeMaxOutput);
                 for (let i = 0; i < rangeInputs.length; i++) {
                     let directions = {
@@ -80,11 +80,12 @@ export default () => {
                     rangeMaxOutput.innerHTML = res + " ₽";
                 }
 
-                if (rangeMaxOutput.value === rangeMinOutput.value) {
-                    rangeMinOutput.style.display = 'none'
-                }
-                else {
-                    rangeMinOutput.style.display = 'block'
+                if (rangeMaxOutput.style.left === rangeMinOutput.style.left) {
+                    rangeInputs[1].style.display = "none";
+                    rangeMinOutput.style.display = "none";
+                } else {
+                    rangeInputs[1].style.display = "block";
+                    rangeMinOutput.style.display = "block";
                 }
             });
 
