@@ -131,7 +131,8 @@ export default () => {
                 if (val < max) {
                     step(val + 1);
                     if (gaugeValueElement.parentElement.classList.contains("gauge--score")) {
-                        step(val + 0.5)
+                        val = (Math.floor(val * 100)) / 100;
+                        step(val + 0.01)
                     }
                 }
             }, time / (max - min));

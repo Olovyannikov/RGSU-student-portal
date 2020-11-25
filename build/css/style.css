@@ -611,6 +611,7 @@ button.swiper-pagination-bullet {
 /* Russia - regular */
 
 @font-face {
+  font-display: swap;
   font-family: "Russia";
   src: url("../fonts/8425.eot");
   /* IE9 Compat Modes */
@@ -1891,7 +1892,7 @@ textarea:hover {
   z-index: 999;
   position: fixed;
   width: 401px;
-  min-height: 371px;
+  height: auto;
   top: 25%;
   left: 50%;
   margin: 0 auto;
@@ -1996,6 +1997,7 @@ textarea:hover {
           flex-direction: column;
   margin-left: 30px;
   margin-right: 30px;
+  padding-bottom: 20px;
 }
 
 .form__label {
@@ -2843,11 +2845,11 @@ textarea:hover {
 }
 
 .classmates__wrapper {
-  max-height: 271px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  overflow-y: hidden;
 }
 
 .classmates__title {
@@ -2855,8 +2857,8 @@ textarea:hover {
 }
 
 .classmates__list {
+  max-height: 205px;
   color: #444444;
-  overflow-y: unset;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -2897,6 +2899,11 @@ textarea:hover {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding-bottom: 26px;
+  color: inherit;
+}
+
+.classmates__user:hover {
+  color: #3464e0;
 }
 
 .classmates__name {
@@ -2912,7 +2919,7 @@ textarea:hover {
   font-weight: normal;
   font-size: 14px;
   line-height: 20px;
-  color: #C3CAD6;
+  color: #c3cad6;
   margin: 0;
 }
 
@@ -3386,7 +3393,7 @@ textarea:hover {
 }
 
 .faq__title {
-  margin-right: auto;
+  margin-right: 10px;
   color: #444444;
   white-space: nowrap;
 }
@@ -3400,6 +3407,7 @@ textarea:hover {
   padding-left: 48px;
   padding-right: 19px;
   margin-right: 19px;
+  margin-left: auto;
 }
 
 .faq__button--question {
@@ -3460,8 +3468,6 @@ textarea:hover {
           justify-content: space-between;
   -ms-flex-wrap: wrap-reverse;
       flex-wrap: wrap-reverse;
-  background: #ffffff;
-  padding-left: 20px;
 }
 
 .faq__search-container {
@@ -6036,7 +6042,8 @@ tfoot td {
   fill: #3464e0;
 }
 
-.vacancy__filter-button:hover svg {
+.vacancy__filter-button:hover svg,
+.vacancy__filter-button:focus svg {
   fill: #ffffff;
 }
 
@@ -7644,6 +7651,7 @@ tfoot td {
       -ms-flex-align: start;
           align-items: flex-start;
   width: 100%;
+  margin-bottom: 20px;
 }
 
 .dashboard__info .info__card-block {
@@ -8657,8 +8665,7 @@ tfoot td {
 
   .vacancy__filter-button {
     font-size: 100%;
-    padding-left: 56px;
-    padding-right: 25px;
+    padding: 12px 25px 12px 56px;
   }
 
   .vacancy__filter-button svg {
@@ -8867,23 +8874,23 @@ tfoot td {
   }
 
   .page-header--menu-opened .login__navigation-list {
-    width: 258px;
-    top: 75px;
-    left: -58px;
+    width: 240px;
+    top: 56px;
+    left: -40px;
     -webkit-transition: 0.2s;
     -o-transition: 0.2s;
     transition: 0.2s;
-    -webkit-animation: fadeIn 0.5s;
-            animation: fadeIn 0.5s;
+    -webkit-animation: none;
+            animation: none;
   }
 
   .page-header--menu-opened .login__navigation-list::after {
     content: "";
     position: absolute;
     right: 120px;
-    top: -34px;
-    border: 17px solid transparent;
-    border-bottom: 17px solid white;
+    top: -20px;
+    border: 10px solid transparent;
+    border-bottom: 10px solid white;
   }
 
   .footer__section {
@@ -8987,7 +8994,6 @@ tfoot td {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     margin: 0 auto;
-    overflow: hidden;
     width: 100%;
   }
 
@@ -9041,9 +9047,14 @@ tfoot td {
     margin: 0 0 24px;
   }
 
+  .faq__content {
+    -ms-flex-wrap: unset;
+        flex-wrap: unset;
+  }
+
   .faq__wrapper {
     width: 100%;
-    width: calc(100% - 345px);
+    margin-right: 30px;
   }
 
   .news__wrapper {

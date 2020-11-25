@@ -4,9 +4,10 @@
 }
 
 .faq__title {
-    margin-right: auto;
+    margin-right: 10px;
     color: $c-black;
     white-space: nowrap;
+
 }
 
 .faq__button {
@@ -16,6 +17,7 @@
         padding-left: 48px;
         padding-right: 19px;
         margin-right: 19px;
+        margin-left: auto;
     }
     &--question {
         padding-left: 28px;
@@ -60,14 +62,16 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap-reverse;
-    background: $c-light;
-    padding-left: 20px;
+
+    @media (min-width: $tablet) {
+        flex-wrap: unset;
+    }
 }
 
 .faq__wrapper {
     @media (min-width: $tablet) {
         width: 100%;
-        @include aside-content;
+        margin-right: 30px;
     }
 }
 

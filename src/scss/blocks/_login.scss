@@ -27,18 +27,18 @@
 
     @media (min-width: $tablet) {
         .page-header--menu-opened & {
-            width: 258px;
-            top: 75px;
-            left: -58px;
+            width: 240px;
+            top: 56px;
+            left: -40px;
             transition: 0.2s;
-            animation: fadeIn 0.5s;
+            animation: none;
             &::after {
                 content: "";
                 position: absolute;
                 right: 120px;
-                top: -34px;
-                border: 17px solid transparent;
-                border-bottom: 17px solid white;
+                top: -20px;
+                border: 10px solid transparent;
+                border-bottom: 10px solid white;
             }
         }
     }

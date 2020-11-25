@@ -36,12 +36,14 @@ export default () => {
             1024: {
                 spaceBetween: 30,slidesPerView: 'auto',
             }
-        }
+        },
+        mousewheel: true,
     });
 
     let news = new Swiper('.news__container', {
         slidesPerView: 'auto',
         spaceBetween: 30,
+        mousewheel: true,
         pagination: {
             el: '.news-pagination',
             clickable: true,
@@ -49,6 +51,14 @@ export default () => {
         navigation: {
             nextEl: '.news-button-next',
             prevEl: '.news-button-prev',
+        },
+        breakpoints: {
+            768: {
+                spaceBetween: 20,slidesPerView: 'auto',
+            },
+            1024: {
+                spaceBetween: 30,slidesPerView: 'auto',
+            }
         },
     });
 

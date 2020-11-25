@@ -1,68 +1,70 @@
 .classmates {
-  margin-bottom: 31px;
+    margin-bottom: 31px;
 }
 
 .classmates__wrapper {
-  max-height: 271px;
-  flex-direction: column;
+    flex-direction: column;
+    overflow-y: hidden;
 }
 
 .classmates__title {
-  margin-bottom: 13px;
+    margin-bottom: 13px;
 }
 
 .classmates__list {
-  color: rgba(68, 68, 68, 1);
-  overflow-y: unset;
-  flex-direction: column;
-  display: flex;
-  align-items: center;
-  position: relative;
-  &::after {
-    content:"";
-    position: absolute;
-    bottom: 0;
-    width: 94%;
-    height: 46px;
-    background: linear-gradient(to top, #fff, transparent);
-  }
-  @media (min-width: $tablet) {
+    max-height: 205px;
+    color: rgba(68, 68, 68, 1);
+    flex-direction: column;
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    margin: 0 auto;
-    overflow: hidden;
-    width: 100%;
-  }
+    align-items: center;
+    position: relative;
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        width: 94%;
+        height: 46px;
+        background: linear-gradient(to top, #fff, transparent);
+    }
+    @media (min-width: $tablet) {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        margin: 0 auto;
+        width: 100%;
+    }
 }
 
 .classmates__list-wrapper {
-  width: 90%;
-  overflow-y: scroll;
+    width: 90%;
+    overflow-y: scroll;
 }
 
 .classmates__user {
-  display: flex;
-  flex-wrap: wrap;
-  width: 260px;
-  justify-content: space-between;
-  padding-bottom: 26px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 260px;
+    justify-content: space-between;
+    padding-bottom: 26px;
+    color: inherit;
+    &:hover {
+        color: $c-blue;
+    }
 }
 
 .classmates__name {
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 26px;
-  margin: 0;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 26px;
+    margin: 0;
 }
 
 .classmates__birth {
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 20px;
-  color: #C3CAD6;
-  margin: 0;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    color: #c3cad6;
+    margin: 0;
 }
-

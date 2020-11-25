@@ -3,7 +3,7 @@
     z-index: 999;
     position: fixed;
     width: 401px;
-    min-height: 371px;
+    height: auto;
     top: 25%;
     left: 50%;
     margin: 0 auto;
@@ -81,6 +81,7 @@
     flex-direction: column;
     margin-left: 30px;
     margin-right: 30px;
+    padding-bottom: 20px;
 }
 
 .form__label {

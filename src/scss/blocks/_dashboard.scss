@@ -304,9 +304,9 @@
     flex-direction: column;
     align-items: flex-start;
     width: 100%;
+    margin-bottom: 20px;
     @media (min-width: $tablet) {
         flex-direction: row;
-
         width: 100%;
         justify-content: space-between;
     }
