@@ -49,10 +49,10 @@
     &:hover {
       .info__card-media-icon {
         &--telegram {
-          background: url("../img/telegram-dark.svg");
+          background: url("../img/icons/telegram-dark.svg");
         }
         &--youtube {
-          background: url("../img/yt-red.svg");
+          background: url("../img/icons/yt-red.svg");
         }
       }
     }
@@ -81,10 +81,10 @@
   width: 48px;
   height: 48px;
   content: "";
-  background: url("../img/telegram-grey.svg");
+  background: url("../img/icons/telegram-grey.svg");
   transition: .5s;
   &--youtube {
-    background: url("../img/youtube.svg");
+    background: url("../img/icons/youtube.svg");
   }
 }
 

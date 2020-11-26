@@ -14,11 +14,15 @@ import { default as filterBtn } from "./modules/filter.js";
 import { default as tags } from "./modules/tags.js";
 import { default as chart } from "./modules/chart.js";
 import { default as tabs } from "./modules/tabs.js";
+import { default as modals } from "./modules/modal.js";
 // init modules
 
 window.onload = function () {
     swiper();
 };
+
+modals();
+
 if (document.querySelector(".chart")) {
     chart();
 }

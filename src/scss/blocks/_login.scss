@@ -10,6 +10,12 @@
     }
 }
 
+.login__modal {
+    .modal__container {
+
+    }
+}
+
 .login__navigation-list {
     @include list-reset;
     position: absolute;

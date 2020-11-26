@@ -78,4 +78,8 @@
         &::before {
         }
     }
+    &:focus {
+        border: 1px solid $c-grey;
+        border-radius: 50%;
+    }
 }

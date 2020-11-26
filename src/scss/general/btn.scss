@@ -32,10 +32,12 @@
         transition: .2s;
 
         padding: 12px 25px;
-        &:hover {
+        &:hover,&:focus {
             background: $c-blue;
             color: $c-light;
-
+                svg {
+                    fill: #fff;
+                }
         }
     }
 
@@ -60,7 +62,6 @@
     line-height: 18px;
     color: #3464e0;
     border-color: #3464e0;
-    padding: 11px 30px;
 
     padding: 8px 25px;
 }
@@ -111,20 +112,6 @@ $cubic: cubic-bezier(0.75, 0.37, 0.83, 1);
     position: relative;
     border: 1px solid $c-green;
 
-    &::after {
-        content: "";
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        border-radius: 50%;
-        padding: 50%;
-        width: 32px; /* Safari */
-        height: 32px; /* Safari */
-        background-color: rgb(255, 255, 255);
-        opacity: 0;
-        transform: translate(-50%, -50%) scale(1);
-        transition: opacity 1s, transform 0.5s;
-    }
 }
 
 .btn--grey {

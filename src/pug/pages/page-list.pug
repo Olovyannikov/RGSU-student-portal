@@ -7,8 +7,10 @@ block variables
 
 block content
     style.
-        .btn {
-            width: 100%
+        .tabs__buttons > .btn {
+
+                width: 100%;
+
         }
 
         .title--large {
@@ -31,8 +33,9 @@ block content
             background: #F1F4F9
         }
 
-        .tabs__item {
+        .tabs__content {
             max-width: calc(100% - 315px);
+            min-width: 1035px;
         }
 
     .wrapper.container.container--aside.tabs__container(style="display: flex; margin-top: 40px")
@@ -56,594 +59,708 @@ block content
             button.btn.btn--border.tabs__button(data-id="scrollbar") Scrollbar
             button.btn.btn--border.tabs__button(data-id="accordion") Accordion
             button.btn.btn--border.tabs__button(data-id="sidebar") SideBar
+        .tabs__content
+            .card--stack.tabs__item.tabs__item--active(style="margin-top: 0px" id="page-list")
+                h1.title Список страниц
+                ul.list(style="padding:0 20px;width: 100%;display: flex; flex-wrap: wrap; list-style: none;  justify-content: space-between;  align-items: center")
+                    li.list__item(style=" border: 1px solid grey; margin-bottom: 10px;")
+                        a.list__link(href="index.html" style="padding: 10px; display: block; text-align: center; width: 250px") index.html
+                    li.list__item(style=" border: 1px solid grey; margin-bottom: 10px;")
+                        a.list__link(href="dashboard.html" style="padding: 10px; display: block; text-align: center; width: 250px") dashboard.html
+                    li.list__item(style=" border: 1px solid grey; margin-bottom: 10px;")
+                        a.list__link(href="dashboard-vacancy.html"  style="padding: 10px; display: block; text-align: center; width: 250px") dashboard-vacancy.html
+                    li.list__item(style=" border: 1px solid grey; margin-bottom: 10px;")
+                        a.list__link(href="dashboard-request.html"  style="padding: 10px; display: block; text-align: center; width: 250px") dashboard-request.html
+                    li.list__item(style=" border: 1px solid grey; margin-bottom: 10px;")
+                        a.list__link(href="digital-portfolio.html"  style="padding: 10px; display: block; text-align: center; width: 250px") digital-portfolio.html
+                    li.list__item(style=" border: 1px solid grey; margin-bottom: 10px;")
+                        a.list__link(href="dashboard-payments.html"  style="padding: 10px; display: block; text-align: center; width: 250px") dashboard-payments.html
+                    li.list__item(style=" border: 1px solid grey; margin-bottom: 10px;")
+                        a.list__link(href="dashboard-question.html"  style="padding: 10px; display: block; text-align: center; width: 250px") dashboard-question.html
+                    li.list__item(style=" border: 1px solid grey; margin-bottom: 10px;")
+                        a.list__link(href="digital-profile.html"  style="padding: 10px; display: block; text-align: center; width: 250px") digital-profile.html
+                    li.list__item(style=" border: 1px solid grey; margin-bottom: 10px;")
+                        a.list__link(href="faq.html"  style="padding: 10px; display: block; text-align: center; width: 250px") faq.html
+                    li.list__item(style=" border: 1px solid grey; margin-bottom: 10px;")
+                        a.list__link(href="moderate.html"  style="padding: 10px; display: block; text-align: center; width: 250px") moderate.html
+                    li.list__item(style=" border: 1px solid grey; margin-bottom: 10px;")
+                        a.list__link(href="my-children-profile.html"  style="padding: 10px; display: block; text-align: center; width: 250px") my-children-profile.html
+                    li.list__item(style=" border: 1px solid grey; margin-bottom: 10px;")
+                        a.list__link(href="new-layout.html"  style="padding: 10px; display: block; text-align: center; width: 250px") new-layout.html
+                    li.list__item(style=" border: 1px solid grey; margin-bottom: 10px;")
+                        a.list__link(href="news.html" style="padding: 10px; display: block; text-align: center; width: 250px") news.html
+                    li.list__item(style=" border: 1px solid grey; margin-bottom: 10px;")
+                        a.list__link(href="parent.html" style="padding: 10px; display: block; text-align: center; width: 250px") parent.html
+                    li.list__item(style=" border: 1px solid grey; margin-bottom: 10px;")
+                        a.list__link(href="profile.html" style="padding: 10px; display: block; text-align: center; width: 250px") profile.html
+                    li.list__item(style=" border: 1px solid grey; margin-bottom: 10px;")
+                        a.list__link(href="profile-settings.html" style="padding: 10px; display: block; text-align: center; width: 250px") profile-settings.html
+                    li.list__item(style=" border: 1px solid grey; margin-bottom: 10px;")
+                        a.list__link(href="student-house.html" style="padding: 10px; display: block; text-align: center; width: 250px") student-house.html
+                    li.list__item(style=" border: 1px solid grey; margin-bottom: 10px;")
+                        a.list__link(href="vacancy.html" style="padding: 10px; display: block; text-align: center; width: 250px") vacancy.html
 
-        .card--stack.tabs__item.tabs__item--active(style="margin-top: 0px" id="page-list")
-            h1.title Список страниц
-            ul.list(style="padding:0 20px;width: 100%;display: flex; flex-wrap: wrap; list-style: none;  justify-content: space-between;  align-items: center")
-                li.list__item(style=" border: 1px solid grey; margin-bottom: 10px;")
-                    a.list__link(href="index.html" style="padding: 10px; display: block; text-align: center; width: 250px") index.html
-                li.list__item(style=" border: 1px solid grey; margin-bottom: 10px;")
-                    a.list__link(href="dashboard.html" style="padding: 10px; display: block; text-align: center; width: 250px") dashboard.html
-                li.list__item(style=" border: 1px solid grey; margin-bottom: 10px;")
-                    a.list__link(href="dashboard-vacancy.html"  style="padding: 10px; display: block; text-align: center; width: 250px") dashboard-vacancy.html
-                li.list__item(style=" border: 1px solid grey; margin-bottom: 10px;")
-                    a.list__link(href="dashboard-request.html"  style="padding: 10px; display: block; text-align: center; width: 250px") dashboard-request.html
-                li.list__item(style=" border: 1px solid grey; margin-bottom: 10px;")
-                    a.list__link(href="digital-portfolio.html"  style="padding: 10px; display: block; text-align: center; width: 250px") digital-portfolio.html
-                li.list__item(style=" border: 1px solid grey; margin-bottom: 10px;")
-                    a.list__link(href="dashboard-payments.html"  style="padding: 10px; display: block; text-align: center; width: 250px") dashboard-payments.html
-                li.list__item(style=" border: 1px solid grey; margin-bottom: 10px;")
-                    a.list__link(href="dashboard-question.html"  style="padding: 10px; display: block; text-align: center; width: 250px") dashboard-question.html
-                li.list__item(style=" border: 1px solid grey; margin-bottom: 10px;")
-                    a.list__link(href="digital-profile.html"  style="padding: 10px; display: block; text-align: center; width: 250px") digital-profile.html
-                li.list__item(style=" border: 1px solid grey; margin-bottom: 10px;")
-                    a.list__link(href="faq.html"  style="padding: 10px; display: block; text-align: center; width: 250px") faq.html
-                li.list__item(style=" border: 1px solid grey; margin-bottom: 10px;")
-                    a.list__link(href="moderate.html"  style="padding: 10px; display: block; text-align: center; width: 250px") moderate.html
-                li.list__item(style=" border: 1px solid grey; margin-bottom: 10px;")
-                    a.list__link(href="my-children-profile.html"  style="padding: 10px; display: block; text-align: center; width: 250px") my-children-profile.html
-                li.list__item(style=" border: 1px solid grey; margin-bottom: 10px;")
-                    a.list__link(href="new-layout.html"  style="padding: 10px; display: block; text-align: center; width: 250px") new-layout.html
-                li.list__item(style=" border: 1px solid grey; margin-bottom: 10px;")
-                    a.list__link(href="news.html" style="padding: 10px; display: block; text-align: center; width: 250px") news.html
-                li.list__item(style=" border: 1px solid grey; margin-bottom: 10px;")
-                    a.list__link(href="parent.html" style="padding: 10px; display: block; text-align: center; width: 250px") parent.html
-                li.list__item(style=" border: 1px solid grey; margin-bottom: 10px;")
-                    a.list__link(href="profile.html" style="padding: 10px; display: block; text-align: center; width: 250px") profile.html
-                li.list__item(style=" border: 1px solid grey; margin-bottom: 10px;")
-                    a.list__link(href="profile-settings.html" style="padding: 10px; display: block; text-align: center; width: 250px") profile-settings.html
-                li.list__item(style=" border: 1px solid grey; margin-bottom: 10px;")
-                    a.list__link(href="student-house.html" style="padding: 10px; display: block; text-align: center; width: 250px") student-house.html
-                li.list__item(style=" border: 1px solid grey; margin-bottom: 10px;")
-                    a.list__link(href="vacancy.html" style="padding: 10px; display: block; text-align: center; width: 250px") vacancy.html
 
-
-        .card--stack.tabs__item(id="introduction")
-            h1.title--large Введение
-            p(style='padding-left: 20px') Привет, мир!
-            p(style='padding-left: 20px') На этой странице я расскажу о различных нюансах при работе с проектом и, по возможности, отвечу на очевидные вопросы
-            .accordeon-section
-                p.accordeon-title.title--main Почему не Bootstrap (Foundation, smartGrid, другая_смешная_опция)?
-                    button.accordeon-button
-                .accordeon-container
-                    h3 У CSS есть несколько базовых проблем, которые позволяют очень быстро отстрелить себе ногу при неправильном использовании:
-                    ol
-                        li
-                            p Глобальный неймспейс – в серверном программировании все что написано в файле, в файле и остается. Все же что написано в css и js засирает глобальное пространство имен со всеми вытекающими. В JS эту проблему сейчас побороли всякими модульными системами, а вот с css сложнее. В идеальном мире это должен починить Shadow DOM и настоящие Web Components, но пока их нет единственный способ с этим бороться – следовать какой-то системе именований селекторов, которая по возможности уменьшает и исключает возможные конфликты.
-                        li
-                            p Каскадность – если на один элемент может сработать несколько правил, то они все и сработают последовательно. Если есть элемент h1.title, на него сработают все правила для тегов h1 и все правила для класса .title. Так как весь html состоит из тегов, то правил которые применяются на теги без классов будут работать на все вообще.
-                            p Соответственно назначать или переназначать стили у тегов – это примерно то же самое, что править прототипы объектов в JS, чем в свое время печально славился <a href="http://prototypejs.org/" class="main__link">Prototype.js</a>. Эти стили унаследует вообще все объекты и если их потом захочется поменять, то результат будет такой же, как если ты решил в прототипе объекта поменять результаты какого-то метода, который используют все дети этого объекта. Вероятность что-то сломать почти 100%.
-                        li
-                            p Вложенные селекторы. Можно написать селекторы .nav .item {...} и .menu .item и .item в зависимости от места вывода будет показываться по-разному. Все хорошо пока тебе не нужно поместить блок menu внутрь блока nav. Тогда сайдэффекты становятся совершенно непредсказуемые. По сути аналог вложенных селекторов из программирования – это функция которая в зависимости от места где её вызывают, выдает разный результат. Например в одном месте sum(2,2) может возвращать 3, а в другом 5.
-
-                    h3 Зачем нужны методологии
-                    p Хорошая методология занимает предотвращением этих проблем. Покажу как это делает БЭМ, но CSS Modules, Polymer или всякие решения с инлайновыми стилями для Реакта тоже решают именно их, только другим способом.
-                    p Как именование классов по БЭМу помогает решать эти проблемы:
-                    ol
-                        li
-                            p БЭМ запрещает применять стили на теги, максимум ресет. На id тоже нельзя, потому что такие элементы нельзя на странице использовать 2 раза, а сколько раз он тебе понадобится ты не всегда знаешь заранее. Все стили можно применять только к классам.
-                        li
-                            p БЭМ создает для всех компонентов глобальный неймспейс – все классы которые относятся к компоненту начинаются с одного префикса. Это позволяет исправить второй пример таким образом: .nav__item, .menu__item. Если один вложить в другой не будет конфликта правил.
-                        li
-                            p Под каждый компонент в БЭМ создается своя папка – это защищает тебя от конфликтов в именах компонентов и при правильном использовании дает гарантию, что в глобальном неймспейсе будет только один компонент с таким префиксом.
-                        li
-                            p В БЭМ есть только один вид вложенных селекторов: модификатор > элемент. Оба начинаются с одного префикса, оба живут в одном файле, оба никак не влияют на другие компоненты.
-                    h3 Что делает Bootstrap
-                    p Bootstrap нарушает КАЖДОЕ из этих правил:
-                    ol
-                        li
-                            p Bootstrap переназначает стили тэгов.
-                        li
-                            p Bootstrap в куче случаев меняет способ отображения элемента в зависимости от того, кто его родители. Хорошо хоть сейчас делает это через >, а не просто так. Но вот https://github.com/twbs/bootstrap/blob/master/scss/_button-groups.scss такие штуки все равно сильно уменьшают предсказуемость и усложняют редизайн.
-                        li
-                            p Bootstrap загрязняет глобальный неймспейс сотнями классов с очень generic именами: .table, .dropdown, .row, .left, и т. д. Которые надо все помнить и ни в коем случае не использовать самому.
-                    p При таком подходе отстреливание себе ноги становится только вопросом времени.
-            .accordeon-section
-                p.accordeon-title.title--main Почему не jQuery(ExtJS, Mootools, другая_смешная_опция)?
-                    button.accordeon-button
-                .accordeon-container
-                    p Раньше JavaScript использовали для небольших скриптов или несложных страниц, а теперь на нём делают вообще всё в интерфейсах сайтов.
-                    p Библиотека jQuery была популярна из-за существования IE6 и большого количества браузеров с разной поддержкой веб-стандартов. Программист не мог быть уверен, что его код запустится у всех пользователей. Проще было взять jQuery и написать скрипты, которые будут работать одинаково вне зависимости от браузера.
-                    p Также jQuery заметно облегчала работу с DOM, AJAX и анимациями.
-                    h4 Когда jQuery уместна?
-                    p Чтобы сделать простой сайт, который сами будете поддерживать (или не будете поддерживать вовсе — написали и забыли, так тоже бывает). Если сайт сложный, то чтобы работать над ним в большой команде, развивать и поддерживать, jQuery не подойдёт.
-                    p На jQuery иногда пишут большие приложения, но их сложно и дорого поддерживать. В код нужно погружаться и всегда быть в контексте этой библиотеки, иначе уже через месяц будет сложно понять, что там написано.
-                    p В полноценных фреймворках (например, Vue.js или Angular.js) возможности для нормальной работы уже идут «из коробки». Это, в первую очередь, компонентный подход к построению интерфейсов и абстрагирование от DOM. И любой человек, который придёт в команду со знанием фреймворка, сможет разобраться в коде — как минимум, потому что есть общепринятые структуры проектов, документация, сообщество и StackOverflow. Конечно, в jQuery тоже большое сообщество и тоже есть документация, но мне кажется, там каждый пишет код под себя.
-                    h4 Но нужно ли?
-                    p Это вопрос о выборе удобного инструмента для конкретной задачи. Простую страничку с простой формой можно написать и на jQuery. Но если всё, что вы пишете, это простые странички с формами, то это не значит, что нужно перестать изучать новое и знакомиться с современными фреймворками. Большинство вещей, в которых была полезна jQuery, уже добавлены в «ванильный» Javascript и без всяких библиотек.
-                    p То есть обходные пути есть — главное их найти и разобраться.
-            h3.title--large ES6!
-            p Я стараюсь абстрогироваться от тонны библиотек, чтобы привести все к общему знаменателю, развиваться самим, развивать чистый язык, не увеличивать размер бандла => делать жизнь пользователя интерфейсом комфортной.
-            h3.title--large Но если все-таки хочется?
-            p Тогда используем методы ES6 и <a href="https://www.w3.org/TR/selectors-api/" class="main__link">Selectors API</a> или <a href="https://framework7.io/docs/dom7.html">Dom7 JS</a>
-            pre
-                code
-                    | function $$(selector, node) {
-                    |// NodeList имеет только метод item и свойство length. Array предоставляет гораздо более широкий набор функционал.
-                    |return [].slice.call((node || document).querySelectorAll(selector));
-                    |}
-                    |// Та же функция на ES6 выглядит намного элегантнее
-                    |const $$ = (selector, node = document) => [...node.querySelectorAll(selector)];
-            h3.title--large А как же сторонние тысячи библиотек?
-            p Все подключаемые библиотеки подключаются через npm и при сборке в бандл с помощью webpack убираются неиспользуемые компоненты, что значительно позволяет сократить бандл(хотя можно пожать еще больше, но я пока не гуру).
-            p Пример moment.js (необходим для отрисовки chart.js), где убираются все локализации, кроме Русской
-            pre
-                code.
-                    function js() {
-                        return src(path.src.js)
-                            .pipe(
-                                webpackStream({
-                                mode: "development",
-                            output: {
-                            filename: "script.js",
-                            },
-                            module: {
-                            rules: [
-                            {
-                            test: /\.m?js$/,
-                            exclude: /(node_modules|bower_components)/,
-                                use: {
-                                loader: "babel-loader",
-                            options: {
-                            presets: ["@babel/preset-env"],
-                            },
-                        },
-                       },
-                      ],
-                     },
-                           plugins: [
-                            new webpack.ContextReplacementPlugin(
-                            /moment[/\\]locale$/,
-                            /ru/
-                            ),
-                           ],
-                          })
-                         )
-                        .pipe(dest(path.build.js))
-                        .pipe(uglify())
-                        .pipe(
-                              rename({
-                              extname: ".min.js",
-                            })
-                           )
-                        .pipe(dest(path.build.js))
-                        .pipe(browsersync.stream());
-                        }
-        .card--stack.tabs__item(id="tech")
-            h1.title Список технологий
-            ol
-                li.accordeon-section
-                    p.accordeon-title.title--main БЭМ, как методология наименования классов
+            .card--stack.tabs__item(id="introduction")
+                h1.title--large Введение
+                p(style='padding-left: 20px') Привет, мир!
+                p(style='padding-left: 20px') На этой странице я расскажу о различных нюансах при работе с проектом и, по возможности, отвечу на очевидные вопросы
+                .accordeon-section
+                    p.accordeon-title.title--main Почему не Bootstrap (Foundation, smartGrid, другая_смешная_опция)?
                         button.accordeon-button
                     .accordeon-container
-                        .post__content
-                            .intro
-                                p
-                                    a(href='https://ru.bem.info/') БЭМ
-                                    |  расшифровывается как «Блок Элемент Модификатор». На самом деле, это целый стэк технологий, из которого мы воспользуемся только 
-                                    a(href='https://ru.bem.info/methodology/naming-convention/') соглашением по именованию классов
-                                    | .
-                                p.title--xs Почему БЭМ?
-                                ul
-                                    li
-                                        | БЭМ позволяет создавать абсолютно независимые блоки. Блоки и элементы получают уникальные имена, так что стили для одного элемента ничего не поломают в другом.
-                                    li
-                                        | БЭМ помогает легко придумывать любое количество классов, не повторяющихся между собой.
-                                    li
-                                        | БЭМ помогает писать самодокументирующийся код, в классе любого элемента содержится информация о нём.
-                                p
-                                    | Подробнее можно почитать в разделах  
-                                    a(href='https://ru.bem.info/methodology/quick-start/') Быстрый старт 
-                                    |  и 
-                                    a(href='https://ru.bem.info/methodology/faq/') Часто задаваемые вопросы 
-                                    |  на сайте 
-                                    a(href='https://ru.bem.info/') bem.info
-
-                                p.title--xs Что такое БЭМ ?
-                                p БЭМ (Блок, Элемент, Модификатор) — компонентный подход к веб-разработке. В его основе лежит принцип разделения интерфейса на независимые блоки. Он позволяет легко и быстро разрабатывать интерфейсы любой сложности и повторно использовать существующий код, избегая «Copy-Paste». БЭМ применяется по разному, кто-то использует только именования, кто-то берет за основу всю методологию себе на вооружение.
-                                p Именование в БЭМ представляет собой определенный метод именования классов, этот метод позволяет:
-                                ul
-                                    li
-                                        p Упростить код и его отладку
-                                    li
-                                        p Повторно использовать код избегая «Copy-Paste»
-                                    li
-                                        p Быстро понять связь между компонентами в разметке и CSS
-                                    li
-                                        p Ускорить написание css при использовании css-препроцессоров
-                                p.title--xs Блок
-                                p Блок — это самодостаточный независимый компонент страницы, который может быть повторно использован. Вся страница строится из блоков. Блоки могут содержать другие блоки. Классы блоков выглядят обычно и ничем не отличаются от любых других классов: header, navigate, works
-                                pre.
-                                    Блок Header
-                                    header.header
-
-                                    Блок Nav
-                                    nav.nav
-                                p.title--xs Элемент
-                                p Cоставная часть блока, не может быть использована отдельно от блока. Например, пункт меню не может использоваться вне блока меню, он является его элементом. Класс элемента пишется так: block __ element
-                                pre.
-                                    Хорошо, элемент внутри родителя:
-
-                                    Блок Header
-
-                                    header.header
-                                        img.header__logo
-
-                                    Плохо, где элемент лежит вне своего родителя:
-
-                                    header.header
-                                    img.header__logo
-                                p.title--xs Модификатор
-                                p Модификатор определяет вид, состояние или поведение блока или элемента. Модификаторы не определяют основные стили блока или элемента, они лишь модифицируют (изменяют) его. Класс модификатора пишется так: block__element--modifier. В примере ниже мы изменили внешний вид активного и неактивного пункта меню с помощью модификаторов.
-                                pre.
-                                    Блок Nav
-                                    nav.nav
-                                        ul.nav__list
-                                    Хорошо
-                                            li class="nav__item nav__item--active
-                                            li class="nav__item
-                                    Плохо: модификатор применен без основного класса
-                                            li.nav__item--active
-                                p Таким образом стили:
-                                pre.
-                                    nav {
-                                        font-size: 1rem
-                                        }
-                                    nav__item {
-                                         font-size: 15px;
-                                         color: #555;
-                                            &--active{
-                                                color: red;
-                                                border-bottom: 1px solid;
-                                            }
-                                        }
-                                    }
-                                p Обратите внимание, что стили для блока и для элемента не определяются вложенностью, а вот модификатор блока или элемента может быть вложен. Так почему мы не вкладываем блок в элемент, если можем?
-                                p Дело в том, что при вкладывании элемента в блок, мы можем подвергнуться напасти CSS - это каскад и блоки не будут модульными, а только усугубят положение, да и к тому же - усложнят чтение кода.
-                li.accordeon-section
-                    p.accordeon-title.title--main Модульный JavaScript, изоляция
-                        button.accordeon-button
-                    .accordeon-container
-                        h3.title--xs Что такое модуль?
-                        p Модуль – это просто файл. Один скрипт – это один модуль.
-                        p Модули могут загружать друг друга и использовать директивы export и import, чтобы обмениваться функциональностью, вызывать функции одного модуля из другого:
-                        ul
-                            li
-                                p <b>export</b> отмечает переменные и функции, которые должны быть доступны вне текущего модуля.
-                            li
-                                p <b>import</b> позволяет импортировать функциональность из других модулей.
-                        p Например, если у нас есть файл sayHi.js, который экспортирует функцию:
-                        pre.
-                            ../js/sayHi.js
-
-                            export function sayHi(user) {
-                              alert(`Hello, ${user}!`);
-                            }
-                        p …Тогда другой файл может импортировать её и использовать:
-                        pre.
-                            ../js/main.js
-
-                            import {sayHi} from './sayHi.js';
-
-                            alert(sayHi); // function...
-                            sayHi('John'); // Hello, John!
-
-                        p Модули или подобные структуры это неотъемлемая часть любого взрослого языка программирования. Просто иначе никак. Модули позволяют ограничить область видимости, позволяют реиспользовать части приложения, делают приложение более структурированным, отделяют ресурсы от шума и вообще делают код нагляднее.
-                        p Каждый модуль имеет свою собственную область видимости. Другими словами, переменные и функции, объявленные в модуле, не видны в других скриптах.
-                        p В следующем примере импортированы 2 скрипта, и hello.js пытается использовать переменную user, объявленную в user.js. В итоге ошибка:
-
-                          pre.
-                                // hello.js
-                                alert(user); // в этом модуле нет такой переменной (каждый модуль имеет независимые переменные)
-                          pre.
-                                // user.js
-                                let user = "John";
-                          pre.
-                                // index.html
-                                !doctype html
-                                script(type="module" src="user.js")
-                                script(type="module" src="hello.js")
-                          pre.
-                                // result
-                                ERROR
-
-                li.accordeon-section
-                    p.accordeon-title.title--main SCSS - Sassy CSS
-                        button.accordeon-button
-                    .accordeon-container
-                        p.title--xs Зачем использовать Sass/SCSS вместо CSS?
+                        h3 У CSS есть несколько базовых проблем, которые позволяют очень быстро отстрелить себе ногу при неправильном использовании:
                         ol
                             li
-                                p Вложенность — SCSS позволяет вкладывать правила CSS друг в друга. Вложенные правила применяются только для элементов, соответствующих внешним селекторам (а если речь идёт о Sass, то там и без скобок всё красиво и интуитивно понятно).
-
+                                p Глобальный неймспейс – в серверном программировании все что написано в файле, в файле и остается. Все же что написано в css и js засирает глобальное пространство имен со всеми вытекающими. В JS эту проблему сейчас побороли всякими модульными системами, а вот с css сложнее. В идеальном мире это должен починить Shadow DOM и настоящие Web Components, но пока их нет единственный способ с этим бороться – следовать какой-то системе именований селекторов, которая по возможности уменьшает и исключает возможные конфликты.
                             li
-                                p Переменные — в стандартном CSS тоже есть понятие переменных, но в Sass с ними можно работать немного по-другому. Например, повторять их через директиву @for. Или генерировать свойства динамически. Подробнее можете изучить на русскоязычном сайте проекта.
-
+                                p Каскадность – если на один элемент может сработать несколько правил, то они все и сработают последовательно. Если есть элемент h1.title, на него сработают все правила для тегов h1 и все правила для класса .title. Так как весь html состоит из тегов, то правил которые применяются на теги без классов будут работать на все вообще.
+                                p Соответственно назначать или переназначать стили у тегов – это примерно то же самое, что править прототипы объектов в JS, чем в свое время печально славился <a href="http://prototypejs.org/" class="main__link">Prototype.js</a>. Эти стили унаследует вообще все объекты и если их потом захочется поменять, то результат будет такой же, как если ты решил в прототипе объекта поменять результаты какого-то метода, который используют все дети этого объекта. Вероятность что-то сломать почти 100%.
                             li
-                                p Улучшенные математические операции— можно складывать, вычитать, умножать и делить значения CSS. В отличие от стандартного CSS, Sass/SCSS позволяют обойтись без calc().
+                                p Вложенные селекторы. Можно написать селекторы .nav .item {...} и .menu .item и .item в зависимости от места вывода будет показываться по-разному. Все хорошо пока тебе не нужно поместить блок menu внутрь блока nav. Тогда сайдэффекты становятся совершенно непредсказуемые. По сути аналог вложенных селекторов из программирования – это функция которая в зависимости от места где её вызывают, выдает разный результат. Например в одном месте sum(2,2) может возвращать 3, а в другом 5.
 
+                        h3 Зачем нужны методологии
+                        p Хорошая методология занимает предотвращением этих проблем. Покажу как это делает БЭМ, но CSS Modules, Polymer или всякие решения с инлайновыми стилями для Реакта тоже решают именно их, только другим способом.
+                        p Как именование классов по БЭМу помогает решать эти проблемы:
+                        ol
                             li
-                                p Тригонометрия — SCSS позволяет писать собственные (синусоидальные и косинусоидальные) функции, используя только синтаксис Sass/SCSS, подобно тому, как это можно делать в других языках вроде JavaScript.
-
+                                p БЭМ запрещает применять стили на теги, максимум ресет. На id тоже нельзя, потому что такие элементы нельзя на странице использовать 2 раза, а сколько раз он тебе понадобится ты не всегда знаешь заранее. Все стили можно применять только к классам.
                             li
-                                p Директивы @for, @while и выражение @if-else — можно писать CSS-код, используя знакомые элементы из других языков. Но не обольщайтесь — в итоге на выходе будет обычный CSS.
+                                p БЭМ создает для всех компонентов глобальный неймспейс – все классы которые относятся к компоненту начинаются с одного префикса. Это позволяет исправить второй пример таким образом: .nav__item, .menu__item. Если один вложить в другой не будет конфликта правил.
                             li
-                                p Миксины (примеси) — можно один раз создать набор CSS-свойств и работать с ними повторно или смешивать с другими значениями. Миксины можно использовать для создания отдельных тем одного макета. Примеси также могут содержать целые CSS-правила или что-либо другое, разрешённое в Sass-документе. Они даже могут принимать аргументы, что позволяет создавать большое разнообразие стилей при помощи небольшого количества миксинов.
-
-
+                                p Под каждый компонент в БЭМ создается своя папка – это защищает тебя от конфликтов в именах компонентов и при правильном использовании дает гарантию, что в глобальном неймспейсе будет только один компонент с таким префиксом.
                             li
-                                p Функции — можно создавать определения CSS в виде функций для многократного использования.
-                        p.title--xs Переменные?
-                        p Да! Sass/SCSS позволяет работать с переменными. В CSS они обозначаются двойным тире (--), а в препроцессорах знаком доллара ($).
-                        pre.
-                            $number: 1;
-                            $color: #ff0000;
-                            $text: "tproger forever.";
-                            $text: "IT forever." !default;
-                            $nothing: null;
-                        p Вы можете присваивать значение по умолчанию переменным, у которых ещё нет значения, добавив метку !default в конце значения. В таком случае, если переменной уже было присвоено значение, оно не изменится; если же переменная пуста, ей будет присвоено новое указанное значение.
-                        pre.
-                            #container {
-                              content: $text;
+                                p В БЭМ есть только один вид вложенных селекторов: модификатор > элемент. Оба начинаются с одного префикса, оба живут в одном файле, оба никак не влияют на другие компоненты.
+                        h3 Что делает Bootstrap
+                        p Bootstrap нарушает КАЖДОЕ из этих правил:
+                        ol
+                            li
+                                p Bootstrap переназначает стили тэгов.
+                            li
+                                p Bootstrap в куче случаев меняет способ отображения элемента в зависимости от того, кто его родители. Хорошо хоть сейчас делает это через >, а не просто так. Но вот https://github.com/twbs/bootstrap/blob/master/scss/_button-groups.scss такие штуки все равно сильно уменьшают предсказуемость и усложняют редизайн.
+                            li
+                                p Bootstrap загрязняет глобальный неймспейс сотнями классов с очень generic именами: .table, .dropdown, .row, .left, и т. д. Которые надо все помнить и ни в коем случае не использовать самому.
+                        p При таком подходе отстреливание себе ноги становится только вопросом времени.
+                .accordeon-section
+                    p.accordeon-title.title--main Почему не jQuery(ExtJS, Mootools, другая_смешная_опция)?
+                        button.accordeon-button
+                    .accordeon-container
+                        p Раньше JavaScript использовали для небольших скриптов или несложных страниц, а теперь на нём делают вообще всё в интерфейсах сайтов.
+                        p Библиотека jQuery была популярна из-за существования IE6 и большого количества браузеров с разной поддержкой веб-стандартов. Программист не мог быть уверен, что его код запустится у всех пользователей. Проще было взять jQuery и написать скрипты, которые будут работать одинаково вне зависимости от браузера.
+                        p Также jQuery заметно облегчала работу с DOM, AJAX и анимациями.
+                        h4 Когда jQuery уместна?
+                        p Чтобы сделать простой сайт, который сами будете поддерживать (или не будете поддерживать вовсе — написали и забыли, так тоже бывает). Если сайт сложный, то чтобы работать над ним в большой команде, развивать и поддерживать, jQuery не подойдёт.
+                        p На jQuery иногда пишут большие приложения, но их сложно и дорого поддерживать. В код нужно погружаться и всегда быть в контексте этой библиотеки, иначе уже через месяц будет сложно понять, что там написано.
+                        p В полноценных фреймворках (например, Vue.js или Angular.js) возможности для нормальной работы уже идут «из коробки». Это, в первую очередь, компонентный подход к построению интерфейсов и абстрагирование от DOM. И любой человек, который придёт в команду со знанием фреймворка, сможет разобраться в коде — как минимум, потому что есть общепринятые структуры проектов, документация, сообщество и StackOverflow. Конечно, в jQuery тоже большое сообщество и тоже есть документация, но мне кажется, там каждый пишет код под себя.
+                        h4 Но нужно ли?
+                        p Это вопрос о выборе удобного инструмента для конкретной задачи. Простую страничку с простой формой можно написать и на jQuery. Но если всё, что вы пишете, это простые странички с формами, то это не значит, что нужно перестать изучать новое и знакомиться с современными фреймворками. Большинство вещей, в которых была полезна jQuery, уже добавлены в «ванильный» Javascript и без всяких библиотек.
+                        p То есть обходные пути есть — главное их найти и разобраться.
+                h3.title--large ES6!
+                p Я стараюсь абстрогироваться от тонны библиотек, чтобы привести все к общему знаменателю, развиваться самим, развивать чистый язык, не увеличивать размер бандла => делать жизнь пользователя интерфейсом комфортной.
+                h3.title--large Но если все-таки хочется?
+                p Тогда используем методы ES6 и <a href="https://www.w3.org/TR/selectors-api/" class="main__link">Selectors API</a> или <a href="https://framework7.io/docs/dom7.html">Dom7 JS</a>
+                pre
+                    code
+                        | function $$(selector, node) {
+                        |// NodeList имеет только метод item и свойство length. Array предоставляет гораздо более широкий набор функционал.
+                        |return [].slice.call((node || document).querySelectorAll(selector));
+                        |}
+                        |// Та же функция на ES6 выглядит намного элегантнее
+                        |const $$ = (selector, node = document) => [...node.querySelectorAll(selector)];
+                h3.title--large А как же сторонние тысячи библиотек?
+                p Все подключаемые библиотеки подключаются через npm и при сборке в бандл с помощью webpack убираются неиспользуемые компоненты, что значительно позволяет сократить бандл(хотя можно пожать еще больше, но я пока не гуру).
+                p Пример moment.js (необходим для отрисовки chart.js), где убираются все локализации, кроме Русской
+                pre
+                    code.
+                        function js() {
+                            return src(path.src.js)
+                                .pipe(
+                                    webpackStream({
+                                    mode: "development",
+                                output: {
+                                filename: "script.js",
+                                },
+                                module: {
+                                rules: [
+                                {
+                                test: /\.m?js$/,
+                                exclude: /(node_modules|bower_components)/,
+                                    use: {
+                                    loader: "babel-loader",
+                                options: {
+                                presets: ["@babel/preset-env"],
+                                },
+                            },
+                           },
+                          ],
+                         },
+                               plugins: [
+                                new webpack.ContextReplacementPlugin(
+                                /moment[/\\]locale$/,
+                                /ru/
+                                ),
+                               ],
+                              })
+                             )
+                            .pipe(dest(path.build.js))
+                            .pipe(uglify())
+                            .pipe(
+                                  rename({
+                                  extname: ".min.js",
+                                })
+                               )
+                            .pipe(dest(path.build.js))
+                            .pipe(browsersync.stream());
                             }
-                        p.title--xs Вложенные правила
-                        p Стандартные вложенные CSS-элементы с использованием пробела:
-                        pre.
-                            /* Вложенные правила */
-                            #A {
-                              color: red;
-                            }
-                            #A #B {
-                              color: green;
-                            }
-                            #A #B #C p {
-                              color: blue;
-                            }
-                        p Те же вложенные элементы с помощью SCSS:
-                        pre.
-                            /* Вложенные правила */
-                            #A {
-                              color: red;
-                              #B {
-                                color: green;
-                                #C p {
-                                  color: blue;
+            .card--stack.tabs__item(id="tech")
+                h1.title Список технологий
+                ol
+                    li.accordeon-section
+                        p.accordeon-title.title--main БЭМ, как методология наименования классов
+                            button.accordeon-button
+                        .accordeon-container
+                            .post__content
+                                .intro
+                                    p
+                                        a(href='https://ru.bem.info/') БЭМ
+                                        |  расшифровывается как «Блок Элемент Модификатор». На самом деле, это целый стэк технологий, из которого мы воспользуемся только 
+                                        a(href='https://ru.bem.info/methodology/naming-convention/') соглашением по именованию классов
+                                        | .
+                                    p.title--xs Почему БЭМ?
+                                    ul
+                                        li
+                                            | БЭМ позволяет создавать абсолютно независимые блоки. Блоки и элементы получают уникальные имена, так что стили для одного элемента ничего не поломают в другом.
+                                        li
+                                            | БЭМ помогает легко придумывать любое количество классов, не повторяющихся между собой.
+                                        li
+                                            | БЭМ помогает писать самодокументирующийся код, в классе любого элемента содержится информация о нём.
+                                    p
+                                        | Подробнее можно почитать в разделах  
+                                        a(href='https://ru.bem.info/methodology/quick-start/') Быстрый старт 
+                                        |  и 
+                                        a(href='https://ru.bem.info/methodology/faq/') Часто задаваемые вопросы 
+                                        |  на сайте 
+                                        a(href='https://ru.bem.info/') bem.info
+
+                                    p.title--xs Что такое БЭМ ?
+                                    p БЭМ (Блок, Элемент, Модификатор) — компонентный подход к веб-разработке. В его основе лежит принцип разделения интерфейса на независимые блоки. Он позволяет легко и быстро разрабатывать интерфейсы любой сложности и повторно использовать существующий код, избегая «Copy-Paste». БЭМ применяется по разному, кто-то использует только именования, кто-то берет за основу всю методологию себе на вооружение.
+                                    p Именование в БЭМ представляет собой определенный метод именования классов, этот метод позволяет:
+                                    ul
+                                        li
+                                            p Упростить код и его отладку
+                                        li
+                                            p Повторно использовать код избегая «Copy-Paste»
+                                        li
+                                            p Быстро понять связь между компонентами в разметке и CSS
+                                        li
+                                            p Ускорить написание css при использовании css-препроцессоров
+                                    p.title--xs Блок
+                                    p Блок — это самодостаточный независимый компонент страницы, который может быть повторно использован. Вся страница строится из блоков. Блоки могут содержать другие блоки. Классы блоков выглядят обычно и ничем не отличаются от любых других классов: header, navigate, works
+                                    pre.
+                                        Блок Header
+                                        header.header
+
+                                        Блок Nav
+                                        nav.nav
+                                    p.title--xs Элемент
+                                    p Cоставная часть блока, не может быть использована отдельно от блока. Например, пункт меню не может использоваться вне блока меню, он является его элементом. Класс элемента пишется так: block __ element
+                                    pre.
+                                        Хорошо, элемент внутри родителя:
+
+                                        Блок Header
+
+                                        header.header
+                                            img.header__logo
+
+                                        Плохо, где элемент лежит вне своего родителя:
+
+                                        header.header
+                                        img.header__logo
+                                    p.title--xs Модификатор
+                                    p Модификатор определяет вид, состояние или поведение блока или элемента. Модификаторы не определяют основные стили блока или элемента, они лишь модифицируют (изменяют) его. Класс модификатора пишется так: block__element--modifier. В примере ниже мы изменили внешний вид активного и неактивного пункта меню с помощью модификаторов.
+                                    pre.
+                                        Блок Nav
+                                        nav.nav
+                                            ul.nav__list
+                                        Хорошо
+                                                li class="nav__item nav__item--active
+                                                li class="nav__item
+                                        Плохо: модификатор применен без основного класса
+                                                li.nav__item--active
+                                    p Таким образом стили:
+                                    pre.
+                                        nav {
+                                            font-size: 1rem
+                                            }
+                                        nav__item {
+                                             font-size: 15px;
+                                             color: #555;
+                                                &--active{
+                                                    color: red;
+                                                    border-bottom: 1px solid;
+                                                }
+                                            }
+                                        }
+                                    p Обратите внимание, что стили для блока и для элемента не определяются вложенностью, а вот модификатор блока или элемента может быть вложен. Так почему мы не вкладываем блок в элемент, если можем?
+                                    p Дело в том, что при вкладывании элемента в блок, мы можем подвергнуться напасти CSS - это каскад и блоки не будут модульными, а только усугубят положение, да и к тому же - усложнят чтение кода.
+                    li.accordeon-section
+                        p.accordeon-title.title--main Модульный JavaScript, изоляция
+                            button.accordeon-button
+                        .accordeon-container
+                            h3.title--xs Что такое модуль?
+                            p Модуль – это просто файл. Один скрипт – это один модуль.
+                            p Модули могут загружать друг друга и использовать директивы export и import, чтобы обмениваться функциональностью, вызывать функции одного модуля из другого:
+                            ul
+                                li
+                                    p <b>export</b> отмечает переменные и функции, которые должны быть доступны вне текущего модуля.
+                                li
+                                    p <b>import</b> позволяет импортировать функциональность из других модулей.
+                            p Например, если у нас есть файл sayHi.js, который экспортирует функцию:
+                            pre.
+                                ../js/sayHi.js
+
+                                export function sayHi(user) {
+                                  alert(`Hello, ${user}!`);
                                 }
-                              }
-                            }
-                        p Амперсанд
-                        p В SCSS используется директива &.
-                        pre.
-                            #p {
-                              color: black;
-                              a {
-                                font-weight: bold;
-                                &:hover {
+                            p …Тогда другой файл может импортировать её и использовать:
+                            pre.
+                                ../js/main.js
+
+                                import {sayHi} from './sayHi.js';
+
+                                alert(sayHi); // function...
+                                sayHi('John'); // Hello, John!
+
+                            p Модули или подобные структуры это неотъемлемая часть любого взрослого языка программирования. Просто иначе никак. Модули позволяют ограничить область видимости, позволяют реиспользовать части приложения, делают приложение более структурированным, отделяют ресурсы от шума и вообще делают код нагляднее.
+                            p Каждый модуль имеет свою собственную область видимости. Другими словами, переменные и функции, объявленные в модуле, не видны в других скриптах.
+                            p В следующем примере импортированы 2 скрипта, и hello.js пытается использовать переменную user, объявленную в user.js. В итоге ошибка:
+
+                              pre.
+                                    // hello.js
+                                    alert(user); // в этом модуле нет такой переменной (каждый модуль имеет независимые переменные)
+                              pre.
+                                    // user.js
+                                    let user = "John";
+                              pre.
+                                    // index.html
+                                    !doctype html
+                                    script(type="module" src="user.js")
+                                    script(type="module" src="hello.js")
+                              pre.
+                                    // result
+                                    ERROR
+
+                    li.accordeon-section
+                        p.accordeon-title.title--main SCSS - Sassy CSS
+                            button.accordeon-button
+                        .accordeon-container
+                            p.title--xs Зачем использовать Sass/SCSS вместо CSS?
+                            ol
+                                li
+                                    p Вложенность — SCSS позволяет вкладывать правила CSS друг в друга. Вложенные правила применяются только для элементов, соответствующих внешним селекторам (а если речь идёт о Sass, то там и без скобок всё красиво и интуитивно понятно).
+
+                                li
+                                    p Переменные — в стандартном CSS тоже есть понятие переменных, но в Sass с ними можно работать немного по-другому. Например, повторять их через директиву @for. Или генерировать свойства динамически. Подробнее можете изучить на русскоязычном сайте проекта.
+
+                                li
+                                    p Улучшенные математические операции— можно складывать, вычитать, умножать и делить значения CSS. В отличие от стандартного CSS, Sass/SCSS позволяют обойтись без calc().
+
+                                li
+                                    p Тригонометрия — SCSS позволяет писать собственные (синусоидальные и косинусоидальные) функции, используя только синтаксис Sass/SCSS, подобно тому, как это можно делать в других языках вроде JavaScript.
+
+                                li
+                                    p Директивы @for, @while и выражение @if-else — можно писать CSS-код, используя знакомые элементы из других языков. Но не обольщайтесь — в итоге на выходе будет обычный CSS.
+                                li
+                                    p Миксины (примеси) — можно один раз создать набор CSS-свойств и работать с ними повторно или смешивать с другими значениями. Миксины можно использовать для создания отдельных тем одного макета. Примеси также могут содержать целые CSS-правила или что-либо другое, разрешённое в Sass-документе. Они даже могут принимать аргументы, что позволяет создавать большое разнообразие стилей при помощи небольшого количества миксинов.
+
+
+                                li
+                                    p Функции — можно создавать определения CSS в виде функций для многократного использования.
+                            p.title--xs Переменные?
+                            p Да! Sass/SCSS позволяет работать с переменными. В CSS они обозначаются двойным тире (--), а в препроцессорах знаком доллара ($).
+                            pre.
+                                $number: 1;
+                                $color: #ff0000;
+                                $text: "tproger forever.";
+                                $text: "IT forever." !default;
+                                $nothing: null;
+                            p Вы можете присваивать значение по умолчанию переменным, у которых ещё нет значения, добавив метку !default в конце значения. В таком случае, если переменной уже было присвоено значение, оно не изменится; если же переменная пуста, ей будет присвоено новое указанное значение.
+                            pre.
+                                #container {
+                                  content: $text;
+                                }
+                            p.title--xs Вложенные правила
+                            p Стандартные вложенные CSS-элементы с использованием пробела:
+                            pre.
+                                /* Вложенные правила */
+                                #A {
                                   color: red;
                                 }
-                              }
-                            }
-                        p.title--xs Миксины (они же примеси)
-                        p Миксины объявляются директивой @mixin. После неё должно стоять имя миксина и, опционально, его параметры, а также блок, содержащий тело миксина. Например, можно определить миксин flexible(), который далее будет включён, например, в класс .centered-elements следующим образом:
-                        pre.
-                            @mixin flexible () {
-                                display: flex;
-                                justify-content: center;
-                                align-items: center;
-                              }
-
-                            .centered-elements {
-                                @include flexible ();
-                                border: 1px solid gray;
-                              }
-                        p Теперь каждый раз после применения класса .centered-elements к HTML-элементу, последний будет преобразован во Flexbox.
-
-
-                li.accordeon-section
-                    p.accordeon-title.title--main Gulp / Webpack
-                        button.accordeon-button
-                    .accordeon-container
-                        p.
-                            Gulp — это таск-менеджер для автоматического выполнения часто используемых задач (например, минификации, тестирования, объединения файлов), написанный на языке программирования JavaScript. Программное обеспечение использует командную строку для запуска задач, определённых в файле gulpfile.js в корне проекта
-                        p.
-                            Взаимодействия между частями программы реализуется через оператор .pipe(), выполняя по одной задаче за раз, не затрагивая исходные файлы, до конца процедуры. Это даёт возможность комбинации плагинов в любой последовательности и количестве.
-                        p.
-                            Так же в Gulp усовершенствована система сборки. Это значит, что помимо запуска задач, можно также копировать файлы с места на место, компилировать и развёртывать проект в новом окружении.
-                        p.
-                            Webpack я использовал также, как модуль для Gulp (Где Gulp - таскменеджер,а webpack - сборщик модулей JavaScript)
-                li.accordeon-section
-                    p.accordeon-title.title--main .eslint / .stylelint / prettier / .editorconfig
-                        button.accordeon-button
-                    .accordeon-container
-                        p.
-                            EditorConfig это конфигурационный файл и набор расширений, к большому количеству редакторов кода и IDE (Далее просто IDE).
-                        p.
-                            Его задача — создать единый формат настроек, и, раз и навсегда, решить вопросы вроде “табы или пробелы” для всех IDE и всех языков программирования. Такой файл может храниться в системе контроля версий проекта, что позволит всем его разработчикам использовать одну и ту же конфигурацию.
-
-                li.accordeon-section
-                    p.accordeon-title.title--main Препроцессор HTML pug / jade
-                        button.accordeon-button
-                    .accordeon-container
-                        p <a href="https://pugjs.org/api/getting-started.html">Pug</a> - это препроцессор HTML и шаблонизатор, который был написан на JavaScript для Node.js.
-                        p В Pug нет закрывающих тегов, вместо этого он использует строгую табуляцию (или отступы) для определения вложености тегов
-                        p Pug:
-                        pre.
-                            ul
-                              li Item A
-                              li Item B
-                              li Item C
-
-                li.accordeon-section
-                    p.accordeon-title.title--main Графики / чарты Chart.js
-                        button.accordeon-button
-                    .accordeon-container
-                        p Chart.js является JavaScript-библиотекой, с помощью которой можно создавать на странице различные типы диаграмм; при этом используются возможности HTML5-элемента Canvas
-                        p Библиотека Chart.js не имеет каких-либо зависимостей; размер ее так мал, что составляет примерно 11Kb в минифицированном, конкатенированном и архивированном виде. Однако, есть возможность еще уменьшить размер библиотеки путем включения в нее только тех модулей, которые необходимы в конкретном случае; то есть, если нет необходимости в поддержке всех шести типов диаграмм, включенных по умолчанию в ядро Chart.js.
-                        p Пример
-                        .hotels__chart.chart
-                            canvas#myChart
-                li.accordeon-section
-                    p.accordeon-title.title--main Слайдер SwiperJS
-                        button.accordeon-button
-                    .accordeon-container
-                        p Это вообще пушка-мастхэв.
-                        p В целом, сделать свой слайдер достаточно просто, но продумать столько деталей и мелочей - почти невозможно :)
-                        p Превосходный слайдер заточенный строго для работы с мобильными сайтами или веб приложениями.
-                        p Его прелесть в том, что при установке через npm можно указать, какие методы использовать, и, соответственно, тянуть в зависимости.
-
-        .card--stack.tabs__item(id="grid")
-            h1.title Сетка
-            p Сетка построена на flex-layout (display: flex)
-            p Основной контент расположен в контейнере .container ; Этот класс является миксом и его следует использовать только с ключевым классом, например .page-header__container
-            p Базовый отступ от края контента (padding) 12px, и 45px на экранах > 1024px
-            p У .container есть модификатор .container--aside, который предполагает наличие класса .container и представляет собой версию контейнера для блоков, которые содержат sidebar (aside)
-        .card--stack.tabs__item(id="buttons")
-            h1.title Кнопки
-            p Синтаксис
-            pre.
-                button(class="page__button btn btn--modifier")
-            ul(style="display:flex; flex-wrap: wrap; gap: 10px; list-style: none; width: 500px; height: 200px; justify-content: center; flex-direction: column; padding: 0; margin: 0 auto;")
-                li
-                    button.btn .btn
-                li
-                    button.btn--light .btn--light
-                li
-                    button.btn.btn--icon(style="position: relative") .btn--icon
-                        svg(width='18' height='18' style='position: absolute; content: ""; display: block; width: 18px; height: 18px; top: 25px; left: 30px;')
-                            use(href="#key")
-                li
-                    button.btn.btn--border .btn--border
-                li
-                    button.btn.btn--regular .btn--regular
-                li
-                    button.btn.btn--blue .btn--blue
-                li
-                    button.btn.btn--green .btn--green
-                li
-                    button.btn.btn--grey .btn--grey
-
-        .card--stack.tabs__item(id="slider")
-            h1.title Слайдер
-            p В каталоге src => js => modules файл swipe.js
-            p Верхняя строчка - импорт модулей Swiper
-            pre.
-                import Swiper, {Navigation, Pagination} from "swiper";
-            p Далее экспорт классов
-            pre Swiper.use([Navigation, Pagination]);
-            p Описание текущего слайдера
-            p.
-                <pre>
-                    let advertisement = new Swiper('.advertisement__slider', { //Инициализация слайдера
-                            slidesPerView: 'auto', //Сколько слайдов показывать на странице
-                            spaceBetween: 30, //расстояние между слайдами (margin-right)
-                            pagination: { //инициализация пагинации
-                                el: '.advertisement-pagination', //Элемент пагинации
-                                clickable: true, //Кликабельность
-                            },
-                            navigation: { //инициализация навигации
-                                nextEl: '.advertisement-button-next', // Элемент навигации - далее
-                                prevEl: '.advertisement-button-prev', // Элемент навигации - Назад
-                            },
-                            breakpoints: { // Брейкпоинты для адаптивного отображения, mobileFirst подход
-                                768: {
-                                    spaceBetween: 20,slidesPerView: 'auto',
-                                },
-                                1024: {
-                                    spaceBetween: 30,slidesPerView: 'auto',
+                                #A #B {
+                                  color: green;
                                 }
-                            }
-                        });
-                </pre>
-            p pug-разметка
-            p
+                                #A #B #C p {
+                                  color: blue;
+                                }
+                            p Те же вложенные элементы с помощью SCSS:
+                            pre.
+                                /* Вложенные правила */
+                                #A {
+                                  color: red;
+                                  #B {
+                                    color: green;
+                                    #C p {
+                                      color: blue;
+                                    }
+                                  }
+                                }
+                            p Амперсанд
+                            p В SCSS используется директива &.
+                            pre.
+                                #p {
+                                  color: black;
+                                  a {
+                                    font-weight: bold;
+                                    &:hover {
+                                      color: red;
+                                    }
+                                  }
+                                }
+                            p.title--xs Миксины (они же примеси)
+                            p Миксины объявляются директивой @mixin. После неё должно стоять имя миксина и, опционально, его параметры, а также блок, содержащий тело миксина. Например, можно определить миксин flexible(), который далее будет включён, например, в класс .centered-elements следующим образом:
+                            pre.
+                                @mixin flexible () {
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                  }
+
+                                .centered-elements {
+                                    @include flexible ();
+                                    border: 1px solid gray;
+                                  }
+                            p Теперь каждый раз после применения класса .centered-elements к HTML-элементу, последний будет преобразован во Flexbox.
+
+
+                    li.accordeon-section
+                        p.accordeon-title.title--main Gulp / Webpack
+                            button.accordeon-button
+                        .accordeon-container
+                            p.
+                                Gulp — это таск-менеджер для автоматического выполнения часто используемых задач (например, минификации, тестирования, объединения файлов), написанный на языке программирования JavaScript. Программное обеспечение использует командную строку для запуска задач, определённых в файле gulpfile.js в корне проекта
+                            p.
+                                Взаимодействия между частями программы реализуется через оператор .pipe(), выполняя по одной задаче за раз, не затрагивая исходные файлы, до конца процедуры. Это даёт возможность комбинации плагинов в любой последовательности и количестве.
+                            p.
+                                Так же в Gulp усовершенствована система сборки. Это значит, что помимо запуска задач, можно также копировать файлы с места на место, компилировать и развёртывать проект в новом окружении.
+                            p.
+                                Webpack я использовал также, как модуль для Gulp (Где Gulp - таскменеджер,а webpack - сборщик модулей JavaScript)
+                    li.accordeon-section
+                        p.accordeon-title.title--main .eslint / .stylelint / prettier / .editorconfig
+                            button.accordeon-button
+                        .accordeon-container
+                            p.
+                                EditorConfig это конфигурационный файл и набор расширений, к большому количеству редакторов кода и IDE (Далее просто IDE).
+                            p.
+                                Его задача — создать единый формат настроек, и, раз и навсегда, решить вопросы вроде “табы или пробелы” для всех IDE и всех языков программирования. Такой файл может храниться в системе контроля версий проекта, что позволит всем его разработчикам использовать одну и ту же конфигурацию.
+
+                    li.accordeon-section
+                        p.accordeon-title.title--main Препроцессор HTML pug / jade
+                            button.accordeon-button
+                        .accordeon-container
+                            p <a href="https://pugjs.org/api/getting-started.html">Pug</a> - это препроцессор HTML и шаблонизатор, который был написан на JavaScript для Node.js.
+                            p В Pug нет закрывающих тегов, вместо этого он использует строгую табуляцию (или отступы) для определения вложености тегов
+                            p Pug:
+                            pre.
+                                ul
+                                  li Item A
+                                  li Item B
+                                  li Item C
+
+                    li.accordeon-section
+                        p.accordeon-title.title--main Графики / чарты Chart.js
+                            button.accordeon-button
+                        .accordeon-container
+                            p Chart.js является JavaScript-библиотекой, с помощью которой можно создавать на странице различные типы диаграмм; при этом используются возможности HTML5-элемента Canvas
+                            p Библиотека Chart.js не имеет каких-либо зависимостей; размер ее так мал, что составляет примерно 11Kb в минифицированном, конкатенированном и архивированном виде. Однако, есть возможность еще уменьшить размер библиотеки путем включения в нее только тех модулей, которые необходимы в конкретном случае; то есть, если нет необходимости в поддержке всех шести типов диаграмм, включенных по умолчанию в ядро Chart.js.
+                            p Пример
+                            .hotels__chart.chart
+                                canvas#myChart
+                    li.accordeon-section
+                        p.accordeon-title.title--main Слайдер SwiperJS
+                            button.accordeon-button
+                        .accordeon-container
+                            p Это вообще пушка-мастхэв.
+                            p В целом, сделать свой слайдер достаточно просто, но продумать столько деталей и мелочей - почти невозможно :)
+                            p Превосходный слайдер заточенный строго для работы с мобильными сайтами или веб приложениями.
+                            p Его прелесть в том, что при установке через npm можно указать, какие методы использовать, и, соответственно, тянуть в зависимости.
+
+            .card--stack.tabs__item(id="grid")
+                h1.title Сетка
+                p Сетка построена на flex-layout (display: flex)
+                p Основной контент расположен в контейнере .container ; Этот класс является миксом и его следует использовать только с ключевым классом, например .page-header__container
+                p Базовый отступ от края контента (padding) 12px, и 45px на экранах > 1024px
+                p У .container есть модификатор .container--aside, который предполагает наличие класса .container и представляет собой версию контейнера для блоков, которые содержат sidebar (aside)
+                h2.title Заголовки
+
+                p.title--large .title--large
+                p.title--main .title--main
+                p.title--s .title--s
+                p.title--xs .title--xs
+                p.title .title
+                p.title--dark .title--dark
+                p.title--dashboard .title--dashboard
+                p.title--aside .title--aside
+            .card--stack.tabs__item(id="buttons")
+                h1.title Кнопки
+                p Синтаксис
                 pre.
-                    .swiper-container - инициализация слайдера
-                        .swiper-wrapper - обертка для слайдов
-                            // Slides
-                            .swiper-slide Slide 1
-                            .swiper-slide Slide 2
-                            .swiper-slide Slide 3
-                        .swiper-pagination - пагинация
-                        .swiper-button-prev - навигация
-                        .swiper-button-next - навигация
-            .news__container.swiper-container
-                .news__header
-                    span.divider
-                    .news__buttons.news__buttons--extra
-                        .swiper-button-prev.news-button-prev
-                        .swiper-pagination.news-pagination
-                        .swiper-button-next.news-button-next
-                .news__wrapper.swiper-wrapper
-                    .news__item.swiper-slide
-                        .block.block--wide.block__content-news
-                            a(href="new-layout.html").block__content
-                                p.news__item-date 1 сентября
-                                h3.news__item-title Поздравление с Днем знаний и началом нового учебного года
-                                picture.news__picture
-                                    source(srcset="img/studyear.webp" type="image/webp")
-                                    img(src="img/studyear.png")
-                    .news__item.swiper-slide
-                        .block.block--wide.block--attention.block__content-news
-                            a(href="new-layout.html").block__content.block__content--hot
-                                p.news__item-date.news__item-date--dark 28 августа
-                                h3.news__item-title Студенческая весна. приглашаем на еженедельные онлайн-встречи!
-                                picture.news__picture
-                                    source(srcset="img/studyspring.webp" type="image/webp")
-                                    img(src="img/studyspring.png")
-                    .news__item.swiper-slide
-                        .block.block--wide.block__content-news
-                            a(href="new-layout.html").block__content
-                                p.news__item-date 1 сентября
-                                h3.news__item-title Поздравление с Днем знаний и началом нового учебного года
-                                picture.news__picture
-                                    source(srcset="img/studyear.webp" type="image/webp")
-                                    img(src="img/studyear.png")
-                    .news__item.swiper-slide
-                        .block.block--wide.block__content-news
-                            a(href="new-layout.html").block__content
-                                p.news__item-date 1 сентября
-                                h3.news__item-title Поздравление с Днем знаний и началом нового учебного года
-                                picture.news__picture
-                                    source(srcset="img/studyspring.webp" type="image/webp")
-                                    img(src="img/studyspring.png")
-                    .news__item.swiper-slide
-                        .block.block--wide.block__content-news
-                            a(href="new-layout.html").block__content
-                                p.news__item-date 1 сентября
-                                h3.news__item-title Поздравление с Днем знаний и началом нового учебного года
-                                picture.news__picture
-                                    source(srcset="img/studyear.webp" type="image/webp")
-                                    img(src="img/studyear.png")
-                .news__buttons
-                    .swiper-button-prev.news-button-prev
-                    .swiper-pagination.news-pagination
-                    .swiper-button-next.news-button-next
+                    button(class="page__button btn btn--modifier")
+                ul(style="display:flex; flex-wrap: wrap; gap: 10px; list-style: none; width: 500px; height: 200px; justify-content: center; flex-direction: column; padding: 0; margin: 0 auto;")
+                    li
+                        button.btn .btn
+                    li
+                        button.btn--light .btn--light
+                    li
+                        button.btn.btn--icon(style="position: relative") .btn--icon
+                            svg(width='18' height='18' style='position: absolute; content: ""; display: block; width: 18px; height: 18px; top: 25px; left: 30px;')
+                                use(href="#key")
+                    li
+                        button.btn.btn--border .btn--border
+                    li
+                        button.btn.btn--regular .btn--regular
+                    li
+                        button.btn.btn--blue .btn--blue
+                    li
+                        button.btn.btn--green .btn--green
+                    li
+                        button.btn.btn--grey .btn--grey
 
+            .card--stack.tabs__item(id="slider")
+                h1.title Слайдер
+                p В каталоге src => js => modules файл swipe.js
+                p Верхняя строчка - импорт модулей Swiper
+                pre.
+                    import Swiper, {Navigation, Pagination} from "swiper";
+                p Далее экспорт классов
+                pre Swiper.use([Navigation, Pagination]);
+                p Описание текущего слайдера
+                p.
+                    <pre>
+                        let advertisement = new Swiper('.advertisement__slider', { //Инициализация слайдера
+                                slidesPerView: 'auto', //Сколько слайдов показывать на странице
+                                spaceBetween: 30, //расстояние между слайдами (margin-right)
+                                pagination: { //инициализация пагинации
+                                    el: '.advertisement-pagination', //Элемент пагинации
+                                    clickable: true, //Кликабельность
+                                },
+                                navigation: { //инициализация навигации
+                                    nextEl: '.advertisement-button-next', // Элемент навигации - далее
+                                    prevEl: '.advertisement-button-prev', // Элемент навигации - Назад
+                                },
+                                breakpoints: { // Брейкпоинты для адаптивного отображения, mobileFirst подход
+                                    768: {
+                                        spaceBetween: 20,slidesPerView: 'auto',
+                                    },
+                                    1024: {
+                                        spaceBetween: 30,slidesPerView: 'auto',
+                                    }
+                                }
+                            });
+                    </pre>
+                p pug-разметка
+                p
+                    pre.
+                        .swiper-container - инициализация слайдера
+                            .swiper-wrapper - обертка для слайдов
+                                // Slides
+                                .swiper-slide Slide 1
+                                .swiper-slide Slide 2
+                                .swiper-slide Slide 3
+                            .swiper-pagination - пагинация
+                            .swiper-button-prev - навигация
+                            .swiper-button-next - навигация
+                p
+                    b Если не отображается корректно, поресайзь окно (из-за динамического display:none)
+                .news__container
+                    .swiper-container.news__slider
+                        .news__header
+                            span.divider
+                            .news__buttons.news__buttons--extra
+                                .swiper-button-prev.news-button-prev
+                                .swiper-pagination.news-pagination
+                                .swiper-button-next.news-button-next
+                        .news__wrapper.swiper-wrapper
+                            .news__item.swiper-slide
+                                .block.block--wide.block__content-news
+                                    a(href="new-layout.html").block__content
+                                        p.news__item-date 1 сентября
+                                        h3.news__item-title Поздравление с Днем знаний и началом нового учебного года
+                                        picture.news__picture
+                                            source(srcset="img/studyear.webp" type="image/webp")
+                                            img(src="img/studyear.png")
+                            .news__item.swiper-slide
+                                .block.block--wide.block--attention.block__content-news
+                                    a(href="new-layout.html").block__content.block__content--hot
+                                        p.news__item-date.news__item-date--dark 28 августа
+                                        h3.news__item-title Студенческая весна. приглашаем на еженедельные онлайн-встречи!
+                                        picture.news__picture
+                                            source(srcset="img/studyspring.webp" type="image/webp")
+                                            img(src="img/studyspring.png")
+                            .news__item.swiper-slide
+                                .block.block--wide.block__content-news
+                                    a(href="new-layout.html").block__content
+                                        p.news__item-date 1 сентября
+                                        h3.news__item-title Поздравление с Днем знаний и началом нового учебного года
+                                        picture.news__picture
+                                            source(srcset="img/studyear.webp" type="image/webp")
+                                            img(src="img/studyear.png")
+                            .news__item.swiper-slide
+                                .block.block--wide.block__content-news
+                                    a(href="new-layout.html").block__content
+                                        p.news__item-date 1 сентября
+                                        h3.news__item-title Поздравление с Днем знаний и началом нового учебного года
+                                        picture.news__picture
+                                            source(srcset="img/studyspring.webp" type="image/webp")
+                                            img(src="img/studyspring.png")
+                            .news__item.swiper-slide
+                                .block.block--wide.block__content-news
+                                    a(href="new-layout.html").block__content
+                                        p.news__item-date 1 сентября
+                                        h3.news__item-title Поздравление с Днем знаний и началом нового учебного года
+                                        picture.news__picture
+                                            source(srcset="img/studyear.webp" type="image/webp")
+                                            img(src="img/studyear.png")
+                        .news__buttons
+                            .swiper-button-prev.news-button-prev
+                            .swiper-pagination.news-pagination
+                            .swiper-button-next.news-button-next
+            .card--stack.tabs__item(id="modals")
+                h1.title Модальное окно
+                .content(style='display: flex; align-items: flex-start; gap: 20px; width: 540px; margin: 0 auto; justify-content: space-around;')
+                    button.modal-btn.btn(data-path='first' data-animation='fadeInUp' data-speed='1500') Открыть окно 1
+                    button.modal-btn.btn.btn--light(data-path='first' data-animation='fade' data-speed='300') Открыть окно 1
+                    button.modal-btn.btn.btn--green(data-path='second') Открыть окно 2
+                .modal
+                    .modal__container(data-target='first')
+                        button.modal-close Закрыть
+                        .modal-content
+                            | Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты.
+                            .modal__form
+                                .modal__form-group
+                                    button.btn.btn--blue Нажми на меня
+                                    input(type='text' placeholder='Имя' style="margin-top: 10px")
+                    .modal__container(data-target='second')
+                        button.modal-close Закрыть
+                        .modal-content
+                            | Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut quae ducimus saepe illo hic unde dolorem consectetur voluptatibus, qui incidunt quidem nihil necessitatibus soluta velit quis beatae aspernatur enim exercitationem? Corporis, ducimus temporibus. Voluptatibus quam aut est accusamus hic autem? Magni expedita numquam dolore sit accusamus suscipit facere, hic voluptatem quos excepturi animi unde architecto accusantium, quasi pariatur ducimus facilis blanditiis recusandae dolores vitae consequatur sequi obcaecati in. Qui fuga aliquid recusandae animi, nam nulla tempore debitis quibusdam magni illo ad officia sit incidunt similique atque quasi excepturi voluptas sapiente beatae ratione! Aliquid nobis magnam aut vero fugit autem esse ipsa possimus. Error pariatur officia provident sequi ea enim molestiae eius, dolore facilis ad fuga cumque amet, tempora dolorum voluptatem eum cum. Numquam impedit ex quae deleniti doloribus voluptates commodi facilis laboriosam nihil unde voluptate eligendi labore quaerat architecto assumenda odio laudantium consequuntur hic, ipsa provident? Dolores ad dolorum vel reiciendis possimus consequatur excepturi pariatur earum itaque, architecto molestiae quisquam qui alias! Sed tempore quia sint commodi dolor perspiciatis, aliquam sequi praesentium error esse? Quod sunt at impedit dignissimos. Nemo aliquid magnam, ad asperiores, voluptates sequi porro voluptas eaque voluptatem quasi illo earum ab. Nobis iusto excepturi quia, harum quos dolores voluptate labore tempore dignissimos rerum illum velit enim laborum? Id maxime tenetur assumenda, reiciendis molestias dignissimos optio. Consequuntur itaque officiis quam ex harum? Nisi, explicabo consequuntur! Quam incidunt ut rem id aspernatur, dolores dicta maiores ipsam ipsa velit labore asperiores explicabo quas eligendi autem architecto totam unde aliquid, qui sapiente delectus. Culpa placeat minus ullam. Optio, fugit obcaecati delectus hic in tempore dolor libero cum soluta, molestiae laudantium. Vitae sunt optio, doloremque fuga nisi at harum et consectetur placeat quae vero nobis nulla molestiae asperiores facilis velit sapiente magni, provident praesentium illo voluptas non dolores? Et deserunt quo eaque facilis? Dicta odio officia vitae libero minima optio iste! Perferendis excepturi sit molestias tempora eos fuga ullam rerum labore voluptatum fugiat sunt architecto modi sint magni nesciunt nihil blanditiis beatae id, consequuntur inventore, accusamus nemo! Optio minus dolorum tenetur non, nam numquam perferendis ratione pariatur sit voluptatum maiores omnis ut vel qui, exercitationem corporis, dignissimos reprehenderit adipisci aperiam atque eveniet! Expedita error dicta modi magni odit deleniti eligendi, voluptates obcaecati quasi odio nemo quibusdam voluptate repudiandae sed non, aut aliquid cum similique dolores vitae at corrupti? Reiciendis quis deleniti, aspernatur veniam asperiores esse corrupti magni minus voluptatem, non eos nostrum! Impedit tenetur eligendi voluptas quo pariatur aut ipsam cumque mollitia perferendis magnam, vero placeat molestiae eius maiores numquam, repudiandae omnis, optio esse quam! Nisi doloribus doloremque alias minus eligendi aperiam accusamus eos ipsum a debitis quia error velit maxime quo, est amet ab, fugit autem consequuntur eum voluptas. Facilis aliquam, provident harum laboriosam possimus optio ex sequi doloribus maiores. Repellendus fugit, libero ad deserunt natus architecto tenetur fuga ipsum neque error voluptatum aspernatur doloribus eos deleniti molestiae, temporibus vero iure nam? Excepturi earum aliquid, omnis, officiis molestiae ipsa consectetur, error repellendus magni ut quaerat doloribus rem inventore praesentium quo dolor! Dolores voluptas veritatis voluptates. Distinctio enim labore tempore magnam explicabo pariatur provident deleniti, dicta, aperiam ea omnis atque repellendus nihil rem vitae optio illo dolor velit ducimus reiciendis necessitatibus illum. Consectetur, magni ducimus quos incidunt magnam nihil assumenda fugit ex molestias sequi, tempore nesciunt quo harum aliquid alias placeat? Dicta laudantium culpa atque ipsum quaerat? Magni quibusdam obcaecati vitae, fuga maxime a accusamus sequi velit ipsa in. Nemo mollitia exercitationem quibusdam minima, omnis harum deleniti porro perferendis ducimus iste itaque rerum officia expedita rem? Earum, inventore iusto quia laboriosam incidunt, quibusdam commodi dolores sint beatae accusantium tempora quam libero modi voluptate itaque ullam fugiat totam enim. Sit ratione quod voluptatibus velit! Neque, sunt tenetur. Accusantium dolores suscipit incidunt nam maxime eos nihil nesciunt neque expedita itaque minima ea, a, odit amet possimus enim voluptatem voluptas quibusdam dolor, ullam aliquid laboriosam id laudantium illo? Aperiam, optio soluta sit iusto a quia consequuntur dignissimos, voluptatem maxime sapiente architecto natus accusamus. Officiis consequuntur ea rerum necessitatibus quidem dolores dolorum sunt facere culpa id in repellendus voluptates eveniet dicta architecto, quis veniam commodi nihil ut laboriosam quasi? Suscipit rem dolor consequatur, voluptatibus maiores corrupti? Harum iure nulla est dolorum a debitis amet aperiam rerum quidem sunt repudiandae odio cupiditate officiis, quaerat corporis autem aliquam, ea quos voluptatem facere, tempore magni consectetur. Laudantium est doloremque quibusdam officia ipsam iusto, esse quos eveniet nobis saepe ipsum quia placeat dolorum veniam soluta nihil et natus quo consequatur, quis culpa beatae impedit! Nisi quia, perspiciatis laborum quae sit autem molestias atque commodi repellendus, totam non neque dicta temporibus aut quod sapiente eligendi, harum minima praesentium quas magni. Fugit dicta veniam impedit excepturi maxime perferendis, odio aspernatur quibusdam rerum odit ullam porro voluptatum sed, enim nesciunt, ab alias soluta? Minus eligendi tempora facilis amet quo provident dolore voluptatum cum, error optio obcaecati odit eaque minima sit debitis quibusdam velit quod officia sint dolorem laboriosam, veniam rerum. Enim omnis accusamus necessitatibus? Rem asperiores eos excepturi quam ab nulla aspernatur tempore, delectus consequuntur pariatur esse ad illo beatae maxime. Ab velit tempora modi distinctio labore delectus ipsam inventore nostrum quas sunt praesentium rerum atque, est at illum sequi quidem aspernatur quasi aperiam recusandae ea assumenda vitae hic alias. Nihil impedit, cumque, illo corrupti magnam rerum quasi eos commodi atque quidem rem suscipit praesentium at beatae laborum eius pariatur aut vero unde nisi! Atque tenetur molestiae sint iure alias dicta quidem magni, laborum provident eveniet quo perferendis sit, non sapiente autem deleniti asperiores enim. Quasi, ut? Rem perspiciatis vero veritatis nemo fuga animi, ipsa asperiores dolorem. Quaerat asperiores consectetur, quisquam ullam sed perferendis magni consequatur pariatur accusantium cumque odit. Suscipit velit iste labore quisquam mollitia. Inventore cum odio ex laboriosam odit. Officia et, tempore facere ea velit sunt minima molestias perspiciatis, dolore, quidem suscipit. Non, at consectetur architecto quis suscipit vero aliquam molestiae maiores possimus id error, atque excepturi omnis? Sint ipsum consequatur sunt autem alias! Provident adipisci, libero harum omnis aspernatur alias beatae culpa ipsa illo praesentium consequatur eligendi perferendis nam quam quas, explicabo officia. Nemo, recusandae eos labore, odit placeat natus voluptate hic consequuntur quisquam omnis fugiat. Consectetur iste ex eligendi illo placeat ipsam ullam veniam soluta. Temporibus, minus modi. Expedita magnam, doloremque id architecto hic quisquam repellendus tempore. Dolorem pariatur voluptates ut ullam sapiente optio. Et illo minima ducimus iste quidem mollitia. Cum dolor sit, porro iste aut dolore similique, iusto, eius perspiciatis quis deleniti voluptates temporibus quo culpa! Quod assumenda unde facere vitae sapiente odio tenetur iure, minima vel quidem iusto aperiam consectetur cum ducimus ipsa aliquid, doloribus, molestiae dolor! Praesentium natus earum provident alias labore, eum ex, ipsam in necessitatibus animi mollitia ad sint! Minima expedita omnis debitis non, amet ipsum corporis commodi quibusdam accusantium magnam rem aut nesciunt quae molestiae repudiandae vero similique voluptatibus culpa id! Harum dolorum iusto, id quidem, odio fugit, fuga nesciunt a explicabo animi accusantium facilis perferendis maxime ut tempore nobis alias ea? Veniam placeat nemo harum, obcaecati aut est facilis necessitatibus corrupti? Rem amet quae ea, labore dolore accusantium aperiam corporis alias. Minus nisi saepe amet ad corporis? Nihil expedita, iusto magni consequuntur voluptatem facere rerum ipsa quibusdam consequatur minima officia corporis id soluta voluptates! Qui deleniti nostrum sunt sapiente voluptatibus! Veniam nesciunt sapiente laboriosam minus vitae quaerat modi porro ducimus. Rerum, accusantium odio? Sint molestiae laudantium consequatur sit aut aspernatur vitae deserunt nostrum, repellendus aperiam nihil aliquam. Impedit, corrupti repellendus reiciendis, vitae vel earum recusandae consequuntur adipisci possimus minima quae? Nobis rem illo aliquam fugiat dolor a incidunt perferendis dignissimos officiis. Exercitationem similique iusto esse ad est voluptate, natus nostrum nobis voluptates laborum odio autem quas expedita consequuntur beatae tempora? Maxime, soluta consequatur? Atque est pariatur molestiae iusto? Praesentium, dolores libero? Laboriosam, maxime ducimus praesentium magnam quis explicabo voluptatum cumque? Aperiam cum consectetur officia est soluta deleniti praesentium debitis odio fuga dolorum harum omnis temporibus consequatur similique neque, quo optio enim ad maxime at nihil nisi doloribus dolor! Nihil molestiae mollitia deserunt obcaecati, minus a, explicabo hic repellat, porro saepe voluptatibus architecto accusamus ducimus veritatis et qui corrupti cum aliquam rerum perspiciatis? Iste, earum. Sapiente sunt unde quisquam hic asperiores, vel sed autem libero animi aliquam voluptatum? Fuga quo, magnam odit saepe, quidem consequatur laudantium officiis cupiditate temporibus consequuntur veniam, illo corporis esse ratione exercitationem doloremque? Sint non nisi quaerat velit voluptas dolores, sit, iure culpa, mollitia beatae est tempore error esse maxime omnis rem hic voluptate! Rerum harum ipsum quasi veniam neque nesciunt eius quam veritatis qui at sint, cupiditate quod velit! Eligendi ipsa facilis aut quam. Debitis, explicabo similique vero, exercitationem amet dolorem totam, quos sapiente ducimus odit nesciunt? Praesentium dignissimos officia nostrum mollitia tempore et debitis quia ab unde hic deserunt, eos iure aliquid natus eaque, rem nam est enim ipsam dolorum deleniti fuga. Voluptate non et aspernatur asperiores esse ipsum, officia aliquid saepe ab excepturi tempora. Rerum ducimus ex reprehenderit quia pariatur mollitia rem id sed explicabo, praesentium minima, laborum ut est deserunt porro earum necessitatibus eligendi enim aliquid laboriosam aut facere, amet recusandae quam. Accusamus vero reprehenderit et ipsum asperiores facilis tempora veritatis! Beatae eos atque, ab optio tempora, ullam incidunt architecto aliquam consectetur quo quisquam similique sint repellendus obcaecati libero, eum quaerat natus rerum dolorem nam quas quidem unde debitis? Aliquid praesentium quas perferendis? Dolore temporibus officia iusto ullam, numquam voluptas tempore minus ratione voluptatum, amet ipsam, ad officiis odio totam nihil! Obcaecati quia laborum quisquam eius, necessitatibus atque maxime nesciunt ducimus aliquam, natus ullam laudantium perferendis ut veritatis earum, vero adipisci consequatur accusamus. Officia aspernatur praesentium, fugit possimus fugiat distinctio blanditiis odit dolores autem, sed exercitationem et! Quod ab laborum eveniet alias ad dolores. Ipsa incidunt illo deserunt laudantium quasi ipsam harum, doloremque, quibusdam distinctio nobis aut! Laborum excepturi tempora laboriosam iure corrupti eum consectetur aut asperiores ipsum tenetur aliquid minima, reiciendis blanditiis cum error consequuntur quod porro explicabo omnis quibusdam beatae ipsa! Deserunt doloribus quaerat quod consequatur eaque necessitatibus quia exercitationem voluptatibus odio ipsam rem sequi autem velit repudiandae magni eum quae ea adipisci, modi distinctio perspiciatis? Accusamus voluptatem quasi perferendis dicta tenetur ipsam, praesentium sapiente fugiat, voluptate eaque voluptas blanditiis aperiam voluptatibus ab dignissimos repellendus? Magni exercitationem sit enim, sapiente ab adipisci odio eligendi aut unde, voluptatum minus, nostrum laudantium quod quidem. A necessitatibus veniam temporibus placeat quibusdam architecto amet nobis aspernatur, aliquam, minus nesciunt dolorum error accusamus tenetur. Ullam fugiat vero at necessitatibus, debitis odit eligendi voluptatibus sit dolorum ipsa qui sequi ut accusantium accusamus. Ipsa corporis aut consequuntur inventore numquam, minima libero, obcaecati itaque fuga quisquam quae, cupiditate facilis unde eligendi quia delectus laudantium officia eius et culpa praesentium esse nisi accusamus. Unde error dolorum ipsam asperiores alias? Dolores quam asperiores, in excepturi dolor officiis? Quae fuga veniam aut nobis consequuntur, quam quas rem dolor est at unde velit earum architecto asperiores. Eius placeat, iure cumque ut quis alias molestias quisquam tenetur atque saepe odit deleniti, vel praesentium reiciendis sed corrupti impedit dolorem harum aut a! Adipisci inventore labore vel similique, nostrum nam explicabo eligendi, nobis, consequuntur eaque corporis qui. Provident asperiores nihil a incidunt repellendus eligendi quisquam impedit, optio eum laboriosam veniam voluptatum enim tempore fuga ratione quaerat illum excepturi. At nulla sequi recusandae error perferendis commodi cum maiores repellat aliquam alias, placeat laudantium delectus, assumenda neque reiciendis eligendi! Odit dicta molestias deserunt id maxime mollitia natus praesentium omnis aperiam, quidem rerum nesciunt ipsa aspernatur est similique assumenda iste, recusandae totam atque! Voluptatum esse culpa dolorem beatae quidem in! Dolore, unde! Placeat, sunt voluptatibus. Aliquid omnis quibusdam debitis voluptas nemo. Quo, asperiores quidem autem sed in repudiandae eligendi? Et suscipit architecto at dicta, vitae eveniet, doloribus aperiam iure dolores exercitationem molestiae error accusamus tenetur voluptates odio modi quibusdam tempore? Ab iste aperiam mollitia at fugit illum vero fuga voluptatem nam, dolor ducimus quo consectetur non quaerat distinctio reprehenderit soluta ipsam pariatur! Fugit facilis praesentium aliquid, aperiam et assumenda perferendis doloremque eius nulla quo inventore obcaecati cupiditate voluptatibus hic nesciunt explicabo! Consequuntur necessitatibus iusto totam, quam earum commodi. Optio itaque repellendus reprehenderit, incidunt adipisci debitis esse id expedita dicta autem. Autem blanditiis dolorum laudantium, doloribus consequuntur quasi corrupti deserunt nemo rem omnis magnam, eius excepturi necessitatibus nesciunt modi. Dicta velit debitis voluptas, dolorem, nemo et facere natus esse rem doloribus assumenda sequi corrupti molestias quia nesciunt, hic magnam optio explicabo fuga sint aspernatur nisi corporis. Ea ex voluptatum amet sapiente tempore! Quas, ad. Ducimus inventore, est, facere in esse iusto voluptatem, sed nostrum id sapiente facilis dolor ab recusandae nesciunt doloribus. Harum, veritatis! Alias nam maxime commodi officiis ratione aliquam consequuntur reiciendis cum veniam necessitatibus, deleniti laboriosam, omnis hic architecto quisquam magnam. Quo dolor iure odit rerum molestias natus possimus deleniti reiciendis consequuntur. Consequuntur laboriosam ducimus, numquam, saepe iusto sunt modi unde quas, ad consectetur neque nostrum distinctio dolorum. Perspiciatis placeat quam necessitatibus pariatur consectetur facilis eos quisquam? Eum fuga neque modi iste repellat officia accusamus consectetur molestias porro suscipit quae accusantium, non illum eaque cupiditate id dolores pariatur recusandae doloremque voluptate itaque! Facere, dicta nostrum nobis natus consectetur provident dolorum, fugiat cupiditate necessitatibus minus perferendis sapiente, a laboriosam? Quasi vel nostrum repellendus aliquid dolor minus, nesciunt itaque iste ab enim iusto quaerat non cum voluptas adipisci deleniti nisi labore aliquam architecto assumenda ullam nulla. Nisi ratione sequi aperiam quam maxime voluptates labore qui expedita aliquam deserunt quos, excepturi ipsum repellendus iure laudantium cumque sint reiciendis? Cupiditate, quas dignissimos! Earum deserunt sint nemo modi quisquam doloribus consequuntur, odio, minima velit eum adipisci laborum facilis perspiciatis placeat iste animi? At quas optio, minima impedit vero qui earum voluptatibus repudiandae facilis repellat nobis ipsam natus eius quod! Deserunt maiores laborum quibusdam earum tenetur exercitationem excepturi pariatur, sed explicabo quis, odit quasi quaerat qui, ipsum incidunt beatae velit tempore esse veritatis ea facere necessitatibus nulla. Amet et alias rem odio maiores! Fugiat, animi dignissimos placeat optio sequi, aliquam facere minus sint eos totam veritatis sit eum, quam possimus alias neque suscipit provident adipisci iusto impedit delectus! Dicta aliquid at sit repellendus consequatur in architecto corporis praesentium, sapiente necessitatibus error esse eveniet earum eaque nisi ipsam illo tempore quas, laboriosam saepe dolor. Alias assumenda autem accusamus, ex perspiciatis ipsum quae iure possimus enim dicta similique rerum accusantium aliquam suscipit impedit, delectus quidem iste doloribus. Repellat aspernatur eligendi blanditiis quo tempore, quae ipsa dolore beatae temporibus. Qui assumenda temporibus quos doloribus ipsum magnam. Culpa officiis veniam a maxime. Sapiente voluptatum iusto nostrum libero eligendi voluptate officiis! Tenetur repellendus accusantium eveniet mollitia laudantium veritatis! Corrupti provident tempore molestiae dolorem earum saepe sapiente ratione nesciunt temporibus, in eius impedit aliquid possimus obcaecati, nostrum aperiam nam facere modi deleniti consequuntur veritatis consequatur ipsam vero. Exercitationem officiis quos saepe dolorum, tempora excepturi vero rerum quisquam enim quas ad repudiandae animi iusto tempore temporibus in optio officia eum id velit adipisci, cum impedit eius? Doloremque quod odit praesentium, cumque sed perspiciatis earum reprehenderit quo aperiam sit at voluptas explicabo voluptatum dolores rerum ducimus cum? Unde animi aliquam explicabo quia perferendis laboriosam molestiae nisi quis pariatur quae accusamus libero totam, illo sapiente veritatis ipsa, aut quod asperiores repellat voluptatibus corporis. Commodi nisi deserunt eaque dicta quaerat quia harum laborum ex omnis est cum minus, officia inventore neque porro ducimus in deleniti aliquid consectetur impedit fuga qui. Laborum debitis quae soluta at provident et cupiditate vitae quam blanditiis deleniti ea corrupti, iste asperiores a nemo minima? Praesentium veniam, atque in ea saepe corporis qui tenetur et? Placeat quam autem repudiandae amet repellendus quibusdam dicta, consequuntur aspernatur quos suscipit pariatur at sed, laudantium nostrum ducimus! Cupiditate molestiae dignissimos expedita inventore eligendi vel quidem quia rerum praesentium officia optio assumenda voluptatibus eveniet atque deserunt libero cumque pariatur nulla repellat, voluptate id cum. Voluptatum, laboriosam. Consequuntur aut, accusamus modi, delectus at sit nostrum ratione dicta atque, debitis explicabo animi numquam officia earum! Ut perferendis tempora deleniti quaerat, cupiditate iure harum sed eveniet atque est inventore illo laborum voluptate, iusto non dolores neque voluptatibus deserunt voluptas id soluta vitae explicabo unde. Fugit eius, incidunt distinctio aperiam recusandae ratione reiciendis numquam vero eos neque cupiditate hic voluptates facilis cumque nam tempore dolores qui. Neque quas, aperiam aliquid itaque repellat adipisci! Accusantium quibusdam iste excepturi est? Unde tempore autem mollitia nisi consequatur minus! Doloribus odit nostrum optio nesciunt, quia placeat? Animi sunt, libero, odio corrupti sed magni labore repellat consectetur neque mollitia veniam reprehenderit. Dolor ipsum qui, recusandae tempora enim voluptates velit voluptatum numquam, eligendi ad corporis ut praesentium quis atque. Tempora ad voluptatum, adipisci optio et natus placeat distinctio corrupti nostrum necessitatibus, hic voluptas, minus accusantium deleniti perferendis explicabo dignissimos ipsum. Iste laborum nobis illo, beatae temporibus blanditiis repudiandae corrupti maxime officia asperiores. Tempore assumenda saepe sit quaerat velit nostrum animi provident distinctio dolorem repellendus aliquid voluptas culpa earum dolore eaque, excepturi suscipit rem aspernatur numquam perspiciatis voluptatum? Tempora blanditiis autem assumenda voluptatem a saepe iusto officiis! Mollitia minus deleniti saepe repellendus molestias sunt suscipit, sapiente itaque iusto nisi? Error aperiam sit itaque facere. Deserunt quibusdam possimus corporis, perferendis voluptatibus doloribus beatae facilis, esse nam sint aspernatur deleniti? Quam quod explicabo excepturi, sequi nostrum architecto illo iure nemo! Laboriosam aliquam, quos, necessitatibus laudantium ea vero explicabo itaque sunt excepturi accusamus atque, nihil tempora dicta libero molestiae veritatis possimus cum sed amet voluptate. Ipsum ut, reiciendis ipsam modi velit laborum veniam magni iusto quam nihil eveniet repellat laudantium officiis nam, esse nobis non. Placeat iste deserunt inventore minus repellat similique at consequuntur quia esse excepturi possimus pariatur ex libero hic, molestiae recusandae id eum, tempore eligendi harum quo in quidem. Nisi aliquam molestias minus maiores amet, fugit deserunt quia dolores obcaecati delectus! Porro, voluptatum nulla architecto fugiat nihil quae, ab consequuntur itaque voluptatibus exercitationem inventore iste commodi libero maiores. Itaque sed beatae numquam aspernatur fuga provident, totam minus architecto officiis asperiores maiores sunt repellendus consequuntur odit ipsum deserunt dolore aperiam accusantium voluptatibus ratione quaerat accusamus atque. Ad beatae eos itaque quod natus sint a corporis maxime, nam quibusdam magnam possimus dolores nostrum nobis modi, dicta placeat? Quaerat ab nemo mollitia, aperiam odio commodi, atque eaque itaque fuga quo, at ut quia. Accusamus dicta beatae ad in facere dolores delectus nostrum rem, pariatur repellendus nisi eligendi? Error vero delectus quidem corporis ea, maxime distinctio, a eaque itaque possimus ab aliquid? Ab, ea eaque incidunt tempora doloribus dignissimos qui amet reiciendis consequuntur odio! Id ex, soluta quidem quos libero reiciendis numquam. Ullam nisi nam eos magnam aspernatur, voluptas et ratione, culpa enim, rem pariatur ea ex distinctio cupiditate doloribus. Numquam id fugiat nostrum ducimus. Repellat eum adipisci tenetur earum! Perspiciatis necessitatibus accusantium maxime minima beatae perferendis possimus. Porro quas earum, obcaecati, ipsa, hic consectetur minus assumenda asperiores libero fuga esse corporis. Corporis non nemo iusto! Eaque qui cumque ullam, corporis ipsa nisi beatae, debitis ratione, molestiae dolor quos dolores doloribus iusto sed non officiis saepe! Quis corrupti tenetur eveniet optio repellat aspernatur facilis consequuntur, consectetur amet vitae, cumque autem culpa unde commodi nisi laborum aliquid error perferendis. Sit facilis quae expedita assumenda, possimus accusamus labore pariatur quo fugiat provident fuga incidunt autem! Aliquid, ea in eveniet aliquam quod ipsa vitae, iusto iure cupiditate tempora esse ullam reprehenderit neque quia sunt maxime? Maiores earum dolor ipsum laboriosam dolorum repudiandae alias quod nihil ad fuga. Molestias itaque aut, facilis voluptatum libero quasi iusto officia ad, debitis aliquam assumenda obcaecati sunt at, fugit omnis. Tenetur, consectetur eum! Dignissimos unde quod odio fugiat sunt molestias quia ipsum architecto, odit voluptatem culpa ipsa corrupti iste nam nesciunt quam vel adipisci. Officia aliquam quibusdam adipisci. Provident, vero labore? Recusandae cupiditate at qui consectetur, fugiat ipsa quia dolore consequatur, culpa esse officiis laudantium dolorum. Sapiente at corrupti cupiditate facilis rem magni ad perferendis. Repudiandae, itaque praesentium consectetur impedit tempora quia eveniet eius, nobis molestiae ab asperiores fugiat incidunt, at dignissimos excepturi ratione voluptate voluptatibus soluta veritatis beatae enim ipsum! Sapiente praesentium dolorem quos qui atque assumenda, ratione architecto cum rem pariatur dolores! Facilis vero eligendi cum. Amet iusto tenetur, similique nulla quas iure reprehenderit, non voluptates, doloribus sint nostrum? Accusamus possimus accusantium, asperiores ut, esse omnis tempore atque mollitia dolor reprehenderit vero, pariatur corrupti deserunt doloremque quidem. Cupiditate incidunt debitis ab odio sed. Placeat accusamus aspernatur voluptatem in velit aut magnam incidunt suscipit ratione hic provident laborum maiores corrupti, molestiae illo ab cumque magni est quis, saepe atque! Ad provident iure cupiditate pariatur sapiente odit in labore. Laboriosam, deserunt saepe doloribus dolores, amet error consequatur minus, ipsam repudiandae minima aspernatur vitae eos quod quia! Hic ipsa possimus tenetur, eum praesentium aliquid rerum modi ea ex labore blanditiis neque dicta tempora iusto sunt deserunt vitae, officiis, dolorem voluptate. Itaque, ullam molestias. Accusamus expedita dicta, suscipit quis minima eos voluptates possimus officiis obcaecati tenetur consectetur architecto vitae libero ipsam labore harum quos non rem id fugiat ducimus dolore voluptatum nobis voluptate. Sunt atque delectus nam fuga minima ipsa explicabo doloremque voluptates illum, sit neque, mollitia dolore voluptatibus! Ullam assumenda aliquid, nesciunt reiciendis aperiam quam. Quae consequuntur quasi quod at aspernatur ducimus distinctio modi, nesciunt nulla alias non repellat, ullam adipisci animi voluptate hic iusto velit? Velit, ducimus, corrupti perferendis repellat fugiat, praesentium aperiam aspernatur ex temporibus nulla accusantium voluptas mollitia tempora sapiente? Quasi iure aliquid, vitae asperiores voluptatibus eveniet esse ratione tenetur, quae beatae maxime amet laboriosam. Animi, quaerat excepturi? Architecto quae numquam, rem alias perspiciatis ullam fugiat saepe quidem similique quas nulla ducimus nihil, modi sapiente, asperiores et delectus magnam. Explicabo, esse rerum, iure expedita voluptatem nemo eius et provident adipisci delectus, hic possimus maxime sequi reprehenderit commodi distinctio asperiores voluptate at rem minima eaque est velit in consequatur! Incidunt autem laborum rerum accusamus? Placeat sint, doloribus esse atque temporibus eum perspiciatis voluptates, officiis dolorum quo soluta aliquam iure corporis, laboriosam alias mollitia delectus iste veritatis dolor sequi optio fugit! Facere, labore consequatur. Voluptate numquam maiores, asperiores nulla, obcaecati explicabo impedit eveniet accusantium sequi aliquid, odio nobis mollitia quam nihil! Error, a modi doloribus accusantium impedit ipsum iusto tempora, nobis, fugit earum minus voluptatibus eum fugiat dolorem suscipit dicta consectetur enim. Nam dolorem dolorum molestias delectus, maiores quia impedit facilis! Repellat maxime nobis et ex repudiandae architecto, fugiat eligendi similique pariatur libero sapiente eius mollitia est, veritatis quam. Dolor tempora vel accusantium itaque magnam eaque quia nostrum harum. Molestiae voluptate optio animi consectetur labore, facere enim inventore placeat quaerat. Neque, sint? Laboriosam explicabo doloremque, ex odit, eligendi iusto aut nostrum iste illum aliquid ad repellendus suscipit earum, molestias vel? Rem odio officia soluta nobis natus facilis cupiditate quod debitis mollitia, aliquid neque velit. Explicabo, delectus minima. Ea facilis numquam assumenda deserunt eligendi minus, possimus distinctio molestias unde veniam dolorem, ducimus earum accusantium fuga. Doloremque perferendis excepturi rem nesciunt ea, inventore nihil placeat ipsa omnis sunt possimus amet autem iste voluptate maxime itaque at nisi, blanditiis eaque pariatur harum maiores quae reprehenderit hic? Corrupti iusto quam vel tempore esse, consequatur quasi exercitationem porro totam laborum necessitatibus. Quae, similique, perferendis doloribus aliquid accusamus iusto a repellendus facilis ex voluptatibus ullam possimus qui maxime quasi quia quidem sed nobis, temporibus quos assumenda odit minima laboriosam esse aspernatur. Magnam reiciendis repellat a, excepturi officia laudantium adipisci provident doloremque, harum ratione nesciunt voluptas omnis voluptatem neque. Quam quidem officiis, quibusdam soluta magnam ipsam, esse a saepe deserunt accusamus porro sunt corrupti ducimus blanditiis impedit magni enim nostrum consectetur laborum, fugit quae. Atque libero sequi veritatis inventore. Doloribus, repudiandae. Eveniet dolore eius quam voluptatum laboriosam. Repellendus reiciendis expedita cupiditate doloremque quod tenetur voluptatem sint quas corporis, atque sequi neque suscipit aliquam assumenda asperiores nulla, enim incidunt voluptatibus! Ea dolorem ullam id, facere incidunt sunt cupiditate, culpa tempore cumque, optio fugit animi in veritatis possimus laudantium pariatur voluptate recusandae assumenda eum temporibus. Nobis sequi repellat ab reprehenderit cum veritatis saepe iure porro cupiditate consequuntur, perspiciatis dolorem neque sunt quam deleniti quod aliquid numquam optio velit possimus. Dolorum ducimus velit iste magni ea ex nam consectetur saepe dolore omnis aut, at porro accusantium repellendus architecto libero, maxime excepturi officiis. Deserunt, blanditiis consectetur odio hic aliquid quos est optio ipsam sed incidunt culpa minima doloremque. Earum similique illo atque sapiente mollitia pariatur omnis ea voluptates ab itaque perferendis, quidem in repellat recusandae deleniti velit maxime, alias, eius ipsam odit saepe corporis ut dolorum! Quasi consequatur eos iusto, eaque quaerat labore modi nobis corrupti enim, corporis itaque? Modi nisi dolor animi. Placeat labore possimus, delectus debitis, nisi animi sunt obcaecati voluptatem eius facilis veniam perferendis pariatur, deserunt quia et iure voluptates temporibus. Excepturi soluta quod vitae quidem vel a beatae ipsam aliquid quo ipsum deleniti nemo assumenda ducimus eos alias, ex perferendis non qui corporis mollitia. Dolor dolorem sequi doloribus doloremque soluta deserunt culpa repellat sit distinctio libero ullam a delectus cupiditate, veniam laboriosam fugiat perferendis modi dicta laborum animi tenetur. Veniam hic id ratione aliquam fuga harum qui distinctio aut soluta ullam! Accusantium dicta voluptatibus ullam non suscipit, similique illo sit vero delectus rerum doloremque maiores nemo earum nam dignissimos recusandae, cupiditate, asperiores fuga. Dolore deserunt suscipit officiis animi optio, error nulla similique ratione neque rem molestias dolores autem voluptate assumenda voluptas beatae deleniti labore illo aspernatur atque consequuntur accusantium non architecto. Eligendi alias odio aliquid nam magnam? Similique nobis ipsum quam aperiam recusandae veritatis, maxime exercitationem commodi optio iure minima totam, asperiores ratione iusto assumenda tempore. Id quasi distinctio nulla magni odio at eligendi laborum qui nihil atque unde quos suscipit quam aperiam, temporibus provident necessitatibus, debitis tenetur vero asperiores esse beatae modi. Doloribus perspiciatis ea architecto nemo voluptatum! Tenetur porro iusto quo, aliquid repellendus ullam aspernatur quidem consequuntur magni soluta, dolores placeat, recusandae velit voluptatum maiores. Est illo inventore vero voluptates laborum error, nihil iusto ad maxime magnam debitis maiores voluptatibus vel qui? Dolore commodi veritatis dicta amet inventore aspernatur earum debitis ad, tenetur mollitia, est labore magnam illo perspiciatis veniam voluptatibus odio at sed pariatur, tempore ratione sit placeat? Sunt nemo assumenda sed corporis ullam nam, laborum cum sint expedita consectetur. Quibusdam culpa ullam dolores illo provident iste a rem consequatur! Voluptatibus incidunt nam repellat quas quaerat et, consectetur, totam ea molestiae at culpa alias excepturi, quo sed! Numquam laudantium expedita consequatur dicta, illum excepturi ipsa suscipit modi, itaque quia voluptatum iusto fugit quam ullam sunt doloremque sequi officia facere dolorum officiis nisi reiciendis cum quo veritatis. Id, veritatis perspiciatis. Maxime molestias nobis quasi cumque ipsum placeat non, vero, corporis repellendus blanditiis labore eum accusantium omnis aliquam vitae voluptatum ullam esse quaerat aut. Ullam voluptatum eveniet cupiditate perferendis nihil necessitatibus ratione sunt quidem debitis dolor quis asperiores officiis accusamus illum nisi consectetur error magni, quaerat quasi ab tenetur ea non? Accusamus vel modi provident molestiae, eius ad adipisci illum laborum numquam eum laudantium sequi voluptates dolorum, veniam repellendus repudiandae ab doloremque? Magni itaque praesentium dicta earum maiores adipisci explicabo debitis dignissimos, ipsa est, vel assumenda quod ex natus provident rerum. Consequuntur nesciunt quaerat exercitationem, eos sapiente at suscipit facere ipsum velit laboriosam itaque, laborum, ullam obcaecati. Non explicabo, dicta natus architecto hic, pariatur voluptas nisi reprehenderit tenetur fugit tempore earum ipsa consequuntur nam! Aliquid consequuntur eum voluptas omnis assumenda error nesciunt, nam labore delectus dicta deserunt facilis temporibus pariatur amet iste, itaque ea hic consectetur ipsa quis odio? Quis reprehenderit pariatur quibusdam error ducimus esse, eligendi hic, cum voluptate repellat quos quaerat delectus fugiat illum. Ullam reiciendis eius nihil neque id eaque fugit iusto cumque saepe quis in doloribus facilis labore aliquid iste magnam, nulla quaerat corrupti, quasi cum. Distinctio minima assumenda error! Doloremque sint assumenda optio, beatae laborum numquam deserunt aut facere, quo harum ipsam sapiente recusandae sunt iste nobis quisquam consequuntur distinctio quidem laudantium. Voluptatem, nam. Quae veniam ullam, atque labore odit perspiciatis animi tenetur? Suscipit dolorem totam doloribus aliquid earum maxime id impedit, quis assumenda dignissimos ab fugiat saepe tenetur et. Quas qui accusantium earum illo dolorem? Quod doloremque numquam eligendi? Voluptatem, dicta, eligendi provident et sint suscipit aperiam alias placeat at magnam deserunt commodi dolorum quae? Omnis provident est obcaecati, fugit ullam totam unde rerum quibusdam dolores veniam sunt excepturi quia culpa autem tempore eligendi blanditiis eaque debitis praesentium aut qui recusandae corporis molestiae. Ratione, consequuntur. Minima incidunt debitis labore voluptatum sed harum sapiente maiores aspernatur fuga nisi sit nesciunt totam culpa reprehenderit, commodi, amet ab vitae. Exercitationem harum, necessitatibus porro alias quia possimus corporis in culpa nobis, perspiciatis dolorum magni provident consectetur aspernatur illo soluta laborum eius voluptate? Placeat facere neque dicta atque repudiandae cumque delectus adipisci omnis! Laudantium, molestiae alias fugiat, hic cum qui laborum, deserunt explicabo voluptatem voluptates repellendus provident fugit quod temporibus quasi culpa inventore aperiam corrupti soluta eaque ab rem. Eius, harum quaerat temporibus vitae officia quae, reiciendis libero excepturi doloribus, amet mollitia maiores necessitatibus inventore laboriosam dolorem facilis quis ipsam! Quis asperiores inventore aliquid quibusdam voluptas a obcaecati ducimus, laboriosam numquam! Cumque sunt illum quibusdam, veritatis et esse praesentium ad natus blanditiis at reiciendis vel, voluptas molestiae. Non, voluptates? Eveniet non temporibus consequatur cumque ab tenetur architecto voluptas, itaque dolor in autem, incidunt natus. Quasi vel quae eum laudantium qui fugit aliquid, perspiciatis placeat ex, accusamus quibusdam velit ipsum aut animi repellat, hic possimus maxime enim corporis quisquam architecto vero molestiae! Reiciendis aliquid minima accusamus ab quos! Culpa fugit rerum iure eius magni ipsa sapiente minus expedita optio, aut excepturi necessitatibus sunt porro voluptatum minima officiis reprehenderit adipisci sequi. Eum, voluptates sunt ipsum, recusandae neque ex omnis doloremque voluptatum nostrum eos incidunt adipisci animi. Expedita obcaecati quidem excepturi exercitationem voluptate, quasi ut iusto aliquid delectus, tempora fugit voluptatibus iure odit maiores mollitia praesentium rem nulla. Aliquid, culpa facere ex architecto ipsam vitae beatae, labore deserunt atque voluptatibus iste ratione dolorem odit tempore soluta corporis totam incidunt. Aperiam quidem nobis iure ad quod, modi eos consequuntur blanditiis aliquid repellat facilis eum alias illum rerum ab non dicta expedita nihil quis necessitatibus ullam incidunt. Aliquid dicta aperiam laboriosam doloribus, exercitationem eligendi voluptate repudiandae, error minima rerum soluta architecto incidunt similique, quisquam dolorem nostrum. Nisi dolorem accusantium sed labore molestias illo laudantium impedit? Ipsam perspiciatis enim laboriosam provident laudantium voluptates facilis, distinctio magnam accusantium voluptatum quo velit doloribus ex. Consectetur similique non, aut quisquam saepe iste explicabo minus ullam, ex in quibusdam odio nemo? Ex fuga necessitatibus accusamus dignissimos, tenetur quaerat asperiores laborum autem doloremque ab.
+                .container
+                    .accordeon-section
+                        p.accordeon-title.title--main JS
+                            button.accordeon-button
+                        .accordeon-container
+                            p ../src/js/modules/modal.js
+                            p.
+                                <pre>
+                                    const modal = new Modal({
+                                            isOpen: (modal) => {
+                                                console.log(modal);
+                                                console.log("opened");
+                                            },
+                                            isClose: () => {
+                                                console.log("closed");
+                                            },
+                                        });
+                                </pre>
+                    .accordeon-section
+                        p.accordeon-title.title--main PUG / HTML
+                            button.accordeon-button
+                        .accordeon-container
+                            p ../src/js/modules/modal.js
+                            p.
+                                <pre>
+                                button.modal-btn.btn(data-path="first" data-animation="fadeInUp" data-speed="1500")
+                                    Открыть окно 1
+                                button.modal-btn.btn(data-path="first" data-animation="fade" data-speed="300")
+                                    Открыть окно 1
+                                button.modal-btn.btn.btn--green(data-path="second")
+                                    Открыть окно 2
+                                </pre>
+                            p <b>data-speed</b> - указывается в миллисекундах, подставляется в атрибут style модального окна .modal__window, отвечает за скорость анимации открытия окна
+                            p <b>data-path</b> - указывается значение data-target окна .modal__container, которое будет открыто данной кнопкой
+                            p <b>data-animation</b> - указывается класс, отвечающий за анимацию, например - "fadeIn". По умолчанию "fade"
+                            p.
+                                <pre>
+                                    .modal.is-open(style="--transition-time:1.5s;")
+                                </pre>
+                            p Условный класс-хелпер is-open определяет открыто ли окно, и, если true, то растягивает на все окно overlay
+                            p В атрибут style записывается переменная, отражающая время анимации всех вложенных элементов, имеющих кастомное поведение
+                            p.
+                                <pre>
+                                    .modal__container.modal-open.fadeInUp.animate-open(data-target="first")
+                                </pre>
+                            p Блок .modal__container - блок, содержащий контент модального окна.
+                            p .modal-open хелпер для определения отркто ли окно
+            .card--stack.tabs__item(id="chart")
+                h1.title График ChartJS
+                .tabs__container.chart-tabs
+                    .tabs__buttons.chart-buttons
+                        button(data-id="chart-code").settings__tabs-btn.chart-btn JS
+                        button(data-id="chart-html").settings__tabs-btn.chart-btn HTML
+                        button(data-id="chart-result").settings__tabs-btn.chart-btn Result
+                    .tabs__content.chart-tab-content
+                        .chart-tab.tabs__item.tabs__item--active(id="chart-code")
+                            p.
+                                <pre>
+                                    let ctx = document.getElementById("myChart");
+                                        let myChart = new Chart(ctx, {
+                                            type: "line",
+                                            data: {
+                                                labels: ["10:00", "12:00", "14:00", "16:00", "18:00"],
+                                                datasets: [
+                                                    {
+                                                        data: [8.8, 6.5, 5.2, 3.7, 8],
+                                                        backgroundColor: "#c3cad6",
+                                                        fill: "#c3cad6",
+                                                        borderColor: ["#c3cad6"],
+                                                        borderWidth: 2,
 
-
-        .card--stack.tabs__item(id="modals")
-            h1.title Список страниц
-        .card--stack.tabs__item(id="datetime")
-            h1.title Список страниц
-        .card--stack.tabs__item(id="chart")
-            h1.title Список страниц
-        .card--stack.tabs__item(id="progress")
-            h1.title Список страниц
-        .card--stack.tabs__item(id="tabs")
-            h1.title Список страниц
-        .card--stack.tabs__item(id="socials")
-            h1.title Список страниц
-        .card--stack.tabs__item(id="links")
-            h1.title Список страниц
-        .card--stack.tabs__item(id="cards")
-            h1.title Список страниц
-        .card--stack.tabs__item(id="range")
-            h1.title Список страниц
-        .card--stack.tabs__item(id="options")
-            h1.title Список страниц
-        .card--stack.tabs__item(id="scrollbar")
-            h1.title Список страниц
-        .card--stack.tabs__item(id="accordion")
-            h1.title Список страниц
-        .card--stack.tabs__item(id="sidebar")
-            h1.title Список страниц
+                                                        pointBackgroundColor: ["#c3cad6"],
+                                                        pointBorderWidth: 3,
+                                                        pointBorderColor: "#c3cad6",
+                                                    },
+                                                ],
+                                            },
+                                            options: {
+                                                responsive: true,
+                                                legend: {
+                                                    display: false,
+                                                },
+                                            },
+                                        });
+                                </pre>
+                        .chart-tab.tabs__item(id="chart-html")
+                            p.
+                                <pre>
+                                        canvas#myChart
+                                </pre>
+                        .chart-tab.tabs__item(id="chart-result")
+            .card--stack.tabs__item(id="progress")
+                h1.title Список страниц
+            .card--stack.tabs__item(id="tabs")
+                h1.title Список страниц
+            .card--stack.tabs__item(id="socials")
+                h1.title Список страниц
+            .card--stack.tabs__item(id="links")
+                h1.title Список страниц
+            .card--stack.tabs__item(id="cards")
+                h1.title Список страниц
+            .card--stack.tabs__item(id="range")
+                h1.title Список страниц
+            .card--stack.tabs__item(id="options")
+                h1.title Список страниц
+            .card--stack.tabs__item(id="scrollbar")
+                h1.title Список страниц
+            .card--stack.tabs__item(id="accordion")
+                h1.title Список страниц
+            .card--stack.tabs__item(id="sidebar")
+                h1.title Список страниц

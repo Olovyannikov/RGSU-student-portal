@@ -1,26 +1,19 @@
-.modal {
-    background: #fff;
-    z-index: 999;
-    position: fixed;
-    width: 401px;
-    height: auto;
-    top: 25%;
-    left: 50%;
-    margin: 0 auto;
-    margin-left: -200px;
+.modal__login {
     display: none;
-    @media (max-width: $mobile) {
-        max-width: 90%;
-        margin-left: -45%;
-    }
+    position: absolute;
+    z-index: 1000;
+    left: 50%;
+    margin-left: -200px;
+    width: auto;
+    height: auto;
+    animation: fadeIn .5s;
 }
 
 .modal--active {
     display: block;
-    animation: fadeIn 0.8s;
 }
 
-.modal__close {
+.modal-close {
     @include btn-reset;
     font-size: 0;
     position: absolute;
@@ -209,7 +202,6 @@
     }
 }
 
-
 @keyframes dash {
     0% {
         stroke-dashoffset: 0;
@@ -228,10 +220,115 @@
     0% {
         opacity: 0;
     }
-    20%, 80% {
+    20%,
+    80% {
         opacity: 1;
     }
     100% {
         opacity: 0;
     }
+}
+
+//plugin
+
+.modal {
+    --transition-time: 0.3s;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1000;
+    cursor: pointer;
+    overflow-y: auto;
+    overflow-x: hidden;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity var(--transition-time), visibility var(--transition-time);
+
+}
+
+.modal::before {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+}
+
+.modal__container {
+    position: relative;
+    width: auto;
+    height: auto;
+    margin: 50px auto;
+    display: none;
+    vertical-align: middle;
+    cursor: default;
+    text-align: left;
+    @extend .card--stack
+}
+
+@media (max-width: 1024px) {
+    .modal__container {
+        width: 90%;
+    }
+}
+
+.modal.is-open {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity var(--transition-time), visibility var(--transition-time);
+}
+
+.modal__container.modal-open {
+    display: block;
+    position: absolute;
+    width: auto;
+    height: auto;
+    top: 0;
+    left: 50%;
+    z-index: 1001;
+    padding: 40px 20px;
+
+    transform: translateX(-50%);
+}
+
+.modal-open {
+    .modal {
+        opacity: 1;
+    }
+}
+
+.fade {
+    opacity: 0;
+    transition: opacity var(--transition-time);
+}
+
+.fade.animate-open {
+    opacity: 1;
+    transition: opacity var(--transition-time);
+}
+
+.fadeInUp {
+    opacity: 0;
+    transition: opacity var(--transition-time), transform var(--transition-time);
+}
+
+.fadeInUp.animate-open {
+    opacity: 1;
+    transition: opacity var(--transition-time), transform var(--transition-time);
+}
+
+*:focus {
+    outline: 1px solid rgba(156,186,240,.5);
+}
+
+
+.disable-scroll {
+    overflow: hidden;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
 }

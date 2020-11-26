@@ -91,7 +91,7 @@ img {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.15);
     z-index: 20;
     transition: 0.3s all;
     &.active {
@@ -188,7 +188,7 @@ select {
     box-sizing: border-box;
     border-radius: 4px;
     cursor: pointer;
-    background: url(../img/icons/icons.svg#vector) 95% center/11px no-repeat;
+    background: url('../img/icons/icons.svg#vector') 95% center/11px no-repeat;
     &:focus,
     &:hover {
         border-color: $c-blue;

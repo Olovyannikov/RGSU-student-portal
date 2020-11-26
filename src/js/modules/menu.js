@@ -3,7 +3,7 @@ export default () => {
     let menuToggler = document.querySelector(`.js-menu-toggler`);
     let menuLinks = document.querySelectorAll(`.js-menu-link`);
     let modalLink = document.querySelector(".js-menu-login");
-    let modal = document.querySelector(".modal");
+    let modal = document.querySelector(".modal__login");
     let modalClose = document.querySelector(".js-close-button");
     let overlay = document.querySelector("#overlay-modal");
     let sideBar = document.querySelector(".page-header__sidebar-toggler");
@@ -96,7 +96,7 @@ document.body.addEventListener(
         let key = e.keyCode;
 
         if (key == 27) {
-            document.querySelector(".modal").classList.remove("modal--active");
+            document.querySelector(".modal__login").classList.remove("modal--active");
 
             document.querySelector(".overlay").classList.remove("active");
             document

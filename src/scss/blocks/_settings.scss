@@ -95,7 +95,7 @@
     }
 }
 .ios-toggle:checked + label.settings__tab-toggle {
-    background-color: #40e699;
+    background-color: $c-darkgrey;
     transition: 0s background 0s ease-in-out;
     &:after {
         transform: translateX(20px);

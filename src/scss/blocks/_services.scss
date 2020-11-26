@@ -37,6 +37,9 @@
   overflow: hidden;
   width: 100%;
   background-color: #fff;
+    &:visited {
+        color: $c-black;
+    }
 }
 .service__name {
   font-style: normal;

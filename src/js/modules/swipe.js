@@ -1,13 +1,11 @@
-import Swiper, {Navigation, Pagination} from "swiper";
+import Swiper, {Navigation, Pagination, Mousewheel} from "swiper";
 
 export default () => {
-    Swiper.use([Navigation, Pagination]);
+    Swiper.use([Navigation, Pagination, Mousewheel]);
 
-    let newsblock = new Swiper('.news__wrapper', {
+    let newsblock = new Swiper('.news__slider-other', {
         slidesPerView: 'auto',
         spaceBetween: 30,
-
-
         breakpoints: {
             768: {
                 spaceBetween: 20,slidesPerView: 'auto',
@@ -40,7 +38,7 @@ export default () => {
         mousewheel: true,
     });
 
-    let news = new Swiper('.news__container', {
+    let news = new Swiper('.news__slider', {
         slidesPerView: 'auto',
         spaceBetween: 30,
         mousewheel: true,
@@ -111,6 +109,7 @@ export default () => {
         slidesPerGroup: 6,
         spaceBetween: 30,
         loop: 'true',
+        mousewheel: true,
         pagination: {
             el: '.swiper-pagination',
             clickable: true,
