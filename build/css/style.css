@@ -645,7 +645,7 @@ body {
   font-style: normal;
   font-weight: 300;
   color: #444444;
-  background: #f8fafe;
+  background: #f1f4f9;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -653,6 +653,7 @@ body {
 
 a {
   text-decoration: none;
+  color: #444444;
 }
 
 img {
@@ -785,12 +786,7 @@ input:not([type="range"])[type="password"] {
   padding: 9px 3px 8px 15px;
 }
 
-input:not([type="range"]):hover {
-  border-color: #3464e0;
-  -webkit-box-shadow: 0 0 0 1px rgba(156, 186, 240, 0.5);
-          box-shadow: 0 0 0 1px rgba(156, 186, 240, 0.5);
-}
-
+input:not([type="range"]):hover,
 input:not([type="range"]):focus {
   border-color: #3464e0;
   -webkit-box-shadow: 0 0 0 2px rgba(156, 186, 240, 0.5);
@@ -798,16 +794,17 @@ input:not([type="range"]):focus {
   outline: none;
 }
 
-input:not([type="range"]):focus:invalid:not(:-moz-placeholder-shown) {
+input:not([type="range"]):hover:invalid:not(:-moz-placeholder-shown), input:not([type="range"]):focus:invalid:not(:-moz-placeholder-shown) {
   border-color: #E06364;
   box-shadow: 0 0 0 2px rgba(224, 99, 100, 0.5);
 }
 
-input:not([type="range"]):focus:invalid:not(:-ms-input-placeholder) {
+input:not([type="range"]):hover:invalid:not(:-ms-input-placeholder), input:not([type="range"]):focus:invalid:not(:-ms-input-placeholder) {
   border-color: #E06364;
   box-shadow: 0 0 0 2px rgba(224, 99, 100, 0.5);
 }
 
+input:not([type="range"]):hover:invalid:not(:placeholder-shown),
 input:not([type="range"]):focus:invalid:not(:placeholder-shown) {
   border-color: #E06364;
   -webkit-box-shadow: 0 0 0 2px rgba(224, 99, 100, 0.5);
@@ -2939,7 +2936,6 @@ textarea:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  overflow-y: hidden;
 }
 
 .classmates__title {
@@ -3059,10 +3055,6 @@ textarea:hover {
   width: 100%;
 }
 
-.services__slider {
-  margin-bottom: 32px;
-}
-
 .service {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3073,10 +3065,21 @@ textarea:hover {
   overflow: hidden;
   width: 100%;
   background-color: #fff;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
 }
 
 .service:visited {
   color: #444444;
+}
+
+.service:hover {
+  -webkit-box-shadow: 0 5px 20px rgba(110, 119, 129, 0.1);
+          box-shadow: 0 5px 20px rgba(110, 119, 129, 0.1);
+  -webkit-transform: scale(1.01);
+      -ms-transform: scale(1.01);
+          transform: scale(1.01);
 }
 
 .service__name {
@@ -3349,12 +3352,18 @@ textarea:hover {
 .slider__item-title {
   margin: 0;
   max-width: 285px;
-  min-width: 215px;
+  min-width: 330px;
   font-style: normal;
   font-weight: normal;
   font-size: 1.25rem;
   line-height: 26px;
   color: #ffffff;
+}
+
+.slider__item-title--black {
+  color: #6e7781;
+  font-size: 1.25rem;
+  line-height: 26px;
 }
 
 .slider__item-descr {
@@ -4253,7 +4262,7 @@ textarea:hover {
   width: 136px;
   height: 136px;
   border-radius: 50%;
-  background-color: #ddd;
+  background-color: #f1f4f9;
 }
 
 .progress--circle:after {
@@ -4276,113 +4285,113 @@ textarea:hover {
 }
 
 .progress--circle.progress--0:after {
-  background-image: -webkit-gradient(linear, left top, right top, color-stop(50%, #ddd), color-stop(50%, transparent), to(transparent)), -webkit-gradient(linear, left top, right top, color-stop(50%, #2bc584), color-stop(50%, #ddd), to(#ddd));
-  background-image: -o-linear-gradient(left, #ddd 50%, transparent 50%, transparent), -o-linear-gradient(left, #2bc584 50%, #ddd 50%, #ddd);
-  background-image: linear-gradient(90deg, #ddd 50%, transparent 50%, transparent), linear-gradient(90deg, #2bc584 50%, #ddd 50%, #ddd);
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(50%, #f1f4f9), color-stop(50%, transparent), to(transparent)), -webkit-gradient(linear, left top, right top, color-stop(50%, #2bc584), color-stop(50%, #f1f4f9), to(#f1f4f9));
+  background-image: -o-linear-gradient(left, #f1f4f9 50%, transparent 50%, transparent), -o-linear-gradient(left, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background-image: linear-gradient(90deg, #f1f4f9 50%, transparent 50%, transparent), linear-gradient(90deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
 }
 
 .progress--circle.progress--5:after {
-  background-image: -o-linear-gradient(left, #ddd 50%, transparent 50%, transparent), -o-linear-gradient(342deg, #2bc584 50%, #ddd 50%, #ddd);
-  background-image: linear-gradient(90deg, #ddd 50%, transparent 50%, transparent), linear-gradient(108deg, #2bc584 50%, #ddd 50%, #ddd);
+  background-image: -o-linear-gradient(left, #f1f4f9 50%, transparent 50%, transparent), -o-linear-gradient(342deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background-image: linear-gradient(90deg, #f1f4f9 50%, transparent 50%, transparent), linear-gradient(108deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
 }
 
 .progress--circle.progress--10:after {
-  background-image: -o-linear-gradient(left, #ddd 50%, transparent 50%, transparent), -o-linear-gradient(324deg, #2bc584 50%, #ddd 50%, #ddd);
-  background-image: linear-gradient(90deg, #ddd 50%, transparent 50%, transparent), linear-gradient(126deg, #2bc584 50%, #ddd 50%, #ddd);
+  background-image: -o-linear-gradient(left, #f1f4f9 50%, transparent 50%, transparent), -o-linear-gradient(324deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background-image: linear-gradient(90deg, #f1f4f9 50%, transparent 50%, transparent), linear-gradient(126deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
 }
 
 .progress--circle.progress--15:after {
-  background-image: -o-linear-gradient(left, #ddd 50%, transparent 50%, transparent), -o-linear-gradient(306deg, #2bc584 50%, #ddd 50%, #ddd);
-  background-image: linear-gradient(90deg, #ddd 50%, transparent 50%, transparent), linear-gradient(144deg, #2bc584 50%, #ddd 50%, #ddd);
+  background-image: -o-linear-gradient(left, #f1f4f9 50%, transparent 50%, transparent), -o-linear-gradient(306deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background-image: linear-gradient(90deg, #f1f4f9 50%, transparent 50%, transparent), linear-gradient(144deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
 }
 
 .progress--circle.progress--20:after {
-  background-image: -o-linear-gradient(left, #ddd 50%, transparent 50%, transparent), -o-linear-gradient(288deg, #2bc584 50%, #ddd 50%, #ddd);
-  background-image: linear-gradient(90deg, #ddd 50%, transparent 50%, transparent), linear-gradient(162deg, #2bc584 50%, #ddd 50%, #ddd);
+  background-image: -o-linear-gradient(left, #f1f4f9 50%, transparent 50%, transparent), -o-linear-gradient(288deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background-image: linear-gradient(90deg, #f1f4f9 50%, transparent 50%, transparent), linear-gradient(162deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
 }
 
 .progress--circle.progress--25:after {
-  background-image: -webkit-gradient(linear, left top, right top, color-stop(50%, #ddd), color-stop(50%, transparent), to(transparent)), -webkit-gradient(linear, left top, left bottom, color-stop(50%, #2bc584), color-stop(50%, #ddd), to(#ddd));
-  background-image: -o-linear-gradient(left, #ddd 50%, transparent 50%, transparent), -o-linear-gradient(top, #2bc584 50%, #ddd 50%, #ddd);
-  background-image: linear-gradient(90deg, #ddd 50%, transparent 50%, transparent), linear-gradient(180deg, #2bc584 50%, #ddd 50%, #ddd);
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(50%, #f1f4f9), color-stop(50%, transparent), to(transparent)), -webkit-gradient(linear, left top, left bottom, color-stop(50%, #2bc584), color-stop(50%, #f1f4f9), to(#f1f4f9));
+  background-image: -o-linear-gradient(left, #f1f4f9 50%, transparent 50%, transparent), -o-linear-gradient(top, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background-image: linear-gradient(90deg, #f1f4f9 50%, transparent 50%, transparent), linear-gradient(180deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
 }
 
 .progress--circle.progress--30:after {
-  background-image: -o-linear-gradient(left, #ddd 50%, transparent 50%, transparent), -o-linear-gradient(252deg, #2bc584 50%, #ddd 50%, #ddd);
-  background-image: linear-gradient(90deg, #ddd 50%, transparent 50%, transparent), linear-gradient(198deg, #2bc584 50%, #ddd 50%, #ddd);
+  background-image: -o-linear-gradient(left, #f1f4f9 50%, transparent 50%, transparent), -o-linear-gradient(252deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background-image: linear-gradient(90deg, #f1f4f9 50%, transparent 50%, transparent), linear-gradient(198deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
 }
 
 .progress--circle.progress--35:after {
-  background-image: -o-linear-gradient(left, #ddd 50%, transparent 50%, transparent), -o-linear-gradient(234deg, #2bc584 50%, #ddd 50%, #ddd);
-  background-image: linear-gradient(90deg, #ddd 50%, transparent 50%, transparent), linear-gradient(216deg, #2bc584 50%, #ddd 50%, #ddd);
+  background-image: -o-linear-gradient(left, #f1f4f9 50%, transparent 50%, transparent), -o-linear-gradient(234deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background-image: linear-gradient(90deg, #f1f4f9 50%, transparent 50%, transparent), linear-gradient(216deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
 }
 
 .progress--circle.progress--40:after {
-  background-image: -o-linear-gradient(left, #ddd 50%, transparent 50%, transparent), -o-linear-gradient(216deg, #2bc584 50%, #ddd 50%, #ddd);
-  background-image: linear-gradient(90deg, #ddd 50%, transparent 50%, transparent), linear-gradient(234deg, #2bc584 50%, #ddd 50%, #ddd);
+  background-image: -o-linear-gradient(left, #f1f4f9 50%, transparent 50%, transparent), -o-linear-gradient(216deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background-image: linear-gradient(90deg, #f1f4f9 50%, transparent 50%, transparent), linear-gradient(234deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
 }
 
 .progress--circle.progress--45:after {
-  background-image: -o-linear-gradient(left, #ddd 50%, transparent 50%, transparent), -o-linear-gradient(198deg, #2bc584 50%, #ddd 50%, #ddd);
-  background-image: linear-gradient(90deg, #ddd 50%, transparent 50%, transparent), linear-gradient(252deg, #2bc584 50%, #ddd 50%, #ddd);
+  background-image: -o-linear-gradient(left, #f1f4f9 50%, transparent 50%, transparent), -o-linear-gradient(198deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background-image: linear-gradient(90deg, #f1f4f9 50%, transparent 50%, transparent), linear-gradient(252deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
 }
 
 .progress--circle.progress--50:after {
-  background-image: -webkit-gradient(linear, right top, left top, color-stop(50%, #2bc584), color-stop(50%, transparent), to(transparent)), -webkit-gradient(linear, right top, left top, color-stop(50%, #2bc584), color-stop(50%, #ddd), to(#ddd));
-  background-image: -o-linear-gradient(right, #2bc584 50%, transparent 50%, transparent), -o-linear-gradient(right, #2bc584 50%, #ddd 50%, #ddd);
-  background-image: linear-gradient(-90deg, #2bc584 50%, transparent 50%, transparent), linear-gradient(270deg, #2bc584 50%, #ddd 50%, #ddd);
+  background-image: -webkit-gradient(linear, right top, left top, color-stop(50%, #2bc584), color-stop(50%, transparent), to(transparent)), -webkit-gradient(linear, right top, left top, color-stop(50%, #2bc584), color-stop(50%, #f1f4f9), to(#f1f4f9));
+  background-image: -o-linear-gradient(right, #2bc584 50%, transparent 50%, transparent), -o-linear-gradient(right, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background-image: linear-gradient(-90deg, #2bc584 50%, transparent 50%, transparent), linear-gradient(270deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
 }
 
 .progress--circle.progress--55:after {
-  background-image: -o-linear-gradient(162deg, #2bc584 50%, transparent 50%, transparent), -o-linear-gradient(right, #2bc584 50%, #ddd 50%, #ddd);
-  background-image: linear-gradient(-72deg, #2bc584 50%, transparent 50%, transparent), linear-gradient(270deg, #2bc584 50%, #ddd 50%, #ddd);
+  background-image: -o-linear-gradient(162deg, #2bc584 50%, transparent 50%, transparent), -o-linear-gradient(right, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background-image: linear-gradient(-72deg, #2bc584 50%, transparent 50%, transparent), linear-gradient(270deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
 }
 
 .progress--circle.progress--60:after {
-  background-image: -o-linear-gradient(144deg, #2bc584 50%, transparent 50%, transparent), -o-linear-gradient(right, #2bc584 50%, #ddd 50%, #ddd);
-  background-image: linear-gradient(-54deg, #2bc584 50%, transparent 50%, transparent), linear-gradient(270deg, #2bc584 50%, #ddd 50%, #ddd);
+  background-image: -o-linear-gradient(144deg, #2bc584 50%, transparent 50%, transparent), -o-linear-gradient(right, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background-image: linear-gradient(-54deg, #2bc584 50%, transparent 50%, transparent), linear-gradient(270deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
 }
 
 .progress--circle.progress--65:after {
-  background-image: -o-linear-gradient(126deg, #2bc584 50%, transparent 50%, transparent), -o-linear-gradient(right, #2bc584 50%, #ddd 50%, #ddd);
-  background-image: linear-gradient(-36deg, #2bc584 50%, transparent 50%, transparent), linear-gradient(270deg, #2bc584 50%, #ddd 50%, #ddd);
+  background-image: -o-linear-gradient(126deg, #2bc584 50%, transparent 50%, transparent), -o-linear-gradient(right, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background-image: linear-gradient(-36deg, #2bc584 50%, transparent 50%, transparent), linear-gradient(270deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
 }
 
 .progress--circle.progress--70:after {
-  background-image: -o-linear-gradient(108deg, #2bc584 50%, transparent 50%, transparent), -o-linear-gradient(right, #2bc584 50%, #ddd 50%, #ddd);
-  background-image: linear-gradient(-18deg, #2bc584 50%, transparent 50%, transparent), linear-gradient(270deg, #2bc584 50%, #ddd 50%, #ddd);
+  background-image: -o-linear-gradient(108deg, #2bc584 50%, transparent 50%, transparent), -o-linear-gradient(right, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background-image: linear-gradient(-18deg, #2bc584 50%, transparent 50%, transparent), linear-gradient(270deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
 }
 
 .progress--circle.progress--75:after {
-  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #2bc584), color-stop(50%, transparent), to(transparent)), -webkit-gradient(linear, right top, left top, color-stop(50%, #2bc584), color-stop(50%, #ddd), to(#ddd));
-  background-image: -o-linear-gradient(bottom, #2bc584 50%, transparent 50%, transparent), -o-linear-gradient(right, #2bc584 50%, #ddd 50%, #ddd);
-  background-image: linear-gradient(0deg, #2bc584 50%, transparent 50%, transparent), linear-gradient(270deg, #2bc584 50%, #ddd 50%, #ddd);
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #2bc584), color-stop(50%, transparent), to(transparent)), -webkit-gradient(linear, right top, left top, color-stop(50%, #2bc584), color-stop(50%, #f1f4f9), to(#f1f4f9));
+  background-image: -o-linear-gradient(bottom, #2bc584 50%, transparent 50%, transparent), -o-linear-gradient(right, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background-image: linear-gradient(0deg, #2bc584 50%, transparent 50%, transparent), linear-gradient(270deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
 }
 
 .progress--circle.progress--80:after {
-  background-image: -o-linear-gradient(72deg, #2bc584 50%, transparent 50%, transparent), -o-linear-gradient(right, #2bc584 50%, #ddd 50%, #ddd);
-  background-image: linear-gradient(18deg, #2bc584 50%, transparent 50%, transparent), linear-gradient(270deg, #2bc584 50%, #ddd 50%, #ddd);
+  background-image: -o-linear-gradient(72deg, #2bc584 50%, transparent 50%, transparent), -o-linear-gradient(right, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background-image: linear-gradient(18deg, #2bc584 50%, transparent 50%, transparent), linear-gradient(270deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
 }
 
 .progress--circle.progress--85:after {
-  background-image: -o-linear-gradient(54deg, #2bc584 50%, transparent 50%, transparent), -o-linear-gradient(right, #2bc584 50%, #ddd 50%, #ddd);
-  background-image: linear-gradient(36deg, #2bc584 50%, transparent 50%, transparent), linear-gradient(270deg, #2bc584 50%, #ddd 50%, #ddd);
+  background-image: -o-linear-gradient(54deg, #2bc584 50%, transparent 50%, transparent), -o-linear-gradient(right, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background-image: linear-gradient(36deg, #2bc584 50%, transparent 50%, transparent), linear-gradient(270deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
 }
 
 .progress--circle.progress--90:after {
-  background-image: -o-linear-gradient(36deg, #2bc584 50%, transparent 50%, transparent), -o-linear-gradient(right, #2bc584 50%, #ddd 50%, #ddd);
-  background-image: linear-gradient(54deg, #2bc584 50%, transparent 50%, transparent), linear-gradient(270deg, #2bc584 50%, #ddd 50%, #ddd);
+  background-image: -o-linear-gradient(36deg, #2bc584 50%, transparent 50%, transparent), -o-linear-gradient(right, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background-image: linear-gradient(54deg, #2bc584 50%, transparent 50%, transparent), linear-gradient(270deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
 }
 
 .progress--circle.progress--95:after {
-  background-image: -o-linear-gradient(18deg, #2bc584 50%, transparent 50%, transparent), -o-linear-gradient(right, #2bc584 50%, #ddd 50%, #ddd);
-  background-image: linear-gradient(72deg, #2bc584 50%, transparent 50%, transparent), linear-gradient(270deg, #2bc584 50%, #ddd 50%, #ddd);
+  background-image: -o-linear-gradient(18deg, #2bc584 50%, transparent 50%, transparent), -o-linear-gradient(right, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background-image: linear-gradient(72deg, #2bc584 50%, transparent 50%, transparent), linear-gradient(270deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
 }
 
 .progress--circle.progress--100:after {
-  background-image: -webkit-gradient(linear, left top, right top, color-stop(50%, #2bc584), color-stop(50%, transparent), to(transparent)), -webkit-gradient(linear, right top, left top, color-stop(50%, #2bc584), color-stop(50%, #ddd), to(#ddd));
-  background-image: -o-linear-gradient(left, #2bc584 50%, transparent 50%, transparent), -o-linear-gradient(right, #2bc584 50%, #ddd 50%, #ddd);
-  background-image: linear-gradient(90deg, #2bc584 50%, transparent 50%, transparent), linear-gradient(270deg, #2bc584 50%, #ddd 50%, #ddd);
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(50%, #2bc584), color-stop(50%, transparent), to(transparent)), -webkit-gradient(linear, right top, left top, color-stop(50%, #2bc584), color-stop(50%, #f1f4f9), to(#f1f4f9));
+  background-image: -o-linear-gradient(left, #2bc584 50%, transparent 50%, transparent), -o-linear-gradient(right, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background-image: linear-gradient(90deg, #2bc584 50%, transparent 50%, transparent), linear-gradient(270deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
 }
 
 .achievements__list {
@@ -7482,7 +7491,7 @@ tfoot td {
 
 .dashboard__menu-wrapper {
   margin-bottom: 44px;
-  background: #f8fafe;
+  background: #f1f4f9;
 }
 
 .dashboard__menu-header {
@@ -7975,7 +7984,7 @@ tfoot td {
 }
 
 .ios-toggle:checked + label.settings__tab-toggle {
-  background-color: #c3cad6;
+  background-color: #f1f4f9;
   -webkit-transition: 0s background 0s ease-in-out;
   -o-transition: 0s background 0s ease-in-out;
   transition: 0s background 0s ease-in-out;
@@ -9140,6 +9149,10 @@ tfoot td {
     max-width: 353px;
   }
 
+  .slider__item-title--black {
+    font-size: 1.25rem;
+  }
+
   .slider__item-descr {
     font-size: 1rem;
     line-height: 21px;
@@ -9363,7 +9376,7 @@ tfoot td {
   }
 
   .settings__site {
-    padding: 26px 60px 30px 19px;
+    padding: 26px 20px 30px 20px;
   }
 
   .request__form {
@@ -9394,7 +9407,7 @@ tfoot td {
     -webkit-transform: translateX(0);
         -ms-transform: translateX(0);
             transform: translateX(0);
-    max-width: 315px;
+    max-width: 280px;
   }
 
   .dashboard__aside--short {

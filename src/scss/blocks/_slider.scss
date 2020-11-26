@@ -131,7 +131,7 @@
 .slider__item-title {
     margin: 0;
     max-width: 285px;
-    min-width: 215px;
+    min-width: 330px;
     font-style: normal;
     font-weight: normal;
     font-size: rem-calc(20);
@@ -142,6 +142,14 @@
         line-height: 30px;
         margin: 0 0 23px;
         max-width: 353px;
+    }
+    &--black {
+        color: #6e7781;
+        font-size: rem-calc(20);
+        line-height: 26px;
+        @media (min-width: $tablet) {
+            font-size: rem-calc(20);
+        }
     }
 }
 

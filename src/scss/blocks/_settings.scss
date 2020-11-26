@@ -95,7 +95,7 @@
     }
 }
 .ios-toggle:checked + label.settings__tab-toggle {
-    background-color: $c-darkgrey;
+    background-color: $c-grey;
     transition: 0s background 0s ease-in-out;
     &:after {
         transform: translateX(20px);
@@ -230,7 +230,7 @@
     padding-left: 10px;
     padding-right: 10px;
     @media (min-width: $tablet) {
-        padding: 26px 60px 30px 19px;
+        padding: 26px 20px 30px 20px;
     }
 }
 

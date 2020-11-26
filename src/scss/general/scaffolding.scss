@@ -20,7 +20,7 @@ body {
     font-style: normal;
     font-weight: 300;
     color: #444444;
-    background: #f8fafe;
+    background: $c-grey;
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -43,7 +43,7 @@ body {
 
 a {
     text-decoration: none;
-
+    color: $c-black;
 }
 
 img {
@@ -163,11 +163,7 @@ input:not([type="range"]) {
         border-radius: 3px;
         padding: 9px 3px 8px 15px;
     }
-    &:hover {
-        border-color: $c-blue;
-        box-shadow: 0 0 0 1px rgba(156, 186, 240, 0.5);
-    }
-    &:focus {
+    &:hover,&:focus {
         border-color: $c-blue;
         box-shadow: 0 0 0 2px rgba(156, 186, 240, 0.5);
         outline: none;

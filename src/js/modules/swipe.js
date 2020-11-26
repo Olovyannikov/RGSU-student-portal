@@ -36,12 +36,16 @@ export default () => {
             }
         },
         mousewheel: true,
+        forceToAxis: true,
+        releaseOnEdges: true,
     });
 
     let news = new Swiper('.news__slider', {
         slidesPerView: 'auto',
         spaceBetween: 30,
         mousewheel: true,
+        forceToAxis: true,
+        releaseOnEdges: true,
         pagination: {
             el: '.news-pagination',
             clickable: true,

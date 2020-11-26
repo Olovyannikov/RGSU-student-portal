@@ -78,7 +78,7 @@
         width: 100%;
         position: static;
         transform: translateX(0);
-        max-width: 315px;
+        max-width: 280px;
         &--short {
             max-width: 68px;
             .card__name,
@@ -102,7 +102,7 @@
 
 .dashboard__menu-wrapper {
     margin-bottom: 44px;
-    background: #f8fafe;
+    background: $c-grey;
 }
 
 .dashboard__menu-header {
