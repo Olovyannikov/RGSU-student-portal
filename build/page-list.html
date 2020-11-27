@@ -109,7 +109,7 @@
       }
       
       pre {
-          background: #F1F4F9
+          background: #c3cad9
       }
       
       .tabs__content {
@@ -127,18 +127,15 @@
         <button class="btn btn--border tabs__button" data-id="buttons">Кнопки</button>
         <button class="btn btn--border tabs__button" data-id="slider">Слайдер</button>
         <button class="btn btn--border tabs__button" data-id="modals">Модальное окно</button>
-        <button class="btn btn--border tabs__button" data-id="datetime">Время / дата</button>
         <button class="btn btn--border tabs__button" data-id="chart">Чарты / графики</button>
         <button class="btn btn--border tabs__button" data-id="progress">Прогресс-бары</button>
         <button class="btn btn--border tabs__button" data-id="tabs">Табы (вкладки)</button>
         <button class="btn btn--border tabs__button" data-id="socials">Социальные иконки</button>
-        <button class="btn btn--border tabs__button" data-id="links">Ссылки</button>
         <button class="btn btn--border tabs__button" data-id="cards">Карточки "товаров"</button>
         <button class="btn btn--border tabs__button" data-id="range">Range-slider</button>
         <button class="btn btn--border tabs__button" data-id="options">Option-select</button>
         <button class="btn btn--border tabs__button" data-id="scrollbar">Scrollbar</button>
         <button class="btn btn--border tabs__button" data-id="accordion">Accordion</button>
-        <button class="btn btn--border tabs__button" data-id="sidebar">SideBar</button>
       </div>
       <div class="tabs__content">
         <div class="card--stack tabs__item tabs__item--active" style="margin-top: 0px" id="page-list">
@@ -159,7 +156,6 @@
             <li class="list__item" style=" border: 1px solid grey; margin-bottom: 10px;"><a class="list__link" href="news.html" style="padding: 10px; display: block; text-align: center; width: 250px">news.html</a></li>
             <li class="list__item" style=" border: 1px solid grey; margin-bottom: 10px;"><a class="list__link" href="parent.html" style="padding: 10px; display: block; text-align: center; width: 250px">parent.html</a></li>
             <li class="list__item" style=" border: 1px solid grey; margin-bottom: 10px;"><a class="list__link" href="profile.html" style="padding: 10px; display: block; text-align: center; width: 250px">profile.html</a></li>
-            <li class="list__item" style=" border: 1px solid grey; margin-bottom: 10px;"><a class="list__link" href="profile-settings.html" style="padding: 10px; display: block; text-align: center; width: 250px">profile-settings.html</a></li>
             <li class="list__item" style=" border: 1px solid grey; margin-bottom: 10px;"><a class="list__link" href="student-house.html" style="padding: 10px; display: block; text-align: center; width: 250px">student-house.html</a></li>
             <li class="list__item" style=" border: 1px solid grey; margin-bottom: 10px;"><a class="list__link" href="vacancy.html" style="padding: 10px; display: block; text-align: center; width: 250px">vacancy.html</a></li>
           </ul>
@@ -814,82 +810,384 @@ $nothing: null;</pre>
         </div>
         <div class="card--stack tabs__item" id="chart">
           <h1 class="title">График ChartJS</h1>
-          <div class="tabs__container chart-tabs">
-            <div class="tabs__buttons chart-buttons">
-              <button class="settings__tabs-btn chart-btn" data-id="chart-code">JS</button>
-              <button class="settings__tabs-btn chart-btn" data-id="chart-html">HTML</button>
-              <button class="settings__tabs-btn chart-btn" data-id="chart-result">Result</button>
+          <p class="codepen" data-height="605" data-theme-id="dark" data-default-tab="result" data-user="Olovyannikov" data-slug-hash="RwGwGJZ" style="height: 605px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="RwGwGJZ"><span>See the Pen<a href="https://codepen.io/Olovyannikov/pen/RwGwGJZ">RwGwGJZ</a> by Ilya (<a href="https://codepen.io/Olovyannikov">@Olovyannikov</a>)
+                on<a href="https://codepen.io">CodePen</a>.</span></p>
+          <script async="" src="https://static.codepen.io/assets/embed/ei.js"></script>
+        </div>
+        <div class="card--stack tabs__item" id="progress">
+          <h1 class="title">Прогресс бары</h1>
+          <div class="accordeon-section">
+            <p class="accordeon-title">Gauge
+              <button class="accordeon-button"></button>
+            </p>
+            <div class="accordeon-container">
+              <p>
+                <div class="gauge gauge--score" data-width="236" data-value="3.59"><span class="gauge__value"></span></div>
+                <div class="gauge" data-width="236" data-value="68"><span class="gauge__value"></span></div>
+              </p>
+              <p>
+                <pre>
+                    .gauge.gauge--score(data-width="236" data-value="3.59")
+                        span.gauge__value
+                </pre>
+                <pre>
+                    gauge = new Gauge(gauge, {
+                                value: gauge.dataset.value, <<< Значение графика, передается либо в data-value,
+                                либо type Number
+                                lineWidth: 4, <<< Толщина строки, default 4
+                                color: 'red' <<< Строка или по умолчанию $c-red и $c-green в variables SCSS
+                            })
+                </pre>
+              </p>
             </div>
-            <div class="tabs__content chart-tab-content">
-              <div class="chart-tab tabs__item tabs__item--active" id="chart-code">
+          </div>
+          <div class="accordeon-section">
+            <p class="accordeon-title">Progress-bar
+              <button class="accordeon-button"></button>
+            </p>
+            <div class="accordeon-container">
+              <div class="progress" style="margin-bottom: 10px">
+                <div class="progress-bar" data-progress="75"></div>
+              </div>
+              <div class="progress-info" style="text-align: left">Цифровой профиль -  </div>
+              <div class="progress" style="margin-bottom: 10px">
+                <div class="progress-bar" data-progress="30"></div>
+              </div>
+              <div class="progress-info" style="text-align: left">Цифровой профиль -  </div>
+              <div class="progress" style="margin-bottom: 10px">
+                <div class="progress-bar" data-progress="5"></div>
+              </div>
+              <div class="progress-info" style="text-align: left">Цифровой профиль -  </div>
+              <p>
+                <pre>
+                    .progress__wrapper
+                            .progress
+                                .progress-bar(data-progress='75')
+                            .progress-info Цифровой профиль -  
+                </pre>
+              </p>
+              <p>Для каждого элемента progress ищется атрибут data-progress, от него берется значение</p>
+              <p>
+                <pre>
+                    progresses.forEach(function (progress) {
+                            setTimeout(() => {
+                                let progressVal = Number(progress.dataset.value);
+                                progress.style.opacity = 1;
+                                progress.style.width = progress.getAttribute("data-progress") + "%";
+                            }, 500);
+                </pre>
+              </p>
+            </div>
+          </div>
+          <div class="accordeon-section">
+            <p class="accordeon-title">Circle-bar
+              <button class="accordeon-button"></button>
+            </p>
+            <div class="accordeon-container">
+              <div class="card__progress">
+                <div class="progress--circle" data-progress="75">
+                  <picture class="card__avatar">
+                    <source srcset="img/dashboard-avatar-1.webp" type="image/webp"/><img src="img/dashboard-avatar-1.png" alt="Мазеин К.В." style="width: 95%"/>
+                  </picture>
+                </div>
+                <div class="progress--circle" data-progress="15">
+                  <picture class="card__avatar">
+                    <source srcset="img/dashboard-avatar-1.webp" type="image/webp"/><img src="img/dashboard-avatar-1.png" alt="Мазеин К.В." style="width: 95%"/>
+                  </picture>
+                </div>
+                <div class="progress--circle" data-progress="55">
+                  <picture class="card__avatar">
+                    <source srcset="img/dashboard-avatar-1.webp" type="image/webp"/><img src="img/dashboard-avatar-1.png" alt="Мазеин К.В." style="width: 95%"/>
+                  </picture>
+                </div>
+              </div>
+              <p>CSS самостоятельно генерирует круговую диаграмму на основе класса progress--${`number`}, где number - значение атрибута data-progress</p>
+              <p>
+                <pre>
+                .progress--circle(data-progress="75")
+                    picture.card__avatar
+                        source(srcset="img/dashboard-avatar-1.webp", type="image/webp")
+                        img(src="img/dashboard-avatar-1.png", alt="Мазеин К.В.")
+                </pre>
+                
+              </p>
+              <p>Для каждого элемента progress ищется атрибут data-progress, от него берется значение
                 <p>
                   <pre>
-                      let ctx = document.getElementById("myChart");
-                          let myChart = new Chart(ctx, {
-                              type: "line",
-                              data: {
-                                  labels: ["10:00", "12:00", "14:00", "16:00", "18:00"],
-                                  datasets: [
-                                      {
-                                          data: [8.8, 6.5, 5.2, 3.7, 8],
-                                          backgroundColor: "#c3cad6",
-                                          fill: "#c3cad6",
-                                          borderColor: ["#c3cad6"],
-                                          borderWidth: 2,
-                  
-                                          pointBackgroundColor: ["#c3cad6"],
-                                          pointBorderWidth: 3,
-                                          pointBorderColor: "#c3cad6",
-                                      },
-                                  ],
-                              },
-                              options: {
-                                  responsive: true,
-                                  legend: {
-                                      display: false,
-                                  },
-                              },
-                          });
+                      progresses.forEach(function (progress) {
+                              setTimeout(() => {
+                                  let progressVal = Number(progress.dataset.value);
+                                  progress.style.opacity = 1;
+                                  progress.style.width = progress.getAttribute("data-progress") + "%";
+                              }, 500);
                   </pre>
                 </p>
-              </div>
-              <div class="chart-tab tabs__item" id="chart-html">
-                <p>
-                  <pre>
-                          canvas#myChart
-                  </pre>
-                </p>
-              </div>
-              <div class="chart-tab tabs__item" id="chart-result"></div>
+              </p>
             </div>
           </div>
         </div>
-        <div class="card--stack tabs__item" id="progress">
-          <h1 class="title">Список страниц</h1>
-        </div>
         <div class="card--stack tabs__item" id="tabs">
-          <h1 class="title">Список страниц</h1>
+          <h1 class="title">Табы</h1>
+          <p class="codepen" data-height="600" data-theme-id="dark" data-default-tab="html,result" data-user="Olovyannikov" data-slug-hash="vYKoRqx" style="height: 600px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Toggle Tab With Vanilla JavaScript"><span>See the Pen<a href="https://codepen.io/Olovyannikov/pen/vYKoRqx">Toggle Tab With Vanilla JavaScript</a> by Ilya (<a href="https://codepen.io/Olovyannikov">@Olovyannikov</a>)
+                on<a href="https://codepen.io">CodePen</a>.</span></p>
+          <script async="" src="https://static.codepen.io/assets/embed/ei.js"></script>
         </div>
         <div class="card--stack tabs__item" id="socials">
-          <h1 class="title">Список страниц</h1>
-        </div>
-        <div class="card--stack tabs__item" id="links">
-          <h1 class="title">Список страниц</h1>
+          <h1 class="title">Социальные иконки</h1>
+          <div class="container social-block" style="margin-top: 20px">
+            <ul class="social-block__list">
+              <li class="social-block__item"><a class="social-block__link social-block__link--vk" href="mailto:info@rgsu.net">Вконтакте
+                  <svg width="18" height="11">
+                    <use href="#vk"></use>
+                  </svg></a></li>
+              <li class="social-block__item"><a class="social-block__link social-block__link--fb" href="mailto:info@rgsu.net">Фейсбук
+                  <svg width="8" height="16">
+                    <use href="#fb"></use>
+                  </svg></a></li>
+              <li class="social-block__item"><a class="social-block__link social-block__link--insta" href="mailto:info@rgsu.net">Инстаграм
+                  <svg width="16" height="16">
+                    <use href="#insta"></use>
+                  </svg></a></li>
+            </ul>
+          </div>
+          <div class="accordeon-section">
+            <p class="accordeon-title">Mark
+              <button class="accordeon-button"></button>
+            </p>
+            <div class="accordeon-container">
+              <p>
+                <pre>
+                .social-block
+                        ul.social-block__list
+                            li.social-block__item
+                                a(href="mailto:info@rgsu.net").social-block__link.social-block__link--vk
+                                    | Вконтакте
+                                    svg(width="18" height="11")
+                                        use(href="#vk")
+                            li.social-block__item
+                                a(href="mailto:info@rgsu.net").social-block__link.social-block__link--fb
+                                    | Фейсбук
+                                    svg(width="8" height="16")
+                                        use(href="#fb")
+                            li.social-block__item
+                                a(href="mailto:info@rgsu.net").social-block__link.social-block__link--insta
+                                    | Инстаграм
+                                    svg(width="16" height="16")
+                                        use(href="#insta")
+                </pre>
+                
+              </p>
+            </div>
+          </div>
         </div>
         <div class="card--stack tabs__item" id="cards">
-          <h1 class="title">Список страниц</h1>
+          <h1 class="title">Карточка студента</h1>
+          <div class="portfolio-cards">
+            <div class="portfolio-cards__wrapper">
+              <article class="portfolio-cards card">
+                <div class="card__progress">
+                  <div class="progress--circle" data-progress="75">
+                    <picture class="card__avatar">
+                      <source srcset="img/card-avatar-1.webp" type="image/webp"/><img src="img/card-avatar-1.png" alt="Мария Владимировна Н."/>
+                    </picture>
+                  </div>
+                </div>
+                <p class="card__name">Мария Владимировна Н.</p>
+                <p class="card__faculty">Факультет искусств</p>
+                <p class="card__education">Педагогическое образование</p>
+                <p class="card__info"><span class="card__info-age">Возраст: 20</span><span class="card__info-course">2 курс</span></p>
+                <div class="card__achievements achievements">
+                  <ul class="achievements__list">
+                    <li class="achievement achievement--handshake">Достижение: Рукопожатие
+                      <svg class="achievement-icon" width="18" height="18">
+                        <use href="#handshake"></use>
+                      </svg>
+                    </li>
+                    <li class="achievement achievement--cup">Достижение: Кубок
+                      <svg class="achievement-icon" width="18" height="18">
+                        <use href="#trophy"></use>
+                      </svg>
+                    </li>
+                  </ul>
+                </div>
+              </article>
+              <article class="portfolio-cards card">
+                <div class="card__progress">
+                  <div class="progress--circle" data-progress="100">
+                    <picture class="card__avatar">
+                      <source srcset="img/card-avatar-3.webp" type="image/webp"/><img src="img/card-avatar-3.png" alt="Гендальф Владимирович С."/>
+                    </picture>
+                  </div>
+                </div>
+                <p class="card__name">Гендальф Владимирович С.</p>
+                <p class="card__faculty">Факультет магии</p>
+                <p class="card__education">Педагогическое образование</p>
+                <p class="card__info"><span class="card__info-age">Возраст: 20</span><span class="card__info-course">99 курс</span></p>
+                <div class="card__achievements achievements">
+                  <ul class="achievements__list">
+                    <li class="achievement achievement--handshake">Достижение: Рукопожатие
+                      <svg class="achievement-icon" width="18" height="18">
+                        <use href="#handshake"></use>
+                      </svg>
+                    </li>
+                    <li class="achievement achievement--cup">Достижение: Кубок
+                      <svg class="achievement-icon" width="18" height="18">
+                        <use href="#trophy"></use>
+                      </svg>
+                    </li>
+                  </ul>
+                </div>
+              </article>
+              <article class="portfolio-cards card">
+                <div class="card__progress">
+                  <div class="progress--circle" data-progress="35">
+                    <picture class="card__avatar">
+                      <source srcset="img/card-avatar-2.webp" type="image/webp"/><img src="img/card-avatar-2.png" alt="Брюс Ли Н."/>
+                    </picture>
+                  </div>
+                </div>
+                <p class="card__name">Брюс Ли Н.</p>
+                <p class="card__faculty">Факультет боевых искусств</p>
+                <p class="card__education">Педагогическое образование</p>
+                <p class="card__info"><span class="card__info-age">Возраст: 20</span><span class="card__info-course">OVER9000! курс</span></p>
+                <div class="card__achievements achievements">
+                  <ul class="achievements__list">
+                    <li class="achievement achievement--handshake">Достижение: Рукопожатие
+                      <svg class="achievement-icon" width="18" height="18">
+                        <use href="#handshake"></use>
+                      </svg>
+                    </li>
+                    <li class="achievement achievement--cup">Достижение: Кубок
+                      <svg class="achievement-icon" width="18" height="18">
+                        <use href="#trophy"></use>
+                      </svg>
+                    </li>
+                  </ul>
+                </div>
+              </article>
+            </div>
+          </div>
+          <p>
+            <pre>
+            article.portfolio-cards.card
+                .card__progress
+                    .progress--circle(data-progress=progress)
+                        picture.card__avatar
+                            source(srcset="img/" + imgWebp, type="image/webp")
+                            img(src="img/" + img, alt=username)
+                p.card__name  << Username
+                p.card__faculty  << User Faculty
+                p.card__education  << User Education
+                p.card__info
+                    span.card__info-age Возраст:  <<user age
+                    span.card__info-course  курс
+                .card__achievements.achievements
+                    ul.achievements__list
+                        li.achievement.achievement--handshake Достижение: Рукопожатие
+                            svg.achievement-icon(width="18" height="18")
+                                use(href="#handshake")
+                        li.achievement.achievement--cup Достижение: Кубок
+                            svg.achievement-icon(width="18" height="18")
+                                use(href="#trophy" )
+          </p></pre>
         </div>
         <div class="card--stack tabs__item" id="range">
-          <h1 class="title">Список страниц</h1>
+          <h1 class="title">Range-slider</h1>
+          <div class="wrapper" style="padding: 20px 50px">
+            <div class="filter__range two-range-slider js-two-range-slider">
+              <div class="two-range-slider__output">
+                <output class="two-range-slider__value js-two-range-slider-min-value two-range-slider__value--left range-money"></output>
+                <output class="two-range-slider__value js-two-range-slider-max-value two-range-slider__value--right range-money"></output>
+              </div>
+              <input class="two-range-slider__input js-two-range-slider-input left-range" type="range" min="0" max="250000" value="250000" step="10000"/>
+              <input class="two-range-slider__input js-two-range-slider-input left-range" type="range" min="0" max="240000" value="0" step="10000"/>
+            </div>
+            <div class="filter__range two-range-slider js-two-range-slider">
+              <div class="two-range-slider__output">
+                <output class="two-range-slider__value js-two-range-slider-min-value two-range-slider__value--left"></output>
+                <output class="two-range-slider__value js-two-range-slider-max-value two-range-slider__value--right"></output>
+              </div>
+              <input class="two-range-slider__input js-two-range-slider-input left-range" type="range" min="0" max="50" value="20" step="1"/>
+              <input class="two-range-slider__input js-two-range-slider-input left-range" type="range" min="0" max="50" value="0" step="1"/>
+            </div>
+          </div>
+          <div class="accordeon-section">
+            <p class="accordeon-title">Mark
+              <button class="accordeon-button"></button>
+            </p>
+            <div class="accordeon-container">
+              <p>В элемент input атрибуты min/max для задания максимального/минимального значения</p>
+              <p>Атрибут value - задание начальной точки отсчета</p>
+              <p>Атрибут step - шаг изменения</p>
+              <p>
+                <pre style="white-space: break-spaces;">
+                 .filter__range.two-range-slider.js-two-range-slider <<< Вспомогательный JS-класс
+                     .two-range-slider__output
+                         output.two-range-slider__value.js-two-range-slider-min-value.two-range-slider__value--left.range-money <<< range-money,
+                                                                                                                                     если денежный
+                                                                                                                                     слайдер
+                         output.two-range-slider__value.js-two-range-slider-max-value.two-range-slider__value--right.range-money
+                     input.two-range-slider__input.js-two-range-slider-input(type='range' min='0' max='50' value='20' step='1').left-range
+                     input.two-range-slider__input.js-two-range-slider-input(type='range' min='0' max='50' value='0' step='1').left-range
+                 </pre>
+                
+              </p>
+            </div>
+          </div>
         </div>
         <div class="card--stack tabs__item" id="options">
-          <h1 class="title">Список страниц</h1>
+          <h1 class="title">Options selector</h1>
+          <div class="wrapper" style="padding: 20px 50px">
+            <select class="fancy-select" name="category" required="required" multiple="multiple">
+              <option value="Бухгалтерия" selected="selected">Бухгалтерия</option>
+              <option value="IT" selected="selected">IT</option>
+              <option value="PM">Product Management</option>
+              <option value="PrM">Project Management</option>
+              <option value="Audio">Audio Production</option>
+              <option value="Video">Videoprod</option>
+            </select>
+          </div>
+          <div class="accordeon-section">
+            <p class="accordeon-title">Mark
+              <button class="accordeon-button"></button>
+            </p>
+            <div class="accordeon-container">
+              <p>
+                <pre>
+                select.fancy-select(name='category' required='required' multiple='multiple')
+                    option(value='Бухгалтерия' selected) Бухгалтерия
+                    option(value='IT' selected) IT
+                    option(value='PM') Product Management
+                    option(value='PrM') Project Management
+                    option(value='Audio') Audio Production
+                    option(value='Video') Videoprod
+                </pre>
+              </p>
+            </div>
+          </div>
         </div>
         <div class="card--stack tabs__item" id="scrollbar">
-          <h1 class="title">Список страниц</h1>
+          <h1 class="title">Скроллбар</h1>
+          <p>Просто добавь класс .scrollbar-custom к любому элементу, требующему кастомный скролл :)</p>
         </div>
         <div class="card--stack tabs__item" id="accordion">
-          <h1 class="title">Список страниц</h1>
+          <h1 class="title">Аккордеон</h1>
+          <div class="accordeon-section">
+            <p class="accordeon-title">Mark
+              <button class="accordeon-button"></button>
+            </p>
+            <div class="accordeon-container">
+              <p>
+                <pre>
+                    .accordeon-section <<контейнер для элементов аккордеона
+                           p.accordeon-title Заголововк аккордеона
+                                button.accordeon-button(aria-label="Закрыть аккордеон")
+                           .accordeon-container
+                                >>> Контент аккордеона
+                </pre>
+              </p>
+            </div>
+          </div>
         </div>
         <div class="card--stack tabs__item" id="sidebar">
           <h1 class="title">Список страниц</h1>

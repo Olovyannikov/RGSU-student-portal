@@ -1,119 +1,119 @@
 .portfolio-tabs__container {
-  margin-bottom: 54px;
+    margin-bottom: 54px;
 }
 
 .portfolio-tabs__header {
-  @include headerBlock;
-  margin-bottom: 42px;
+    @include headerBlock;
+    margin-bottom: 42px;
 }
 
 .portfolio-tabs__title {
-  font-size: rem-calc(26);
+    font-size: rem-calc(26);
 }
 
 .portfolio-tabs__buttons {
-  margin: 0 auto;
-  width: 100%;
-  justify-content: center;
-  display: flex;
-  flex-wrap: wrap;
+    margin: 0 auto;
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .portfolio-tabs__button {
-  border-radius: 50px;
-  font-style: normal;
-  font-weight: normal;
-  font-family: inherit;
-  font-size: 16px;
-  line-height: 26px;
-  text-transform: unset;
+    border-radius: 50px;
+    font-style: normal;
+    font-weight: normal;
+    font-family: inherit;
+    font-size: 16px;
+    line-height: 26px;
+    text-transform: unset;
 
-  &--active {
-    background: #3464e0;
-    color: #ffffff;
-    border: 1px solid transparent;
-    &:hover {
-      border: 1px solid transparent;
+    &--active {
+        background: #3464e0;
+        color: #ffffff;
+        border: 1px solid transparent;
+        &:hover {
+            border: 1px solid transparent;
+        }
     }
-  }
 }
 
 //list
 
 .portfolio__list {
-  @include list-reset;
-  padding: 23px 43px 42px 33px;
-  border-radius: 4px;
-  height: 261px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  background: #fff;
-  overflow: scroll;
-  @media (min-width: $tablet) {
-    padding-top: 43px;
-    overflow: hidden;
-  }
+    @include list-reset;
+    padding: 23px 43px 42px 33px;
+    border-radius: 4px;
+    height: 261px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background: #fff;
+    overflow: scroll;
+    @media (min-width: $tablet) {
+        padding-top: 43px;
+        overflow: hidden;
+    }
 }
 
 .portfolio__description {
-  padding-right: 10px;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 26px;
-  color: #444444;
-  &:hover {
-    color: rgba(52, 100, 224, 1);
-  }
+    padding-right: 10px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 26px;
+    color: #444444;
+    &:hover {
+        color: rgba(52, 100, 224, 1);
+    }
 }
 
 .portfolio__counter {
-  font-style: normal;
-  font-weight: normal;
-  font-size: 12px;
-  line-height: 26px;
-  color: #6e7781;
-  background: #f1f4f9;
-  border-radius: 50%;
-  padding: 1px 9px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 26px;
+    color: #6e7781;
+    background: #f1f4f9;
+    border-radius: 50%;
+    padding: 1px 9px;
 }
 
 .portfolio__link {
-  display: flex;
-  align-items: center;
-  max-width: 398px;
-  color: #444444;
-  transition: 0.2s;
-  &:hover {
-    .portfolio__description {
-      color: rgba(52, 100, 224, 1);
+    display: flex;
+    align-items: center;
+    max-width: 398px;
+    color: #444444;
+    transition: 0.2s;
+    &:hover {
+        .portfolio__description {
+            color: rgba(52, 100, 224, 1);
+        }
+        .divider {
+            background-color: rgba(52, 100, 224, 1);
+        }
+        .portfolio__counter {
+            background: #3464e0;
+            color: #fff;
+        }
     }
-    .divider {
-      background-color: rgba(52, 100, 224, 1);
-    }
-    .portfolio__counter {
-      background: #3464e0;
-      color: #fff;
-    }
-  }
 }
 
 .portfolio__item {
-  background-color: #fff;
+    background-color: #fff;
 }
 
 .portfolio__list-wrapper {
-  @include list-reset;
-  width: 398px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 161px;
+    @include list-reset;
+    width: 398px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 161px;
 }
 //active - unactive
 .portfolio-tabs__article {
-  @media (min-width: $tablet) {
-    white-space: nowrap;
-  }
+    @media (min-width: $tablet) {
+        white-space: nowrap;
+    }
 }

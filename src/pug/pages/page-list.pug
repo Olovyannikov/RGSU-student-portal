@@ -1,5 +1,7 @@
 extends ../layouts/_main.pug
 
+include ../mixins/_portfolio-cards
+
 
 block variables
     - const title = 'Студенческий портал - Список страниц';
@@ -30,7 +32,7 @@ block content
         }
 
         pre {
-            background: #F1F4F9
+            background: #c3cad9
         }
 
         .tabs__content {
@@ -47,18 +49,15 @@ block content
             button.btn.btn--border.tabs__button(data-id="buttons") Кнопки
             button.btn.btn--border.tabs__button(data-id="slider") Слайдер
             button.btn.btn--border.tabs__button(data-id="modals") Модальное окно
-            button.btn.btn--border.tabs__button(data-id="datetime") Время / дата
             button.btn.btn--border.tabs__button(data-id="chart") Чарты / графики
             button.btn.btn--border.tabs__button(data-id="progress") Прогресс-бары
             button.btn.btn--border.tabs__button(data-id="tabs") Табы (вкладки)
             button.btn.btn--border.tabs__button(data-id="socials") Социальные иконки
-            button.btn.btn--border.tabs__button(data-id="links") Ссылки
             button.btn.btn--border.tabs__button(data-id="cards") Карточки "товаров"
             button.btn.btn--border.tabs__button(data-id="range") Range-slider
             button.btn.btn--border.tabs__button(data-id="options") Option-select
             button.btn.btn--border.tabs__button(data-id="scrollbar") Scrollbar
             button.btn.btn--border.tabs__button(data-id="accordion") Accordion
-            button.btn.btn--border.tabs__button(data-id="sidebar") SideBar
         .tabs__content
             .card--stack.tabs__item.tabs__item--active(style="margin-top: 0px" id="page-list")
                 h1.title Список страниц
@@ -93,8 +92,6 @@ block content
                         a.list__link(href="parent.html" style="padding: 10px; display: block; text-align: center; width: 250px") parent.html
                     li.list__item(style=" border: 1px solid grey; margin-bottom: 10px;")
                         a.list__link(href="profile.html" style="padding: 10px; display: block; text-align: center; width: 250px") profile.html
-                    li.list__item(style=" border: 1px solid grey; margin-bottom: 10px;")
-                        a.list__link(href="profile-settings.html" style="padding: 10px; display: block; text-align: center; width: 250px") profile-settings.html
                     li.list__item(style=" border: 1px solid grey; margin-bottom: 10px;")
                         a.list__link(href="student-house.html" style="padding: 10px; display: block; text-align: center; width: 250px") student-house.html
                     li.list__item(style=" border: 1px solid grey; margin-bottom: 10px;")
@@ -702,65 +699,275 @@ block content
                             p .modal-open хелпер для определения отркто ли окно
             .card--stack.tabs__item(id="chart")
                 h1.title График ChartJS
-                .tabs__container.chart-tabs
-                    .tabs__buttons.chart-buttons
-                        button(data-id="chart-code").settings__tabs-btn.chart-btn JS
-                        button(data-id="chart-html").settings__tabs-btn.chart-btn HTML
-                        button(data-id="chart-result").settings__tabs-btn.chart-btn Result
-                    .tabs__content.chart-tab-content
-                        .chart-tab.tabs__item.tabs__item--active(id="chart-code")
-                            p.
-                                <pre>
-                                    let ctx = document.getElementById("myChart");
-                                        let myChart = new Chart(ctx, {
-                                            type: "line",
-                                            data: {
-                                                labels: ["10:00", "12:00", "14:00", "16:00", "18:00"],
-                                                datasets: [
-                                                    {
-                                                        data: [8.8, 6.5, 5.2, 3.7, 8],
-                                                        backgroundColor: "#c3cad6",
-                                                        fill: "#c3cad6",
-                                                        borderColor: ["#c3cad6"],
-                                                        borderWidth: 2,
+                p.codepen(data-height='605' data-theme-id='dark' data-default-tab='result' data-user='Olovyannikov' data-slug-hash='RwGwGJZ' style='height: 605px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;' data-pen-title='RwGwGJZ')
+                    span
+                        | See the Pen
+                        a(href='https://codepen.io/Olovyannikov/pen/RwGwGJZ')
+                            | RwGwGJZ
+                        |  by Ilya (
+                        a(href='https://codepen.io/Olovyannikov') @Olovyannikov
+                        | )
+                        |   on
+                        a(href='https://codepen.io') CodePen
+                        | .
+                script(async='' src='https://static.codepen.io/assets/embed/ei.js')
 
-                                                        pointBackgroundColor: ["#c3cad6"],
-                                                        pointBorderWidth: 3,
-                                                        pointBorderColor: "#c3cad6",
-                                                    },
-                                                ],
-                                            },
-                                            options: {
-                                                responsive: true,
-                                                legend: {
-                                                    display: false,
-                                                },
-                                            },
-                                        });
-                                </pre>
-                        .chart-tab.tabs__item(id="chart-html")
+
+            .card--stack.tabs__item(id="progress")
+                h1.title Прогресс бары
+                .accordeon-section
+                    p.accordeon-title Gauge
+                        button.accordeon-button
+                    .accordeon-container
+                        p
+                            .gauge.gauge--score(data-width="236" data-value="3.59")
+                                span.gauge__value
+                            .gauge(data-width="236" data-value="68")
+                                span.gauge__value
+                        p.
+                            <pre>
+                                .gauge.gauge--score(data-width="236" data-value="3.59")
+                                    span.gauge__value
+                            </pre>
+                            <pre>
+                                gauge = new Gauge(gauge, {
+                                            value: gauge.dataset.value, <<< Значение графика, передается либо в data-value,
+                                            либо type Number
+                                            lineWidth: 4, <<< Толщина строки, default 4
+                                            color: 'red' <<< Строка или по умолчанию $c-red и $c-green в variables SCSS
+                                        })
+                            </pre>
+                .accordeon-section
+                    p.accordeon-title Progress-bar
+                        button.accordeon-button
+                    .accordeon-container
+                        .progress(style="margin-bottom: 10px")
+                            .progress-bar(data-progress='75')
+                        .progress-info(style="text-align: left") Цифровой профиль -  
+                        .progress(style="margin-bottom: 10px")
+                            .progress-bar(data-progress='30')
+                        .progress-info(style="text-align: left") Цифровой профиль -  
+                        .progress(style="margin-bottom: 10px")
+                            .progress-bar(data-progress='5')
+                        .progress-info(style="text-align: left") Цифровой профиль -  
+                        p.
+                            <pre>
+                                .progress__wrapper
+                                        .progress
+                                            .progress-bar(data-progress='75')
+                                        .progress-info Цифровой профиль -  
+                            </pre>
+                        p Для каждого элемента progress ищется атрибут data-progress, от него берется значение
+                        p.
+                            <pre>
+                                progresses.forEach(function (progress) {
+                                        setTimeout(() => {
+                                            let progressVal = Number(progress.dataset.value);
+                                            progress.style.opacity = 1;
+                                            progress.style.width = progress.getAttribute("data-progress") + "%";
+                                        }, 500);
+                            </pre>
+                .accordeon-section
+                    p.accordeon-title Circle-bar
+                        button.accordeon-button
+                    .accordeon-container
+                        .card__progress
+                            .progress--circle(data-progress="75")
+                                picture.card__avatar
+                                    source(srcset="img/dashboard-avatar-1.webp", type="image/webp")
+                                    img(src="img/dashboard-avatar-1.png", alt="Мазеин К.В." style="width: 95%")
+                            .progress--circle(data-progress="15")
+                                picture.card__avatar
+                                    source(srcset="img/dashboard-avatar-1.webp", type="image/webp")
+                                    img(src="img/dashboard-avatar-1.png", alt="Мазеин К.В." style="width: 95%")
+                            .progress--circle(data-progress="55")
+                                picture.card__avatar
+                                    source(srcset="img/dashboard-avatar-1.webp", type="image/webp")
+                                    img(src="img/dashboard-avatar-1.png", alt="Мазеин К.В." style="width: 95%")
+
+                        p CSS самостоятельно генерирует круговую диаграмму на основе класса progress--${`number`}, где number - значение атрибута data-progress
+                        p.
+                            <pre>
+                            .progress--circle(data-progress="75")
+                                picture.card__avatar
+                                    source(srcset="img/dashboard-avatar-1.webp", type="image/webp")
+                                    img(src="img/dashboard-avatar-1.png", alt="Мазеин К.В.")
+                            </pre>
+
+                        p Для каждого элемента progress ищется атрибут data-progress, от него берется значение
                             p.
                                 <pre>
-                                        canvas#myChart
+                                    progresses.forEach(function (progress) {
+                                            setTimeout(() => {
+                                                let progressVal = Number(progress.dataset.value);
+                                                progress.style.opacity = 1;
+                                                progress.style.width = progress.getAttribute("data-progress") + "%";
+                                            }, 500);
                                 </pre>
-                        .chart-tab.tabs__item(id="chart-result")
-            .card--stack.tabs__item(id="progress")
-                h1.title Список страниц
             .card--stack.tabs__item(id="tabs")
-                h1.title Список страниц
+                h1.title Табы
+                p.codepen(data-height='600' data-theme-id='dark' data-default-tab='html,result' data-user='Olovyannikov' data-slug-hash='vYKoRqx' style='height: 600px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;' data-pen-title='Toggle Tab With Vanilla JavaScript')
+                    span
+                        | See the Pen
+                        a(href='https://codepen.io/Olovyannikov/pen/vYKoRqx')
+                            | Toggle Tab With Vanilla JavaScript
+                        |  by Ilya (
+                        a(href='https://codepen.io/Olovyannikov') @Olovyannikov
+                        | )
+                        |   on
+                        a(href='https://codepen.io') CodePen
+                        | .
+                script(async='' src='https://static.codepen.io/assets/embed/ei.js')
+
             .card--stack.tabs__item(id="socials")
-                h1.title Список страниц
-            .card--stack.tabs__item(id="links")
-                h1.title Список страниц
+                h1.title Социальные иконки
+                .container.social-block(style="margin-top: 20px")
+                    ul.social-block__list
+                        li.social-block__item
+                            a(href="mailto:info@rgsu.net").social-block__link.social-block__link--vk Вконтакте
+                                svg(width="18" height="11")
+                                    use(href="#vk")
+                        li.social-block__item
+                            a(href="mailto:info@rgsu.net").social-block__link.social-block__link--fb Фейсбук
+                                svg(width="8" height="16")
+                                    use(href="#fb")
+                        li.social-block__item
+                            a(href="mailto:info@rgsu.net").social-block__link.social-block__link--insta Инстаграм
+                                svg(width="16" height="16")
+                                    use(href="#insta")
+                .accordeon-section
+                    p.accordeon-title Mark
+                        button.accordeon-button
+                    .accordeon-container
+                        p.
+                            <pre>
+                            .social-block
+                                    ul.social-block__list
+                                        li.social-block__item
+                                            a(href="mailto:info@rgsu.net").social-block__link.social-block__link--vk
+                                                | Вконтакте
+                                                svg(width="18" height="11")
+                                                    use(href="#vk")
+                                        li.social-block__item
+                                            a(href="mailto:info@rgsu.net").social-block__link.social-block__link--fb
+                                                | Фейсбук
+                                                svg(width="8" height="16")
+                                                    use(href="#fb")
+                                        li.social-block__item
+                                            a(href="mailto:info@rgsu.net").social-block__link.social-block__link--insta
+                                                | Инстаграм
+                                                svg(width="16" height="16")
+                                                    use(href="#insta")
+                            </pre>
+
             .card--stack.tabs__item(id="cards")
-                h1.title Список страниц
+                h1.title Карточка студента
+                .portfolio-cards
+                    .portfolio-cards__wrapper
+                        +portfolio-card('card-avatar-1.webp', 'card-avatar-1.png', 'Мария Владимировна Н.', 'Факультет искусств', 'Педагогическое образование', '20', '2', '75', 'digital-profile.html')
+                            ul.achievements__list
+                                li.achievement.achievement--handshake Достижение: Рукопожатие
+                                    svg.achievement-icon(width="18" height="18")
+                                        use(href="#handshake")
+                                li.achievement.achievement--cup Достижение: Кубок
+                                    svg.achievement-icon(width="18" height="18")
+                                        use(href="#trophy" )
+                        +portfolio-card('card-avatar-3.webp', 'card-avatar-3.png', 'Гендальф Владимирович С.', 'Факультет магии', 'Педагогическое образование', '20', '99', '100', 'digital-profile.html')
+                            ul.achievements__list
+                                li.achievement.achievement--handshake Достижение: Рукопожатие
+                                    svg.achievement-icon(width="18" height="18")
+                                        use(href="#handshake")
+                                li.achievement.achievement--cup Достижение: Кубок
+                                    svg.achievement-icon(width="18" height="18")
+                                        use(href="#trophy" )
+                        +portfolio-card('card-avatar-2.webp', 'card-avatar-2.png', 'Брюс Ли Н.', 'Факультет боевых искусств', 'Педагогическое образование', '20', 'OVER9000!', '35', 'digital-profile.html')
+                            ul.achievements__list
+                                li.achievement.achievement--handshake Достижение: Рукопожатие
+                                    svg.achievement-icon(width="18" height="18")
+                                        use(href="#handshake")
+                                li.achievement.achievement--cup Достижение: Кубок
+                                    svg.achievement-icon(width="18" height="18")
+                                        use(href="#trophy" )
+                p.
+                    <pre>
+                    article.portfolio-cards.card
+                        .card__progress
+                            .progress--circle(data-progress=progress)
+                                picture.card__avatar
+                                    source(srcset="img/" + imgWebp, type="image/webp")
+                                    img(src="img/" + img, alt=username)
+                        p.card__name #{username} << Username
+                        p.card__faculty #{faculty} << User Faculty
+                        p.card__education #{education} << User Education
+                        p.card__info
+                            span.card__info-age Возраст: #{age} <<user age
+                            span.card__info-course #{course} курс
+                        .card__achievements.achievements
+                            ul.achievements__list
+                                li.achievement.achievement--handshake Достижение: Рукопожатие
+                                    svg.achievement-icon(width="18" height="18")
+                                        use(href="#handshake")
+                                li.achievement.achievement--cup Достижение: Кубок
+                                    svg.achievement-icon(width="18" height="18")
+                                        use(href="#trophy" )
+                </pre>
             .card--stack.tabs__item(id="range")
-                h1.title Список страниц
+                h1.title Range-slider
+                .wrapper(style="padding: 20px 50px")
+                    include ../sections/range-slider/range-slider
+                .accordeon-section
+                    p.accordeon-title Mark
+                        button.accordeon-button
+                    .accordeon-container
+                        p В элемент input атрибуты min/max для задания максимального/минимального значения
+                        p Атрибут value - задание начальной точки отсчета
+                        p Атрибут step - шаг изменения
+                        p.
+                           <pre style="white-space: break-spaces;">
+                            .filter__range.two-range-slider.js-two-range-slider <<< Вспомогательный JS-класс
+                                .two-range-slider__output
+                                    output.two-range-slider__value.js-two-range-slider-min-value.two-range-slider__value--left.range-money <<< range-money,
+                                                                                                                                                если денежный
+                                                                                                                                                слайдер
+                                    output.two-range-slider__value.js-two-range-slider-max-value.two-range-slider__value--right.range-money
+                                input.two-range-slider__input.js-two-range-slider-input(type='range' min='0' max='50' value='20' step='1').left-range
+                                input.two-range-slider__input.js-two-range-slider-input(type='range' min='0' max='50' value='0' step='1').left-range
+                            </pre>
+
             .card--stack.tabs__item(id="options")
-                h1.title Список страниц
+                h1.title Options selector
+                .wrapper(style="padding: 20px 50px")
+                    include ../sections/select/_select
+                .accordeon-section
+                    p.accordeon-title Mark
+                        button.accordeon-button
+                    .accordeon-container
+                        p.
+                            <pre>
+                            select.fancy-select(name='category' required='required' multiple='multiple')
+                                option(value='Бухгалтерия' selected) Бухгалтерия
+                                option(value='IT' selected) IT
+                                option(value='PM') Product Management
+                                option(value='PrM') Project Management
+                                option(value='Audio') Audio Production
+                                option(value='Video') Videoprod
+                            </pre>
             .card--stack.tabs__item(id="scrollbar")
-                h1.title Список страниц
+                h1.title Скроллбар
+                p Просто добавь класс .scrollbar-custom к любому элементу, требующему кастомный скролл :)
             .card--stack.tabs__item(id="accordion")
-                h1.title Список страниц
+                h1.title Аккордеон
+                .accordeon-section
+                    p.accordeon-title Mark
+                        button.accordeon-button
+                    .accordeon-container
+                        p.
+                            <pre>
+                                .accordeon-section <<контейнер для элементов аккордеона
+                                       p.accordeon-title Заголововк аккордеона
+                                            button.accordeon-button(aria-label="Закрыть аккордеон")
+                                       .accordeon-container
+                                            >>> Контент аккордеона
+                            </pre>
             .card--stack.tabs__item(id="sidebar")
                 h1.title Список страниц

@@ -66,7 +66,7 @@
     top: -27px;
     &--active {
         left: 0;
-        background: #f8fafe;
+        background: $c-grey;
         width: 100%;
         padding-left: 30px;
         padding-right: 30px;
@@ -244,7 +244,7 @@
     margin-top: 34px;
     display: flex;
     justify-content: center;
-    width: calc(100% - 345px);
+    width: calc(100% - 280px);
     flex-wrap: wrap;
     flex-grow: 1;
     @media (min-width: $tablet) {
@@ -293,7 +293,7 @@
         align-items: flex-start;
         padding-top: 0;
         &--stack {
-            min-height: 272px;
+            max-height: 272px;
         }
     }
 }
@@ -301,7 +301,6 @@
 .dashboard__info {
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
     align-items: flex-start;
     width: 100%;
     margin-bottom: 20px;

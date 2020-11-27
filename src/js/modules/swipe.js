@@ -35,17 +35,17 @@ export default () => {
                 spaceBetween: 30,slidesPerView: 'auto',
             }
         },
-        mousewheel: true,
-        forceToAxis: true,
-        releaseOnEdges: true,
+        mousewheel: {
+            forceToAxis: true,
+        },
     });
 
     let news = new Swiper('.news__slider', {
         slidesPerView: 'auto',
         spaceBetween: 30,
-        mousewheel: true,
-        forceToAxis: true,
-        releaseOnEdges: true,
+        mousewheel: {
+            forceToAxis: true,
+        },
         pagination: {
             el: '.news-pagination',
             clickable: true,

@@ -4115,7 +4115,7 @@ textarea:hover {
 }
 
 .partners__item img {
-  opacity: .6;
+  opacity: 0.6;
 }
 
 .partners__item:hover {
@@ -4143,7 +4143,7 @@ textarea:hover {
 }
 
 .partners__list-pagination .swiper-pagination-bullet-active {
-  background: #C3CAD6;
+  background: #c3cad6;
   border-radius: 14px;
   width: 24px;
   height: 14px;
@@ -4169,7 +4169,7 @@ textarea:hover {
 }
 
 .portfolio-cards__counter {
-  background: #2BC584;
+  background: #2bc584;
   border-radius: 4px;
   color: #ffffff;
   padding: 4px 10px;
@@ -5681,7 +5681,7 @@ textarea:hover {
 }
 
 .progress-bar {
-  background: #2BC584;
+  background: #2bc584;
   border-radius: 6px 0 0 6px;
   color: #fff;
   display: -webkit-box;
@@ -5706,12 +5706,12 @@ textarea:hover {
   font-size: 1.125rem;
   line-height: 26px;
   text-align: center;
-  color: #2BC584;
+  color: #2bc584;
   margin-left: 8px;
 }
 
 .progress-info::after {
-  content: '%';
+  content: "%";
 }
 
 .table-scroll {
@@ -7474,7 +7474,7 @@ tfoot td {
 
 .dashboard__aside--active {
   left: 0;
-  background: #f8fafe;
+  background: #f1f4f9;
   width: 100%;
   padding-left: 30px;
   padding-right: 30px;
@@ -7693,7 +7693,7 @@ tfoot td {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: calc(100% - 345px);
+  width: calc(100% - 280px);
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   -webkit-box-flex: 1;
@@ -7743,7 +7743,7 @@ tfoot td {
 
 .dashboard__main-content .card--stack,
 .dashboard__main-content .modal__container {
-  min-height: 272px;
+  max-height: 272px;
 }
 
 .dashboard__info {
@@ -7752,10 +7752,6 @@ tfoot td {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;

@@ -1,61 +1,61 @@
 .card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 20px;
-  margin-bottom: 21px;
-  width: 238px;
-  background: #ffffff;
-  border-radius: 4px;
-  transition: 0.5s;
-  &:hover,
-  &:focus {
-    box-shadow: 0px 5px 20px rgba(110, 119, 129, 0.1);
-    transform: scale(1.01);
-  }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    margin-bottom: 21px;
+    width: 238px;
+    background: #ffffff;
+    border-radius: 4px;
+    transition: 0.5s;
+    &:hover,
+    &:focus {
+        box-shadow: 0px 5px 20px rgba(110, 119, 129, 0.1);
+        transform: scale(1.01);
+    }
 }
 
 .card__progress {
-  margin-bottom: 31px;
+    margin-bottom: 31px;
 }
 
 .card__avatar {
 }
 
 .card__name {
-  font-size: 18px;
-  line-height: 26px;
-  text-align: center;
-  margin: 0 0 12px;
-  color: #444444;
+    font-size: 18px;
+    line-height: 26px;
+    text-align: center;
+    margin: 0 0 12px;
+    color: #444444;
 }
 
 .card__faculty {
-  font-size: 14px;
-  line-height: 21px;
-  margin: 0 0 9px;
-  text-align: center;
-  text-transform: uppercase;
-  color: #444444;
+    font-size: 14px;
+    line-height: 21px;
+    margin: 0 0 9px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #444444;
 }
 
 .card__education {
-  margin: 0 0 25px;
-  font-size: 14px;
-  line-height: 21px;
-  text-align: center;
-  color: #444444;
+    margin: 0 0 25px;
+    font-size: 14px;
+    line-height: 21px;
+    text-align: center;
+    color: #444444;
 }
 
 .card__info {
-  margin: 0 0 27px;
-  display: flex;
-  justify-content: space-between;
-  width: 200px;
-  font-size: 14px;
-  line-height: 21px;
-  text-align: center;
-  color: #c3cad6;
+    margin: 0 0 27px;
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+    font-size: 14px;
+    line-height: 21px;
+    text-align: center;
+    color: #c3cad6;
 }
 
 $themeColor: #2bc584;
@@ -63,27 +63,27 @@ $backColor: $c-grey;
 $textShadow: rgba(black, 0.35) 1px 1px 1px;
 
 .progress--circle {
-  position: relative;
-  display: inline-block;
-  width: 136px;
-  height: 136px;
-  border-radius: 50%;
-  background-color: $backColor;
-  &:after {
-    content: "";
+    position: relative;
     display: inline-block;
-    width: 100%;
-    height: 100%;
+    width: 136px;
+    height: 136px;
     border-radius: 50%;
-    background-color: $themeColor;
-  }
-  img {
-    border-radius: 50%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
+    background-color: $backColor;
+    &:after {
+        content: "";
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background-color: $themeColor;
+    }
+    img {
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
 }
 
 $step: 5;
@@ -91,25 +91,35 @@ $loops: round(100 / $step);
 $increment: 360 / $loops;
 $half: round($loops / 2);
 @for $i from 0 through $loops {
-  .progress--circle.progress--#{$i * $step}:after {
-    @if $i < $half {
-      $nextDeg: 90deg + ($increment * $i);
-      background-image: linear-gradient(
-          90deg,
-          $backColor 50%,
-          transparent 50%,
-          transparent
-        ),
-        linear-gradient($nextDeg, $themeColor 50%, $backColor 50%, $backColor);
-    } @else {
-      $nextDeg: -90deg + ($increment * ($i - $half));
-      background-image: linear-gradient(
-          $nextDeg,
-          $themeColor 50%,
-          transparent 50%,
-          transparent
-        ),
-        linear-gradient(270deg, $themeColor 50%, $backColor 50%, $backColor);
+    .progress--circle.progress--#{$i * $step}:after {
+        @if $i < $half {
+            $nextDeg: 90deg + ($increment * $i);
+            background-image: linear-gradient(
+                    90deg,
+                    $backColor 50%,
+                    transparent 50%,
+                    transparent
+                ),
+                linear-gradient(
+                    $nextDeg,
+                    $themeColor 50%,
+                    $backColor 50%,
+                    $backColor
+                );
+        } @else {
+            $nextDeg: -90deg + ($increment * ($i - $half));
+            background-image: linear-gradient(
+                    $nextDeg,
+                    $themeColor 50%,
+                    transparent 50%,
+                    transparent
+                ),
+                linear-gradient(
+                    270deg,
+                    $themeColor 50%,
+                    $backColor 50%,
+                    $backColor
+                );
+        }
     }
-  }
 }

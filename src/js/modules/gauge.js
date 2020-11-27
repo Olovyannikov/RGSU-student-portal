@@ -1,5 +1,7 @@
 export default () => {
     // helper functions
+
+    // helper functions
     function linearInterpolate(from_range, to_range, val) {
         let minX = from_range[0],
             minY = to_range[0],
@@ -131,8 +133,8 @@ export default () => {
                 if (val < max) {
                     step(val + 1);
                     if (gaugeValueElement.parentElement.classList.contains("gauge--score")) {
-                        val = (Math.floor(val * 100)) / 100;
-                        step(val + 0.01)
+
+                        step(val = max)
                     }
                 }
             }, time / (max - min));
