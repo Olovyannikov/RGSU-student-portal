@@ -1,15 +1,15 @@
 # Stack
-1.  [PUG](https://pugjs.org)
+1. [PUG](https://pugjs.org)
 2. [Gulp](https://gulpjs.com/);
 3. [SASS](https://sass-scss.ru/); 
 4. [ES6](https://habr.com/ru/post/305900/);
 5. [SwiperJS](https://swiperjs.com/)
 
 # View
-https://olovyannikov.github.io/RGSU-second/build
+https://olovyannikov.github.io/RGSU-student-portal/build
 
 # Source code
-https://github.com/Olovyannikov/RGSU-second
+https://github.com/Olovyannikov/RGSU-student-portal
 
 # Install
 
