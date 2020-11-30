@@ -3,7 +3,10 @@
 2. [Gulp](https://gulpjs.com/);
 3. [SASS](https://sass-scss.ru/); 
 4. [ES6](https://habr.com/ru/post/305900/);
-5. [SwiperJS](https://swiperjs.com/)
+5. [SwiperJS](https://swiperjs.com/);
+5. [ChartJS](https://chartjs.com/);
+5. [dataTable](https://chartjs.com/);
+5. [FullCalendar](https://chartjs.com/);
 
 # View
 https://olovyannikov.github.io/RGSU-student-portal/build

@@ -200,7 +200,7 @@
         bottom: 15px;
         right: auto;
     }
-    &:hover {
+    .swiper-slide:hover & {
         background-color: #fff;
         color: #2955c9;
         border: 1px solid transparent;
@@ -208,7 +208,7 @@
     &--dark {
         color: #c3cad6;
         border-color: #c3cad6;
-        &:hover {
+        .swiper-slide:hover &  {
             background-color: #3464e0;
             color: #fff;
         }

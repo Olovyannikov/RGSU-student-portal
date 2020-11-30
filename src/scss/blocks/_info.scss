@@ -1,71 +1,72 @@
 .info-container {
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 40px;
-  position: relative;
-  list-style: none;
-  z-index: 1;
-  overflow: hidden;
-  @media (min-width: 768px) {
     flex-direction: row;
-    flex-wrap: wrap;
-  }
-  @media (min-width: $tablet) {
-    overflow: unset;
-  }
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    position: relative;
+    list-style: none;
+    z-index: 1;
+    overflow: hidden;
+    @media (min-width: 768px) {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    @media (min-width: $tablet) {
+        overflow: unset;
+        margin-bottom: 61px;
+    }
 }
 
 .info__wrapper {
-  @media (min-width: $tablet) {
-    justify-content: space-between;
+    @media (min-width: $tablet) {
+        justify-content: space-between;
 
-    flex-wrap: wrap;
-  }
+        flex-wrap: wrap;
+    }
 }
 
 .info__card-block {
-  justify-content: center;
-  width: 100%;
-  min-width: 294px;
-  display: flex;
-  @media (min-width: 768px) {
-    justify-content: flex-start;
-    width: 315px;
-  }
+    justify-content: center;
+    width: 100%;
+    min-width: 294px;
+    display: flex;
+    @media (min-width: 768px) {
+        justify-content: flex-start;
+        width: 315px;
+    }
 }
 
 .info__card-stack {
-  background: #ffffff;
-  border-radius: 4px;
-  height: 285px;
-  &--half {
-    max-height: 140px;
-    overflow: hidden;
-    @media (min-width: $mobile) {
-      overflow: unset;
-      max-height: 117px;
-    }
-    &:hover {
-      .info__card-media-icon {
-        &--telegram {
-          background: url("../img/icons/telegram-dark.svg");
+    background: #ffffff;
+    border-radius: 4px;
+    height: 285px;
+    &--half {
+        max-height: 140px;
+        overflow: hidden;
+        @media (min-width: $mobile) {
+            overflow: unset;
+            max-height: 117px;
         }
-        &--youtube {
-          background: url("../img/icons/yt-red.svg");
+        &:hover {
+            .info__card-media-icon {
+                &--telegram {
+                    background: url("../img/icons/telegram-dark.svg");
+                }
+                &--youtube {
+                    background: url("../img/icons/yt-red.svg");
+                }
+            }
         }
-      }
     }
-  }
-  @media (min-width: $tablet + 1px) {
-    margin: 0;
-  }
+    @media (min-width: $tablet + 1px) {
+        margin: 0;
+    }
 }
 
 .info__card-media-description {
-  padding-left: 102px;
-  padding-top: 36px;
-  display: block;
+    padding-left: 102px;
+    padding-top: 36px;
+    display: block;
     a {
         color: $c-black;
         &:visited {
@@ -75,152 +76,152 @@
 }
 
 .info__card-media-icon {
-  position: absolute;
-  left: 32px;
-  top: 34px;
-  width: 48px;
-  height: 48px;
-  content: "";
-  background: url("../img/icons/telegram-grey.svg");
-  transition: .5s;
-  &--youtube {
-    background: url("../img/icons/youtube.svg");
-  }
+    position: absolute;
+    left: 32px;
+    top: 34px;
+    width: 48px;
+    height: 48px;
+    content: "";
+    background: url("../img/icons/telegram-grey.svg");
+    transition: 0.5s;
+    &--youtube {
+        background: url("../img/icons/youtube.svg");
+    }
 }
 
 .info__card-week {
-  position: absolute;
-  width: 128px;
-  height: 28px;
-  background-color: #2bc584;
-  top: 28px;
-  right: -6px;
-  margin: 0;
-  color: #ffffff;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 28px;
-  padding-left: 11px;
-  &::after {
-    content: "";
-    display: block;
     position: absolute;
-    right: 0;
-    bottom: -6px;
-    border: 3px solid transparent;
-    border-left: 3px solid #229255;
-    border-top: 3px solid #229255;
-    //
-  }
+    width: 128px;
+    height: 28px;
+    background-color: #2bc584;
+    top: 28px;
+    right: -6px;
+    margin: 0;
+    color: #ffffff;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 28px;
+    padding-left: 11px;
+    &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        right: 0;
+        bottom: -6px;
+        border: 3px solid transparent;
+        border-left: 3px solid #229255;
+        border-top: 3px solid #229255;
+        //
+    }
 }
 
 .info__card-media {
-  flex-direction: column;
-  //display: none;
-  justify-content: space-between;
-  color: #6e7781;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 18px;
-  line-height: 26px;
-  align-items: center;
-  min-height: 285px;
-  @media (min-width: 768px) {
-    min-height: 285px;
+    flex-direction: column;
+    //display: none;
     justify-content: space-between;
-  }
+    color: #6e7781;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 26px;
+    align-items: center;
+    min-height: 285px;
+    @media (min-width: 768px) {
+        min-height: 285px;
+        justify-content: space-between;
+    }
 }
 
 .info__card-media-name {
-  margin: 0;
+    margin: 0;
     color: $c-black;
 }
 .info__card-media-hash {
-  margin: 0;
-  color: #3464E0;
+    margin: 0;
+    color: #3464e0;
 }
 
 //Стили внутри карточки
 .info__card-title {
-  @media (min-width: $tablet) {
-    padding-bottom: 23px;
-  }
+    @media (min-width: $tablet) {
+        padding-bottom: 23px;
+    }
 }
 
 .info__card-main {
-  font-size: 44px;
-  line-height: 60px;
-  color: #444;
-  text-align: center;
-  margin: 0;
-  padding-bottom: 5px;
-  font-style: normal;
-  font-weight: 500;
+    font-size: 44px;
+    line-height: 60px;
+    color: #444;
+    text-align: center;
+    margin: 0;
+    padding-bottom: 5px;
+    font-style: normal;
+    font-weight: 500;
 }
 
 .info__card-sub {
-  color: #c3cad6;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 26px;
-  text-align: center;
-  padding-bottom: 19px;
-  width: 204px;
-  margin: 0 auto;
+    color: #c3cad6;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 26px;
+    text-align: center;
+    padding-bottom: 19px;
+    width: 204px;
+    margin: 0 auto;
 }
 
 .info__card-date {
-  padding-bottom: 20px;
-  @media (min-width: $mobile) {
-    padding-bottom: 46px;
-  }
+    padding-bottom: 20px;
+    @media (min-width: $mobile) {
+        padding-bottom: 46px;
+    }
 }
 
 .info__card-daytime {
-  color: #444;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 26px;
-  line-height: 40px;
-  text-align: center;
-  margin: 0;
+    color: #444;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 26px;
+    line-height: 40px;
+    text-align: center;
+    margin: 0;
 }
 
 .info__card-about {
-  font-size: 14px;
-  line-height: 16px;
-  display: block;
-  width: 146px;
-  margin: 0 auto;
-  padding: 13px 38px;
-  transition: 0.2s;
+    font-size: 14px;
+    line-height: 16px;
+    display: block;
+    width: 146px;
+    margin: 0 auto;
+    padding: 13px 38px;
+    transition: 0.2s;
 }
 
 //Стили для пагинации
 .info__card-pagination {
-  position: absolute;
-  bottom: 25px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  justify-content: center;
-  min-width: 74px;
-  width: 100%;
-  z-index: 2;
-  .swiper-pagination-bullet {
-    background: rgba(195, 202, 214, 0.3);
-    width: 14px;
-    height: 14px;
-    border-radius: 50%;
-    &-active {
-      background: #c3cad6;
-      border-radius: 14px;
-      width: 24px;
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    min-width: 74px;
+    width: 100%;
+    z-index: 2;
+    .swiper-pagination-bullet {
+        background: rgba(195, 202, 214, 0.3);
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        &-active {
+            background: #c3cad6;
+            border-radius: 14px;
+            width: 24px;
+        }
     }
-  }
-  @media (min-width: $tablet) {
-    display: none;
-  }
+    @media (min-width: $tablet) {
+        display: none;
+    }
 }

@@ -1,6 +1,7 @@
 .vacancy__content {
     display: flex;
     justify-content: space-between;
+    gap: 30px;
 }
 
 .vacancy__header {
@@ -97,7 +98,7 @@
 
 .vacancy__wrapper {
     @media (min-width: $tablet) {
-        width: 1006px;
+        width: 100%;
     }
 }
 

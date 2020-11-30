@@ -34,7 +34,7 @@ header.page-header.js-header
                             a.js-menu-link(href="moderate.html") Модерирование
                         li.login__navigation-item.login__navigation--exit
                             a.js-menu-link.page-header__menu-link--exit(href="#") Завершить сеанс
-                .login__modal.modal__login.card--stack
+                .login__modal.modal__login
                     button.modal-close.js-close-button Закрыть
                     h3.modal__title Вход на сайт
                     form.modal__form
@@ -55,6 +55,6 @@ header.page-header.js-header
                             input(required placeholder='Пароль' id="password" name="password" type="text").form__input.form__input--password
 
                         .modal__buttons
-                            button(type="submit").modal__enter.btn.btn--blue Войти
-                            button(type="submit").modal__sber Войти с помощью Сбер ID
-                            a(href="#").modal__error Не можете войти?
+                            button(type="submit").modal__enter.btn.btn--blue Войти на сайт
+                            label(for='sberID') Если подключен
+                            button(id="sberID" type="submit").modal__sber.btn.btn--green Сбер ID

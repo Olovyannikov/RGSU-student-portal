@@ -4,7 +4,7 @@
     z-index: 1000;
     left: 50%;
     margin-left: -200px;
-    width: auto;
+    width: 411px;
     height: auto;
     animation: fadeIn .5s;
 }
@@ -63,7 +63,7 @@
     font-weight: normal;
     font-size: 26px;
     line-height: 26px;
-    color: #3464e0;
+    color: $c-black;
     text-align: center;
     margin-top: 38px;
     margin-bottom: 21px;
@@ -72,9 +72,9 @@
 .modal__form {
     display: flex;
     flex-direction: column;
-    margin-left: 30px;
-    margin-right: 30px;
-    padding-bottom: 20px;
+    margin-left: 40px;
+    margin-right: 40px;
+    padding-bottom: 30px;
 }
 
 .form__label {
@@ -112,7 +112,7 @@
 }
 
 .modal__form-group {
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     &--mail {
         margin-bottom: 12px;
     }
@@ -168,23 +168,27 @@
 .modal__buttons {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
+    label {
+        font-size: 16px;
+        line-height: 26px;
+        color: #C3CAD6;
+        margin-top: 32px;
+        margin-bottom: 6px;
+    }
 }
 
 .modal__enter {
-    margin-right: 21px;
+    width: 100%;
 }
 
 .modal__sber {
-    @include btn-reset;
-    font-size: 0;
-    width: 46px;
+    width: 100%;
+    text-align: center;
+    display: block;
     height: 46px;
-    border-radius: 50%;
-    background: #2bc584 url("../img/sber.svg") no-repeat center;
-    background-size: 50%;
     border: 1px solid #2bc584;
     box-sizing: border-box;
-    margin-right: 36px;
 }
 
 .modal__error {
@@ -318,11 +322,6 @@
     opacity: 1;
     transition: opacity var(--transition-time), transform var(--transition-time);
 }
-
-*:focus {
-    outline: 1px solid rgba(156,186,240,.5);
-}
-
 
 .disable-scroll {
     overflow: hidden;

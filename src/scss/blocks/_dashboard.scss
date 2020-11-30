@@ -101,7 +101,7 @@
 }
 
 .dashboard__menu-wrapper {
-    margin-bottom: 44px;
+    margin-bottom: 19px;
     background: $c-grey;
 }
 
@@ -177,8 +177,9 @@
 }
 
 .dashboard__menu-link {
-    border: 1px solid $c-darkgrey;
-    border-radius: 2px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    background: $c-light;
     display: flex;
     align-items: center;
     padding-left: 71px;
@@ -204,12 +205,13 @@
     }
     &--active {
         border: 1px solid $c-blue;
-        color: $c-blue;
+        color: $c-light;
+        background-color: $c-blue;
         svg {
-            fill: $c-blue;
+            fill: $c-light;
         }
         &:visited {
-            color: $c-blue;
+            color: $c-light;
             &:hover {
                 color: $c-light
             }
@@ -255,20 +257,17 @@
             padding: 0;
         }
     }
-    .info__card-stack {
-        max-height: 272px;
-    }
     .portfolio__container {
         width: 100%;
         @media (min-width: $tablet) {
-            width: 315px;
+            width: 340px;
         }
     }
     .classmates__wrapper {
         background-color: #fff;
         width: 100%;
         @media (min-width: $tablet) {
-            width: 315px;
+            width: 340px;
         }
     }
     .classmates__list {
@@ -293,7 +292,7 @@
         align-items: flex-start;
         padding-top: 0;
         &--stack {
-            max-height: 272px;
+            min-height: 300px;
         }
     }
 }
@@ -313,7 +312,7 @@
         height: fit-content;
         width: 100%;
         @media (min-width: $tablet) {
-            width: 315px;
+            width: 340px;
         }
     }
 }

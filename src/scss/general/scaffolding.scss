@@ -188,7 +188,7 @@ select {
     &:focus,
     &:hover {
         border-color: $c-blue;
-        box-shadow: 0 0 0 1px rgba(156, 186, 240, 0.5);
+        box-shadow: 0 0 0 2px rgba(156, 186, 240, 0.5);
         outline: none;
     }
 }

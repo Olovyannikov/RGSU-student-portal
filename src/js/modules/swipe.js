@@ -32,7 +32,7 @@ export default () => {
                 spaceBetween: 20,slidesPerView: 'auto',
             },
             1024: {
-                spaceBetween: 30,slidesPerView: 'auto',
+                spaceBetween: 30,slidesPerView: '2',
             }
         },
         mousewheel: {
@@ -59,7 +59,7 @@ export default () => {
                 spaceBetween: 20,slidesPerView: 'auto',
             },
             1024: {
-                spaceBetween: 30,slidesPerView: 'auto',
+                spaceBetween: 30,slidesPerView: '2',
             }
         },
     });
@@ -70,6 +70,11 @@ export default () => {
         pagination: {
             el: '.swiper-pagination',
             clickable: true,
+        },
+        breakpoints: {
+            1024: {
+                watchOverflow: true
+            }
         }
     });
 
@@ -113,7 +118,9 @@ export default () => {
         slidesPerGroup: 6,
         spaceBetween: 30,
         loop: 'true',
-        mousewheel: true,
+        mousewheel: {
+            forceToAxis: true,
+        },
         pagination: {
             el: '.swiper-pagination',
             clickable: true,

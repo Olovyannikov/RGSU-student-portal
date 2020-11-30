@@ -43,7 +43,7 @@
                 <li class="login__navigation-item login__navigation--exit"><a class="js-menu-link page-header__menu-link--exit" href="#">Завершить сеанс</a></li>
               </ul>
             </div>
-            <div class="login__modal modal__login card--stack">
+            <div class="login__modal modal__login">
               <button class="modal-close js-close-button">Закрыть</button>
               <h3 class="modal__title">Вход на сайт</h3>
               <form class="modal__form">
@@ -65,8 +65,9 @@
                   <input class="form__input form__input--password" required="required" placeholder="Пароль" id="password" name="password" type="text"/>
                 </div>
                 <div class="modal__buttons">
-                  <button class="modal__enter btn btn--blue" type="submit">Войти</button>
-                  <button class="modal__sber" type="submit">Войти с помощью Сбер ID</button><a class="modal__error" href="#">Не можете войти?</a>
+                  <button class="modal__enter btn btn--blue" type="submit">Войти на сайт</button>
+                  <label for="sberID">Если подключен</label>
+                  <button class="modal__sber btn btn--green" id="sberID" type="submit">Сбер ID</button>
                 </div>
               </form>
             </div>
@@ -77,7 +78,7 @@
     <main class="main">
       <section class="dashboard">
         <div class="dashboard__container container container--aside">
-          <aside class="dashboard__aside aside-content">
+          <aside class="dashboard__aside aside-content dashboard__aside--short">
             <div class="dashboard__main-info"><a class="card__progress" href="profile.html" title="Перейти в настройки профиля">
                 <div class="progress--circle" data-progress="75">
                   <picture class="card__avatar">
@@ -94,31 +95,26 @@
               </div>
               <section class="dashboard__main-info-menu dashboard__menu">
                 <div class="dashboard__menu-wrapper">
-                  <div class="dashboard__menu-header">
-                    <h5 class="dashboard__menu-title title--dashboard">Мой профиль</h5><span class="divider"></span>
-                    <button class="dashboard__menu-button dashboard__menu-button--active" aria-label="Раскрыть меню Мой профиль">Раскрыть меню
-                      <svg width="12" height="12">
-                        <use href="#vector"></use>
-                      </svg>
-                    </button>
+                  <div class="dashboard__menu-header" style="display: none">
+                    <h5 class="dashboard__menu-title title--dashboard">Профиль</h5><span class="divider"></span>
                   </div>
-                  <ul class="dashboard__menu-list dashboard__menu-list--active">
-                    <li class="dashboard__menu-item"><a class="dashboard__menu-link dashboard__menu-link--active" href="dashboard.html">Дашборд
+                  <ul class="dashboard__menu-list dashboard__menu-list--active dashboard__menu-list dashboard__menu-list--active--active">
+                    <li class="dashboard__menu-item"><a class="dashboard__menu-link dashboard__menu-link--short dashboard__menu-link dashboard__menu-link--active" href="dashboard.html">Дашборд
                         <svg width="36" height="36">
                           <use href="#dashboard"></use>
                         </svg></a></li>
-                    <li class="dashboard__menu-item"><a class="dashboard__menu-link" href="profile-settings.html">Редактировать профиль
+                    <li class="dashboard__menu-item"><a class="dashboard__menu-link dashboard__menu-link--short" href="profile-settings.html">Редактировать профиль
                         <svg width="36" height="36">
                           <use href="#profile"></use>
                         </svg></a></li>
-                    <li class="dashboard__menu-item"><a class="dashboard__menu-link" href="notifications.html">Уведомления
+                    <li class="dashboard__menu-item"><a class="dashboard__menu-link dashboard__menu-link--short" href="notifications.html">Уведомления
                         <svg width="36" height="36">
                           <use href="#notifications"></use>
                         </svg><span class="dashboard__notification-counter">1</span></a></li>
                   </ul>
                 </div>
                 <div class="dashboard__menu-wrapper">
-                  <div class="dashboard__menu-header">
+                  <div class="dashboard__menu-header" style="display: none">
                     <h5 class="dashboard__menu-title title--dashboard">МФЦ обучающегося</h5><span class="divider"></span>
                     <button class="dashboard__menu-button" aria-label="Раскрыть меню МФЦ обучающегося">Раскрыть меню
                       <svg width="12" height="12">
@@ -126,23 +122,23 @@
                       </svg>
                     </button>
                   </div>
-                  <ul class="dashboard__menu-list">
-                    <li class="dashboard__menu-item"><a class="dashboard__menu-link" href="orders.html">Заявки
+                  <ul class="dashboard__menu-list dashboard__menu-list--active">
+                    <li class="dashboard__menu-item"><a class="dashboard__menu-link dashboard__menu-link--short" href="orders.html">Заявки
                         <svg width="36" height="36">
                           <use href="#order"></use>
                         </svg></a></li>
-                    <li class="dashboard__menu-item"><a class="dashboard__menu-link" href="payments.html">Оплата услуг
+                    <li class="dashboard__menu-item"><a class="dashboard__menu-link dashboard__menu-link--short" href="payments.html">Оплата услуг
                         <svg width="36" height="36">
                           <use href="#wallet"></use>
                         </svg></a></li>
-                    <li class="dashboard__menu-item"><a class="dashboard__menu-link" href="my-payments.html">Мои оплаты
+                    <li class="dashboard__menu-item"><a class="dashboard__menu-link dashboard__menu-link--short" href="my-payments.html">Мои оплаты
                         <svg width="36" height="36">
                           <use href="#list"></use>
                         </svg></a></li>
                   </ul>
                 </div>
                 <div class="dashboard__menu-wrapper">
-                  <div class="dashboard__menu-header">
+                  <div class="dashboard__menu-header" style="display: none">
                     <h5 class="dashboard__menu-title title--dashboard">Онлайн деканат</h5><span class="divider"></span>
                     <button class="dashboard__menu-button" aria-label="Раскрыть меню Онлайн деканат">Раскрыть меню
                       <svg width="12" height="12">
@@ -150,27 +146,27 @@
                       </svg>
                     </button>
                   </div>
-                  <ul class="dashboard__menu-list">
-                    <li class="dashboard__menu-item"><a class="dashboard__menu-link" href="schedules.html">Расписание
+                  <ul class="dashboard__menu-list dashboard__menu-list--active">
+                    <li class="dashboard__menu-item"><a class="dashboard__menu-link dashboard__menu-link--short" href="schedules.html">Расписание
                         <svg width="36" height="36">
                           <use href="#schedule"></use>
                         </svg></a></li>
-                    <li class="dashboard__menu-item"><a class="dashboard__menu-link" href="student-card.html">Студенческий билет
+                    <li class="dashboard__menu-item"><a class="dashboard__menu-link dashboard__menu-link--short" href="student-card.html">Студенческий билет
                         <svg width="36" height="36">
                           <use href="#studentpass"></use>
                         </svg></a></li>
-                    <li class="dashboard__menu-item"><a class="dashboard__menu-link" href="record-book.html">Зачетная книжка
+                    <li class="dashboard__menu-item"><a class="dashboard__menu-link dashboard__menu-link--short" href="record-book.html">Зачетная книжка
                         <svg width="36" height="36">
                           <use href="#markbook"></use>
                         </svg></a></li>
-                    <li class="dashboard__menu-item"><a class="dashboard__menu-link" href="student-house.html">Общежития
+                    <li class="dashboard__menu-item"><a class="dashboard__menu-link dashboard__menu-link--short" href="student-house.html">Общежития
                         <svg width="36" height="36">
                           <use href="#studenthouse"></use>
                         </svg></a></li>
                   </ul>
                 </div>
                 <div class="dashboard__menu-wrapper">
-                  <div class="dashboard__menu-header">
+                  <div class="dashboard__menu-header" style="display: none">
                     <h5 class="dashboard__menu-title title--dashboard">Портфолио</h5><span class="divider"></span>
                     <button class="dashboard__menu-button" aria-label="Раскрыть меню Портфолио">Раскрыть меню
                       <svg width="12" height="12">
@@ -178,20 +174,20 @@
                       </svg>
                     </button>
                   </div>
-                  <ul class="dashboard__menu-list">
-                    <li class="dashboard__menu-item"><a class="dashboard__menu-link" href="schedules.html">Расписание
+                  <ul class="dashboard__menu-list dashboard__menu-list--active">
+                    <li class="dashboard__menu-item"><a class="dashboard__menu-link dashboard__menu-link--short" href="schedules.html">Расписание
                         <svg width="36" height="36">
                           <use href="#schedule"></use>
                         </svg></a></li>
-                    <li class="dashboard__menu-item"><a class="dashboard__menu-link" href="#">Студенческий билет
+                    <li class="dashboard__menu-item"><a class="dashboard__menu-link dashboard__menu-link--short" href="#">Студенческий билет
                         <svg width="36" height="36">
                           <use href="#studentpass"></use>
                         </svg></a></li>
-                    <li class="dashboard__menu-item"><a class="dashboard__menu-link" href="#">Зачетная книжка
+                    <li class="dashboard__menu-item"><a class="dashboard__menu-link dashboard__menu-link--short" href="#">Зачетная книжка
                         <svg width="36" height="36">
                           <use href="#markbook"></use>
                         </svg></a></li>
-                    <li class="dashboard__menu-item"><a class="dashboard__menu-link" href="#">Общежития
+                    <li class="dashboard__menu-item"><a class="dashboard__menu-link dashboard__menu-link--short" href="#">Общежития
                         <svg width="36" height="36">
                           <use href="#studenthouse"></use>
                         </svg></a></li>

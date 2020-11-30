@@ -29,10 +29,12 @@
     color: #c3cad6;
     padding: 9px 12px;
     border-radius: 2px;
+    transition: .2s;
     &--back {
         color: #c3cad6;
         position: relative;
         svg {
+            transition: .2s;
             top: 50%;
             transform: translateY(-50%);
             left: -11px;
@@ -41,6 +43,7 @@
         &:hover {
             svg {
                 fill: $c-blue;
+                left: -6px;
             }
         }
     }
@@ -48,6 +51,7 @@
         color: #c3cad6;
         position: relative;
         svg {
+            transition: .2s;
             transform: translateY(-50%) rotate(180deg);
             top: 50%;
             right: -11px;
@@ -55,6 +59,7 @@
         }
         &:hover {
             svg {
+                right: -6px;
                 fill: $c-blue;
             }
         }
@@ -75,6 +80,7 @@
     position: absolute;
     width: 7px;
     height: 14px;
+
 }
 
 .pagination__list {
@@ -92,6 +98,9 @@
     &--active {
         background: #3068d4;
         color: $c-light;
+        &:hover {
+            border: 1px solid transparent;
+        }
     }
     &:last-child {
         margin-right: 0;
@@ -99,4 +108,5 @@
     &:hover {
         border-color: $c-blue;
     }
+
 }

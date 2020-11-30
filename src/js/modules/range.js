@@ -20,8 +20,8 @@ export default () => {
             );
 
             // Update the background to reflect the change
-            rangeInputs[0].style.background = `linear-gradient(to right,#3464E0 ${rangeMaxPercentage}%, #c3cad6 ${rangeMaxPercentage}%)`;
-            rangeInputs[1].style.background = `linear-gradient(to right,#c3cad6 ${rangeMinPercentage}%, transparent ${rangeMinPercentage}%)`;
+            rangeInputs[0].style.background = `linear-gradient(to right,#3464E0 ${rangeMaxPercentage}%, #F1F4F9 ${rangeMaxPercentage}%)`;
+            rangeInputs[1].style.background = `linear-gradient(to right,#F1F4F9 ${rangeMinPercentage}%, transparent ${rangeMinPercentage}%)`;
 
             // Update value on screen
 
@@ -73,11 +73,11 @@ export default () => {
 
                 if (rangeMinOutput.classList.contains("range-money")) {
                     let res = toFormat(rangeMinOutput.value);
-                    rangeMinOutput.innerHTML = res + " ₽";
+                    rangeMinOutput.innerHTML = res;
                 }
                 if (rangeMaxOutput.classList.contains("range-money")) {
                     let res = toFormat(rangeMaxOutput.value);
-                    rangeMaxOutput.innerHTML = res + " ₽";
+                    rangeMaxOutput.innerHTML = res;
                 }
 
                 if (rangeMaxOutput.style.left === rangeMinOutput.style.left) {

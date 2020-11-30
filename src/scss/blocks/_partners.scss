@@ -43,7 +43,8 @@
     .swiper-pagination-bullet {
         width: 14px;
         height: 14px;
-        background: rgba(195, 202, 214, 0.3);
+        background: #aaafb7;
+        border-radius: 50%;
         &-active {
             background: #c3cad6;
             border-radius: 14px;

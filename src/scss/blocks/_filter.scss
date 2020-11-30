@@ -47,7 +47,7 @@
     font-size: 16px;
     line-height: 26px;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     position: relative;
     cursor: pointer;
 }
@@ -63,6 +63,7 @@
 .filter__checkbox-visible {
     position: absolute;
     box-sizing: border-box;
+    margin-top: 6px;
     margin-left: -36px;
     width: 20px;
     height: 20px;

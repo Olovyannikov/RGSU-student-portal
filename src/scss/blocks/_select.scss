@@ -60,11 +60,16 @@
 
     .options {
         display: none;
-        max-height: 250px;
+        max-height: 253px;
         overflow-x: hidden;
         width: 100%;
+        font-size: 16px;
+        line-height: 26px;
+        border-bottom-left-radius: 4px;
+        border-bottom-right-radius: 4px;
         > div {
-            padding: 10px 15px;
+
+            padding: 12px 14px;
             cursor: pointer;
             transition: all 0.2s ease;
             position: relative;
@@ -77,7 +82,6 @@
             }
 
             &:after {
-                content: "+";
                 font-weight: bold;
                 position: absolute;
                 font-size: 20px;
@@ -98,17 +102,16 @@
             }
 
             &[data-selected="1"] {
-                background-color: mix(#efefef, #32c509, 70%);
+                background-color: $c-blue;
+                color: $c-light;
+                font-weight: 300;
                 &:after {
                     opacity: 1;
-                    content: "✓";
                 }
 
                 &:hover {
-                    background-color: mix(#efefef, red, 70%);
-                    &:after {
-                        content: "x";
-                    }
+                    background-color: $c-red;
+
                 }
             }
         }

@@ -1,20 +1,26 @@
 .announcement {
-  margin-bottom: 43px;
-  background: #fff;
-  border-radius: 4px;
-  width: 100%;
+    margin-bottom: 43px;
+    background: #fff;
+    width: 100%;
 }
 
 .announcement__wrapper {
-  overflow: hidden;
+    overflow: hidden;
+    transition: .2s;
+
+    border-radius: 4px;
+    &:hover {
+        background: $c-blue;
+        color: $c-light;
+    }
 }
 
 .announcement__text {
-  padding: 22px 14px 22px 23px;
-  font-size: 18px;
-  line-height: 26px;
-  margin: 0;
-  a {
-    color: $c-blue;
-  }
+    padding: 22px 14px 22px 23px;
+    font-size: 18px;
+    line-height: 26px;
+    margin: 0;
+    a {
+        color: $c-blue;
+    }
 }

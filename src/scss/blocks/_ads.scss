@@ -1,53 +1,53 @@
 .advertisement {
-  margin-bottom: 52px;
-  overflow: hidden;
-  .swiper-container {
-    overflow: unset;
-  }
+    margin-bottom: 52px;
+    overflow: hidden;
+    .swiper-container {
+        overflow: unset;
+    }
 }
 
 .advertisement__header {
-  width: 100%;
-  margin-bottom: 38px;
-  display: flex;
-  align-items: center;
+    width: 100%;
+    margin-bottom: 38px;
+    display: flex;
+    align-items: center;
 }
 
 .advertisement__titile {
-  margin: 0 21px 0 0;
+    margin: 0 21px 0 0;
 }
 
 .advertisement__container {
-  position: relative;
-  list-style: none;
-  z-index: 1;
+    position: relative;
+    list-style: none;
+    z-index: 1;
 }
 
 .advertisement__wrapper {
-  margin-bottom: 30px;
-  .swiper-slide {
-    width: 487px;
-  }
-  @media (min-width: $tablet) {
+    margin-bottom: 30px;
     .swiper-slide {
-      width: auto;
+        width: 100%;
     }
-  }
+    @media (min-width: $tablet) {
+        .swiper-slide {
+            width: 487px;
+        }
+    }
 }
 
 .advertisement__buttons {
-  @include swiperCenter;
-  display: flex;
-  @media (min-width: $tablet) {
-    display: none;
-  }
+    @include swiperCenter;
+    display: flex;
+    @media (min-width: $tablet) {
+        display: none;
+    }
 }
 
 .advertisement__buttons--extra {
-  display: none;
-  @media (min-width: $tablet) {
-    display: flex;
-    width: 140px;
-    margin-left: 33px;
-  }
+    display: none;
+    @media (min-width: $tablet) {
+        display: flex;
+        width: 140px;
+        margin-left: 33px;
+    }
 }
