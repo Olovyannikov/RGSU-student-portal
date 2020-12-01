@@ -154,11 +154,9 @@ section.portfolio-cards
                     h4.filter__title.title--aside Возраст 
                         span (лет)
                     .filter__range.two-range-slider.js-two-range-slider
-                        .two-range-slider__output
-                            output.two-range-slider__value.js-two-range-slider-min-value.two-range-slider__value--left
-                            output.two-range-slider__value.js-two-range-slider-max-value.two-range-slider__value--right
-                        input.two-range-slider__input.js-two-range-slider-input(type='range' min='0' max='50' value='50' step='1').left-range
-                        input.two-range-slider__input.js-two-range-slider-input(type='range' min='0' max='50' value='0' step='1').left-range
+                        .c-rng__multi
+                            input.c-rng(type='range' min='0' max='250000' value='20000' data-js='range' data-range-output=':true' data-range-type='lower' data-range-diff='5')
+                            input.c-rng(type='range' min='0' max='250000' value='200000' data-js='range' data-range-output=':true' data-range-type='upper' data-range-diff='5')
                 .filter__checkboxes
                     .filter__checkboxes-container.scrollbar-custom
                         .filter__checkboxes-scroll
@@ -204,8 +202,6 @@ section.portfolio-cards
                 .filter__salary
                     h4.filter__title.title--aside Желаемая заработная плата
                     .filter__range.two-range-slider.js-two-range-slider
-                        .two-range-slider__output
-                            output.two-range-slider__value.js-two-range-slider-min-value.two-range-slider__value--left.range-money(style="left: 4%")
-                            output.two-range-slider__value.js-two-range-slider-max-value.two-range-slider__value--right.range-money(style="left: 88%")
-                        input.two-range-slider__input.js-two-range-slider-input(type='range' min='0' max='250000' value='220000' step='10000').left-range
-                        input.two-range-slider__input.js-two-range-slider-input(type='range' min='0' max='250000' value='10000' step='10000' style="left").left-range
+                        .c-rng__multi
+                            input.c-rng(type='range' min='0' max='250000' value='20000' data-js='range' data-range-output=':true' data-range-type='lower' data-range-diff='5')
+                            input.c-rng(type='range' min='0' max='250000' value='200000' data-js='range' data-range-output=':true' data-range-type='upper' data-range-diff='5')

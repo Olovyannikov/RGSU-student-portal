@@ -44,8 +44,8 @@
     @include list-reset;
     padding: 23px 43px 42px 33px;
     border-radius: 4px;
-    height: 261px;
     display: flex;
+    height: auto;
     flex-wrap: wrap;
     justify-content: space-between;
     background: #fff;
@@ -53,6 +53,7 @@
     @media (min-width: $tablet) {
         padding-top: 43px;
         overflow: hidden;
+        height: 261px;
     }
 }
 
@@ -82,7 +83,6 @@
 .portfolio__link {
     display: flex;
     align-items: center;
-    max-width: 398px;
     color: #444444;
     transition: 0.2s;
     &:hover {
@@ -97,6 +97,9 @@
             color: #fff;
         }
     }
+    @media (min-width: $tablet) {
+        max-width: 398px;
+    }
 }
 
 .portfolio__item {
@@ -105,11 +108,17 @@
 
 .portfolio__list-wrapper {
     @include list-reset;
-    width: 398px;
     display: flex;
+    width: 100%;
     flex-direction: column;
     justify-content: space-between;
-    height: 161px;
+    height: auto;
+    white-space: nowrap;
+    gap: 10px;
+    @media (min-width: $tablet) {
+        white-space: unset;
+        width: 398px;
+    }
 }
 //active - unactive
 .portfolio-tabs__article {

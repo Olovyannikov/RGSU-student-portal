@@ -27,6 +27,7 @@
     display: flex;
     width: 100%;
     flex-wrap: wrap;
+    margin-bottom: 20px;
 }
 
 .profile__progress {
@@ -134,7 +135,6 @@
 .profile__contacts {
     display: flex;
     align-items: center;
-    margin-bottom: 23px;
     flex-wrap: wrap;
     gap: 20px;
     ul {
@@ -145,13 +145,14 @@
     }
 }
 
+.profile__contacts-data {
+    margin-right: 21px;
+}
+
 .profile__social {
     @include list-reset;
     display: flex;
-    margin-right: 35px;
+    margin-right: auto;
     justify-content: space-between;
 }
 
-.profile__contacts-data {
-    margin-right: auto;
-}

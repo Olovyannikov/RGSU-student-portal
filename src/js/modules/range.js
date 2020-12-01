@@ -1,108 +1,150 @@
 export default () => {
-    const twoRangeSlider = (() => {
-        const rangeCheck = (rangeInputs, rangeMinOutput, rangeMaxOutput) => {
-            const rangeMin = rangeInputs[0].min ? rangeInputs[0].min : 0;
-            const rangeMax = rangeInputs[0].max ? rangeInputs[0].max : 100;
-            let rangeMinValue = parseInt(rangeInputs[1].value);
-            let rangeMaxValue = parseInt(rangeInputs[0].value);
-
-            rangeMinValue = Math.min(
-                Math.max(rangeMinValue, rangeMin),
-                rangeMaxValue
+    class RangeSlider {
+        constructor(element, settings) {
+            this.settings = Object.assign(
+                {
+                    clsOutput: "c-rng__output",
+                    clsOutputWrapper: "c-rng--output",
+                    rangeOutput: false,
+                    rangeType: "",
+                    varPercent: "--rng-percent",
+                    varPercentUpper: "--rng-percent-upper",
+                    varThumb: "--rng-thumb-w",
+                    varUnit: "--rng-unit",
+                    varValue: "--rng-value",
+                },
+                stringToType(settings)
             );
 
-            // Calculate the percentage of the background where the thumb is
-            const rangeMinPercentage = Number(
-                ((rangeMinValue - rangeMin) * 100) / (rangeMax - rangeMin)
-            );
-            const rangeMaxPercentage = Number(
-                ((rangeMaxValue - rangeMin) * 100) / (rangeMax - rangeMin)
-            );
+            this.initRange(element);
+        }
 
-            // Update the background to reflect the change
-            rangeInputs[0].style.background = `linear-gradient(to right,#3464E0 ${rangeMaxPercentage}%, #F1F4F9 ${rangeMaxPercentage}%)`;
-            rangeInputs[1].style.background = `linear-gradient(to right,#F1F4F9 ${rangeMinPercentage}%, transparent ${rangeMinPercentage}%)`;
+        /**
+         * @function initRange
+         * @param {Node} range
+         * @description Initialize: Create elements, add eventListeners etc.
+         */
+        initRange(range) {
+            const id = range.id || uuid();
+            const min = parseInt(range.min, 10);
+            const multiplier = 100 / ((parseInt(range.max, 10) || 100) - min);
 
-            // Update value on screen
+            range.__lower =
+                this.settings.rangeType === "upper"
+                    ? range.parentNode.querySelector(
+                          `[data-range-type="lower"]`
+                      )
+                    : null;
+            range.__upper =
+                this.settings.rangeType === "lower"
+                    ? range.parentNode.querySelector(
+                          `[data-range-type="upper"]`
+                      )
+                    : null;
+            range.__output = this.settings.rangeOutput
+                ? document.createElement("output")
+                : null;
 
-            rangeMinOutput.innerHTML = `${rangeMinValue}`;
-            rangeMaxOutput.innerHTML = `${rangeMaxValue}`;
-        };
+            if (range.__output) {
+                range.__output.for = id;
+                range.__output.className = this.settings.clsOutput;
+                range.__output.style.setProperty(
+                    this.settings.varThumb,
+                    getComputedStyle(range).getPropertyValue(
+                        this.settings.varThumb
+                    )
+                );
+                range.id = id;
 
-        const bindComponent = (item) => {
-            const rangeInputs = item.querySelectorAll(
-                ".js-two-range-slider-input"
-            );
-            const rangeMinOutput = item.querySelector(
-                ".js-two-range-slider-min-value"
-            );
-            const rangeMaxOutput = item.querySelector(
-                ".js-two-range-slider-max-value"
-            );
-
-            item.addEventListener("input", () => {
-                // Update value on screen
-                rangeCheck(rangeInputs, rangeMinOutput, rangeMaxOutput);
-                for (let i = 0; i < rangeInputs.length; i++) {
-                    let directions = {
-                        left:
-                            (rangeMinOutput.value /
-                                rangeInputs[i].getAttribute("max")) *
-                            100,
-                        right:
-                            (rangeMaxOutput.value /
-                                rangeInputs[i].getAttribute("max")) *
-                            100,
-                    };
-                    rangeMinOutput.style.left = directions.left + "%";
-                    rangeMaxOutput.style.left = directions.right + "%";
-                }
-
-                function toFormat(str) {
-                    return str
-                        .split("")
-                        .reverse()
-                        .join("")
-                        .match(/\d{0,3}/g)
-                        .join(" ")
-                        .split("")
-                        .reverse()
-                        .join("")
-                        .trim();
-                }
-
-                if (rangeMinOutput.classList.contains("range-money")) {
-                    let res = toFormat(rangeMinOutput.value);
-                    rangeMinOutput.innerHTML = res;
-                }
-                if (rangeMaxOutput.classList.contains("range-money")) {
-                    let res = toFormat(rangeMaxOutput.value);
-                    rangeMaxOutput.innerHTML = res;
-                }
-
-                if (rangeMaxOutput.style.left === rangeMinOutput.style.left) {
-                    rangeInputs[1].style.display = "none";
-                    rangeMinOutput.style.display = "none";
+                if (!range.dataset.rangeType) {
+                    const wrapper = document.createElement("div");
+                    wrapper.classList.add(this.settings.clsOutputWrapper);
+                    range.parentNode.insertBefore(wrapper, range);
+                    wrapper.appendChild(range.__output);
+                    wrapper.appendChild(range);
                 } else {
-                    rangeInputs[1].style.display = "block";
-                    rangeMinOutput.style.display = "block";
+                    range.parentNode.insertBefore(range.__output, range);
                 }
+            }
+
+            range.addEventListener("input", () => {
+                this.updateRange(range, min, multiplier);
             });
+            range.dispatchEvent(new Event("input"));
+        }
 
-            rangeCheck(rangeInputs, rangeMinOutput, rangeMaxOutput);
-        };
-
-        const init = () => {
-            const rootEl = document.getElementsByClassName(
-                "js-two-range-slider"
+        /**
+         * @function updateRange
+         * @param {Node} range
+         * @param {Number} [minRange]
+         * @param {Number} [multiplier]
+         * @description Updates CSS Custom Props when range-input is modified
+         */
+        updateRange(range, minRange = 0, multiplier = 1) {
+            if (range.__lower && range.dataset.rangeDiff) {
+                const minValue =
+                    range.dataset.rangeDiff - 0 + range.__lower.valueAsNumber;
+                if (minValue > range.valueAsNumber) {
+                    range.value = minValue;
+                    return;
+                }
+            }
+            if (range.__upper && range.dataset.rangeDiff) {
+                const maxValue =
+                    range.__upper.valueAsNumber - (range.dataset.rangeDiff - 0);
+                if (maxValue < range.valueAsNumber) {
+                    range.value = maxValue;
+                    return;
+                }
+            }
+            const value = (range.valueAsNumber - minRange) * multiplier;
+            range.style.setProperty(this.settings.varPercent, `${value}%`);
+            range.style.setProperty(
+                this.settings.varValue,
+                `${range.valueAsNumber}`
             );
-            [...rootEl].forEach((item) => bindComponent(item));
-        };
 
-        return {
-            init,
-        };
-    })();
+            if (range.__lower) {
+                range.__lower.style.setProperty(
+                    this.settings.varPercentUpper,
+                    `${value}%`
+                );
+            }
+            if (range.__output) {
+                range.__output.style.setProperty(
+                    this.settings.varUnit,
+                    `${value}`
+                );
+                range.__output.innerText = range.value;
+            }
+        }
+    }
 
-    twoRangeSlider.init();
+    function stringToType(obj) {
+        const object = Object.assign({}, obj);
+        Object.keys(object).forEach((key) => {
+            if (
+                typeof object[key] === "string" &&
+                object[key].charAt(0) === ":"
+            ) {
+                object[key] = JSON.parse(object[key].slice(1));
+            }
+        });
+        return object;
+    }
+
+    function uuid() {
+        return ([1e7] + -1e3 + -4e3 + -8e3 + -1e11).replace(/[018]/g, (c) => {
+            return (
+                c ^
+                (crypto.getRandomValues(new Uint8Array(1))[0] & (15 >> (c / 4)))
+            ).toString(16);
+        });
+    }
+
+    /* Demo: Run it */
+    const elements = document.querySelectorAll('[data-js="range"]');
+    elements.forEach((element) => {
+        new RangeSlider(element, element.dataset);
+    });
 };

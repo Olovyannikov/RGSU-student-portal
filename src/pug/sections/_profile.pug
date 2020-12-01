@@ -23,7 +23,7 @@ section.profile
                                 span.profile__info-data Факультет искусств
                             .profile__direction Направление подготовки: 
                                 span.profile__info-data Социально-культурная деятельность
-                .profile__contacts
+                .profile__contacts.no-print
                     .profile__social.social-block
                         ul.social-block__list
                             li.social-block__item
@@ -38,10 +38,18 @@ section.profile
                                 a.social-block__link.social-block__link--insta(href="#") Instagram
                                     svg(fill="#C3CAD6" width="16" height="16")
                                         use(href="#insta")
-                    button.btn.btn--regular.profile__contacts-data Контактные данные
                     .profile__activities.activities
                         ul.activities__list
                             li.activities__item
+                                a(href="#" data-tooltip="Необразовательные достижения" data-flow="up").activities__link.activities__link--achievements
+                                    svg(width='16' height='16')
+                                        use(href="#achievements")
+                            li.activities__item
+                                button.activities__link.activities__link--print(onclick="window.print()" aria-label="Распечатать документ")
+                                    svg(width='16' height='16')
+                                        use(href="#printer")
+                            li.activities__item
                                 a.activities__link.activities__link--youtube(href="#") Youtube
+                    button.btn.btn--regular.profile__contacts-data Контактные данные
             include ./_portfolio
             include ./_portfolio--middle-score

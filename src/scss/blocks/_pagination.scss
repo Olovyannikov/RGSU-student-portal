@@ -95,18 +95,18 @@
     box-sizing: border-box;
     border-radius: 2px;
     margin-right: 19px;
-    &--active {
-        background: #3068d4;
-        color: $c-light;
-        &:hover {
-            border: 1px solid transparent;
-        }
-    }
+
     &:last-child {
         margin-right: 0;
     }
     &:hover {
         border-color: $c-blue;
     }
-
+    &--active {
+        background: #3068d4;
+        color: $c-light;
+        &:hover {
+            border: 1px solid #fff;
+        }
+    }
 }

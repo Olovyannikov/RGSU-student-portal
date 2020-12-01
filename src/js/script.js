@@ -15,6 +15,7 @@ import { default as tags } from "./modules/tags.js";
 import { default as chart } from "./modules/chart.js";
 import { default as tabs } from "./modules/tabs.js";
 import { default as modals } from "./modules/modal.js";
+import {default as parallax} from "./modules/parallax.js";
 // init modules
 
 window.onload = function () {
@@ -114,3 +115,5 @@ if (document.querySelector("#fullMenu")) {
         }
     });
 }
+
+parallax();

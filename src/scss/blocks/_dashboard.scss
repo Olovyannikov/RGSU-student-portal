@@ -261,6 +261,7 @@
         width: 100%;
         @media (min-width: $tablet) {
             width: 340px;
+            flex-grow: 1;
         }
     }
     .classmates__wrapper {
@@ -268,6 +269,7 @@
         width: 100%;
         @media (min-width: $tablet) {
             width: 340px;
+            flex-grow: 1;
         }
     }
     .classmates__list {
@@ -284,8 +286,12 @@
     .classmates__list-wrapper {
         overflow-y: unset;
         width: 90%;
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
         @media (min-width: $tablet) {
             overflow-y: scroll;
+            display: block;
         }
     }
     .card {
@@ -305,14 +311,17 @@
     margin-bottom: 20px;
     @media (min-width: $tablet) {
         flex-direction: row;
+        flex-wrap: unset;
         width: 100%;
         justify-content: space-between;
+        gap: 10px;
     }
     .info__card-block {
         height: fit-content;
         width: 100%;
         @media (min-width: $tablet) {
             width: 340px;
+            flex-grow: 1;
         }
     }
 }

@@ -17,7 +17,7 @@ export default () => {
     });
 
     let advertisement = new Swiper('.advertisement__slider', {
-        slidesPerView: 'auto',
+        slidesPerView: '1',
         spaceBetween: 30,
         pagination: {
             el: '.advertisement-pagination',
@@ -31,8 +31,11 @@ export default () => {
             768: {
                 spaceBetween: 20,slidesPerView: 'auto',
             },
-            1024: {
+            1250: {
                 spaceBetween: 30,slidesPerView: '2',
+            },
+            1251: {
+                slidesPerView: 'auto'
             }
         },
         mousewheel: {
@@ -58,8 +61,11 @@ export default () => {
             768: {
                 spaceBetween: 20,slidesPerView: 'auto',
             },
-            1024: {
+            1250: {
                 spaceBetween: 30,slidesPerView: '2',
+            },
+            1251: {
+                slidesPerView: 'auto'
             }
         },
     });

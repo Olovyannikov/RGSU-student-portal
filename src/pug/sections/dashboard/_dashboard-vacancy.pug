@@ -57,11 +57,9 @@ section.vacancy.dashboard__vacancy
                     h4.vacancy__filter-title Заработная плата
                     .filter__salary(style="position: relative")
                         .filter__range.two-range-slider.js-two-range-slider(style="position: static")
-                            .two-range-slider__output
-                                output.two-range-slider__value.js-two-range-slider-min-value.two-range-slider__value--left.range-money
-                                output.two-range-slider__value.js-two-range-slider-max-value.two-range-slider__value--right.range-money
-                            input.two-range-slider__input.js-two-range-slider-input(type='range' min='0' max='250000' value='250000' step='10000').left-range
-                            input.two-range-slider__input.js-two-range-slider-input(type='range' min='0' max='250000' value='0' step='10000').left-range
+                            .c-rng__multi
+                                input.c-rng(type='range' min='0' max='250000' value='20000' data-js='range' data-range-output=':true' data-range-type='lower' data-range-diff='5')
+                                input.c-rng(type='range' min='0' max='250000' value='200000' data-js='range' data-range-output=':true' data-range-type='upper' data-range-diff='5')
         .vacancy__content
             .vacancy__wrapper
                 .vacancy__section.accordeon-section
