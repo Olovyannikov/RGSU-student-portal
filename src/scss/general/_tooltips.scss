@@ -6,7 +6,7 @@
 [data-tooltip]::before,
 [data-tooltip]::after {
     text-transform: none; /* opinion 2 */
-    font-size: .82em; /* opinion 3 */
+    font-size: 13px; /* opinion 3 */
     line-height: 1;
     user-select: none;
     pointer-events: none;
@@ -23,7 +23,6 @@
     content: attr(data-tooltip); /* magic! */
 
     /* most of the rest of this is opinion */
-    font-family: Helvetica, sans-serif;
     text-align: center;
 
     /*
@@ -108,13 +107,16 @@
     top: 50%;
     border-left-width: 0;
     border-right-color: #333;
-    right: calc(0em - 5px);
+    right: calc(0em - 13px);
     transform: translate(.5em, -50%);
+    z-index: 1002;
 }
 [data-tooltip][data-flow^="right"]::after {
     top: 50%;
-    left: calc(100% + 5px);
+    left: calc(100% + 13px);
+    min-height: 38px;
     transform: translate(.5em, -50%);
+    z-index: 1002;
 }
 
 /* KEYFRAMES */

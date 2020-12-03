@@ -81,6 +81,7 @@
         max-width: 280px;
         &--short {
             max-width: 68px;
+            z-index: 1;
             .card__name,
             .card__faculty,
             .progress__wrapper {

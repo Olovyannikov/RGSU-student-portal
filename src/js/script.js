@@ -15,7 +15,8 @@ import { default as tags } from "./modules/tags.js";
 import { default as chart } from "./modules/chart.js";
 import { default as tabs } from "./modules/tabs.js";
 import { default as modals } from "./modules/modal.js";
-import {default as parallax} from "./modules/parallax.js";
+import { default as parallax } from "./modules/parallax.js";
+import {default as tinygesture} from "./modules/tinygesture.js";
 // init modules
 
 window.onload = function () {
@@ -28,6 +29,34 @@ if (document.querySelector(".chart")) {
     chart();
 }
 
+function addElement() {
+    // Создаем новый элемент div
+    // и добавляем в него немного контента
+
+    let footerBar = document.createElement("button");
+    footerBar.classList.add("footer__bar");
+
+    // Добавляем только что созданый элемент в дерево DOM
+
+    document.querySelector("#footer").appendChild(footerBar);
+}
+
+if (document.querySelector(".footer__container").offsetWidth > 768) {
+    document
+        .querySelector(".footer__container")
+        .classList.remove("visually-hidden");
+} else if (
+    document.querySelector(".footer__container").offsetWidth <= 768
+) {
+    document
+        .querySelector(".footer__container")
+        .classList.add("visually-hidden");
+    addElement();
+}
+
+if (document.querySelector(".footer__bar")) {
+    tinygesture();
+}
 tags();
 if (document.querySelector(".js-filter-btn")) {
     filterBtn();
@@ -117,3 +146,6 @@ if (document.querySelector("#fullMenu")) {
 }
 
 parallax();
+
+
+

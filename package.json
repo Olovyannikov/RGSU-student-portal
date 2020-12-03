@@ -22,7 +22,8 @@
 		"moment": "^2.29.1",
 		"simple-datatables": "^2.1.13",
 		"simple-parallax-js": "^5.6.2",
-		"swiper": "^6.3.3"
+		"swiper": "^6.3.3",
+		"tinygesture": "^1.1.4"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.11.6",

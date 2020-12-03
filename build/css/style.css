@@ -1612,7 +1612,7 @@ textarea:hover {
 [data-tooltip]::after {
   text-transform: none;
   /* opinion 2 */
-  font-size: .82em;
+  font-size: 13px;
   /* opinion 3 */
   line-height: 1;
   -webkit-user-select: none;
@@ -1637,7 +1637,6 @@ textarea:hover {
   content: attr(data-tooltip);
   /* magic! */
   /* most of the rest of this is opinion */
-  font-family: Helvetica, sans-serif;
   text-align: center;
   /*
       Let the content set the size of the data-tooltips
@@ -1742,18 +1741,21 @@ textarea:hover {
   top: 50%;
   border-left-width: 0;
   border-right-color: #333;
-  right: calc(0em - 5px);
+  right: calc(0em - 13px);
   -webkit-transform: translate(0.5em, -50%);
       -ms-transform: translate(0.5em, -50%);
           transform: translate(0.5em, -50%);
+  z-index: 1002;
 }
 
 [data-tooltip][data-flow^="right"]::after {
   top: 50%;
-  left: calc(100% + 5px);
+  left: calc(100% + 13px);
+  min-height: 38px;
   -webkit-transform: translate(0.5em, -50%);
       -ms-transform: translate(0.5em, -50%);
           transform: translate(0.5em, -50%);
+  z-index: 1002;
 }
 
 /* KEYFRAMES */
@@ -2860,6 +2862,13 @@ textarea:hover {
 .footer {
   background: #6e7781;
   margin-top: 2.5625rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .footer hr {
@@ -2867,7 +2876,7 @@ textarea:hover {
   /*для IE */
   background-color: #6f7d8b;
   /*для Firefox, Opera, Safari*/
-  border: 0px none;
+  border: 0 none;
   height: 1px;
   /* высота 1px IE, Firefox, Opera, Safari */
 }
@@ -3043,7 +3052,7 @@ textarea:hover {
   font-size: 0.875rem;
   line-height: 1.625rem;
   color: #ffffff;
-  padding-bottom: 17px;
+  padding-bottom: 0;
 }
 
 .footer__policy a {
@@ -3059,6 +3068,26 @@ textarea:hover {
 
 .footer__policy-item a:not(.footer__copyright):hover {
   color: #c3cad6;
+}
+
+.footer__bar {
+  -webkit-box-ordinal-group: 1;
+      -ms-flex-order: 0;
+          order: 0;
+  border: none;
+  cursor: pointer;
+  width: 90px;
+  height: 4px;
+  background: #C3CAD6;
+  opacity: 0.6;
+  border-radius: 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 16px auto 0;
 }
 
 .social-block {
@@ -9273,6 +9302,10 @@ tfoot td {
     padding-left: 0;
   }
 
+  .footer {
+    display: block;
+  }
+
   .enter {
     display: block;
   }
@@ -10010,6 +10043,7 @@ tfoot td {
 
   .dashboard__aside--short {
     max-width: 68px;
+    z-index: 1;
   }
 
   .dashboard__aside--short .card__name,

@@ -1,11 +1,16 @@
 .footer {
     background: #6e7781;
     margin-top: rem-calc(41);
+    flex-direction: column-reverse;
+    display: flex;
     hr {
         color: #6f7d8b; /*для IE */
         background-color: #6f7d8b; /*для Firefox, Opera, Safari*/
-        border: 0px none;
+        border: 0 none;
         height: 1px; /* высота 1px IE, Firefox, Opera, Safari */
+    }
+    @media (min-width: $mobile) {
+        display: block;
     }
 }
 
@@ -166,7 +171,7 @@
     font-size: rem-calc(14);
     line-height: rem-calc(26);
     color: #ffffff;
-    padding-bottom: 17px;
+    padding-bottom: 0;
     a {
         color: #fff;
     }
@@ -189,3 +194,16 @@
     }
 }
 
+.footer__bar {
+    order: 0;
+    border: none;
+    cursor: pointer;
+    width: 90px;
+    height: 4px;
+    background: #C3CAD6;
+    opacity: 0.6;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    margin: 16px auto 0;
+}
