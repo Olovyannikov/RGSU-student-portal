@@ -381,6 +381,7 @@
             z-index: -1;
         }
         box-shadow: none;
+        z-index: 13;
     }
 
     @media (min-width: $tablet) {
