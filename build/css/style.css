@@ -10112,6 +10112,12 @@ tfoot td {
   }
 }
 
+@media (max-width: 446px) {
+  .portfolio__link {
+    white-space: break-spaces;
+  }
+}
+
 @media (min-width: 1024px) and (max-width: 1024px) {
   .footer__policy {
     padding: 0 20px;

@@ -97,6 +97,9 @@
             color: #fff;
         }
     }
+    @media (max-width: 446px) {
+        white-space: break-spaces;
+    }
     @media (min-width: $tablet) {
         max-width: 398px;
     }

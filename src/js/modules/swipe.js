@@ -149,10 +149,6 @@ export default () => {
                 spaceBetween: 30
             }
         },
-        autoplay: {
-            delay: 2500,
-            disableOnInteraction: false,
-        }
     });
     let stories = new Swiper('.stories__container', {
         slidesPerView: 6,
