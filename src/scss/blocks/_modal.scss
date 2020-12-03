@@ -8,7 +8,9 @@
     height: auto;
     animation: fadeIn .5s;
     @media (max-width: 470px) {
-        width: 80%;
+        width: 90%;
+        margin-left: 0px;
+        transform: translateX(-50%);
     }
 }
 
