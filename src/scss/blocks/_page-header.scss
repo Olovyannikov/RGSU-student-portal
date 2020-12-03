@@ -369,6 +369,7 @@
 
 .page-header__login-button {
     @include btn-reset;
+    z-index: 100;
     color: #fff;
     position: relative;
     font-style: normal;
