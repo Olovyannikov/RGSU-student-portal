@@ -7,6 +7,9 @@
     width: 411px;
     height: auto;
     animation: fadeIn .5s;
+    @media (max-width: 470px) {
+        width: 90%;
+    }
 }
 
 .modal--active {
