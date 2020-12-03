@@ -1,4 +1,4 @@
-import TinyGesture from "./../vendor/tinygesture.js";
+import TinyGesture from "tinygesture";
 export default () => {
 
     const options = {
