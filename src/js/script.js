@@ -16,12 +16,13 @@ import { default as chart } from "./modules/chart.js";
 import { default as tabs } from "./modules/tabs.js";
 import { default as modals } from "./modules/modal.js";
 import { default as parallax } from "./modules/parallax.js";
-import {default as tinygesture} from "./modules/tinygesture.js";
+import { default as tinygesture } from "./modules/tinygesture.js";
 // init modules
 
 window.onload = function () {
     swiper();
 };
+
 
 modals();
 
@@ -45,9 +46,7 @@ if (document.querySelector(".footer__container").offsetWidth > 768) {
     document
         .querySelector(".footer__container")
         .classList.remove("visually-hidden");
-} else if (
-    document.querySelector(".footer__container").offsetWidth <= 768
-) {
+} else if (document.querySelector(".footer__container").offsetWidth <= 768) {
     document
         .querySelector(".footer__container")
         .classList.add("visually-hidden");
@@ -146,6 +145,3 @@ if (document.querySelector("#fullMenu")) {
 }
 
 parallax();
-
-
-

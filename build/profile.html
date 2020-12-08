@@ -295,11 +295,11 @@
                               <label class="settings__filter-label" for="salary">Заработная плата</label>
                               <div class="two-range-slider js-two-range-slider" id="salary">
                                 <div class="two-range-slider__output">
-                                  <output class="two-range-slider__value js-two-range-slider-min-value two-range-slider__value--left range-money"></output>
-                                  <output class="two-range-slider__value js-two-range-slider-max-value two-range-slider__value--right range-money"></output>
+                                  <div class="c-rng__multi">
+                                    <input class="c-rng" type="range" min="0" max="250000" value="20000" data-js="range" data-range-output=":true" data-range-type="lower" data-range-diff="5"/>
+                                    <input class="c-rng" type="range" min="0" max="250000" value="200000" data-js="range" data-range-output=":true" data-range-type="upper" data-range-diff="5"/>
+                                  </div>
                                 </div>
-                                <input class="two-range-slider__input js-two-range-slider-input left-range" type="range" min="0" max="250000" value="250000" step="10000"/>
-                                <input class="two-range-slider__input js-two-range-slider-input left-range" type="range" min="0" max="250000" value="0" step="10000"/>
                               </div>
                             </div>
                             <div class="settings__filter-container">

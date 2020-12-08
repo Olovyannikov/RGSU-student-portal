@@ -6,6 +6,9 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    @media (min-width: $tablet) {
+        flex-wrap: nowrap;
+    }
 }
 
 .request__form {
@@ -16,8 +19,8 @@
     padding: 20px 20px 52px 20px;
     gap: 20px;
     @media (min-width: $tablet) {
-
-        max-width: 545px;
+        width: 100%;
+        margin-right: 30px;
     }
 }
 
@@ -81,7 +84,7 @@
     border-radius: 4px;
     flex-grow: 1;
     @media (min-width: $tablet) {
-        max-width: 430px;
+        min-width: 430px;
     }
 }
 

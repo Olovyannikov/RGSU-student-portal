@@ -148,29 +148,1081 @@
 
 .parent-cabinet__visits.parent-cabinet__tab(aria-label="Вкладка Посещения" id="visits").tabs__item
     .parent-cabinet__tab-wrapper
-        .calendar-container
-            .calendar-header
-                h3
-                    | Октябрь 2020 г.
+        #fullcalendar.fc.fc-media-screen.fc-direction-ltr.fc-theme-standard
+            .fc-header-toolbar.fc-toolbar.fc-toolbar-ltr
+                .fc-toolbar-chunk
+                    .fc-button-group
+                        button.fc-prev-button.fc-button.fc-button-primary(aria-label='prev')
+                            span.fc-icon.fc-icon-chevron-left
+                        button.fc-next-button.fc-button.fc-button-primary(aria-label='next')
+                            span.fc-icon.fc-icon-chevron-right
+                    button.fc-today-button.fc-button.fc-button-primary.disabled(disabled='disabled') Сегодня
+                .fc-toolbar-chunk
+                    h2.fc-toolbar-title декабрь 2020 г.
+                .fc-toolbar-chunk
+                    .fc-button-group
+                        button.fc-dayGridMonth-button.fc-button.fc-button-primary.fc-button-active Месяц
+                        button.fc-dayGridWeek-button.fc-button.fc-button-primary Неделя
+                        button.fc-list-button.fc-button.fc-button-primary Повестка дня
+                        button.fc-timeGridWeek-button.fc-button.fc-button-primary Медиасетка
+            .fc-view-harness.fc-view-harness-active(style='padding-bottom: 74.0741%;')
+                .fc-daygrid.fc-dayGridMonth-view.fc-view
+                    table.fc-scrollgrid.fc-scrollgrid-liquid
+                        thead
+                            tr.fc-scrollgrid-section
+                                td
+                                    .fc-scroller-harness
+                                        .fc-scroller(style='overflow: hidden;')
+                                            table.fc-col-header(style='width: 1032px;')
+                                                colgroup
+                                                tbody
+                                                    tr
+                                                        th.fc-col-header-cell.fc-day.fc-day-mon
+                                                            .fc-scrollgrid-sync-inner
+                                                                a.fc-col-header-cell-cushion пн
+                                                        th.fc-col-header-cell.fc-day.fc-day-tue
+                                                            .fc-scrollgrid-sync-inner
+                                                                a.fc-col-header-cell-cushion вт
+                                                        th.fc-col-header-cell.fc-day.fc-day-wed
+                                                            .fc-scrollgrid-sync-inner
+                                                                a.fc-col-header-cell-cushion ср
+                                                        th.fc-col-header-cell.fc-day.fc-day-thu
+                                                            .fc-scrollgrid-sync-inner
+                                                                a.fc-col-header-cell-cushion чт
+                                                        th.fc-col-header-cell.fc-day.fc-day-fri
+                                                            .fc-scrollgrid-sync-inner
+                                                                a.fc-col-header-cell-cushion пт
+                                                        th.fc-col-header-cell.fc-day.fc-day-sat
+                                                            .fc-scrollgrid-sync-inner
+                                                                a.fc-col-header-cell-cushion сб
+                                                        th.fc-col-header-cell.fc-day.fc-day-sun
+                                                            .fc-scrollgrid-sync-inner
+                                                                a.fc-col-header-cell-cushion вс
+                        tbody
+                            tr.fc-scrollgrid-section.fc-scrollgrid-section-liquid
+                                td
+                                    .fc-scroller-harness.fc-scroller-harness-liquid
+                                        .fc-scroller.fc-scroller-liquid-absolute(style='overflow: hidden auto;')
+                                            .fc-daygrid-body.fc-daygrid-body-balanced(style='width: 1032px;')
+                                                table.fc-scrollgrid-sync-table(style='width: 1032px; height: 929px;')
+                                                    colgroup
+                                                    tbody
+                                                        tr
+                                                            td.fc-daygrid-day.fc-day.fc-day-mon.fc-day-past.fc-day-other(data-date='2020-11-30')
+                                                                .fc-daygrid-day-frame.fc-scrollgrid-sync-inner
+                                                                    .fc-daygrid-day-top
+                                                                        a.fc-daygrid-day-number 30
+                                                                    .fc-daygrid-day-events
+                                                                        .fc-daygrid-event-harness
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-past.past-report.you-icon(href='/services/mediaplan/mediaplan_439.html?isNaked=1' aria-describedby='tooltip_sw7uma2zs7')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(245, 0, 87);')
+                                                                                .fc-event-time 16
+                                                                                .fc-event-title Красновский чтения
+                                                                        .fc-daygrid-event-harness
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-past.past-report.you-icon(href='/services/mediaplan/mediaplan_404.html?isNaked=1' aria-describedby='tooltip_be1dlux5zt')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(83, 109, 254);')
+                                                                                .fc-event-time 18:30
+                                                                                .fc-event-title Как организовать эффективное мероприятие?
+                                                                        .fc-daygrid-event-harness.fc-daygrid-event-harness-abs(style='visibility: hidden;')
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-past.past-report.you-icon(href='/services/mediaplan/mediaplan_419.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(255, 87, 34);')
+                                                                                .fc-event-time 20
+                                                                                .fc-event-title Гарвард открывает уникальные источники об истории России
+                                                                        .fc-daygrid-event-harness.fc-daygrid-event-harness-abs(style='visibility: hidden;')
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-past.past-report.you-icon(href='/services/mediaplan/mediaplan_453.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(83, 109, 254);')
+                                                                                .fc-event-time 21
+                                                                                .fc-event-title Возможна ли жизнь без конфликтов?
+                                                                        .fc-daygrid-day-bottom
+                                                                            a.fc-daygrid-more-link + ещё 2
+                                                                    .fc-daygrid-day-bg
+                                                            td.fc-daygrid-day.fc-day.fc-day-tue.fc-day-past(data-date='2020-12-01')
+                                                                .fc-daygrid-day-frame.fc-scrollgrid-sync-inner
+                                                                    .fc-daygrid-day-top
+                                                                        a.fc-daygrid-day-number 1
+                                                                    .fc-daygrid-day-events
+                                                                        .fc-daygrid-event-harness
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-past(href='/services/mediaplan/mediaplan_479.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(159, 168, 218);')
+                                                                                .fc-event-time 8:30
+                                                                                .fc-event-title Профориентационная работа с военнослужащими
+                                                                        .fc-daygrid-event-harness
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-past.past-report(href='/services/mediaplan/mediaplan_411.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(245, 0, 87);')
+                                                                                .fc-event-time 10
+                                                                                .fc-event-title
+                                                                                    | I Всероссийская научно-практическая конференция: Социальное управление в условиях цифровизации
+                                                                        .fc-daygrid-event-harness.fc-daygrid-event-harness-abs(style='visibility: hidden;')
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-past.past-report.you-icon(href='/services/mediaplan/mediaplan_450.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(255, 87, 34);')
+                                                                                .fc-event-time 18
+                                                                                .fc-event-title Интеллектуальная собственность в России и за рубежом
+                                                                        .fc-daygrid-event-harness.fc-daygrid-event-harness-abs(style='visibility: hidden;')
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-past.past-report.you-icon(href='/services/mediaplan/mediaplan_406.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(255, 87, 34);')
+                                                                                .fc-event-time 19
+                                                                                .fc-event-title Социальная академия soft-skills
+                                                                        .fc-daygrid-event-harness.fc-daygrid-event-harness-abs(style='visibility: hidden;')
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-past(href='/services/mediaplan/mediaplan_380.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(129, 199, 132);')
+                                                                                .fc-event-time 19
+                                                                                .fc-event-title Ток-шоу факультета управления #НормаБытиЯ
+                                                                        .fc-daygrid-event-harness.fc-daygrid-event-harness-abs(style='visibility: hidden;')
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-past.past-report.you-icon(href='/services/mediaplan/mediaplan_454.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(83, 109, 254);')
+                                                                                .fc-event-time 19:30
+                                                                                .fc-event-title Любовь или богатство?
+                                                                        .fc-daygrid-event-harness.fc-daygrid-event-harness-abs(style='visibility: hidden;')
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-past.past-report.you-icon(href='/services/mediaplan/mediaplan_460.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(83, 109, 254);')
+                                                                                .fc-event-time 20
+                                                                                .fc-event-title Зачем поступать в магистратуру?
+                                                                        .fc-daygrid-event-harness.fc-daygrid-event-harness-abs(style='visibility: hidden;')
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-past.past-report.you-icon(href='/services/mediaplan/mediaplan_407.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(83, 109, 254);')
+                                                                                .fc-event-time 20:30
+                                                                                .fc-event-title Интеллектуальный квиз факультета социологии
+                                                                        .fc-daygrid-day-bottom
+                                                                            a.fc-daygrid-more-link + ещё 6
+                                                                    .fc-daygrid-day-bg
+                                                            td.fc-daygrid-day.fc-day.fc-day-wed.fc-day-past(data-date='2020-12-02')
+                                                                .fc-daygrid-day-frame.fc-scrollgrid-sync-inner
+                                                                    .fc-daygrid-day-top
+                                                                        a.fc-daygrid-day-number 2
+                                                                    .fc-daygrid-day-events
+                                                                        .fc-daygrid-event-harness
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-past.past-report.you-icon(href='/services/mediaplan/mediaplan_365.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(255, 87, 34);')
+                                                                                .fc-event-time 12
+                                                                                .fc-event-title Развитие внутреннего и въездного туризма России! (часть 2)
+                                                                        .fc-daygrid-event-harness
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-past.past-report.you-icon(href='/services/mediaplan/mediaplan_483.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(83, 109, 254);')
+                                                                                .fc-event-time 13
+                                                                                .fc-event-title Карьера для идеалистов
+                                                                        .fc-daygrid-event-harness.fc-daygrid-event-harness-abs(style='visibility: hidden;')
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-past.past-report.you-icon(href='/services/mediaplan/mediaplan_457.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(255, 87, 34);')
+                                                                                .fc-event-time 14
+                                                                                .fc-event-title Профстандарты: простыми словами о важном
+                                                                        .fc-daygrid-event-harness.fc-daygrid-event-harness-abs(style='visibility: hidden;')
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-past.past-report(href='/services/mediaplan/mediaplan_388.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(67, 160, 71);')
+                                                                                .fc-event-time 15
+                                                                                .fc-event-title Новогодняя красавица
+                                                                        .fc-daygrid-event-harness.fc-daygrid-event-harness-abs(style='visibility: hidden;')
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-past.past-report(href='/services/mediaplan/mediaplan_440.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(255, 87, 34);')
+                                                                                .fc-event-time 16
+                                                                                .fc-event-title Жан Монне Модуль «Новые» и «старые» страны ЕС.
+                                                                        .fc-daygrid-event-harness.fc-daygrid-event-harness-abs(style='visibility: hidden;')
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-past.past-report.you-icon(href='/services/mediaplan/mediaplan_175.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(255, 87, 34);')
+                                                                                .fc-event-time 18
+                                                                                .fc-event-title Социология и повседневность
+                                                                        .fc-daygrid-event-harness.fc-daygrid-event-harness-abs(style='visibility: hidden;')
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-past.past-report.you-icon(href='/services/mediaplan/mediaplan_465.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(83, 109, 254);')
+                                                                                .fc-event-time 19:30
+                                                                                .fc-event-title Все, что нужно знать о бакалавриате в РГСУ
+                                                                        .fc-daygrid-event-harness.fc-daygrid-event-harness-abs(style='visibility: hidden;')
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-past.past-report.you-icon(href='/services/mediaplan/mediaplan_426.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(83, 109, 254);')
+                                                                                .fc-event-time 20
+                                                                                .fc-event-title Как стать успешным медиаменеджером
+                                                                        .fc-daygrid-event-harness.fc-daygrid-event-harness-abs(style='visibility: hidden;')
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-past.past-report.you-icon(href='/services/mediaplan/mediaplan_476.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(67, 160, 71);')
+                                                                                .fc-event-time 21
+                                                                                .fc-event-title
+                                                                                    | Ток-шоу #НормаБытиЯ (2 выпуск): Поколение Альфа или что нас ждет в ближайшем будущем
+                                                                        .fc-daygrid-day-bottom
+                                                                            a.fc-daygrid-more-link + ещё 7
+                                                                    .fc-daygrid-day-bg
+                                                            td.fc-daygrid-day.fc-day.fc-day-thu.fc-day-past(data-date='2020-12-03')
+                                                                .fc-daygrid-day-frame.fc-scrollgrid-sync-inner
+                                                                    .fc-daygrid-day-top
+                                                                        a.fc-daygrid-day-number 3
+                                                                    .fc-daygrid-day-events
+                                                                        .fc-daygrid-event-harness
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-past(href='/services/mediaplan/mediaplan_478.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(255, 138, 101);')
+                                                                                .fc-event-time 9:30
+                                                                                .fc-event-title Я-автор
+                                                                        .fc-daygrid-event-harness
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-past(href='/services/mediaplan/mediaplan_480.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(129, 199, 132);')
+                                                                                .fc-event-time 11:30
+                                                                                .fc-event-title Мероприятие, посвященное Дню неизвестного солдата
+                                                                        .fc-daygrid-event-harness.fc-daygrid-event-harness-abs(style='visibility: hidden;')
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-past.past-report(href='/services/mediaplan/mediaplan_362.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(255, 87, 34);')
+                                                                                .fc-event-time 12:25
+                                                                                .fc-event-title Ландшафтные стили востока и их использование в России.
+                                                                        .fc-daygrid-event-harness.fc-daygrid-event-harness-abs(style='visibility: hidden;')
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-past.past-report.you-icon(href='/services/mediaplan/mediaplan_405.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(255, 87, 34);')
+                                                                                .fc-event-time 13
+                                                                                .fc-event-title Социальная работа в современном обществе
+                                                                        .fc-daygrid-event-harness.fc-daygrid-event-harness-abs(style='visibility: hidden;')
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-past.past-report.you-icon(href='/services/mediaplan/mediaplan_464.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(255, 87, 34);')
+                                                                                .fc-event-time 13:30
+                                                                                .fc-event-title Как начать говорить на жестовом языке?
+                                                                        .fc-daygrid-event-harness.fc-daygrid-event-harness-abs(style='visibility: hidden;')
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-past.past-report(href='/services/mediaplan/mediaplan_513.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(255, 87, 34);')
+                                                                                .fc-event-time 15
+                                                                                .fc-event-title Проектирование в графическом дизайне
+                                                                        .fc-daygrid-event-harness.fc-daygrid-event-harness-abs(style='visibility: hidden;')
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-past.past-report(href='/services/mediaplan/mediaplan_447.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(255, 87, 34);')
+                                                                                .fc-event-time 15
+                                                                                .fc-event-title Изменения в АПК РФ в 2019-2020 гг. самое важное
+                                                                        .fc-daygrid-event-harness.fc-daygrid-event-harness-abs(style='visibility: hidden;')
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-past.past-report(href='/services/mediaplan/mediaplan_486.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(67, 160, 71);')
+                                                                                .fc-event-time 15
+                                                                                .fc-event-title Форум V-фэст
+                                                                        .fc-daygrid-event-harness.fc-daygrid-event-harness-abs(style='visibility: hidden;')
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-past.past-report.you-icon(href='/services/mediaplan/mediaplan_484.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(83, 109, 254);')
+                                                                                .fc-event-time 18
+                                                                                .fc-event-title Документоведение и архивоведение
+                                                                        .fc-daygrid-event-harness.fc-daygrid-event-harness-abs(style='visibility: hidden;')
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-past(href='/services/mediaplan/mediaplan_514.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(255, 138, 101);')
+                                                                                .fc-event-time 18:15
+                                                                                .fc-event-title Социология и повседневность
+                                                                        .fc-daygrid-event-harness.fc-daygrid-event-harness-abs(style='visibility: hidden;')
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-past.past-report.you-icon(href='/services/mediaplan/mediaplan_268.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(83, 109, 254);')
+                                                                                .fc-event-time 19
+                                                                                .fc-event-title Презентация направления подготовки Экономика в филиале РГСУ в Оше
+                                                                        .fc-daygrid-event-harness.fc-daygrid-event-harness-abs(style='visibility: hidden;')
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-past.past-report.you-icon(href='/services/mediaplan/mediaplan_452.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(67, 160, 71);')
+                                                                                .fc-event-time 19:30
+                                                                                .fc-event-title СтудСовет в Лицах
+                                                                        .fc-daygrid-event-harness.fc-daygrid-event-harness-abs(style='visibility: hidden;')
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-past.past-report.you-icon(href='/services/mediaplan/mediaplan_458.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(83, 109, 254);')
+                                                                                .fc-event-time 20
+                                                                                .fc-event-title Специалист по управлению персоналом - профессия настоящего и будущего
+                                                                        .fc-daygrid-event-harness.fc-daygrid-event-harness-abs(style='visibility: hidden;')
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-past.past-report.you-icon(href='/services/mediaplan/mediaplan_469.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(83, 109, 254);')
+                                                                                .fc-event-time 20
+                                                                                .fc-event-title ЦСТ. РГСУ ТРУДОУСТРОЙСТВО #1. Анкор
+                                                                        .fc-daygrid-event-harness.fc-daygrid-event-harness-abs(style='visibility: hidden;')
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-past.past-report.you-icon(href='/services/mediaplan/mediaplan_429.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(83, 109, 254);')
+                                                                                .fc-event-time 20:30
+                                                                                .fc-event-title Секреты выбора будущей профессии (часть 1)
+                                                                        .fc-daygrid-day-bottom
+                                                                            a.fc-daygrid-more-link + ещё 13
+                                                                    .fc-daygrid-day-bg
+                                                            td.fc-daygrid-day.fc-day.fc-day-fri.fc-day-past(data-date='2020-12-04')
+                                                                .fc-daygrid-day-frame.fc-scrollgrid-sync-inner
+                                                                    .fc-daygrid-day-top
+                                                                        a.fc-daygrid-day-number 4
+                                                                    .fc-daygrid-day-events
+                                                                        .fc-daygrid-event-harness
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-past.past-report(href='/services/mediaplan/mediaplan_277.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(245, 0, 87);')
+                                                                                .fc-event-time 09
+                                                                                .fc-event-title
+                                                                                    | Международная научно-практическая конференция «Социальная работа в условиях COVID-19: цели, задачи, формы, методы, технологии»
+                                                                        .fc-daygrid-event-harness
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-past(href='/services/mediaplan/mediaplan_344.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(129, 199, 132);')
+                                                                                .fc-event-time 12
+                                                                                .fc-event-title Круглый стол "Профилактика совершения коррупционных правонарушений"
+                                                                        .fc-daygrid-event-harness.fc-daygrid-event-harness-abs(style='visibility: hidden;')
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-past(href='/services/mediaplan/mediaplan_349.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(255, 138, 101);')
+                                                                                .fc-event-time 12:40
+                                                                                .fc-event-title Молодежный стартап: инновации и тренды
+                                                                        .fc-daygrid-event-harness.fc-daygrid-event-harness-abs(style='visibility: hidden;')
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-past.past-report.you-icon(href='/services/mediaplan/mediaplan_470.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(83, 109, 254);')
+                                                                                .fc-event-time 13
+                                                                                .fc-event-title Хороший образ - залог успешного блога
+                                                                        .fc-daygrid-event-harness.fc-daygrid-event-harness-abs(style='visibility: hidden;')
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-past.past-report.you-icon(href='/services/mediaplan/mediaplan_543.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(255, 87, 34);')
+                                                                                .fc-event-time 13:30
+                                                                                .fc-event-title Фотография в социологии
+                                                                        .fc-daygrid-event-harness.fc-daygrid-event-harness-abs(style='visibility: hidden;')
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-past.past-report(href='/services/mediaplan/mediaplan_431.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(83, 109, 254);')
+                                                                                .fc-event-time 14
+                                                                                .fc-event-title Онлайн-подкаст факультета управления «Live_UP»
+                                                                        .fc-daygrid-event-harness.fc-daygrid-event-harness-abs(style='visibility: hidden;')
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-past.past-report(href='/services/mediaplan/mediaplan_393.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(67, 160, 71);')
+                                                                                .fc-event-time 15
+                                                                                .fc-event-title Международный день волонтера
+                                                                        .fc-daygrid-event-harness.fc-daygrid-event-harness-abs(style='visibility: hidden;')
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-past.past-report.you-icon(href='/services/mediaplan/mediaplan_485.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(83, 109, 254);')
+                                                                                .fc-event-time 19
+                                                                                .fc-event-title Секреты выбора будущей профессии (часть 2)
+                                                                        .fc-daygrid-event-harness.fc-daygrid-event-harness-abs(style='visibility: hidden;')
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-past.past-report.you-icon(href='/services/mediaplan/mediaplan_430.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(83, 109, 254);')
+                                                                                .fc-event-time 20
+                                                                                .fc-event-title Юный предприниматель (часть 1)
+                                                                        .fc-daygrid-event-harness.fc-daygrid-event-harness-abs(style='visibility: hidden;')
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-past.past-report.you-icon(href='/services/mediaplan/mediaplan_461.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(255, 87, 34);')
+                                                                                .fc-event-time 21:30
+                                                                                .fc-event-title Управление проектами в социальном предпринимательстве
+                                                                        .fc-daygrid-day-bottom
+                                                                            a.fc-daygrid-more-link + ещё 8
+                                                                    .fc-daygrid-day-bg
+                                                            td.fc-daygrid-day.fc-day.fc-day-sat.fc-day-past(data-date='2020-12-05')
+                                                                .fc-daygrid-day-frame.fc-scrollgrid-sync-inner
+                                                                    .fc-daygrid-day-top
+                                                                        a.fc-daygrid-day-number 5
+                                                                    .fc-daygrid-day-events
+                                                                        .fc-daygrid-event-harness
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-past.past-report(href='/services/mediaplan/mediaplan_273.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(83, 109, 254);')
+                                                                                .fc-event-time 10
+                                                                                .fc-event-title Занимательный мир механизмов
+                                                                        .fc-daygrid-event-harness
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-past.past-report(href='/services/mediaplan/mediaplan_448.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(67, 160, 71);')
+                                                                                .fc-event-time 10:30
+                                                                                .fc-event-title Здоровый образ жизни-залог успеха
+                                                                        .fc-daygrid-event-harness.fc-daygrid-event-harness-abs(style='visibility: hidden;')
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-past(href='/services/mediaplan/mediaplan_511.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(159, 168, 218);')
+                                                                                .fc-event-time 11
+                                                                                .fc-event-title Обязанности родителей по воспитанию: поддержка или оковы для ребенка
+                                                                        .fc-daygrid-event-harness.fc-daygrid-event-harness-abs(style='visibility: hidden;')
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-past(href='/services/mediaplan/mediaplan_422.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(240, 98, 146);')
+                                                                                .fc-event-time 11
+                                                                                .fc-event-title Университетская суббота: Акулы гостиничного бизнеса
+                                                                        .fc-daygrid-event-harness.fc-daygrid-event-harness-abs(style='visibility: hidden;')
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-past.past-report.you-icon(href='/services/mediaplan/mediaplan_416.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(255, 87, 34);')
+                                                                                .fc-event-time 11
+                                                                                .fc-event-title Высшее образование людей с синдромом Аспергера и высокофункциональным аутизмом
+                                                                        .fc-daygrid-event-harness.fc-daygrid-event-harness-abs(style='visibility: hidden;')
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-past(href='/services/mediaplan/mediaplan_512.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(159, 168, 218);')
+                                                                                .fc-event-time 12
+                                                                                .fc-event-title Зоопсихология: как понять поведение домашних животных
+                                                                        .fc-daygrid-event-harness.fc-daygrid-event-harness-abs(style='visibility: hidden;')
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-past.past-report.you-icon(href='/services/mediaplan/mediaplan_413.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(83, 109, 254);')
+                                                                                .fc-event-time 13
+                                                                                .fc-event-title Депрессия: что это такое и как с ней бороться
+                                                                        .fc-daygrid-event-harness.fc-daygrid-event-harness-abs(style='visibility: hidden;')
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-past.past-report.you-icon(href='/services/mediaplan/mediaplan_463.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(83, 109, 254);')
+                                                                                .fc-event-time 14:30
+                                                                                .fc-event-title Что должен знать каждый активист? Встреча с Айдаром Сагетдиновым
+                                                                        .fc-daygrid-event-harness.fc-daygrid-event-harness-abs(style='visibility: hidden;')
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-past.past-report.you-icon(href='/services/mediaplan/mediaplan_417.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(83, 109, 254);')
+                                                                                .fc-event-time 15
+                                                                                .fc-event-title Спорт в РГСУ: какую секцию выбрать?
+                                                                        .fc-daygrid-event-harness.fc-daygrid-event-harness-abs(style='visibility: hidden;')
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-past.past-report.you-icon(href='/services/mediaplan/mediaplan_428.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(83, 109, 254);')
+                                                                                .fc-event-time 18
+                                                                                .fc-event-title Целительная сила любви
+                                                                        .fc-daygrid-event-harness.fc-daygrid-event-harness-abs(style='visibility: hidden;')
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-past.past-report.you-icon(href='/services/mediaplan/mediaplan_459.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(83, 109, 254);')
+                                                                                .fc-event-time 20
+                                                                                .fc-event-title Как выиграть вокальный конкурс?
+                                                                        .fc-daygrid-day-bottom
+                                                                            a.fc-daygrid-more-link + ещё 9
+                                                                    .fc-daygrid-day-bg
+                                                            td.fc-daygrid-day.fc-day.fc-day-sun.fc-day-past(data-date='2020-12-06')
+                                                                .fc-daygrid-day-frame.fc-scrollgrid-sync-inner
+                                                                    .fc-daygrid-day-top
+                                                                        a.fc-daygrid-day-number 6
+                                                                    .fc-daygrid-day-events
+                                                                        .fc-daygrid-event-harness
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-past.you-icon(href='/services/mediaplan/mediaplan_466.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(159, 168, 218);')
+                                                                                .fc-event-time 14
+                                                                                .fc-event-title Атомные технологии: почему я этим занимаюсь?
+                                                                        .fc-daygrid-event-harness
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-past.you-icon(href='/services/mediaplan/mediaplan_467.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(255, 138, 101);')
+                                                                                .fc-event-time 15
+                                                                                .fc-event-title Как правильно "работать в кадре"?
+                                                                        .fc-daygrid-event-harness.fc-daygrid-event-harness-abs(style='visibility: hidden;')
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-past.you-icon(href='/services/mediaplan/mediaplan_352.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(159, 168, 218);')
+                                                                                .fc-event-time 16
+                                                                                .fc-event-title Management Smart Casual: интервью с Сергеем Золотарёвым
+                                                                        .fc-daygrid-event-harness.fc-daygrid-event-harness-abs(style='visibility: hidden;')
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-past.you-icon(href='/services/mediaplan/mediaplan_471.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(255, 138, 101);')
+                                                                                .fc-event-time 16:30
+                                                                                .fc-event-title Как князь Владимир отказался от язычества?
+                                                                        .fc-daygrid-event-harness.fc-daygrid-event-harness-abs(style='visibility: hidden;')
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-past.you-icon(href='/services/mediaplan/mediaplan_451.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(159, 168, 218);')
+                                                                                .fc-event-time 17
+                                                                                .fc-event-title Россия и Запад в диалоге
+                                                                        .fc-daygrid-event-harness.fc-daygrid-event-harness-abs(style='visibility: hidden;')
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-past.you-icon(href='/services/mediaplan/mediaplan_473.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(159, 168, 218);')
+                                                                                .fc-event-time 18
+                                                                                .fc-event-title Криминальный профессионализм как основа преступного мира
+                                                                        .fc-daygrid-event-harness.fc-daygrid-event-harness-abs(style='visibility: hidden;')
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-past.you-icon(href='/services/mediaplan/mediaplan_384.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(255, 138, 101);')
+                                                                                .fc-event-time 18:30
+                                                                                .fc-event-title Целительная сила любви. Часть 2
+                                                                        .fc-daygrid-day-bottom
+                                                                            a.fc-daygrid-more-link + ещё 5
+                                                                    .fc-daygrid-day-bg
+                                                        tr
+                                                            td.fc-daygrid-day.fc-day.fc-day-mon.fc-day-past(data-date='2020-12-07')
+                                                                .fc-daygrid-day-frame.fc-scrollgrid-sync-inner
+                                                                    .fc-daygrid-day-top
+                                                                        a.fc-daygrid-day-number 7
+                                                                    .fc-daygrid-day-events
+                                                                        .fc-daygrid-event-harness
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.you-icon(href='/services/mediaplan/mediaplan_545.html?isNaked=1' aria-describedby='tooltip_t0dv3mpzwq')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(159, 168, 218);')
+                                                                                .fc-event-time 13
+                                                                                .fc-event-title Реклама и PR: много денег и креатива
+                                                                        .fc-daygrid-event-harness
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.you-icon(href='/services/mediaplan/mediaplan_522.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(159, 168, 218);')
+                                                                                .fc-event-time 15
+                                                                                .fc-event-title Как поступить в магистратуру на Факультет искусств РГСУ?
+                                                                        .fc-daygrid-event-harness.fc-daygrid-event-harness-abs(style='visibility: hidden;')
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.you-icon(href='/services/mediaplan/mediaplan_475.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(129, 199, 132);')
+                                                                                .fc-event-time 19
+                                                                                .fc-event-title Ток-шоу #НормаБытиЯ (3 выпуск). Как построить карьеру на удаленке?
+                                                                        .fc-daygrid-event-harness.fc-daygrid-event-harness-abs(style='visibility: hidden;')
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.you-icon(href='/services/mediaplan/mediaplan_541.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(255, 138, 101);')
+                                                                                .fc-event-time 20
+                                                                                .fc-event-title Ландшафтные стили Востока
+                                                                        .fc-daygrid-event-harness.fc-daygrid-event-harness-abs(style='visibility: hidden;')
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.you-icon(href='/services/mediaplan/mediaplan_556.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(159, 168, 218);')
+                                                                                .fc-event-time 20
+                                                                                .fc-event-title ЕГЭ на 100 баллов: Информатика. Часть 1
+                                                                        .fc-daygrid-event-harness.fc-daygrid-event-harness-abs(style='visibility: hidden;')
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.you-icon(href='/services/mediaplan/mediaplan_496.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(159, 168, 218);')
+                                                                                .fc-event-time 20:30
+                                                                                .fc-event-title Презентация Филиала РГСУ в Пятигорске
+                                                                        .fc-daygrid-event-harness.fc-daygrid-event-harness-abs(style='visibility: hidden;')
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.you-icon(href='/services/mediaplan/mediaplan_525.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(255, 138, 101);')
+                                                                                .fc-event-time 21
+                                                                                .fc-event-title Европейский Союз: что было, что стало и что будет. Часть 1
+                                                                        .fc-daygrid-day-bottom
+                                                                            a.fc-daygrid-more-link + ещё 5
+                                                                    .fc-daygrid-day-bg
+                                                            td.fc-daygrid-day.fc-day.fc-day-tue.fc-day-today(data-date='2020-12-08')
+                                                                .fc-daygrid-day-frame.fc-scrollgrid-sync-inner
+                                                                    .fc-daygrid-day-top
+                                                                        a.fc-daygrid-day-number 8
+                                                                    .fc-daygrid-day-events
+                                                                        .fc-daygrid-event-harness
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-today(href='/services/mediaplan/mediaplan_534.html?isNaked=1' aria-describedby='tooltip_jq3q4i9hss')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(129, 199, 132);')
+                                                                                .fc-event-time 10:10
+                                                                                .fc-event-title Трезвый разбор
+                                                                        .fc-daygrid-event-harness
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-today.you-icon(href='/services/mediaplan/mediaplan_515.html?isNaked=1' aria-describedby='tooltip_7jkxsl17rf')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(255, 138, 101);')
+                                                                                .fc-event-time 12:30
+                                                                                .fc-event-title Социальная работа в нашей жизни
+                                                                        .fc-daygrid-event-harness.fc-daygrid-event-harness-abs(style='visibility: hidden;')
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-today.you-icon(href='/services/mediaplan/mediaplan_551.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(159, 168, 218);')
+                                                                                .fc-event-time 13:30
+                                                                                .fc-event-title Шах и мат. Презентация Шахматного дома РГСУ
+                                                                        .fc-daygrid-event-harness.fc-daygrid-event-harness-abs(style='visibility: hidden;')
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-today(href='/services/mediaplan/mediaplan_410.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(255, 138, 101);')
+                                                                                .fc-event-time 14
+                                                                                .fc-event-title
+                                                                                    | Встреча с ведущим специалистом отрасли обращения с твердыми коммунальными отходами производства и потребления
+                                                                        .fc-daygrid-event-harness.fc-daygrid-event-harness-abs(style='visibility: hidden;')
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-today.past-report(href='/services/mediaplan/mediaplan_489.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(67, 160, 71);')
+                                                                                .fc-event-time 14
+                                                                                .fc-event-title Книга с экрана
+                                                                        .fc-daygrid-event-harness.fc-daygrid-event-harness-abs(style='visibility: hidden;')
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-today.you-icon(href='/services/mediaplan/mediaplan_552.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(159, 168, 218);')
+                                                                                .fc-event-time 14
+                                                                                .fc-event-title Интервью с выпускницей Юридического факультета РГСУ
+                                                                        .fc-daygrid-event-harness.fc-daygrid-event-harness-abs(style='visibility: hidden;')
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-today.past-report(href='/services/mediaplan/mediaplan_247.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(245, 0, 87);')
+                                                                                .fc-event-time 15
+                                                                                .fc-event-title Безопасность и охрана труда
+                                                                        .fc-daygrid-event-harness.fc-daygrid-event-harness-abs(style='visibility: hidden;')
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-today(href='/services/mediaplan/mediaplan_435.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(129, 199, 132);')
+                                                                                .fc-event-time 19
+                                                                                .fc-event-title #НормаБытиЯ (4 выпуск)
+                                                                        .fc-daygrid-event-harness.fc-daygrid-event-harness-abs(style='visibility: hidden;')
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-today.you-icon(href='/services/mediaplan/mediaplan_490.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(255, 138, 101);')
+                                                                                .fc-event-time 19
+                                                                                .fc-event-title Получить деньги на студенческий проект просто
+                                                                        .fc-daygrid-event-harness.fc-daygrid-event-harness-abs(style='visibility: hidden;')
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-today.you-icon(href='/services/mediaplan/mediaplan_506.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(159, 168, 218);')
+                                                                                .fc-event-time 20
+                                                                                .fc-event-title Идеальные незнакомцы
+                                                                        .fc-daygrid-event-harness.fc-daygrid-event-harness-abs(style='visibility: hidden;')
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-today.you-icon(href='/services/mediaplan/mediaplan_518.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(159, 168, 218);')
+                                                                                .fc-event-time 20:30
+                                                                                .fc-event-title Всё о зарубежных стажировках
+                                                                        .fc-daygrid-event-harness.fc-daygrid-event-harness-abs(style='visibility: hidden;')
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-today.you-icon(href='/services/mediaplan/mediaplan_527.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(159, 168, 218);')
+                                                                                .fc-event-time 21
+                                                                                .fc-event-title Правила карьеры: От стажера до генерального директора
+                                                                        .fc-daygrid-event-harness.fc-daygrid-event-harness-abs(style='visibility: hidden;')
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-today.you-icon(href='/services/mediaplan/mediaplan_500.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(159, 168, 218);')
+                                                                                .fc-event-time 21
+                                                                                .fc-event-title Наука РГСУ развивает Россию
+                                                                        .fc-daygrid-day-bottom
+                                                                            a.fc-daygrid-more-link + ещё 11
+                                                                    .fc-daygrid-day-bg
+                                                            td.fc-daygrid-day.fc-day.fc-day-wed.fc-day-future(data-date='2020-12-09')
+                                                                .fc-daygrid-day-frame.fc-scrollgrid-sync-inner
+                                                                    .fc-daygrid-day-top
+                                                                        a.fc-daygrid-day-number 9
+                                                                    .fc-daygrid-day-events
+                                                                        .fc-daygrid-event-harness
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-future(href='/services/mediaplan/mediaplan_481.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(129, 199, 132);')
+                                                                                .fc-event-time 10:10
+                                                                                .fc-event-title Славные сыны Отечества
+                                                                        .fc-daygrid-event-harness
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-future.you-icon(href='/services/mediaplan/mediaplan_550.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(159, 168, 218);')
+                                                                                .fc-event-time 13
+                                                                                .fc-event-title Музыкальная педагогика - это интересно
+                                                                        .fc-daygrid-event-harness.fc-daygrid-event-harness-abs(style='visibility: hidden;')
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-future.you-icon(href='/services/mediaplan/mediaplan_510.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(255, 138, 101);')
+                                                                                .fc-event-time 13:30
+                                                                                .fc-event-title Проблемы информационной цивилизации
+                                                                        .fc-daygrid-event-harness.fc-daygrid-event-harness-abs(style='visibility: hidden;')
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-future(href='/services/mediaplan/mediaplan_412.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(159, 168, 218);')
+                                                                                .fc-event-time 15
+                                                                                .fc-event-title Все о приемной кампании 2021 в Павловском Посаде
+                                                                        .fc-daygrid-event-harness.fc-daygrid-event-harness-abs(style='visibility: hidden;')
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-future(href='/services/mediaplan/mediaplan_441.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(255, 138, 101);')
+                                                                                .fc-event-time 16
+                                                                                .fc-event-title
+                                                                                    | Жан Монне Модуль Центробежные и центростремительные вызовы европейской интеграции. Вишеградская группа в системе европейской интеграции
+                                                                        .fc-daygrid-event-harness.fc-daygrid-event-harness-abs(style='visibility: hidden;')
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-future(href='/services/mediaplan/mediaplan_559.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(255, 138, 101);')
+                                                                                .fc-event-time 16
+                                                                                .fc-event-title Встреча клуба испанского языка
+                                                                        .fc-daygrid-event-harness.fc-daygrid-event-harness-abs(style='visibility: hidden;')
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-future.you-icon(href='/services/mediaplan/mediaplan_495.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(159, 168, 218);')
+                                                                                .fc-event-time 18:30
+                                                                                .fc-event-title Презентация Филиала РГСУ в Павловском Посаде
+                                                                        .fc-daygrid-event-harness.fc-daygrid-event-harness-abs(style='visibility: hidden;')
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-future.you-icon(href='/services/mediaplan/mediaplan_497.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(255, 138, 101);')
+                                                                                .fc-event-time 19
+                                                                                .fc-event-title Роль молодых специалистов в устойчивом развитии компании
+                                                                        .fc-daygrid-event-harness.fc-daygrid-event-harness-abs(style='visibility: hidden;')
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-future.you-icon(href='/services/mediaplan/mediaplan_532.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(129, 199, 132);')
+                                                                                .fc-event-time 19:30
+                                                                                .fc-event-title СтудСовет в Лицах
+                                                                        .fc-daygrid-event-harness.fc-daygrid-event-harness-abs(style='visibility: hidden;')
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-future.you-icon(href='/services/mediaplan/mediaplan_494.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(159, 168, 218);')
+                                                                                .fc-event-time 20
+                                                                                .fc-event-title Добро пожаловать в Колледж РГСУ
+                                                                        .fc-daygrid-event-harness.fc-daygrid-event-harness-abs(style='visibility: hidden;')
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-future.you-icon(href='/services/mediaplan/mediaplan_505.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(255, 138, 101);')
+                                                                                .fc-event-time 20:30
+                                                                                .fc-event-title Юриспруденция: гражданско-правовые и государственно-правовые дисциплины
+                                                                        .fc-daygrid-event-harness.fc-daygrid-event-harness-abs(style='visibility: hidden;')
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-future.you-icon(href='/services/mediaplan/mediaplan_547.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(159, 168, 218);')
+                                                                                .fc-event-time 21
+                                                                                .fc-event-title ЕГЭ на 100 баллов: Математика. Часть 1
+                                                                        .fc-daygrid-event-harness.fc-daygrid-event-harness-abs(style='visibility: hidden;')
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-future.you-icon(href='/services/mediaplan/mediaplan_523.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(159, 168, 218);')
+                                                                                .fc-event-time 21
+                                                                                .fc-event-title Юный предприниматель. Часть 2
+                                                                        .fc-daygrid-day-bottom
+                                                                            a.fc-daygrid-more-link + ещё 11
+                                                                    .fc-daygrid-day-bg
+                                                            td.fc-daygrid-day.fc-day.fc-day-thu.fc-day-future(data-date='2020-12-10')
+                                                                .fc-daygrid-day-frame.fc-scrollgrid-sync-inner
+                                                                    .fc-daygrid-day-top
+                                                                        a.fc-daygrid-day-number 10
+                                                                    .fc-daygrid-day-events
+                                                                        .fc-daygrid-event-harness
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-future(href='/services/mediaplan/mediaplan_415.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(240, 98, 146);')
+                                                                                .fc-event-time 10
+                                                                                .fc-event-title Социологическая оценка качества социальных услуг
+                                                                        .fc-daygrid-event-harness
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-future.you-icon(href='/services/mediaplan/mediaplan_516.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(255, 138, 101);')
+                                                                                .fc-event-time 13
+                                                                                .fc-event-title О студенческой науке в РГСУ
+                                                                        .fc-daygrid-event-harness.fc-daygrid-event-harness-abs(style='visibility: hidden;')
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-future.you-icon(href='/services/mediaplan/mediaplan_324.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(159, 168, 218);')
+                                                                                .fc-event-time 19
+                                                                                .fc-event-title Технологии творчества
+                                                                        .fc-daygrid-event-harness.fc-daygrid-event-harness-abs(style='visibility: hidden;')
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-future.you-icon(href='/services/mediaplan/mediaplan_528.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(159, 168, 218);')
+                                                                                .fc-event-time 20
+                                                                                .fc-event-title Торговое дело снова в моде?
+                                                                        .fc-daygrid-event-harness.fc-daygrid-event-harness-abs(style='visibility: hidden;')
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-future.you-icon(href='/services/mediaplan/mediaplan_517.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(159, 168, 218);')
+                                                                                .fc-event-time 20:30
+                                                                                .fc-event-title Научная студенческая лаборатория РГСУ
+                                                                        .fc-daygrid-event-harness.fc-daygrid-event-harness-abs(style='visibility: hidden;')
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-future.you-icon(href='/services/mediaplan/mediaplan_526.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(255, 138, 101);')
+                                                                                .fc-event-time 21
+                                                                                .fc-event-title Европейский Союз: что было, что стало и что будет. Часть 2
+                                                                        .fc-daygrid-day-bottom
+                                                                            a.fc-daygrid-more-link + ещё 4
+                                                                    .fc-daygrid-day-bg
+                                                            td.fc-daygrid-day.fc-day.fc-day-fri.fc-day-future(data-date='2020-12-11')
+                                                                .fc-daygrid-day-frame.fc-scrollgrid-sync-inner
+                                                                    .fc-daygrid-day-top
+                                                                        a.fc-daygrid-day-number 11
+                                                                    .fc-daygrid-day-events
+                                                                        .fc-daygrid-event-harness
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-future.you-icon(href='/services/mediaplan/mediaplan_449.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(255, 138, 101);')
+                                                                                .fc-event-time 12
+                                                                                .fc-event-title Притча о бизнес-консультантах
+                                                                        .fc-daygrid-event-harness
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-future.you-icon(href='/services/mediaplan/mediaplan_558.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(159, 168, 218);')
+                                                                                .fc-event-time 13:30
+                                                                                .fc-event-title Интервью с выпускником Юридического факультета РГСУ
+                                                                        .fc-daygrid-event-harness.fc-daygrid-event-harness-abs(style='visibility: hidden;')
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-future.you-icon(href='/services/mediaplan/mediaplan_432.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(129, 199, 132);')
+                                                                                .fc-event-time 14
+                                                                                .fc-event-title Онлайн-подкаст Live_UP
+                                                                        .fc-daygrid-event-harness.fc-daygrid-event-harness-abs(style='visibility: hidden;')
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-future(href='/services/mediaplan/mediaplan_423.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(240, 98, 146);')
+                                                                                .fc-event-time 15
+                                                                                .fc-event-title
+                                                                                    | Стратегические ориентиры развития внутреннего въездного туризма Российской Федерации
+                                                                        .fc-daygrid-event-harness.fc-daygrid-event-harness-abs(style='visibility: hidden;')
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-future.you-icon(href='/services/mediaplan/mediaplan_498.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(255, 138, 101);')
+                                                                                .fc-event-time 19
+                                                                                .fc-event-title Психологические методы прогнозирования поведения человека
+                                                                        .fc-daygrid-event-harness.fc-daygrid-event-harness-abs(style='visibility: hidden;')
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-future.you-icon(href='/services/mediaplan/mediaplan_508.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(159, 168, 218);')
+                                                                                .fc-event-time 20
+                                                                                .fc-event-title РГСУ трудоустраивает #2. Superjob
+                                                                        .fc-daygrid-event-harness.fc-daygrid-event-harness-abs(style='visibility: hidden;')
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-future.you-icon(href='/services/mediaplan/mediaplan_553.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(159, 168, 218);')
+                                                                                .fc-event-time 20:30
+                                                                                .fc-event-title На что ты способен? Профориентационный тест
+                                                                        .fc-daygrid-day-bottom
+                                                                            a.fc-daygrid-more-link + ещё 5
+                                                                    .fc-daygrid-day-bg
+                                                            td.fc-daygrid-day.fc-day.fc-day-sat.fc-day-future(data-date='2020-12-12')
+                                                                .fc-daygrid-day-frame.fc-scrollgrid-sync-inner
+                                                                    .fc-daygrid-day-top
+                                                                        a.fc-daygrid-day-number 12
+                                                                    .fc-daygrid-day-events
+                                                                        .fc-daygrid-event-harness
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-future(href='/services/mediaplan/mediaplan_531.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(129, 199, 132);')
+                                                                                .fc-event-time 10
+                                                                                .fc-event-title Гонка ГТО
+                                                                        .fc-daygrid-event-harness
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-future(href='/services/mediaplan/mediaplan_80.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(129, 199, 132);')
+                                                                                .fc-event-time 12
+                                                                                .fc-event-title Проведение классного часа на тему Конституции РФ
+                                                                        .fc-daygrid-event-harness.fc-daygrid-event-harness-abs(style='visibility: hidden;')
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-future.you-icon(href='/services/mediaplan/mediaplan_524.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(255, 138, 101);')
+                                                                                .fc-event-time 13
+                                                                                .fc-event-title Есть для того, чтобы жить или жить для того, чтобы есть?
+                                                                        .fc-daygrid-event-harness.fc-daygrid-event-harness-abs(style='visibility: hidden;')
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-future.you-icon(href='/services/mediaplan/mediaplan_546.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(159, 168, 218);')
+                                                                                .fc-event-time 14
+                                                                                .fc-event-title Как раскрыть в себе гения?
+                                                                        .fc-daygrid-event-harness.fc-daygrid-event-harness-abs(style='visibility: hidden;')
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-future.you-icon(href='/services/mediaplan/mediaplan_542.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(159, 168, 218);')
+                                                                                .fc-event-time 15
+                                                                                .fc-event-title Как понять каждого?
+                                                                        .fc-daygrid-event-harness.fc-daygrid-event-harness-abs(style='visibility: hidden;')
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-future(href='/services/mediaplan/mediaplan_561.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(159, 168, 218);')
+                                                                                .fc-event-time 16
+                                                                                .fc-event-title Модель ООН РГСУ
+                                                                        .fc-daygrid-event-harness.fc-daygrid-event-harness-abs(style='visibility: hidden;')
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-future.you-icon(href='/services/mediaplan/mediaplan_492.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(255, 138, 101);')
+                                                                                .fc-event-time 16
+                                                                                .fc-event-title Лайфхаки известных музыкантов
+                                                                        .fc-daygrid-event-harness.fc-daygrid-event-harness-abs(style='visibility: hidden;')
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-future.you-icon(href='/services/mediaplan/mediaplan_520.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(159, 168, 218);')
+                                                                                .fc-event-time 17
+                                                                                .fc-event-title ДК РГСУ - кузница талантов!
+                                                                        .fc-daygrid-event-harness.fc-daygrid-event-harness-abs(style='visibility: hidden;')
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-future.you-icon(href='/services/mediaplan/mediaplan_501.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(255, 138, 101);')
+                                                                                .fc-event-time 18
+                                                                                .fc-event-title Психология: что это и с чем её едят
+                                                                        .fc-daygrid-event-harness.fc-daygrid-event-harness-abs(style='visibility: hidden;')
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-future.you-icon(href='/services/mediaplan/mediaplan_533.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(255, 138, 101);')
+                                                                                .fc-event-time 19
+                                                                                .fc-event-title Европейский Союз: что было, что стало и что будет. Часть 3
+                                                                        .fc-daygrid-event-harness.fc-daygrid-event-harness-abs(style='visibility: hidden;')
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-future.you-icon(href='/services/mediaplan/mediaplan_537.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(255, 138, 101);')
+                                                                                .fc-event-time 20
+                                                                                .fc-event-title Мировая художественная культура в ролевых играх. Часть 1
+                                                                        .fc-daygrid-day-bottom
+                                                                            a.fc-daygrid-more-link + ещё 9
+                                                                    .fc-daygrid-day-bg
+                                                            td.fc-daygrid-day.fc-day.fc-day-sun.fc-day-future(data-date='2020-12-13')
+                                                                .fc-daygrid-day-frame.fc-scrollgrid-sync-inner
+                                                                    .fc-daygrid-day-top
+                                                                        a.fc-daygrid-day-number 13
+                                                                    .fc-daygrid-day-events
+                                                                        .fc-daygrid-event-harness
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-future.you-icon(href='/services/mediaplan/mediaplan_493.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(159, 168, 218);')
+                                                                                .fc-event-time 13
+                                                                                .fc-event-title Медицинский факультет глазами студентов
+                                                                        .fc-daygrid-event-harness
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-future.you-icon(href='/services/mediaplan/mediaplan_509.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(159, 168, 218);')
+                                                                                .fc-event-time 13:30
+                                                                                .fc-event-title РГСУ трудоустраивает #3. HeadHunter
+                                                                        .fc-daygrid-event-harness.fc-daygrid-event-harness-abs(style='visibility: hidden;')
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-future.you-icon(href='/services/mediaplan/mediaplan_555.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(159, 168, 218);')
+                                                                                .fc-event-time 14
+                                                                                .fc-event-title Что такое дефектология?
+                                                                        .fc-daygrid-event-harness.fc-daygrid-event-harness-abs(style='visibility: hidden;')
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-future.you-icon(href='/services/mediaplan/mediaplan_499.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(159, 168, 218);')
+                                                                                .fc-event-time 15
+                                                                                .fc-event-title О доступном образовании в РГСУ
+                                                                        .fc-daygrid-event-harness.fc-daygrid-event-harness-abs(style='visibility: hidden;')
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-future.you-icon(href='/services/mediaplan/mediaplan_549.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(255, 138, 101);')
+                                                                                .fc-event-time 16
+                                                                                .fc-event-title Правда ли, что логопеды только ставят звуки?
+                                                                        .fc-daygrid-event-harness.fc-daygrid-event-harness-abs(style='visibility: hidden;')
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-future.you-icon(href='/services/mediaplan/mediaplan_502.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(129, 199, 132);')
+                                                                                .fc-event-time 17
+                                                                                .fc-event-title #БерегиЗдоровье #РГСУ - Вакцинация от гриппа
+                                                                        .fc-daygrid-event-harness.fc-daygrid-event-harness-abs(style='visibility: hidden;')
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-future.you-icon(href='/services/mediaplan/mediaplan_538.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(255, 138, 101);')
+                                                                                .fc-event-time 18
+                                                                                .fc-event-title Мировая художественная культура в ролевых играх. Часть 2
+                                                                        .fc-daygrid-event-harness.fc-daygrid-event-harness-abs(style='visibility: hidden;')
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-future.you-icon(href='/services/mediaplan/mediaplan_540.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(255, 138, 101);')
+                                                                                .fc-event-time 19:30
+                                                                                .fc-event-title Эстрадный певец: имидж и стиль
+                                                                        .fc-daygrid-day-bottom
+                                                                            a.fc-daygrid-more-link + ещё 6
+                                                                    .fc-daygrid-day-bg
+                                                        tr
+                                                            td.fc-daygrid-day.fc-day.fc-day-mon.fc-day-future(data-date='2020-12-14')
+                                                                .fc-daygrid-day-frame.fc-scrollgrid-sync-inner
+                                                                    .fc-daygrid-day-top
+                                                                        a.fc-daygrid-day-number 14
+                                                                    .fc-daygrid-day-events
+                                                                        .fc-daygrid-event-harness
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-future(href='/services/mediaplan/mediaplan_276.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(240, 98, 146);')
+                                                                                .fc-event-time 09
+                                                                                .fc-event-title Конференция ФУМО 39.00.00 «Социальная работа глазами молодежи» для студентов СПО
+                                                                    .fc-daygrid-day-bg
+                                                            td.fc-daygrid-day.fc-day.fc-day-tue.fc-day-future(data-date='2020-12-15')
+                                                                .fc-daygrid-day-frame.fc-scrollgrid-sync-inner
+                                                                    .fc-daygrid-day-top
+                                                                        a.fc-daygrid-day-number 15
+                                                                    .fc-daygrid-day-events
+                                                                        .fc-daygrid-event-harness
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-future(href='/services/mediaplan/mediaplan_482.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(240, 98, 146);')
+                                                                                .fc-event-time 09
+                                                                                .fc-event-title Конференция ФУМО 39.00.00 «Социальная работа глазами молодежи» для студентов СПО
+                                                                        .fc-daygrid-event-harness
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-future(href='/services/mediaplan/mediaplan_529.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(159, 168, 218);')
+                                                                                .fc-event-time 17
+                                                                                .fc-event-title «Инновации в науках о красоте и долголетии»
+                                                                        .fc-daygrid-event-harness
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-future(href='/services/mediaplan/mediaplan_436.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(129, 199, 132);')
+                                                                                .fc-event-time 19
+                                                                                .fc-event-title Ток-шоу факультета управления #НормаБытиЯ
+                                                                    .fc-daygrid-day-bg
+                                                            td.fc-daygrid-day.fc-day.fc-day-wed.fc-day-future(data-date='2020-12-16')
+                                                                .fc-daygrid-day-frame.fc-scrollgrid-sync-inner
+                                                                    .fc-daygrid-day-top
+                                                                        a.fc-daygrid-day-number 16
+                                                                    .fc-daygrid-day-events
+                                                                        .fc-daygrid-event-harness
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-future(href='/services/mediaplan/mediaplan_442.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(255, 138, 101);')
+                                                                                .fc-event-time 16
+                                                                                .fc-event-title
+                                                                                    | Жан Монне Модуль Брекзит на острове Ирландия: современная интеграция в исторической ретроспективе. Public History в современной Эйре
+                                                                    .fc-daygrid-day-bg
+                                                            td.fc-daygrid-day.fc-day.fc-day-thu.fc-day-future(data-date='2020-12-17')
+                                                                .fc-daygrid-day-frame.fc-scrollgrid-sync-inner
+                                                                    .fc-daygrid-day-top
+                                                                        a.fc-daygrid-day-number 17
+                                                                    .fc-daygrid-day-events
+                                                                        .fc-daygrid-event-harness
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-future(href='/services/mediaplan/mediaplan_363.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(255, 138, 101);')
+                                                                                .fc-event-time 12:25
+                                                                                .fc-event-title Колониальный, сельский, модерн и другие ландшафтные стили садов и парков.
+                                                                        .fc-daygrid-event-harness
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-future(href='/services/mediaplan/mediaplan_487.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(129, 199, 132);')
+                                                                                .fc-event-time 15
+                                                                                .fc-event-title Соревнования по настольному теннису
+                                                                    .fc-daygrid-day-bg
+                                                            td.fc-daygrid-day.fc-day.fc-day-fri.fc-day-future(data-date='2020-12-18')
+                                                                .fc-daygrid-day-frame.fc-scrollgrid-sync-inner
+                                                                    .fc-daygrid-day-top
+                                                                        a.fc-daygrid-day-number 18
+                                                                    .fc-daygrid-day-events
+                                                                        .fc-daygrid-event-harness
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-future.you-icon(href='/services/mediaplan/mediaplan_433.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(159, 168, 218);')
+                                                                                .fc-event-time 14
+                                                                                .fc-event-title Онлайн-подкаст факультета управления «Live_UP»
+                                                                        .fc-daygrid-event-harness
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-future(href='/services/mediaplan/mediaplan_548.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(129, 199, 132);')
+                                                                                .fc-event-time 15:30
+                                                                                .fc-event-title Современные бизнес-технологии
+                                                                    .fc-daygrid-day-bg
+                                                            td.fc-daygrid-day.fc-day.fc-day-sat.fc-day-future(data-date='2020-12-19')
+                                                                .fc-daygrid-day-frame.fc-scrollgrid-sync-inner
+                                                                    .fc-daygrid-day-top
+                                                                        a.fc-daygrid-day-number 19
+                                                                    .fc-daygrid-day-events
+                                                                        .fc-daygrid-event-harness
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-future(href='/services/mediaplan/mediaplan_488.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(255, 138, 101);')
+                                                                                .fc-event-time 11
+                                                                                .fc-event-title Педагогический консилиум Реализация качества образования в филиале
+                                                                    .fc-daygrid-day-bg
+                                                            td.fc-daygrid-day.fc-day.fc-day-sun.fc-day-future(data-date='2020-12-20')
+                                                                .fc-daygrid-day-frame.fc-scrollgrid-sync-inner
+                                                                    .fc-daygrid-day-top
+                                                                        a.fc-daygrid-day-number 20
+                                                                    .fc-daygrid-day-events
+                                                                    .fc-daygrid-day-bg
+                                                        tr
+                                                            td.fc-daygrid-day.fc-day.fc-day-mon.fc-day-future(data-date='2020-12-21')
+                                                                .fc-daygrid-day-frame.fc-scrollgrid-sync-inner
+                                                                    .fc-daygrid-day-top
+                                                                        a.fc-daygrid-day-number 21
+                                                                    .fc-daygrid-day-events
+                                                                    .fc-daygrid-day-bg
+                                                            td.fc-daygrid-day.fc-day.fc-day-tue.fc-day-future(data-date='2020-12-22')
+                                                                .fc-daygrid-day-frame.fc-scrollgrid-sync-inner
+                                                                    .fc-daygrid-day-top
+                                                                        a.fc-daygrid-day-number 22
+                                                                    .fc-daygrid-day-events
+                                                                        .fc-daygrid-event-harness
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-future(href='/services/mediaplan/mediaplan_259.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(240, 98, 146);')
+                                                                                .fc-event-time 15
+                                                                                .fc-event-title Социальное познание и социальное конструирование
+                                                                        .fc-daygrid-event-harness
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-future(href='/services/mediaplan/mediaplan_530.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(255, 138, 101);')
+                                                                                .fc-event-time 18
+                                                                                .fc-event-title Почему устают наши глаза? Компьютерный зрительный синдром
+                                                                        .fc-daygrid-event-harness
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-future(href='/services/mediaplan/mediaplan_437.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(129, 199, 132);')
+                                                                                .fc-event-time 19
+                                                                                .fc-event-title Ток-шоу факультета управления #НормаБытиЯ
+                                                                    .fc-daygrid-day-bg
+                                                            td.fc-daygrid-day.fc-day.fc-day-wed.fc-day-future(data-date='2020-12-23')
+                                                                .fc-daygrid-day-frame.fc-scrollgrid-sync-inner
+                                                                    .fc-daygrid-day-top
+                                                                        a.fc-daygrid-day-number 23
+                                                                    .fc-daygrid-day-events
+                                                                    .fc-daygrid-day-bg
+                                                            td.fc-daygrid-day.fc-day.fc-day-thu.fc-day-future(data-date='2020-12-24')
+                                                                .fc-daygrid-day-frame.fc-scrollgrid-sync-inner
+                                                                    .fc-daygrid-day-top
+                                                                        a.fc-daygrid-day-number 24
+                                                                    .fc-daygrid-day-events
+                                                                    .fc-daygrid-day-bg
+                                                            td.fc-daygrid-day.fc-day.fc-day-fri.fc-day-future(data-date='2020-12-25')
+                                                                .fc-daygrid-day-frame.fc-scrollgrid-sync-inner
+                                                                    .fc-daygrid-day-top
+                                                                        a.fc-daygrid-day-number 25
+                                                                    .fc-daygrid-day-events
+                                                                        .fc-daygrid-event-harness
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-future.you-icon(href='/services/mediaplan/mediaplan_434.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(159, 168, 218);')
+                                                                                .fc-event-time 14
+                                                                                .fc-event-title Онлайн-подкаст факультета управления «Live_UP»
+                                                                    .fc-daygrid-day-bg
+                                                            td.fc-daygrid-day.fc-day.fc-day-sat.fc-day-future(data-date='2020-12-26')
+                                                                .fc-daygrid-day-frame.fc-scrollgrid-sync-inner
+                                                                    .fc-daygrid-day-top
+                                                                        a.fc-daygrid-day-number 26
+                                                                    .fc-daygrid-day-events
+                                                                    .fc-daygrid-day-bg
+                                                            td.fc-daygrid-day.fc-day.fc-day-sun.fc-day-future(data-date='2020-12-27')
+                                                                .fc-daygrid-day-frame.fc-scrollgrid-sync-inner
+                                                                    .fc-daygrid-day-top
+                                                                        a.fc-daygrid-day-number 27
+                                                                    .fc-daygrid-day-events
+                                                                    .fc-daygrid-day-bg
+                                                        tr
+                                                            td.fc-daygrid-day.fc-day.fc-day-mon.fc-day-future(data-date='2020-12-28')
+                                                                .fc-daygrid-day-frame.fc-scrollgrid-sync-inner
+                                                                    .fc-daygrid-day-top
+                                                                        a.fc-daygrid-day-number 28
+                                                                    .fc-daygrid-day-events
+                                                                    .fc-daygrid-day-bg
+                                                            td.fc-daygrid-day.fc-day.fc-day-tue.fc-day-future(data-date='2020-12-29')
+                                                                .fc-daygrid-day-frame.fc-scrollgrid-sync-inner
+                                                                    .fc-daygrid-day-top
+                                                                        a.fc-daygrid-day-number 29
+                                                                    .fc-daygrid-day-events
+                                                                    .fc-daygrid-day-bg
+                                                            td.fc-daygrid-day.fc-day.fc-day-wed.fc-day-future(data-date='2020-12-30')
+                                                                .fc-daygrid-day-frame.fc-scrollgrid-sync-inner
+                                                                    .fc-daygrid-day-top
+                                                                        a.fc-daygrid-day-number 30
+                                                                    .fc-daygrid-day-events
+                                                                        .fc-daygrid-event-harness
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-future(href='/services/mediaplan/mediaplan_477.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(255, 138, 101);')
+                                                                                .fc-event-time 8:30
+                                                                                .fc-event-title Урок мужества, посвященный Дню героев Отечества
+                                                                    .fc-daygrid-day-bg
+                                                            td.fc-daygrid-day.fc-day.fc-day-thu.fc-day-future(data-date='2020-12-31')
+                                                                .fc-daygrid-day-frame.fc-scrollgrid-sync-inner
+                                                                    .fc-daygrid-day-top
+                                                                        a.fc-daygrid-day-number 31
+                                                                    .fc-daygrid-day-events
+                                                                    .fc-daygrid-day-bg
+                                                            td.fc-daygrid-day.fc-day.fc-day-fri.fc-day-future.fc-day-other(data-date='2021-01-01')
+                                                                .fc-daygrid-day-frame.fc-scrollgrid-sync-inner
+                                                                    .fc-daygrid-day-top
+                                                                        a.fc-daygrid-day-number 1
+                                                                    .fc-daygrid-day-events
+                                                                    .fc-daygrid-day-bg
+                                                            td.fc-daygrid-day.fc-day.fc-day-sat.fc-day-future.fc-day-other(data-date='2021-01-02')
+                                                                .fc-daygrid-day-frame.fc-scrollgrid-sync-inner
+                                                                    .fc-daygrid-day-top
+                                                                        a.fc-daygrid-day-number 2
+                                                                    .fc-daygrid-day-events
+                                                                    .fc-daygrid-day-bg
+                                                            td.fc-daygrid-day.fc-day.fc-day-sun.fc-day-future.fc-day-other(data-date='2021-01-03')
+                                                                .fc-daygrid-day-frame.fc-scrollgrid-sync-inner
+                                                                    .fc-daygrid-day-top
+                                                                        a.fc-daygrid-day-number 3
+                                                                    .fc-daygrid-day-events
+                                                                    .fc-daygrid-day-bg
+                                                        tr
+                                                            td.fc-daygrid-day.fc-day.fc-day-mon.fc-day-future.fc-day-other(data-date='2021-01-04')
+                                                                .fc-daygrid-day-frame.fc-scrollgrid-sync-inner
+                                                                    .fc-daygrid-day-top
+                                                                        a.fc-daygrid-day-number 4
+                                                                    .fc-daygrid-day-events
+                                                                    .fc-daygrid-day-bg
+                                                            td.fc-daygrid-day.fc-day.fc-day-tue.fc-day-future.fc-day-other(data-date='2021-01-05')
+                                                                .fc-daygrid-day-frame.fc-scrollgrid-sync-inner
+                                                                    .fc-daygrid-day-top
+                                                                        a.fc-daygrid-day-number 5
+                                                                    .fc-daygrid-day-events
+                                                                    .fc-daygrid-day-bg
+                                                            td.fc-daygrid-day.fc-day.fc-day-wed.fc-day-future.fc-day-other(data-date='2021-01-06')
+                                                                .fc-daygrid-day-frame.fc-scrollgrid-sync-inner
+                                                                    .fc-daygrid-day-top
+                                                                        a.fc-daygrid-day-number 6
+                                                                    .fc-daygrid-day-events
+                                                                    .fc-daygrid-day-bg
+                                                            td.fc-daygrid-day.fc-day.fc-day-thu.fc-day-future.fc-day-other(data-date='2021-01-07')
+                                                                .fc-daygrid-day-frame.fc-scrollgrid-sync-inner
+                                                                    .fc-daygrid-day-top
+                                                                        a.fc-daygrid-day-number 7
+                                                                    .fc-daygrid-day-events
+                                                                    .fc-daygrid-day-bg
+                                                            td.fc-daygrid-day.fc-day.fc-day-fri.fc-day-future.fc-day-other(data-date='2021-01-08')
+                                                                .fc-daygrid-day-frame.fc-scrollgrid-sync-inner
+                                                                    .fc-daygrid-day-top
+                                                                        a.fc-daygrid-day-number 8
+                                                                    .fc-daygrid-day-events
+                                                                    .fc-daygrid-day-bg
+                                                            td.fc-daygrid-day.fc-day.fc-day-sat.fc-day-future.fc-day-other(data-date='2021-01-09')
+                                                                .fc-daygrid-day-frame.fc-scrollgrid-sync-inner
+                                                                    .fc-daygrid-day-top
+                                                                        a.fc-daygrid-day-number 9
+                                                                    .fc-daygrid-day-events
+                                                                    .fc-daygrid-day-bg
+                                                            td.fc-daygrid-day.fc-day.fc-day-sun.fc-day-future.fc-day-other(data-date='2021-01-10')
+                                                                .fc-daygrid-day-frame.fc-scrollgrid-sync-inner
+                                                                    .fc-daygrid-day-top
+                                                                        a.fc-daygrid-day-number 10
+                                                                    .fc-daygrid-day-events
+                                                                        .fc-daygrid-event-harness
+                                                                            a.fc-daygrid-event.fc-daygrid-dot-event.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-future.you-icon(href='/services/mediaplan/mediaplan_472.html?isNaked=1')
+                                                                                .fc-daygrid-event-dot(style='border-color: rgb(129, 199, 132);')
+                                                                                .fc-event-time 13
+                                                                                .fc-event-title Идеальные незнакомцы
+                                                                    .fc-daygrid-day-bg
 
-                .calendar-header__buttons
-                    button.calendar-header__button.calendar-header__button--backward Назад
-                    span Сегодня
-                    button.calendar-header__button.calendar-header__button--forward Вперед
-            .calendar
-                - for(i=0;i<7;i++)
-                    span.day-name= names[i]
-
-                - for(j=0;j<35;j++)
-                    - if(j == 0 || j == 1 || j == 33 || j == 34)
-                        div.day.day--disabled= days[j]
-
-                    - else
-                        div.day= days[j]
-
-                section.task.task--primary(style="grid-row: 2") Projects
-                section.task.task--primary Вильгельма Пика
-                    .task__detail
-                        h4 Product Checkup 1
-                        p 15-17th November
-                section.task.task--primary(style="margin-bottom: 50px") Вильгельма Пика

@@ -12,7 +12,11 @@
 	"dependencies": {
 		"@fullcalendar/core": "^5.4.0",
 		"@fullcalendar/daygrid": "^5.4.0",
+		"@fullcalendar/list": "^5.4.0",
+		"@fullcalendar/timegrid": "^5.4.0",
 		"chart.js": "^2.9.4",
+		"fullcalendar": "^5.4.0",
+		"fullcalendar-scheduler": "^5.4.0",
 		"gulp": "^4.0.2",
 		"gulp-cheerio": "^1.0.0",
 		"gulp-pug": "^4.0.1",
