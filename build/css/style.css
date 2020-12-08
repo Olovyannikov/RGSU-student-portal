@@ -2035,7 +2035,7 @@ textarea:hover {
   top: 0;
   left: 0;
   width: 54px;
-  background-color: #f8fafe;
+  background-color: #f1f4f9;
 }
 
 .page-header__sidebar-toggler--active .toggler-element {
@@ -2277,6 +2277,7 @@ textarea:hover {
   border: none;
   cursor: pointer;
   outline: none;
+  z-index: 100;
   color: #fff;
   position: relative;
   font-style: normal;
@@ -2292,6 +2293,7 @@ textarea:hover {
 .page-header--menu-opened .page-header__login-button {
   -webkit-box-shadow: none;
           box-shadow: none;
+  z-index: 13;
 }
 
 .page-header--menu-opened .page-header__login-button svg {
@@ -3423,6 +3425,10 @@ textarea:hover {
   width: 100%;
 }
 
+.portfolio__wrapper {
+  padding-bottom: 70px;
+}
+
 .portfolio__container {
   background-color: #fff;
   position: relative;
@@ -3438,33 +3444,45 @@ textarea:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   position: relative;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  padding-bottom: 70px;
-  width: 100%;
+  width: 236px;
+  margin: 0 auto;
+}
+
+.gauge svg:not(:last-child) {
+  margin: 0 20px 20px 0;
+}
+
+.gauge svg {
+  width: 236px;
+  margin-top: 5px;
+}
+
+.unfilled {
+  stroke: #EBEDF8;
 }
 
 .gauge__value {
+  font-size: 40px;
   position: absolute;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 60px;
-  line-height: 26px;
-  top: 80px;
   left: 50%;
-  -webkit-transform: translateX(-50%);
-      -ms-transform: translateX(-50%);
-          transform: translateX(-50%);
+  top: 50%;
+  -webkit-transform: translate(-50%, 0);
+      -ms-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
 }
 
 .gauge__value::after {
-  content: "%";
+  content: '%';
 }
 
 .gauge--score .gauge__value::after {
-  content: "";
+  content: '';
 }
 
 .classmates {
@@ -6723,6 +6741,10 @@ tfoot td {
   margin-bottom: 2px;
 }
 
+.vacancy__wrapper {
+  width: 100%;
+}
+
 .vacancy__filter {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -6743,8 +6765,8 @@ tfoot td {
 
 .vacancy__filter-button svg {
   position: absolute;
-  top: 10px;
-  left: 10px;
+  top: 7px;
+  left: 7px;
   width: 22px;
   height: 22px;
   fill: #3464e0;
@@ -6770,7 +6792,7 @@ tfoot td {
   position: absolute;
   display: block;
   width: 25px;
-  left: 9px;
+  left: 6px;
   height: 1px;
   background: #fff;
   top: 50%;
@@ -10109,6 +10131,16 @@ tfoot td {
 
   .hotels__form-input#reason {
     width: auto;
+  }
+}
+
+@media (max-width: 470px) {
+  .modal__login {
+    width: 90%;
+    margin-left: 0px;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
   }
 }
 
