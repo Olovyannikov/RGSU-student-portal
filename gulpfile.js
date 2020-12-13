@@ -60,7 +60,8 @@ let { src, dest } = require("gulp"),
     plumber = require("gulp-plumber"),
     notify = require("gulp-notify"),
     webpack = require("webpack"),
-    webpackStream = require("webpack-stream");
+    webpackStream = require("webpack-stream"),
+    MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 function browserSync() {
     browsersync.init({
@@ -139,17 +140,25 @@ function js() {
                 output: {
                     filename: "script.js",
                 },
+                resolve: {
+                    extensions: [ '.js' ]
+                },
                 module: {
                     rules: [
                         {
                             test: /\.m?js$/,
+                            test: /\.css$/,
                             exclude: /(node_modules|bower_components)/,
-                            use: {
+                            use: [{
                                 loader: "babel-loader",
                                 options: {
                                     presets: ["@babel/preset-env"],
                                 },
+
                             },
+                                { loader: MiniCssExtractPlugin.loader },
+                                { loader: 'css-loader', options: { importLoaders: 1 } }
+                            ]
                         },
                     ],
                 },
@@ -158,6 +167,9 @@ function js() {
                         /moment[/\\]locale$/,
                         /ru/
                     ),
+                    new MiniCssExtractPlugin({
+                        filename: 'main.css'
+                    })
                 ],
             })
         )
