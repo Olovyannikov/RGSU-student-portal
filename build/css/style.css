@@ -2213,23 +2213,6 @@ textarea:hover {
           transform: rotate(-45deg);
 }
 
-.page-header__toggler--icon {
-  fill: #ffffff;
-  height: 20px;
-  display: block;
-  -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-          transform: translateY(-50%);
-  left: 0;
-  width: 100%;
-  position: absolute;
-}
-
-.page-header--menu-opened .page-header__toggler--icon {
-  left: 5px;
-  top: 50%;
-}
-
 @-webkit-keyframes slideRight {
   from {
     right: -100%;
@@ -2284,6 +2267,7 @@ textarea:hover {
   font-weight: normal;
   font-size: 0;
   display: block;
+  background: url("../img/icons/key.svg") no-repeat center;
 }
 
 .page-header__login-button:focus {
@@ -2294,10 +2278,6 @@ textarea:hover {
   -webkit-box-shadow: none;
           box-shadow: none;
   z-index: 13;
-}
-
-.page-header--menu-opened .page-header__login-button svg {
-  z-index: -1;
 }
 
 .page-header__menu {
@@ -10568,7 +10548,7 @@ a.fc-event:hover {
   }
 
   .page-header--menu-opened .page-header__toggler {
-    background: #1740aa;
+    background: #1740aa url("../img/icons/key.svg") no-repeat 28px center;
     margin-right: 0;
     top: 0;
   }
@@ -10596,17 +10576,6 @@ a.fc-event:hover {
     all: unset;
   }
 
-  .page-header--menu-opened .page-header__toggler--icon {
-    left: 25px;
-    top: 23px;
-  }
-
-  .page-header__toggler--icon {
-    width: 20px;
-    left: 25px;
-    top: 22px;
-  }
-
   .page-header__login {
     display: block;
   }
@@ -10620,7 +10589,7 @@ a.fc-event:hover {
     border-radius: 50px;
     font-size: 14px;
     line-height: 16px;
-    background: #1740aa;
+    background: #1740aa url("../img/icons/key.svg") no-repeat 28px center;
     padding: 13px 23px 13px 56px;
     width: 199px;
     height: 42px;

@@ -271,7 +271,7 @@
             top: -9px;
         }
         @media (min-width: $tablet) {
-            background: #1740aa;
+            background: #1740aa url('../img/icons/key.svg') no-repeat 28px center;
             margin-right: 0;
             top: 0;
             &:focus {
@@ -314,28 +314,6 @@
     }
 }
 
-.page-header__toggler--icon {
-    fill: $c-light;
-    height: 20px;
-    display: block;
-    transform: translateY(-50%);
-    left: 0;
-    width: 100%;
-    position: absolute;
-    .page-header--menu-opened & {
-        left: 5px;
-        top: 50%;
-        @media (min-width: $tablet) {
-            left: 25px;
-            top: 23px;
-        }
-    }
-    @media (min-width: $tablet) {
-        width: 20px;
-        left: 25px;
-        top: 22px;
-    }
-}
 
 @keyframes slideRight {
     from {
@@ -376,10 +354,8 @@
     font-weight: normal;
     font-size: 0;
     display: block;
+    background: url('../img/icons/key.svg') no-repeat center;
     .page-header--menu-opened & {
-        svg {
-            z-index: -1;
-        }
         box-shadow: none;
         z-index: 13;
     }
@@ -388,7 +364,7 @@
         border-radius: 50px;
         font-size: 14px;
         line-height: 16px;
-        background: #1740aa;
+        background: #1740aa url('../img/icons/key.svg') no-repeat 28px center;
         padding: 13px 23px 13px 56px;
         width: 199px;
         height: 42px;
