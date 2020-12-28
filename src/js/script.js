@@ -1,4 +1,5 @@
 // modules
+
 import { default as menuToggle } from "./modules/menu.js";
 import { default as datetime } from "./modules/datetime.js";
 import { default as swiper } from "./modules/swipe.js";
@@ -145,3 +146,30 @@ if (document.querySelector("#fullMenu")) {
 }
 
 parallax();
+
+
+import {
+    $, addClass, removeClass, toggleClass, on
+    , parents, attr, hasClass, find, ajax, removeAttr,
+    removeData, html, serialize, val, siblings, prop
+} from './vendor/dom7/dom7.js';
+
+// install methods
+$.fn.addClass = addClass;
+$.fn.removeClass = removeClass;
+$.fn.toggleClass = toggleClass;
+$.fn.on = on;
+$.fn.parents = parents;
+$.fn.attr = attr;
+$.fn.hasClass = hasClass;
+$.fn.find = find;
+$.fn.ajax = ajax;
+$.fn.removeAttr = removeAttr;
+$.fn.removeData = removeData;
+$.fn.html = html;
+$.fn.serialize = serialize;
+$.fn.val = val;
+$.fn.siblings = siblings;
+$.fn.prop = prop;
+
+$('.js-header').addClass('it-is-working!'); //Проверка:))

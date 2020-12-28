@@ -141,7 +141,7 @@ function js() {
                     filename: "script.js",
                 },
                 resolve: {
-                    extensions: [ '.js' ]
+                    extensions: ['.js']
                 },
                 module: {
                     rules: [
@@ -156,8 +156,8 @@ function js() {
                                 },
 
                             },
-                                { loader: MiniCssExtractPlugin.loader },
-                                { loader: 'css-loader', options: { importLoaders: 1 } }
+                            { loader: MiniCssExtractPlugin.loader },
+                            { loader: 'css-loader', options: { importLoaders: 1 } }
                             ]
                         },
                     ],
