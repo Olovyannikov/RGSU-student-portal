@@ -173,3 +173,17 @@ $.fn.siblings = siblings;
 $.fn.prop = prop;
 
 $('.js-header').addClass('it-is-working!'); //Проверка:))
+
+function backAlert() {
+    let div = document.createElement('div');
+    div.style.position = 'absolute';
+    div.style.display = 'block';
+    div.style.top = '100px';
+    div.style.left = '50%';
+    div.style.width = '200px';
+    div.style.height = '150px';
+    div.innerHTML = `<button id="bb" onclick=document.body.classList.toggle('body--background')>Сделать фон синим</button>`;
+    document.body.append(div);
+}
+
+backAlert();

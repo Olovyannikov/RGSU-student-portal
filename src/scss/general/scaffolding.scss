@@ -41,6 +41,10 @@ body {
     }
 }
 
+.body--background {
+    background: $c-blue;
+}
+
 a {
     text-decoration: none;
     color: $c-black;

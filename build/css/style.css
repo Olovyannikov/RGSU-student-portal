@@ -824,6 +824,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.body--background {
+  background: #3464e0;
+}
+
 a {
   text-decoration: none;
   color: #444444;
