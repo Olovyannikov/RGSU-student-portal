@@ -150,8 +150,8 @@ parallax();
 
 import {
     $, addClass, removeClass, toggleClass, on
-    , parents, attr, hasClass, find, ajax, removeAttr,
-    removeData, html, serialize, val, siblings, prop
+    , parents, attr, hasClass, find, removeAttr,
+    removeData, html, val, siblings, prop,
 } from './vendor/dom7/dom7.js';
 
 // install methods
@@ -163,11 +163,9 @@ $.fn.parents = parents;
 $.fn.attr = attr;
 $.fn.hasClass = hasClass;
 $.fn.find = find;
-$.fn.ajax = ajax;
 $.fn.removeAttr = removeAttr;
 $.fn.removeData = removeData;
 $.fn.html = html;
-$.fn.serialize = serialize;
 $.fn.val = val;
 $.fn.siblings = siblings;
 $.fn.prop = prop;
@@ -182,7 +180,7 @@ function backAlert() {
     div.style.left = '50%';
     div.style.width = '200px';
     div.style.height = '150px';
-    div.innerHTML = `<button id="bb" onclick=document.body.classList.toggle('body--background')>Сделать фон синим</button>`;
+    div.innerHTML = `<button id="bb" onclick=document.body.classList.toggle('body--background');>Сделать фон синим</button>`;
     document.body.append(div);
 }
 

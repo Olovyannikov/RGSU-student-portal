@@ -825,7 +825,9 @@ body {
 }
 
 .body--background {
-  background: #3464e0;
+  background: -webkit-gradient(linear, left top, right top, from(#3464e0), to(#2955c9));
+  background: -o-linear-gradient(left, #3464e0 0%, #2955c9 100%);
+  background: linear-gradient(90deg, #3464e0 0%, #2955c9 100%);
 }
 
 a {
@@ -1952,7 +1954,9 @@ textarea:hover {
   left: 0;
   right: 0;
   z-index: 10;
-  background: #3464e0;
+  background: -webkit-gradient(linear, left top, right top, from(#3464e0), to(#2955c9));
+  background: -o-linear-gradient(left, #3464e0 0%, #2955c9 100%);
+  background: linear-gradient(90deg, #3464e0 0%, #2955c9 100%);
   margin-bottom: 24px;
 }
 
