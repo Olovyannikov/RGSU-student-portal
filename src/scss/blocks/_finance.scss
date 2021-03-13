@@ -8,7 +8,6 @@
     }
 }
 
-
 .finance__content-container {
     display: flex;
     flex-direction: column;
@@ -50,8 +49,8 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 40px;
-    width: 100%;
     padding: 0 38px;
+    column-gap: 14px;
 }
 
 .finance__content-debt-button {

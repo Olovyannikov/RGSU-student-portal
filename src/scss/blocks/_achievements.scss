@@ -17,7 +17,7 @@
   &:last-child {
     margin-right: 0;
   }
-  .card:hover & {
+  &:hover  {
     background: $c-green;
   }
 }
@@ -26,7 +26,7 @@
   position: absolute;
   @include center;
   fill: $c-darkgrey;
-  .card:hover  &{
+  .achievement:hover  &{
     fill: $c-light;
   }
 }

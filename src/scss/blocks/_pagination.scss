@@ -1,6 +1,7 @@
 .pagination {
     width: 100%;
     background-color: #fff;
+    height: 64px;
 }
 
 .pagination__wrapper {
@@ -109,4 +110,18 @@
             border: 1px solid #fff;
         }
     }
+}
+
+.pagination__link--back.disabled,
+.pagination__link--forward.disabled {
+  cursor: unset;
+  color: #c3cad6;
+  svg {
+    fill: #c3cad6;
+  }
+  &:hover {
+    svg {
+      left: -11px;
+    }
+  }
 }

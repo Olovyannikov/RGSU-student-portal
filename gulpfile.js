@@ -40,7 +40,7 @@ let path = {
 let { src, dest } = require("gulp"),
     gulp = require("gulp"),
     browsersync = require("browser-sync").create(), //Инициализация локального сервера
-    fileinclude = require("gulp-file-include"), // Для подключения файлов друг в друга
+    
     del = require("del"), //Удаление папки build
     scss = require("gulp-sass"),
     autoprefixer = require("gulp-autoprefixer"),
@@ -136,7 +136,7 @@ function js() {
     return src(path.src.js)
         .pipe(
             webpackStream({
-                mode: "development",
+                mode: "production",
                 output: {
                     filename: "script.js",
                 },
@@ -148,7 +148,7 @@ function js() {
                         {
                             test: /\.m?js$/,
                             test: /\.css$/,
-                            exclude: /(node_modules|bower_components)/,
+                            exclude: /node_modules\/(?!(swiper)\/).*/,
                             use: [{
                                 loader: "babel-loader",
                                 options: {
@@ -169,7 +169,11 @@ function js() {
                     ),
                     new MiniCssExtractPlugin({
                         filename: 'main.css'
-                    })
+                    }),
+                    new webpack.ProvidePlugin({
+                        $: 'jquery',
+                        jQuery: 'jquery'
+                    }),
                 ],
             })
         )

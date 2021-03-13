@@ -4,7 +4,7 @@
 }
 
 .tabs__button {
-    margin: 0 30px 30px 0;
+    margin-bottom: 10px;
     background: 0 0;
     border: 1px solid #e4ecfa;
     cursor: pointer;
@@ -33,6 +33,9 @@
             left: 18px;
             top: 12px;
         }
+    }
+    @media (min-width: 1400px) {
+        margin: 0 30px 30px 0;
     }
 }
 

@@ -1,5 +1,5 @@
-export default () => {
-    (function() {
+(function() {
+        export default () => {
         const modifiers = {
             controlActive: 'news__control--active',
             indicatorActive: 'active',

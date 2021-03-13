@@ -1,9 +1,9 @@
-mixin user(username, birthday, img, imgWebp, link)
+mixin user(username, birthday, img, link)
+    - img = img == '' ?  'avatar-not-found.svg' : img
     a(href=link).classmates__user
         .classmates__avatar
             picture
-                source(srcset="img/" + imgWebp, type="image/webp")
-                img(src="img/" + img , alt=username)
+                img(width="48" loading="lazy" src="img/" + img , alt=username)
         .classmates__info
             p.classmates__name
                 | #{username}

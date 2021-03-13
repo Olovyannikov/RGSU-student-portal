@@ -3,6 +3,9 @@
   display: flex;
   justify-content: center;
   gap: 30px;
+  a {
+    display: flex;
+  }
   .card {
     width: 314px;
   }

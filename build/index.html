@@ -42,49 +42,49 @@
           </nav>
         </div>
         <div class="page-header__login">
-          <button class="page-header__login-button js-menu-toggler page-header__toggler">Войти на портал</button>
-          <div class="login">
-            <div class="login__navigation">
-              <ul class="login__navigation-list">
-                <li class="login__navigation-item"><a class="js-menu-link js-menu-login" href="#">Мой профиль</a></li>
-                <li class="login__navigation-item"><a class="js-menu-link" href="moderate.html">Модерирование</a></li>
-                <li class="login__navigation-item login__navigation--exit"><a class="js-menu-link page-header__menu-link--exit" href="#">Завершить сеанс</a></li>
-              </ul>
-            </div>
-            <div class="login__modal modal__login">
-              <button class="modal-close js-close-button">Закрыть</button>
-              <h3 class="modal__title">Вход на сайт</h3>
-              <form class="modal__form">
-                <div class="modal__form-group modal__form-group--mail">
-                  <label class="form__label" for="email">Ваш email</label>
-                  <input class="form__input" type="email" id="email" name="email" required="required" placeholder="Укажите адрес электронной почты"/>
-                </div>
-                <div class="modal__form-group modal__form-group--password">
-                  <label class="form__label" for="password">Введите пароль</label>
-                  <input class="modal__form-show" type="checkbox" checked="checked" id="show-password"/>
-                  <label class="modal__control-label modal__control-label--showpassword" for="show-password">
-                    <svg class="modal__checkbox-show" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="32" height="32" title="Показать/скрыть пароль">
-                      <title>Hide/Show Password</title>
-                      <path fill="#c3cad9" d="M24,9A23.654,23.654,0,0,0,2,24a23.633,23.633,0,0,0,44,0A23.643,23.643,0,0,0,24,9Zm0,25A10,10,0,1,1,34,24,10,10,0,0,1,24,34Zm0-16a6,6,0,1,0,6,6A6,6,0,0,0,24,18Z"></path>
-                      <rect class="closed-eye" fill="#c3cad9" x="20.133" y="2.117" height="44" transform="translate(23.536 -8.587) rotate(45)"></rect>
-                      <rect class="closed-eye" x="22" y="3.984" width="4" height="44" transform="translate(25.403 -9.36) rotate(45)" style="fill:#fff"></rect>
-                    </svg>
-                  </label>
-                  <input class="form__input form__input--password" required="required" placeholder="Пароль" id="password" name="password" type="text"/>
-                </div>
+          <button class="js-menu-login page-header__login-button js-menu-toggler page-header__toggler">Войти на портал</button>
+          <div class="login__navigation">
+            <ul class="login__navigation-list">
+              <li class="login__navigation-item"><a class="js-menu-link js-menu-login" href="#">Мой профиль</a></li>
+              <li class="login__navigation-item"><a class="js-menu-link" href="moderate.html">Модерирование</a></li>
+              <li class="login__navigation-item login__navigation--exit"><a class="js-menu-link page-header__menu-link--exit" href="#">Завершить сеанс</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="login">
+          <div class="login__modal modal__login">
+            <button class="modal-close js-close-button">Закрыть</button>
+            <h3 class="modal__title">Вход на сайт</h3>
+            <form class="modal__form">
+              <div class="modal__form-group modal__form-group--mail">
+                <label class="form__label" for="email">Ваш email</label>
+                <input class="form__input" type="email" id="email" name="email" required="required" placeholder="Укажите адрес электронной почты"/>
+              </div>
+              <div class="modal__form-group modal__form-group--password">
+                <label class="form__label" for="password">Введите пароль</label>
+                <input class="modal__form-show" type="checkbox" checked="checked" id="show-password"/>
+                <label class="modal__control-label modal__control-label--showpassword" for="show-password">
+                  <svg class="modal__checkbox-show" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="32" height="32" title="Показать/скрыть пароль">
+                    <title>Hide/Show Password</title>
+                    <path fill="#c3cad9" d="M24,9A23.654,23.654,0,0,0,2,24a23.633,23.633,0,0,0,44,0A23.643,23.643,0,0,0,24,9Zm0,25A10,10,0,1,1,34,24,10,10,0,0,1,24,34Zm0-16a6,6,0,1,0,6,6A6,6,0,0,0,24,18Z"></path>
+                    <rect class="closed-eye" fill="#c3cad9" x="20.133" y="2.117" height="44" transform="translate(23.536 -8.587) rotate(45)"></rect>
+                    <rect class="closed-eye" x="22" y="3.984" width="4" height="44" transform="translate(25.403 -9.36) rotate(45)" style="fill:#fff"></rect>
+                  </svg>
+                </label>
+                <input class="form__input form__input--password" required="required" placeholder="Пароль" id="password" name="password" type="text"/>
                 <div class="modal__buttons">
                   <button class="modal__enter btn btn--blue" type="submit">Войти на сайт</button>
                   <label for="sberID">Если подключен</label>
                   <button class="modal__sber btn btn--green" id="sberID" type="submit">Сбер ID</button>
                 </div>
-              </form>
-            </div>
+              </div>
+            </form>
           </div>
         </div>
       </div>
     </header>
     <main class="main">
-      <section class="enter" style="padding-top: 13px">
+      <section class="enter">
         <div class="enter__wrapper">
           <video class="enter__background" autoplay="autoplay" muted="muted" loop="loop" preload="preload" poster="img/coverflow.png">
             <source src="video/digital_wave_background_01.webm" type="video/webm"/>
@@ -93,44 +93,47 @@
           </video>
           <h1>Цифровая среда РГСУ</h1>
           <p class="enter__subtitle">Единое информационное <br> и сервисное пространством университета</p>
-          <button class="enter__button btn btn--transparent" type="button">Войти в личный кабинет</button>
+          <button class="enter__button btn btn--transparent js-menu-login" type="button">Войти в личный кабинет</button>
         </div>
       </section>
-      <section class="info-container swiper-container container">
-        <div class="info__wrapper swiper-wrapper">
-          <div class="info__card-block swiper-slide">
-            <article class="info__card-stack info__card--schedule card--stack">
-              <h4 class="info__card-title title">Расписание</h4>
-              <p class="info__card-week"></p>
-              <p class="info__card-main info__card-time"></p>
-              <p class="info__card-sub info__card-date"></p>
-              <p class="info__card-daytime">Идет <span>5</span> пара 😟</p>
-            </article>
+      <section class="info">
+        <div class="info-bg"></div>
+        <div class="container info-container swiper-container">
+          <div class="info__wrapper swiper-wrapper">
+            <div class="info__card-block swiper-slide">
+              <article class="info__card-stack info__card--schedule card--stack">
+                <h4 class="info__card-title title">Расписание</h4>
+                <p class="info__card-week"></p>
+                <p class="info__card-main info__card-time"></p>
+                <p class="info__card-sub info__card-date"></p>
+                <p class="info__card-daytime">Идет <span>5</span> пара 😟</p>
+              </article>
+            </div>
+            <div class="info__card-block swiper-slide">
+              <article class="info__card-stack info__card--cv card--stack">
+                <h4 class="info__card-title title">Портфолио</h4>
+                <p class="info__card-main info__card-fellow"><span>10 657</span></p>
+                <p class="info__card-sub">Высококвалифицированных специалиста</p><a class="info__card-about btn" href="#">Подробнее</a>
+              </article>
+            </div>
+            <div class="info__card-block swiper-slide">
+              <article class="info__card-stack info__card--vacancy card--stack">
+                <h4 class="info__card-title title">Вакансии</h4>
+                <p class="info__card-main info__card-workers"><span>34</span></p>
+                <p class="info__card-sub">Вакансии для студентов университета</p><a class="info__card-about btn" href="#">Подробнее</a>
+              </article>
+            </div>
+            <div class="info__card-block info__card-media swiper-slide">
+              <article class="info__card-stack info__card-stack--half card--stack"><a class="info__card-media-description info__card-telegram" href="#"><span class="info__card-media-icon info__card-media-icon--telegram"></span>
+                  <p class="info__card-media-name">Электронный деканат</p>
+                  <p class="info__card-media-hash">#RGSU_online</p></a></article>
+              <article class="info__card-stack info__card-stack--half card--stack"><a class="info__card-media-description info__card-youtube" href="#"><span class="info__card-media-icon info__card-media-icon--youtube"></span>
+                  <p class="info__card-media-name">Медиапростанство</p>
+                  <p class="info__card-media-hash">#RGSU_LIFE</p></a></article>
+            </div>
           </div>
-          <div class="info__card-block swiper-slide">
-            <article class="info__card-stack info__card--cv card--stack">
-              <h4 class="info__card-title title">Портфолио</h4>
-              <p class="info__card-main info__card-fellow"><span>10 657</span></p>
-              <p class="info__card-sub">Высококвалифицированных специалиста</p><a class="info__card-about btn" href="#">Подробнее</a>
-            </article>
-          </div>
-          <div class="info__card-block swiper-slide">
-            <article class="info__card-stack info__card--vacancy card--stack">
-              <h4 class="info__card-title title">Вакансии</h4>
-              <p class="info__card-main info__card-workers"><span>34</span></p>
-              <p class="info__card-sub">Вакансии для студентов университета</p><a class="info__card-about btn" href="#">Подробнее</a>
-            </article>
-          </div>
-          <div class="info__card-block info__card-media swiper-slide">
-            <article class="info__card-stack info__card-stack--half card--stack"><a class="info__card-media-description info__card-telegram" href="#"><span class="info__card-media-icon info__card-media-icon--telegram"></span>
-                <p class="info__card-media-name">Электронный деканат</p>
-                <p class="info__card-media-hash">#RGSU_online</p></a></article>
-            <article class="info__card-stack info__card-stack--half card--stack"><a class="info__card-media-description info__card-youtube" href="#"><span class="info__card-media-icon info__card-media-icon--youtube"></span>
-                <p class="info__card-media-name">Медиапростанство</p>
-                <p class="info__card-media-hash">#RGSU_LIFE</p></a></article>
-          </div>
+          <div class="info__card-pagination swiper-pagination"></div>
         </div>
-        <div class="info__card-pagination swiper-pagination"></div>
       </section>
       <section class="advertisement">
         <div class="advertisement__container container">
@@ -264,27 +267,25 @@
             <h2 class="portfolio-tabs__title title--large">Портфолио по профессиям</h2><span class="divider"></span>
           </div>
           <div class="portfolio-tabs__buttons">
-            <button class="btn portfolio-tabs__button tabs__button tabs__button--active" data-id="college">Колледж</button>
+            <button class="btn portfolio-tabs__button tabs__button tabs__button--active" data-id="graduate">Аспирантура</button>
+            <button class="btn portfolio-tabs__button tabs__button" data-id="collegeBasic">Среднее профессиональное (БУ)</button>
+            <button class="btn portfolio-tabs__button tabs__button" data-id="college">Среднее профессиональное (ПУ)</button>
             <button class="btn portfolio-tabs__button tabs__button" data-id="bachelor">Бакалавриат</button>
-            <button class="btn portfolio-tabs__button tabs__button" data-id="specialty">Специалитет</button>
+            <button class="btn portfolio-tabs__button tabs__button" data-id="speciality">Специалитет</button>
             <button class="btn portfolio-tabs__button tabs__button" data-id="magistracy">Магистратура</button>
-            <button class="btn portfolio-tabs__button tabs__button" data-id="graduate">Аспирантура</button>
+            <button class="btn portfolio-tabs__button tabs__button" data-id="residency">Аспирантура, ординатура, адъюнктура</button>
           </div>
-          <div class="portfolio-tabs__article tabs__item tabs__item--active" id="college">
+          <div class="portfolio-tabs__article tabs__item tabs__item--active" id="graduate">
             <ul class="portfolio__list">
               <ul class="portfolio__list-wrapper">
                 <li class="portfolio__item"><a class="portfolio__link" href="#"><span class="portfolio__description">Банковское дело</span><span class="divider"></span><span class="portfolio__counter">41</span></a></li>
                 <li class="portfolio__item"><a class="portfolio__link" href="#"><span class="portfolio__description">Гостиничный сервис</span><span class="divider"></span><span class="portfolio__counter">73</span></a></li>
                 <li class="portfolio__item"><a class="portfolio__link" href="#"><span class="portfolio__description">Дизайн (по отраслям)</span><span class="divider"></span><span class="portfolio__counter">27</span></a></li>
                 <li class="portfolio__item"><a class="portfolio__link" href="#"><span class="portfolio__description">Издательское дело</span><span class="divider"></span><span class="portfolio__counter">21</span></a></li>
-              </ul>
-              <ul class="portfolio__list-wrapper">
                 <li class="portfolio__item"><a class="portfolio__link" href="#"><span class="portfolio__description">Социальная работа</span><span class="divider"></span><span class="portfolio__counter">41</span></a></li>
                 <li class="portfolio__item"><a class="portfolio__link" href="#"><span class="portfolio__description">Страховое дело (по отраслям)</span><span class="divider"></span><span class="portfolio__counter">73</span></a></li>
                 <li class="portfolio__item"><a class="portfolio__link" href="#"><span class="portfolio__description">Туризм</span><span class="divider"></span><span class="portfolio__counter">27</span></a></li>
                 <li class="portfolio__item"><a class="portfolio__link" href="#"><span class="portfolio__description">Экономика и бухгалтерский учет (по отраслям)</span><span class="divider"></span><span class="portfolio__counter">21</span></a></li>
-              </ul>
-              <ul class="portfolio__list-wrapper">
                 <li class="portfolio__item"><a class="portfolio__link" href="#"><span class="portfolio__description">Информационные системы (по отраслям)</span><span class="divider"></span><span class="portfolio__counter">41</span></a></li>
                 <li class="portfolio__item"><a class="portfolio__link" href="#"><span class="portfolio__description">Право и организация социального обеспечения</span><span class="divider"></span><span class="portfolio__counter">73</span></a></li>
                 <li class="portfolio__item"><a class="portfolio__link" href="#"><span class="portfolio__description">Рациональное использование <br> природохозяйственных комплексов</span><span class="divider"></span><span class="portfolio__counter">27</span></a></li>
@@ -292,21 +293,17 @@
               </ul>
             </ul>
           </div>
-          <div class="portfolio-tabs__article tabs__item" id="bachelor">
+          <div class="portfolio-tabs__article tabs__item" id="collegeBasic">
             <ul class="portfolio__list">
               <ul class="portfolio__list-wrapper">
                 <li class="portfolio__item"><a class="portfolio__link" href="#"><span class="portfolio__description">Небанковское дело</span><span class="divider"></span><span class="portfolio__counter">41</span></a></li>
                 <li class="portfolio__item"><a class="portfolio__link" href="#"><span class="portfolio__description">Гостиничный несервис</span><span class="divider"></span><span class="portfolio__counter">73</span></a></li>
                 <li class="portfolio__item"><a class="portfolio__link" href="#"><span class="portfolio__description">Дизайн (по отраслям)</span><span class="divider"></span><span class="portfolio__counter">27</span></a></li>
                 <li class="portfolio__item"><a class="portfolio__link" href="#"><span class="portfolio__description">Издатльское дело</span><span class="divider"></span><span class="portfolio__counter">21</span></a></li>
-              </ul>
-              <ul class="portfolio__list-wrapper">
                 <li class="portfolio__item"><a class="portfolio__link" href="#"><span class="portfolio__description">Социальная работа</span><span class="divider"></span><span class="portfolio__counter">41</span></a></li>
                 <li class="portfolio__item"><a class="portfolio__link" href="#"><span class="portfolio__description">Страховое дело (по отраслям)</span><span class="divider"></span><span class="portfolio__counter">73</span></a></li>
                 <li class="portfolio__item"><a class="portfolio__link" href="#"><span class="portfolio__description">Туризм</span><span class="divider"></span><span class="portfolio__counter">27</span></a></li>
                 <li class="portfolio__item"><a class="portfolio__link" href="#"><span class="portfolio__description">Экономика и бухгалтерский учет (по отраслям)</span><span class="divider"></span><span class="portfolio__counter">21</span></a></li>
-              </ul>
-              <ul class="portfolio__list-wrapper">
                 <li class="portfolio__item"><a class="portfolio__link" href="#"><span class="portfolio__description">Информационные системы (по отраслям)</span><span class="divider"></span><span class="portfolio__counter">41</span></a></li>
                 <li class="portfolio__item"><a class="portfolio__link" href="#"><span class="portfolio__description">Право и организация социального обеспечения</span><span class="divider"></span><span class="portfolio__counter">73</span></a></li>
                 <li class="portfolio__item"><a class="portfolio__link" href="#"><span class="portfolio__description">Рациональное использование природохозяйственных комплексов</span><span class="divider"></span><span class="portfolio__counter">27</span></a></li>
@@ -314,21 +311,53 @@
               </ul>
             </ul>
           </div>
-          <div class="portfolio-tabs__article tabs__item" id="specialty">
+          <div class="portfolio-tabs__article tabs__item" id="college">
             <ul class="portfolio__list">
               <ul class="portfolio__list-wrapper">
                 <li class="portfolio__item"><a class="portfolio__link" href="#"><span class="portfolio__description">Банковское Недело</span><span class="divider"></span><span class="portfolio__counter">41</span></a></li>
                 <li class="portfolio__item"><a class="portfolio__link" href="#"><span class="portfolio__description">Гостиничный сервис</span><span class="divider"></span><span class="portfolio__counter">73</span></a></li>
                 <li class="portfolio__item"><a class="portfolio__link" href="#"><span class="portfolio__description">Дизайн (по отраслям)</span><span class="divider"></span><span class="portfolio__counter">27</span></a></li>
                 <li class="portfolio__item"><a class="portfolio__link" href="#"><span class="portfolio__description">Издатльское дело</span><span class="divider"></span><span class="portfolio__counter">21</span></a></li>
-              </ul>
-              <ul class="portfolio__list-wrapper">
                 <li class="portfolio__item"><a class="portfolio__link" href="#"><span class="portfolio__description">Социальная работа</span><span class="divider"></span><span class="portfolio__counter">41</span></a></li>
                 <li class="portfolio__item"><a class="portfolio__link" href="#"><span class="portfolio__description">Страховое дело (по отраслям)</span><span class="divider"></span><span class="portfolio__counter">73</span></a></li>
                 <li class="portfolio__item"><a class="portfolio__link" href="#"><span class="portfolio__description">Туризм</span><span class="divider"></span><span class="portfolio__counter">27</span></a></li>
                 <li class="portfolio__item"><a class="portfolio__link" href="#"><span class="portfolio__description">Экономика и бухгалтерский учет (по отраслям)</span><span class="divider"></span><span class="portfolio__counter">21</span></a></li>
+                <li class="portfolio__item"><a class="portfolio__link" href="#"><span class="portfolio__description">Информационные системы (по отраслям)</span><span class="divider"></span><span class="portfolio__counter">41</span></a></li>
+                <li class="portfolio__item"><a class="portfolio__link" href="#"><span class="portfolio__description">Право и организация социального обеспечения</span><span class="divider"></span><span class="portfolio__counter">73</span></a></li>
+                <li class="portfolio__item"><a class="portfolio__link" href="#"><span class="portfolio__description">Рациональное использование природохозяйственных комплексов</span><span class="divider"></span><span class="portfolio__counter">27</span></a></li>
+                <li class="portfolio__item"><a class="portfolio__link" href="#"><span class="portfolio__description">Издательское дело</span><span class="divider"></span><span class="portfolio__counter">21</span></a></li>
               </ul>
+            </ul>
+          </div>
+          <div class="portfolio-tabs__article tabs__item" id="bachelor">
+            <ul class="portfolio__list">
               <ul class="portfolio__list-wrapper">
+                <li class="portfolio__item"><a class="portfolio__link" href="#"><span class="portfolio__description">Банковское дело</span><span class="divider"></span><span class="portfolio__counter">41</span></a></li>
+                <li class="portfolio__item"><a class="portfolio__link" href="#"><span class="portfolio__description">Гостиничный сервис</span><span class="divider"></span><span class="portfolio__counter">73</span></a></li>
+                <li class="portfolio__item"><a class="portfolio__link" href="#"><span class="portfolio__description">Дизайн (по отраслям)</span><span class="divider"></span><span class="portfolio__counter">27</span></a></li>
+                <li class="portfolio__item"><a class="portfolio__link" href="#"><span class="portfolio__description">Издатльское дело</span><span class="divider"></span><span class="portfolio__counter">21</span></a></li>
+                <li class="portfolio__item"><a class="portfolio__link" href="#"><span class="portfolio__description">Социальная работа</span><span class="divider"></span><span class="portfolio__counter">41</span></a></li>
+                <li class="portfolio__item"><a class="portfolio__link" href="#"><span class="portfolio__description">Страховое дело (по отраслям)</span><span class="divider"></span><span class="portfolio__counter">73</span></a></li>
+                <li class="portfolio__item"><a class="portfolio__link" href="#"><span class="portfolio__description">Туризм</span><span class="divider"></span><span class="portfolio__counter">27</span></a></li>
+                <li class="portfolio__item"><a class="portfolio__link" href="#"><span class="portfolio__description">Экономика и бухгалтерский учет (по отраслям)</span><span class="divider"></span><span class="portfolio__counter">21</span></a></li>
+                <li class="portfolio__item"><a class="portfolio__link" href="#"><span class="portfolio__description">Информационные системы (по отраслям)</span><span class="divider"></span><span class="portfolio__counter">41</span></a></li>
+                <li class="portfolio__item"><a class="portfolio__link" href="#"><span class="portfolio__description">Право и организация социального обеспечения</span><span class="divider"></span><span class="portfolio__counter">73</span></a></li>
+                <li class="portfolio__item"><a class="portfolio__link" href="#"><span class="portfolio__description">Рациональное использование природохозяйственных комплексов</span><span class="divider"></span><span class="portfolio__counter">27</span></a></li>
+                <li class="portfolio__item"><a class="portfolio__link" href="#"><span class="portfolio__description">Издательское дело</span><span class="divider"></span><span class="portfolio__counter">21</span></a></li>
+              </ul>
+            </ul>
+          </div>
+          <div class="portfolio-tabs__article tabs__item" id="speciality">
+            <ul class="portfolio__list">
+              <ul class="portfolio__list-wrapper">
+                <li class="portfolio__item"><a class="portfolio__link" href="#"><span class="portfolio__description">Банковское дело</span><span class="divider"></span><span class="portfolio__counter">41</span></a></li>
+                <li class="portfolio__item"><a class="portfolio__link" href="#"><span class="portfolio__description">Гостиничный сервис</span><span class="divider"></span><span class="portfolio__counter">73</span></a></li>
+                <li class="portfolio__item"><a class="portfolio__link" href="#"><span class="portfolio__description">Дизайн (по отраслям)</span><span class="divider"></span><span class="portfolio__counter">27</span></a></li>
+                <li class="portfolio__item"><a class="portfolio__link" href="#"><span class="portfolio__description">Издатльское дело</span><span class="divider"></span><span class="portfolio__counter">21</span></a></li>
+                <li class="portfolio__item"><a class="portfolio__link" href="#"><span class="portfolio__description">Социальная работа</span><span class="divider"></span><span class="portfolio__counter">41</span></a></li>
+                <li class="portfolio__item"><a class="portfolio__link" href="#"><span class="portfolio__description">Страховое дело (по отраслям)</span><span class="divider"></span><span class="portfolio__counter">73</span></a></li>
+                <li class="portfolio__item"><a class="portfolio__link" href="#"><span class="portfolio__description">Туризм</span><span class="divider"></span><span class="portfolio__counter">27</span></a></li>
+                <li class="portfolio__item"><a class="portfolio__link" href="#"><span class="portfolio__description">Экономика и бухгалтерский учет (по отраслям)</span><span class="divider"></span><span class="portfolio__counter">21</span></a></li>
                 <li class="portfolio__item"><a class="portfolio__link" href="#"><span class="portfolio__description">Информационные системы (по отраслям)</span><span class="divider"></span><span class="portfolio__counter">41</span></a></li>
                 <li class="portfolio__item"><a class="portfolio__link" href="#"><span class="portfolio__description">Право и организация социального обеспечения</span><span class="divider"></span><span class="portfolio__counter">73</span></a></li>
                 <li class="portfolio__item"><a class="portfolio__link" href="#"><span class="portfolio__description">Рациональное использование природохозяйственных комплексов</span><span class="divider"></span><span class="portfolio__counter">27</span></a></li>
@@ -343,14 +372,10 @@
                 <li class="portfolio__item"><a class="portfolio__link" href="#"><span class="portfolio__description">Гостиничный сервис</span><span class="divider"></span><span class="portfolio__counter">73</span></a></li>
                 <li class="portfolio__item"><a class="portfolio__link" href="#"><span class="portfolio__description">Дизайн (по отраслям)</span><span class="divider"></span><span class="portfolio__counter">27</span></a></li>
                 <li class="portfolio__item"><a class="portfolio__link" href="#"><span class="portfolio__description">Издатльское дело</span><span class="divider"></span><span class="portfolio__counter">21</span></a></li>
-              </ul>
-              <ul class="portfolio__list-wrapper">
                 <li class="portfolio__item"><a class="portfolio__link" href="#"><span class="portfolio__description">Социальная работа</span><span class="divider"></span><span class="portfolio__counter">41</span></a></li>
                 <li class="portfolio__item"><a class="portfolio__link" href="#"><span class="portfolio__description">Страховое дело (по отраслям)</span><span class="divider"></span><span class="portfolio__counter">73</span></a></li>
                 <li class="portfolio__item"><a class="portfolio__link" href="#"><span class="portfolio__description">Туризм</span><span class="divider"></span><span class="portfolio__counter">27</span></a></li>
                 <li class="portfolio__item"><a class="portfolio__link" href="#"><span class="portfolio__description">Экономика и бухгалтерский учет (по отраслям)</span><span class="divider"></span><span class="portfolio__counter">21</span></a></li>
-              </ul>
-              <ul class="portfolio__list-wrapper">
                 <li class="portfolio__item"><a class="portfolio__link" href="#"><span class="portfolio__description">Информационные системы (по отраслям)</span><span class="divider"></span><span class="portfolio__counter">41</span></a></li>
                 <li class="portfolio__item"><a class="portfolio__link" href="#"><span class="portfolio__description">Право и организация социального обеспечения</span><span class="divider"></span><span class="portfolio__counter">73</span></a></li>
                 <li class="portfolio__item"><a class="portfolio__link" href="#"><span class="portfolio__description">Рациональное использование природохозяйственных комплексов</span><span class="divider"></span><span class="portfolio__counter">27</span></a></li>
@@ -358,21 +383,17 @@
               </ul>
             </ul>
           </div>
-          <div class="portfolio-tabs__article tabs__item" id="graduate">
+          <div class="portfolio-tabs__article tabs__item" id="residency">
             <ul class="portfolio__list">
               <ul class="portfolio__list-wrapper">
                 <li class="portfolio__item"><a class="portfolio__link" href="#"><span class="portfolio__description">Банковское дело</span><span class="divider"></span><span class="portfolio__counter">41</span></a></li>
                 <li class="portfolio__item"><a class="portfolio__link" href="#"><span class="portfolio__description">Гостиничный сервис</span><span class="divider"></span><span class="portfolio__counter">73</span></a></li>
                 <li class="portfolio__item"><a class="portfolio__link" href="#"><span class="portfolio__description">Дизайн (по отраслям)</span><span class="divider"></span><span class="portfolio__counter">27</span></a></li>
                 <li class="portfolio__item"><a class="portfolio__link" href="#"><span class="portfolio__description">Издатльское дело</span><span class="divider"></span><span class="portfolio__counter">21</span></a></li>
-              </ul>
-              <ul class="portfolio__list-wrapper">
                 <li class="portfolio__item"><a class="portfolio__link" href="#"><span class="portfolio__description">Социальная работа</span><span class="divider"></span><span class="portfolio__counter">41</span></a></li>
                 <li class="portfolio__item"><a class="portfolio__link" href="#"><span class="portfolio__description">Страховое дело (по отраслям)</span><span class="divider"></span><span class="portfolio__counter">73</span></a></li>
                 <li class="portfolio__item"><a class="portfolio__link" href="#"><span class="portfolio__description">Туризм</span><span class="divider"></span><span class="portfolio__counter">27</span></a></li>
                 <li class="portfolio__item"><a class="portfolio__link" href="#"><span class="portfolio__description">Экономика и бухгалтерский учет (по отраслям)</span><span class="divider"></span><span class="portfolio__counter">21</span></a></li>
-              </ul>
-              <ul class="portfolio__list-wrapper">
                 <li class="portfolio__item"><a class="portfolio__link" href="#"><span class="portfolio__description">Информационные системы (по отраслям)</span><span class="divider"></span><span class="portfolio__counter">41</span></a></li>
                 <li class="portfolio__item"><a class="portfolio__link" href="#"><span class="portfolio__description">Право и организация социального обеспечения</span><span class="divider"></span><span class="portfolio__counter">73</span></a></li>
                 <li class="portfolio__item"><a class="portfolio__link" href="#"><span class="portfolio__description">Рациональное использование природохозяйственных комплексов</span><span class="divider"></span><span class="portfolio__counter">27</span></a></li>
@@ -461,6 +482,6 @@
         <li class="footer__policy-item"><a class="footer__bugs" href="#">Сообщить об ошибке на сайте</a></li>
       </ul>
     </footer>
-    <script src="js/script.min.js" type="module"></script>
+    <script src="js/script.min.js"></script>
   </body>
 </html>

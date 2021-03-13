@@ -1,5 +1,5 @@
 // modules
-
+import $ from 'jquery';
 import { default as menuToggle } from "./modules/menu.js";
 import { default as datetime } from "./modules/datetime.js";
 import { default as swiper } from "./modules/swipe.js";
@@ -20,40 +20,27 @@ import { default as parallax } from "./modules/parallax.js";
 import { default as tinygesture } from "./modules/tinygesture.js";
 // init modules
 
-window.onload = function () {
-    swiper();
-};
-
+global.jQuery = global.$ = $;
 
 modals();
+
+range();
+menuToggle();
+extrainfo();
+gauge();
+cookie();
+avatar();
+progressbar();
+accordeon();
+parallax();
+
+window.addEventListener('DOMContentLoaded', () => {
+    swiper();
+});
 
 if (document.querySelector(".chart")) {
     chart();
 }
-
-function addElement() {
-    // Создаем новый элемент div
-    // и добавляем в него немного контента
-
-    let footerBar = document.createElement("button");
-    footerBar.classList.add("footer__bar");
-
-    // Добавляем только что созданый элемент в дерево DOM
-
-    document.querySelector("#footer").appendChild(footerBar);
-}
-
-if (document.querySelector(".footer__container").offsetWidth > 768) {
-    document
-        .querySelector(".footer__container")
-        .classList.remove("visually-hidden");
-} else if (document.querySelector(".footer__container").offsetWidth <= 768) {
-    document
-        .querySelector(".footer__container")
-        .classList.add("visually-hidden");
-    addElement();
-}
-
 if (document.querySelector(".footer__bar")) {
     tinygesture();
 }
@@ -61,21 +48,12 @@ tags();
 if (document.querySelector(".js-filter-btn")) {
     filterBtn();
 }
-range();
 if (document.querySelectorAll(".dashboard__menu")) {
     dashboardaccordeon();
 }
-menuToggle();
-extrainfo();
-//slider();
-gauge();
 if (document.querySelector(".tabs__container")) {
     tabs();
 }
-cookie();
-avatar();
-progressbar();
-accordeon();
 
 if (
     document.querySelector(".info__card--schedule") ||
@@ -108,11 +86,11 @@ if (document.querySelector("#iOS")) {
     });
 }
 
-document.querySelector(".page-header__sidebar-toggler").onclick = function () {
+document.querySelector(".page-header__sidebar-toggler").addEventListener('click', () => {
     document
         .querySelector(".dashboard__aside")
         .classList.toggle("dashboard__aside--active");
-};
+});
 
 if (document.querySelector("#fullMenu")) {
     let menuState = document.querySelector("#fullMenu");
@@ -145,43 +123,16 @@ if (document.querySelector("#fullMenu")) {
     });
 }
 
-parallax();
+if (document.querySelectorAll('.scrollbar-custom')) {
+    let scrollbars = document.querySelectorAll('.scrollbar-custom');
 
+    scrollbars.forEach(item => {
+        item.addEventListener('mouseenter', function () {
+            this.classList.add('scrollbar-custom-hover');
+        });
+        item.addEventListener('mouseleave', function () {
+            this.classList.remove('scrollbar-custom-hover');
+        });
+    });
 
-import {
-    $, addClass, removeClass, toggleClass, on
-    , parents, attr, hasClass, find, removeAttr,
-    removeData, html, val, siblings, prop,
-} from './vendor/dom7/dom7.js';
-
-// install methods
-$.fn.addClass = addClass;
-$.fn.removeClass = removeClass;
-$.fn.toggleClass = toggleClass;
-$.fn.on = on;
-$.fn.parents = parents;
-$.fn.attr = attr;
-$.fn.hasClass = hasClass;
-$.fn.find = find;
-$.fn.removeAttr = removeAttr;
-$.fn.removeData = removeData;
-$.fn.html = html;
-$.fn.val = val;
-$.fn.siblings = siblings;
-$.fn.prop = prop;
-
-$('.js-header').addClass('it-is-working!'); //Проверка:))
-
-function backAlert() {
-    let div = document.createElement('div');
-    div.style.position = 'absolute';
-    div.style.display = 'block';
-    div.style.top = '100px';
-    div.style.left = '50%';
-    div.style.width = '200px';
-    div.style.height = '150px';
-    div.innerHTML = `<button id="bb" onclick=document.body.classList.toggle('body--background');>Сделать фон синим</button>`;
-    document.body.append(div);
 }
-
-backAlert();

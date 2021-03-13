@@ -5,8 +5,9 @@
     right: 0;
     z-index: 10;
     background: $c-blue-background;
-    margin-bottom: 24px;
-    @media (max-width: $mobile) {
+    @media (max-width: 768px) {
+        padding-bottom: 0;
+        margin-bottom: 24px;
     }
 }
 
@@ -250,7 +251,7 @@
 
 .page-header__toggler {
     @include btn-reset;
-    width: 27px;
+    min-width: 27px;
     height: 69px;
     background-size: cover;
     position: relative;
@@ -271,7 +272,7 @@
             top: -9px;
         }
         @media (min-width: $tablet) {
-            background: #1740aa url('../img/icons/key.svg') no-repeat 28px center;
+            background: #1740aa url("../img/icons/key.svg") no-repeat 28px center;
             margin-right: 0;
             top: 0;
             &:focus {
@@ -302,7 +303,7 @@
             font-size: 14px;
             line-height: 16px;
             padding: 13px 23px 13px 56px;
-            width: 199px;
+            min-width: 199px;
             height: 42px;
             animation: none;
             background-size: 20px;
@@ -313,7 +314,6 @@
         }
     }
 }
-
 
 @keyframes slideRight {
     from {
@@ -354,19 +354,20 @@
     font-weight: normal;
     font-size: 0;
     display: block;
-    background: url('../img/icons/key.svg') no-repeat center;
+    background: url("../img/icons/key.svg") no-repeat center;
     .page-header--menu-opened & {
         box-shadow: none;
         z-index: 13;
+        width: 100%;
     }
 
     @media (min-width: $tablet) {
         border-radius: 50px;
         font-size: 14px;
         line-height: 16px;
-        background: #1740aa url('../img/icons/key.svg') no-repeat 28px center;
+        background: #1740aa url("../img/icons/key.svg") no-repeat 28px center;
         padding: 13px 23px 13px 56px;
-        width: 199px;
+        min-width: 199px;
         height: 42px;
     }
 }

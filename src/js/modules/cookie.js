@@ -56,7 +56,6 @@ export default () => {
                     );
                 }
 
-                // We're using "expires" because "max-age" is not supported by IE
                 attributes.expires = attributes.expires
                     ? attributes.expires.toUTCString()
                     : "";
@@ -89,13 +88,6 @@ export default () => {
                         continue;
                     }
 
-                    // Considers RFC 6265 section 5.2:
-                    // ...
-                    // 3.  If the remaining unparsed-attributes contains a %x3B (";")
-                    //     character:
-                    // Consume the characters of the unparsed-attributes up to,
-                    // not including, the first %x3B (";") character.
-                    // ...
                     stringifiedAttributes +=
                         "=" + attributes[attributeName].split(";")[0];
                 }
@@ -110,8 +102,7 @@ export default () => {
                 }
 
                 let jar = {};
-                // To prevent the for loop in the first place assign an empty array
-                // in case there are no cookies at all.
+
                 let cookies = document.cookie
                     ? document.cookie.split("; ")
                     : [];

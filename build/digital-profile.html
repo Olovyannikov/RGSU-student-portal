@@ -42,43 +42,43 @@
           </nav>
         </div>
         <div class="page-header__login">
-          <button class="page-header__login-button js-menu-toggler page-header__toggler">Войти на портал</button>
-          <div class="login">
-            <div class="login__navigation">
-              <ul class="login__navigation-list">
-                <li class="login__navigation-item"><a class="js-menu-link js-menu-login" href="#">Мой профиль</a></li>
-                <li class="login__navigation-item"><a class="js-menu-link" href="moderate.html">Модерирование</a></li>
-                <li class="login__navigation-item login__navigation--exit"><a class="js-menu-link page-header__menu-link--exit" href="#">Завершить сеанс</a></li>
-              </ul>
-            </div>
-            <div class="login__modal modal__login">
-              <button class="modal-close js-close-button">Закрыть</button>
-              <h3 class="modal__title">Вход на сайт</h3>
-              <form class="modal__form">
-                <div class="modal__form-group modal__form-group--mail">
-                  <label class="form__label" for="email">Ваш email</label>
-                  <input class="form__input" type="email" id="email" name="email" required="required" placeholder="Укажите адрес электронной почты"/>
-                </div>
-                <div class="modal__form-group modal__form-group--password">
-                  <label class="form__label" for="password">Введите пароль</label>
-                  <input class="modal__form-show" type="checkbox" checked="checked" id="show-password"/>
-                  <label class="modal__control-label modal__control-label--showpassword" for="show-password">
-                    <svg class="modal__checkbox-show" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="32" height="32" title="Показать/скрыть пароль">
-                      <title>Hide/Show Password</title>
-                      <path fill="#c3cad9" d="M24,9A23.654,23.654,0,0,0,2,24a23.633,23.633,0,0,0,44,0A23.643,23.643,0,0,0,24,9Zm0,25A10,10,0,1,1,34,24,10,10,0,0,1,24,34Zm0-16a6,6,0,1,0,6,6A6,6,0,0,0,24,18Z"></path>
-                      <rect class="closed-eye" fill="#c3cad9" x="20.133" y="2.117" height="44" transform="translate(23.536 -8.587) rotate(45)"></rect>
-                      <rect class="closed-eye" x="22" y="3.984" width="4" height="44" transform="translate(25.403 -9.36) rotate(45)" style="fill:#fff"></rect>
-                    </svg>
-                  </label>
-                  <input class="form__input form__input--password" required="required" placeholder="Пароль" id="password" name="password" type="text"/>
-                </div>
+          <button class="js-menu-login page-header__login-button js-menu-toggler page-header__toggler">Войти на портал</button>
+          <div class="login__navigation">
+            <ul class="login__navigation-list">
+              <li class="login__navigation-item"><a class="js-menu-link js-menu-login" href="#">Мой профиль</a></li>
+              <li class="login__navigation-item"><a class="js-menu-link" href="moderate.html">Модерирование</a></li>
+              <li class="login__navigation-item login__navigation--exit"><a class="js-menu-link page-header__menu-link--exit" href="#">Завершить сеанс</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="login">
+          <div class="login__modal modal__login">
+            <button class="modal-close js-close-button">Закрыть</button>
+            <h3 class="modal__title">Вход на сайт</h3>
+            <form class="modal__form">
+              <div class="modal__form-group modal__form-group--mail">
+                <label class="form__label" for="email">Ваш email</label>
+                <input class="form__input" type="email" id="email" name="email" required="required" placeholder="Укажите адрес электронной почты"/>
+              </div>
+              <div class="modal__form-group modal__form-group--password">
+                <label class="form__label" for="password">Введите пароль</label>
+                <input class="modal__form-show" type="checkbox" checked="checked" id="show-password"/>
+                <label class="modal__control-label modal__control-label--showpassword" for="show-password">
+                  <svg class="modal__checkbox-show" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="32" height="32" title="Показать/скрыть пароль">
+                    <title>Hide/Show Password</title>
+                    <path fill="#c3cad9" d="M24,9A23.654,23.654,0,0,0,2,24a23.633,23.633,0,0,0,44,0A23.643,23.643,0,0,0,24,9Zm0,25A10,10,0,1,1,34,24,10,10,0,0,1,24,34Zm0-16a6,6,0,1,0,6,6A6,6,0,0,0,24,18Z"></path>
+                    <rect class="closed-eye" fill="#c3cad9" x="20.133" y="2.117" height="44" transform="translate(23.536 -8.587) rotate(45)"></rect>
+                    <rect class="closed-eye" x="22" y="3.984" width="4" height="44" transform="translate(25.403 -9.36) rotate(45)" style="fill:#fff"></rect>
+                  </svg>
+                </label>
+                <input class="form__input form__input--password" required="required" placeholder="Пароль" id="password" name="password" type="text"/>
                 <div class="modal__buttons">
                   <button class="modal__enter btn btn--blue" type="submit">Войти на сайт</button>
                   <label for="sberID">Если подключен</label>
                   <button class="modal__sber btn btn--green" id="sberID" type="submit">Сбер ID</button>
                 </div>
-              </form>
-            </div>
+              </div>
+            </form>
           </div>
         </div>
       </div>
@@ -195,8 +195,8 @@
               <p class="about__description">Активист, тим-лидер, организатор, интересуюсь наставничеством, историей, искусством, философией.</p>
               <h3 class="extra-info__card-title title">Знание языков</h3>
               <ul class="extra-info__card-languages languages">
-                <li class="languages__item">🇩🇪 Немецкий</li>
-                <li class="languages__item">🇪🇸 Испанский</li>
+                <li class="languages__item">Немецкий<span class="flag-DE"></span></li>
+                <li class="languages__item">Испанский<span class="flag-ES"></span></li>
               </ul>
             </article>
             <article class="extra-info__card extra-info__card-reccomendations reccomendations card--stack scrollbar-custom">
@@ -1311,9 +1311,7 @@
               <article class="portfolio-cards card">
                 <div class="card__progress">
                   <div class="progress--circle" data-progress="75">
-                    <picture class="card__avatar">
-                      <source srcset="img/card-avatar-1.webp" type="image/webp"/><img src="img/card-avatar-1.png" alt="Мария Владимировна Н."/>
-                    </picture>
+                    <picture class="card__avatar"><img max-width="130" loading="lazy" src="img/card-avatar-1.png" alt="Мария Владимировна Н."/></picture>
                   </div>
                 </div>
                 <p class="card__name">Мария Владимировна Н.</p>
@@ -1338,9 +1336,7 @@
               <article class="portfolio-cards card">
                 <div class="card__progress">
                   <div class="progress--circle" data-progress="15">
-                    <picture class="card__avatar">
-                      <source srcset="img/card-avatar-2.webp" type="image/webp"/><img src="img/card-avatar-2.png" alt="Анастасия Олеговна Б."/>
-                    </picture>
+                    <picture class="card__avatar"><img max-width="130" loading="lazy" src="img/card-avatar-2.png" alt="Анастасия Олеговна Б."/></picture>
                   </div>
                 </div>
                 <p class="card__name">Анастасия Олеговна Б.</p>
@@ -1360,9 +1356,7 @@
               <article class="portfolio-cards card">
                 <div class="card__progress">
                   <div class="progress--circle" data-progress="85">
-                    <picture class="card__avatar">
-                      <source srcset="img/card-avatar-3.webp" type="image/webp"/><img src="img/card-avatar-3.png" alt="Родион Нугзарович К."/>
-                    </picture>
+                    <picture class="card__avatar"><img max-width="130" loading="lazy" src="img/card-avatar-3.png" alt="Родион Нугзарович К."/></picture>
                   </div>
                 </div>
                 <p class="card__name">Родион Нугзарович К.</p>
@@ -1386,16 +1380,14 @@
               </article></a><a href="digital-profile.html">
               <article class="portfolio-cards card">
                 <div class="card__progress">
-                  <div class="progress--circle" data-progress="100">
-                    <picture class="card__avatar">
-                      <source srcset="img/card-avatar-4.webp" type="image/webp"/><img src="img/card-avatar-4.png" alt="Мария Владимировна Н."/>
-                    </picture>
+                  <div class="progress--circle" data-progress="3">
+                    <picture class="card__avatar"><img max-width="130" loading="lazy" src="img/card-avatar-4.webp" alt="card-avatar-4.png"/></picture>
                   </div>
                 </div>
-                <p class="card__name">Мария Владимировна Н.</p>
-                <p class="card__faculty">Факультет искусств</p>
-                <p class="card__education">Педагогическое образование</p>
-                <p class="card__info"><span class="card__info-age">Возраст: 23</span><span class="card__info-course">3 курс</span></p>
+                <p class="card__name">card-avatar-4.png</p>
+                <p class="card__faculty">Мария Владимировна Н.</p>
+                <p class="card__education">Факультет искусств</p>
+                <p class="card__info"><span class="card__info-age">Возраст: Педагогическое образование</span><span class="card__info-course">23 курс</span></p>
                 <div class="card__achievements achievements">
                   <ul class="achievements__list">
                     <li class="achievement achievement--handshake">Достижение: Рукопожатие
@@ -1472,6 +1464,6 @@
         <li class="footer__policy-item"><a class="footer__bugs" href="#">Сообщить об ошибке на сайте</a></li>
       </ul>
     </footer>
-    <script src="js/script.min.js" type="module"></script>
+    <script src="js/script.min.js"></script>
   </body>
 </html>

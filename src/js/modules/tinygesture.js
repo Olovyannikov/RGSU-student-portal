@@ -2,8 +2,6 @@ import TinyGesture from "tinygesture";
 export default () => {
 
     const options = {
-        // Used to calculate the threshold to consider a movement a swipe. it is
-        // passed type of 'x' or 'y'.
         threshold: (type, self) =>
             Math.max(
                 0.01,
@@ -14,11 +12,7 @@ export default () => {
                             : window.innerHeight || document.body.clientHeight)
                 )
             ),
-        // Minimum velocity the gesture must be moving when the gesture ends to be
-        // considered a swipe.
         velocityThreshold: 1,
-        // Used to calculate the distance threshold to ignore the gestures velocity
-        // and always consider it a swipe.
         disregardVelocityThreshold: (type, self) =>
             Math.floor(
                 0.5 *
@@ -26,17 +20,9 @@ export default () => {
                         ? self.element.clientWidth
                         : self.element.clientHeight)
             ),
-        // Point at which the pointer moved too much to consider it a tap or longpress
-        // gesture.
         pressThreshold: 8,
-        // If true, swiping in a diagonal direction will fire both a horizontal and a
-        // vertical swipe.
-        // If false, whichever direction the pointer moved more will be the only swipe
-        // fired.
         diagonalSwipes: false,
-        // The degree limit to consider a swipe when diagonalSwipes is true.
         diagonalLimit: Math.tan(((45 * 1.5) / 180) * Math.PI),
-        // Listen to mouse events in addition to touch events. (For desktop support.)
         mouseSupport: true,
     };
 
@@ -60,7 +46,6 @@ export default () => {
         }
         gesture.animationFrame = window.requestAnimationFrame(() => {
 
-            // const zDistance = -(Math.sqrt(Math.pow(gesture.touchMoveX, 2) + Math.pow(gesture.touchMoveY, 2)))+'px';
             target.style.transition = "background-color ease .3s";
             target.style.transform =
                 "perspective(200px) translate3d(" +
@@ -100,5 +85,28 @@ export default () => {
     });
     if(!document.querySelector('.footer__container').classList.contains('visually-hidden')) {
         document.querySelector('.footer__policy').style.order = '-1';
+    }
+
+    function addElement() {
+        // Создаем новый элемент div
+        // и добавляем в него немного контента
+
+        let footerBar = document.createElement("button");
+        footerBar.classList.add("footer__bar");
+
+        // Добавляем только что созданый элемент в дерево DOM
+
+        document.querySelector("#footer").appendChild(footerBar);
+    }
+
+    if (window.matchMedia("(max-width: 768px)").matches) {
+        document
+            .querySelector(".footer__container")
+            .classList.remove("visually-hidden");
+    } else {
+        document
+            .querySelector(".footer__container")
+            .classList.add("visually-hidden");
+        addElement();
     }
 };

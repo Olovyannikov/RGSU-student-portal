@@ -384,6 +384,1298 @@ template {
   display: none;
 }
 
+.flag-NOWHERE,
+.flag-ABKHAZIA,
+.flag-AD,
+.flag-AE,
+.flag-AF,
+.flag-AG,
+.flag-AI,
+.flag-AL,
+.flag-AM,
+.flag-AN,
+.flag-AO,
+.flag-AQ,
+.flag-AR,
+.flag-AS,
+.flag-AT,
+.flag-AU,
+.flag-AW,
+.flag-AX,
+.flag-AZ,
+.flag-BA,
+.flag-BB,
+.flag-BD,
+.flag-BE,
+.flag-BF,
+.flag-BG,
+.flag-BH,
+.flag-BI,
+.flag-BJ,
+.flag-BL,
+.flag-BM,
+.flag-BN,
+.flag-BO,
+.flag-BR,
+.flag-BS,
+.flag-BT,
+.flag-BV,
+.flag-BW,
+.flag-BY,
+.flag-BZ,
+.flag-CA,
+.flag-CC,
+.flag-CD,
+.flag-CF,
+.flag-CG,
+.flag-CH,
+.flag-CI,
+.flag-CK,
+.flag-CL,
+.flag-CM,
+.flag-CN,
+.flag-CO,
+.flag-CR,
+.flag-CU,
+.flag-CV,
+.flag-CX,
+.flag-CY,
+.flag-CZ,
+.flag-DE,
+.flag-DJ,
+.flag-DK,
+.flag-DM,
+.flag-DO,
+.flag-DZ,
+.flag-EC,
+.flag-EE,
+.flag-EG,
+.flag-EH,
+.flag-ER,
+.flag-ES-CE,
+.flag-ES-ML,
+.flag-ES,
+.flag-ET,
+.flag-EU,
+.flag-FI,
+.flag-FJ,
+.flag-FK,
+.flag-FM,
+.flag-FO,
+.flag-FR,
+.flag-GA,
+.flag-GB,
+.flag-GD,
+.flag-GE,
+.flag-GF,
+.flag-GG,
+.flag-GH,
+.flag-GI,
+.flag-GL,
+.flag-GM,
+.flag-GN,
+.flag-GP,
+.flag-GQ,
+.flag-GR,
+.flag-GS,
+.flag-GT,
+.flag-GU,
+.flag-GW,
+.flag-GY,
+.flag-HK,
+.flag-HM,
+.flag-HN,
+.flag-HR,
+.flag-HT,
+.flag-HU,
+.flag-IC,
+.flag-ID,
+.flag-IE,
+.flag-IL,
+.flag-IM,
+.flag-IN,
+.flag-IO,
+.flag-IQ,
+.flag-IR,
+.flag-IS,
+.flag-IT,
+.flag-JE,
+.flag-JM,
+.flag-JO,
+.flag-JP,
+.flag-KE,
+.flag-KG,
+.flag-KH,
+.flag-KI,
+.flag-KM,
+.flag-KN,
+.flag-KOSOVO,
+.flag-KP,
+.flag-KR,
+.flag-KW,
+.flag-KY,
+.flag-KZ,
+.flag-LA,
+.flag-LB,
+.flag-LC,
+.flag-LI,
+.flag-LK,
+.flag-LR,
+.flag-LS,
+.flag-LT,
+.flag-LU,
+.flag-LV,
+.flag-LY,
+.flag-MA,
+.flag-MC,
+.flag-MD,
+.flag-ME,
+.flag-MF,
+.flag-MG,
+.flag-MH,
+.flag-MK,
+.flag-ML,
+.flag-MM,
+.flag-MN,
+.flag-MO,
+.flag-MP,
+.flag-MQ,
+.flag-MR,
+.flag-MS,
+.flag-MT,
+.flag-MU,
+.flag-MV,
+.flag-MW,
+.flag-MX,
+.flag-MY,
+.flag-MZ,
+.flag-NA,
+.flag-NC,
+.flag-NE,
+.flag-NF,
+.flag-NG,
+.flag-NI,
+.flag-NKR,
+.flag-NL,
+.flag-NO,
+.flag-NP,
+.flag-NR,
+.flag-NU,
+.flag-NZ,
+.flag-OM,
+.flag-PA,
+.flag-PE,
+.flag-PF,
+.flag-PG,
+.flag-PH,
+.flag-PK,
+.flag-PL,
+.flag-PM,
+.flag-PN,
+.flag-PR,
+.flag-PS,
+.flag-PT,
+.flag-PW,
+.flag-PY,
+.flag-QA,
+.flag-RE,
+.flag-RO,
+.flag-RS,
+.flag-RU,
+.flag-RW,
+.flag-SA,
+.flag-SB,
+.flag-SC,
+.flag-SD,
+.flag-SE,
+.flag-SG,
+.flag-SH,
+.flag-SI,
+.flag-SJ,
+.flag-SK,
+.flag-SL,
+.flag-SM,
+.flag-SN,
+.flag-SO,
+.flag-SOUTH-OSSETIA,
+.flag-SR,
+.flag-SS,
+.flag-ST,
+.flag-SV,
+.flag-SY,
+.flag-SZ,
+.flag-TC,
+.flag-TD,
+.flag-TF,
+.flag-TG,
+.flag-TH,
+.flag-TJ,
+.flag-TK,
+.flag-TL,
+.flag-TM,
+.flag-TN,
+.flag-TO,
+.flag-TR,
+.flag-TT,
+.flag-TV,
+.flag-TW,
+.flag-TZ,
+.flag-UA,
+.flag-UG,
+.flag-UM,
+.flag-US,
+.flag-UY,
+.flag-UZ,
+.flag-VA,
+.flag-VC,
+.flag-VE,
+.flag-VG,
+.flag-VI,
+.flag-VN,
+.flag-VU,
+.flag-WF,
+.flag-WS,
+.flag-YE,
+.flag-YT,
+.flag-ZA,
+.flag-ZM,
+.flag-ZW {
+  background: url("../img/flags.png") no-repeat 0 9px;
+  display: -moz-inline-box;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  vertical-align: baseline;
+  position: relative;
+  overflow: hidden;
+  width: 16px;
+  height: 9px;
+  font-size: 0;
+  line-height: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.flag-ABKHAZIA {
+  background-position: 0 0px;
+}
+
+.flag-AD {
+  background-position: 0 0px;
+}
+
+.flag-AE {
+  background-position: 0 0px;
+}
+
+.flag-AF {
+  background-position: 0 0px;
+}
+
+.flag-AG {
+  background-position: 0 0px;
+}
+
+.flag-AI {
+  background-position: 0 0px;
+}
+
+.flag-AL {
+  background-position: 0 0px;
+}
+
+.flag-AM {
+  background-position: 0 0px;
+}
+
+.flag-AN {
+  background-position: 0 0px;
+}
+
+.flag-AO {
+  background-position: 0 0px;
+}
+
+.flag-AQ {
+  background-position: 0 0px;
+}
+
+.flag-AR {
+  background-position: 0 0px;
+}
+
+.flag-AS {
+  background-position: 0 0px;
+}
+
+.flag-AT {
+  background-position: 0 0px;
+}
+
+.flag-AU {
+  background-position: 0 0px;
+}
+
+.flag-AW {
+  background-position: 0 0px;
+}
+
+.flag-AX {
+  background-position: 0 0px;
+}
+
+.flag-AZ {
+  background-position: 0 0px;
+}
+
+.flag-BA {
+  background-position: 0 0px;
+}
+
+.flag-BB {
+  background-position: 0 0px;
+}
+
+.flag-BD {
+  background-position: 0 0px;
+}
+
+.flag-BE {
+  background-position: 0 0px;
+}
+
+.flag-BF {
+  background-position: 0 0px;
+}
+
+.flag-BG {
+  background-position: 0 0px;
+}
+
+.flag-BH {
+  background-position: 0 0px;
+}
+
+.flag-BI {
+  background-position: 0 0px;
+}
+
+.flag-BJ {
+  background-position: 0 0px;
+}
+
+.flag-BL {
+  background-position: 0 0px;
+}
+
+.flag-BM {
+  background-position: 0 0px;
+}
+
+.flag-BN {
+  background-position: 0 0px;
+}
+
+.flag-BO {
+  background-position: 0 0px;
+}
+
+.flag-BR {
+  background-position: 0 0px;
+}
+
+.flag-BS {
+  background-position: 0 0px;
+}
+
+.flag-BT {
+  background-position: 0 0px;
+}
+
+.flag-BV {
+  background-position: 0 0px;
+}
+
+.flag-BW {
+  background-position: 0 0px;
+}
+
+.flag-BY {
+  background-position: 0 0px;
+}
+
+.flag-BZ {
+  background-position: 0 0px;
+}
+
+.flag-CA {
+  background-position: 0 0px;
+}
+
+.flag-CC {
+  background-position: 0 0px;
+}
+
+.flag-CD {
+  background-position: 0 0px;
+}
+
+.flag-CF {
+  background-position: 0 0px;
+}
+
+.flag-CG {
+  background-position: 0 0px;
+}
+
+.flag-CH {
+  background-position: 0 0px;
+}
+
+.flag-CI {
+  background-position: 0 0px;
+}
+
+.flag-CK {
+  background-position: 0 0px;
+}
+
+.flag-CL {
+  background-position: 0 0px;
+}
+
+.flag-CM {
+  background-position: 0 0px;
+}
+
+.flag-CN {
+  background-position: 0 0px;
+}
+
+.flag-CO {
+  background-position: 0 0px;
+}
+
+.flag-CR {
+  background-position: 0 0px;
+}
+
+.flag-CU {
+  background-position: 0 0px;
+}
+
+.flag-CV {
+  background-position: 0 0px;
+}
+
+.flag-CX {
+  background-position: 0 0px;
+}
+
+.flag-CY {
+  background-position: 0 0px;
+}
+
+.flag-CZ {
+  background-position: 0 0px;
+}
+
+.flag-DE {
+  background-position: 0 0px;
+}
+
+.flag-DJ {
+  background-position: 0 0px;
+}
+
+.flag-DK {
+  background-position: 0 0px;
+}
+
+.flag-DM {
+  background-position: 0 0px;
+}
+
+.flag-DO {
+  background-position: 0 0px;
+}
+
+.flag-DZ {
+  background-position: 0 0px;
+}
+
+.flag-EC {
+  background-position: 0 0px;
+}
+
+.flag-EE {
+  background-position: 0 0px;
+}
+
+.flag-EG {
+  background-position: 0 0px;
+}
+
+.flag-EH {
+  background-position: 0 0px;
+}
+
+.flag-ER {
+  background-position: 0 0px;
+}
+
+.flag-ES-CE {
+  background-position: 0 0px;
+}
+
+.flag-ES-ML {
+  background-position: 0 0px;
+}
+
+.flag-ES {
+  background-position: 0 0px;
+}
+
+.flag-ET {
+  background-position: 0 0px;
+}
+
+.flag-EU {
+  background-position: 0 0px;
+}
+
+.flag-FI {
+  background-position: 0 0px;
+}
+
+.flag-FJ {
+  background-position: 0 0px;
+}
+
+.flag-FK {
+  background-position: 0 0px;
+}
+
+.flag-FM {
+  background-position: 0 0px;
+}
+
+.flag-FO {
+  background-position: 0 0px;
+}
+
+.flag-FR {
+  background-position: 0 0px;
+}
+
+.flag-GA {
+  background-position: 0 0px;
+}
+
+.flag-GB {
+  background-position: 0 0px;
+}
+
+.flag-GD {
+  background-position: 0 0px;
+}
+
+.flag-GE {
+  background-position: 0 0px;
+}
+
+.flag-GF {
+  background-position: 0 0px;
+}
+
+.flag-GG {
+  background-position: 0 0px;
+}
+
+.flag-GH {
+  background-position: 0 0px;
+}
+
+.flag-GI {
+  background-position: 0 0px;
+}
+
+.flag-GL {
+  background-position: 0 0px;
+}
+
+.flag-GM {
+  background-position: 0 0px;
+}
+
+.flag-GN {
+  background-position: 0 0px;
+}
+
+.flag-GP {
+  background-position: 0 0px;
+}
+
+.flag-GQ {
+  background-position: 0 0px;
+}
+
+.flag-GR {
+  background-position: 0 0px;
+}
+
+.flag-GS {
+  background-position: 0 0px;
+}
+
+.flag-GT {
+  background-position: 0 0px;
+}
+
+.flag-GU {
+  background-position: 0 0px;
+}
+
+.flag-GW {
+  background-position: 0 0px;
+}
+
+.flag-GY {
+  background-position: 0 0px;
+}
+
+.flag-HK {
+  background-position: 0 0px;
+}
+
+.flag-HM {
+  background-position: 0 0px;
+}
+
+.flag-HN {
+  background-position: 0 0px;
+}
+
+.flag-HR {
+  background-position: 0 0px;
+}
+
+.flag-HT {
+  background-position: 0 0px;
+}
+
+.flag-HU {
+  background-position: 0 0px;
+}
+
+.flag-IC {
+  background-position: 0 0px;
+}
+
+.flag-ID {
+  background-position: 0 0px;
+}
+
+.flag-IE {
+  background-position: 0 0px;
+}
+
+.flag-IL {
+  background-position: 0 0px;
+}
+
+.flag-IM {
+  background-position: 0 0px;
+}
+
+.flag-IN {
+  background-position: 0 0px;
+}
+
+.flag-IO {
+  background-position: 0 0px;
+}
+
+.flag-IQ {
+  background-position: 0 0px;
+}
+
+.flag-IR {
+  background-position: 0 0px;
+}
+
+.flag-IS {
+  background-position: 0 0px;
+}
+
+.flag-IT {
+  background-position: 0 0px;
+}
+
+.flag-JE {
+  background-position: 0 0px;
+}
+
+.flag-JM {
+  background-position: 0 0px;
+}
+
+.flag-JO {
+  background-position: 0 0px;
+}
+
+.flag-JP {
+  background-position: 0 0px;
+}
+
+.flag-KE {
+  background-position: 0 0px;
+}
+
+.flag-KG {
+  background-position: 0 0px;
+}
+
+.flag-KH {
+  background-position: 0 0px;
+}
+
+.flag-KI {
+  background-position: 0 0px;
+}
+
+.flag-KM {
+  background-position: 0 0px;
+}
+
+.flag-KN {
+  background-position: 0 0px;
+}
+
+.flag-KOSOVO {
+  background-position: 0 0px;
+}
+
+.flag-KP {
+  background-position: 0 0px;
+}
+
+.flag-KR {
+  background-position: 0 0px;
+}
+
+.flag-KW {
+  background-position: 0 0px;
+}
+
+.flag-KY {
+  background-position: 0 0px;
+}
+
+.flag-KZ {
+  background-position: 0 0px;
+}
+
+.flag-LA {
+  background-position: 0 0px;
+}
+
+.flag-LB {
+  background-position: 0 0px;
+}
+
+.flag-LC {
+  background-position: 0 0px;
+}
+
+.flag-LI {
+  background-position: 0 0px;
+}
+
+.flag-LK {
+  background-position: 0 0px;
+}
+
+.flag-LR {
+  background-position: 0 0px;
+}
+
+.flag-LS {
+  background-position: 0 0px;
+}
+
+.flag-LT {
+  background-position: 0 0px;
+}
+
+.flag-LU {
+  background-position: 0 0px;
+}
+
+.flag-LV {
+  background-position: 0 0px;
+}
+
+.flag-LY {
+  background-position: 0 0px;
+}
+
+.flag-MA {
+  background-position: 0 0px;
+}
+
+.flag-MC {
+  background-position: 0 0px;
+}
+
+.flag-MD {
+  background-position: 0 0px;
+}
+
+.flag-ME {
+  background-position: 0 0px;
+}
+
+.flag-MF {
+  background-position: 0 0px;
+}
+
+.flag-MG {
+  background-position: 0 0px;
+}
+
+.flag-MH {
+  background-position: 0 0px;
+}
+
+.flag-MK {
+  background-position: 0 0px;
+}
+
+.flag-ML {
+  background-position: 0 0px;
+}
+
+.flag-MM {
+  background-position: 0 0px;
+}
+
+.flag-MN {
+  background-position: 0 0px;
+}
+
+.flag-MO {
+  background-position: 0 0px;
+}
+
+.flag-MP {
+  background-position: 0 0px;
+}
+
+.flag-MQ {
+  background-position: 0 0px;
+}
+
+.flag-MR {
+  background-position: 0 0px;
+}
+
+.flag-MS {
+  background-position: 0 0px;
+}
+
+.flag-MT {
+  background-position: 0 0px;
+}
+
+.flag-MU {
+  background-position: 0 0px;
+}
+
+.flag-MV {
+  background-position: 0 0px;
+}
+
+.flag-MW {
+  background-position: 0 0px;
+}
+
+.flag-MX {
+  background-position: 0 0px;
+}
+
+.flag-MY {
+  background-position: 0 0px;
+}
+
+.flag-MZ {
+  background-position: 0 0px;
+}
+
+.flag-NA {
+  background-position: 0 0px;
+}
+
+.flag-NC {
+  background-position: 0 0px;
+}
+
+.flag-NE {
+  background-position: 0 0px;
+}
+
+.flag-NF {
+  background-position: 0 0px;
+}
+
+.flag-NG {
+  background-position: 0 0px;
+}
+
+.flag-NI {
+  background-position: 0 0px;
+}
+
+.flag-NKR {
+  background-position: 0 0px;
+}
+
+.flag-NL {
+  background-position: 0 0px;
+}
+
+.flag-NO {
+  background-position: 0 0px;
+}
+
+.flag-NP {
+  background-position: 0 0px;
+}
+
+.flag-NR {
+  background-position: 0 0px;
+}
+
+.flag-NU {
+  background-position: 0 0px;
+}
+
+.flag-NZ {
+  background-position: 0 0px;
+}
+
+.flag-OM {
+  background-position: 0 0px;
+}
+
+.flag-PA {
+  background-position: 0 0px;
+}
+
+.flag-PE {
+  background-position: 0 0px;
+}
+
+.flag-PF {
+  background-position: 0 0px;
+}
+
+.flag-PG {
+  background-position: 0 0px;
+}
+
+.flag-PH {
+  background-position: 0 0px;
+}
+
+.flag-PK {
+  background-position: 0 0px;
+}
+
+.flag-PL {
+  background-position: 0 0px;
+}
+
+.flag-PM {
+  background-position: 0 0px;
+}
+
+.flag-PN {
+  background-position: 0 0px;
+}
+
+.flag-PR {
+  background-position: 0 0px;
+}
+
+.flag-PS {
+  background-position: 0 0px;
+}
+
+.flag-PT {
+  background-position: 0 0px;
+}
+
+.flag-PW {
+  background-position: 0 0px;
+}
+
+.flag-PY {
+  background-position: 0 0px;
+}
+
+.flag-QA {
+  background-position: 0 0px;
+}
+
+.flag-RE {
+  background-position: 0 0px;
+}
+
+.flag-RO {
+  background-position: 0 0px;
+}
+
+.flag-RS {
+  background-position: 0 0px;
+}
+
+.flag-RU {
+  background-position: 0 0px;
+}
+
+.flag-RW {
+  background-position: 0 0px;
+}
+
+.flag-SA {
+  background-position: 0 0px;
+}
+
+.flag-SB {
+  background-position: 0 0px;
+}
+
+.flag-SC {
+  background-position: 0 0px;
+}
+
+.flag-SD {
+  background-position: 0 0px;
+}
+
+.flag-SE {
+  background-position: 0 0px;
+}
+
+.flag-SG {
+  background-position: 0 0px;
+}
+
+.flag-SH {
+  background-position: 0 0px;
+}
+
+.flag-SI {
+  background-position: 0 0px;
+}
+
+.flag-SJ {
+  background-position: 0 0px;
+}
+
+.flag-SK {
+  background-position: 0 0px;
+}
+
+.flag-SL {
+  background-position: 0 0px;
+}
+
+.flag-SM {
+  background-position: 0 0px;
+}
+
+.flag-SN {
+  background-position: 0 0px;
+}
+
+.flag-SO {
+  background-position: 0 0px;
+}
+
+.flag-SOUTH-OSSETIA {
+  background-position: 0 0px;
+}
+
+.flag-SR {
+  background-position: 0 0px;
+}
+
+.flag-SS {
+  background-position: 0 0px;
+}
+
+.flag-ST {
+  background-position: 0 0px;
+}
+
+.flag-SV {
+  background-position: 0 0px;
+}
+
+.flag-SY {
+  background-position: 0 0px;
+}
+
+.flag-SZ {
+  background-position: 0 0px;
+}
+
+.flag-TC {
+  background-position: 0 0px;
+}
+
+.flag-TD {
+  background-position: 0 0px;
+}
+
+.flag-TF {
+  background-position: 0 0px;
+}
+
+.flag-TG {
+  background-position: 0 0px;
+}
+
+.flag-TH {
+  background-position: 0 0px;
+}
+
+.flag-TJ {
+  background-position: 0 0px;
+}
+
+.flag-TK {
+  background-position: 0 0px;
+}
+
+.flag-TL {
+  background-position: 0 0px;
+}
+
+.flag-TM {
+  background-position: 0 0px;
+}
+
+.flag-TN {
+  background-position: 0 0px;
+}
+
+.flag-TO {
+  background-position: 0 0px;
+}
+
+.flag-TR {
+  background-position: 0 0px;
+}
+
+.flag-TT {
+  background-position: 0 0px;
+}
+
+.flag-TV {
+  background-position: 0 0px;
+}
+
+.flag-TW {
+  background-position: 0 0px;
+}
+
+.flag-TZ {
+  background-position: 0 0px;
+}
+
+.flag-UA {
+  background-position: 0 0px;
+}
+
+.flag-UG {
+  background-position: 0 0px;
+}
+
+.flag-UM {
+  background-position: 0 0px;
+}
+
+.flag-US {
+  background-position: 0 0px;
+}
+
+.flag-UY {
+  background-position: 0 0px;
+}
+
+.flag-UZ {
+  background-position: 0 0px;
+}
+
+.flag-VA {
+  background-position: 0 0px;
+}
+
+.flag-VC {
+  background-position: 0 0px;
+}
+
+.flag-VE {
+  background-position: 0 0px;
+}
+
+.flag-VG {
+  background-position: 0 0px;
+}
+
+.flag-VI {
+  background-position: 0 0px;
+}
+
+.flag-VN {
+  background-position: 0 0px;
+}
+
+.flag-VU {
+  background-position: 0 0px;
+}
+
+.flag-WF {
+  background-position: 0 0px;
+}
+
+.flag-WS {
+  background-position: 0 0px;
+}
+
+.flag-YE {
+  background-position: 0 0px;
+}
+
+.flag-YT {
+  background-position: 0 0px;
+}
+
+.flag-ZA {
+  background-position: 0 0px;
+}
+
+.flag-ZM {
+  background-position: 0 0px;
+}
+
+.flag-ZW {
+  background-position: 0 0px;
+}
+
 :root {
   --swiper-theme-color: #007aff;
 }
@@ -824,12 +2116,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.body--background {
-  background: -webkit-gradient(linear, left top, right top, from(#3464e0), to(#2955c9));
-  background: -o-linear-gradient(left, #3464e0 0%, #2955c9 100%);
-  background: linear-gradient(90deg, #3464e0 0%, #2955c9 100%);
-}
-
 a {
   text-decoration: none;
   color: #444444;
@@ -907,6 +2193,15 @@ img {
 
 .scrollbar-custom > *::-webkit-scrollbar {
   width: 2px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  background-color: #f1f4f9;
+}
+
+.scrollbar-custom-hover > *::-webkit-scrollbar {
+  width: 4px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
   background-color: #f1f4f9;
 }
 
@@ -974,18 +2269,18 @@ input:not([type="range"]):focus {
 }
 
 input:not([type="range"]):hover:invalid:not(:-moz-placeholder-shown), input:not([type="range"]):focus:invalid:not(:-moz-placeholder-shown) {
-  border-color: #E06364;
+  border-color: #e06364;
   box-shadow: 0 0 0 2px rgba(224, 99, 100, 0.5);
 }
 
 input:not([type="range"]):hover:invalid:not(:-ms-input-placeholder), input:not([type="range"]):focus:invalid:not(:-ms-input-placeholder) {
-  border-color: #E06364;
+  border-color: #e06364;
   box-shadow: 0 0 0 2px rgba(224, 99, 100, 0.5);
 }
 
 input:not([type="range"]):hover:invalid:not(:placeholder-shown),
 input:not([type="range"]):focus:invalid:not(:placeholder-shown) {
-  border-color: #E06364;
+  border-color: #e06364;
   -webkit-box-shadow: 0 0 0 2px rgba(224, 99, 100, 0.5);
           box-shadow: 0 0 0 2px rgba(224, 99, 100, 0.5);
 }
@@ -1467,7 +2762,7 @@ textarea:hover {
 }
 
 .tabs__button {
-  margin: 0 30px 30px 0;
+  margin-bottom: 10px;
   background: 0 0;
   border: 1px solid #e4ecfa;
   cursor: pointer;
@@ -1957,7 +3252,6 @@ textarea:hover {
   background: -webkit-gradient(linear, left top, right top, from(#3464e0), to(#2955c9));
   background: -o-linear-gradient(left, #3464e0 0%, #2955c9 100%);
   background: linear-gradient(90deg, #3464e0 0%, #2955c9 100%);
-  margin-bottom: 24px;
 }
 
 .page-header__wrapper {
@@ -2166,7 +3460,7 @@ textarea:hover {
   border: none;
   cursor: pointer;
   outline: none;
-  width: 27px;
+  min-width: 27px;
   height: 69px;
   background-size: cover;
   position: relative;
@@ -2286,6 +3580,7 @@ textarea:hover {
   -webkit-box-shadow: none;
           box-shadow: none;
   z-index: 13;
+  width: 100%;
 }
 
 .page-header__menu {
@@ -2314,6 +3609,11 @@ textarea:hover {
 
 .page-header--menu-opened .page-header__login {
   padding-left: 0;
+}
+
+.login {
+  width: 100%;
+  position: absolute;
 }
 
 .login__modal {
@@ -2992,9 +4292,9 @@ textarea:hover {
 
 .footer__message-list {
   max-width: 310px;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-column-gap: 10px;
+     -moz-column-gap: 10px;
+          column-gap: 10px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
@@ -3145,8 +4445,12 @@ textarea:hover {
 }
 
 .enter {
-  margin-bottom: 32px;
+  padding-bottom: 32px;
+  padding-top: 37px;
   display: none;
+  background: -webkit-gradient(linear, left top, right top, from(#3464e0), to(#2955c9));
+  background: -o-linear-gradient(left, #3464e0 0%, #2955c9 100%);
+  background: linear-gradient(90deg, #3464e0 0%, #2955c9 100%);
 }
 
 .enter__wrapper {
@@ -3191,6 +4495,10 @@ textarea:hover {
   left: 37px;
   color: #ffffff;
   margin: 0;
+}
+
+.info {
+  position: relative;
 }
 
 .info-container {
@@ -4469,7 +5777,7 @@ textarea:hover {
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
-  margin-bottom: 42px;
+  margin-bottom: 20px;
 }
 
 .portfolio-tabs__header .divider {
@@ -4483,17 +5791,18 @@ textarea:hover {
 .portfolio-tabs__buttons {
   margin: 0 auto;
   width: 100%;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .portfolio-tabs__button {
+  width: 100%;
   border-radius: 50px;
   font-style: normal;
   font-weight: normal;
@@ -4501,7 +5810,6 @@ textarea:hover {
   font-size: 16px;
   line-height: 26px;
   text-transform: unset;
-  width: 145px;
 }
 
 .portfolio-tabs__button--active {
@@ -4547,6 +5855,9 @@ textarea:hover {
 }
 
 .portfolio__counter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   font-style: normal;
   font-weight: normal;
   font-size: 12px;
@@ -4554,7 +5865,14 @@ textarea:hover {
   color: #6e7781;
   background: #f1f4f9;
   border-radius: 50%;
-  padding: 1px 9px;
+  min-width: 28px;
+  min-height: 28px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .portfolio__link {
@@ -4564,6 +5882,9 @@ textarea:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   color: #444444;
   -webkit-transition: 0.2s;
   -o-transition: 0.2s;
@@ -4585,6 +5906,7 @@ textarea:hover {
 
 .portfolio__item {
   background-color: #fff;
+  margin-bottom: 10px;
 }
 
 .portfolio__list-wrapper {
@@ -4604,7 +5926,12 @@ textarea:hover {
           justify-content: space-between;
   height: auto;
   white-space: nowrap;
-  gap: 10px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.portfolio__list-wrapper .divider {
+  display: none;
 }
 
 .partners__title {
@@ -4696,6 +6023,28 @@ textarea:hover {
       flex-wrap: wrap;
 }
 
+.portfolio-cards__wrapper {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 23px;
+}
+
+.portfolio-cards__wrapper > a {
+  width: 100%;
+  display: block;
+}
+
+.portfolio-cards__wrapper > a .card {
+  width: 100%;
+}
+
 .portfolio-cards__header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4704,7 +6053,10 @@ textarea:hover {
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
-  margin-bottom: 25px;
+  -webkit-box-ordinal-group: 1;
+      -ms-flex-order: 0;
+          order: 0;
+  margin-top: 20px;
 }
 
 .portfolio-cards__counter {
@@ -4712,6 +6064,38 @@ textarea:hover {
   border-radius: 4px;
   color: #ffffff;
   padding: 4px 10px;
+}
+
+.portfolio-cards__filter {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  width: 100%;
+}
+
+.portfolio-cards__filter .filter__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  background: #fff;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-left: 20px;
+}
+
+.portfolio-cards__filter .filter__wrapper .filter__age {
+  width: 180px;
+}
+
+.portfolio-cards__filter .filter__wrapper .filter__salary {
+  width: 180px;
 }
 
 .portfolio-cards__buttons {
@@ -4734,12 +6118,13 @@ textarea:hover {
           align-items: center;
   padding-top: 20px;
   margin-bottom: 21px;
-  width: 238px;
+  width: 315px;
   background: #ffffff;
   border-radius: 4px;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
+  min-height: 403px;
 }
 
 .card:hover,
@@ -4821,116 +6206,621 @@ textarea:hover {
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+  background-image: url("../img/avatar-not-found.svg");
+  background-color: #fff;
+  width: 130px;
+  height: 129px;
 }
 
 .progress--circle.progress--0:after {
-  background-image: -webkit-gradient(linear, left top, right top, color-stop(50%, #f1f4f9), color-stop(50%, transparent), to(transparent)), -webkit-gradient(linear, left top, right top, color-stop(50%, #2bc584), color-stop(50%, #f1f4f9), to(#f1f4f9));
-  background-image: -o-linear-gradient(left, #f1f4f9 50%, transparent 50%, transparent), -o-linear-gradient(left, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
-  background-image: linear-gradient(90deg, #f1f4f9 50%, transparent 50%, transparent), linear-gradient(90deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background: url(../img/avatar-not-found.svg) no-repeat center, -webkit-gradient(linear, left top, right top, color-stop(50%, #f1f4f9), color-stop(50%, transparent), to(transparent)), -webkit-gradient(linear, left top, right top, color-stop(50%, #2bc584), color-stop(50%, #f1f4f9), to(#f1f4f9));
+  background: url(../img/avatar-not-found.svg) no-repeat center, -o-linear-gradient(left, #f1f4f9 50%, transparent 50%, transparent), -o-linear-gradient(left, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background: url(../img/avatar-not-found.svg) no-repeat center, linear-gradient(90deg, #f1f4f9 50%, transparent 50%, transparent), linear-gradient(90deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background-size: 100%, 100%, 100%, 100%;
+}
+
+.progress--circle.progress--1:after {
+  background: url(../img/avatar-not-found.svg) no-repeat center, -o-linear-gradient(left, #f1f4f9 50%, transparent 50%, transparent), -o-linear-gradient(356.4deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background: url(../img/avatar-not-found.svg) no-repeat center, linear-gradient(90deg, #f1f4f9 50%, transparent 50%, transparent), linear-gradient(93.6deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background-size: 100%, 100%, 100%, 100%;
+}
+
+.progress--circle.progress--2:after {
+  background: url(../img/avatar-not-found.svg) no-repeat center, -o-linear-gradient(left, #f1f4f9 50%, transparent 50%, transparent), -o-linear-gradient(352.8deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background: url(../img/avatar-not-found.svg) no-repeat center, linear-gradient(90deg, #f1f4f9 50%, transparent 50%, transparent), linear-gradient(97.2deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background-size: 100%, 100%, 100%, 100%;
+}
+
+.progress--circle.progress--3:after {
+  background: url(../img/avatar-not-found.svg) no-repeat center, -o-linear-gradient(left, #f1f4f9 50%, transparent 50%, transparent), -o-linear-gradient(349.2deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background: url(../img/avatar-not-found.svg) no-repeat center, linear-gradient(90deg, #f1f4f9 50%, transparent 50%, transparent), linear-gradient(100.8deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background-size: 100%, 100%, 100%, 100%;
+}
+
+.progress--circle.progress--4:after {
+  background: url(../img/avatar-not-found.svg) no-repeat center, -o-linear-gradient(left, #f1f4f9 50%, transparent 50%, transparent), -o-linear-gradient(345.6deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background: url(../img/avatar-not-found.svg) no-repeat center, linear-gradient(90deg, #f1f4f9 50%, transparent 50%, transparent), linear-gradient(104.4deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background-size: 100%, 100%, 100%, 100%;
 }
 
 .progress--circle.progress--5:after {
-  background-image: -o-linear-gradient(left, #f1f4f9 50%, transparent 50%, transparent), -o-linear-gradient(342deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
-  background-image: linear-gradient(90deg, #f1f4f9 50%, transparent 50%, transparent), linear-gradient(108deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background: url(../img/avatar-not-found.svg) no-repeat center, -o-linear-gradient(left, #f1f4f9 50%, transparent 50%, transparent), -o-linear-gradient(342deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background: url(../img/avatar-not-found.svg) no-repeat center, linear-gradient(90deg, #f1f4f9 50%, transparent 50%, transparent), linear-gradient(108deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background-size: 100%, 100%, 100%, 100%;
+}
+
+.progress--circle.progress--6:after {
+  background: url(../img/avatar-not-found.svg) no-repeat center, -o-linear-gradient(left, #f1f4f9 50%, transparent 50%, transparent), -o-linear-gradient(338.4deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background: url(../img/avatar-not-found.svg) no-repeat center, linear-gradient(90deg, #f1f4f9 50%, transparent 50%, transparent), linear-gradient(111.6deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background-size: 100%, 100%, 100%, 100%;
+}
+
+.progress--circle.progress--7:after {
+  background: url(../img/avatar-not-found.svg) no-repeat center, -o-linear-gradient(left, #f1f4f9 50%, transparent 50%, transparent), -o-linear-gradient(334.8deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background: url(../img/avatar-not-found.svg) no-repeat center, linear-gradient(90deg, #f1f4f9 50%, transparent 50%, transparent), linear-gradient(115.2deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background-size: 100%, 100%, 100%, 100%;
+}
+
+.progress--circle.progress--8:after {
+  background: url(../img/avatar-not-found.svg) no-repeat center, -o-linear-gradient(left, #f1f4f9 50%, transparent 50%, transparent), -o-linear-gradient(331.2deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background: url(../img/avatar-not-found.svg) no-repeat center, linear-gradient(90deg, #f1f4f9 50%, transparent 50%, transparent), linear-gradient(118.8deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background-size: 100%, 100%, 100%, 100%;
+}
+
+.progress--circle.progress--9:after {
+  background: url(../img/avatar-not-found.svg) no-repeat center, -o-linear-gradient(left, #f1f4f9 50%, transparent 50%, transparent), -o-linear-gradient(327.6deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background: url(../img/avatar-not-found.svg) no-repeat center, linear-gradient(90deg, #f1f4f9 50%, transparent 50%, transparent), linear-gradient(122.4deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background-size: 100%, 100%, 100%, 100%;
 }
 
 .progress--circle.progress--10:after {
-  background-image: -o-linear-gradient(left, #f1f4f9 50%, transparent 50%, transparent), -o-linear-gradient(324deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
-  background-image: linear-gradient(90deg, #f1f4f9 50%, transparent 50%, transparent), linear-gradient(126deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background: url(../img/avatar-not-found.svg) no-repeat center, -o-linear-gradient(left, #f1f4f9 50%, transparent 50%, transparent), -o-linear-gradient(324deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background: url(../img/avatar-not-found.svg) no-repeat center, linear-gradient(90deg, #f1f4f9 50%, transparent 50%, transparent), linear-gradient(126deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background-size: 100%, 100%, 100%, 100%;
+}
+
+.progress--circle.progress--11:after {
+  background: url(../img/avatar-not-found.svg) no-repeat center, -o-linear-gradient(left, #f1f4f9 50%, transparent 50%, transparent), -o-linear-gradient(320.4deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background: url(../img/avatar-not-found.svg) no-repeat center, linear-gradient(90deg, #f1f4f9 50%, transparent 50%, transparent), linear-gradient(129.6deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background-size: 100%, 100%, 100%, 100%;
+}
+
+.progress--circle.progress--12:after {
+  background: url(../img/avatar-not-found.svg) no-repeat center, -o-linear-gradient(left, #f1f4f9 50%, transparent 50%, transparent), -o-linear-gradient(316.8deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background: url(../img/avatar-not-found.svg) no-repeat center, linear-gradient(90deg, #f1f4f9 50%, transparent 50%, transparent), linear-gradient(133.2deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background-size: 100%, 100%, 100%, 100%;
+}
+
+.progress--circle.progress--13:after {
+  background: url(../img/avatar-not-found.svg) no-repeat center, -o-linear-gradient(left, #f1f4f9 50%, transparent 50%, transparent), -o-linear-gradient(313.2deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background: url(../img/avatar-not-found.svg) no-repeat center, linear-gradient(90deg, #f1f4f9 50%, transparent 50%, transparent), linear-gradient(136.8deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background-size: 100%, 100%, 100%, 100%;
+}
+
+.progress--circle.progress--14:after {
+  background: url(../img/avatar-not-found.svg) no-repeat center, -o-linear-gradient(left, #f1f4f9 50%, transparent 50%, transparent), -o-linear-gradient(309.6deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background: url(../img/avatar-not-found.svg) no-repeat center, linear-gradient(90deg, #f1f4f9 50%, transparent 50%, transparent), linear-gradient(140.4deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background-size: 100%, 100%, 100%, 100%;
 }
 
 .progress--circle.progress--15:after {
-  background-image: -o-linear-gradient(left, #f1f4f9 50%, transparent 50%, transparent), -o-linear-gradient(306deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
-  background-image: linear-gradient(90deg, #f1f4f9 50%, transparent 50%, transparent), linear-gradient(144deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background: url(../img/avatar-not-found.svg) no-repeat center, -o-linear-gradient(left, #f1f4f9 50%, transparent 50%, transparent), -o-linear-gradient(306deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background: url(../img/avatar-not-found.svg) no-repeat center, linear-gradient(90deg, #f1f4f9 50%, transparent 50%, transparent), linear-gradient(144deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background-size: 100%, 100%, 100%, 100%;
+}
+
+.progress--circle.progress--16:after {
+  background: url(../img/avatar-not-found.svg) no-repeat center, -o-linear-gradient(left, #f1f4f9 50%, transparent 50%, transparent), -o-linear-gradient(302.4deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background: url(../img/avatar-not-found.svg) no-repeat center, linear-gradient(90deg, #f1f4f9 50%, transparent 50%, transparent), linear-gradient(147.6deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background-size: 100%, 100%, 100%, 100%;
+}
+
+.progress--circle.progress--17:after {
+  background: url(../img/avatar-not-found.svg) no-repeat center, -o-linear-gradient(left, #f1f4f9 50%, transparent 50%, transparent), -o-linear-gradient(298.8deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background: url(../img/avatar-not-found.svg) no-repeat center, linear-gradient(90deg, #f1f4f9 50%, transparent 50%, transparent), linear-gradient(151.2deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background-size: 100%, 100%, 100%, 100%;
+}
+
+.progress--circle.progress--18:after {
+  background: url(../img/avatar-not-found.svg) no-repeat center, -o-linear-gradient(left, #f1f4f9 50%, transparent 50%, transparent), -o-linear-gradient(295.2deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background: url(../img/avatar-not-found.svg) no-repeat center, linear-gradient(90deg, #f1f4f9 50%, transparent 50%, transparent), linear-gradient(154.8deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background-size: 100%, 100%, 100%, 100%;
+}
+
+.progress--circle.progress--19:after {
+  background: url(../img/avatar-not-found.svg) no-repeat center, -o-linear-gradient(left, #f1f4f9 50%, transparent 50%, transparent), -o-linear-gradient(291.6deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background: url(../img/avatar-not-found.svg) no-repeat center, linear-gradient(90deg, #f1f4f9 50%, transparent 50%, transparent), linear-gradient(158.4deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background-size: 100%, 100%, 100%, 100%;
 }
 
 .progress--circle.progress--20:after {
-  background-image: -o-linear-gradient(left, #f1f4f9 50%, transparent 50%, transparent), -o-linear-gradient(288deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
-  background-image: linear-gradient(90deg, #f1f4f9 50%, transparent 50%, transparent), linear-gradient(162deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background: url(../img/avatar-not-found.svg) no-repeat center, -o-linear-gradient(left, #f1f4f9 50%, transparent 50%, transparent), -o-linear-gradient(288deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background: url(../img/avatar-not-found.svg) no-repeat center, linear-gradient(90deg, #f1f4f9 50%, transparent 50%, transparent), linear-gradient(162deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background-size: 100%, 100%, 100%, 100%;
+}
+
+.progress--circle.progress--21:after {
+  background: url(../img/avatar-not-found.svg) no-repeat center, -o-linear-gradient(left, #f1f4f9 50%, transparent 50%, transparent), -o-linear-gradient(284.4deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background: url(../img/avatar-not-found.svg) no-repeat center, linear-gradient(90deg, #f1f4f9 50%, transparent 50%, transparent), linear-gradient(165.6deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background-size: 100%, 100%, 100%, 100%;
+}
+
+.progress--circle.progress--22:after {
+  background: url(../img/avatar-not-found.svg) no-repeat center, -o-linear-gradient(left, #f1f4f9 50%, transparent 50%, transparent), -o-linear-gradient(280.8deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background: url(../img/avatar-not-found.svg) no-repeat center, linear-gradient(90deg, #f1f4f9 50%, transparent 50%, transparent), linear-gradient(169.2deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background-size: 100%, 100%, 100%, 100%;
+}
+
+.progress--circle.progress--23:after {
+  background: url(../img/avatar-not-found.svg) no-repeat center, -o-linear-gradient(left, #f1f4f9 50%, transparent 50%, transparent), -o-linear-gradient(277.2deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background: url(../img/avatar-not-found.svg) no-repeat center, linear-gradient(90deg, #f1f4f9 50%, transparent 50%, transparent), linear-gradient(172.8deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background-size: 100%, 100%, 100%, 100%;
+}
+
+.progress--circle.progress--24:after {
+  background: url(../img/avatar-not-found.svg) no-repeat center, -o-linear-gradient(left, #f1f4f9 50%, transparent 50%, transparent), -o-linear-gradient(273.6deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background: url(../img/avatar-not-found.svg) no-repeat center, linear-gradient(90deg, #f1f4f9 50%, transparent 50%, transparent), linear-gradient(176.4deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background-size: 100%, 100%, 100%, 100%;
 }
 
 .progress--circle.progress--25:after {
-  background-image: -webkit-gradient(linear, left top, right top, color-stop(50%, #f1f4f9), color-stop(50%, transparent), to(transparent)), -webkit-gradient(linear, left top, left bottom, color-stop(50%, #2bc584), color-stop(50%, #f1f4f9), to(#f1f4f9));
-  background-image: -o-linear-gradient(left, #f1f4f9 50%, transparent 50%, transparent), -o-linear-gradient(top, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
-  background-image: linear-gradient(90deg, #f1f4f9 50%, transparent 50%, transparent), linear-gradient(180deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background: url(../img/avatar-not-found.svg) no-repeat center, -webkit-gradient(linear, left top, right top, color-stop(50%, #f1f4f9), color-stop(50%, transparent), to(transparent)), -webkit-gradient(linear, left top, left bottom, color-stop(50%, #2bc584), color-stop(50%, #f1f4f9), to(#f1f4f9));
+  background: url(../img/avatar-not-found.svg) no-repeat center, -o-linear-gradient(left, #f1f4f9 50%, transparent 50%, transparent), -o-linear-gradient(top, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background: url(../img/avatar-not-found.svg) no-repeat center, linear-gradient(90deg, #f1f4f9 50%, transparent 50%, transparent), linear-gradient(180deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background-size: 100%, 100%, 100%, 100%;
+}
+
+.progress--circle.progress--26:after {
+  background: url(../img/avatar-not-found.svg) no-repeat center, -o-linear-gradient(left, #f1f4f9 50%, transparent 50%, transparent), -o-linear-gradient(266.4deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background: url(../img/avatar-not-found.svg) no-repeat center, linear-gradient(90deg, #f1f4f9 50%, transparent 50%, transparent), linear-gradient(183.6deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background-size: 100%, 100%, 100%, 100%;
+}
+
+.progress--circle.progress--27:after {
+  background: url(../img/avatar-not-found.svg) no-repeat center, -o-linear-gradient(left, #f1f4f9 50%, transparent 50%, transparent), -o-linear-gradient(262.8deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background: url(../img/avatar-not-found.svg) no-repeat center, linear-gradient(90deg, #f1f4f9 50%, transparent 50%, transparent), linear-gradient(187.2deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background-size: 100%, 100%, 100%, 100%;
+}
+
+.progress--circle.progress--28:after {
+  background: url(../img/avatar-not-found.svg) no-repeat center, -o-linear-gradient(left, #f1f4f9 50%, transparent 50%, transparent), -o-linear-gradient(259.2deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background: url(../img/avatar-not-found.svg) no-repeat center, linear-gradient(90deg, #f1f4f9 50%, transparent 50%, transparent), linear-gradient(190.8deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background-size: 100%, 100%, 100%, 100%;
+}
+
+.progress--circle.progress--29:after {
+  background: url(../img/avatar-not-found.svg) no-repeat center, -o-linear-gradient(left, #f1f4f9 50%, transparent 50%, transparent), -o-linear-gradient(255.6deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background: url(../img/avatar-not-found.svg) no-repeat center, linear-gradient(90deg, #f1f4f9 50%, transparent 50%, transparent), linear-gradient(194.4deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background-size: 100%, 100%, 100%, 100%;
 }
 
 .progress--circle.progress--30:after {
-  background-image: -o-linear-gradient(left, #f1f4f9 50%, transparent 50%, transparent), -o-linear-gradient(252deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
-  background-image: linear-gradient(90deg, #f1f4f9 50%, transparent 50%, transparent), linear-gradient(198deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background: url(../img/avatar-not-found.svg) no-repeat center, -o-linear-gradient(left, #f1f4f9 50%, transparent 50%, transparent), -o-linear-gradient(252deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background: url(../img/avatar-not-found.svg) no-repeat center, linear-gradient(90deg, #f1f4f9 50%, transparent 50%, transparent), linear-gradient(198deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background-size: 100%, 100%, 100%, 100%;
+}
+
+.progress--circle.progress--31:after {
+  background: url(../img/avatar-not-found.svg) no-repeat center, -o-linear-gradient(left, #f1f4f9 50%, transparent 50%, transparent), -o-linear-gradient(248.4deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background: url(../img/avatar-not-found.svg) no-repeat center, linear-gradient(90deg, #f1f4f9 50%, transparent 50%, transparent), linear-gradient(201.6deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background-size: 100%, 100%, 100%, 100%;
+}
+
+.progress--circle.progress--32:after {
+  background: url(../img/avatar-not-found.svg) no-repeat center, -o-linear-gradient(left, #f1f4f9 50%, transparent 50%, transparent), -o-linear-gradient(244.8deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background: url(../img/avatar-not-found.svg) no-repeat center, linear-gradient(90deg, #f1f4f9 50%, transparent 50%, transparent), linear-gradient(205.2deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background-size: 100%, 100%, 100%, 100%;
+}
+
+.progress--circle.progress--33:after {
+  background: url(../img/avatar-not-found.svg) no-repeat center, -o-linear-gradient(left, #f1f4f9 50%, transparent 50%, transparent), -o-linear-gradient(241.2deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background: url(../img/avatar-not-found.svg) no-repeat center, linear-gradient(90deg, #f1f4f9 50%, transparent 50%, transparent), linear-gradient(208.8deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background-size: 100%, 100%, 100%, 100%;
+}
+
+.progress--circle.progress--34:after {
+  background: url(../img/avatar-not-found.svg) no-repeat center, -o-linear-gradient(left, #f1f4f9 50%, transparent 50%, transparent), -o-linear-gradient(237.6deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background: url(../img/avatar-not-found.svg) no-repeat center, linear-gradient(90deg, #f1f4f9 50%, transparent 50%, transparent), linear-gradient(212.4deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background-size: 100%, 100%, 100%, 100%;
 }
 
 .progress--circle.progress--35:after {
-  background-image: -o-linear-gradient(left, #f1f4f9 50%, transparent 50%, transparent), -o-linear-gradient(234deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
-  background-image: linear-gradient(90deg, #f1f4f9 50%, transparent 50%, transparent), linear-gradient(216deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background: url(../img/avatar-not-found.svg) no-repeat center, -o-linear-gradient(left, #f1f4f9 50%, transparent 50%, transparent), -o-linear-gradient(234deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background: url(../img/avatar-not-found.svg) no-repeat center, linear-gradient(90deg, #f1f4f9 50%, transparent 50%, transparent), linear-gradient(216deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background-size: 100%, 100%, 100%, 100%;
+}
+
+.progress--circle.progress--36:after {
+  background: url(../img/avatar-not-found.svg) no-repeat center, -o-linear-gradient(left, #f1f4f9 50%, transparent 50%, transparent), -o-linear-gradient(230.4deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background: url(../img/avatar-not-found.svg) no-repeat center, linear-gradient(90deg, #f1f4f9 50%, transparent 50%, transparent), linear-gradient(219.6deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background-size: 100%, 100%, 100%, 100%;
+}
+
+.progress--circle.progress--37:after {
+  background: url(../img/avatar-not-found.svg) no-repeat center, -o-linear-gradient(left, #f1f4f9 50%, transparent 50%, transparent), -o-linear-gradient(226.8deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background: url(../img/avatar-not-found.svg) no-repeat center, linear-gradient(90deg, #f1f4f9 50%, transparent 50%, transparent), linear-gradient(223.2deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background-size: 100%, 100%, 100%, 100%;
+}
+
+.progress--circle.progress--38:after {
+  background: url(../img/avatar-not-found.svg) no-repeat center, -o-linear-gradient(left, #f1f4f9 50%, transparent 50%, transparent), -o-linear-gradient(223.2deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background: url(../img/avatar-not-found.svg) no-repeat center, linear-gradient(90deg, #f1f4f9 50%, transparent 50%, transparent), linear-gradient(226.8deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background-size: 100%, 100%, 100%, 100%;
+}
+
+.progress--circle.progress--39:after {
+  background: url(../img/avatar-not-found.svg) no-repeat center, -o-linear-gradient(left, #f1f4f9 50%, transparent 50%, transparent), -o-linear-gradient(219.6deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background: url(../img/avatar-not-found.svg) no-repeat center, linear-gradient(90deg, #f1f4f9 50%, transparent 50%, transparent), linear-gradient(230.4deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background-size: 100%, 100%, 100%, 100%;
 }
 
 .progress--circle.progress--40:after {
-  background-image: -o-linear-gradient(left, #f1f4f9 50%, transparent 50%, transparent), -o-linear-gradient(216deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
-  background-image: linear-gradient(90deg, #f1f4f9 50%, transparent 50%, transparent), linear-gradient(234deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background: url(../img/avatar-not-found.svg) no-repeat center, -o-linear-gradient(left, #f1f4f9 50%, transparent 50%, transparent), -o-linear-gradient(216deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background: url(../img/avatar-not-found.svg) no-repeat center, linear-gradient(90deg, #f1f4f9 50%, transparent 50%, transparent), linear-gradient(234deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background-size: 100%, 100%, 100%, 100%;
+}
+
+.progress--circle.progress--41:after {
+  background: url(../img/avatar-not-found.svg) no-repeat center, -o-linear-gradient(left, #f1f4f9 50%, transparent 50%, transparent), -o-linear-gradient(212.4deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background: url(../img/avatar-not-found.svg) no-repeat center, linear-gradient(90deg, #f1f4f9 50%, transparent 50%, transparent), linear-gradient(237.6deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background-size: 100%, 100%, 100%, 100%;
+}
+
+.progress--circle.progress--42:after {
+  background: url(../img/avatar-not-found.svg) no-repeat center, -o-linear-gradient(left, #f1f4f9 50%, transparent 50%, transparent), -o-linear-gradient(208.8deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background: url(../img/avatar-not-found.svg) no-repeat center, linear-gradient(90deg, #f1f4f9 50%, transparent 50%, transparent), linear-gradient(241.2deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background-size: 100%, 100%, 100%, 100%;
+}
+
+.progress--circle.progress--43:after {
+  background: url(../img/avatar-not-found.svg) no-repeat center, -o-linear-gradient(left, #f1f4f9 50%, transparent 50%, transparent), -o-linear-gradient(205.2deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background: url(../img/avatar-not-found.svg) no-repeat center, linear-gradient(90deg, #f1f4f9 50%, transparent 50%, transparent), linear-gradient(244.8deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background-size: 100%, 100%, 100%, 100%;
+}
+
+.progress--circle.progress--44:after {
+  background: url(../img/avatar-not-found.svg) no-repeat center, -o-linear-gradient(left, #f1f4f9 50%, transparent 50%, transparent), -o-linear-gradient(201.6deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background: url(../img/avatar-not-found.svg) no-repeat center, linear-gradient(90deg, #f1f4f9 50%, transparent 50%, transparent), linear-gradient(248.4deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background-size: 100%, 100%, 100%, 100%;
 }
 
 .progress--circle.progress--45:after {
-  background-image: -o-linear-gradient(left, #f1f4f9 50%, transparent 50%, transparent), -o-linear-gradient(198deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
-  background-image: linear-gradient(90deg, #f1f4f9 50%, transparent 50%, transparent), linear-gradient(252deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background: url(../img/avatar-not-found.svg) no-repeat center, -o-linear-gradient(left, #f1f4f9 50%, transparent 50%, transparent), -o-linear-gradient(198deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background: url(../img/avatar-not-found.svg) no-repeat center, linear-gradient(90deg, #f1f4f9 50%, transparent 50%, transparent), linear-gradient(252deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background-size: 100%, 100%, 100%, 100%;
+}
+
+.progress--circle.progress--46:after {
+  background: url(../img/avatar-not-found.svg) no-repeat center, -o-linear-gradient(left, #f1f4f9 50%, transparent 50%, transparent), -o-linear-gradient(194.4deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background: url(../img/avatar-not-found.svg) no-repeat center, linear-gradient(90deg, #f1f4f9 50%, transparent 50%, transparent), linear-gradient(255.6deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background-size: 100%, 100%, 100%, 100%;
+}
+
+.progress--circle.progress--47:after {
+  background: url(../img/avatar-not-found.svg) no-repeat center, -o-linear-gradient(left, #f1f4f9 50%, transparent 50%, transparent), -o-linear-gradient(190.8deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background: url(../img/avatar-not-found.svg) no-repeat center, linear-gradient(90deg, #f1f4f9 50%, transparent 50%, transparent), linear-gradient(259.2deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background-size: 100%, 100%, 100%, 100%;
+}
+
+.progress--circle.progress--48:after {
+  background: url(../img/avatar-not-found.svg) no-repeat center, -o-linear-gradient(left, #f1f4f9 50%, transparent 50%, transparent), -o-linear-gradient(187.2deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background: url(../img/avatar-not-found.svg) no-repeat center, linear-gradient(90deg, #f1f4f9 50%, transparent 50%, transparent), linear-gradient(262.8deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background-size: 100%, 100%, 100%, 100%;
+}
+
+.progress--circle.progress--49:after {
+  background: url(../img/avatar-not-found.svg) no-repeat center, -o-linear-gradient(left, #f1f4f9 50%, transparent 50%, transparent), -o-linear-gradient(183.6deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background: url(../img/avatar-not-found.svg) no-repeat center, linear-gradient(90deg, #f1f4f9 50%, transparent 50%, transparent), linear-gradient(266.4deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background-size: 100%, 100%, 100%, 100%;
 }
 
 .progress--circle.progress--50:after {
-  background-image: -webkit-gradient(linear, right top, left top, color-stop(50%, #2bc584), color-stop(50%, transparent), to(transparent)), -webkit-gradient(linear, right top, left top, color-stop(50%, #2bc584), color-stop(50%, #f1f4f9), to(#f1f4f9));
-  background-image: -o-linear-gradient(right, #2bc584 50%, transparent 50%, transparent), -o-linear-gradient(right, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
-  background-image: linear-gradient(-90deg, #2bc584 50%, transparent 50%, transparent), linear-gradient(270deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background: url(../img/avatar-not-found.svg) no-repeat center, -webkit-gradient(linear, right top, left top, color-stop(50%, #2bc584), color-stop(50%, transparent), to(transparent)), -webkit-gradient(linear, right top, left top, color-stop(50%, #2bc584), color-stop(50%, #f1f4f9), to(#f1f4f9));
+  background: url(../img/avatar-not-found.svg) no-repeat center, -o-linear-gradient(right, #2bc584 50%, transparent 50%, transparent), -o-linear-gradient(right, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background: url(../img/avatar-not-found.svg) no-repeat center, linear-gradient(-90deg, #2bc584 50%, transparent 50%, transparent), linear-gradient(270deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background-size: 100%, 100%, 100%, 100%;
+}
+
+.progress--circle.progress--51:after {
+  background: url(../img/avatar-not-found.svg) no-repeat center, -o-linear-gradient(176.4deg, #2bc584 50%, transparent 50%, transparent), -o-linear-gradient(right, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background: url(../img/avatar-not-found.svg) no-repeat center, linear-gradient(-86.4deg, #2bc584 50%, transparent 50%, transparent), linear-gradient(270deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background-size: 100%, 100%, 100%, 100%;
+}
+
+.progress--circle.progress--52:after {
+  background: url(../img/avatar-not-found.svg) no-repeat center, -o-linear-gradient(172.8deg, #2bc584 50%, transparent 50%, transparent), -o-linear-gradient(right, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background: url(../img/avatar-not-found.svg) no-repeat center, linear-gradient(-82.8deg, #2bc584 50%, transparent 50%, transparent), linear-gradient(270deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background-size: 100%, 100%, 100%, 100%;
+}
+
+.progress--circle.progress--53:after {
+  background: url(../img/avatar-not-found.svg) no-repeat center, -o-linear-gradient(169.2deg, #2bc584 50%, transparent 50%, transparent), -o-linear-gradient(right, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background: url(../img/avatar-not-found.svg) no-repeat center, linear-gradient(-79.2deg, #2bc584 50%, transparent 50%, transparent), linear-gradient(270deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background-size: 100%, 100%, 100%, 100%;
+}
+
+.progress--circle.progress--54:after {
+  background: url(../img/avatar-not-found.svg) no-repeat center, -o-linear-gradient(165.6deg, #2bc584 50%, transparent 50%, transparent), -o-linear-gradient(right, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background: url(../img/avatar-not-found.svg) no-repeat center, linear-gradient(-75.6deg, #2bc584 50%, transparent 50%, transparent), linear-gradient(270deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background-size: 100%, 100%, 100%, 100%;
 }
 
 .progress--circle.progress--55:after {
-  background-image: -o-linear-gradient(162deg, #2bc584 50%, transparent 50%, transparent), -o-linear-gradient(right, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
-  background-image: linear-gradient(-72deg, #2bc584 50%, transparent 50%, transparent), linear-gradient(270deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background: url(../img/avatar-not-found.svg) no-repeat center, -o-linear-gradient(162deg, #2bc584 50%, transparent 50%, transparent), -o-linear-gradient(right, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background: url(../img/avatar-not-found.svg) no-repeat center, linear-gradient(-72deg, #2bc584 50%, transparent 50%, transparent), linear-gradient(270deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background-size: 100%, 100%, 100%, 100%;
+}
+
+.progress--circle.progress--56:after {
+  background: url(../img/avatar-not-found.svg) no-repeat center, -o-linear-gradient(158.4deg, #2bc584 50%, transparent 50%, transparent), -o-linear-gradient(right, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background: url(../img/avatar-not-found.svg) no-repeat center, linear-gradient(-68.4deg, #2bc584 50%, transparent 50%, transparent), linear-gradient(270deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background-size: 100%, 100%, 100%, 100%;
+}
+
+.progress--circle.progress--57:after {
+  background: url(../img/avatar-not-found.svg) no-repeat center, -o-linear-gradient(154.8deg, #2bc584 50%, transparent 50%, transparent), -o-linear-gradient(right, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background: url(../img/avatar-not-found.svg) no-repeat center, linear-gradient(-64.8deg, #2bc584 50%, transparent 50%, transparent), linear-gradient(270deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background-size: 100%, 100%, 100%, 100%;
+}
+
+.progress--circle.progress--58:after {
+  background: url(../img/avatar-not-found.svg) no-repeat center, -o-linear-gradient(151.2deg, #2bc584 50%, transparent 50%, transparent), -o-linear-gradient(right, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background: url(../img/avatar-not-found.svg) no-repeat center, linear-gradient(-61.2deg, #2bc584 50%, transparent 50%, transparent), linear-gradient(270deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background-size: 100%, 100%, 100%, 100%;
+}
+
+.progress--circle.progress--59:after {
+  background: url(../img/avatar-not-found.svg) no-repeat center, -o-linear-gradient(147.6deg, #2bc584 50%, transparent 50%, transparent), -o-linear-gradient(right, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background: url(../img/avatar-not-found.svg) no-repeat center, linear-gradient(-57.6deg, #2bc584 50%, transparent 50%, transparent), linear-gradient(270deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background-size: 100%, 100%, 100%, 100%;
 }
 
 .progress--circle.progress--60:after {
-  background-image: -o-linear-gradient(144deg, #2bc584 50%, transparent 50%, transparent), -o-linear-gradient(right, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
-  background-image: linear-gradient(-54deg, #2bc584 50%, transparent 50%, transparent), linear-gradient(270deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background: url(../img/avatar-not-found.svg) no-repeat center, -o-linear-gradient(144deg, #2bc584 50%, transparent 50%, transparent), -o-linear-gradient(right, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background: url(../img/avatar-not-found.svg) no-repeat center, linear-gradient(-54deg, #2bc584 50%, transparent 50%, transparent), linear-gradient(270deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background-size: 100%, 100%, 100%, 100%;
+}
+
+.progress--circle.progress--61:after {
+  background: url(../img/avatar-not-found.svg) no-repeat center, -o-linear-gradient(140.4deg, #2bc584 50%, transparent 50%, transparent), -o-linear-gradient(right, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background: url(../img/avatar-not-found.svg) no-repeat center, linear-gradient(-50.4deg, #2bc584 50%, transparent 50%, transparent), linear-gradient(270deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background-size: 100%, 100%, 100%, 100%;
+}
+
+.progress--circle.progress--62:after {
+  background: url(../img/avatar-not-found.svg) no-repeat center, -o-linear-gradient(136.8deg, #2bc584 50%, transparent 50%, transparent), -o-linear-gradient(right, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background: url(../img/avatar-not-found.svg) no-repeat center, linear-gradient(-46.8deg, #2bc584 50%, transparent 50%, transparent), linear-gradient(270deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background-size: 100%, 100%, 100%, 100%;
+}
+
+.progress--circle.progress--63:after {
+  background: url(../img/avatar-not-found.svg) no-repeat center, -o-linear-gradient(133.2deg, #2bc584 50%, transparent 50%, transparent), -o-linear-gradient(right, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background: url(../img/avatar-not-found.svg) no-repeat center, linear-gradient(-43.2deg, #2bc584 50%, transparent 50%, transparent), linear-gradient(270deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background-size: 100%, 100%, 100%, 100%;
+}
+
+.progress--circle.progress--64:after {
+  background: url(../img/avatar-not-found.svg) no-repeat center, -o-linear-gradient(129.6deg, #2bc584 50%, transparent 50%, transparent), -o-linear-gradient(right, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background: url(../img/avatar-not-found.svg) no-repeat center, linear-gradient(-39.6deg, #2bc584 50%, transparent 50%, transparent), linear-gradient(270deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background-size: 100%, 100%, 100%, 100%;
 }
 
 .progress--circle.progress--65:after {
-  background-image: -o-linear-gradient(126deg, #2bc584 50%, transparent 50%, transparent), -o-linear-gradient(right, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
-  background-image: linear-gradient(-36deg, #2bc584 50%, transparent 50%, transparent), linear-gradient(270deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background: url(../img/avatar-not-found.svg) no-repeat center, -o-linear-gradient(126deg, #2bc584 50%, transparent 50%, transparent), -o-linear-gradient(right, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background: url(../img/avatar-not-found.svg) no-repeat center, linear-gradient(-36deg, #2bc584 50%, transparent 50%, transparent), linear-gradient(270deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background-size: 100%, 100%, 100%, 100%;
+}
+
+.progress--circle.progress--66:after {
+  background: url(../img/avatar-not-found.svg) no-repeat center, -o-linear-gradient(122.4deg, #2bc584 50%, transparent 50%, transparent), -o-linear-gradient(right, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background: url(../img/avatar-not-found.svg) no-repeat center, linear-gradient(-32.4deg, #2bc584 50%, transparent 50%, transparent), linear-gradient(270deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background-size: 100%, 100%, 100%, 100%;
+}
+
+.progress--circle.progress--67:after {
+  background: url(../img/avatar-not-found.svg) no-repeat center, -o-linear-gradient(118.8deg, #2bc584 50%, transparent 50%, transparent), -o-linear-gradient(right, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background: url(../img/avatar-not-found.svg) no-repeat center, linear-gradient(-28.8deg, #2bc584 50%, transparent 50%, transparent), linear-gradient(270deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background-size: 100%, 100%, 100%, 100%;
+}
+
+.progress--circle.progress--68:after {
+  background: url(../img/avatar-not-found.svg) no-repeat center, -o-linear-gradient(115.2deg, #2bc584 50%, transparent 50%, transparent), -o-linear-gradient(right, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background: url(../img/avatar-not-found.svg) no-repeat center, linear-gradient(-25.2deg, #2bc584 50%, transparent 50%, transparent), linear-gradient(270deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background-size: 100%, 100%, 100%, 100%;
+}
+
+.progress--circle.progress--69:after {
+  background: url(../img/avatar-not-found.svg) no-repeat center, -o-linear-gradient(111.6deg, #2bc584 50%, transparent 50%, transparent), -o-linear-gradient(right, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background: url(../img/avatar-not-found.svg) no-repeat center, linear-gradient(-21.6deg, #2bc584 50%, transparent 50%, transparent), linear-gradient(270deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background-size: 100%, 100%, 100%, 100%;
 }
 
 .progress--circle.progress--70:after {
-  background-image: -o-linear-gradient(108deg, #2bc584 50%, transparent 50%, transparent), -o-linear-gradient(right, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
-  background-image: linear-gradient(-18deg, #2bc584 50%, transparent 50%, transparent), linear-gradient(270deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background: url(../img/avatar-not-found.svg) no-repeat center, -o-linear-gradient(108deg, #2bc584 50%, transparent 50%, transparent), -o-linear-gradient(right, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background: url(../img/avatar-not-found.svg) no-repeat center, linear-gradient(-18deg, #2bc584 50%, transparent 50%, transparent), linear-gradient(270deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background-size: 100%, 100%, 100%, 100%;
+}
+
+.progress--circle.progress--71:after {
+  background: url(../img/avatar-not-found.svg) no-repeat center, -o-linear-gradient(104.4deg, #2bc584 50%, transparent 50%, transparent), -o-linear-gradient(right, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background: url(../img/avatar-not-found.svg) no-repeat center, linear-gradient(-14.4deg, #2bc584 50%, transparent 50%, transparent), linear-gradient(270deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background-size: 100%, 100%, 100%, 100%;
+}
+
+.progress--circle.progress--72:after {
+  background: url(../img/avatar-not-found.svg) no-repeat center, -o-linear-gradient(100.8deg, #2bc584 50%, transparent 50%, transparent), -o-linear-gradient(right, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background: url(../img/avatar-not-found.svg) no-repeat center, linear-gradient(-10.8deg, #2bc584 50%, transparent 50%, transparent), linear-gradient(270deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background-size: 100%, 100%, 100%, 100%;
+}
+
+.progress--circle.progress--73:after {
+  background: url(../img/avatar-not-found.svg) no-repeat center, -o-linear-gradient(97.2deg, #2bc584 50%, transparent 50%, transparent), -o-linear-gradient(right, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background: url(../img/avatar-not-found.svg) no-repeat center, linear-gradient(-7.2deg, #2bc584 50%, transparent 50%, transparent), linear-gradient(270deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background-size: 100%, 100%, 100%, 100%;
+}
+
+.progress--circle.progress--74:after {
+  background: url(../img/avatar-not-found.svg) no-repeat center, -o-linear-gradient(93.6deg, #2bc584 50%, transparent 50%, transparent), -o-linear-gradient(right, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background: url(../img/avatar-not-found.svg) no-repeat center, linear-gradient(-3.6deg, #2bc584 50%, transparent 50%, transparent), linear-gradient(270deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background-size: 100%, 100%, 100%, 100%;
 }
 
 .progress--circle.progress--75:after {
-  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #2bc584), color-stop(50%, transparent), to(transparent)), -webkit-gradient(linear, right top, left top, color-stop(50%, #2bc584), color-stop(50%, #f1f4f9), to(#f1f4f9));
-  background-image: -o-linear-gradient(bottom, #2bc584 50%, transparent 50%, transparent), -o-linear-gradient(right, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
-  background-image: linear-gradient(0deg, #2bc584 50%, transparent 50%, transparent), linear-gradient(270deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background: url(../img/avatar-not-found.svg) no-repeat center, -webkit-gradient(linear, left bottom, left top, color-stop(50%, #2bc584), color-stop(50%, transparent), to(transparent)), -webkit-gradient(linear, right top, left top, color-stop(50%, #2bc584), color-stop(50%, #f1f4f9), to(#f1f4f9));
+  background: url(../img/avatar-not-found.svg) no-repeat center, -o-linear-gradient(bottom, #2bc584 50%, transparent 50%, transparent), -o-linear-gradient(right, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background: url(../img/avatar-not-found.svg) no-repeat center, linear-gradient(0deg, #2bc584 50%, transparent 50%, transparent), linear-gradient(270deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background-size: 100%, 100%, 100%, 100%;
+}
+
+.progress--circle.progress--76:after {
+  background: url(../img/avatar-not-found.svg) no-repeat center, -o-linear-gradient(86.4deg, #2bc584 50%, transparent 50%, transparent), -o-linear-gradient(right, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background: url(../img/avatar-not-found.svg) no-repeat center, linear-gradient(3.6deg, #2bc584 50%, transparent 50%, transparent), linear-gradient(270deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background-size: 100%, 100%, 100%, 100%;
+}
+
+.progress--circle.progress--77:after {
+  background: url(../img/avatar-not-found.svg) no-repeat center, -o-linear-gradient(82.8deg, #2bc584 50%, transparent 50%, transparent), -o-linear-gradient(right, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background: url(../img/avatar-not-found.svg) no-repeat center, linear-gradient(7.2deg, #2bc584 50%, transparent 50%, transparent), linear-gradient(270deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background-size: 100%, 100%, 100%, 100%;
+}
+
+.progress--circle.progress--78:after {
+  background: url(../img/avatar-not-found.svg) no-repeat center, -o-linear-gradient(79.2deg, #2bc584 50%, transparent 50%, transparent), -o-linear-gradient(right, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background: url(../img/avatar-not-found.svg) no-repeat center, linear-gradient(10.8deg, #2bc584 50%, transparent 50%, transparent), linear-gradient(270deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background-size: 100%, 100%, 100%, 100%;
+}
+
+.progress--circle.progress--79:after {
+  background: url(../img/avatar-not-found.svg) no-repeat center, -o-linear-gradient(75.6deg, #2bc584 50%, transparent 50%, transparent), -o-linear-gradient(right, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background: url(../img/avatar-not-found.svg) no-repeat center, linear-gradient(14.4deg, #2bc584 50%, transparent 50%, transparent), linear-gradient(270deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background-size: 100%, 100%, 100%, 100%;
 }
 
 .progress--circle.progress--80:after {
-  background-image: -o-linear-gradient(72deg, #2bc584 50%, transparent 50%, transparent), -o-linear-gradient(right, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
-  background-image: linear-gradient(18deg, #2bc584 50%, transparent 50%, transparent), linear-gradient(270deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background: url(../img/avatar-not-found.svg) no-repeat center, -o-linear-gradient(72deg, #2bc584 50%, transparent 50%, transparent), -o-linear-gradient(right, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background: url(../img/avatar-not-found.svg) no-repeat center, linear-gradient(18deg, #2bc584 50%, transparent 50%, transparent), linear-gradient(270deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background-size: 100%, 100%, 100%, 100%;
+}
+
+.progress--circle.progress--81:after {
+  background: url(../img/avatar-not-found.svg) no-repeat center, -o-linear-gradient(68.4deg, #2bc584 50%, transparent 50%, transparent), -o-linear-gradient(right, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background: url(../img/avatar-not-found.svg) no-repeat center, linear-gradient(21.6deg, #2bc584 50%, transparent 50%, transparent), linear-gradient(270deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background-size: 100%, 100%, 100%, 100%;
+}
+
+.progress--circle.progress--82:after {
+  background: url(../img/avatar-not-found.svg) no-repeat center, -o-linear-gradient(64.8deg, #2bc584 50%, transparent 50%, transparent), -o-linear-gradient(right, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background: url(../img/avatar-not-found.svg) no-repeat center, linear-gradient(25.2deg, #2bc584 50%, transparent 50%, transparent), linear-gradient(270deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background-size: 100%, 100%, 100%, 100%;
+}
+
+.progress--circle.progress--83:after {
+  background: url(../img/avatar-not-found.svg) no-repeat center, -o-linear-gradient(61.2deg, #2bc584 50%, transparent 50%, transparent), -o-linear-gradient(right, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background: url(../img/avatar-not-found.svg) no-repeat center, linear-gradient(28.8deg, #2bc584 50%, transparent 50%, transparent), linear-gradient(270deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background-size: 100%, 100%, 100%, 100%;
+}
+
+.progress--circle.progress--84:after {
+  background: url(../img/avatar-not-found.svg) no-repeat center, -o-linear-gradient(57.6deg, #2bc584 50%, transparent 50%, transparent), -o-linear-gradient(right, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background: url(../img/avatar-not-found.svg) no-repeat center, linear-gradient(32.4deg, #2bc584 50%, transparent 50%, transparent), linear-gradient(270deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background-size: 100%, 100%, 100%, 100%;
 }
 
 .progress--circle.progress--85:after {
-  background-image: -o-linear-gradient(54deg, #2bc584 50%, transparent 50%, transparent), -o-linear-gradient(right, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
-  background-image: linear-gradient(36deg, #2bc584 50%, transparent 50%, transparent), linear-gradient(270deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background: url(../img/avatar-not-found.svg) no-repeat center, -o-linear-gradient(54deg, #2bc584 50%, transparent 50%, transparent), -o-linear-gradient(right, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background: url(../img/avatar-not-found.svg) no-repeat center, linear-gradient(36deg, #2bc584 50%, transparent 50%, transparent), linear-gradient(270deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background-size: 100%, 100%, 100%, 100%;
+}
+
+.progress--circle.progress--86:after {
+  background: url(../img/avatar-not-found.svg) no-repeat center, -o-linear-gradient(50.4deg, #2bc584 50%, transparent 50%, transparent), -o-linear-gradient(right, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background: url(../img/avatar-not-found.svg) no-repeat center, linear-gradient(39.6deg, #2bc584 50%, transparent 50%, transparent), linear-gradient(270deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background-size: 100%, 100%, 100%, 100%;
+}
+
+.progress--circle.progress--87:after {
+  background: url(../img/avatar-not-found.svg) no-repeat center, -o-linear-gradient(46.8deg, #2bc584 50%, transparent 50%, transparent), -o-linear-gradient(right, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background: url(../img/avatar-not-found.svg) no-repeat center, linear-gradient(43.2deg, #2bc584 50%, transparent 50%, transparent), linear-gradient(270deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background-size: 100%, 100%, 100%, 100%;
+}
+
+.progress--circle.progress--88:after {
+  background: url(../img/avatar-not-found.svg) no-repeat center, -o-linear-gradient(43.2deg, #2bc584 50%, transparent 50%, transparent), -o-linear-gradient(right, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background: url(../img/avatar-not-found.svg) no-repeat center, linear-gradient(46.8deg, #2bc584 50%, transparent 50%, transparent), linear-gradient(270deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background-size: 100%, 100%, 100%, 100%;
+}
+
+.progress--circle.progress--89:after {
+  background: url(../img/avatar-not-found.svg) no-repeat center, -o-linear-gradient(39.6deg, #2bc584 50%, transparent 50%, transparent), -o-linear-gradient(right, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background: url(../img/avatar-not-found.svg) no-repeat center, linear-gradient(50.4deg, #2bc584 50%, transparent 50%, transparent), linear-gradient(270deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background-size: 100%, 100%, 100%, 100%;
 }
 
 .progress--circle.progress--90:after {
-  background-image: -o-linear-gradient(36deg, #2bc584 50%, transparent 50%, transparent), -o-linear-gradient(right, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
-  background-image: linear-gradient(54deg, #2bc584 50%, transparent 50%, transparent), linear-gradient(270deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background: url(../img/avatar-not-found.svg) no-repeat center, -o-linear-gradient(36deg, #2bc584 50%, transparent 50%, transparent), -o-linear-gradient(right, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background: url(../img/avatar-not-found.svg) no-repeat center, linear-gradient(54deg, #2bc584 50%, transparent 50%, transparent), linear-gradient(270deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background-size: 100%, 100%, 100%, 100%;
+}
+
+.progress--circle.progress--91:after {
+  background: url(../img/avatar-not-found.svg) no-repeat center, -o-linear-gradient(32.4deg, #2bc584 50%, transparent 50%, transparent), -o-linear-gradient(right, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background: url(../img/avatar-not-found.svg) no-repeat center, linear-gradient(57.6deg, #2bc584 50%, transparent 50%, transparent), linear-gradient(270deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background-size: 100%, 100%, 100%, 100%;
+}
+
+.progress--circle.progress--92:after {
+  background: url(../img/avatar-not-found.svg) no-repeat center, -o-linear-gradient(28.8deg, #2bc584 50%, transparent 50%, transparent), -o-linear-gradient(right, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background: url(../img/avatar-not-found.svg) no-repeat center, linear-gradient(61.2deg, #2bc584 50%, transparent 50%, transparent), linear-gradient(270deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background-size: 100%, 100%, 100%, 100%;
+}
+
+.progress--circle.progress--93:after {
+  background: url(../img/avatar-not-found.svg) no-repeat center, -o-linear-gradient(25.2deg, #2bc584 50%, transparent 50%, transparent), -o-linear-gradient(right, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background: url(../img/avatar-not-found.svg) no-repeat center, linear-gradient(64.8deg, #2bc584 50%, transparent 50%, transparent), linear-gradient(270deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background-size: 100%, 100%, 100%, 100%;
+}
+
+.progress--circle.progress--94:after {
+  background: url(../img/avatar-not-found.svg) no-repeat center, -o-linear-gradient(21.6deg, #2bc584 50%, transparent 50%, transparent), -o-linear-gradient(right, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background: url(../img/avatar-not-found.svg) no-repeat center, linear-gradient(68.4deg, #2bc584 50%, transparent 50%, transparent), linear-gradient(270deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background-size: 100%, 100%, 100%, 100%;
 }
 
 .progress--circle.progress--95:after {
-  background-image: -o-linear-gradient(18deg, #2bc584 50%, transparent 50%, transparent), -o-linear-gradient(right, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
-  background-image: linear-gradient(72deg, #2bc584 50%, transparent 50%, transparent), linear-gradient(270deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background: url(../img/avatar-not-found.svg) no-repeat center, -o-linear-gradient(18deg, #2bc584 50%, transparent 50%, transparent), -o-linear-gradient(right, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background: url(../img/avatar-not-found.svg) no-repeat center, linear-gradient(72deg, #2bc584 50%, transparent 50%, transparent), linear-gradient(270deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background-size: 100%, 100%, 100%, 100%;
+}
+
+.progress--circle.progress--96:after {
+  background: url(../img/avatar-not-found.svg) no-repeat center, -o-linear-gradient(14.4deg, #2bc584 50%, transparent 50%, transparent), -o-linear-gradient(right, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background: url(../img/avatar-not-found.svg) no-repeat center, linear-gradient(75.6deg, #2bc584 50%, transparent 50%, transparent), linear-gradient(270deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background-size: 100%, 100%, 100%, 100%;
+}
+
+.progress--circle.progress--97:after {
+  background: url(../img/avatar-not-found.svg) no-repeat center, -o-linear-gradient(10.8deg, #2bc584 50%, transparent 50%, transparent), -o-linear-gradient(right, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background: url(../img/avatar-not-found.svg) no-repeat center, linear-gradient(79.2deg, #2bc584 50%, transparent 50%, transparent), linear-gradient(270deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background-size: 100%, 100%, 100%, 100%;
+}
+
+.progress--circle.progress--98:after {
+  background: url(../img/avatar-not-found.svg) no-repeat center, -o-linear-gradient(7.2deg, #2bc584 50%, transparent 50%, transparent), -o-linear-gradient(right, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background: url(../img/avatar-not-found.svg) no-repeat center, linear-gradient(82.8deg, #2bc584 50%, transparent 50%, transparent), linear-gradient(270deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background-size: 100%, 100%, 100%, 100%;
+}
+
+.progress--circle.progress--99:after {
+  background: url(../img/avatar-not-found.svg) no-repeat center, -o-linear-gradient(3.6deg, #2bc584 50%, transparent 50%, transparent), -o-linear-gradient(right, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background: url(../img/avatar-not-found.svg) no-repeat center, linear-gradient(86.4deg, #2bc584 50%, transparent 50%, transparent), linear-gradient(270deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background-size: 100%, 100%, 100%, 100%;
 }
 
 .progress--circle.progress--100:after {
-  background-image: -webkit-gradient(linear, left top, right top, color-stop(50%, #2bc584), color-stop(50%, transparent), to(transparent)), -webkit-gradient(linear, right top, left top, color-stop(50%, #2bc584), color-stop(50%, #f1f4f9), to(#f1f4f9));
-  background-image: -o-linear-gradient(left, #2bc584 50%, transparent 50%, transparent), -o-linear-gradient(right, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
-  background-image: linear-gradient(90deg, #2bc584 50%, transparent 50%, transparent), linear-gradient(270deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background: url(../img/avatar-not-found.svg) no-repeat center, -webkit-gradient(linear, left top, right top, color-stop(50%, #2bc584), color-stop(50%, transparent), to(transparent)), -webkit-gradient(linear, right top, left top, color-stop(50%, #2bc584), color-stop(50%, #f1f4f9), to(#f1f4f9));
+  background: url(../img/avatar-not-found.svg) no-repeat center, -o-linear-gradient(left, #2bc584 50%, transparent 50%, transparent), -o-linear-gradient(right, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background: url(../img/avatar-not-found.svg) no-repeat center, linear-gradient(90deg, #2bc584 50%, transparent 50%, transparent), linear-gradient(270deg, #2bc584 50%, #f1f4f9 50%, #f1f4f9);
+  background-size: 100%, 100%, 100%, 100%;
 }
 
 .achievements__list {
@@ -4961,7 +6851,7 @@ textarea:hover {
   margin-right: 0;
 }
 
-.card:hover .achievement {
+.achievement:hover {
   background: #2BC584;
 }
 
@@ -4976,7 +6866,7 @@ textarea:hover {
   fill: #c3cad6;
 }
 
-.card:hover .achievement-icon {
+.achievement:hover .achievement-icon {
   fill: #ffffff;
 }
 
@@ -5036,7 +6926,7 @@ textarea:hover {
   position: absolute;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  margin-top: 6px;
+  margin-top: 4px;
   margin-left: -36px;
   width: 20px;
   height: 20px;
@@ -5413,6 +7303,7 @@ MULTI
 .pagination {
   width: 100%;
   background-color: #fff;
+  height: 64px;
 }
 
 .pagination__wrapper {
@@ -5554,6 +7445,22 @@ MULTI
   border: 1px solid #fff;
 }
 
+.pagination__link--back.disabled,
+.pagination__link--forward.disabled {
+  cursor: unset;
+  color: #c3cad6;
+}
+
+.pagination__link--back.disabled svg,
+.pagination__link--forward.disabled svg {
+  fill: #c3cad6;
+}
+
+.pagination__link--back.disabled:hover svg,
+.pagination__link--forward.disabled:hover svg {
+  left: -11px;
+}
+
 .fancy-select-wrap {
   background: white;
   font-size: 0.875rem;
@@ -5612,7 +7519,6 @@ MULTI
   height: 30px;
   left: 0;
   top: 0;
-  opacity: 0.5;
   text-align: center;
   -webkit-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
@@ -5620,11 +7526,15 @@ MULTI
 }
 
 .fancy-select-wrap .selected > span:hover {
-  background-color: #f4a7a7;
+  background-color: #3464e0;
 }
 
 .fancy-select-wrap .selected > span:hover:after {
   opacity: 1;
+}
+
+.fancy-select-wrap .selected > span:hover::before {
+  background-color: #2955c9;
 }
 
 .fancy-select-wrap .options {
@@ -5634,12 +7544,10 @@ MULTI
   width: 100%;
   font-size: 16px;
   line-height: 26px;
-  border-bottom-left-radius: 4px;
-  border-bottom-right-radius: 4px;
 }
 
 .fancy-select-wrap .options > div {
-  padding: 12px 14px;
+  padding: 12.3px 14px;
   cursor: pointer;
   -webkit-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
@@ -5648,7 +7556,7 @@ MULTI
 }
 
 .fancy-select-wrap .options > div:not(.subopt) {
-  font-weight: bold;
+  font-weight: 400;
 }
 
 .fancy-select-wrap .options > div.subopt {
@@ -5672,7 +7580,7 @@ MULTI
 }
 
 .fancy-select-wrap .options > div:hover {
-  background-color: #efefef;
+  background-color: #f1f4f9;
 }
 
 .fancy-select-wrap .options > div:hover:after {
@@ -5689,10 +7597,6 @@ MULTI
   opacity: 1;
 }
 
-.fancy-select-wrap .options > div[data-selected="1"]:hover {
-  background-color: #E06364;
-}
-
 .fancy-select-wrap + select {
   visibility: hidden;
   position: absolute;
@@ -5706,6 +7610,8 @@ MULTI
   min-height: 300px;
   position: absolute;
   z-index: 300;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
 }
 
 .fancy-select-wrap.expanded .fancy-select-overlay {
@@ -5723,6 +7629,8 @@ MULTI
 
 .fancy-select-wrap.expanded .options {
   display: block;
+  -webkit-box-shadow: 0px 5px 20px rgba(110, 119, 129, 0.05);
+          box-shadow: 0px 5px 20px rgba(110, 119, 129, 0.05);
 }
 
 .fancy-select-wrap.expanded:after {
@@ -6604,6 +8512,12 @@ tfoot td {
       flex-wrap: wrap;
 }
 
+.similar-profiles__wrapper a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .similar-profiles__wrapper .card {
   width: 314px;
 }
@@ -6651,7 +8565,7 @@ tfoot td {
 }
 
 .vacancy__section-title--hot {
-  color: #E06364;
+  color: #e06364;
 }
 
 .vacancy__section-title--hot::before {
@@ -6904,6 +8818,7 @@ tfoot td {
       -ms-flex-align: center;
           align-items: center;
   margin-bottom: 25px;
+  margin-top: 25px;
 }
 
 .student-news__counter {
@@ -6943,9 +8858,9 @@ tfoot td {
   color: #c3cad6;
   position: relative;
   padding-left: 10px;
-  -webkit-transition: .2s;
-  -o-transition: .2s;
-  transition: .2s;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
 }
 
 .new-section__link:hover {
@@ -6961,6 +8876,9 @@ tfoot td {
 .new-section__hero {
   position: relative;
   margin-bottom: 54px;
+  max-height: 350px;
+  overflow: hidden;
+  border-radius: 4px;
 }
 
 .new-section__picture {
@@ -7061,7 +8979,7 @@ tfoot td {
 .new-section__content-main p {
   font-size: 16px;
   line-height: 26px;
-  color: #6E7781;
+  color: #6e7781;
 }
 
 .my-children__title {
@@ -7343,8 +9261,10 @@ tfoot td {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-bottom: 40px;
-  width: 100%;
   padding: 0 38px;
+  -webkit-column-gap: 14px;
+     -moz-column-gap: 14px;
+          column-gap: 14px;
 }
 
 .finance__content-debt-button {
@@ -9049,6 +10969,11 @@ a.fc-event:hover {
   height: 162px;
 }
 
+.dashboard__main-info .progress--circle img {
+  width: unset;
+  height: unset;
+}
+
 .dashboard__main-info .progress__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -9309,12 +11234,10 @@ a.fc-event:hover {
 .dashboard__notification-counter {
   text-align: center;
   font-size: 0.9375rem;
-  padding: 3px 9px 1px 7px;
-  line-height: 18px;
   color: #ffffff;
   width: 23px;
   height: 23px;
-  background-color: #E06364;
+  background-color: #e06364;
   border-radius: 50%;
   margin-left: 11px;
 }
@@ -9710,6 +11633,10 @@ a.fc-event:hover {
   border-bottom: 2px solid #3464e0;
 }
 
+.settings__tabs-buttons .tabs__button {
+  margin-bottom: 0;
+}
+
 .settings__tab {
   border-top: 1px solid #e4ecfa;
   border-bottom: 1px solid #e4ecfa;
@@ -9738,7 +11665,7 @@ a.fc-event:hover {
 
 .settings__filter-label::after {
   content: " *";
-  color: #E06364;
+  color: #e06364;
 }
 
 .settings__filter-select {
@@ -9807,7 +11734,7 @@ a.fc-event:hover {
 
 .settings__invite label::after {
   content: " *";
-  color: #E06364;
+  color: #e06364;
 }
 
 .settings__invite input {
@@ -9901,7 +11828,7 @@ a.fc-event:hover {
 
 .hotels__form-label::after {
   content: " *";
-  color: #E06364;
+  color: #e06364;
 }
 
 .hotels__form-input {
@@ -10027,7 +11954,7 @@ a.fc-event:hover {
   font-size: 0.9375rem;
   line-height: 18px;
   border-radius: 50%;
-  background: #E06364;
+  background: #e06364;
   padding: 3px 4px;
 }
 
@@ -10064,7 +11991,7 @@ a.fc-event:hover {
 
 .hotels__table-col--notapprove {
   margin-left: auto;
-  color: #E06364;
+  color: #e06364;
 }
 
 .hotels__table-col--name {
@@ -10180,7 +12107,7 @@ a.fc-event:hover {
 
 .request__form-label::after {
   content: " *";
-  color: #E06364;
+  color: #e06364;
 }
 
 .request__form-input {
@@ -10209,7 +12136,7 @@ a.fc-event:hover {
 
 .request__form-file::after {
   content: ' *';
-  color: #E06364;
+  color: #e06364;
 }
 
 .request__payments {
@@ -10298,6 +12225,12 @@ a.fc-event:hover {
 
 @media (min-width: 375px) {
   .page-header__logo-image {
+    display: block;
+  }
+}
+
+@media (min-width: 460px) {
+  .portfolio__list-wrapper .divider {
     display: block;
   }
 }
@@ -10413,6 +12346,19 @@ a.fc-event:hover {
     left: 29px;
     bottom: 15px;
     right: auto;
+  }
+
+  .portfolio-tabs__buttons {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-column-gap: 10px;
+       -moz-column-gap: 10px;
+            column-gap: 10px;
+  }
+
+  .portfolio-tabs__button {
+    width: 49%;
   }
 
   .vacancy__filter-button {
@@ -10572,7 +12518,7 @@ a.fc-event:hover {
     font-size: 14px;
     line-height: 16px;
     padding: 13px 23px 13px 56px;
-    width: 199px;
+    min-width: 199px;
     height: 42px;
     -webkit-animation: none;
             animation: none;
@@ -10599,7 +12545,7 @@ a.fc-event:hover {
     line-height: 16px;
     background: #1740aa url("../img/icons/key.svg") no-repeat 28px center;
     padding: 13px 23px 13px 56px;
-    width: 199px;
+    min-width: 199px;
     height: 42px;
   }
 
@@ -10695,7 +12641,18 @@ a.fc-event:hover {
   }
 
   .enter {
-    margin-bottom: 66px;
+    padding-bottom: 66px;
+  }
+
+  .info-bg {
+    position: absolute;
+    width: 100%;
+    height: 280px;
+    background: -webkit-gradient(linear, left top, right top, from(#3464e0), to(#2955c9));
+    background: -o-linear-gradient(left, #3464e0 0%, #2955c9 100%);
+    background: linear-gradient(90deg, #3464e0 0%, #2955c9 100%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 6vw));
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 6vw));
   }
 
   .info-container {
@@ -10808,9 +12765,6 @@ a.fc-event:hover {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
   }
 
   .news__item-title {
@@ -10835,38 +12789,44 @@ a.fc-event:hover {
     color: #ffffff;
   }
 
+  .portfolio-tabs__header {
+    margin-bottom: 42px;
+  }
+
+  .portfolio-tabs__buttons {
+    -webkit-column-gap: 20px;
+       -moz-column-gap: 20px;
+            column-gap: 20px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 40px;
+  }
+
+  .portfolio-tabs__button {
+    width: auto;
+  }
+
   .portfolio__list {
     padding-top: 43px;
     overflow: hidden;
-    height: 261px;
   }
 
   .portfolio__link {
     max-width: 398px;
   }
 
+  .portfolio__item {
+    width: calc(100% - 871px);
+  }
+
   .portfolio__list-wrapper {
     white-space: unset;
-    width: 398px;
+    height: 179px;
   }
 
   .portfolio-tabs__article {
     white-space: nowrap;
-  }
-
-  .portfolio-cards__wrapper {
-    max-width: 1006px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    gap: 18px;
-    margin-right: 29px;
-  }
-
-  .portfolio-cards__filter {
-    width: 315px;
   }
 
   .filter__checkboxes,
@@ -11048,6 +13008,10 @@ a.fc-event:hover {
   .request__payments {
     min-width: 430px;
   }
+
+  main > section:first-child {
+    padding-top: 25px;
+  }
 }
 
 @media (min-width: 1024px) and (min-width: 1024px) {
@@ -11086,6 +13050,54 @@ a.fc-event:hover {
   .dashboard__aside--short .progress--circle {
     width: 62px;
     height: 62px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .tabs__button {
+    margin: 0 30px 30px 0;
+  }
+
+  .portfolio-cards__wrapper {
+    max-width: 1006px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 18px;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+
+  .portfolio-cards__wrapper > a {
+    width: auto;
+    display: unset;
+  }
+
+  .portfolio-cards__wrapper > a .card {
+    width: 238px;
+  }
+
+  .portfolio-cards__header {
+    margin-bottom: 25px;
+  }
+
+  .portfolio-cards__filter {
+    width: auto;
+    margin-top: 0;
+    margin-left: auto;
+  }
+
+  .portfolio-cards__filter .filter__wrapper {
+    padding-left: unset;
+  }
+
+  .portfolio-cards__filter .filter__wrapper .filter__age {
+    width: auto;
+  }
+
+  .portfolio-cards__filter .filter__wrapper .filter__salary {
+    width: auto;
   }
 }
 
@@ -11136,6 +13148,11 @@ a.fc-event:hover {
 
   .title--large {
     font-size: 1.325rem;
+  }
+
+  .page-header {
+    padding-bottom: 0;
+    margin-bottom: 24px;
   }
 
   .hotels__form-input#reason {

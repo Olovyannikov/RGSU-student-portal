@@ -1,4 +1,5 @@
 @import "vendor/normalize.scss";
+@import "vendor/flags.scss";
 @import "vendor/swiper.scss";
 @import "vendor/dataTable.scss";
 @import "general/rem-calc";
@@ -67,7 +68,7 @@
 @import "blocks/vacancy";
 
 //news
-@import 'blocks/student-news';
+@import "blocks/student-news";
 
 //new-section
 @import "blocks/new-section";
@@ -91,3 +92,7 @@
 @import "blocks/parents-list";
 @import "blocks/hotels";
 @import "blocks/request";
+
+main > section:first-child {
+    @media(min-width: $tablet) {padding-top: 25px;
+}}

@@ -42,43 +42,43 @@
           </nav>
         </div>
         <div class="page-header__login">
-          <button class="page-header__login-button js-menu-toggler page-header__toggler">Войти на портал</button>
-          <div class="login">
-            <div class="login__navigation">
-              <ul class="login__navigation-list">
-                <li class="login__navigation-item"><a class="js-menu-link js-menu-login" href="#">Мой профиль</a></li>
-                <li class="login__navigation-item"><a class="js-menu-link" href="moderate.html">Модерирование</a></li>
-                <li class="login__navigation-item login__navigation--exit"><a class="js-menu-link page-header__menu-link--exit" href="#">Завершить сеанс</a></li>
-              </ul>
-            </div>
-            <div class="login__modal modal__login">
-              <button class="modal-close js-close-button">Закрыть</button>
-              <h3 class="modal__title">Вход на сайт</h3>
-              <form class="modal__form">
-                <div class="modal__form-group modal__form-group--mail">
-                  <label class="form__label" for="email">Ваш email</label>
-                  <input class="form__input" type="email" id="email" name="email" required="required" placeholder="Укажите адрес электронной почты"/>
-                </div>
-                <div class="modal__form-group modal__form-group--password">
-                  <label class="form__label" for="password">Введите пароль</label>
-                  <input class="modal__form-show" type="checkbox" checked="checked" id="show-password"/>
-                  <label class="modal__control-label modal__control-label--showpassword" for="show-password">
-                    <svg class="modal__checkbox-show" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="32" height="32" title="Показать/скрыть пароль">
-                      <title>Hide/Show Password</title>
-                      <path fill="#c3cad9" d="M24,9A23.654,23.654,0,0,0,2,24a23.633,23.633,0,0,0,44,0A23.643,23.643,0,0,0,24,9Zm0,25A10,10,0,1,1,34,24,10,10,0,0,1,24,34Zm0-16a6,6,0,1,0,6,6A6,6,0,0,0,24,18Z"></path>
-                      <rect class="closed-eye" fill="#c3cad9" x="20.133" y="2.117" height="44" transform="translate(23.536 -8.587) rotate(45)"></rect>
-                      <rect class="closed-eye" x="22" y="3.984" width="4" height="44" transform="translate(25.403 -9.36) rotate(45)" style="fill:#fff"></rect>
-                    </svg>
-                  </label>
-                  <input class="form__input form__input--password" required="required" placeholder="Пароль" id="password" name="password" type="text"/>
-                </div>
+          <button class="js-menu-login page-header__login-button js-menu-toggler page-header__toggler">Войти на портал</button>
+          <div class="login__navigation">
+            <ul class="login__navigation-list">
+              <li class="login__navigation-item"><a class="js-menu-link js-menu-login" href="#">Мой профиль</a></li>
+              <li class="login__navigation-item"><a class="js-menu-link" href="moderate.html">Модерирование</a></li>
+              <li class="login__navigation-item login__navigation--exit"><a class="js-menu-link page-header__menu-link--exit" href="#">Завершить сеанс</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="login">
+          <div class="login__modal modal__login">
+            <button class="modal-close js-close-button">Закрыть</button>
+            <h3 class="modal__title">Вход на сайт</h3>
+            <form class="modal__form">
+              <div class="modal__form-group modal__form-group--mail">
+                <label class="form__label" for="email">Ваш email</label>
+                <input class="form__input" type="email" id="email" name="email" required="required" placeholder="Укажите адрес электронной почты"/>
+              </div>
+              <div class="modal__form-group modal__form-group--password">
+                <label class="form__label" for="password">Введите пароль</label>
+                <input class="modal__form-show" type="checkbox" checked="checked" id="show-password"/>
+                <label class="modal__control-label modal__control-label--showpassword" for="show-password">
+                  <svg class="modal__checkbox-show" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="32" height="32" title="Показать/скрыть пароль">
+                    <title>Hide/Show Password</title>
+                    <path fill="#c3cad9" d="M24,9A23.654,23.654,0,0,0,2,24a23.633,23.633,0,0,0,44,0A23.643,23.643,0,0,0,24,9Zm0,25A10,10,0,1,1,34,24,10,10,0,0,1,24,34Zm0-16a6,6,0,1,0,6,6A6,6,0,0,0,24,18Z"></path>
+                    <rect class="closed-eye" fill="#c3cad9" x="20.133" y="2.117" height="44" transform="translate(23.536 -8.587) rotate(45)"></rect>
+                    <rect class="closed-eye" x="22" y="3.984" width="4" height="44" transform="translate(25.403 -9.36) rotate(45)" style="fill:#fff"></rect>
+                  </svg>
+                </label>
+                <input class="form__input form__input--password" required="required" placeholder="Пароль" id="password" name="password" type="text"/>
                 <div class="modal__buttons">
                   <button class="modal__enter btn btn--blue" type="submit">Войти на сайт</button>
                   <label for="sberID">Если подключен</label>
                   <button class="modal__sber btn btn--green" id="sberID" type="submit">Сбер ID</button>
                 </div>
-              </form>
-            </div>
+              </div>
+            </form>
           </div>
         </div>
       </div>
@@ -93,9 +93,7 @@
               <article class="portfolio-cards card">
                 <div class="card__progress">
                   <div class="progress--circle" data-progress="75">
-                    <picture class="card__avatar">
-                      <source srcset="img/card-avatar-1.webp" type="image/webp"/><img src="img/card-avatar-1.png" alt="Мария Владимировна Н."/>
-                    </picture>
+                    <picture class="card__avatar"><img max-width="130" loading="lazy" src="img/avatar-not-found.svg" alt="Мария Владимировна Н."/></picture>
                   </div>
                 </div>
                 <p class="card__name">Мария Владимировна Н.</p>
@@ -104,12 +102,12 @@
                 <p class="card__info"><span class="card__info-age">Возраст: 20</span><span class="card__info-course">2 курс</span></p>
                 <div class="card__achievements achievements">
                   <ul class="achievements__list">
-                    <li class="achievement achievement--handshake">Достижение: Рукопожатие
+                    <li class="achievement achievement--handshake" data-tooltip="Рукопожатие" data-flow="up">Достижение: Рукопожатие
                       <svg class="achievement-icon" width="18" height="18">
                         <use href="#handshake"></use>
                       </svg>
                     </li>
-                    <li class="achievement achievement--cup">Достижение: Кубок
+                    <li class="achievement achievement--cup" data-tooltip="Рукопожатие" data-flow="up">Достижение: Кубок
                       <svg class="achievement-icon" width="18" height="18">
                         <use href="#trophy"></use>
                       </svg>
@@ -119,10 +117,8 @@
               </article></a><a href="digital-profile.html">
               <article class="portfolio-cards card">
                 <div class="card__progress">
-                  <div class="progress--circle" data-progress="15">
-                    <picture class="card__avatar">
-                      <source srcset="img/card-avatar-2.webp" type="image/webp"/><img src="img/card-avatar-2.png" alt="Анастасия Олеговна Б."/>
-                    </picture>
+                  <div class="progress--circle" data-progress="42">
+                    <picture class="card__avatar"><img max-width="130" loading="lazy" src="img/card-avatar-2.png" alt="Анастасия Олеговна Б."/></picture>
                   </div>
                 </div>
                 <p class="card__name">Анастасия Олеговна Б.</p>
@@ -131,7 +127,7 @@
                 <p class="card__info"><span class="card__info-age">Возраст: 21</span><span class="card__info-course">1 курс</span></p>
                 <div class="card__achievements achievements">
                   <ul class="achievements__list">
-                    <li class="achievement achievement--cup">Достижение: Кубок
+                    <li class="achievement achievement--cup" data-tooltip="Рукопожатие" data-flow="up">Достижение: Кубок
                       <svg class="achievement-icon" width="18" height="18">
                         <use href="#trophy"></use>
                       </svg>
@@ -142,9 +138,7 @@
               <article class="portfolio-cards card">
                 <div class="card__progress">
                   <div class="progress--circle" data-progress="85">
-                    <picture class="card__avatar">
-                      <source srcset="img/card-avatar-3.webp" type="image/webp"/><img src="img/card-avatar-3.png" alt="Родион Нугзарович К."/>
-                    </picture>
+                    <picture class="card__avatar"><img max-width="130" loading="lazy" src="img/card-avatar-3.png" alt="Родион Нугзарович К."/></picture>
                   </div>
                 </div>
                 <p class="card__name">Родион Нугзарович К.</p>
@@ -153,12 +147,12 @@
                 <p class="card__info"><span class="card__info-age">Возраст: 22</span><span class="card__info-course">2 курс</span></p>
                 <div class="card__achievements achievements">
                   <ul class="achievements__list">
-                    <li class="achievement achievement--paint-palette">Достижение: Искусство
+                    <li class="achievement achievement--paint-palette" data-tooltip="Рукопожатие" data-flow="up">Достижение: Искусство
                       <svg class="achievement-icon" width="18" height="18">
                         <use href="#paint-palette"></use>
                       </svg>
                     </li>
-                    <li class="achievement achievement--cup">Достижение: Кубок
+                    <li class="achievement achievement--cup" data-tooltip="Рукопожатие" data-flow="up">Достижение: Кубок
                       <svg class="achievement-icon" width="18" height="18">
                         <use href="#trophy"></use>
                       </svg>
@@ -169,9 +163,7 @@
               <article class="portfolio-cards card">
                 <div class="card__progress">
                   <div class="progress--circle" data-progress="100">
-                    <picture class="card__avatar">
-                      <source srcset="img/card-avatar-4.webp" type="image/webp"/><img src="img/card-avatar-4.png" alt="Мария Владимировна Н."/>
-                    </picture>
+                    <picture class="card__avatar"><img max-width="130" loading="lazy" src="img/card-avatar-4.png" alt="Мария Владимировна Н."/></picture>
                   </div>
                 </div>
                 <p class="card__name">Мария Владимировна Н.</p>
@@ -180,17 +172,17 @@
                 <p class="card__info"><span class="card__info-age">Возраст: 23</span><span class="card__info-course">3 курс</span></p>
                 <div class="card__achievements achievements">
                   <ul class="achievements__list">
-                    <li class="achievement achievement--handshake">Достижение: Рукопожатие
+                    <li class="achievement achievement--handshake" data-tooltip="Рукопожатие" data-flow="up">Достижение: Рукопожатие
                       <svg class="achievement-icon" width="18" height="18">
                         <use href="#handshake"></use>
                       </svg>
                     </li>
-                    <li class="achievement achievement--paint-palette">Достижение: Искусство
+                    <li class="achievement achievement--paint-palette" data-tooltip="Рукопожатие" data-flow="up">Достижение: Искусство
                       <svg class="achievement-icon" width="18" height="18">
                         <use href="#paint-palette"></use>
                       </svg>
                     </li>
-                    <li class="achievement achievement--notebook">Достижение: Книжка
+                    <li class="achievement achievement--notebook" data-tooltip="Рукопожатие" data-flow="up">Достижение: Книжка
                       <svg class="achievement-icon" width="18" height="18">
                         <use href="#notebook"></use>
                       </svg>
@@ -201,9 +193,7 @@
               <article class="portfolio-cards card">
                 <div class="card__progress">
                   <div class="progress--circle" data-progress="75">
-                    <picture class="card__avatar">
-                      <source srcset="img/card-avatar-5.webp" type="image/webp"/><img src="img/card-avatar-5.png" alt="Мария Владимировна Н."/>
-                    </picture>
+                    <picture class="card__avatar"><img max-width="130" loading="lazy" src="img/card-avatar-5.png" alt="Мария Владимировна Н."/></picture>
                   </div>
                 </div>
                 <p class="card__name">Мария Владимировна Н.</p>
@@ -212,12 +202,12 @@
                 <p class="card__info"><span class="card__info-age">Возраст: 24</span><span class="card__info-course">4 курс</span></p>
                 <div class="card__achievements achievements">
                   <ul class="achievements__list">
-                    <li class="achievement achievement--handshake">Достижение: Рукопожатие
+                    <li class="achievement achievement--handshake" data-tooltip="Рукопожатие" data-flow="up">Достижение: Рукопожатие
                       <svg class="achievement-icon" width="18" height="18">
                         <use href="#handshake"></use>
                       </svg>
                     </li>
-                    <li class="achievement achievement--cup">Достижение: Кубок
+                    <li class="achievement achievement--cup" data-tooltip="Рукопожатие" data-flow="up">Достижение: Кубок
                       <svg class="achievement-icon" width="18" height="18">
                         <use href="#trophy"></use>
                       </svg>
@@ -228,9 +218,7 @@
               <article class="portfolio-cards card">
                 <div class="card__progress">
                   <div class="progress--circle" data-progress="15">
-                    <picture class="card__avatar">
-                      <source srcset="img/card-avatar-6.webp" type="image/webp"/><img src="img/card-avatar-6.png" alt="Анастасия Олеговна Б."/>
-                    </picture>
+                    <picture class="card__avatar"><img max-width="130" loading="lazy" src="img/card-avatar-6.png" alt="Анастасия Олеговна Б."/></picture>
                   </div>
                 </div>
                 <p class="card__name">Анастасия Олеговна Б.</p>
@@ -239,7 +227,7 @@
                 <p class="card__info"><span class="card__info-age">Возраст: 25</span><span class="card__info-course">5 курс</span></p>
                 <div class="card__achievements achievements">
                   <ul class="achievements__list">
-                    <li class="achievement achievement--cup">Достижение: Кубок
+                    <li class="achievement achievement--cup" data-tooltip="Рукопожатие" data-flow="up">Достижение: Кубок
                       <svg class="achievement-icon" width="18" height="18">
                         <use href="#trophy"></use>
                       </svg>
@@ -250,9 +238,7 @@
               <article class="portfolio-cards card">
                 <div class="card__progress">
                   <div class="progress--circle" data-progress="85">
-                    <picture class="card__avatar">
-                      <source srcset="img/card-avatar-7.webp" type="image/webp"/><img src="img/card-avatar-7.png" alt="Родион Нугзарович К."/>
-                    </picture>
+                    <picture class="card__avatar"><img max-width="130" loading="lazy" src="img/card-avatar-7.png" alt="Родион Нугзарович К."/></picture>
                   </div>
                 </div>
                 <p class="card__name">Родион Нугзарович К.</p>
@@ -261,12 +247,12 @@
                 <p class="card__info"><span class="card__info-age">Возраст: 26</span><span class="card__info-course">10 курс</span></p>
                 <div class="card__achievements achievements">
                   <ul class="achievements__list">
-                    <li class="achievement achievement--paint-palette">Достижение: Искусство
+                    <li class="achievement achievement--paint-palette" data-tooltip="Рукопожатие" data-flow="up">Достижение: Искусство
                       <svg class="achievement-icon" width="18" height="18">
                         <use href="#paint-palette"></use>
                       </svg>
                     </li>
-                    <li class="achievement achievement--cup">Достижение: Кубок
+                    <li class="achievement achievement--cup" data-tooltip="Рукопожатие" data-flow="up">Достижение: Кубок
                       <svg class="achievement-icon" width="18" height="18">
                         <use href="#trophy"></use>
                       </svg>
@@ -277,9 +263,7 @@
               <article class="portfolio-cards card">
                 <div class="card__progress">
                   <div class="progress--circle" data-progress="100">
-                    <picture class="card__avatar">
-                      <source srcset="img/card-avatar-8.webp" type="image/webp"/><img src="img/card-avatar-8.png" alt="Мария Владимировна Н."/>
-                    </picture>
+                    <picture class="card__avatar"><img max-width="130" loading="lazy" src="img/card-avatar-8.png" alt="Мария Владимировна Н."/></picture>
                   </div>
                 </div>
                 <p class="card__name">Мария Владимировна Н.</p>
@@ -288,7 +272,7 @@
                 <p class="card__info"><span class="card__info-age">Возраст: 27</span><span class="card__info-course">2 курс</span></p>
                 <div class="card__achievements achievements">
                   <ul class="achievements__list">
-                    <li class="achievement achievement--paint-palette">Достижение: Искусство
+                    <li class="achievement achievement--paint-palette" data-tooltip="Рукопожатие" data-flow="up">Достижение: Искусство
                       <svg class="achievement-icon" width="18" height="18">
                         <use href="#paint-palette"></use>
                       </svg>
@@ -299,9 +283,7 @@
               <article class="portfolio-cards card">
                 <div class="card__progress">
                   <div class="progress--circle" data-progress="75">
-                    <picture class="card__avatar">
-                      <source srcset="img/card-avatar-9.webp" type="image/webp"/><img src="img/card-avatar-9.png" alt="Мария Владимировна Н."/>
-                    </picture>
+                    <picture class="card__avatar"><img max-width="130" loading="lazy" src="img/card-avatar-9.png" alt="Мария Владимировна Н."/></picture>
                   </div>
                 </div>
                 <p class="card__name">Мария Владимировна Н.</p>
@@ -310,12 +292,12 @@
                 <p class="card__info"><span class="card__info-age">Возраст: 28</span><span class="card__info-course">2 курс</span></p>
                 <div class="card__achievements achievements">
                   <ul class="achievements__list">
-                    <li class="achievement achievement--handshake">Достижение: Рукопожатие
+                    <li class="achievement achievement--handshake" data-tooltip="Рукопожатие" data-flow="up">Достижение: Рукопожатие
                       <svg class="achievement-icon" width="18" height="18">
                         <use href="#handshake"></use>
                       </svg>
                     </li>
-                    <li class="achievement achievement--cup">Достижение: Кубок
+                    <li class="achievement achievement--cup" data-tooltip="Рукопожатие" data-flow="up">Достижение: Кубок
                       <svg class="achievement-icon" width="18" height="18">
                         <use href="#trophy"></use>
                       </svg>
@@ -326,9 +308,7 @@
               <article class="portfolio-cards card">
                 <div class="card__progress">
                   <div class="progress--circle" data-progress="15">
-                    <picture class="card__avatar">
-                      <source srcset="img/card-avatar-10.webp" type="image/webp"/><img src="img/card-avatar-10.png" alt="Анастасия Олеговна Б."/>
-                    </picture>
+                    <picture class="card__avatar"><img max-width="130" loading="lazy" src="img/card-avatar-10.png" alt="Анастасия Олеговна Б."/></picture>
                   </div>
                 </div>
                 <p class="card__name">Анастасия Олеговна Б.</p>
@@ -337,7 +317,7 @@
                 <p class="card__info"><span class="card__info-age">Возраст: 29</span><span class="card__info-course">2 курс</span></p>
                 <div class="card__achievements achievements">
                   <ul class="achievements__list">
-                    <li class="achievement achievement--cup">Достижение: Кубок
+                    <li class="achievement achievement--cup" data-tooltip="Рукопожатие" data-flow="up">Достижение: Кубок
                       <svg class="achievement-icon" width="18" height="18">
                         <use href="#trophy"></use>
                       </svg>
@@ -348,9 +328,7 @@
               <article class="portfolio-cards card">
                 <div class="card__progress">
                   <div class="progress--circle" data-progress="85">
-                    <picture class="card__avatar">
-                      <source srcset="img/card-avatar-11.webp" type="image/webp"/><img src="img/card-avatar-11.png" alt="Родион Нугзарович К."/>
-                    </picture>
+                    <picture class="card__avatar"><img max-width="130" loading="lazy" src="img/card-avatar-11.png" alt="Родион Нугзарович К."/></picture>
                   </div>
                 </div>
                 <p class="card__name">Родион Нугзарович К.</p>
@@ -359,17 +337,17 @@
                 <p class="card__info"><span class="card__info-age">Возраст: 30</span><span class="card__info-course">2 курс</span></p>
                 <div class="card__achievements achievements">
                   <ul class="achievements__list">
-                    <li class="achievement achievement--cup">Достижение: Кубок
+                    <li class="achievement achievement--cup" data-tooltip="Рукопожатие" data-flow="up">Достижение: Кубок
                       <svg class="achievement-icon" width="18" height="18">
                         <use href="#trophy"></use>
                       </svg>
                     </li>
-                    <li class="achievement achievement--paint-palette">Достижение: Искусство
+                    <li class="achievement achievement--paint-palette" data-tooltip="Рукопожатие" data-flow="up">Достижение: Искусство
                       <svg class="achievement-icon" width="18" height="18">
                         <use href="#paint-palette"></use>
                       </svg>
                     </li>
-                    <li class="achievement achievement--notebook">Достижение: Книжка
+                    <li class="achievement achievement--notebook" data-tooltip="Рукопожатие" data-flow="up">Достижение: Книжка
                       <svg class="achievement-icon" width="18" height="18">
                         <use href="#notebook"></use>
                       </svg>
@@ -380,9 +358,7 @@
               <article class="portfolio-cards card">
                 <div class="card__progress">
                   <div class="progress--circle" data-progress="100">
-                    <picture class="card__avatar">
-                      <source srcset="img/card-avatar-12.webp" type="image/webp"/><img src="img/card-avatar-12.png" alt="Мария Владимировна Н."/>
-                    </picture>
+                    <picture class="card__avatar"><img max-width="130" loading="lazy" src="img/card-avatar-12.png" alt="Мария Владимировна Н."/></picture>
                   </div>
                 </div>
                 <p class="card__name">Мария Владимировна Н.</p>
@@ -391,17 +367,17 @@
                 <p class="card__info"><span class="card__info-age">Возраст: 111</span><span class="card__info-course">2 курс</span></p>
                 <div class="card__achievements achievements">
                   <ul class="achievements__list">
-                    <li class="achievement achievement--handshake">Достижение: Рукопожатие
+                    <li class="achievement achievement--handshake" data-tooltip="Рукопожатие" data-flow="up">Достижение: Рукопожатие
                       <svg class="achievement-icon" width="18" height="18">
                         <use href="#handshake"></use>
                       </svg>
                     </li>
-                    <li class="achievement achievement--paint-palette">Достижение: Искусство
+                    <li class="achievement achievement--paint-palette" data-tooltip="Рукопожатие" data-flow="up">Достижение: Искусство
                       <svg class="achievement-icon" width="18" height="18">
                         <use href="#paint-palette"></use>
                       </svg>
                     </li>
-                    <li class="achievement achievement--cup">Достижение: Кубок
+                    <li class="achievement achievement--cup" data-tooltip="Рукопожатие" data-flow="up">Достижение: Кубок
                       <svg class="achievement-icon" width="18" height="18">
                         <use href="#trophy"></use>
                       </svg>
@@ -409,7 +385,7 @@
                   </ul>
                 </div>
               </article></a>
-            <div class="portfolio-cards__pagination pagination">
+            <div class="portfolio-cards__pagination pagination"> 
               <div class="pagination__wrapper"><span class="pagination__button pagination__button--back"><a class="pagination__link pagination__link--back" href="#">Назад
                     <svg class="pagination__link--icon">
                       <use href="#back" width="8" height="14"></use>
@@ -498,7 +474,6 @@
                     <option value="Бухгалтерия" selected="selected">Бухгалтерия</option>
                     <option value="IT" selected="selected">IT</option>
                     <option value="PM">Product Management</option>
-                    <option value="PrM">Project Management</option>
                     <option value="Audio">Audio Production</option>
                     <option value="Video">Videoprod</option>
                   </select>
@@ -571,6 +546,6 @@
         <li class="footer__policy-item"><a class="footer__bugs" href="#">Сообщить об ошибке на сайте</a></li>
       </ul>
     </footer>
-    <script src="js/script.min.js" type="module"></script>
+    <script src="js/script.min.js"></script>
   </body>
 </html>

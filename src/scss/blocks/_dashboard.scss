@@ -6,6 +6,10 @@
     .progress--circle {
         width: 162px;
         height: 162px;
+        img {
+            width: unset;
+            height: unset;
+        }
     }
     .progress__wrapper {
         display: flex;
@@ -214,7 +218,7 @@
         &:visited {
             color: $c-light;
             &:hover {
-                color: $c-light
+                color: $c-light;
             }
         }
     }
@@ -228,8 +232,6 @@
 .dashboard__notification-counter {
     text-align: center;
     font-size: rem-calc(15);
-    padding: 3px 9px 1px 7px;
-    line-height: 18px;
     color: $c-light;
     width: 23px;
     height: 23px;

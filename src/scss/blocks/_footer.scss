@@ -121,7 +121,7 @@
 
 .footer__message-list {
     max-width: 310px;
-    justify-content: space-between;
+    column-gap: 10px;
     flex-wrap: wrap;
     @media (min-width: $small + 5) {
 
