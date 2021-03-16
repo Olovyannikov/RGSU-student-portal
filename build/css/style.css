@@ -2924,10 +2924,11 @@ textarea:hover {
   position: absolute;
   display: none;
   opacity: 0;
+  z-index: 123123;
 }
 
 [data-tooltip]::before {
-  content: '';
+  content: "";
   border: 5px solid transparent;
   /* opinion 4 */
   z-index: 1001;
@@ -2967,8 +2968,8 @@ textarea:hover {
 
 /* don't show empty data-tooltips */
 
-[data-tooltip='']::before,
-[data-tooltip='']::after {
+[data-tooltip=""]::before,
+[data-tooltip=""]::after {
   display: none !important;
 }
 
@@ -3063,7 +3064,7 @@ textarea:hover {
 
 @-webkit-keyframes data-tooltips-vert {
   to {
-    opacity: .9;
+    opacity: 0.9;
     -webkit-transform: translate(-50%, 0);
             transform: translate(-50%, 0);
   }
@@ -3071,7 +3072,7 @@ textarea:hover {
 
 @keyframes data-tooltips-vert {
   to {
-    opacity: .9;
+    opacity: 0.9;
     -webkit-transform: translate(-50%, 0);
             transform: translate(-50%, 0);
   }
@@ -3079,7 +3080,7 @@ textarea:hover {
 
 @-webkit-keyframes data-tooltips-horz {
   to {
-    opacity: .9;
+    opacity: 0.9;
     -webkit-transform: translate(0, -50%);
             transform: translate(0, -50%);
   }
@@ -3087,7 +3088,7 @@ textarea:hover {
 
 @keyframes data-tooltips-horz {
   to {
-    opacity: .9;
+    opacity: 0.9;
     -webkit-transform: translate(0, -50%);
             transform: translate(0, -50%);
   }
@@ -11033,6 +11034,7 @@ a.fc-event:hover {
   -o-transition: 0.5s;
   transition: 0.5s;
   top: -27px;
+  z-index: 999;
 }
 
 .dashboard__aside--active {
@@ -11055,6 +11057,7 @@ a.fc-event:hover {
 .dashboard__menu-wrapper {
   margin-bottom: 19px;
   background: #f1f4f9;
+  z-index: 9999;
 }
 
 .dashboard__menu-header {
@@ -11163,6 +11166,7 @@ a.fc-event:hover {
           box-sizing: border-box;
   position: relative;
   margin-bottom: 19px;
+  z-index: 9999;
 }
 
 .dashboard__menu-item:last-child {
@@ -11242,7 +11246,7 @@ a.fc-event:hover {
   margin-left: 11px;
 }
 
-.dashboard__menu-link--short .dashboard__notification-counter {
+.dashboard__notification-counter {
   position: absolute;
   top: -10px;
   right: -10px;
@@ -11262,6 +11266,7 @@ a.fc-event:hover {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
+  z-index: 1;
 }
 
 .dashboard__main-content .portfolio__container {

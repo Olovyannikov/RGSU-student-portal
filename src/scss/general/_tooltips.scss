@@ -13,9 +13,10 @@
     position: absolute;
     display: none;
     opacity: 0;
+    z-index: 123123;
 }
 [data-tooltip]::before {
-    content: '';
+    content: "";
     border: 5px solid transparent; /* opinion 4 */
     z-index: 1001; /* absurdity 1 */
 }
@@ -36,7 +37,7 @@
     text-overdata-flow: ellipsis;
     padding: 1.7ch 1.5ch;
     border-radius: 3px;
-    box-shadow: 0 1em 2em -.5em rgba(0, 0, 0, 0.35);
+    box-shadow: 0 1em 2em -0.5em rgba(0, 0, 0, 0.35);
     background: #333;
     color: #fff;
     z-index: 1000; /* absurdity 2 */
@@ -49,8 +50,8 @@
 }
 
 /* don't show empty data-tooltips */
-[data-tooltip='']::before,
-[data-tooltip='']::after {
+[data-tooltip=""]::before,
+[data-tooltip=""]::after {
     display: none !important;
 }
 
@@ -70,7 +71,7 @@
 [data-tooltip][data-flow^="up"]::before,
 [data-tooltip][data-flow^="up"]::after {
     left: 50%;
-    transform: translate(-50%, -.5em);
+    transform: translate(-50%, -0.5em);
 }
 
 /* data-FLOW: DOWN */
@@ -85,7 +86,7 @@
 [data-tooltip][data-flow^="down"]::before,
 [data-tooltip][data-flow^="down"]::after {
     left: 50%;
-    transform: translate(-50%, .5em);
+    transform: translate(-50%, 0.5em);
 }
 
 /* data-FLOW: LEFT */
@@ -94,12 +95,12 @@
     border-right-width: 0;
     border-left-color: #333;
     left: calc(0em - 5px);
-    transform: translate(-.5em, -50%);
+    transform: translate(-0.5em, -50%);
 }
 [data-tooltip][data-flow^="left"]::after {
     top: 50%;
     right: calc(100% + 5px);
-    transform: translate(-.5em, -50%);
+    transform: translate(-0.5em, -50%);
 }
 
 /* data-FLOW: RIGHT */
@@ -108,28 +109,28 @@
     border-left-width: 0;
     border-right-color: #333;
     right: calc(0em - 13px);
-    transform: translate(.5em, -50%);
+    transform: translate(0.5em, -50%);
     z-index: 1002;
 }
 [data-tooltip][data-flow^="right"]::after {
     top: 50%;
     left: calc(100% + 13px);
     min-height: 38px;
-    transform: translate(.5em, -50%);
+    transform: translate(0.5em, -50%);
     z-index: 1002;
 }
 
 /* KEYFRAMES */
 @keyframes data-tooltips-vert {
     to {
-        opacity: .9;
+        opacity: 0.9;
         transform: translate(-50%, 0);
     }
 }
 
 @keyframes data-tooltips-horz {
     to {
-        opacity: .9;
+        opacity: 0.9;
         transform: translate(0, -50%);
     }
 }

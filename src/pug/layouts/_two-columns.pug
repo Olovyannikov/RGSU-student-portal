@@ -15,7 +15,7 @@ html(lang="ru")
         main.main
             section.dashboard
                 .dashboard__container.container.container--aside
-                    aside.dashboard__aside.aside-content.dashboard__aside--short
+                    aside.dashboard__aside.aside-content
                         .dashboard__main-info
                             a.card__progress(href="profile.html" title="Перейти в настройки профиля")
                                 .progress--circle(data-progress="75")
@@ -33,86 +33,86 @@ html(lang="ru")
                                     .dashboard__menu-header(style="display: none")
                                         h5.dashboard__menu-title.title--dashboard Профиль
                                         span.divider
-                                    ul.dashboard__menu-list.dashboard__menu-list--active.dashboard__menu-list.dashboard__menu-list--active--active
+                                    ul.dashboard__menu-list.dashboard__menu-list--active
                                         li.dashboard__menu-item
-                                            a.dashboard__menu-link.dashboard__menu-link--short.dashboard__menu-link.dashboard__menu-link--active(href='dashboard.html') Дашборд
+                                            a.dashboard__menu-link.dashboard__menu-link.dashboard__menu-link--active(href='dashboard.html') Дашборд
                                                 svg(width='36' height='36')
                                                     use(href="#dashboard")
                                         li.dashboard__menu-item
-                                            a.dashboard__menu-link.dashboard__menu-link--short(href='profile-settings.html' data-tooltip="Редактировать профиль" data-flow="right") Редактировать профиль
+                                            a.dashboard__menu-link(href='profile-settings.html' data-tooltip="Редактировать профиль" data-flow="right") Редактировать профиль
                                                 svg(width='36' height='36')
                                                     use(href="#profile")
                                         li.dashboard__menu-item
-                                            a.dashboard__menu-link.dashboard__menu-link--short(href='notifications.html') Уведомления
+                                            a.dashboard__menu-link(href='notifications.html') Уведомления
                                                 svg(width='36' height='36')
                                                     use(href="#notifications")
                                                 span.dashboard__notification-counter 1
                                 .dashboard__menu-wrapper
-                                    .dashboard__menu-header(style="display: none")
+                                    .dashboard__menu-header
                                         h5.dashboard__menu-title.title--dashboard МФЦ обучающегося
                                         span.divider
                                         button(aria-label="Раскрыть меню МФЦ обучающегося").dashboard__menu-button Раскрыть меню
                                             svg(width="12" height="12")
                                                 use(href="#vector")
-                                    ul.dashboard__menu-list.dashboard__menu-list--active
+                                    ul.dashboard__menu-list
                                         li.dashboard__menu-item
-                                            a.dashboard__menu-link.dashboard__menu-link--short(href='orders.html') Заявки
+                                            a.dashboard__menu-link(href='orders.html') Заявки
                                                 svg(width='36' height='36')
                                                     use(href="#order")
                                         li.dashboard__menu-item
-                                            a.dashboard__menu-link.dashboard__menu-link--short(href='payments.html') Оплата услуг
+                                            a.dashboard__menu-link(href='payments.html') Оплата услуг
                                                 svg(width='36' height='36')
                                                     use(href="#wallet")
                                         li.dashboard__menu-item
-                                            a.dashboard__menu-link.dashboard__menu-link--short(href='my-payments.html') Мои оплаты
+                                            a.dashboard__menu-link(href='my-payments.html') Мои оплаты
                                                 svg(width='36' height='36')
                                                     use(href="#list")
                                 .dashboard__menu-wrapper
-                                    .dashboard__menu-header(style="display: none")
+                                    .dashboard__menu-header
                                         h5.dashboard__menu-title.title--dashboard Онлайн деканат
                                         span.divider
                                         button(aria-label="Раскрыть меню Онлайн деканат").dashboard__menu-button Раскрыть меню
                                             svg(width="12" height="12")
                                                 use(href="#vector")
-                                    ul.dashboard__menu-list.dashboard__menu-list--active
+                                    ul.dashboard__menu-list
                                         li.dashboard__menu-item
-                                            a.dashboard__menu-link.dashboard__menu-link--short(href='schedules.html') Расписание
+                                            a.dashboard__menu-link(href='schedules.html') Расписание
                                                 svg(width='36' height='36')
                                                     use(href="#schedule")
                                         li.dashboard__menu-item
-                                            a.dashboard__menu-link.dashboard__menu-link--short(href='student-card.html') Студенческий билет
+                                            a.dashboard__menu-link(href='student-card.html') Студенческий билет
                                                 svg(width='36' height='36')
                                                     use(href="#studentpass")
                                         li.dashboard__menu-item
-                                            a.dashboard__menu-link.dashboard__menu-link--short(href='record-book.html') Зачетная книжка
+                                            a.dashboard__menu-link(href='record-book.html') Зачетная книжка
                                                 svg(width='36' height='36')
                                                     use(href="#markbook")
                                         li.dashboard__menu-item
-                                            a.dashboard__menu-link.dashboard__menu-link--short(href='student-house.html') Общежития
+                                            a.dashboard__menu-link(href='student-house.html') Общежития
                                                 svg(width='36' height='36')
                                                     use(href="#studenthouse")
                                 .dashboard__menu-wrapper
-                                    .dashboard__menu-header(style="display: none")
+                                    .dashboard__menu-header
                                         h5.dashboard__menu-title.title--dashboard Портфолио
                                         span.divider
                                         button(aria-label="Раскрыть меню Портфолио").dashboard__menu-button Раскрыть меню
                                             svg(width="12" height="12")
                                                 use(href="#vector")
-                                    ul.dashboard__menu-list.dashboard__menu-list--active
+                                    ul.dashboard__menu-list
                                         li.dashboard__menu-item
-                                            a.dashboard__menu-link.dashboard__menu-link--short(href='schedules.html') Расписание
+                                            a.dashboard__menu-link(href='schedules.html') Расписание
                                                 svg(width='36' height='36')
                                                     use(href="#schedule")
                                         li.dashboard__menu-item
-                                            a.dashboard__menu-link.dashboard__menu-link--short(href='#') Студенческий билет
+                                            a.dashboard__menu-link(href='#') Студенческий билет
                                                 svg(width='36' height='36')
                                                     use(href="#studentpass")
                                         li.dashboard__menu-item
-                                            a.dashboard__menu-link.dashboard__menu-link--short(href='#') Зачетная книжка
+                                            a.dashboard__menu-link(href='#') Зачетная книжка
                                                 svg(width='36' height='36')
                                                     use(href="#markbook")
                                         li.dashboard__menu-item
-                                            a.dashboard__menu-link.dashboard__menu-link--short(href='#') Общежития
+                                            a.dashboard__menu-link(href='#') Общежития
                                                 svg(width='36' height='36')
                                                     use(href="#studenthouse")
                     .dashboard__main-content

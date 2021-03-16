@@ -68,6 +68,7 @@
     padding: 27px 0 0;
     transition: 0.5s;
     top: -27px;
+    z-index: 999;
     &--active {
         left: 0;
         background: $c-grey;
@@ -108,6 +109,7 @@
 .dashboard__menu-wrapper {
     margin-bottom: 19px;
     background: $c-grey;
+    z-index: 9999;
 }
 
 .dashboard__menu-header {
@@ -176,6 +178,7 @@
     box-sizing: border-box;
     position: relative;
     margin-bottom: 19px;
+    z-index: 9999;
     &:last-child {
         margin-bottom: 0;
     }
@@ -238,7 +241,7 @@
     background-color: $c-red;
     border-radius: 50%;
     margin-left: 11px;
-    .dashboard__menu-link--short & {
+    & {
         position: absolute;
         top: -10px;
         right: -10px;
@@ -252,6 +255,7 @@
     width: calc(100% - 280px);
     flex-wrap: wrap;
     flex-grow: 1;
+    z-index: 1;
     @media (min-width: $tablet) {
         section {
             width: 100%;
