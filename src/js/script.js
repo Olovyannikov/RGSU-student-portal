@@ -36,14 +36,37 @@ parallax();
 
 window.addEventListener('DOMContentLoaded', () => {
     swiper();
+
+    if (window.matchMedia("(min-width: 768px)").matches) {
+        document
+            .querySelector(".footer__container")
+            .classList.remove("visually-hidden");
+    } else {
+        function addElement() {
+            // Создаем новый элемент div
+            // и добавляем в него немного контента
+
+            let footerBar = document.createElement("button");
+            footerBar.classList.add("footer__bar");
+
+            // Добавляем только что созданый элемент в дерево DOM
+
+            document.querySelector("#footer").appendChild(footerBar);
+        }
+        document
+            .querySelector(".footer__container")
+            .classList.add("visually-hidden");
+        addElement();
+    }
+    if (document.querySelector(".footer__bar")) {
+        tinygesture();
+    }
 });
 
 if (document.querySelector(".chart")) {
     chart();
 }
-if (document.querySelector(".footer__bar")) {
-    tinygesture();
-}
+
 tags();
 if (document.querySelector(".js-filter-btn")) {
     filterBtn();

@@ -7,18 +7,18 @@ export default () => {
                 0.01,
                 Math.floor(
                     0.01 *
-                        (type === "x"
-                            ? window.innerWidth || document.body.clientWidth
-                            : window.innerHeight || document.body.clientHeight)
+                    (type === "x"
+                        ? window.innerWidth || document.body.clientWidth
+                        : window.innerHeight || document.body.clientHeight)
                 )
             ),
         velocityThreshold: 1,
         disregardVelocityThreshold: (type, self) =>
             Math.floor(
                 0.5 *
-                    (type === "y"
-                        ? self.element.clientWidth
-                        : self.element.clientHeight)
+                (type === "y"
+                    ? self.element.clientWidth
+                    : self.element.clientHeight)
             ),
         pressThreshold: 8,
         diagonalSwipes: false,
@@ -83,30 +83,8 @@ export default () => {
 
         document.querySelector('.footer__policy').style.order = '-1';
     });
-    if(!document.querySelector('.footer__container').classList.contains('visually-hidden')) {
+    if (!document.querySelector('.footer__container').classList.contains('visually-hidden')) {
         document.querySelector('.footer__policy').style.order = '-1';
     }
 
-    function addElement() {
-        // Создаем новый элемент div
-        // и добавляем в него немного контента
-
-        let footerBar = document.createElement("button");
-        footerBar.classList.add("footer__bar");
-
-        // Добавляем только что созданый элемент в дерево DOM
-
-        document.querySelector("#footer").appendChild(footerBar);
-    }
-
-    if (window.matchMedia("(max-width: 768px)").matches) {
-        document
-            .querySelector(".footer__container")
-            .classList.remove("visually-hidden");
-    } else {
-        document
-            .querySelector(".footer__container")
-            .classList.add("visually-hidden");
-        addElement();
-    }
 };
